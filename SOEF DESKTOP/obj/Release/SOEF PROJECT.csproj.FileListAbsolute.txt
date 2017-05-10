@@ -1,0 +1,171 @@
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\SOEF.exe.config
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\SOEF.exe.manifest
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\SOEF.application
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\SOEF.exe
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\SOEF.pdb
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\EntityFramework.dll
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\EntityFramework.SqlServerCompact.dll
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\Fockink.ACE.dll
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\Oracle.ManagedDataAccess.dll
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\System.Data.SqlServerCe.dll
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\DOMACE.dll
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\DOMDB.dll
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\EntityFramework.xml
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\EntityFramework.SqlServerCompact.xml
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\SOEF PROJECT.csprojResolveAssemblyReference.cache
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.Form1.resources
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmBuscaClientes.resources
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmBuscaContatos.resources
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmBuscaObra.resources
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmBuscaSolicitacao.resources
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmEmpresa.resources
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmLogin.resources
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmMenu.resources
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmNovaSolicitacao.resources
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.Properties.Resources.resources
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\SOEF PROJECT.csproj.GenerateResource.Cache
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\SOEF.TrustInfo.xml
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\SOEF.exe.manifest
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\SOEF.application
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\SOEF.exe
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\SOEF.pdb
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\SOEF CLASS.dll
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\SOEF CLASS.pdb
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\SOFDB.sdf
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\SOEF.exe.config
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\SOEF.exe.manifest
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\SOEF.application
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\SOEF.exe
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\SOEF.pdb
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\EntityFramework.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\EntityFramework.SqlServerCompact.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\Oracle.ManagedDataAccess.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\SOEF CLASS.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\System.Data.SqlServerCe.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\SOEF CLASS.pdb
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\EntityFramework.xml
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\EntityFramework.SqlServerCompact.xml
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\SOEF PROJECT.csprojResolveAssemblyReference.cache
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.Form1.resources
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmBuscaClientes.resources
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmBuscaContatos.resources
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmBuscaObra.resources
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmBuscaSolicitacao.resources
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmEmpresa.resources
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmLogin.resources
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmMenu.resources
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmNovaSolicitacao.resources
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.Properties.Resources.resources
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\SOEF PROJECT.csproj.GenerateResource.Cache
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\SOEF.TrustInfo.xml
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\SOEF.exe.manifest
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\SOEF.application
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\SOEF.exe
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\SOEF.pdb
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\SOEF.exe.config
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\SOEF.exe.manifest
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\SOEF.application
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\SOEF.exe
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\SOEF.pdb
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\EntityFramework.dll
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\EntityFramework.SqlServerCompact.dll
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\Oracle.ManagedDataAccess.dll
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\SOEF CLASS.dll
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\System.Data.SqlServerCe.dll
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\SOEF CLASS.pdb
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\EntityFramework.xml
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\EntityFramework.SqlServerCompact.xml
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\SOEF PROJECT.csprojResolveAssemblyReference.cache
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.Form1.resources
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmBuscaClientes.resources
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmBuscaContatos.resources
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmBuscaObra.resources
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmBuscaSolicitacao.resources
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmEmpresa.resources
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmLogin.resources
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmMenu.resources
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmNovaSolicitacao.resources
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.Properties.Resources.resources
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\SOEF PROJECT.csproj.GenerateResource.Cache
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\SOEF.TrustInfo.xml
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\SOEF.exe.manifest
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\SOEF.application
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\SOEF.exe
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Release\SOEF.pdb
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\bin\Release\SOFDB.sdf
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\bin\Release\SOEF.exe.config
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\bin\Release\SOEF.exe.manifest
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\bin\Release\SOEF.application
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\bin\Release\SOEF.exe
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\bin\Release\SOEF.pdb
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\bin\Release\EntityFramework.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\bin\Release\EntityFramework.SqlServerCompact.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\bin\Release\Oracle.ManagedDataAccess.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\bin\Release\SOEF CLASS.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\bin\Release\System.Data.SqlServerCe.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\bin\Release\SOEF CLASS.pdb
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\bin\Release\EntityFramework.xml
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\bin\Release\EntityFramework.SqlServerCompact.xml
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\obj\Release\SOEF PROJECT.csprojResolveAssemblyReference.cache
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.Form1.resources
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmBuscaClientes.resources
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmBuscaContatos.resources
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmBuscaObra.resources
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmBuscaSolicitacao.resources
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmEmpresa.resources
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmLogin.resources
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmMenu.resources
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.frmNovaSolicitacao.resources
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\obj\Release\ORCAMENTOS_FOCKINK.Properties.Resources.resources
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\obj\Release\SOEF PROJECT.csproj.GenerateResource.Cache
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\obj\Release\SOEF.TrustInfo.xml
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\obj\Release\SOEF.exe.manifest
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\obj\Release\SOEF.application
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\obj\Release\SOEF.exe
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\ORCAMENTOS_FOCKINK\obj\Release\SOEF.pdb
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Release\SOFDB.sdf
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\bin\Release\SOFDB.sdf
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\bin\Release\SOEF.exe.config
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\bin\Release\SOEF.exe.manifest
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\bin\Release\SOEF.application
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\bin\Release\SOEF.exe
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\bin\Release\SOEF.pdb
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\bin\Release\EntityFramework.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\bin\Release\EntityFramework.SqlServerCompact.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\bin\Release\Oracle.ManagedDataAccess.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\bin\Release\SOEF CLASS.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\bin\Release\System.Data.SqlServerCe.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\bin\Release\SOEF CLASS.pdb
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\bin\Release\EntityFramework.xml
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\bin\Release\EntityFramework.SqlServerCompact.xml
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\obj\Release\SOEF PROJECT.csprojResolveAssemblyReference.cache
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\obj\Release\ORCAMENTOS_FOCKINK.Form1.resources
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\obj\Release\ORCAMENTOS_FOCKINK.frmBuscaClientes.resources
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\obj\Release\ORCAMENTOS_FOCKINK.frmBuscaContatos.resources
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\obj\Release\ORCAMENTOS_FOCKINK.frmBuscaObra.resources
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\obj\Release\ORCAMENTOS_FOCKINK.frmBuscaSolicitacao.resources
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\obj\Release\ORCAMENTOS_FOCKINK.frmEmpresa.resources
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\obj\Release\ORCAMENTOS_FOCKINK.frmLogin.resources
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\obj\Release\ORCAMENTOS_FOCKINK.frmMenu.resources
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\obj\Release\ORCAMENTOS_FOCKINK.frmNovaSolicitacao.resources
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\obj\Release\ORCAMENTOS_FOCKINK.Properties.Resources.resources
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\obj\Release\SOEF PROJECT.csproj.GenerateResource.Cache
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\obj\Release\SOEF.TrustInfo.xml
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\obj\Release\SOEF.exe.manifest
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\obj\Release\SOEF.application
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\obj\Release\SOEF.exe
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\obj\Release\SOEF.pdb
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\bin\Release\Fockink.ACE.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\bin\Release\DOMACE.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\bin\Release\DOMDB.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\bin\Release\Fockink.ACE.pdb

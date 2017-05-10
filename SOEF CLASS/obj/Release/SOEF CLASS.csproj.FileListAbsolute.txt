@@ -1,0 +1,5 @@
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\SOEF CLASS\bin\Release\SOEF CLASS.dll
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\SOEF CLASS\bin\Release\SOEF CLASS.pdb
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\SOEF CLASS\obj\Release\SOEF CLASS.csprojResolveAssemblyReference.cache
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\SOEF CLASS\obj\Release\SOEF CLASS.dll
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\SOEF CLASS\obj\Release\SOEF CLASS.pdb

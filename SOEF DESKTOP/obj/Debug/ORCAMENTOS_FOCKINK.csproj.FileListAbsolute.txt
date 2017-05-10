@@ -1,0 +1,153 @@
+c:\users\danimar\documents\visual studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\ORCAMENTOS_FOCKINK.exe.config
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\ORCAMENTOS_FOCKINK.exe
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\ORCAMENTOS_FOCKINK.pdb
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.dll
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.SqlServerCompact.dll
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.xml
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.SqlServerCompact.xml
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.Form1.resources
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.Properties.Resources.resources
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.csproj.GenerateResource.Cache
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.exe
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.pdb
+C:\Users\danimar\Desktop\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\ORCAMENTOS_FOCKINK.exe.config
+C:\Users\danimar\Desktop\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.exe
+C:\Users\danimar\Desktop\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.pdb
+C:\Users\danimar\Desktop\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.csprojResolveAssemblyReference.cache
+C:\Users\danimar\Desktop\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.Form1.resources
+C:\Users\danimar\Desktop\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.Properties.Resources.resources
+C:\Users\danimar\Desktop\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.csproj.GenerateResource.Cache
+C:\Users\danimar\Desktop\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\Orcamentos.sdf
+C:\Users\danimar\Desktop\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\ORCAMENTOS_FOCKINK.exe
+C:\Users\danimar\Desktop\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\ORCAMENTOS_FOCKINK.pdb
+C:\Users\danimar\Desktop\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.dll
+C:\Users\danimar\Desktop\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\danimar\Desktop\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.SqlServerCompact.dll
+C:\Users\danimar\Desktop\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\danimar\Desktop\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.xml
+C:\Users\danimar\Desktop\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\danimar\Desktop\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.SqlServerCompact.xml
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmEmpresa.resources
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmMenu.resources
+C:\Users\danimar\documents\visual studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmLogin.resources
+C:\Users\danimar\documents\visual studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmNovaSolicitacao.resources
+C:\Users\danimar\documents\visual studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmBuscaClientes.resources
+C:\Users\danimar\documents\visual studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmBuscaObra.resources
+C:\Users\danimar\documents\visual studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmBuscaContatos.resources
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\ORCAMENTOS_FOCKINK.exe.config
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.exe
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.pdb
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\Orcamentos.sdf
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\ORCAMENTOS_FOCKINK.exe
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\ORCAMENTOS_FOCKINK.pdb
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.dll
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.SqlServerCompact.dll
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\DOMACE.dll
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\DOMDB.dll
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\Oracle.DataAccess.dll
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.xml
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.SqlServerCompact.xml
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.csprojResolveAssemblyReference.cache
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.Form1.resources
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmBuscaClientes.resources
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmBuscaContatos.resources
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmBuscaObra.resources
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmEmpresa.resources
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmLogin.resources
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmMenu.resources
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmNovaSolicitacao.resources
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.Properties.Resources.resources
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.csproj.GenerateResource.Cache
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\ORCAMENTOS_FOCKINK.exe.config
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.exe
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.pdb
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\Orcamentos.sdf
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\ORCAMENTOS_FOCKINK.exe
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\ORCAMENTOS_FOCKINK.pdb
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.dll
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.SqlServerCompact.dll
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.xml
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.SqlServerCompact.xml
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.Form1.resources
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmBuscaClientes.resources
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmBuscaContatos.resources
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmBuscaObra.resources
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmEmpresa.resources
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmLogin.resources
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmMenu.resources
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmNovaSolicitacao.resources
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.Properties.Resources.resources
+C:\Users\danim\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.csproj.GenerateResource.Cache
+E:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\ORCAMENTOS_FOCKINK.exe.config
+E:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.exe
+E:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.pdb
+E:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\Orcamentos.sdf
+E:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\ORCAMENTOS_FOCKINK.exe
+E:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\ORCAMENTOS_FOCKINK.pdb
+E:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.dll
+E:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.SqlServer.dll
+E:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.SqlServerCompact.dll
+E:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\Oracle.ManagedDataAccess.dll
+E:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\System.Data.SqlServerCe.dll
+E:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.xml
+E:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.SqlServer.xml
+E:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.SqlServerCompact.xml
+E:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.csprojResolveAssemblyReference.cache
+E:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.Form1.resources
+E:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmBuscaClientes.resources
+E:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmBuscaContatos.resources
+E:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmBuscaObra.resources
+E:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmEmpresa.resources
+E:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmLogin.resources
+E:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmMenu.resources
+E:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmNovaSolicitacao.resources
+E:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.Properties.Resources.resources
+E:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.csproj.GenerateResource.Cache
+F:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\ORCAMENTOS_FOCKINK.exe.config
+F:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.exe
+F:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.pdb
+F:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\Orcamentos.sdf
+F:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\ORCAMENTOS_FOCKINK.exe
+F:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\ORCAMENTOS_FOCKINK.pdb
+F:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.dll
+F:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.SqlServer.dll
+F:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.SqlServerCompact.dll
+F:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\Oracle.ManagedDataAccess.dll
+F:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\System.Data.SqlServerCe.dll
+F:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.xml
+F:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.SqlServer.xml
+F:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\EntityFramework.SqlServerCompact.xml
+F:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.csprojResolveAssemblyReference.cache
+F:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.Form1.resources
+F:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmBuscaClientes.resources
+F:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmBuscaContatos.resources
+F:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmBuscaObra.resources
+F:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmEmpresa.resources
+F:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmLogin.resources
+F:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmMenu.resources
+F:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmNovaSolicitacao.resources
+F:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.Properties.Resources.resources
+F:\Fockink\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.csproj.GenerateResource.Cache
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.frmBuscaSolicitacao.resources
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.csprojResolveAssemblyReference.cache
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\SOFDB.sdf
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\ORCAMENTOS_FOCKINK.exe.manifest
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\ORCAMENTOS_FOCKINK.application
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\Fockink.ACE.dll
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\DOMACE.dll
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\bin\Debug\DOMDB.dll
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.TrustInfo.xml
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.exe.manifest
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\ORCAMENTOS_FOCKINK\obj\Debug\ORCAMENTOS_FOCKINK.application

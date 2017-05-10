@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validaLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validaLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="validaLoginResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Seguranca" type="tns:Seguranca" />
+      <s:complexType name="Seguranca">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Senha" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="listaClientesRepresentante">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="empresa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codRepresentante" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listaClientesRepresentanteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listaClientesRepresentanteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listaContatosClientesRepresentante">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="empresa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codRepresentante" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listaContatosClientesRepresentanteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listaContatosClientesRepresentanteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listaEmpresaUsuarioSOEF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listaEmpresaUsuarioSOEFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listaEmpresaUsuarioSOEFResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listaIndicadorNegocio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="empresa" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listaIndicadorNegocioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listaIndicadorNegocioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listaTipoNegocio">
+        <s:complexType />
+      </s:element>
+      <s:element name="listaTipoNegocioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listaTipoNegocioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="listaEventoPagamento">
+        <s:complexType />
+      </s:element>
+      <s:element name="listaEventoPagamentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="listaEventoPagamentoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="validaLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:validaLogin" />
+  </wsdl:message>
+  <wsdl:message name="validaLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:validaLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="validaLoginSeguranca">
+    <wsdl:part name="Seguranca" element="tns:Seguranca" />
+  </wsdl:message>
+  <wsdl:message name="listaClientesRepresentanteSoapIn">
+    <wsdl:part name="parameters" element="tns:listaClientesRepresentante" />
+  </wsdl:message>
+  <wsdl:message name="listaClientesRepresentanteSoapOut">
+    <wsdl:part name="parameters" element="tns:listaClientesRepresentanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="listaClientesRepresentanteSeguranca">
+    <wsdl:part name="Seguranca" element="tns:Seguranca" />
+  </wsdl:message>
+  <wsdl:message name="listaContatosClientesRepresentanteSoapIn">
+    <wsdl:part name="parameters" element="tns:listaContatosClientesRepresentante" />
+  </wsdl:message>
+  <wsdl:message name="listaContatosClientesRepresentanteSoapOut">
+    <wsdl:part name="parameters" element="tns:listaContatosClientesRepresentanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="listaContatosClientesRepresentanteSeguranca">
+    <wsdl:part name="Seguranca" element="tns:Seguranca" />
+  </wsdl:message>
+  <wsdl:message name="listaEmpresaUsuarioSOEFSoapIn">
+    <wsdl:part name="parameters" element="tns:listaEmpresaUsuarioSOEF" />
+  </wsdl:message>
+  <wsdl:message name="listaEmpresaUsuarioSOEFSoapOut">
+    <wsdl:part name="parameters" element="tns:listaEmpresaUsuarioSOEFResponse" />
+  </wsdl:message>
+  <wsdl:message name="listaEmpresaUsuarioSOEFSeguranca">
+    <wsdl:part name="Seguranca" element="tns:Seguranca" />
+  </wsdl:message>
+  <wsdl:message name="listaIndicadorNegocioSoapIn">
+    <wsdl:part name="parameters" element="tns:listaIndicadorNegocio" />
+  </wsdl:message>
+  <wsdl:message name="listaIndicadorNegocioSoapOut">
+    <wsdl:part name="parameters" element="tns:listaIndicadorNegocioResponse" />
+  </wsdl:message>
+  <wsdl:message name="listaIndicadorNegocioSeguranca">
+    <wsdl:part name="Seguranca" element="tns:Seguranca" />
+  </wsdl:message>
+  <wsdl:message name="listaTipoNegocioSoapIn">
+    <wsdl:part name="parameters" element="tns:listaTipoNegocio" />
+  </wsdl:message>
+  <wsdl:message name="listaTipoNegocioSoapOut">
+    <wsdl:part name="parameters" element="tns:listaTipoNegocioResponse" />
+  </wsdl:message>
+  <wsdl:message name="listaTipoNegocioSeguranca">
+    <wsdl:part name="Seguranca" element="tns:Seguranca" />
+  </wsdl:message>
+  <wsdl:message name="listaEventoPagamentoSoapIn">
+    <wsdl:part name="parameters" element="tns:listaEventoPagamento" />
+  </wsdl:message>
+  <wsdl:message name="listaEventoPagamentoSoapOut">
+    <wsdl:part name="parameters" element="tns:listaEventoPagamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="listaEventoPagamentoSeguranca">
+    <wsdl:part name="Seguranca" element="tns:Seguranca" />
+  </wsdl:message>
+  <wsdl:portType name="RepresentantesSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="validaLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Valida se um usuário e senha são válidos no DOMSGE, sendo válido devolve o nome do usuário.</wsdl:documentation>
+      <wsdl:input message="tns:validaLoginSoapIn" />
+      <wsdl:output message="tns:validaLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listaClientesRepresentante">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna lista de clientes de um representante comercial.</wsdl:documentation>
+      <wsdl:input message="tns:listaClientesRepresentanteSoapIn" />
+      <wsdl:output message="tns:listaClientesRepresentanteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listaContatosClientesRepresentante">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna lista de contatos de clientes de um representante comercial.</wsdl:documentation>
+      <wsdl:input message="tns:listaContatosClientesRepresentanteSoapIn" />
+      <wsdl:output message="tns:listaContatosClientesRepresentanteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listaEmpresaUsuarioSOEF">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna lista de empresas relacionadas com representantes do sistema SOEF.</wsdl:documentation>
+      <wsdl:input message="tns:listaEmpresaUsuarioSOEFSoapIn" />
+      <wsdl:output message="tns:listaEmpresaUsuarioSOEFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listaIndicadorNegocio">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna lista de de indicadores de negócio de um empresa.</wsdl:documentation>
+      <wsdl:input message="tns:listaIndicadorNegocioSoapIn" />
+      <wsdl:output message="tns:listaIndicadorNegocioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listaTipoNegocio">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna lista de tipos de negócios cadastrados no sistema DOMSGE.</wsdl:documentation>
+      <wsdl:input message="tns:listaTipoNegocioSoapIn" />
+      <wsdl:output message="tns:listaTipoNegocioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="listaEventoPagamento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna lista de eventos de pagamentos cadastrados no sistema DOMSGE.</wsdl:documentation>
+      <wsdl:input message="tns:listaEventoPagamentoSoapIn" />
+      <wsdl:output message="tns:listaEventoPagamentoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RepresentantesSoap" type="tns:RepresentantesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validaLogin">
+      <soap:operation soapAction="http://tempuri.org/validaLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:validaLoginSeguranca" part="Seguranca" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listaClientesRepresentante">
+      <soap:operation soapAction="http://tempuri.org/listaClientesRepresentante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:listaClientesRepresentanteSeguranca" part="Seguranca" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listaContatosClientesRepresentante">
+      <soap:operation soapAction="http://tempuri.org/listaContatosClientesRepresentante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:listaContatosClientesRepresentanteSeguranca" part="Seguranca" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listaEmpresaUsuarioSOEF">
+      <soap:operation soapAction="http://tempuri.org/listaEmpresaUsuarioSOEF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:listaEmpresaUsuarioSOEFSeguranca" part="Seguranca" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listaIndicadorNegocio">
+      <soap:operation soapAction="http://tempuri.org/listaIndicadorNegocio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:listaIndicadorNegocioSeguranca" part="Seguranca" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listaTipoNegocio">
+      <soap:operation soapAction="http://tempuri.org/listaTipoNegocio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:listaTipoNegocioSeguranca" part="Seguranca" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listaEventoPagamento">
+      <soap:operation soapAction="http://tempuri.org/listaEventoPagamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:listaEventoPagamentoSeguranca" part="Seguranca" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="RepresentantesSoap12" type="tns:RepresentantesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validaLogin">
+      <soap12:operation soapAction="http://tempuri.org/validaLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:validaLoginSeguranca" part="Seguranca" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listaClientesRepresentante">
+      <soap12:operation soapAction="http://tempuri.org/listaClientesRepresentante" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:listaClientesRepresentanteSeguranca" part="Seguranca" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listaContatosClientesRepresentante">
+      <soap12:operation soapAction="http://tempuri.org/listaContatosClientesRepresentante" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:listaContatosClientesRepresentanteSeguranca" part="Seguranca" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listaEmpresaUsuarioSOEF">
+      <soap12:operation soapAction="http://tempuri.org/listaEmpresaUsuarioSOEF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:listaEmpresaUsuarioSOEFSeguranca" part="Seguranca" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listaIndicadorNegocio">
+      <soap12:operation soapAction="http://tempuri.org/listaIndicadorNegocio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:listaIndicadorNegocioSeguranca" part="Seguranca" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listaTipoNegocio">
+      <soap12:operation soapAction="http://tempuri.org/listaTipoNegocio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:listaTipoNegocioSeguranca" part="Seguranca" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listaEventoPagamento">
+      <soap12:operation soapAction="http://tempuri.org/listaEventoPagamento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:listaEventoPagamentoSeguranca" part="Seguranca" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Representantes">
+    <wsdl:port name="RepresentantesSoap" binding="tns:RepresentantesSoap">
+      <soap:address location="http://srv-sgeweb-03:81/SOEF_WS/Representantes.asmx" />
+    </wsdl:port>
+    <wsdl:port name="RepresentantesSoap12" binding="tns:RepresentantesSoap12">
+      <soap12:address location="http://srv-sgeweb-03:81/SOEF_WS/Representantes.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

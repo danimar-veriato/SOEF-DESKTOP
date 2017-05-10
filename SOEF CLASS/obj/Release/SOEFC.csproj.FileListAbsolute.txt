@@ -1,0 +1,22 @@
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\SOEF CLASS\bin\Release\SOEF CLASS.dll
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\SOEF CLASS\bin\Release\SOEF CLASS.pdb
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\SOEF CLASS\obj\Release\SOEF CLASS.dll
+C:\Users\danimar\Documents\Visual Studio 2015\Projects\ORCAMENTOS_FOCKINK\SOEF CLASS\obj\Release\SOEF CLASS.pdb
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\SOEF CLASS\bin\Release\SOEF CLASS.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\SOEF CLASS\bin\Release\SOEF CLASS.pdb
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\SOEF CLASS\obj\Release\SOEF CLASS.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\SOEF CLASS\obj\Release\SOEF CLASS.pdb
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\SOEF CLASS\bin\Release\SOEF CLASS.dll
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\SOEF CLASS\bin\Release\SOEF CLASS.pdb
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\SOEF CLASS\obj\Release\SOEFC.csprojResolveAssemblyReference.cache
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\SOEF CLASS\obj\Release\SOEF CLASS.dll
+C:\Users\danim\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK\SOEF CLASS\obj\Release\SOEF CLASS.pdb
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\SOEF CLASS\bin\Release\SOEF CLASS.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\SOEF CLASS\bin\Release\SOEF CLASS.pdb
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\SOEF CLASS\obj\Release\SOEFC.csprojResolveAssemblyReference.cache
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\SOEF CLASS\obj\Release\SOEF CLASS.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\ORCAMENTOS_FOCKINK old\SOEF CLASS\obj\Release\SOEF CLASS.pdb
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF CLASS\bin\Release\SOEF CLASS.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF CLASS\bin\Release\SOEF CLASS.pdb
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF CLASS\obj\Release\SOEF CLASS.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF CLASS\obj\Release\SOEF CLASS.pdb
