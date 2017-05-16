@@ -24,7 +24,6 @@ namespace ORCAMENTOS_FOCKINK
             SqlCeConnection conn = new SqlCeConnection();
             AppDomain.CurrentDomain.SetData("DataDirectory", Environment.CurrentDirectory);
             objSqlCeConnection = new SqlCeConnection(System.Configuration.ConfigurationManager.ConnectionStrings["SOFDB"].ToString());
-         //   MessageBox.Show(System.Configuration.ConfigurationManager.ConnectionStrings["SOFDB"].ToString());
         }
 
 

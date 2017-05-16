@@ -16,6 +16,7 @@ namespace SOEFC
         public string Revisao { get; set; }
         protected string Observacoes { get; set; }
         
+        //Métodos
 
     }
 }
