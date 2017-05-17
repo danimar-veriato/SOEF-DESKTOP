@@ -45,6 +45,30 @@ namespace SOEF_CLASS
         /// <param name="observacao">Observação sobre o escopo</param>
         public void gravaEscopo19(string indAberturaFechamentoValas, string indCaixaInspecao, string indBasePostes, string indBaseSubestacao, string indCasaBombas, string indOutroEscopo, string descricaOutroEscopo, string observacao)
         {
+            SqlCE sqlce = new SqlCE();
+            try
+            {
+                string query = "";
+                query += "  INSERT INTO[DOM_SOLIC_ORC_ESCOPO_19] ";
+                query += " ([NUMERO_SOLICITACAO], ";
+                query += " [REVISAO_SOLICITACAO], ";
+                query += " [IND_ABERTURA_FEC_VALAS], ";
+                query += " [IND_CAIXA_INSPECAO], ";
+                query += " [IND_BASE_POSTES], ";
+                query += " [IND_BASE_SUBESTACAO], ";
+                query += " [IND_CASA_BOMBAS], ";
+                query += " [IND_OUTRO_ESCOPO], ";
+                query += " [DESC_OUTRO_ESCOPO], ";
+                query += " [OBSERVACOES]) ";
+                query += "";
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
 
         }
 
