@@ -8,7 +8,7 @@ using SOEFC;
 
 namespace SOEF_CLASS
 {
-    class Escopo_19 : Escopo
+    public class Escopo_19 : Escopo
     {
         /// <summary>
         /// Construtor da classe Escopo 19
@@ -43,26 +43,36 @@ namespace SOEF_CLASS
         /// <param name="indOutroEscopo">Indica o fornecimento de outro escopo</param>
         /// <param name="descricaOutroEscopo">Descriçao do outro escopo</param>
         /// <param name="observacao">Observação sobre o escopo</param>
-        public void gravaEscopo19(string indAberturaFechamentoValas, string indCaixaInspecao, string indBasePostes, string indBaseSubestacao, string indCasaBombas, string indOutroEscopo, string descricaOutroEscopo, string observacao)
+        public int gravaEscopo19(string indAberturaFechamentoValas, string indCaixaInspecao, string indBasePostes, string indBaseSubestacao, string indCasaBombas, string indOutroEscopo, string descricaOutroEscopo, string observacao)
         {
             SqlCE sqlce = new SqlCE();
             try
             {
+                int retorno;
                 string query = "";
-                query += "  INSERT INTO[DOM_SOLIC_ORC_ESCOPO_19] ";
-                query += " ([NUMERO_SOLICITACAO], ";
-                query += " [REVISAO_SOLICITACAO], ";
-                query += " [IND_ABERTURA_FEC_VALAS], ";
-                query += " [IND_CAIXA_INSPECAO], ";
-                query += " [IND_BASE_POSTES], ";
-                query += " [IND_BASE_SUBESTACAO], ";
-                query += " [IND_CASA_BOMBAS], ";
-                query += " [IND_OUTRO_ESCOPO], ";
-                query += " [DESC_OUTRO_ESCOPO], ";
-                query += " [OBSERVACOES]) ";
-                query += "";
-
-
+                query += " INSERT INTO[DOM_SOLIC_ORC_ESCOPO_19] ";
+                query += "   ([NUMERO_SOLICITACAO], ";
+                query += "   [REVISAO_SOLICITACAO], ";
+                query += "   [IND_ABERTURA_FEC_VALAS], ";
+                query += "   [IND_CAIXA_INSPECAO], ";
+                query += "   [IND_BASE_POSTES], ";
+                query += "   [IND_BASE_SUBESTACAO], ";
+                query += "   [IND_CASA_BOMBAS], ";
+                query += "   [IND_OUTRO_ESCOPO], ";
+                query += "   [DESC_OUTRO_ESCOPO], ";
+                query += "   [OBSERVACOES]) ";
+                query += " VALUES ";
+                query += "   (" + Numero + ", ";
+                query += "   " + Revisao + ", ";
+                query += "   '" + indAberturaFechamentoValas + "', ";
+                query += "   '" + indCaixaInspecao + "', ";
+                query += "   '" + indBasePostes + "', ";
+                query += "   '" + indBaseSubestacao + "', ";
+                query += "   '" + indCasaBombas + "', ";
+                query += "   '" + indOutroEscopo + "', ";
+                query += "   '" + observacao + "') ";
+                retorno = sqlce.insertSOF(query);
+                return retorno;
             }
             catch (Exception)
             {

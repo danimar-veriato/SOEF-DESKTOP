@@ -1654,22 +1654,28 @@ namespace ORCAMENTOS_FOCKINK
 
         private void btnEsc19Salvar_Click(object sender, EventArgs e)
         {
-            if ( (!check1Esc19.Checked) && (!check2Esc19.Checked) && (!check3Esc19.Checked) && (!check4Esc19.Checked) && (!check5Esc19.Checked) && (!check6Esc19.Checked))
+            if ( (!checkAbFecValas.Checked) && (!checkBasePoste.Checked) && (!checkCasaBombas.Checked) && (!checkCaixaInspecao.Checked) && (!checkBaseSubestacao.Checked) && (!checkOutro.Checked))
             {
                 MessageBox.Show("Por favor, selecione pelo menos 1 escopo.", "Definição do escopo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                if (check6Esc19.Checked && string.IsNullOrEmpty(txtEsc19Necessidade.Text))
+                if (checkOutro.Checked && string.IsNullOrEmpty(txtEsc19Necessidade.Text))
                 {
                     MessageBox.Show("Por favor, informe o outro escopo.", "Definição do escopo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                } 
+                }
+                else
+                {
+                    SOEF_CLASS.Escopo_19 Escopo19 = new SOEF_CLASS.Escopo_19();
+                    Escopo19.gravaEscopo19(this.numero_solic, )
+
+                }
             }
         }
 
         private void check6Esc19_CheckedChanged(object sender, EventArgs e)
         {
-            if (check6Esc19.Checked)
+            if (checkOutro.Checked)
             {
                 lblNecessidade.Visible = true;
                 txtEsc19Necessidade.Visible = true;

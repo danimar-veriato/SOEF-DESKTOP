@@ -33,6 +33,20 @@
             this.label9 = new System.Windows.Forms.Label();
             this.tbCabecalho = new System.Windows.Forms.TabControl();
             this.tbPageCabecalho1 = new System.Windows.Forms.TabPage();
+            this.gpBoxIdObra = new System.Windows.Forms.GroupBox();
+            this.txtObraProjeto = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtObraObs = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtObraIE = new System.Windows.Forms.TextBox();
+            this.txtObraCPFCNPJ = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btnCabecalhoBuscaObra = new System.Windows.Forms.Button();
+            this.txtCabecalhoCodObra = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtCabecalhoObra = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.gpBoxContatos = new System.Windows.Forms.GroupBox();
             this.txtEmailComercial = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
@@ -54,20 +68,6 @@
             this.txtContatoTecnico = new System.Windows.Forms.TextBox();
             this.txtCodTecnico = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.gpBoxIdObra = new System.Windows.Forms.GroupBox();
-            this.txtObraProjeto = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtObraObs = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtObraIE = new System.Windows.Forms.TextBox();
-            this.txtObraCPFCNPJ = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.btnCabecalhoBuscaObra = new System.Windows.Forms.Button();
-            this.txtCabecalhoCodObra = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtCabecalhoObra = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.gpboxIdSolicitacao = new System.Windows.Forms.GroupBox();
             this.txtNumSolicitacao = new System.Windows.Forms.TextBox();
             this.txtStatusSolic = new System.Windows.Forms.TextBox();
@@ -218,20 +218,20 @@
             this.lblNecessidade = new System.Windows.Forms.Label();
             this.txtEsc19Observacoes = new System.Windows.Forms.TextBox();
             this.label66 = new System.Windows.Forms.Label();
-            this.check6Esc19 = new System.Windows.Forms.CheckBox();
-            this.check5Esc19 = new System.Windows.Forms.CheckBox();
-            this.check4Esc19 = new System.Windows.Forms.CheckBox();
-            this.check3Esc19 = new System.Windows.Forms.CheckBox();
-            this.check2Esc19 = new System.Windows.Forms.CheckBox();
-            this.check1Esc19 = new System.Windows.Forms.CheckBox();
+            this.checkOutro = new System.Windows.Forms.CheckBox();
+            this.checkBaseSubestacao = new System.Windows.Forms.CheckBox();
+            this.checkCaixaInspecao = new System.Windows.Forms.CheckBox();
+            this.checkCasaBombas = new System.Windows.Forms.CheckBox();
+            this.checkBasePoste = new System.Windows.Forms.CheckBox();
+            this.checkAbFecValas = new System.Windows.Forms.CheckBox();
             this.label65 = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.tabNovaSolicitacao.SuspendLayout();
             this.btnSelecionaCli.SuspendLayout();
             this.tbCabecalho.SuspendLayout();
             this.tbPageCabecalho1.SuspendLayout();
-            this.gpBoxContatos.SuspendLayout();
             this.gpBoxIdObra.SuspendLayout();
+            this.gpBoxContatos.SuspendLayout();
             this.gpboxIdSolicitacao.SuspendLayout();
             this.gpBoxIdCliente.SuspendLayout();
             this.tbCabecalho2.SuspendLayout();
@@ -326,6 +326,148 @@
             this.tbPageCabecalho1.Size = new System.Drawing.Size(1057, 488);
             this.tbPageCabecalho1.TabIndex = 0;
             this.tbPageCabecalho1.Text = "Cabeçalho - 01";
+            // 
+            // gpBoxIdObra
+            // 
+            this.gpBoxIdObra.Controls.Add(this.txtObraProjeto);
+            this.gpBoxIdObra.Controls.Add(this.label14);
+            this.gpBoxIdObra.Controls.Add(this.txtObraObs);
+            this.gpBoxIdObra.Controls.Add(this.label13);
+            this.gpBoxIdObra.Controls.Add(this.txtObraIE);
+            this.gpBoxIdObra.Controls.Add(this.txtObraCPFCNPJ);
+            this.gpBoxIdObra.Controls.Add(this.label11);
+            this.gpBoxIdObra.Controls.Add(this.label12);
+            this.gpBoxIdObra.Controls.Add(this.btnCabecalhoBuscaObra);
+            this.gpBoxIdObra.Controls.Add(this.txtCabecalhoCodObra);
+            this.gpBoxIdObra.Controls.Add(this.label3);
+            this.gpBoxIdObra.Controls.Add(this.txtCabecalhoObra);
+            this.gpBoxIdObra.Controls.Add(this.label5);
+            this.gpBoxIdObra.Location = new System.Drawing.Point(11, 122);
+            this.gpBoxIdObra.Name = "gpBoxIdObra";
+            this.gpBoxIdObra.Size = new System.Drawing.Size(825, 203);
+            this.gpBoxIdObra.TabIndex = 7;
+            this.gpBoxIdObra.TabStop = false;
+            this.gpBoxIdObra.Text = "Identificação da Obra";
+            // 
+            // txtObraProjeto
+            // 
+            this.txtObraProjeto.Location = new System.Drawing.Point(95, 173);
+            this.txtObraProjeto.MaxLength = 200;
+            this.txtObraProjeto.Name = "txtObraProjeto";
+            this.txtObraProjeto.Size = new System.Drawing.Size(719, 20);
+            this.txtObraProjeto.TabIndex = 14;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(12, 176);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(43, 13);
+            this.label14.TabIndex = 22;
+            this.label14.Text = "Projeto:";
+            // 
+            // txtObraObs
+            // 
+            this.txtObraObs.Location = new System.Drawing.Point(95, 99);
+            this.txtObraObs.MaxLength = 4000;
+            this.txtObraObs.Multiline = true;
+            this.txtObraObs.Name = "txtObraObs";
+            this.txtObraObs.Size = new System.Drawing.Size(719, 64);
+            this.txtObraObs.TabIndex = 13;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(11, 102);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(68, 13);
+            this.label13.TabIndex = 20;
+            this.label13.Text = "Observação:";
+            // 
+            // txtObraIE
+            // 
+            this.txtObraIE.Location = new System.Drawing.Point(331, 60);
+            this.txtObraIE.Name = "txtObraIE";
+            this.txtObraIE.ReadOnly = true;
+            this.txtObraIE.Size = new System.Drawing.Size(149, 20);
+            this.txtObraIE.TabIndex = 12;
+            // 
+            // txtObraCPFCNPJ
+            // 
+            this.txtObraCPFCNPJ.Location = new System.Drawing.Point(74, 60);
+            this.txtObraCPFCNPJ.Name = "txtObraCPFCNPJ";
+            this.txtObraCPFCNPJ.ReadOnly = true;
+            this.txtObraCPFCNPJ.Size = new System.Drawing.Size(149, 20);
+            this.txtObraCPFCNPJ.TabIndex = 11;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(8, 63);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(62, 13);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "CNPJ/CPF:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(248, 63);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(77, 13);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "Insc. Estadual:";
+            // 
+            // btnCabecalhoBuscaObra
+            // 
+            this.btnCabecalhoBuscaObra.Enabled = false;
+            this.btnCabecalhoBuscaObra.Image = global::ORCAMENTOS_FOCKINK.Properties.Resources.search_icon_small;
+            this.btnCabecalhoBuscaObra.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCabecalhoBuscaObra.Location = new System.Drawing.Point(182, 29);
+            this.btnCabecalhoBuscaObra.Name = "btnCabecalhoBuscaObra";
+            this.btnCabecalhoBuscaObra.Size = new System.Drawing.Size(45, 24);
+            this.btnCabecalhoBuscaObra.TabIndex = 9;
+            this.btnCabecalhoBuscaObra.UseCompatibleTextRendering = true;
+            this.btnCabecalhoBuscaObra.UseVisualStyleBackColor = true;
+            this.btnCabecalhoBuscaObra.Click += new System.EventHandler(this.btnCabecalhoBuscaObra_Click);
+            // 
+            // txtCabecalhoCodObra
+            // 
+            this.txtCabecalhoCodObra.Enabled = false;
+            this.txtCabecalhoCodObra.Location = new System.Drawing.Point(74, 31);
+            this.txtCabecalhoCodObra.Name = "txtCabecalhoCodObra";
+            this.txtCabecalhoCodObra.Size = new System.Drawing.Size(102, 20);
+            this.txtCabecalhoCodObra.TabIndex = 8;
+            this.txtCabecalhoCodObra.TextChanged += new System.EventHandler(this.txtCabecalhoCodObra_TextChanged);
+            this.txtCabecalhoCodObra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCabecalhoCodObra_KeyPress);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(7, 26);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(12, 15);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "*";
+            // 
+            // txtCabecalhoObra
+            // 
+            this.txtCabecalhoObra.Location = new System.Drawing.Point(239, 31);
+            this.txtCabecalhoObra.Name = "txtCabecalhoObra";
+            this.txtCabecalhoObra.ReadOnly = true;
+            this.txtCabecalhoObra.Size = new System.Drawing.Size(580, 20);
+            this.txtCabecalhoObra.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(17, 34);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Obra:";
             // 
             // gpBoxContatos
             // 
@@ -540,148 +682,6 @@
             this.label16.Size = new System.Drawing.Size(49, 13);
             this.label16.TabIndex = 15;
             this.label16.Text = "Técnico:";
-            // 
-            // gpBoxIdObra
-            // 
-            this.gpBoxIdObra.Controls.Add(this.txtObraProjeto);
-            this.gpBoxIdObra.Controls.Add(this.label14);
-            this.gpBoxIdObra.Controls.Add(this.txtObraObs);
-            this.gpBoxIdObra.Controls.Add(this.label13);
-            this.gpBoxIdObra.Controls.Add(this.txtObraIE);
-            this.gpBoxIdObra.Controls.Add(this.txtObraCPFCNPJ);
-            this.gpBoxIdObra.Controls.Add(this.label11);
-            this.gpBoxIdObra.Controls.Add(this.label12);
-            this.gpBoxIdObra.Controls.Add(this.btnCabecalhoBuscaObra);
-            this.gpBoxIdObra.Controls.Add(this.txtCabecalhoCodObra);
-            this.gpBoxIdObra.Controls.Add(this.label3);
-            this.gpBoxIdObra.Controls.Add(this.txtCabecalhoObra);
-            this.gpBoxIdObra.Controls.Add(this.label5);
-            this.gpBoxIdObra.Location = new System.Drawing.Point(11, 122);
-            this.gpBoxIdObra.Name = "gpBoxIdObra";
-            this.gpBoxIdObra.Size = new System.Drawing.Size(825, 203);
-            this.gpBoxIdObra.TabIndex = 7;
-            this.gpBoxIdObra.TabStop = false;
-            this.gpBoxIdObra.Text = "Identificação da Obra";
-            // 
-            // txtObraProjeto
-            // 
-            this.txtObraProjeto.Location = new System.Drawing.Point(95, 173);
-            this.txtObraProjeto.MaxLength = 200;
-            this.txtObraProjeto.Name = "txtObraProjeto";
-            this.txtObraProjeto.Size = new System.Drawing.Size(719, 20);
-            this.txtObraProjeto.TabIndex = 14;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(12, 176);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(43, 13);
-            this.label14.TabIndex = 22;
-            this.label14.Text = "Projeto:";
-            // 
-            // txtObraObs
-            // 
-            this.txtObraObs.Location = new System.Drawing.Point(95, 99);
-            this.txtObraObs.MaxLength = 4000;
-            this.txtObraObs.Multiline = true;
-            this.txtObraObs.Name = "txtObraObs";
-            this.txtObraObs.Size = new System.Drawing.Size(719, 64);
-            this.txtObraObs.TabIndex = 13;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(11, 102);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(68, 13);
-            this.label13.TabIndex = 20;
-            this.label13.Text = "Observação:";
-            // 
-            // txtObraIE
-            // 
-            this.txtObraIE.Location = new System.Drawing.Point(331, 60);
-            this.txtObraIE.Name = "txtObraIE";
-            this.txtObraIE.ReadOnly = true;
-            this.txtObraIE.Size = new System.Drawing.Size(149, 20);
-            this.txtObraIE.TabIndex = 12;
-            // 
-            // txtObraCPFCNPJ
-            // 
-            this.txtObraCPFCNPJ.Location = new System.Drawing.Point(74, 60);
-            this.txtObraCPFCNPJ.Name = "txtObraCPFCNPJ";
-            this.txtObraCPFCNPJ.ReadOnly = true;
-            this.txtObraCPFCNPJ.Size = new System.Drawing.Size(149, 20);
-            this.txtObraCPFCNPJ.TabIndex = 11;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(8, 63);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(62, 13);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "CNPJ/CPF:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(248, 63);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(77, 13);
-            this.label12.TabIndex = 16;
-            this.label12.Text = "Insc. Estadual:";
-            // 
-            // btnCabecalhoBuscaObra
-            // 
-            this.btnCabecalhoBuscaObra.Enabled = false;
-            this.btnCabecalhoBuscaObra.Image = global::ORCAMENTOS_FOCKINK.Properties.Resources.search_icon_small;
-            this.btnCabecalhoBuscaObra.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCabecalhoBuscaObra.Location = new System.Drawing.Point(182, 29);
-            this.btnCabecalhoBuscaObra.Name = "btnCabecalhoBuscaObra";
-            this.btnCabecalhoBuscaObra.Size = new System.Drawing.Size(45, 24);
-            this.btnCabecalhoBuscaObra.TabIndex = 9;
-            this.btnCabecalhoBuscaObra.UseCompatibleTextRendering = true;
-            this.btnCabecalhoBuscaObra.UseVisualStyleBackColor = true;
-            this.btnCabecalhoBuscaObra.Click += new System.EventHandler(this.btnCabecalhoBuscaObra_Click);
-            // 
-            // txtCabecalhoCodObra
-            // 
-            this.txtCabecalhoCodObra.Enabled = false;
-            this.txtCabecalhoCodObra.Location = new System.Drawing.Point(74, 31);
-            this.txtCabecalhoCodObra.Name = "txtCabecalhoCodObra";
-            this.txtCabecalhoCodObra.Size = new System.Drawing.Size(102, 20);
-            this.txtCabecalhoCodObra.TabIndex = 8;
-            this.txtCabecalhoCodObra.TextChanged += new System.EventHandler(this.txtCabecalhoCodObra_TextChanged);
-            this.txtCabecalhoCodObra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCabecalhoCodObra_KeyPress);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(7, 26);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(12, 15);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "*";
-            // 
-            // txtCabecalhoObra
-            // 
-            this.txtCabecalhoObra.Location = new System.Drawing.Point(239, 31);
-            this.txtCabecalhoObra.Name = "txtCabecalhoObra";
-            this.txtCabecalhoObra.ReadOnly = true;
-            this.txtCabecalhoObra.Size = new System.Drawing.Size(580, 20);
-            this.txtCabecalhoObra.TabIndex = 10;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 34);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Obra:";
             // 
             // gpboxIdSolicitacao
             // 
@@ -2212,12 +2212,12 @@
             this.groupBox4.Controls.Add(this.lblNecessidade);
             this.groupBox4.Controls.Add(this.txtEsc19Observacoes);
             this.groupBox4.Controls.Add(this.label66);
-            this.groupBox4.Controls.Add(this.check6Esc19);
-            this.groupBox4.Controls.Add(this.check5Esc19);
-            this.groupBox4.Controls.Add(this.check4Esc19);
-            this.groupBox4.Controls.Add(this.check3Esc19);
-            this.groupBox4.Controls.Add(this.check2Esc19);
-            this.groupBox4.Controls.Add(this.check1Esc19);
+            this.groupBox4.Controls.Add(this.checkOutro);
+            this.groupBox4.Controls.Add(this.checkBaseSubestacao);
+            this.groupBox4.Controls.Add(this.checkCaixaInspecao);
+            this.groupBox4.Controls.Add(this.checkCasaBombas);
+            this.groupBox4.Controls.Add(this.checkBasePoste);
+            this.groupBox4.Controls.Add(this.checkAbFecValas);
             this.groupBox4.Location = new System.Drawing.Point(106, 56);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(837, 362);
@@ -2282,66 +2282,66 @@
             this.label66.TabIndex = 6;
             this.label66.Text = "Observações:";
             // 
-            // check6Esc19
+            // checkOutro
             // 
-            this.check6Esc19.AutoSize = true;
-            this.check6Esc19.Location = new System.Drawing.Point(325, 118);
-            this.check6Esc19.Name = "check6Esc19";
-            this.check6Esc19.Size = new System.Drawing.Size(52, 17);
-            this.check6Esc19.TabIndex = 5;
-            this.check6Esc19.Text = "Outro";
-            this.check6Esc19.UseVisualStyleBackColor = true;
-            this.check6Esc19.CheckedChanged += new System.EventHandler(this.check6Esc19_CheckedChanged);
+            this.checkOutro.AutoSize = true;
+            this.checkOutro.Location = new System.Drawing.Point(325, 118);
+            this.checkOutro.Name = "checkOutro";
+            this.checkOutro.Size = new System.Drawing.Size(52, 17);
+            this.checkOutro.TabIndex = 5;
+            this.checkOutro.Text = "Outro";
+            this.checkOutro.UseVisualStyleBackColor = true;
+            this.checkOutro.CheckedChanged += new System.EventHandler(this.check6Esc19_CheckedChanged);
             // 
-            // check5Esc19
+            // checkBaseSubestacao
             // 
-            this.check5Esc19.AutoSize = true;
-            this.check5Esc19.Location = new System.Drawing.Point(325, 75);
-            this.check5Esc19.Name = "check5Esc19";
-            this.check5Esc19.Size = new System.Drawing.Size(175, 17);
-            this.check5Esc19.TabIndex = 4;
-            this.check5Esc19.Text = "Base para subestação blindada";
-            this.check5Esc19.UseVisualStyleBackColor = true;
+            this.checkBaseSubestacao.AutoSize = true;
+            this.checkBaseSubestacao.Location = new System.Drawing.Point(325, 75);
+            this.checkBaseSubestacao.Name = "checkBaseSubestacao";
+            this.checkBaseSubestacao.Size = new System.Drawing.Size(175, 17);
+            this.checkBaseSubestacao.TabIndex = 4;
+            this.checkBaseSubestacao.Text = "Base para subestação blindada";
+            this.checkBaseSubestacao.UseVisualStyleBackColor = true;
             // 
-            // check4Esc19
+            // checkCaixaInspecao
             // 
-            this.check4Esc19.AutoSize = true;
-            this.check4Esc19.Location = new System.Drawing.Point(325, 33);
-            this.check4Esc19.Name = "check4Esc19";
-            this.check4Esc19.Size = new System.Drawing.Size(118, 17);
-            this.check4Esc19.TabIndex = 3;
-            this.check4Esc19.Text = "Caixas de inspeção";
-            this.check4Esc19.UseVisualStyleBackColor = true;
+            this.checkCaixaInspecao.AutoSize = true;
+            this.checkCaixaInspecao.Location = new System.Drawing.Point(325, 33);
+            this.checkCaixaInspecao.Name = "checkCaixaInspecao";
+            this.checkCaixaInspecao.Size = new System.Drawing.Size(118, 17);
+            this.checkCaixaInspecao.TabIndex = 3;
+            this.checkCaixaInspecao.Text = "Caixas de inspeção";
+            this.checkCaixaInspecao.UseVisualStyleBackColor = true;
             // 
-            // check3Esc19
+            // checkCasaBombas
             // 
-            this.check3Esc19.AutoSize = true;
-            this.check3Esc19.Location = new System.Drawing.Point(63, 118);
-            this.check3Esc19.Name = "check3Esc19";
-            this.check3Esc19.Size = new System.Drawing.Size(138, 17);
-            this.check3Esc19.TabIndex = 2;
-            this.check3Esc19.Text = "Casa de bombas (PPCI)";
-            this.check3Esc19.UseVisualStyleBackColor = true;
+            this.checkCasaBombas.AutoSize = true;
+            this.checkCasaBombas.Location = new System.Drawing.Point(63, 118);
+            this.checkCasaBombas.Name = "checkCasaBombas";
+            this.checkCasaBombas.Size = new System.Drawing.Size(138, 17);
+            this.checkCasaBombas.TabIndex = 2;
+            this.checkCasaBombas.Text = "Casa de bombas (PPCI)";
+            this.checkCasaBombas.UseVisualStyleBackColor = true;
             // 
-            // check2Esc19
+            // checkBasePoste
             // 
-            this.check2Esc19.AutoSize = true;
-            this.check2Esc19.Location = new System.Drawing.Point(63, 75);
-            this.check2Esc19.Name = "check2Esc19";
-            this.check2Esc19.Size = new System.Drawing.Size(158, 17);
-            this.check2Esc19.TabIndex = 1;
-            this.check2Esc19.Text = "Bases postes e/ou suportes";
-            this.check2Esc19.UseVisualStyleBackColor = true;
+            this.checkBasePoste.AutoSize = true;
+            this.checkBasePoste.Location = new System.Drawing.Point(63, 75);
+            this.checkBasePoste.Name = "checkBasePoste";
+            this.checkBasePoste.Size = new System.Drawing.Size(158, 17);
+            this.checkBasePoste.TabIndex = 1;
+            this.checkBasePoste.Text = "Bases postes e/ou suportes";
+            this.checkBasePoste.UseVisualStyleBackColor = true;
             // 
-            // check1Esc19
+            // checkAbFecValas
             // 
-            this.check1Esc19.AutoSize = true;
-            this.check1Esc19.Location = new System.Drawing.Point(63, 33);
-            this.check1Esc19.Name = "check1Esc19";
-            this.check1Esc19.Size = new System.Drawing.Size(177, 17);
-            this.check1Esc19.TabIndex = 0;
-            this.check1Esc19.Text = "Abertura e fechamento de valas";
-            this.check1Esc19.UseVisualStyleBackColor = true;
+            this.checkAbFecValas.AutoSize = true;
+            this.checkAbFecValas.Location = new System.Drawing.Point(63, 33);
+            this.checkAbFecValas.Name = "checkAbFecValas";
+            this.checkAbFecValas.Size = new System.Drawing.Size(177, 17);
+            this.checkAbFecValas.TabIndex = 0;
+            this.checkAbFecValas.Text = "Abertura e fechamento de valas";
+            this.checkAbFecValas.UseVisualStyleBackColor = true;
             // 
             // label65
             // 
@@ -2381,10 +2381,10 @@
             this.btnSelecionaCli.PerformLayout();
             this.tbCabecalho.ResumeLayout(false);
             this.tbPageCabecalho1.ResumeLayout(false);
-            this.gpBoxContatos.ResumeLayout(false);
-            this.gpBoxContatos.PerformLayout();
             this.gpBoxIdObra.ResumeLayout(false);
             this.gpBoxIdObra.PerformLayout();
+            this.gpBoxContatos.ResumeLayout(false);
+            this.gpBoxContatos.PerformLayout();
             this.gpboxIdSolicitacao.ResumeLayout(false);
             this.gpboxIdSolicitacao.PerformLayout();
             this.gpBoxIdCliente.ResumeLayout(false);
@@ -2606,12 +2606,12 @@
         private System.Windows.Forms.Label lblNecessidade;
         private System.Windows.Forms.TextBox txtEsc19Observacoes;
         private System.Windows.Forms.Label label66;
-        private System.Windows.Forms.CheckBox check6Esc19;
-        private System.Windows.Forms.CheckBox check5Esc19;
-        private System.Windows.Forms.CheckBox check4Esc19;
-        private System.Windows.Forms.CheckBox check3Esc19;
-        private System.Windows.Forms.CheckBox check2Esc19;
-        private System.Windows.Forms.CheckBox check1Esc19;
+        private System.Windows.Forms.CheckBox checkOutro;
+        private System.Windows.Forms.CheckBox checkBaseSubestacao;
+        private System.Windows.Forms.CheckBox checkCaixaInspecao;
+        private System.Windows.Forms.CheckBox checkCasaBombas;
+        private System.Windows.Forms.CheckBox checkBasePoste;
+        private System.Windows.Forms.CheckBox checkAbFecValas;
         private System.Windows.Forms.Label label65;
         private System.Windows.Forms.Button btnEsc19Excluir;
         private System.Windows.Forms.Button btnEsc19Salvar;
