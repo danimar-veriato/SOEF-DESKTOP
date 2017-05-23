@@ -1666,8 +1666,68 @@ namespace ORCAMENTOS_FOCKINK
                 }
                 else
                 {
-                    SOEF_CLASS.Escopo_19 Escopo19 = new SOEF_CLASS.Escopo_19();
-                    Escopo19.gravaEscopo19(this.numero_solic, )
+                    string AbFecValas;
+                    string CaixaInspecao;
+                    string BasePostes;
+                    string BaseSubestacao;
+                    string CasaBombas;
+                    string OutroEscopo;
+                    
+
+                    if (checkAbFecValas.Checked)
+                    {
+                        AbFecValas = "S";
+                    }
+                    else
+                    {
+                        AbFecValas = "N";
+                    }
+                    if (checkCaixaInspecao.Checked)
+                    {
+                        CaixaInspecao = "S";
+                    }
+                    else
+                    {
+                        CaixaInspecao = "N";
+                    }
+                    if (checkBasePoste.Checked)
+                    {
+                        BasePostes = "S";
+                    }
+                    else
+                    {
+                        BasePostes = "N";
+                    }
+                    if (checkBaseSubestacao.Checked)
+                    {
+                        BaseSubestacao = "S";
+                    }
+                    else
+                    {
+                        BaseSubestacao = "N";
+                    }
+                    if (checkCasaBombas.Checked)
+                    {
+                        CasaBombas = "S";
+                    }
+                    else
+                    {
+                        CasaBombas = "N";
+                    }
+                    if (checkOutro.Checked)
+                    {
+                        OutroEscopo = "S";
+                    }
+                    else
+                    {
+                        OutroEscopo = "N";
+                    }
+
+                    SOEF_CLASS.Escopo_19 Escopo19 = new SOEF_CLASS.Escopo_19(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    MessageBox.Show("Necessidade: " + txtEsc19Necessidade.Text);
+                    MessageBox.Show("Observação: " + txtEsc19Observacoes.Text);
+                    Escopo19.gravaEscopo19(AbFecValas, CaixaInspecao, BasePostes, BaseSubestacao, CasaBombas, OutroEscopo, txtEsc19Necessidade.Text, txtEsc19Observacoes.Text);
+
 
                 }
             }

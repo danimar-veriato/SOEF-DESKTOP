@@ -23,3 +23,6 @@ C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF CLASS\o
 C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF-DESKTOP\SOEF CLASS\obj\Release\SOEFC.csprojResolveAssemblyReference.cache
 C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF-DESKTOP\SOEF CLASS\obj\Release\SOEF CLASS.dll
 C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF-DESKTOP\SOEF CLASS\obj\Release\SOEF CLASS.pdb
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF-DESKTOP\SOEF CLASS\bin\Release\SOEF CLASS.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF-DESKTOP\SOEF CLASS\bin\Release\SOEF CLASS.pdb
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF-DESKTOP\SOEF CLASS\bin\Release\System.Data.SqlServerCe.dll

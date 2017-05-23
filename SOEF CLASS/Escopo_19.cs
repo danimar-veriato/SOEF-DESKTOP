@@ -43,7 +43,7 @@ namespace SOEF_CLASS
         /// <param name="indOutroEscopo">Indica o fornecimento de outro escopo</param>
         /// <param name="descricaOutroEscopo">Descriçao do outro escopo</param>
         /// <param name="observacao">Observação sobre o escopo</param>
-        public int gravaEscopo19(string indAberturaFechamentoValas, string indCaixaInspecao, string indBasePostes, string indBaseSubestacao, string indCasaBombas, string indOutroEscopo, string descricaOutroEscopo, string observacao)
+        public int gravaEscopo19(string indAberturaFechamentoValas, string indCaixaInspecao, string indBasePostes, string indBaseSubestacao, string indCasaBombas, string indOutroEscopo, string descOutroEscopo, string observacao)
         {
             SqlCE sqlce = new SqlCE();
             try
@@ -70,13 +70,13 @@ namespace SOEF_CLASS
                 query += "   '" + indBaseSubestacao + "', ";
                 query += "   '" + indCasaBombas + "', ";
                 query += "   '" + indOutroEscopo + "', ";
+                query += "   '" + descOutroEscopo + "', ";
                 query += "   '" + observacao + "') ";
                 retorno = sqlce.insertSOF(query);
                 return retorno;
             }
             catch (Exception)
             {
-
                 throw;
             }
 
