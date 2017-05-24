@@ -1672,6 +1672,7 @@ namespace ORCAMENTOS_FOCKINK
                     string BaseSubestacao;
                     string CasaBombas;
                     string OutroEscopo;
+                    int vlrRetorno;
                     
 
                     if (checkAbFecValas.Checked)
@@ -1724,9 +1725,18 @@ namespace ORCAMENTOS_FOCKINK
                     }
 
                     SOEF_CLASS.Escopo_19 Escopo19 = new SOEF_CLASS.Escopo_19(this.numero_solic.ToString(), this.NumRevisaoSolic);
-                    MessageBox.Show("Necessidade: " + txtEsc19Necessidade.Text);
-                    MessageBox.Show("Observação: " + txtEsc19Observacoes.Text);
-                    Escopo19.gravaEscopo19(AbFecValas, CaixaInspecao, BasePostes, BaseSubestacao, CasaBombas, OutroEscopo, txtEsc19Necessidade.Text, txtEsc19Observacoes.Text);
+                    vlrRetorno = Escopo19.gravaEscopo19(AbFecValas, CaixaInspecao, BasePostes, BaseSubestacao, CasaBombas, OutroEscopo, txtEsc19Necessidade.Text, txtEsc19Observacoes.Text);
+                    MessageBox.Show(vlrRetorno.ToString());
+                    DataTable dt = new DataTable();
+                    dt = Escopo19.getEscopo(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    if(dt.Rows.Count > 0)
+                    {
+                        MessageBox.Show("Tem dados!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Não tem dados!");
+                    }
 
 
                 }

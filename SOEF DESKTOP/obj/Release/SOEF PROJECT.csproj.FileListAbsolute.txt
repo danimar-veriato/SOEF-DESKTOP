@@ -169,7 +169,6 @@ C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP
 C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\bin\Release\DOMACE.dll
 C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\bin\Release\DOMDB.dll
 C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF DESKTOP\SOEF DESKTOP\bin\Release\Fockink.ACE.pdb
-C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF-DESKTOP\SOEF DESKTOP\bin\Release\SOFDB.sdf
 C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF-DESKTOP\SOEF DESKTOP\bin\Release\SOEF.exe.config
 C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF-DESKTOP\SOEF DESKTOP\bin\Release\SOEF.exe.manifest
 C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF-DESKTOP\SOEF DESKTOP\bin\Release\SOEF.application
@@ -206,3 +205,4 @@ C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF-DESKTOP\SOEF DESKTOP
 C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF-DESKTOP\SOEF DESKTOP\obj\Release\SOEF.application
 C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF-DESKTOP\SOEF DESKTOP\obj\Release\SOEF.exe
 C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF-DESKTOP\SOEF DESKTOP\obj\Release\SOEF.pdb
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF-DESKTOP\SOEF DESKTOP\bin\Release\SOFDB.sdf

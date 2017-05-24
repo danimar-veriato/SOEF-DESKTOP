@@ -25,8 +25,11 @@ namespace SOEF_CLASS
         {
             SqlCeConnection conn = new SqlCeConnection();
             AppDomain.CurrentDomain.SetData("DataDirectory", Environment.CurrentDirectory);
-            SqlCeConnection c = new SqlCeConnection(System.Configuration.ConfigurationManager.ConnectionStrings["SOFDB"].ToString());
+            stringConn = "Data Source=|DataDirectory|SOFDB.sdf; Max Database Size=4091; Password=sofdb_fockink; File Mode=Read Write;";
+            objSqlCeConnection = new SqlCeConnection(stringConn);
+            //MessageBox.Show(System.Configuration.ConfigurationManager.ConnectionStrings["SOFDB"].ToString());
         }
+
 
         /// <summary>
         /// Método que pega a instância da classe

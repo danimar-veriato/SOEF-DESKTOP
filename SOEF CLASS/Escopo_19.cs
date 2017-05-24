@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SOEFC;
-
+using System.Data;
 
 namespace SOEF_CLASS
 {
@@ -46,11 +46,12 @@ namespace SOEF_CLASS
         public int gravaEscopo19(string indAberturaFechamentoValas, string indCaixaInspecao, string indBasePostes, string indBaseSubestacao, string indCasaBombas, string indOutroEscopo, string descOutroEscopo, string observacao)
         {
             SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
             try
             {
                 int retorno;
                 string query = "";
-                query += " INSERT INTO[DOM_SOLIC_ORC_ESCOPO_19] ";
+                query += " INSERT INTO [DOM_SOLIC_ORC_ESCOPO_19] ";
                 query += "   ([NUMERO_SOLICITACAO], ";
                 query += "   [REVISAO_SOLICITACAO], ";
                 query += "   [IND_ABERTURA_FEC_VALAS], ";
@@ -79,9 +80,32 @@ namespace SOEF_CLASS
             {
                 throw;
             }
+            finally
+            {
+                sqlce.closeConnection();
+            }
 
         }
 
+
+        public DataTable getEscopo(string pNumSolic, string pRevisao)
+        {
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                DataTable dt = new DataTable();
+                string sql;
+                sql = "SELECT * FROM DOM_SOLIC_ORC_ESCOPO_19 WHERE NUMERO_SOLICITACAO = "+ pNumSolic + " AND REVISAO_SOLICITACAO = " + pRevisao;
+                dt = sqlce.selectListaSOF(sql, "DOM_SOLIC_ORC_ESCOPO_19");
+                return dt;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+        }
 
     }
 }
