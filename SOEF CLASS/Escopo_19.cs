@@ -88,6 +88,12 @@ namespace SOEF_CLASS
         }
 
 
+        /// <summary>
+        /// Busca os dados do Escopo 19, caso esteja cadastrado
+        /// </summary>
+        /// <param name="pNumSolic"></param>
+        /// <param name="pRevisao"></param>
+        /// <returns></returns>
         public DataTable getEscopo(string pNumSolic, string pRevisao)
         {
             SqlCE sqlce = new SqlCE();

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="SOEF.exe" version="1.0.0.34" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="SOEF.exe" version="1.0.0.35" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
     <assemblyIdentity name="SOEF" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -133,19 +133,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>6h51V0RKeTz21mYH0LV/vr6fURezSkTxWWNPhMroPvU=</dsig:DigestValue>
+        <dsig:DigestValue>JvQNPvpNeqS9YVFMSrWEMKIvrR45ZaZxumk1g+FeE98=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SOEF.exe" size="174024">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SOEF.exe" size="174536">
       <assemblyIdentity name="SOEF" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>tExh0YyQu03xyKyOlgiQ4wSG+PLOXyFWtTwTbTfHjN4=</dsig:DigestValue>
+        <dsig:DigestValue>faoOHegc37cXjcEfn0VayugJk0AR9k2RJSTSEBYyOog=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -176,7 +176,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>fG8phKxrFCr7OmwVB/qTgOQOsCaPmBQjVIFv2rPZzrQ=</dsig:DigestValue>
+      <dsig:DigestValue>siMl2MwDpP/t/mOuj8ZLmDRndd8qMi7hXEAGdZ+GX0M=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

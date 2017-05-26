@@ -1731,7 +1731,10 @@ namespace ORCAMENTOS_FOCKINK
                     dt = Escopo19.getEscopo(this.numero_solic.ToString(), this.NumRevisaoSolic);
                     if(dt.Rows.Count > 0)
                     {
-                        MessageBox.Show("Tem dados!");
+                        foreach(DataRow dr in dt.Rows)
+                        { 
+                            MessageBox.Show("Número: " + dr["NUMERO_SOLICITACAO"].ToString() + " Revisão: " + dr["REVISAO_SOLICITACAO"].ToString() + " OBS: " + dr["OBSERVACOES"].ToString() + " BASE POSTES: " + dr["IND_BASE_POSTES"].ToString());
+                        }
                     }
                     else
                     {
