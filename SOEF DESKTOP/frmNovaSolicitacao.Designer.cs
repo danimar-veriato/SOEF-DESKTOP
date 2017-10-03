@@ -333,6 +333,31 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.label94 = new System.Windows.Forms.Label();
+            this.tabsEscopo10 = new System.Windows.Forms.TabControl();
+            this.tabEscopo10_1 = new System.Windows.Forms.TabPage();
+            this.tabEscopo10_2 = new System.Windows.Forms.TabPage();
+            this.tabEscopo10_3 = new System.Windows.Forms.TabPage();
+            this.tabEscopo10_4 = new System.Windows.Forms.TabPage();
+            this.checkEscopo10_1 = new System.Windows.Forms.CheckBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label95 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label96 = new System.Windows.Forms.Label();
+            this.label97 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label98 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label99 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label100 = new System.Windows.Forms.Label();
+            this.label101 = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.tabNovaSolicitacao.SuspendLayout();
             this.tabCabecalho.SuspendLayout();
             this.tbCabecalho.SuspendLayout();
@@ -353,6 +378,7 @@
             this.groupBoxEscopo.SuspendLayout();
             this.tabEscopo1.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.tabEscopo10.SuspendLayout();
             this.tabEscopo18.SuspendLayout();
             this.tabEscopo18_1_2.SuspendLayout();
             this.tbpage18InfoG.SuspendLayout();
@@ -370,6 +396,9 @@
             this.tabEscopo20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaEsc20)).BeginInit();
             this.groupBox5.SuspendLayout();
+            this.tabsEscopo10.SuspendLayout();
+            this.tabEscopo10_1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabNovaSolicitacao
@@ -2570,6 +2599,8 @@
             // tabEscopo10
             // 
             this.tabEscopo10.BackColor = System.Drawing.SystemColors.Control;
+            this.tabEscopo10.Controls.Add(this.tabsEscopo10);
+            this.tabEscopo10.Controls.Add(this.label94);
             this.tabEscopo10.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo10.Name = "tabEscopo10";
             this.tabEscopo10.Padding = new System.Windows.Forms.Padding(3);
@@ -3181,7 +3212,7 @@
             this.p18_1.Controls.Add(this.check18_1Administrativo);
             this.p18_1.Controls.Add(this.check18_1EngResidente);
             this.p18_1.Controls.Add(this.label75);
-            this.p18_1.Location = new System.Drawing.Point(26, 41);
+            this.p18_1.Location = new System.Drawing.Point(25, 41);
             this.p18_1.Name = "p18_1";
             this.p18_1.Size = new System.Drawing.Size(489, 302);
             this.p18_1.TabIndex = 23;
@@ -3679,6 +3710,294 @@
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // label94
+            // 
+            this.label94.AutoSize = true;
+            this.label94.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label94.ForeColor = System.Drawing.Color.Red;
+            this.label94.Location = new System.Drawing.Point(8, 14);
+            this.label94.Name = "label94";
+            this.label94.Size = new System.Drawing.Size(225, 13);
+            this.label94.TabIndex = 5;
+            this.label94.Text = "Escopo 10: ELE-Sistema Aeração/Espalhador";
+            // 
+            // tabsEscopo10
+            // 
+            this.tabsEscopo10.Controls.Add(this.tabEscopo10_1);
+            this.tabsEscopo10.Controls.Add(this.tabEscopo10_2);
+            this.tabsEscopo10.Controls.Add(this.tabEscopo10_3);
+            this.tabsEscopo10.Controls.Add(this.tabEscopo10_4);
+            this.tabsEscopo10.Location = new System.Drawing.Point(11, 40);
+            this.tabsEscopo10.Name = "tabsEscopo10";
+            this.tabsEscopo10.SelectedIndex = 0;
+            this.tabsEscopo10.Size = new System.Drawing.Size(1034, 473);
+            this.tabsEscopo10.TabIndex = 8;
+            // 
+            // tabEscopo10_1
+            // 
+            this.tabEscopo10_1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabEscopo10_1.Controls.Add(this.panel3);
+            this.tabEscopo10_1.Controls.Add(this.checkEscopo10_1);
+            this.tabEscopo10_1.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.tabEscopo10_1.Location = new System.Drawing.Point(4, 22);
+            this.tabEscopo10_1.Name = "tabEscopo10_1";
+            this.tabEscopo10_1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabEscopo10_1.Size = new System.Drawing.Size(1026, 447);
+            this.tabEscopo10_1.TabIndex = 1;
+            this.tabEscopo10_1.Text = "10.1: Sistema de Aeração";
+            // 
+            // tabEscopo10_2
+            // 
+            this.tabEscopo10_2.BackColor = System.Drawing.SystemColors.Control;
+            this.tabEscopo10_2.Location = new System.Drawing.Point(4, 22);
+            this.tabEscopo10_2.Name = "tabEscopo10_2";
+            this.tabEscopo10_2.Size = new System.Drawing.Size(1026, 447);
+            this.tabEscopo10_2.TabIndex = 2;
+            this.tabEscopo10_2.Text = "10.2: Espalhador de Grãos";
+            // 
+            // tabEscopo10_3
+            // 
+            this.tabEscopo10_3.BackColor = System.Drawing.SystemColors.Control;
+            this.tabEscopo10_3.Location = new System.Drawing.Point(4, 22);
+            this.tabEscopo10_3.Name = "tabEscopo10_3";
+            this.tabEscopo10_3.Size = new System.Drawing.Size(1026, 447);
+            this.tabEscopo10_3.TabIndex = 3;
+            this.tabEscopo10_3.Text = "10.3: Renovador de Ar";
+            // 
+            // tabEscopo10_4
+            // 
+            this.tabEscopo10_4.BackColor = System.Drawing.SystemColors.Control;
+            this.tabEscopo10_4.Location = new System.Drawing.Point(4, 22);
+            this.tabEscopo10_4.Name = "tabEscopo10_4";
+            this.tabEscopo10_4.Size = new System.Drawing.Size(1026, 447);
+            this.tabEscopo10_4.TabIndex = 4;
+            this.tabEscopo10_4.Text = "10.4: Tampas de Aeração";
+            // 
+            // checkEscopo10_1
+            // 
+            this.checkEscopo10_1.AutoSize = true;
+            this.checkEscopo10_1.Location = new System.Drawing.Point(15, 15);
+            this.checkEscopo10_1.Name = "checkEscopo10_1";
+            this.checkEscopo10_1.Size = new System.Drawing.Size(148, 17);
+            this.checkEscopo10_1.TabIndex = 23;
+            this.checkEscopo10_1.Text = "10.1: Sistema de Aeração";
+            this.checkEscopo10_1.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.radioButton1);
+            this.panel3.Controls.Add(this.radioButton2);
+            this.panel3.Controls.Add(this.label101);
+            this.panel3.Controls.Add(this.comboBox3);
+            this.panel3.Controls.Add(this.label100);
+            this.panel3.Controls.Add(this.textBox3);
+            this.panel3.Controls.Add(this.label98);
+            this.panel3.Controls.Add(this.comboBox2);
+            this.panel3.Controls.Add(this.label99);
+            this.panel3.Controls.Add(this.comboBox1);
+            this.panel3.Controls.Add(this.label97);
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.button3);
+            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.label95);
+            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.label96);
+            this.panel3.Location = new System.Drawing.Point(27, 48);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(993, 302);
+            this.panel3.TabIndex = 24;
+            this.panel3.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(244, 261);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Excluir";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(136, 261);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 9;
+            this.button3.Text = "Salvar";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(136, 116);
+            this.textBox1.MaxLength = 200;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(344, 20);
+            this.textBox1.TabIndex = 7;
+            this.textBox1.Visible = false;
+            // 
+            // label95
+            // 
+            this.label95.AutoSize = true;
+            this.label95.Location = new System.Drawing.Point(2, 119);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(128, 13);
+            this.label95.TabIndex = 23;
+            this.label95.Text = "Descreva o Profissional: *";
+            this.label95.Visible = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(136, 155);
+            this.textBox2.MaxLength = 2000;
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(344, 80);
+            this.textBox2.TabIndex = 8;
+            // 
+            // label96
+            // 
+            this.label96.AutoSize = true;
+            this.label96.Location = new System.Drawing.Point(30, 177);
+            this.label96.Name = "label96";
+            this.label96.Size = new System.Drawing.Size(73, 13);
+            this.label96.TabIndex = 6;
+            this.label96.Text = "Observações:";
+            // 
+            // label97
+            // 
+            this.label97.AutoSize = true;
+            this.label97.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label97.ForeColor = System.Drawing.Color.Green;
+            this.label97.Location = new System.Drawing.Point(18, 11);
+            this.label97.Name = "label97";
+            this.label97.Size = new System.Drawing.Size(115, 13);
+            this.label97.TabIndex = 24;
+            this.label97.Text = "Tensão Trifásica: *";
+            this.label97.Visible = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Selecione",
+            "13,8kV",
+            "23,1kV",
+            "34,5kV",
+            "Outra"});
+            this.comboBox1.Location = new System.Drawing.Point(151, 8);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(146, 21);
+            this.comboBox1.TabIndex = 25;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Enabled = false;
+            this.textBox3.Location = new System.Drawing.Point(856, 9);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(122, 20);
+            this.textBox3.TabIndex = 27;
+            // 
+            // label98
+            // 
+            this.label98.AutoSize = true;
+            this.label98.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label98.ForeColor = System.Drawing.Color.Green;
+            this.label98.Location = new System.Drawing.Point(732, 11);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(109, 13);
+            this.label98.TabIndex = 29;
+            this.label98.Text = "Outra Frequência:";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Selecione",
+            "50Hz",
+            "60Hz",
+            "Outra"});
+            this.comboBox2.Location = new System.Drawing.Point(489, 9);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(146, 21);
+            this.comboBox2.TabIndex = 26;
+            // 
+            // label99
+            // 
+            this.label99.AutoSize = true;
+            this.label99.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label99.ForeColor = System.Drawing.Color.Green;
+            this.label99.Location = new System.Drawing.Point(401, 12);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(79, 13);
+            this.label99.TabIndex = 28;
+            this.label99.Text = "Frequência*:";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Selecione...",
+            "Úmido",
+            "Maresia",
+            "Corrosivo",
+            "Normal"});
+            this.comboBox3.Location = new System.Drawing.Point(151, 60);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(146, 21);
+            this.comboBox3.TabIndex = 30;
+            // 
+            // label100
+            // 
+            this.label100.AutoSize = true;
+            this.label100.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label100.ForeColor = System.Drawing.Color.Green;
+            this.label100.Location = new System.Drawing.Point(28, 63);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(117, 13);
+            this.label100.TabIndex = 31;
+            this.label100.Text = "Dados Ambientais*:";
+            // 
+            // label101
+            // 
+            this.label101.AutoSize = true;
+            this.label101.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label101.ForeColor = System.Drawing.Color.Green;
+            this.label101.Location = new System.Drawing.Point(381, 68);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(129, 13);
+            this.label101.TabIndex = 32;
+            this.label101.Text = "Normativa do MAPA*:";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Location = new System.Drawing.Point(577, 66);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(48, 17);
+            this.radioButton1.TabIndex = 33;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Não";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.Location = new System.Drawing.Point(523, 66);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(45, 17);
+            this.radioButton2.TabIndex = 34;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Sim";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
             // frmNovaSolicitacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3725,6 +4044,8 @@
             this.tabEscopo1.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.tabEscopo10.ResumeLayout(false);
+            this.tabEscopo10.PerformLayout();
             this.tabEscopo18.ResumeLayout(false);
             this.tabEscopo18.PerformLayout();
             this.tabEscopo18_1_2.ResumeLayout(false);
@@ -3756,6 +4077,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaEsc20)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.tabsEscopo10.ResumeLayout(false);
+            this.tabEscopo10_1.ResumeLayout(false);
+            this.tabEscopo10_1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -4067,5 +4393,30 @@
         private System.Windows.Forms.RadioButton rbtn01Sim;
         private System.Windows.Forms.Label label91;
         private System.Windows.Forms.Button btn01Excluir;
+        private System.Windows.Forms.TabControl tabsEscopo10;
+        private System.Windows.Forms.TabPage tabEscopo10_1;
+        private System.Windows.Forms.Label label94;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label97;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label95;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label96;
+        private System.Windows.Forms.CheckBox checkEscopo10_1;
+        private System.Windows.Forms.TabPage tabEscopo10_2;
+        private System.Windows.Forms.TabPage tabEscopo10_3;
+        private System.Windows.Forms.TabPage tabEscopo10_4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label98;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label99;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.Label label101;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label100;
     }
 }
