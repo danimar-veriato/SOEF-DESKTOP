@@ -43,7 +43,7 @@ namespace SOEF_CLASS
         /// <param name="indOutroEscopo">Indica o fornecimento de outro escopo</param>
         /// <param name="descricaOutroEscopo">Descriçao do outro escopo</param>
         /// <param name="observacao">Observação sobre o escopo</param>
-        public int gravaEscopo19(string indAberturaFechamentoValas, string indCaixaInspecao, string indBasePostes, string indBaseSubestacao, string indCasaBombas, string indOutroEscopo, string descOutroEscopo, string observacao)
+        public int gravaEscopo19(string indAberturaFechamentoValas, string indCaixaInspecao, string indBasePostes, string indBaseSubestacao, string indCasaBombas, string indOutroEscopo, string descOutroEscopo, string observacao, string indPreenchido)
         {
             SqlCE sqlce = new SqlCE();
             sqlce.openConnection();
@@ -61,10 +61,11 @@ namespace SOEF_CLASS
                 query += "   [IND_CASA_BOMBAS], ";
                 query += "   [IND_OUTRO_ESCOPO], ";
                 query += "   [DESC_OUTRO_ESCOPO], ";
-                query += "   [OBSERVACOES]) ";
+                query += "   [OBSERVACOES], ";
+                query += "   [IND_PREENCHIDO]) ";
                 query += " VALUES ";
                 query += "   (" + Numero + ", ";
-                query += "   " + Revisao + ", ";
+                query += "   '" + Revisao + "', ";
                 query += "   '" + indAberturaFechamentoValas + "', ";
                 query += "   '" + indCaixaInspecao + "', ";
                 query += "   '" + indBasePostes + "', ";
@@ -72,7 +73,8 @@ namespace SOEF_CLASS
                 query += "   '" + indCasaBombas + "', ";
                 query += "   '" + indOutroEscopo + "', ";
                 query += "   '" + descOutroEscopo + "', ";
-                query += "   '" + observacao + "') ";
+                query += "   '" + observacao + "', ";
+                query += "   '" + indPreenchido + "') ";
                 retorno = sqlce.insertSOF(query);
                 return retorno;
             }
@@ -102,7 +104,7 @@ namespace SOEF_CLASS
             {
                 DataTable dt = new DataTable();
                 string sql;
-                sql = "SELECT * FROM DOM_SOLIC_ORC_ESCOPO_19 WHERE NUMERO_SOLICITACAO = "+ pNumSolic + " AND REVISAO_SOLICITACAO = " + pRevisao;
+                sql = "SELECT * FROM DOM_SOLIC_ORC_ESCOPO_19 WHERE NUMERO_SOLICITACAO = "+ pNumSolic + " AND REVISAO_SOLICITACAO = '" + pRevisao + "'";
                 dt = sqlce.selectListaSOF(sql, "DOM_SOLIC_ORC_ESCOPO_19");
                 return dt;
             }
@@ -110,7 +112,84 @@ namespace SOEF_CLASS
             {
                 throw;
             }
+        }
 
+
+        /// <summary>
+        /// Método que atualiza informações do Escopo 19
+        /// </summary>
+        /// <param name="pNumSolic"></param>
+        /// <param name="pRevisao"></param>
+        /// <returns></returns>
+        public int updateEscopo(string pNumSolic, string pRevisao, string pindAberturaFechamentoValas, string pindCaixaInspecao, string pindBasePostes, string pindBaseSubestacao, string pindCasaBombas, string pindOutroEscopo, string pdescOutroEscopo, string pobservacao)
+        {
+            SqlCE sqlce = new SqlCE();
+            try
+            {
+                DataTable dtVerificacao;
+                int retorno = 0;
+                string sql;
+                //Verifica se existe registro para essa solicitação
+                dtVerificacao = this.getEscopo(pNumSolic, pRevisao);
+                if(dtVerificacao.Rows.Count > 0)
+                {
+                    sqlce.openConnection();
+                    //DataTable dt = new DataTable();
+                    sql = "UPDATE [DOM_SOLIC_ORC_ESCOPO_19] ";
+                    sql += "  SET [IND_ABERTURA_FEC_VALAS] = '" + pindAberturaFechamentoValas + "' ";
+                    sql += "   ,[IND_CAIXA_INSPECAO] = '" + pindCaixaInspecao + "'";
+                    sql += "   ,[IND_BASE_POSTES] = '" + pindBasePostes + "'";
+                    sql += "   ,[IND_BASE_SUBESTACAO] = '" + pindBaseSubestacao + "'";
+                    sql += "   ,[IND_CASA_BOMBAS] = '" + pindCasaBombas + "'";
+                    sql += "   ,[IND_OUTRO_ESCOPO] = '" + pindOutroEscopo + "'";
+                    sql += "   ,[DESC_OUTRO_ESCOPO] = '" + pdescOutroEscopo + "'";
+                    sql += "   ,[OBSERVACOES] = '" + pobservacao + "' ";
+                    sql += "WHERE [NUMERO_SOLICITACAO] = " + pNumSolic + " AND [REVISAO_SOLICITACAO] = '" + pRevisao + "'";
+                    retorno = sqlce.insertSOF(sql);
+                }
+                else 
+                {
+                    retorno = this.gravaEscopo19(pindAberturaFechamentoValas, pindCaixaInspecao, pindBasePostes, pindBaseSubestacao, pindCasaBombas, pindOutroEscopo, pdescOutroEscopo, pobservacao, "S");
+                }
+                return retorno; 
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                sqlce.closeConnection();
+            }
+        }
+
+
+        /// <summary>
+        /// Método que apaga o Escopo 19 da solicitação
+        /// </summary>
+        /// <param name="pNumSolic">N° Solicitação</param>
+        /// <param name="pRevisao">N° Revisão</param>
+        /// <returns></returns>
+        public int deleteEscopo19(string pNumSolic, string pRevisao)
+        {
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                string sql;
+                sql = "DELETE FROM [DOM_SOLIC_ORC_ESCOPO_19] ";
+                sql += " WHERE NUMERO_SOLICITACAO = " + pNumSolic;
+                sql += " AND REVISAO_SOLICITACAO = '" + pRevisao + "'";
+                return sqlce.deleteSOF(sql);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                sqlce.closeConnection();
+            }
         }
 
     }

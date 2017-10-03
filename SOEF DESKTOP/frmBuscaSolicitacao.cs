@@ -59,7 +59,7 @@ namespace ORCAMENTOS_FOCKINK
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 e.RowIndex >= 0)
             {
-                frmNovaSolicitacao frmNS = new frmNovaSolicitacao("C", dgvListaSolicitacoes.CurrentRow.Cells[5].Value.ToString(), null, dgvListaSolicitacoes.CurrentRow.Cells[1].Value.ToString(), "1");
+                frmNovaSolicitacao frmNS = new frmNovaSolicitacao("C", dgvListaSolicitacoes.CurrentRow.Cells[6].Value.ToString(), null, dgvListaSolicitacoes.CurrentRow.Cells[1].Value.ToString(), dgvListaSolicitacoes.CurrentRow.Cells[2].Value.ToString());
                 frmNS.ShowDialog();
             }
         }

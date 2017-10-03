@@ -47,7 +47,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Escopo.cs" />
+    <Compile Include="Escopo_01.cs" />
+    <Compile Include="Escopo_18.cs" />
+    <Compile Include="Escopo_18_1.cs" />
+    <Compile Include="Escopo_18_2.cs" />
     <Compile Include="Escopo_19.cs" />
+    <Compile Include="Escopo_20.cs" />
+    <Compile Include="Escopo_Valor_Comum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlCE.cs" />
   </ItemGroup>

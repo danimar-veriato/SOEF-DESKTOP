@@ -13,10 +13,10 @@ namespace SOEF_CLASS
 {
     public class SqlCE
     {
-        private static SqlCeConnection objSqlCeConnection = null;
-        private static SqlCE objSqlServerCe = null;
-        private static SqlCE objManipulaBD;
-        private static string stringConn;
+        protected static SqlCeConnection objSqlCeConnection = null;
+        protected static SqlCE objSqlServerCe = null;
+        protected static SqlCE objManipulaBD;
+        protected static string stringConn = "";
 
         /// <summary>
         /// Método construtor da classe

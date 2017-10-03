@@ -34,14 +34,15 @@
             this.rbtnBuscaTodas = new System.Windows.Forms.RadioButton();
             this.btnBuscaSolic = new System.Windows.Forms.Button();
             this.dgvListaSolicitacoes = new System.Windows.Forms.DataGridView();
+            this.btnBuscaVoltar = new System.Windows.Forms.Button();
             this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.REVISAO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.negocio_associado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.empresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valor_estimado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.acao = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnBuscaVoltar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaSolicitacoes)).BeginInit();
             this.SuspendLayout();
@@ -109,18 +110,29 @@
             this.dgvListaSolicitacoes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListaSolicitacoes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.numero,
+            this.REVISAO,
             this.status,
             this.cliente,
             this.negocio_associado,
             this.empresa,
             this.valor_estimado,
             this.acao});
-            this.dgvListaSolicitacoes.Location = new System.Drawing.Point(31, 53);
+            this.dgvListaSolicitacoes.Location = new System.Drawing.Point(22, 53);
             this.dgvListaSolicitacoes.MultiSelect = false;
             this.dgvListaSolicitacoes.Name = "dgvListaSolicitacoes";
-            this.dgvListaSolicitacoes.Size = new System.Drawing.Size(935, 490);
+            this.dgvListaSolicitacoes.Size = new System.Drawing.Size(958, 490);
             this.dgvListaSolicitacoes.TabIndex = 1;
             this.dgvListaSolicitacoes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaSolicitacoes_CellContentClick);
+            // 
+            // btnBuscaVoltar
+            // 
+            this.btnBuscaVoltar.Location = new System.Drawing.Point(31, 568);
+            this.btnBuscaVoltar.Name = "btnBuscaVoltar";
+            this.btnBuscaVoltar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscaVoltar.TabIndex = 3;
+            this.btnBuscaVoltar.Text = "Voltar";
+            this.btnBuscaVoltar.UseVisualStyleBackColor = true;
+            this.btnBuscaVoltar.Click += new System.EventHandler(this.btnBuscaVoltar_Click);
             // 
             // numero
             // 
@@ -129,6 +141,14 @@
             this.numero.Name = "numero";
             this.numero.ReadOnly = true;
             this.numero.Width = 70;
+            // 
+            // REVISAO
+            // 
+            this.REVISAO.DataPropertyName = "REVISAO";
+            this.REVISAO.HeaderText = "Rev.";
+            this.REVISAO.Name = "REVISAO";
+            this.REVISAO.ReadOnly = true;
+            this.REVISAO.Width = 80;
             // 
             // status
             // 
@@ -152,6 +172,7 @@
             this.negocio_associado.HeaderText = "Negócio";
             this.negocio_associado.Name = "negocio_associado";
             this.negocio_associado.ReadOnly = true;
+            this.negocio_associado.Width = 70;
             // 
             // empresa
             // 
@@ -175,16 +196,7 @@
             this.acao.Text = "Editar";
             this.acao.ToolTipText = "Editar Registro";
             this.acao.UseColumnTextForButtonValue = true;
-            // 
-            // btnBuscaVoltar
-            // 
-            this.btnBuscaVoltar.Location = new System.Drawing.Point(31, 568);
-            this.btnBuscaVoltar.Name = "btnBuscaVoltar";
-            this.btnBuscaVoltar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscaVoltar.TabIndex = 3;
-            this.btnBuscaVoltar.Text = "Voltar";
-            this.btnBuscaVoltar.UseVisualStyleBackColor = true;
-            this.btnBuscaVoltar.Click += new System.EventHandler(this.btnBuscaVoltar_Click);
+            this.acao.Width = 80;
             // 
             // frmBuscaSolicitacao
             // 
@@ -216,6 +228,7 @@
         private System.Windows.Forms.RadioButton rbtnBuscaEnviadas;
         private System.Windows.Forms.RadioButton rbtnBuscaTodas;
         private System.Windows.Forms.DataGridViewTextBoxColumn numero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn REVISAO;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
         private System.Windows.Forms.DataGridViewTextBoxColumn cliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn negocio_associado;

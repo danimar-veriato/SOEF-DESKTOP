@@ -80,7 +80,7 @@ namespace ORCAMENTOS_FOCKINK
                 //Inicializa combos cabeçalho
                 inicializaCombos();
                 //Seta a Revisão p/ Novo Registro como 1 por default
-                this.NumRevisaoSolic = "1";
+                this.NumRevisaoSolic = "R0C0";
                 //Oculta as tabs do cabeçalho
                 tbCabecalho.Controls.Remove(tabCabecalhoCondPgto);
                 txtStatusSolic.Text = "GER";
@@ -92,7 +92,6 @@ namespace ORCAMENTOS_FOCKINK
             }
             else //C - Consulta / Alteração
             {
-                /*this.NumSolicitacao*/
                 this.empr_logada = param_form_empr_codigo;
                 this.numero_solic = Convert.ToInt32(param_form_num_solic);
                 this.NumRevisaoSolic = param_form_rev_solic;
@@ -149,6 +148,7 @@ namespace ORCAMENTOS_FOCKINK
             tabNovaSolicitacao.Controls.Remove(tabEscopo17);
             tabNovaSolicitacao.Controls.Remove(tabEscopo18);
             tabNovaSolicitacao.Controls.Remove(tabEscopo19);
+            tabNovaSolicitacao.Controls.Remove(tabEscopo20);
         }
 
 
@@ -530,7 +530,6 @@ namespace ORCAMENTOS_FOCKINK
                                 txtCabecalhoCodObra.Text = "";
                                 txtCabecalhoCodObra.Focus();
                             }
-
                         }
                         else
                         {
@@ -756,8 +755,7 @@ namespace ORCAMENTOS_FOCKINK
             if(radioIncentFiscalSim.Checked == true)
             {
                 txtCabIncentivo.Enabled = true;
-            }
-                
+            }  
         }
 
         private void comboCabPagmentos_SelectedIndexChanged(object sender, EventArgs e)
@@ -836,16 +834,13 @@ namespace ORCAMENTOS_FOCKINK
                     this.finalidade, this.empreendimento, this.idioma, this.outro_idioma, this.valor, this.dt_obra, this.dt_proposta, this.concorrentes, this.resp_padrao_solucao,
                     this.frete, this.faturamento, this.vendaPara, this.contICMS, this.incentFiscal, this.desc_incentivo, this.formaPagamento, this.financiamento, this.instFinanceira,
                     this.indic_empr_codigo, this.indic_dpes_codigo, this.indicComissao, this.margemDesconto, this.moeda, this.cod_representante, this.empr_representante);
-
                     //Busca o número da solicitação cadastrada
                     this.numero_solic = Convert.ToInt32(cSolicitacao.getNumeroSolicitacao()) - 1;
-                    MessageBox.Show("Número Solicitação: " + this.numero_solic);
                     //Ativa a Aba das condições de pagamento
                     tbCabecalho.Controls.Add(tabCabecalhoCondPgto);
                     MessageBox.Show("Cabeçalho gravado com sucesso!", "Cadastro de Solicitação", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //Traz os dados da solicitação gravada para os campos da tela
                     caregaCampos(this.empr_representante, this.numero_solic.ToString(), this.NumRevisaoSolic);
-
                     //Desabilita o botão Gravar e habilita o Alterar
                     btnCabGravaCabecalho.Enabled = false;
                     btnSalvaAlteracao.Visible = true;
@@ -1647,10 +1642,12 @@ namespace ORCAMENTOS_FOCKINK
             }
         }
 
+
         private void button1_Click_1(object sender, EventArgs e)
         {
             SOEFC.Escopo Teste = new Escopo();
         }
+
 
         private void btnEsc19Salvar_Click(object sender, EventArgs e)
         {
@@ -1673,8 +1670,6 @@ namespace ORCAMENTOS_FOCKINK
                     string CasaBombas;
                     string OutroEscopo;
                     int vlrRetorno;
-                    
-
                     if (checkAbFecValas.Checked)
                     {
                         AbFecValas = "S";
@@ -1725,26 +1720,41 @@ namespace ORCAMENTOS_FOCKINK
                     }
 
                     SOEF_CLASS.Escopo_19 Escopo19 = new SOEF_CLASS.Escopo_19(this.numero_solic.ToString(), this.NumRevisaoSolic);
-                    vlrRetorno = Escopo19.gravaEscopo19(AbFecValas, CaixaInspecao, BasePostes, BaseSubestacao, CasaBombas, OutroEscopo, txtEsc19Necessidade.Text, txtEsc19Observacoes.Text);
-                    MessageBox.Show(vlrRetorno.ToString());
-                    DataTable dt = new DataTable();
-                    dt = Escopo19.getEscopo(this.numero_solic.ToString(), this.NumRevisaoSolic);
-                    if(dt.Rows.Count > 0)
+                    //Verifica se é registro novo ou alteração
+                    if (AcaoTela == "N")
                     {
-                        foreach(DataRow dr in dt.Rows)
-                        { 
-                            MessageBox.Show("Número: " + dr["NUMERO_SOLICITACAO"].ToString() + " Revisão: " + dr["REVISAO_SOLICITACAO"].ToString() + " OBS: " + dr["OBSERVACOES"].ToString() + " BASE POSTES: " + dr["IND_BASE_POSTES"].ToString());
+                        vlrRetorno = Escopo19.gravaEscopo19(AbFecValas, CaixaInspecao, BasePostes, BaseSubestacao, CasaBombas, OutroEscopo, txtEsc19Necessidade.Text, txtEsc19Observacoes.Text, "S");
+                        if(vlrRetorno > 0)
+                        {
+                            MessageBox.Show("Escopo registrado com sucesso!");
+                            listaEscopo19(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                            btnEsc19Excluir.Visible = true;
+                            checkEscopo19.Checked = true;
+                            checkEscopo19.Enabled = false;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ocorreu um erro ao definir este escopo.");
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Não tem dados!");
+                        vlrRetorno = Escopo19.updateEscopo(this.numero_solic.ToString(), this.NumRevisaoSolic, AbFecValas, CaixaInspecao, BasePostes, BaseSubestacao, CasaBombas, OutroEscopo, txtEsc19Necessidade.Text, txtEsc19Observacoes.Text);
+                        if (vlrRetorno > 0)
+                        {
+                            MessageBox.Show("Escopo gravado/atualizado com sucesso!");
+                            checkEscopo19.Checked = true;
+                            checkEscopo19.Enabled = false;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ocorreu um erro na atualização deste escopo.");
+                        }
                     }
-
-
                 }
             }
         }
+
 
         private void check6Esc19_CheckedChanged(object sender, EventArgs e)
         {
@@ -1757,6 +1767,2067 @@ namespace ORCAMENTOS_FOCKINK
             {
                 lblNecessidade.Visible = false;
                 txtEsc19Necessidade.Visible = false;
+            }
+        }
+
+
+        /// <summary>
+        /// Lista os dados do Escopo 20
+        /// </summary>
+        /// <param name="pNumSolic"></param>
+        /// <param name="pNumRev"></param>
+        protected void listaEscopo20(string pNumSolic, string pNumRev)
+        {
+            try
+            {
+                SOEF_CLASS.Escopo_20 Escopo20 = new SOEF_CLASS.Escopo_20(pNumSolic, pNumRev);
+                dgvListaEsc20.DataSource = Escopo20.getEscopo20(pNumSolic, pNumRev);  
+                if(dgvListaEsc20.Rows.Count > 0)
+                {
+                    btnEsc20Excluir.Visible = true;                    
+                }
+                else
+                {
+                    btnEsc20Excluir.Visible = false;                   
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
+        protected void listaEscopo01(string pNumSolic, string pNumRev)
+        {
+            try
+            {
+                SOEF_CLASS.Escopo_01 Escopo01 = new SOEF_CLASS.Escopo_01(pNumSolic, pNumRev);
+                DataTable dt = Escopo01.getEscopo_01();
+                if (dt.Rows.Count > 0)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        combo01Tensao.SelectedIndex = Convert.ToInt32(dr["TENSAO_MEDIA"].ToString());
+                        if (dr["IND_TIPO_INSTALACAO"].ToString() == "A")
+                        {
+                            combo01Instalacao.SelectedIndex = 1;
+                        }
+                        else if (dr["IND_TIPO_INSTALACAO"].ToString() == "T")
+                        {
+                            combo01Instalacao.SelectedIndex = 2;
+                        }
+                        else if (dr["IND_TIPO_INSTALACAO"].ToString() == "M")
+                        {
+                            combo01Instalacao.SelectedIndex = 3;
+                        }
+                        if (dr["IND_ENSAIO"].ToString() == "E")
+                        {
+                            combo01EnsaioPainel.SelectedIndex = 1;
+                        }
+                        else if (dr["IND_ENSAIO"].ToString() == "C")
+                        {
+                            combo01EnsaioPainel.SelectedIndex = 2;
+                        }
+                        else if (dr["IND_ENSAIO"].ToString() == "T")
+                        {
+                            combo01EnsaioPainel.SelectedIndex = 3;
+                        }
+                        else if (dr["IND_ENSAIO"].ToString() == "O")
+                        {
+                            combo01EnsaioPainel.SelectedIndex = 4;
+                            txt01OutroEnsaio.Enabled = true;
+                            txt01OutroEnsaio.Text = dr["DESC_OUTRO_ENSAIO"].ToString();
+                        }
+
+                        if (dr["TIPO_PINTURA"].ToString() == "R")
+                        {
+                            combo01Pintura.SelectedIndex = 1;
+                        }
+                        else if (dr["TIPO_PINTURA"].ToString() == "M")
+                        {
+                            combo01Pintura.SelectedIndex = 2;
+                        }
+                        else if (dr["TIPO_PINTURA"].ToString() == "E")
+                        {
+                            combo01Pintura.SelectedIndex = 3;
+                        }
+
+                        if (!string.IsNullOrEmpty(dr["OBSERVACOES"].ToString()))
+                        {
+                            txt01Obs.Text = dr["OBSERVACOES"].ToString();
+                        }
+                        else
+                        {
+                            txt01Obs.Text = "";
+                        }
+
+                        combo01Frequencia.SelectedIndex = Convert.ToInt32(dr["FREQUENCIA"].ToString());
+                        if (dr["FREQUENCIA"].ToString() == "3")
+                        {
+                            txt01OutraFrequencia.Enabled = true;
+                            txt01OutraFrequencia.Text = dr["DESC_OUTRA_FREQUENCIA"].ToString();
+                        }
+
+                        if (dr["DADOS_AMBIENTAIS"].ToString() == "U")
+                        {
+                            combo01DadosAmbientais.SelectedIndex = 1;
+                        }
+                        else if (dr["DADOS_AMBIENTAIS"].ToString() == "M")
+                        {
+                            combo01DadosAmbientais.SelectedIndex = 2;
+                        }
+                        else if (dr["DADOS_AMBIENTAIS"].ToString() == "C")
+                        {
+                            combo01DadosAmbientais.SelectedIndex = 3;
+                        }
+                        else if (dr["DADOS_AMBIENTAIS"].ToString() == "N")
+                        {
+                            combo01DadosAmbientais.SelectedIndex = 4;
+                        }
+
+                        if (dr["IND_DIAGRAMA_UNIFILAR"].ToString() == "S")
+                        {
+                            rbtn01Sim.Checked = true;
+                        }
+                        else
+                        {
+                            rbtn01Nao.Checked = true;
+                            txt01Descricao.Enabled = true;
+                            txt01Descricao.Text = dr["DESCRICAO_SOLUCAO"].ToString();
+                        }                        
+                    }
+                    btn01Excluir.Visible = true;
+                }
+                else
+                {
+                    //Limpa os campos
+                    combo01Tensao.SelectedIndex = 0;
+                    combo01Instalacao.SelectedIndex = 0;
+                    combo01EnsaioPainel.SelectedIndex = 0;
+                    combo01Pintura.SelectedIndex = 0;
+                    txt01Obs.Text = "";
+                    combo01Frequencia.SelectedIndex = 0;
+                    txt01OutraFrequencia.Text = "";
+                    txt01OutraFrequencia.Enabled = false;
+                    combo01DadosAmbientais.SelectedIndex = 0;
+                    rbtn01Nao.Checked = false;
+                    rbtn01Sim.Checked = false;
+                    txt01Descricao.Text = "";
+                    txt01OutroEnsaio.Enabled = false;
+                    txt01OutroEnsaio.Text = "";
+                }
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Lista o Escopo 18_2
+        /// </summary>
+        /// <param name="pNumSolic"></param>
+        /// <param name="pNumRev"></param>
+        protected void listaEscopo18_2(string pNumSolic, string pNumRev)
+        {
+            try
+            {
+                SOEF_CLASS.Escopo_18_2 Escopo18_2 = new SOEF_CLASS.Escopo_18_2(pNumSolic, pNumRev);
+                DataTable dt = Escopo18_2.getEscopo18_2();
+                if(dt.Rows.Count > 0)
+                {
+                    foreach(DataRow dr in dt.Rows)
+                    {
+                        if(dr["IND_TECNICO_OBRAS"].ToString() == "S")
+                        {
+                            check18_2TecObras.Checked = true;
+                        }
+                        else
+                        {
+                            check18_2TecObras.Checked = false;
+                        }
+                        if (dr["IND_ALMOXARIFE"].ToString() == "S")
+                        {
+                            check18_2Almoxarife.Checked = true;
+                        }
+                        else
+                        {
+                            check18_2Almoxarife.Checked = false;
+                        }
+                        if (dr["IND_MONTADOR"].ToString() == "S")
+                        {
+                            check18_2Montador.Checked = true;
+                        }
+                        else
+                        {
+                            check18_2Montador.Checked = false;
+                        }
+                        if (dr["IND_SOLDADOR"].ToString() == "S")
+                        {
+                            check18_2Soldador.Checked = true;
+                        }
+                        else
+                        {
+                            check18_2Soldador.Checked = false;
+                        }
+                        if (dr["IND_OUTRO_PROFISSIONAL"].ToString() == "S")
+                        {
+                            check18_2Outro.Checked = true;
+                            label81.Visible = true;
+                            txt18_2DescProfissional.Visible = true;
+                        }
+                        else
+                        {
+                            check18_2Soldador.Checked = false;
+                            label81.Visible = false;
+                            txt18_2DescProfissional.Text = "";
+                            txt18_2DescProfissional.Visible = false;
+                        }
+                        if (dr["IND_PLATAFORMA_ELEVATORIA"].ToString() == "S")
+                        {
+                            check18_2PlataformaElevatoria.Checked = true;
+                        }
+                        else
+                        {
+                            check18_2PlataformaElevatoria.Checked = false;
+                        }
+                        if (dr["IND_MUNCK"].ToString() == "S")
+                        {
+                            check18_2Munck.Checked = true;
+                        }
+                        else
+                        {
+                            check18_2Munck.Checked = false;
+                        }
+                        if (dr["IND_FERRAMENTAL"].ToString() == "S")
+                        {
+                            check18_2Ferramental.Checked = true;
+                        }
+                        else
+                        {
+                            check18_2Ferramental.Checked = false;
+                        }
+                        txt18_2Obs.Text = dr["OBSERVACOES"].ToString();
+                    }
+                    btn18_2Excluir.Visible = true;
+                    //Marca o CheckBox 18.2 se existir registro
+                    check18_2MaoObraDireta.Checked = true;
+                    check18_2MaoObraDireta.Enabled = false;                    
+                }
+                else
+                {
+                    //Limpa os campos da  tela
+                    check18_2TecObras.Checked = false;
+                    check18_2Almoxarife.Checked = false;
+                    check18_2Montador.Checked = false;
+                    check18_2AuxiliarMontador.Checked = false;
+                    check18_2Soldador.Checked = false;
+                    check18_2Outro.Checked = false;
+                    txt18_2DescProfissional.Text = "";
+                    label81.Visible = false;
+                    txt18_2DescProfissional.Visible = false;
+                    check18_2PlataformaElevatoria.Checked = false;
+                    check18_2Munck.Checked = false;
+                    check18_2Ferramental.Checked = false;
+                    txt18_2Obs.Text = "";
+                    btn18_2Excluir.Visible = false;
+                    //Marca o Checkbox 18.1 se não existir registro cadastrado
+                    check18_2MaoObraDireta.Checked = false;
+                    check18_2MaoObraDireta.Enabled = true;
+                    p18_2.Visible = false;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        
+
+        /// <summary>
+        /// Lista o Escopo 18_1
+        /// </summary>
+        /// <param name="pNumSolic"></param>
+        /// <param name="pNumRev"></param>
+        protected void listaEscopo18_1(string pNumSolic, string pNumRev)
+        {
+            try
+            {
+                SOEF_CLASS.Escopo_18_1 Escopo18_1 = new SOEF_CLASS.Escopo_18_1(pNumSolic, pNumRev);
+                DataTable dt = Escopo18_1.getEscopo18_1();
+                if (dt.Rows.Count > 0)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        if (dr["IND_ENGENHEIRO_RESIDENTE"].ToString() == "S")
+                        {
+                            check18_1EngResidente.Checked = true;
+                        }
+                        else
+                        {
+                            check18_1EngResidente.Checked = false;
+                        }
+
+                        if(dr["IND_ADMINISTRATIVO"].ToString() == "S")
+                        {
+                            check18_1Administrativo.Checked = true;
+                        }
+                        else
+                        {
+                            check18_1Administrativo.Checked = false;
+                        }
+
+                        if (dr["IND_TECNICO_SEGURANCA"].ToString() == "S")
+                        {
+                            check18_1TecSeguranca.Checked = true;
+                        }
+                        else
+                        {
+                            check18_1TecSeguranca.Checked = false;
+                        }
+
+                        if(dr["IND_PLANEJADOR"].ToString() == "S")
+                        {
+                            check18_1Planejador.Checked = true;
+                        }
+                        else
+                        {
+                            check18_1Planejador.Checked = false;
+                        }
+
+                        if (dr["IND_OUTRO_PROFISSIONAL"].ToString() == "S")
+                        {
+                            check18_1Outro.Checked = true;
+                            label76.Visible = true;
+                            txt18_1DescProfissional.Visible = true;
+                            txt18_1DescProfissional.Text = dr["DESC_OUTRO_PROFISSIONAL"].ToString();
+                        }
+                        else
+                        {
+                            check18_1Outro.Checked = false;
+                            label76.Visible = false;
+                            txt18_1DescProfissional.Visible = false;
+                            txt18_1DescProfissional.Text = "";
+                        }
+                        if (dr["IND_ENCARREGADO"].ToString() == "S")
+                        {
+                            check18_1Encarregado.Checked = true;
+                        }
+                        else
+                        {
+                            check18_1Encarregado.Checked = false;
+                        }
+
+                        txt18_1Obs.Text = dr["OBSERVACOES"].ToString();
+                    }
+                    btn18_1Excluir.Visible = true;
+
+                    //Marca o Checkbox 18.1 se existir registro cadastrado
+                    check18_1MaoObraIndireta.Checked = true;
+                    check18_1MaoObraIndireta.Enabled = false;
+                }
+                else
+                {
+                    //Limpa os campos da tela
+                    check18_1EngResidente.Checked = false;
+                    check18_1Administrativo.Checked = false;
+                    check18_1TecSeguranca.Checked = false;
+                    check18_1Planejador.Checked = false;
+                    check18_1Outro.Checked = false;
+                    txt18_1DescProfissional.Text = "";
+                    label76.Visible = false;
+                    txt18_1DescProfissional.Visible = false;
+                    txt18_1Obs.Text = "";
+                    check18_1Encarregado.Checked = false;
+                    btn18_1Excluir.Visible = false;
+                    //Marca o Checkbox 18.1 se não existir registro cadastrado
+                    check18_1MaoObraIndireta.Checked = false;
+                    check18_1MaoObraIndireta.Enabled = true;
+                    p18_1.Visible = false;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        
+
+        /// <summary>
+        /// Lista o Escopo 18
+        /// </summary>
+        /// <param name="pNumSolic"></param>
+        /// <param name="pNumRev"></param>
+        protected void listaEscopo18(string pNumSolic, string pNumRev)
+        {
+            try
+            {
+                SOEF_CLASS.Escopo_18 Escopo18 = new SOEF_CLASS.Escopo_18(pNumSolic, pNumRev);
+                DataTable dt = Escopo18.getEscopo18();
+                if(dt.Rows.Count > 0)
+                {
+                    foreach(DataRow dr in dt.Rows)
+                    {
+                        if(dr["IND_HORA_EXTRA"].ToString() == "S")
+                        {
+                            rbtn18HrasExtrasSim.Checked = true;
+                        }
+                        else if (dr["IND_HORA_EXTRA"].ToString() == "N")
+                        {
+                            rbtn18HrasExtrasNao.Checked = true;
+                        }
+                        if(dr["IND_MATERIAL_CONSUMO"].ToString() == "S")
+                        {
+                            rbtn18MatConsumoSim.Checked = true;
+                        }
+                        else if(dr["IND_MATERIAL_CONSUMO"].ToString() == "N")
+                        {
+                            rbtn18MatConsumoNao.Checked = true;
+                        }
+                        if (dr["IND_TRANSLADO_OBRA"].ToString() == "S")
+                        {
+                            rbtn18ConsidTransladoSim.Checked = true;
+                        }
+                        else if (dr["IND_TRANSLADO_OBRA"].ToString() == "N")
+                        {
+                            rbtn18ConsidTransladoNao.Checked = true;
+                        }
+                        if (dr["IND_FORNEC_ALIMENTACAO"].ToString() == "F")
+                        {
+                            rbtn18AlimentacaoFockink.Checked = true;
+                        }
+                        else if(dr["IND_FORNEC_ALIMENTACAO"].ToString() == "C")
+                        {
+                            rbtn18AlimentacaoCli.Checked = true;
+                        }
+                        if (dr["IND_FORNEC_ESTADIA"].ToString() == "F")
+                        {
+                            rbtn18EstadiaFockink.Checked = true;
+
+                        }
+                        else if (dr["IND_FORNEC_ESTADIA"].ToString() == "C")
+                        {
+                            rbtn18EstadiaCli.Checked = true; 
+                        }
+                        txt18Obs.Text = dr["OBSERVACOES"].ToString();
+                    }
+                    btn18Excluir.Visible = true;
+                }
+                else
+                {
+                    //Limpa os campos da tela
+                    rbtn18HrasExtrasSim.Checked = false;
+                    rbtn18HrasExtrasNao.Checked = false;
+                    rbtn18MatConsumoSim.Checked = false;
+                    rbtn18MatConsumoNao.Checked = false;
+                    rbtn18ConsidTransladoSim.Checked = false;
+                    rbtn18ConsidTransladoNao.Checked = false;
+                    rbtn18AlimentacaoFockink.Checked = false;
+                    rbtn18AlimentacaoCli.Checked = false;
+                    rbtn18EstadiaCli.Checked = false;
+                    rbtn18EstadiaFockink.Checked = false;
+                    txt18Obs.Text = "";
+                    btn18Excluir.Visible = false;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
+        /// <summary>
+        /// Função que verifica os escopos que já estão preenchidos
+        /// </summary>
+        /// <param name="numSolic">N° da solicitação</param>
+        /// <param name="numRev">N° da revisão</param>
+        /// <param name="tabelaEscopo">Nome da tabela do BD referente ao escopo</param>
+        public void verificaEscopos(string numSolic, string numRev)
+       {
+            try
+            {
+                DataTable dtVerifica01 = new DataTable();
+                //Escopo 01
+                SOEF_CLASS.Escopo_01 Escopo01 = new SOEF_CLASS.Escopo_01(numSolic, numRev);
+                dtVerifica01 = Escopo01.getEscopo_01();
+                if(dtVerifica01.Rows.Count > 0)
+                {
+                    if(dtVerifica01.Rows[0]["IND_PREENCHIDO"].ToString() == "S")
+                    {
+                        //Marca o Escopo_01 como preenchido na tela de escopos
+                        checkEscopo1.Checked = true;
+                        checkEscopo1.Enabled = false;
+                    }
+                    else
+                    {
+                        checkEscopo1.Checked = false;
+                        checkEscopo1.Enabled = true;
+                    }
+                }
+
+                //Escopo 18
+                SOEF_CLASS.Escopo_18 Escopo18 = new SOEF_CLASS.Escopo_18(numSolic, numRev);
+                DataTable dtVerifica18 = new DataTable();
+                dtVerifica18 = Escopo18.getEscopo18();
+                if (dtVerifica18.Rows.Count > 0)
+                {
+                    if (dtVerifica18.Rows[0]["IND_PREENCHIDO"].ToString() == "S")
+                    {
+                        //Marca o Escopo_18 como preenchido na tela de escopos
+                        checkEscopo18.Checked = true;
+                        checkEscopo18.Enabled = false;
+                    }
+                    else
+                    {
+                        checkEscopo18.Checked = false;
+                        checkEscopo18.Enabled = true;
+                    }
+                }
+
+                //Escopo 19
+                SOEF_CLASS.Escopo_19 Escopo19 = new SOEF_CLASS.Escopo_19(numSolic, numRev);
+                DataTable dtVerifica19 = new DataTable();
+                dtVerifica19 = Escopo19.getEscopo(numSolic, numRev);
+                if(dtVerifica19.Rows.Count > 0)
+                {
+                    if(dtVerifica19.Rows[0]["IND_PREENCHIDO"].ToString() == "S")
+                    {
+                        checkEscopo19.Checked = true;
+                        checkEscopo19.Enabled = false;
+                    }
+                    else
+                    {
+                        checkEscopo19.Checked = false;
+                        checkEscopo19.Enabled = true;
+                    }
+                }
+
+                //Escopo 20
+                SOEF_CLASS.Escopo_20 Escopo20 = new SOEF_CLASS.Escopo_20(numSolic, numRev);
+                DataTable dtVerifica20 = new DataTable();
+                dtVerifica20 = Escopo20.getEscopo20(numSolic, numRev);
+                if (dtVerifica20.Rows.Count > 0)
+                {
+                    if (dtVerifica20.Rows[0]["IND_PREENCHIDO"].ToString() == "S")
+                    {
+                        checkEscopo20.Checked = true;
+                        checkEscopo20.Enabled = false;
+                    }
+                    else
+                    {
+                        checkEscopo20.Checked = false;
+                        checkEscopo20.Enabled = true;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+       }
+
+
+        /// <summary>
+        /// Função que lista os dados do Escopo 19 na tela
+        /// </summary>
+        /// <param name="numSolic"></param>
+        /// <param name="numRevi"></param>
+        protected void listaEscopo19(string numSolic, string numRevi)
+        {
+            try
+            {
+                SOEF_CLASS.Escopo_19 Escopo19 = new SOEF_CLASS.Escopo_19(numSolic, numRevi);
+                DataTable dt = Escopo19.getEscopo(numSolic, numRevi);
+                if (dt.Rows.Count > 0)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        if (dr["IND_ABERTURA_FEC_VALAS"].ToString() == "S")
+                        {
+                            checkAbFecValas.Checked = true;
+                        }
+                        else
+                        {
+                            checkAbFecValas.Checked = false;
+                        }
+                        if (dr["IND_CAIXA_INSPECAO"].ToString() == "S")
+                        {
+                            checkCaixaInspecao.Checked = true;
+                        }
+                        else
+                        {
+                            checkCaixaInspecao.Checked = false;
+                        }
+                        if (dr["IND_BASE_POSTES"].ToString() == "S")
+                        {
+                            checkBasePoste.Checked = true;
+                        }
+                        else
+                        {
+                            checkBasePoste.Checked = false;
+                        }
+                        if (dr["IND_BASE_SUBESTACAO"].ToString() == "S")
+                        {
+                            checkBaseSubestacao.Checked = true;
+                        }
+                        else
+                        {
+                            checkBaseSubestacao.Checked = false;
+                        }
+                        if (dr["IND_CASA_BOMBAS"].ToString() == "S")
+                        {
+                            checkCasaBombas.Checked = true;
+                        }
+                        else
+                        {
+                            checkCasaBombas.Checked = false;
+                        }
+                        if (dr["IND_OUTRO_ESCOPO"].ToString() == "S")
+                        {
+                            checkOutro.Checked = true;
+                            txtEsc19Necessidade.Text = dr["DESC_OUTRO_ESCOPO"].ToString();
+                        }
+                        else
+                        {
+                            checkOutro.Checked = false;
+                            txtEsc19Necessidade.Text = "";
+                        }
+                        if (!string.IsNullOrEmpty(dr["OBSERVACOES"].ToString()))
+                        {
+                            txtEsc19Observacoes.Text = dr["OBSERVACOES"].ToString();
+                        }
+                        else
+                        {
+                            txtEsc19Observacoes.Text = "";
+                        }
+                    }
+                }
+                else
+                {
+                    //Limpa os campos da tela
+                    checkAbFecValas.Checked = false;
+                    checkBasePoste.Checked = false;
+                    checkCasaBombas.Checked = false;
+                    checkCaixaInspecao.Checked = false;
+                    checkBaseSubestacao.Checked = false;
+                    checkOutro.Checked = false;
+                    txtEsc19Observacoes.Text = "";
+                    txtEsc19Necessidade.Text = "";
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
+       
+
+
+        private void tabNovaSolicitacao_Selected(object sender, TabControlEventArgs e)
+        {
+            if(tabNovaSolicitacao.SelectedTab.Name == "tabDefEscopo")
+            {
+                ////Função que verifica os escopos existentes e ativa eles
+                verificaEscopos(this.numero_solic.ToString(), this.NumRevisaoSolic);
+            }
+
+
+            if(tabNovaSolicitacao.SelectedTab.Name == "tabEscopo1")
+            {
+                if(AcaoTela == "N")
+                {
+                    combo01Tensao.SelectedIndex = 0;
+                    combo01EnsaioPainel.SelectedIndex = 0;
+                    rbtn01Sim.Checked = true;
+                    btn01Excluir.Visible = false;
+
+                    //Sugere campos comuns DOM_SOLIC_ORC_VALOR_COMUM
+                    SOEF_CLASS.Escopo_Valor_Comum EscopoValorComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    //Verifica se existe registro na tabela Valor Comum
+                    DataTable dt = EscopoValorComum.buscaEscopoValorComumE01(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    if (dt.Rows.Count > 0)
+                    {
+                        foreach(DataRow dr in dt.Rows)
+                        {
+                            //Dados Ambientais
+                            if(dr["DADOS_AMBIENTAIS"].ToString() == "U")
+                            {
+                                combo01DadosAmbientais.SelectedIndex = 1;
+                            }
+                            else if(dr["DADOS_AMBIENTAIS"].ToString() == "M")
+                            {
+                                combo01DadosAmbientais.SelectedIndex = 2;
+                            }
+                            else if (dr["DADOS_AMBIENTAIS"].ToString() == "C")
+                            {
+                                combo01DadosAmbientais.SelectedIndex = 3;
+                            }
+                            else if (dr["DADOS_AMBIENTAIS"].ToString() == "N")
+                            {
+                                combo01DadosAmbientais.SelectedIndex = 4;
+                            }
+                            //Frequência
+                            if (dr["FREQUENCIA_HZ"].ToString() == "1")
+                            {
+                                combo01DadosAmbientais.SelectedIndex = 1;
+                            }
+                            else if (dr["FREQUENCIA_HZ"].ToString() == "2")
+                            {
+                                combo01DadosAmbientais.SelectedIndex = 2;
+                            }
+                            else if (dr["FREQUENCIA_HZ"].ToString() == "3")
+                            {
+                                combo01DadosAmbientais.SelectedIndex = 3;
+                                txt01OutraFrequencia.Enabled = true;
+                                txt01OutraFrequencia.Text = dr["OUTRA_FREQUENCIA"].ToString();
+                            }
+                            //Tipo Pintura
+                            if (dr["TIPO_PINTURA"].ToString() == "R")
+                            {
+                                combo01Pintura.SelectedIndex = 1;
+                            }
+                            else if (dr["TIPO_PINTURA"].ToString() == "M")
+                            {
+                                combo01Pintura.SelectedIndex = 2;
+                            }
+                            else if (dr["TIPO_PINTURA"].ToString() == "E")
+                            {
+                                combo01Pintura.SelectedIndex = 3;
+                            }
+                            //Tipo Instalação
+                            if (dr["IND_INSTAL_ABRIG_TEMPO"].ToString() == "A")
+                            {
+                                combo01DadosAmbientais.SelectedIndex = 1;
+                            }
+                            else if (dr["IND_INSTAL_ABRIG_TEMPO"].ToString() == "T")
+                            {
+                                combo01DadosAmbientais.SelectedIndex = 2;
+                            }
+                            else if (dr["IND_INSTAL_ABRIG_TEMPO"].ToString() == "M")
+                            {
+                                combo01DadosAmbientais.SelectedIndex = 3;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        //Se os valores comuns estão vazios, não sugere nada
+                        combo01DadosAmbientais.SelectedIndex = 0;
+                        combo01Frequencia.SelectedIndex = 0;
+                        combo01Instalacao.SelectedIndex = 0;
+                        combo01Pintura.SelectedIndex = 0;
+                    }
+                }
+                else
+                {
+                    listaEscopo01(this.numero_solic.ToString(), this.NumRevisaoSolic);
+
+                }           
+            } //Fim Escopo 01
+
+
+            if (tabNovaSolicitacao.SelectedTab.Name == "tabEscopo18")
+            {
+                //Novo Registro ou Consulta/Alteração
+                if (AcaoTela == "N")
+                {
+                    btn18Excluir.Visible = false;
+                }
+                else
+                {
+                    //Buscar dados do escopo 18 da solicitação
+                    listaEscopo18(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    btn18Excluir.Visible = true;
+                }
+            } 
+
+            if (tabNovaSolicitacao.SelectedTab.Name == "tabEscopo19")
+            {
+                //Novo Registro ou Consulta/Alteração
+                if (AcaoTela == "N")
+                {
+                    btnEsc19Excluir.Visible = false;
+                }
+                else
+                {
+                    //Buscar dados do escopo 19 da solicitação
+                    listaEscopo19(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    btnEsc19Excluir.Visible = true;
+                }
+            }
+            else if(tabNovaSolicitacao.SelectedTab.Name == "tabEscopo20")
+            {
+                listaEscopo20(this.numero_solic.ToString(), this.NumRevisaoSolic);
+
+            }
+        }
+
+
+        private void btnEsc19Excluir_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Deseja realmente excluir o Escopo 19 desta solicitação?", "SOEF", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                try
+                {
+                    SOEF_CLASS.Escopo_19 Escopo19 = new SOEF_CLASS.Escopo_19(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    int retorno = Escopo19.deleteEscopo19(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    if(retorno > 0)
+                    {
+                        MessageBox.Show("Escopo excluído com sucesso!");
+                        listaEscopo19(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                        checkEscopo19.Checked = false;
+                        checkEscopo19.Enabled = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocorreu um erro ao excluir o escopo. Favor tente novamente.");
+                    }
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+        }
+
+
+        private void checkEscopo20_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkEscopo20.Checked)
+            {
+                tabNovaSolicitacao.Controls.Add(tabEscopo20);
+            }
+            else
+            {
+                tabNovaSolicitacao.Controls.Remove(tabEscopo20);
+            }
+        }
+
+
+        private void btnEsc20Salvar_Click(object sender, EventArgs e)
+        {
+            if(string.IsNullOrEmpty(txtEsc20Titulo.Text) || string.IsNullOrEmpty(txtEsc20Desc.Text))
+            {
+                MessageBox.Show("Por favor, informe o título e a descrição do escopo.");
+            }
+            else
+            {
+                try
+                {
+                    string EscopoPre = "";
+                    int vlrRetorno = 0;
+                    int sequencia;
+                    string EscopoPreenchido = "S";
+                    SOEF_CLASS.Escopo_20 Escopo20 = new SOEF_CLASS.Escopo_20(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    //Busca a última sequência inserida
+                    sequencia = Escopo20.getSequencia(this.numero_solic.ToString(), this.NumRevisaoSolic) + 1;
+                   
+                    //Verifica se é um novo registro
+                   // if (AcaoTela != "N") 
+                  //  {
+                        vlrRetorno = Escopo20.gravaEscopo20(sequencia.ToString(), txtEsc20Titulo.Text, txtEsc20Desc.Text, EscopoPreenchido);
+                        if(vlrRetorno > 0)
+                        {
+                            listaEscopo20(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                            MessageBox.Show("Escopo gravado com sucesso!");
+                            txtEsc20Desc.Text = "";
+                            txtEsc20Titulo.Text = "";
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ocorreu um erro na gravação do escopo. Tente novamente.");
+                        }
+                   // }
+                    //else
+                    //{
+                   // }
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+
+            }
+        }
+
+        private void dgvListaEsc20_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
+            {
+                int retorno;
+                SOEF_CLASS.Escopo_20 Escopo20 = new SOEF_CLASS.Escopo_20(dgvListaEsc20.CurrentRow.Cells[1].Value.ToString(), dgvListaEsc20.CurrentRow.Cells[2].Value.ToString());
+                retorno = Escopo20.deleteEscopo20(dgvListaEsc20.CurrentRow.Cells[1].Value.ToString(), dgvListaEsc20.CurrentRow.Cells[2].Value.ToString(), dgvListaEsc20.CurrentRow.Cells[3].Value.ToString());
+                if(retorno > 0)
+                {
+                    MessageBox.Show("Registro apagado com sucesso!");
+                    listaEscopo20(dgvListaEsc20.CurrentRow.Cells[1].Value.ToString(), dgvListaEsc20.CurrentRow.Cells[2].Value.ToString());
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro na exclusão do registro.");
+                }
+            }
+        }
+
+        private void btnEsc20Excluir_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Deseja realmente excluir o Escopo 19 desta solicitação?", "SOEF", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                SOEF_CLASS.Escopo_20 Escopo20 = new SOEF_CLASS.Escopo_20(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                int retorno;
+                retorno = Escopo20.deleteEscopo20(this.numero_solic.ToString(), this.NumRevisaoSolic, null);
+                if (retorno > 0)
+                {
+                    MessageBox.Show("Registro apagado com sucesso!");
+                    checkEscopo20.Checked = false;
+                    checkEscopo20.Enabled = true;
+                    listaEscopo20(dgvListaEsc20.CurrentRow.Cells[1].Value.ToString(), dgvListaEsc20.CurrentRow.Cells[2].Value.ToString());
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro na exclusão do registro.");
+                }
+            }            
+        }
+
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if( (rbtn18HrasExtrasNao.Checked == false && rbtn18HrasExtrasSim.Checked == false) || (rbtn18MatConsumoNao.Checked == false && rbtn18MatConsumoSim.Checked == false) || (rbtn18ConsidTransladoNao.Checked == false && rbtn18ConsidTransladoSim.Checked == false) || (rbtn18AlimentacaoCli.Checked == false && rbtn18AlimentacaoFockink.Checked == false) || (rbtn18EstadiaCli.Checked == false && rbtn18EstadiaFockink.Checked == false))
+            {
+                MessageBox.Show("Por favor, informe todos os campos obrigatórios.");
+            }
+            else
+            {
+                string HraExtra;
+                string MaterialConsumo;
+                string TransladoObra;
+                string FornecAlimentacao = "";
+                string FornecEstadia = "";
+                int retorno = 0;
+                
+                //Hora Extra
+                if(rbtn18HrasExtrasSim.Checked == true)
+                {
+                    HraExtra = "S";
+                }
+                else
+                {
+                    HraExtra = "N";
+                }
+                //Material de Consumo
+                if(rbtn18MatConsumoSim.Checked == true)
+                {
+                    MaterialConsumo = "S";
+                }
+                else
+                {
+                    MaterialConsumo = "N";
+                }
+                //Translado
+                if(rbtn18ConsidTransladoSim.Checked == true)
+                {
+                    TransladoObra = "S";
+                }
+                else
+                {
+                    TransladoObra = "N";
+                }
+                //Fornecimento Alimentação
+                if(rbtn18AlimentacaoCli.Checked == true)
+                {
+                    FornecAlimentacao = "C";
+                }
+                else if(rbtn18AlimentacaoFockink.Checked == true)
+                {
+                    FornecAlimentacao = "F";
+                }
+                //Fornecimento Estadia
+                if(rbtn18EstadiaCli.Checked == true)
+                {
+                    FornecEstadia = "C";
+                }
+                else if(rbtn18EstadiaFockink.Checked == true)
+                {
+                    FornecEstadia = "F";
+                }
+
+                if(AcaoTela == "N")
+                {
+                    SOEF_CLASS.Escopo_18 Escopo18 = new SOEF_CLASS.Escopo_18(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    retorno = Escopo18.gravaEscopo18(HraExtra, MaterialConsumo, TransladoObra, FornecAlimentacao, FornecEstadia, txt18Obs.Text, "S");
+                    if (retorno > 0)
+                    {
+                        MessageBox.Show("Registro inserido com sucesso!");
+                        btn18Excluir.Visible = true;
+                        checkEscopo18.Checked = true;
+                        checkEscopo18.Enabled = false;
+                        listaEscopo18(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocorreu um erro ao inserir o registro!");
+                    }
+                }
+                else
+                {
+                    SOEF_CLASS.Escopo_18 Escopo18 = new SOEF_CLASS.Escopo_18(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    retorno = Escopo18.atualizaEscopo18(HraExtra, MaterialConsumo, TransladoObra, FornecAlimentacao, FornecEstadia, txt18Obs.Text, "S");
+                    if (retorno > 0)
+                    {
+                        MessageBox.Show("Registro atualizado com sucesso!");
+                        checkEscopo18.Checked = true;
+                        checkEscopo18.Enabled = false;
+                        btn18Excluir.Visible = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocorreu um erro ao inserir o registro!");
+                    }
+                }
+            }
+        }
+
+        private void check18_1Outro_CheckedChanged(object sender, EventArgs e)
+        {
+            if (check18_1Outro.Checked == true)
+            {
+                label76.Visible = true;
+                txt18_1DescProfissional.Visible = true;
+            }
+            else
+            {
+                label76.Visible = false;
+                txt18_1DescProfissional.Visible = false;
+            }
+        }
+
+        private void check18_1MaoObraIndireta_CheckedChanged(object sender, EventArgs e)
+        {
+            if(check18_1MaoObraIndireta.Checked == true)
+            {
+                p18_1.Visible = true;
+            }
+            else
+            {
+                p18_1.Visible = false;
+            }
+        }
+
+        private void check18_2MaoObraDireta_CheckedChanged(object sender, EventArgs e)
+        {
+            if (check18_2MaoObraDireta.Checked == true)
+            {
+                p18_2.Visible = true;
+            }
+            else
+            {
+                p18_2.Visible = false;
+            }
+        }
+
+        private void check18_2Outro_CheckedChanged(object sender, EventArgs e)
+        {
+            if(check18_2Outro.Checked == true)
+            {
+                label81.Visible = true;
+                txt18_2DescProfissional.Visible = true;
+            }
+            else
+            {
+                label81.Visible = false;
+                txt18_2DescProfissional.Visible = false;
+            }
+        }
+
+        private void btn18_1Salvar_Click(object sender, EventArgs e)
+        {
+            string indEngResidente;
+            string indAdministrativo;
+            string indTecSeguranca;
+            string indPlanejador;
+            string indOutroProfissional = null;
+            string descOutroProfissional = null;
+            string indEncarregado = null;
+            int vlrRetorno = 0;
+
+            if(check18_1EngResidente.Checked == true)
+            {
+                indEngResidente = "S";
+            }
+            else
+            {
+                indEngResidente = "N";
+            }
+            if(check18_1Administrativo.Checked == true)
+            {
+                indAdministrativo = "S";
+            }
+            else
+            {
+                indAdministrativo = "N";
+            }
+            if(check18_1TecSeguranca.Checked == true)
+            {
+                indTecSeguranca = "S";
+            }
+            else
+            {
+                indTecSeguranca = "N";
+            }
+            if(check18_1Planejador.Checked == true)
+            {
+                indPlanejador = "S";
+            }
+            else
+            {
+                indPlanejador = "N";
+            }
+            if (check18_1Outro.Checked == true)
+            {
+                if (string.IsNullOrEmpty(txt18_1DescProfissional.Text))
+                {
+                    MessageBox.Show("Informe a descrição do profissional.");
+                }
+                else
+                {
+                    indOutroProfissional = "S";
+                    descOutroProfissional = txt18_1DescProfissional.Text;
+                }
+            }
+            else
+            {
+                indOutroProfissional = "N";
+                descOutroProfissional = null;
+            }
+
+
+            if(check18_1Encarregado.Checked == true)
+            {
+                indEncarregado = "S";
+            }
+            else
+            {
+                indEncarregado = "N";
+            }
+
+            SOEF_CLASS.Escopo_18_1 Escopo18_1 = new SOEF_CLASS.Escopo_18_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
+            //Verifica se é registro novo ou alteração
+            if(AcaoTela == "N")
+            {
+                vlrRetorno = Escopo18_1.gravaEscopo18_1(indEngResidente, indAdministrativo, indTecSeguranca, indPlanejador, indOutroProfissional, descOutroProfissional, txt18_1Obs.Text, "S", indEncarregado);
+                if(vlrRetorno > 0)
+                {
+                    MessageBox.Show("Registro realizado com sucesso!");
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro no cadastro do registro.");
+                }
+                btn18_1Excluir.Visible = true;
+                listaEscopo18_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
+            }
+            else
+            {
+                //Verifica se existe registro cadastrado
+                DataTable dt = Escopo18_1.getEscopo18_1();
+                if (dt.Rows.Count > 0)
+                {
+
+                    vlrRetorno = Escopo18_1.atualizaEscopo18_1(indEngResidente, indAdministrativo, indTecSeguranca, indPlanejador, indOutroProfissional, descOutroProfissional, txt18_1Obs.Text, "S", indEncarregado);
+                    if (vlrRetorno > 0)
+                    {
+                        MessageBox.Show("Registro atualizado com sucesso!");
+                        listaEscopo18_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocorreu um erro na atualização do registro.");
+                    }
+                }
+                else 
+                {
+                    //Se não tem nenhum registro cadastrado
+                    vlrRetorno = Escopo18_1.gravaEscopo18_1(indEngResidente, indAdministrativo, indTecSeguranca, indPlanejador, indOutroProfissional, descOutroProfissional, txt18_1Obs.Text, "S", indEncarregado);
+                    if (vlrRetorno > 0)
+                    {
+                        MessageBox.Show("Registro realizado com sucesso!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocorreu um erro no cadastro do registro.");
+                    }
+                    btn18_1Excluir.Visible = true;
+                    listaEscopo18_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
+
+                }
+            }
+
+
+        }
+
+        private void btn18_2Salvar_Click(object sender, EventArgs e)
+        {
+            string indTecnicoObras;
+            string indAlmoxarife;
+            string indMontador;
+            string indAuxMontador;
+            string indSoldador;
+            string indOutroProfissional;
+            string descOutroProfissional = "";
+            string indPlataformaElevatoria;
+            string indMunck;
+            string indFerramental;
+            
+            if(check18_2TecObras.Checked == true)
+            {
+                indTecnicoObras = "S";
+            }
+            else
+            {
+                indTecnicoObras = "N";
+            }
+            if(check18_2Almoxarife.Checked == true)
+            {
+                indAlmoxarife = "S";
+            }
+            else
+            {
+                indAlmoxarife = "N";
+            }
+            if(check18_2Montador.Checked == true)
+            {
+                indMontador = "S";
+            }
+            else
+            {
+                indMontador = "N";
+            }
+            if(check18_2AuxiliarMontador.Checked == true)
+            {
+                indAuxMontador = "S";
+            }
+            else
+            {
+                indAuxMontador = "N";
+            }
+            if(check18_2Soldador.Checked == true)
+            {
+                indSoldador = "S";
+            }
+            else
+            {
+                indSoldador = "N";
+            }
+            if(check18_2Outro.Checked == true)
+            {
+                indOutroProfissional = "S";
+                if (string.IsNullOrEmpty(txt18_2DescProfissional.Text))
+                {
+                    MessageBox.Show("Informe a descrição do profissional.");
+                }
+                else
+                {
+                    descOutroProfissional = txt18_2DescProfissional.Text;
+                }
+            }
+            else
+            {
+                indOutroProfissional = "N";
+                //Limpa a Descrição Outro Profissional
+                txt18_2DescProfissional.Text = "";
+                descOutroProfissional = "";
+            }           
+
+            if (check18_2PlataformaElevatoria.Checked == true)
+            {
+                indPlataformaElevatoria = "S";
+            }
+            else
+            {
+                indPlataformaElevatoria = "N";
+            }
+
+             if(check18_2Munck.Checked == true)
+            {
+                indMunck = "S";
+            }
+            else
+            {
+                indMunck = "N";
+            }
+            if(check18_2Ferramental.Checked == true)
+            {
+                indFerramental = "S";
+            }
+            else
+            {
+                indFerramental = "N";
+            }
+
+            if(AcaoTela == "N")
+            {
+                SOEF_CLASS.Escopo_18_2 Escopo_18_2 = new SOEF_CLASS.Escopo_18_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                int retorno = Escopo_18_2.gravaEscopo18_2(indTecnicoObras, indAlmoxarife, indMontador, indAuxMontador, indSoldador, indOutroProfissional, descOutroProfissional, indPlataformaElevatoria, indMunck, indFerramental, txt18_2Obs.Text, "S");
+                if(retorno > 0)
+                {
+                    MessageBox.Show("Registro inserido com sucesso!");
+                    listaEscopo18_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro ao inserir o registro.");
+                }
+            }
+            else
+            {
+                SOEF_CLASS.Escopo_18_2 Escopo_18_2 = new SOEF_CLASS.Escopo_18_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                DataTable dtBusca = Escopo_18_2.getEscopo18_2();
+                //Testa se já existe registro
+                if (dtBusca.Rows.Count > 0)
+                {
+                    int retorno = Escopo_18_2.atualizaEscopo18_2(indTecnicoObras, indAlmoxarife, indMontador, indAuxMontador, indSoldador, indOutroProfissional, descOutroProfissional, indPlataformaElevatoria, indMunck, indFerramental, txt18_2Obs.Text, "S");
+                    if (retorno > 0)
+                    {
+                        MessageBox.Show("Registro atualizado com sucesso!");
+                        listaEscopo18_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocorreu um erro ao atualizar o registro.");
+                    }
+                }
+                else
+                {   //Se não existe registro ainda, insere um novo
+                    int retorno = Escopo_18_2.gravaEscopo18_2(indTecnicoObras, indAlmoxarife, indMontador, indAuxMontador, indSoldador, indOutroProfissional, descOutroProfissional, indPlataformaElevatoria, indMunck, indFerramental, txt18_2Obs.Text, "S");
+                    if (retorno > 0)
+                    {
+                        MessageBox.Show("Registro inserido com sucesso!");
+                        listaEscopo18_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocorreu um erro ao inserir o registro.");
+                    }
+                }
+
+
+                
+
+
+            }
+        }
+
+        private void btn18Excluir_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Deseja realmente excluir o Escopo 18 desta solicitação?", "SOEF", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                SOEF_CLASS.Escopo_18 Escopo18 = new SOEF_CLASS.Escopo_18(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                int retorno;
+                retorno = Escopo18.deleteEscopo18(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                if(retorno > 0)
+                {
+                    MessageBox.Show("Escopo excluido com sucesso!");
+                    listaEscopo18(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    btn18Excluir.Visible = false;
+                    listaEscopo18(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro ao excluir o escopo selecionado.");
+                }
+            }
+        }
+
+        private void tabEscopo18_1_2_Selected(object sender, TabControlEventArgs e)
+        {
+            if (AcaoTela == "N")
+            {
+                if(tabEscopo18_1_2.SelectedTab.Name == "tbpage18InfoG")
+                {
+                    listaEscopo18(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                }
+
+                if (tabEscopo18_1_2.SelectedTab.Name == "tbpage18DefMaoObra")
+                {
+                    listaEscopo18_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                }
+            }
+            else
+            {
+                if (tabEscopo18_1_2.SelectedTab.Name == "tbpage18InfoG")
+                {
+                    listaEscopo18(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    
+                }
+
+                if (tabEscopo18_1_2.SelectedTab.Name == "tbpage18DefMaoObra")
+                {
+                    listaEscopo18_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    listaEscopo18_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                }
+
+            }
+
+
+            
+        }
+
+        private void btn18_1Excluir_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Deseja realmente excluir este registro?", "SOEF", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                try
+                {
+                    SOEF_CLASS.Escopo_18_1 Escopo_18_1 = new SOEF_CLASS.Escopo_18_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    int retorno = Escopo_18_1.deleteEscopo18(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    if (retorno > 0)
+                    {
+                        MessageBox.Show("Registro excluído com sucesso!");
+                        listaEscopo18_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocorreu um erro ao excluir o registro. Favor tente novamente.");
+                    }
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+        }
+
+        private void btn18_2Excluir_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Deseja realmente excluir este registro?", "SOEF", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                SOEF_CLASS.Escopo_18_2 Escopo_18_2 = new SOEF_CLASS.Escopo_18_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                int retorno = Escopo_18_2.deleteEscopo18_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                if (retorno > 0)
+                {
+                    MessageBox.Show("Registro excluído com sucesso!");
+                    listaEscopo18_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro ao excluir o registro. Favor tente novamente.");
+                }
+
+            }
+        }
+
+        private void combo01Frequencia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(combo01Frequencia.SelectedIndex == 3)
+            {
+                txt01OutraFrequencia.Enabled = true;
+            }
+            else
+            {
+                txt01OutraFrequencia.Text = "";
+                txt01OutraFrequencia.Enabled = false;
+            }
+        }
+
+
+        /// <summary>
+        /// Retorna TRUE quando todos campos da tabela DOM_SOLIC_ORC_VALOR_COMUM estão nulos
+        /// </summary>
+        /// <param name="pNumSolic">Número da Solicitação</param>
+        /// <param name="pNumRevSolic">Número da Revisão</param>
+        /// <returns></returns>
+        private Boolean verificaRegistroValorComum(string pNumSolic, string pNumRevSolic)
+        {
+            try
+            {
+                int NaoNulo = 0;
+                SOEF_CLASS.Escopo_Valor_Comum EscopoValorComum = new SOEF_CLASS.Escopo_Valor_Comum(pNumSolic, pNumRevSolic);
+                DataTable dtEscopoNull = EscopoValorComum.buscaEscopoValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                if (dtEscopoNull.Rows.Count > 0)
+                {
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["IND_INSTAL_ABRIG_TEMPO"].ToString()))
+                    {
+                        NaoNulo =+ 1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["DADOS_AMBIENTAIS"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["TENSAO_TRIFASICA_BT"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["TENSAO_MONOFASICA_BT"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["FREQUENCIA_HZ"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["TIPO_PINTURA"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["NORMATIVA_MAPA"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["TIPO_PRODUTO"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["OUTRO_PRODUTO"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["IND_PAINEL_ELETRICO"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["IND_INSTAL_ELETRICA"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["TIPO_INSTAL_MECANICA"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["IND_AREA_CLASSIFICADA"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["IND_SALA_PAINEL_CLIMATIZADA"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["OUTRA_FREQUENCIA"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["TENSAO_INTERNA_CONTROLE"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["TIPO_REDE_COMUNICACAO"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["TENSAO_ILUMINACAO_TRIF"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["OUTRA_TENSAO_ILUM_TRIF"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["SELECAO_MECAN_FLUXO"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["OUTRA_SELEC_MECANICA"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["POTENCIA_GERADOR"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["FABRICANTE_GERADOR"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["MODELO_CONTROLADOR"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["FABRICANTE_CONTROLADOR"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["ACIONAMENTO_SISTEMA"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["TIPO_TRANSFER_ACION_AUT"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["IND_TRANSFER_ACION_MAN"].ToString()))
+                    {
+                        NaoNulo = +1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["IND_MEMORIAL_DESCRITIVO"].ToString()))
+                    {
+                        NaoNulo = +1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["IND_LISTA_MATERIAIS"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["TENSAO_DISTRIBUICAO"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["OUTRA_TENSAO_DISTRIB"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["IND_PLANTA_BAIXA"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["IND_PADRAO_ELETRODUTO"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["IND_PADR_PROTEC_MECANICA"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["IND_CORTE_MEC_CIVIL"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["TENSAO_ILUMINACAO_MONO"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["IND_LISTA_COMANDO_EQUIP"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["IND_FLUXOGRAMA_PONTO_COMANDO"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                    if (!string.IsNullOrEmpty(dtEscopoNull.Rows[0]["DESC_PONTOS_EQUIPAMENTO"].ToString()))
+                    {
+                        NaoNulo =+1;
+                    }
+                }
+                //Se todos os campos estão nulo (NaoNulo = 0), retorna TRUE, senão, retorna FALSE
+                if (NaoNulo == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        private void btn01Salvar_Click(object sender, EventArgs e)
+        {
+            string erro = "";
+            
+
+            string tensaoMedia;
+            string indTipoInstalacao = "";
+            string indEnsaio = "";
+            string tipoPintura = "";
+            string obs = "";
+            string indPreenchido = "";
+            string frequencia = "";
+            string descOutraFrequencia = "";
+            string descOutroEnsaio = "";
+            string dadosAmbientais = "";
+            string indDiagramaUnifilar = "";
+            string descSolucao = "";
+
+            //Tensão Distribuição
+            if (combo01Tensao.SelectedIndex == 0)
+            {
+                erro += "Informe a Tensão de Distribuição.\n";
+            }
+            else if (combo01Tensao.SelectedIndex == 4)
+            {
+                if (string.IsNullOrEmpty(txt01Obs.Text))
+                {
+                    erro += "Por favor, informe a descrição da Taxa de Distribuição no campo Observação.\n";
+                }
+            }
+            tensaoMedia = combo01Tensao.SelectedIndex.ToString();
+
+            //Frequência
+            if(combo01Frequencia.SelectedIndex == 0)
+            {
+                erro += "Informe a Frequência.\n";
+            }
+            else if(combo01Frequencia.SelectedIndex == 3)
+            {
+                if (string.IsNullOrEmpty(txt01OutraFrequencia.Text))
+                {
+                    erro += "Por favor, informe o valor da Frequência.\n";
+                }
+                else
+                {
+                    descOutraFrequencia = txt01OutraFrequencia.Text;
+                }
+            }
+            frequencia = combo01Frequencia.SelectedIndex.ToString();
+            
+            //Instalação
+            if(combo01Instalacao.SelectedIndex == 0)
+            {
+                erro += "Informe o Tipo de Instalação\n";
+            }
+            else if(combo01Instalacao.SelectedIndex == 1)
+            {
+                indTipoInstalacao = "A";
+            }
+            else if(combo01Instalacao.SelectedIndex == 2)
+            {
+                indTipoInstalacao = "T";
+            }
+            else if(combo01Instalacao.SelectedIndex == 3)
+            {
+                indTipoInstalacao = "M";
+            }
+
+            //Dados Ambientais
+            if(combo01DadosAmbientais.SelectedIndex == 0)
+            {
+                erro += "Informe o campo Dados Ambientais.\n";
+            }
+            else if(combo01DadosAmbientais.SelectedIndex == 1)
+            {
+                dadosAmbientais = "U";
+            }
+            else if (combo01DadosAmbientais.SelectedIndex == 2)
+            {
+                dadosAmbientais = "M";
+            }
+            else if (combo01DadosAmbientais.SelectedIndex == 3)
+            {
+                dadosAmbientais = "C";
+            }
+            else if (combo01DadosAmbientais.SelectedIndex == 4)
+            {
+                dadosAmbientais = "N";
+            }
+
+            //Pintura
+            if (combo01Pintura.SelectedIndex == 0)
+            {
+                erro += "Informe o Tipo de Pintura.\n";
+            }
+            else if(combo01Pintura.SelectedIndex == 1)
+            {
+                tipoPintura = "R";
+            }
+            else if (combo01Pintura.SelectedIndex == 2)
+            {
+                tipoPintura = "M";
+            }
+            else if (combo01Pintura.SelectedIndex == 3)
+            {
+                tipoPintura = "E";
+            }
+            
+            //Ensaio Painel
+            if (combo01EnsaioPainel.SelectedIndex == 0)
+            {
+                erro += "Informe o Ensaio Painel.\n";
+            }
+            else if(combo01EnsaioPainel.SelectedIndex == 1)
+            {
+                indEnsaio = "E";
+            }
+            else if (combo01EnsaioPainel.SelectedIndex == 2)
+            {
+                indEnsaio = "C";
+            }
+            else if (combo01EnsaioPainel.SelectedIndex == 3)
+            {
+                indEnsaio = "T";
+            }
+            else if(combo01EnsaioPainel.SelectedIndex == 4)
+            {
+                if (string.IsNullOrEmpty(txt01OutroEnsaio.Text))
+                {
+                    erro += "Informe a descrição do Outro Ensaio.\n";
+                }
+                else
+                {
+                    indEnsaio = "O";
+                    descOutroEnsaio = txt01OutroEnsaio.Text;
+                }
+            }
+
+            //Tem Diagrama Unifilar
+            if(rbtn01Nao.Checked == false && rbtn01Sim.Checked == false)
+            {
+                erro += "Informe o campo Tem Diagrama Unifilar.\n";
+            }
+            else if (rbtn01Sim.Checked == true)
+            {
+                indDiagramaUnifilar = "S";
+                descSolucao = null;
+            }
+            else
+            {
+                indDiagramaUnifilar = "N";
+                descSolucao = txt01Descricao.Text;
+            }
+            //Se tem erros de validação de campo
+            if (!string.IsNullOrEmpty(erro))
+            {
+                MessageBox.Show(erro);
+            }
+            else
+            {
+                int retornoAtualizaVlrComum = 0;
+                int retornoGravaVlrComum = 0;
+                bool sucesso = true;
+                int retornoInsertEscopo01 = 0;
+                //Insere os dados
+
+                try
+                {
+                    if (AcaoTela == "N")
+                    {
+                        SOEF_CLASS.Escopo_01 Escopo01 = new SOEF_CLASS.Escopo_01(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                        retornoInsertEscopo01 = Escopo01.gravaEscopo_01(tensaoMedia, indTipoInstalacao, indEnsaio, tipoPintura, txt01Obs.Text, "S", frequencia, descOutraFrequencia, dadosAmbientais, indDiagramaUnifilar, descSolucao, descOutroEnsaio);
+                        if (retornoInsertEscopo01 > 0)
+                        {
+                            SOEF_CLASS.Escopo_Valor_Comum EscopoValorComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                            //Verifica se existe registro na tabela Valor Comum
+                            DataTable dt = EscopoValorComum.buscaEscopoValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                            if (dt.Rows.Count == 0)
+                            {
+                                //Se não encontra registro para o registro, grava pela primeira vez
+                                retornoGravaVlrComum = EscopoValorComum.gravaEscopo_Valor_Comum_E01(dadosAmbientais, frequencia, descOutraFrequencia, tipoPintura, indTipoInstalacao);
+                                if (retornoGravaVlrComum <= 0)
+                                {
+                                    sucesso = false;
+                                    MessageBox.Show("Houve um problema na inserção dos Valores Comum. Por favor, tente novamente.");
+                                }
+                            }
+                            else
+                            {
+                                //Atualiza os campos existentes no escopo 1
+                                retornoAtualizaVlrComum = EscopoValorComum.atualizaEscopo_Valor_Comum_E01(dadosAmbientais, frequencia, descOutraFrequencia, tipoPintura, indTipoInstalacao);
+                                if (retornoAtualizaVlrComum > 0)
+                                {
+                                    //Verifica se os campos da tabela estão nullos
+                                    bool DeletaRegistro = verificaRegistroValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                                    if (DeletaRegistro)//True - Deleta o registro
+                                    {
+                                        int retornoDelete = EscopoValorComum.deleteEscopoValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                                        if (retornoDelete <= 0)
+                                        {
+                                            sucesso = false;
+                                            MessageBox.Show("Não foi possível realizar a operação completa. Por favor, verifique os dados informados e tente novamente.");
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    sucesso = false;
+                                    MessageBox.Show("Houve um problema na inserção do registro de Valores Comuns. Por favor, tente novamente.");
+                                }
+                            }
+                        }
+                        else
+                        {
+                            sucesso = false;
+                            MessageBox.Show("Ocorreu um erro ao inserir o registro!");
+                        }
+                    }
+                    //FimAçãoTela
+                    else
+                    {
+                        //Se a Ação Tela for ATUALIZAÇÃO
+                        SOEF_CLASS.Escopo_01 Escopo01 = new SOEF_CLASS.Escopo_01(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                        //Verifica se o Escopo já foi preenchido ou não
+                        DataTable dtEscopo01 = Escopo01.getEscopo_01();
+                        if(dtEscopo01.Rows.Count > 0)
+                        {
+                            retornoInsertEscopo01 = Escopo01.updateEscopo_01(tensaoMedia, indTipoInstalacao, indEnsaio, tipoPintura, txt01Obs.Text, "S", frequencia, descOutraFrequencia, dadosAmbientais, indDiagramaUnifilar, descSolucao, descOutroEnsaio);
+                        }
+                        else
+                        {
+                            retornoInsertEscopo01 = Escopo01.gravaEscopo_01(tensaoMedia, indTipoInstalacao, indEnsaio, tipoPintura, txt01Obs.Text, "S", frequencia, descOutraFrequencia, dadosAmbientais, indDiagramaUnifilar, descSolucao, descOutroEnsaio);
+                        }
+                        
+                        if (retornoInsertEscopo01 > 0)
+                        {
+                            SOEF_CLASS.Escopo_Valor_Comum EscopoValorComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                            //Verifica se existe registro na tabela Valor Comum
+                            DataTable dt = EscopoValorComum.buscaEscopoValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                            if (dt.Rows.Count == 0)
+                            {
+                                //Se não encontra registro para o registro, grava pela primeira vez
+                                retornoGravaVlrComum = EscopoValorComum.gravaEscopo_Valor_Comum_E01(dadosAmbientais, frequencia, descOutraFrequencia, tipoPintura, indTipoInstalacao);
+                                if (retornoGravaVlrComum <= 0)
+                                {
+                                    MessageBox.Show("Houve um problema na inserção dos Valores Comum. Por favor, tente novamente.");
+                                }
+                            }
+                            else
+                            {
+                                //Atualiza os campos existentes no escopo 1
+                                retornoAtualizaVlrComum = EscopoValorComum.atualizaEscopo_Valor_Comum_E01(dadosAmbientais, frequencia, descOutraFrequencia, tipoPintura, indTipoInstalacao);
+                                if (retornoAtualizaVlrComum > 0)
+                                {
+                                    //Verifica se os campos da tabela estão nullos
+                                    bool DeletaRegistro = verificaRegistroValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                                    if (DeletaRegistro)//True - Deleta o registro
+                                    {
+                                        int retornoDelete = EscopoValorComum.deleteEscopoValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                                        if (retornoDelete <= 0)
+                                        {
+                                            sucesso = false;
+                                            MessageBox.Show("Não foi possível realizar a operação completa. Por favor, verifique os dados informados e tente novamente.");
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    sucesso = false;
+                                    MessageBox.Show("Houve um problema na inserção do registro de Valores Comuns. Por favor, tente novamente.");
+                                }
+                            }
+                        }
+                        else
+                        {
+                            sucesso = false;
+                            MessageBox.Show("Ocorreu um erro ao inserir o registro!");
+                        }
+                    }
+                    //Verifica se ocorreu erro durante o processo de inserção no ESCOPO 01 e VALOR COMUM
+                    if (sucesso)
+                    {
+                        MessageBox.Show("Registro inserido/alterado com sucesso!");
+                        btn01Excluir.Visible = true;
+                        listaEscopo01(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                        //Muda o STATUS da AçãoTela p/ EDIÇÂO
+                        AcaoTela = "C";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocorreu um erro ao ao inserir/alterar o registro. Por favor tente novamente ou contate o administrador do sistema.");
+                    }
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+
+
+                
+
+
+            }
+        }
+
+        private void combo01EnsaioPainel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(combo01EnsaioPainel.SelectedIndex == 4)
+            {
+                txt01OutroEnsaio.Enabled = true;
+            }
+            else
+            {
+                txt01OutroEnsaio.Text = "";
+                txt01OutroEnsaio.Enabled = false;
+            }
+        }
+
+        private void combo01Tensao_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(combo01Tensao.SelectedIndex == 4)
+            {
+                txt01Obs.Text = "";
+            }
+        }
+
+        private void rbtn01Sim_CheckedChanged(object sender, EventArgs e)
+        {
+            if(rbtn01Sim.Checked == true)
+            {
+                txt01Descricao.Text = "";
+                txt01Descricao.Enabled = false;
+            }
+            else
+            {
+                txt01Descricao.Enabled = true;
+            }
+        }
+
+
+        private void btn01Excluir_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Deseja realmente excluir o Escopo 01 desta solicitação?", "SOEF", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                bool sucesso = true;
+                //Apaga os dados do Escopo 01
+                SOEF_CLASS.Escopo_01 Escopo01 = new SOEF_CLASS.Escopo_01(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                int retorno = Escopo01.deleteEscopo_01(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                if (retorno > 0)
+                {
+                    //Apaga (define como NULL) os campos comuns da tabela VALOR_COMUM
+                    SOEF_CLASS.Escopo_Valor_Comum EValorComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    int retornoUpdate = 0;
+                    retornoUpdate = EValorComum.deleteEscopo_Valor_Comum_E01 ();
+                    if(retornoUpdate > 0)
+                    {
+                        //Verifica se todos os campos do registro são nulos, se sim, apaga o registro em definitivo
+                        bool DeletaRegistro = verificaRegistroValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                        if (DeletaRegistro)//True - Deleta o registro
+                        {
+                            int retornoDelete = EValorComum.deleteEscopoValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                            if (retornoDelete <= 0)
+                            {
+                                sucesso = false;
+                                //MessageBox.Show("Não foi possível realizar a operação completa. Por favor, verifique os dados informados e tente novamente.");
+                            }
+                        }
+                    }
+                    else
+                    {
+                        sucesso = false;
+                    }
+                }
+                else
+                {
+                    sucesso = false;
+                }
+                if (sucesso)
+                {
+                    MessageBox.Show("Registro excluído com sucesso!");
+                    btn01Excluir.Visible = false;
+                    checkEscopo1.Checked = false;
+                    checkEscopo1.Enabled = true;
+                    listaEscopo01(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro ao excluir o registro. Por favor, contate o suporte do sistema e tente novamente.");
+                }
             }
         }
     }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.tabNovaSolicitacao = new System.Windows.Forms.TabControl();
-            this.btnSelecionaCli = new System.Windows.Forms.TabPage();
+            this.tabCabecalho = new System.Windows.Forms.TabPage();
             this.label9 = new System.Windows.Forms.Label();
             this.tbCabecalho = new System.Windows.Forms.TabControl();
             this.tbPageCabecalho1 = new System.Windows.Forms.TabPage();
@@ -170,9 +170,9 @@
             this.label61 = new System.Windows.Forms.Label();
             this.lblcondpgto = new System.Windows.Forms.Label();
             this.tabDefEscopo = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBoxEscopo = new System.Windows.Forms.GroupBox();
+            this.checkEscopo20 = new System.Windows.Forms.CheckBox();
             this.checkEscopo19 = new System.Windows.Forms.CheckBox();
             this.checkEscopo18 = new System.Windows.Forms.CheckBox();
             this.checkEscopo17 = new System.Windows.Forms.CheckBox();
@@ -193,6 +193,33 @@
             this.checkEscopo2 = new System.Windows.Forms.CheckBox();
             this.checkEscopo1 = new System.Windows.Forms.CheckBox();
             this.tabEscopo1 = new System.Windows.Forms.TabPage();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.btn01Excluir = new System.Windows.Forms.Button();
+            this.btn01Salvar = new System.Windows.Forms.Button();
+            this.txt01Obs = new System.Windows.Forms.TextBox();
+            this.label93 = new System.Windows.Forms.Label();
+            this.txt01Descricao = new System.Windows.Forms.TextBox();
+            this.label92 = new System.Windows.Forms.Label();
+            this.rbtn01Nao = new System.Windows.Forms.RadioButton();
+            this.rbtn01Sim = new System.Windows.Forms.RadioButton();
+            this.label91 = new System.Windows.Forms.Label();
+            this.combo01Pintura = new System.Windows.Forms.ComboBox();
+            this.label90 = new System.Windows.Forms.Label();
+            this.txt01OutraFrequencia = new System.Windows.Forms.TextBox();
+            this.label89 = new System.Windows.Forms.Label();
+            this.txt01OutroEnsaio = new System.Windows.Forms.TextBox();
+            this.label88 = new System.Windows.Forms.Label();
+            this.combo01DadosAmbientais = new System.Windows.Forms.ComboBox();
+            this.label87 = new System.Windows.Forms.Label();
+            this.combo01Frequencia = new System.Windows.Forms.ComboBox();
+            this.label86 = new System.Windows.Forms.Label();
+            this.combo01EnsaioPainel = new System.Windows.Forms.ComboBox();
+            this.label85 = new System.Windows.Forms.Label();
+            this.combo01Instalacao = new System.Windows.Forms.ComboBox();
+            this.label84 = new System.Windows.Forms.Label();
+            this.combo01Tensao = new System.Windows.Forms.ComboBox();
+            this.label83 = new System.Windows.Forms.Label();
+            this.label82 = new System.Windows.Forms.Label();
             this.tabEscopo2 = new System.Windows.Forms.TabPage();
             this.tabEscopo3 = new System.Windows.Forms.TabPage();
             this.tabEscopo4 = new System.Windows.Forms.TabPage();
@@ -210,6 +237,69 @@
             this.tabEscopo16 = new System.Windows.Forms.TabPage();
             this.tabEscopo17 = new System.Windows.Forms.TabPage();
             this.tabEscopo18 = new System.Windows.Forms.TabPage();
+            this.tabEscopo18_1_2 = new System.Windows.Forms.TabControl();
+            this.tbpage18InfoG = new System.Windows.Forms.TabPage();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.rbtn18MatConsumoNao = new System.Windows.Forms.RadioButton();
+            this.label73 = new System.Windows.Forms.Label();
+            this.rbtn18MatConsumoSim = new System.Windows.Forms.RadioButton();
+            this.btn18Excluir = new System.Windows.Forms.Button();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label74 = new System.Windows.Forms.Label();
+            this.rbtn18AlimentacaoFockink = new System.Windows.Forms.RadioButton();
+            this.rbtn18AlimentacaoCli = new System.Windows.Forms.RadioButton();
+            this.txt18Obs = new System.Windows.Forms.TextBox();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label72 = new System.Windows.Forms.Label();
+            this.rbtn18EstadiaFockink = new System.Windows.Forms.RadioButton();
+            this.rbtn18EstadiaCli = new System.Windows.Forms.RadioButton();
+            this.label70 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label71 = new System.Windows.Forms.Label();
+            this.rbtn18ConsidTransladoSim = new System.Windows.Forms.RadioButton();
+            this.rbtn18ConsidTransladoNao = new System.Windows.Forms.RadioButton();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.rbtn18HrasExtrasNao = new System.Windows.Forms.RadioButton();
+            this.label69 = new System.Windows.Forms.Label();
+            this.rbtn18HrasExtrasSim = new System.Windows.Forms.RadioButton();
+            this.tbpage18DefMaoObra = new System.Windows.Forms.TabPage();
+            this.p18_2 = new System.Windows.Forms.Panel();
+            this.btn18_2Excluir = new System.Windows.Forms.Button();
+            this.txt18_2DescProfissional = new System.Windows.Forms.TextBox();
+            this.label81 = new System.Windows.Forms.Label();
+            this.btn18_2Salvar = new System.Windows.Forms.Button();
+            this.check18_2Ferramental = new System.Windows.Forms.CheckBox();
+            this.txt18_2Obs = new System.Windows.Forms.TextBox();
+            this.label78 = new System.Windows.Forms.Label();
+            this.check18_2AuxiliarMontador = new System.Windows.Forms.CheckBox();
+            this.check18_2Munck = new System.Windows.Forms.CheckBox();
+            this.label79 = new System.Windows.Forms.Label();
+            this.check18_2PlataformaElevatoria = new System.Windows.Forms.CheckBox();
+            this.check18_2TecObras = new System.Windows.Forms.CheckBox();
+            this.check18_2Almoxarife = new System.Windows.Forms.CheckBox();
+            this.label77 = new System.Windows.Forms.Label();
+            this.check18_2Montador = new System.Windows.Forms.CheckBox();
+            this.check18_2Outro = new System.Windows.Forms.CheckBox();
+            this.check18_2Soldador = new System.Windows.Forms.CheckBox();
+            this.check18_2MaoObraDireta = new System.Windows.Forms.CheckBox();
+            this.p18_1 = new System.Windows.Forms.Panel();
+            this.btn18_1Excluir = new System.Windows.Forms.Button();
+            this.btn18_1Salvar = new System.Windows.Forms.Button();
+            this.txt18_1DescProfissional = new System.Windows.Forms.TextBox();
+            this.label76 = new System.Windows.Forms.Label();
+            this.check18_1Outro = new System.Windows.Forms.CheckBox();
+            this.txt18_1Obs = new System.Windows.Forms.TextBox();
+            this.label80 = new System.Windows.Forms.Label();
+            this.check18_1Planejador = new System.Windows.Forms.CheckBox();
+            this.check18_1TecSeguranca = new System.Windows.Forms.CheckBox();
+            this.check18_1Encarregado = new System.Windows.Forms.CheckBox();
+            this.check18_1Administrativo = new System.Windows.Forms.CheckBox();
+            this.check18_1EngResidente = new System.Windows.Forms.CheckBox();
+            this.label75 = new System.Windows.Forms.Label();
+            this.check18_1MaoObraIndireta = new System.Windows.Forms.CheckBox();
+            this.label68 = new System.Windows.Forms.Label();
             this.tabEscopo19 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnEsc19Excluir = new System.Windows.Forms.Button();
@@ -225,9 +315,26 @@
             this.checkBasePoste = new System.Windows.Forms.CheckBox();
             this.checkAbFecValas = new System.Windows.Forms.CheckBox();
             this.label65 = new System.Windows.Forms.Label();
+            this.tabEscopo20 = new System.Windows.Forms.TabPage();
+            this.dgvListaEsc20 = new System.Windows.Forms.DataGridView();
+            this.NUMERO_SOLICITACAO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.REVISAO_SOLICITACAO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SEQ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TITULO_ESCOPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DESCRICAO_ESCOPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IND_PREENCHIDO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.acao = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btnEsc20Excluir = new System.Windows.Forms.Button();
+            this.txtEsc20Titulo = new System.Windows.Forms.TextBox();
+            this.btnEsc20Salvar = new System.Windows.Forms.Button();
+            this.txtEsc20Desc = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label67 = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.tabNovaSolicitacao.SuspendLayout();
-            this.btnSelecionaCli.SuspendLayout();
+            this.tabCabecalho.SuspendLayout();
             this.tbCabecalho.SuspendLayout();
             this.tbPageCabecalho1.SuspendLayout();
             this.gpBoxIdObra.SuspendLayout();
@@ -244,13 +351,30 @@
             this.groupBox3.SuspendLayout();
             this.tabDefEscopo.SuspendLayout();
             this.groupBoxEscopo.SuspendLayout();
+            this.tabEscopo1.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.tabEscopo18.SuspendLayout();
+            this.tabEscopo18_1_2.SuspendLayout();
+            this.tbpage18InfoG.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.tbpage18DefMaoObra.SuspendLayout();
+            this.p18_2.SuspendLayout();
+            this.p18_1.SuspendLayout();
             this.tabEscopo19.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.tabEscopo20.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaEsc20)).BeginInit();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabNovaSolicitacao
             // 
-            this.tabNovaSolicitacao.Controls.Add(this.btnSelecionaCli);
+            this.tabNovaSolicitacao.Controls.Add(this.tabCabecalho);
             this.tabNovaSolicitacao.Controls.Add(this.tabDefEscopo);
             this.tabNovaSolicitacao.Controls.Add(this.tabEscopo1);
             this.tabNovaSolicitacao.Controls.Add(this.tabEscopo2);
@@ -271,24 +395,26 @@
             this.tabNovaSolicitacao.Controls.Add(this.tabEscopo17);
             this.tabNovaSolicitacao.Controls.Add(this.tabEscopo18);
             this.tabNovaSolicitacao.Controls.Add(this.tabEscopo19);
+            this.tabNovaSolicitacao.Controls.Add(this.tabEscopo20);
             this.tabNovaSolicitacao.Dock = System.Windows.Forms.DockStyle.Top;
             this.tabNovaSolicitacao.Location = new System.Drawing.Point(0, 0);
             this.tabNovaSolicitacao.Name = "tabNovaSolicitacao";
             this.tabNovaSolicitacao.SelectedIndex = 0;
             this.tabNovaSolicitacao.Size = new System.Drawing.Size(1074, 581);
             this.tabNovaSolicitacao.TabIndex = 0;
+            this.tabNovaSolicitacao.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabNovaSolicitacao_Selected);
             // 
-            // btnSelecionaCli
+            // tabCabecalho
             // 
-            this.btnSelecionaCli.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSelecionaCli.Controls.Add(this.label9);
-            this.btnSelecionaCli.Controls.Add(this.tbCabecalho);
-            this.btnSelecionaCli.Location = new System.Drawing.Point(4, 22);
-            this.btnSelecionaCli.Name = "btnSelecionaCli";
-            this.btnSelecionaCli.Padding = new System.Windows.Forms.Padding(3);
-            this.btnSelecionaCli.Size = new System.Drawing.Size(1066, 555);
-            this.btnSelecionaCli.TabIndex = 0;
-            this.btnSelecionaCli.Text = "CABEÇALHO";
+            this.tabCabecalho.BackColor = System.Drawing.SystemColors.Control;
+            this.tabCabecalho.Controls.Add(this.label9);
+            this.tabCabecalho.Controls.Add(this.tbCabecalho);
+            this.tabCabecalho.Location = new System.Drawing.Point(4, 22);
+            this.tabCabecalho.Name = "tabCabecalho";
+            this.tabCabecalho.Padding = new System.Windows.Forms.Padding(3);
+            this.tabCabecalho.Size = new System.Drawing.Size(1066, 555);
+            this.tabCabecalho.TabIndex = 0;
+            this.tabCabecalho.Text = "CABEÇALHO";
             // 
             // label9
             // 
@@ -345,7 +471,7 @@
             this.gpBoxIdObra.Location = new System.Drawing.Point(11, 122);
             this.gpBoxIdObra.Name = "gpBoxIdObra";
             this.gpBoxIdObra.Size = new System.Drawing.Size(825, 203);
-            this.gpBoxIdObra.TabIndex = 7;
+            this.gpBoxIdObra.TabIndex = 8;
             this.gpBoxIdObra.TabStop = false;
             this.gpBoxIdObra.Text = "Identificação da Obra";
             // 
@@ -494,7 +620,7 @@
             this.gpBoxContatos.Location = new System.Drawing.Point(11, 331);
             this.gpBoxContatos.Name = "gpBoxContatos";
             this.gpBoxContatos.Size = new System.Drawing.Size(1040, 133);
-            this.gpBoxContatos.TabIndex = 8;
+            this.gpBoxContatos.TabIndex = 9;
             this.gpBoxContatos.TabStop = false;
             this.gpBoxContatos.Text = "Contatos";
             // 
@@ -744,7 +870,7 @@
             this.gpBoxIdCliente.Location = new System.Drawing.Point(250, 16);
             this.gpBoxIdCliente.Name = "gpBoxIdCliente";
             this.gpBoxIdCliente.Size = new System.Drawing.Size(801, 100);
-            this.gpBoxIdCliente.TabIndex = 1;
+            this.gpBoxIdCliente.TabIndex = 7;
             this.gpBoxIdCliente.TabStop = false;
             this.gpBoxIdCliente.Text = "Informações do cliente";
             // 
@@ -850,7 +976,7 @@
             this.btnSalvaAlteracao.Location = new System.Drawing.Point(558, 449);
             this.btnSalvaAlteracao.Name = "btnSalvaAlteracao";
             this.btnSalvaAlteracao.Size = new System.Drawing.Size(103, 33);
-            this.btnSalvaAlteracao.TabIndex = 53;
+            this.btnSalvaAlteracao.TabIndex = 23;
             this.btnSalvaAlteracao.Text = "Salvar Alterações";
             this.btnSalvaAlteracao.UseVisualStyleBackColor = true;
             this.btnSalvaAlteracao.Visible = false;
@@ -861,7 +987,7 @@
             this.btnCabGravaCabecalho.Location = new System.Drawing.Point(398, 449);
             this.btnCabGravaCabecalho.Name = "btnCabGravaCabecalho";
             this.btnCabGravaCabecalho.Size = new System.Drawing.Size(114, 33);
-            this.btnCabGravaCabecalho.TabIndex = 52;
+            this.btnCabGravaCabecalho.TabIndex = 22;
             this.btnCabGravaCabecalho.Text = "Gravar Cabeçalho";
             this.btnCabGravaCabecalho.UseVisualStyleBackColor = true;
             this.btnCabGravaCabecalho.Click += new System.EventHandler(this.btnCabGravaCabecalho_Click);
@@ -896,7 +1022,7 @@
             this.groupBox2.Location = new System.Drawing.Point(6, 247);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1041, 196);
-            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Informações Comerciais";
             // 
@@ -907,7 +1033,7 @@
             this.comboCabIndicNegocio.Location = new System.Drawing.Point(125, 131);
             this.comboCabIndicNegocio.Name = "comboCabIndicNegocio";
             this.comboCabIndicNegocio.Size = new System.Drawing.Size(427, 21);
-            this.comboCabIndicNegocio.TabIndex = 48;
+            this.comboCabIndicNegocio.TabIndex = 18;
             this.comboCabIndicNegocio.SelectedIndexChanged += new System.EventHandler(this.comboCabIndicNegocio_SelectedIndexChanged);
             // 
             // panel2
@@ -919,7 +1045,7 @@
             this.panel2.Location = new System.Drawing.Point(8, 51);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 29);
-            this.panel2.TabIndex = 4;
+            this.panel2.TabIndex = 13;
             // 
             // radioIncentFiscalNao
             // 
@@ -974,7 +1100,7 @@
             this.panel1.Location = new System.Drawing.Point(697, 16);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(232, 27);
-            this.panel1.TabIndex = 42;
+            this.panel1.TabIndex = 12;
             // 
             // label49
             // 
@@ -1022,15 +1148,15 @@
             // 
             this.comboCabMoeda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboCabMoeda.FormattingEnabled = true;
-            this.comboCabMoeda.Location = new System.Drawing.Point(667, 169);
+            this.comboCabMoeda.Location = new System.Drawing.Point(665, 167);
             this.comboCabMoeda.Name = "comboCabMoeda";
             this.comboCabMoeda.Size = new System.Drawing.Size(194, 21);
-            this.comboCabMoeda.TabIndex = 51;
+            this.comboCabMoeda.TabIndex = 21;
             // 
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(616, 172);
+            this.label60.Location = new System.Drawing.Point(614, 170);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(43, 13);
             this.label60.TabIndex = 0;
@@ -1042,7 +1168,7 @@
             this.txtCabDesconto.MaxLength = 3;
             this.txtCabDesconto.Name = "txtCabDesconto";
             this.txtCabDesconto.Size = new System.Drawing.Size(160, 20);
-            this.txtCabDesconto.TabIndex = 50;
+            this.txtCabDesconto.TabIndex = 20;
             this.txtCabDesconto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCabDesconto_KeyPress);
             // 
             // label59
@@ -1061,7 +1187,7 @@
             this.txtCabComissaoIndic.MaxLength = 3;
             this.txtCabComissaoIndic.Name = "txtCabComissaoIndic";
             this.txtCabComissaoIndic.Size = new System.Drawing.Size(160, 20);
-            this.txtCabComissaoIndic.TabIndex = 49;
+            this.txtCabComissaoIndic.TabIndex = 19;
             this.txtCabComissaoIndic.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCabComissaoIndic_KeyPress);
             // 
             // label58
@@ -1089,7 +1215,7 @@
             this.txtCabInstFinanceira.MaxLength = 70;
             this.txtCabInstFinanceira.Name = "txtCabInstFinanceira";
             this.txtCabInstFinanceira.Size = new System.Drawing.Size(327, 20);
-            this.txtCabInstFinanceira.TabIndex = 47;
+            this.txtCabInstFinanceira.TabIndex = 17;
             // 
             // label56
             // 
@@ -1107,7 +1233,7 @@
             this.txtCabFinanciamento.MaxLength = 70;
             this.txtCabFinanciamento.Name = "txtCabFinanciamento";
             this.txtCabFinanciamento.Size = new System.Drawing.Size(314, 20);
-            this.txtCabFinanciamento.TabIndex = 46;
+            this.txtCabFinanciamento.TabIndex = 16;
             // 
             // label55
             // 
@@ -1125,7 +1251,7 @@
             this.comboCabPagmentos.Location = new System.Drawing.Point(798, 55);
             this.comboCabPagmentos.Name = "comboCabPagmentos";
             this.comboCabPagmentos.Size = new System.Drawing.Size(232, 21);
-            this.comboCabPagmentos.TabIndex = 45;
+            this.comboCabPagmentos.TabIndex = 15;
             this.comboCabPagmentos.SelectedIndexChanged += new System.EventHandler(this.comboCabPagmentos_SelectedIndexChanged);
             // 
             // label53
@@ -1154,7 +1280,7 @@
             this.txtCabIncentivo.MaxLength = 11;
             this.txtCabIncentivo.Name = "txtCabIncentivo";
             this.txtCabIncentivo.Size = new System.Drawing.Size(296, 20);
-            this.txtCabIncentivo.TabIndex = 44;
+            this.txtCabIncentivo.TabIndex = 14;
             // 
             // label52
             // 
@@ -1172,7 +1298,7 @@
             this.comboVendaP.Location = new System.Drawing.Point(446, 21);
             this.comboVendaP.Name = "comboVendaP";
             this.comboVendaP.Size = new System.Drawing.Size(194, 21);
-            this.comboVendaP.TabIndex = 39;
+            this.comboVendaP.TabIndex = 11;
             // 
             // label46
             // 
@@ -1201,7 +1327,7 @@
             this.combocabFaturamento.Location = new System.Drawing.Point(98, 21);
             this.combocabFaturamento.Name = "combocabFaturamento";
             this.combocabFaturamento.Size = new System.Drawing.Size(227, 21);
-            this.combocabFaturamento.TabIndex = 38;
+            this.combocabFaturamento.TabIndex = 10;
             // 
             // label44
             // 
@@ -1258,7 +1384,7 @@
             this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1045, 235);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informações do Negócio";
             // 
@@ -1278,7 +1404,7 @@
             this.comboCabFrete.Location = new System.Drawing.Point(531, 196);
             this.comboCabFrete.Name = "comboCabFrete";
             this.comboCabFrete.Size = new System.Drawing.Size(225, 21);
-            this.comboCabFrete.TabIndex = 37;
+            this.comboCabFrete.TabIndex = 9;
             // 
             // label42
             // 
@@ -1307,7 +1433,7 @@
             this.comboCabPadraoSolucao.Location = new System.Drawing.Point(104, 199);
             this.comboCabPadraoSolucao.Name = "comboCabPadraoSolucao";
             this.comboCabPadraoSolucao.Size = new System.Drawing.Size(237, 21);
-            this.comboCabPadraoSolucao.TabIndex = 36;
+            this.comboCabPadraoSolucao.TabIndex = 8;
             // 
             // label40
             // 
@@ -1337,7 +1463,7 @@
             this.txtCabConcorrentes.Multiline = true;
             this.txtCabConcorrentes.Name = "txtCabConcorrentes";
             this.txtCabConcorrentes.Size = new System.Drawing.Size(742, 66);
-            this.txtCabConcorrentes.TabIndex = 35;
+            this.txtCabConcorrentes.TabIndex = 7;
             // 
             // label39
             // 
@@ -1384,7 +1510,7 @@
             this.txtVlrEstimadoEscopo.MaxLength = 11;
             this.txtVlrEstimadoEscopo.Name = "txtVlrEstimadoEscopo";
             this.txtVlrEstimadoEscopo.Size = new System.Drawing.Size(176, 20);
-            this.txtVlrEstimadoEscopo.TabIndex = 33;
+            this.txtVlrEstimadoEscopo.TabIndex = 6;
             // 
             // label35
             // 
@@ -1413,7 +1539,7 @@
             this.dtpkPrazoProposta.Location = new System.Drawing.Point(104, 89);
             this.dtpkPrazoProposta.Name = "dtpkPrazoProposta";
             this.dtpkPrazoProposta.Size = new System.Drawing.Size(237, 20);
-            this.dtpkPrazoProposta.TabIndex = 32;
+            this.dtpkPrazoProposta.TabIndex = 5;
             this.dtpkPrazoProposta.Value = new System.DateTime(2017, 2, 14, 9, 37, 1, 0);
             // 
             // label33
@@ -1463,7 +1589,7 @@
             this.comboCabIdioma.Location = new System.Drawing.Point(568, 55);
             this.comboCabIdioma.Name = "comboCabIdioma";
             this.comboCabIdioma.Size = new System.Drawing.Size(177, 21);
-            this.comboCabIdioma.TabIndex = 30;
+            this.comboCabIdioma.TabIndex = 4;
             this.comboCabIdioma.SelectedIndexChanged += new System.EventHandler(this.comboCabIdioma_SelectedIndexChanged);
             // 
             // label31
@@ -1483,7 +1609,7 @@
             this.comboCabEmpreend.Location = new System.Drawing.Point(104, 56);
             this.comboCabEmpreend.Name = "comboCabEmpreend";
             this.comboCabEmpreend.Size = new System.Drawing.Size(237, 21);
-            this.comboCabEmpreend.TabIndex = 29;
+            this.comboCabEmpreend.TabIndex = 3;
             // 
             // label29
             // 
@@ -1512,7 +1638,7 @@
             this.comboCabFinalidade.Location = new System.Drawing.Point(568, 25);
             this.comboCabFinalidade.Name = "comboCabFinalidade";
             this.comboCabFinalidade.Size = new System.Drawing.Size(177, 21);
-            this.comboCabFinalidade.TabIndex = 28;
+            this.comboCabFinalidade.TabIndex = 2;
             // 
             // label28
             // 
@@ -1541,7 +1667,7 @@
             this.comboCabTipo.Location = new System.Drawing.Point(104, 25);
             this.comboCabTipo.Name = "comboCabTipo";
             this.comboCabTipo.Size = new System.Drawing.Size(374, 21);
-            this.comboCabTipo.TabIndex = 27;
+            this.comboCabTipo.TabIndex = 1;
             // 
             // label25
             // 
@@ -1744,7 +1870,6 @@
             // tabDefEscopo
             // 
             this.tabDefEscopo.BackColor = System.Drawing.SystemColors.Control;
-            this.tabDefEscopo.Controls.Add(this.button1);
             this.tabDefEscopo.Controls.Add(this.label1);
             this.tabDefEscopo.Controls.Add(this.groupBoxEscopo);
             this.tabDefEscopo.Location = new System.Drawing.Point(4, 22);
@@ -1752,17 +1877,7 @@
             this.tabDefEscopo.Padding = new System.Windows.Forms.Padding(3);
             this.tabDefEscopo.Size = new System.Drawing.Size(1066, 555);
             this.tabDefEscopo.TabIndex = 1;
-            this.tabDefEscopo.Text = "ESCOPO";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(850, 154);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.tabDefEscopo.Text = " ESCOPO";
             // 
             // label1
             // 
@@ -1777,6 +1892,7 @@
             // 
             // groupBoxEscopo
             // 
+            this.groupBoxEscopo.Controls.Add(this.checkEscopo20);
             this.groupBoxEscopo.Controls.Add(this.checkEscopo19);
             this.groupBoxEscopo.Controls.Add(this.checkEscopo18);
             this.groupBoxEscopo.Controls.Add(this.checkEscopo17);
@@ -1802,14 +1918,25 @@
             this.groupBoxEscopo.TabIndex = 0;
             this.groupBoxEscopo.TabStop = false;
             // 
+            // checkEscopo20
+            // 
+            this.checkEscopo20.AutoSize = true;
+            this.checkEscopo20.Location = new System.Drawing.Point(344, 226);
+            this.checkEscopo20.Name = "checkEscopo20";
+            this.checkEscopo20.Size = new System.Drawing.Size(109, 17);
+            this.checkEscopo20.TabIndex = 19;
+            this.checkEscopo20.Text = "20: Outro Escopo";
+            this.checkEscopo20.UseVisualStyleBackColor = true;
+            this.checkEscopo20.CheckedChanged += new System.EventHandler(this.checkEscopo20_CheckedChanged);
+            // 
             // checkEscopo19
             // 
             this.checkEscopo19.AutoSize = true;
             this.checkEscopo19.Location = new System.Drawing.Point(344, 203);
             this.checkEscopo19.Name = "checkEscopo19";
-            this.checkEscopo19.Size = new System.Drawing.Size(70, 17);
+            this.checkEscopo19.Size = new System.Drawing.Size(145, 17);
             this.checkEscopo19.TabIndex = 18;
-            this.checkEscopo19.Text = "19: Outro";
+            this.checkEscopo19.Text = "19: Fornecimento de Civil";
             this.checkEscopo19.UseVisualStyleBackColor = true;
             this.checkEscopo19.CheckedChanged += new System.EventHandler(this.checkEscopo19_CheckedChanged);
             // 
@@ -1818,9 +1945,9 @@
             this.checkEscopo18.AutoSize = true;
             this.checkEscopo18.Location = new System.Drawing.Point(344, 180);
             this.checkEscopo18.Name = "checkEscopo18";
-            this.checkEscopo18.Size = new System.Drawing.Size(63, 17);
+            this.checkEscopo18.Size = new System.Drawing.Size(218, 17);
             this.checkEscopo18.TabIndex = 17;
-            this.checkEscopo18.Text = "18: Civil";
+            this.checkEscopo18.Text = "18: Fornecimento Somente Mão de Obra";
             this.checkEscopo18.UseVisualStyleBackColor = true;
             this.checkEscopo18.CheckedChanged += new System.EventHandler(this.checkEscopo18_CheckedChanged);
             // 
@@ -2014,6 +2141,8 @@
             // tabEscopo1
             // 
             this.tabEscopo1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabEscopo1.Controls.Add(this.groupBox6);
+            this.tabEscopo1.Controls.Add(this.label82);
             this.tabEscopo1.ForeColor = System.Drawing.SystemColors.Control;
             this.tabEscopo1.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo1.Name = "tabEscopo1";
@@ -2021,6 +2150,342 @@
             this.tabEscopo1.Size = new System.Drawing.Size(1066, 555);
             this.tabEscopo1.TabIndex = 2;
             this.tabEscopo1.Text = "1 - AE";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.btn01Excluir);
+            this.groupBox6.Controls.Add(this.btn01Salvar);
+            this.groupBox6.Controls.Add(this.txt01Obs);
+            this.groupBox6.Controls.Add(this.label93);
+            this.groupBox6.Controls.Add(this.txt01Descricao);
+            this.groupBox6.Controls.Add(this.label92);
+            this.groupBox6.Controls.Add(this.rbtn01Nao);
+            this.groupBox6.Controls.Add(this.rbtn01Sim);
+            this.groupBox6.Controls.Add(this.label91);
+            this.groupBox6.Controls.Add(this.combo01Pintura);
+            this.groupBox6.Controls.Add(this.label90);
+            this.groupBox6.Controls.Add(this.txt01OutraFrequencia);
+            this.groupBox6.Controls.Add(this.label89);
+            this.groupBox6.Controls.Add(this.txt01OutroEnsaio);
+            this.groupBox6.Controls.Add(this.label88);
+            this.groupBox6.Controls.Add(this.combo01DadosAmbientais);
+            this.groupBox6.Controls.Add(this.label87);
+            this.groupBox6.Controls.Add(this.combo01Frequencia);
+            this.groupBox6.Controls.Add(this.label86);
+            this.groupBox6.Controls.Add(this.combo01EnsaioPainel);
+            this.groupBox6.Controls.Add(this.label85);
+            this.groupBox6.Controls.Add(this.combo01Instalacao);
+            this.groupBox6.Controls.Add(this.label84);
+            this.groupBox6.Controls.Add(this.combo01Tensao);
+            this.groupBox6.Controls.Add(this.label83);
+            this.groupBox6.Location = new System.Drawing.Point(30, 57);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(985, 351);
+            this.groupBox6.TabIndex = 6;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Subestação Blindada";
+            // 
+            // btn01Excluir
+            // 
+            this.btn01Excluir.ForeColor = System.Drawing.Color.Black;
+            this.btn01Excluir.Location = new System.Drawing.Point(509, 312);
+            this.btn01Excluir.Name = "btn01Excluir";
+            this.btn01Excluir.Size = new System.Drawing.Size(75, 23);
+            this.btn01Excluir.TabIndex = 23;
+            this.btn01Excluir.Text = "Excluir";
+            this.btn01Excluir.UseVisualStyleBackColor = true;
+            this.btn01Excluir.Visible = false;
+            this.btn01Excluir.Click += new System.EventHandler(this.btn01Excluir_Click);
+            // 
+            // btn01Salvar
+            // 
+            this.btn01Salvar.ForeColor = System.Drawing.Color.Black;
+            this.btn01Salvar.Location = new System.Drawing.Point(411, 312);
+            this.btn01Salvar.Name = "btn01Salvar";
+            this.btn01Salvar.Size = new System.Drawing.Size(75, 23);
+            this.btn01Salvar.TabIndex = 12;
+            this.btn01Salvar.Text = "Salvar";
+            this.btn01Salvar.UseVisualStyleBackColor = true;
+            this.btn01Salvar.Click += new System.EventHandler(this.btn01Salvar_Click);
+            // 
+            // txt01Obs
+            // 
+            this.txt01Obs.Location = new System.Drawing.Point(138, 245);
+            this.txt01Obs.MaxLength = 4000;
+            this.txt01Obs.Multiline = true;
+            this.txt01Obs.Name = "txt01Obs";
+            this.txt01Obs.Size = new System.Drawing.Size(793, 40);
+            this.txt01Obs.TabIndex = 11;
+            // 
+            // label93
+            // 
+            this.label93.AutoSize = true;
+            this.label93.ForeColor = System.Drawing.Color.Black;
+            this.label93.Location = new System.Drawing.Point(59, 259);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(65, 13);
+            this.label93.TabIndex = 22;
+            this.label93.Text = "Observação";
+            // 
+            // txt01Descricao
+            // 
+            this.txt01Descricao.Enabled = false;
+            this.txt01Descricao.Location = new System.Drawing.Point(472, 173);
+            this.txt01Descricao.MaxLength = 4000;
+            this.txt01Descricao.Multiline = true;
+            this.txt01Descricao.Name = "txt01Descricao";
+            this.txt01Descricao.Size = new System.Drawing.Size(459, 40);
+            this.txt01Descricao.TabIndex = 10;
+            // 
+            // label92
+            // 
+            this.label92.AutoSize = true;
+            this.label92.ForeColor = System.Drawing.Color.Black;
+            this.label92.Location = new System.Drawing.Point(353, 189);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(107, 13);
+            this.label92.TabIndex = 20;
+            this.label92.Text = "Descreva a Solução:";
+            // 
+            // rbtn01Nao
+            // 
+            this.rbtn01Nao.AutoSize = true;
+            this.rbtn01Nao.ForeColor = System.Drawing.Color.Black;
+            this.rbtn01Nao.Location = new System.Drawing.Point(184, 189);
+            this.rbtn01Nao.Name = "rbtn01Nao";
+            this.rbtn01Nao.Size = new System.Drawing.Size(45, 17);
+            this.rbtn01Nao.TabIndex = 18;
+            this.rbtn01Nao.TabStop = true;
+            this.rbtn01Nao.Text = "Não";
+            this.rbtn01Nao.UseVisualStyleBackColor = true;
+            // 
+            // rbtn01Sim
+            // 
+            this.rbtn01Sim.AutoSize = true;
+            this.rbtn01Sim.ForeColor = System.Drawing.Color.Black;
+            this.rbtn01Sim.Location = new System.Drawing.Point(136, 189);
+            this.rbtn01Sim.Name = "rbtn01Sim";
+            this.rbtn01Sim.Size = new System.Drawing.Size(42, 17);
+            this.rbtn01Sim.TabIndex = 9;
+            this.rbtn01Sim.TabStop = true;
+            this.rbtn01Sim.Text = "Sim";
+            this.rbtn01Sim.UseVisualStyleBackColor = true;
+            this.rbtn01Sim.CheckedChanged += new System.EventHandler(this.rbtn01Sim_CheckedChanged);
+            // 
+            // label91
+            // 
+            this.label91.AutoSize = true;
+            this.label91.ForeColor = System.Drawing.Color.Black;
+            this.label91.Location = new System.Drawing.Point(4, 190);
+            this.label91.Name = "label91";
+            this.label91.Size = new System.Drawing.Size(118, 13);
+            this.label91.TabIndex = 16;
+            this.label91.Text = "Tem Diagrama Unifilar*:";
+            // 
+            // combo01Pintura
+            // 
+            this.combo01Pintura.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo01Pintura.FormattingEnabled = true;
+            this.combo01Pintura.Items.AddRange(new object[] {
+            "Selecione...",
+            "RAL 7032",
+            "Munsell N-6.5",
+            "Especial"});
+            this.combo01Pintura.Location = new System.Drawing.Point(785, 75);
+            this.combo01Pintura.Name = "combo01Pintura";
+            this.combo01Pintura.Size = new System.Drawing.Size(146, 21);
+            this.combo01Pintura.TabIndex = 8;
+            // 
+            // label90
+            // 
+            this.label90.AutoSize = true;
+            this.label90.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label90.ForeColor = System.Drawing.Color.Green;
+            this.label90.Location = new System.Drawing.Point(728, 78);
+            this.label90.Name = "label90";
+            this.label90.Size = new System.Drawing.Size(51, 13);
+            this.label90.TabIndex = 14;
+            this.label90.Text = "Pintura:";
+            // 
+            // txt01OutraFrequencia
+            // 
+            this.txt01OutraFrequencia.Enabled = false;
+            this.txt01OutraFrequencia.Location = new System.Drawing.Point(809, 30);
+            this.txt01OutraFrequencia.Name = "txt01OutraFrequencia";
+            this.txt01OutraFrequencia.Size = new System.Drawing.Size(122, 20);
+            this.txt01OutraFrequencia.TabIndex = 6;
+            // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label89.ForeColor = System.Drawing.Color.Green;
+            this.label89.Location = new System.Drawing.Point(737, 33);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(42, 13);
+            this.label89.TabIndex = 12;
+            this.label89.Text = "Outra:";
+            // 
+            // txt01OutroEnsaio
+            // 
+            this.txt01OutroEnsaio.Enabled = false;
+            this.txt01OutroEnsaio.Location = new System.Drawing.Point(472, 116);
+            this.txt01OutroEnsaio.MaxLength = 500;
+            this.txt01OutroEnsaio.Multiline = true;
+            this.txt01OutroEnsaio.Name = "txt01OutroEnsaio";
+            this.txt01OutroEnsaio.Size = new System.Drawing.Size(459, 40);
+            this.txt01OutroEnsaio.TabIndex = 4;
+            // 
+            // label88
+            // 
+            this.label88.AutoSize = true;
+            this.label88.ForeColor = System.Drawing.Color.Black;
+            this.label88.Location = new System.Drawing.Point(340, 131);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(120, 13);
+            this.label88.TabIndex = 10;
+            this.label88.Text = "Descreva Outro Ensaio:";
+            // 
+            // combo01DadosAmbientais
+            // 
+            this.combo01DadosAmbientais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo01DadosAmbientais.FormattingEnabled = true;
+            this.combo01DadosAmbientais.Items.AddRange(new object[] {
+            "Selecione...",
+            "Úmido",
+            "Maresia",
+            "Corrosivo",
+            "Normal"});
+            this.combo01DadosAmbientais.Location = new System.Drawing.Point(471, 77);
+            this.combo01DadosAmbientais.Name = "combo01DadosAmbientais";
+            this.combo01DadosAmbientais.Size = new System.Drawing.Size(146, 21);
+            this.combo01DadosAmbientais.TabIndex = 7;
+            // 
+            // label87
+            // 
+            this.label87.AutoSize = true;
+            this.label87.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label87.ForeColor = System.Drawing.Color.Green;
+            this.label87.Location = new System.Drawing.Point(348, 80);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(117, 13);
+            this.label87.TabIndex = 8;
+            this.label87.Text = "Dados Ambientais*:";
+            // 
+            // combo01Frequencia
+            // 
+            this.combo01Frequencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo01Frequencia.FormattingEnabled = true;
+            this.combo01Frequencia.Items.AddRange(new object[] {
+            "Selecione",
+            "50Hz",
+            "60Hz",
+            "Outra"});
+            this.combo01Frequencia.Location = new System.Drawing.Point(471, 28);
+            this.combo01Frequencia.Name = "combo01Frequencia";
+            this.combo01Frequencia.Size = new System.Drawing.Size(146, 21);
+            this.combo01Frequencia.TabIndex = 5;
+            this.combo01Frequencia.SelectedIndexChanged += new System.EventHandler(this.combo01Frequencia_SelectedIndexChanged);
+            // 
+            // label86
+            // 
+            this.label86.AutoSize = true;
+            this.label86.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label86.ForeColor = System.Drawing.Color.Green;
+            this.label86.Location = new System.Drawing.Point(383, 31);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(79, 13);
+            this.label86.TabIndex = 6;
+            this.label86.Text = "Frequência*:";
+            // 
+            // combo01EnsaioPainel
+            // 
+            this.combo01EnsaioPainel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo01EnsaioPainel.FormattingEnabled = true;
+            this.combo01EnsaioPainel.Items.AddRange(new object[] {
+            "Selecione...",
+            "Ensaiado Fockink",
+            "Convencional Fockink",
+            "Ensaiado Terceiros",
+            "Outro"});
+            this.combo01EnsaioPainel.Location = new System.Drawing.Point(138, 116);
+            this.combo01EnsaioPainel.Name = "combo01EnsaioPainel";
+            this.combo01EnsaioPainel.Size = new System.Drawing.Size(146, 21);
+            this.combo01EnsaioPainel.TabIndex = 3;
+            this.combo01EnsaioPainel.SelectedIndexChanged += new System.EventHandler(this.combo01EnsaioPainel_SelectedIndexChanged);
+            // 
+            // label85
+            // 
+            this.label85.AutoSize = true;
+            this.label85.ForeColor = System.Drawing.Color.Black;
+            this.label85.Location = new System.Drawing.Point(45, 119);
+            this.label85.Name = "label85";
+            this.label85.Size = new System.Drawing.Size(78, 13);
+            this.label85.TabIndex = 4;
+            this.label85.Text = "Ensaio Painel*:";
+            // 
+            // combo01Instalacao
+            // 
+            this.combo01Instalacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo01Instalacao.FormattingEnabled = true;
+            this.combo01Instalacao.Items.AddRange(new object[] {
+            "Selecione...",
+            "Abrigada",
+            "Ao Tempo",
+            "Mista"});
+            this.combo01Instalacao.Location = new System.Drawing.Point(138, 72);
+            this.combo01Instalacao.Name = "combo01Instalacao";
+            this.combo01Instalacao.Size = new System.Drawing.Size(146, 21);
+            this.combo01Instalacao.TabIndex = 2;
+            // 
+            // label84
+            // 
+            this.label84.AutoSize = true;
+            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label84.ForeColor = System.Drawing.Color.Green;
+            this.label84.Location = new System.Drawing.Point(49, 75);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(75, 13);
+            this.label84.TabIndex = 2;
+            this.label84.Text = "Instalação*:";
+            // 
+            // combo01Tensao
+            // 
+            this.combo01Tensao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo01Tensao.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.combo01Tensao.FormattingEnabled = true;
+            this.combo01Tensao.Items.AddRange(new object[] {
+            "Selecione",
+            "13,8kV",
+            "23,1kV",
+            "34,5kV",
+            "Outra"});
+            this.combo01Tensao.Location = new System.Drawing.Point(138, 28);
+            this.combo01Tensao.Name = "combo01Tensao";
+            this.combo01Tensao.Size = new System.Drawing.Size(146, 21);
+            this.combo01Tensao.TabIndex = 1;
+            this.combo01Tensao.SelectedIndexChanged += new System.EventHandler(this.combo01Tensao_SelectedIndexChanged);
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.ForeColor = System.Drawing.Color.Black;
+            this.label83.Location = new System.Drawing.Point(16, 31);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(108, 13);
+            this.label83.TabIndex = 0;
+            this.label83.Text = "Tensão Distribuição*:";
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label82.ForeColor = System.Drawing.Color.Red;
+            this.label82.Location = new System.Drawing.Point(12, 14);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(244, 13);
+            this.label82.TabIndex = 5;
+            this.label82.Text = "Escopo 01: AE-Painéis Elétricos de Média Tensão";
             // 
             // tabEscopo2
             // 
@@ -2185,24 +2650,705 @@
             // tabEscopo18
             // 
             this.tabEscopo18.BackColor = System.Drawing.SystemColors.Control;
+            this.tabEscopo18.Controls.Add(this.tabEscopo18_1_2);
+            this.tabEscopo18.Controls.Add(this.label68);
             this.tabEscopo18.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo18.Name = "tabEscopo18";
             this.tabEscopo18.Padding = new System.Windows.Forms.Padding(3);
             this.tabEscopo18.Size = new System.Drawing.Size(1066, 555);
             this.tabEscopo18.TabIndex = 19;
-            this.tabEscopo18.Text = "18 - Civil";
+            this.tabEscopo18.Text = "18 - FSMO";
+            // 
+            // tabEscopo18_1_2
+            // 
+            this.tabEscopo18_1_2.Controls.Add(this.tbpage18InfoG);
+            this.tabEscopo18_1_2.Controls.Add(this.tbpage18DefMaoObra);
+            this.tabEscopo18_1_2.Location = new System.Drawing.Point(11, 40);
+            this.tabEscopo18_1_2.Name = "tabEscopo18_1_2";
+            this.tabEscopo18_1_2.SelectedIndex = 0;
+            this.tabEscopo18_1_2.Size = new System.Drawing.Size(1047, 428);
+            this.tabEscopo18_1_2.TabIndex = 0;
+            this.tabEscopo18_1_2.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabEscopo18_1_2_Selected);
+            // 
+            // tbpage18InfoG
+            // 
+            this.tbpage18InfoG.BackColor = System.Drawing.SystemColors.Control;
+            this.tbpage18InfoG.Controls.Add(this.panel8);
+            this.tbpage18InfoG.Location = new System.Drawing.Point(4, 22);
+            this.tbpage18InfoG.Name = "tbpage18InfoG";
+            this.tbpage18InfoG.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpage18InfoG.Size = new System.Drawing.Size(1039, 402);
+            this.tbpage18InfoG.TabIndex = 0;
+            this.tbpage18InfoG.Text = "Informações Gerais";
+            // 
+            // panel8
+            // 
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.panel13);
+            this.panel8.Controls.Add(this.btn18Excluir);
+            this.panel8.Controls.Add(this.panel12);
+            this.panel8.Controls.Add(this.txt18Obs);
+            this.panel8.Controls.Add(this.panel11);
+            this.panel8.Controls.Add(this.label70);
+            this.panel8.Controls.Add(this.panel10);
+            this.panel8.Controls.Add(this.button2);
+            this.panel8.Controls.Add(this.panel9);
+            this.panel8.Location = new System.Drawing.Point(42, 23);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(946, 227);
+            this.panel8.TabIndex = 0;
+            // 
+            // panel13
+            // 
+            this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel13.Controls.Add(this.rbtn18MatConsumoNao);
+            this.panel13.Controls.Add(this.label73);
+            this.panel13.Controls.Add(this.rbtn18MatConsumoSim);
+            this.panel13.Location = new System.Drawing.Point(648, 8);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(284, 45);
+            this.panel13.TabIndex = 15;
+            // 
+            // rbtn18MatConsumoNao
+            // 
+            this.rbtn18MatConsumoNao.AutoSize = true;
+            this.rbtn18MatConsumoNao.Location = new System.Drawing.Point(235, 12);
+            this.rbtn18MatConsumoNao.Name = "rbtn18MatConsumoNao";
+            this.rbtn18MatConsumoNao.Size = new System.Drawing.Size(45, 17);
+            this.rbtn18MatConsumoNao.TabIndex = 20;
+            this.rbtn18MatConsumoNao.TabStop = true;
+            this.rbtn18MatConsumoNao.Text = "Não";
+            this.rbtn18MatConsumoNao.UseVisualStyleBackColor = true;
+            // 
+            // label73
+            // 
+            this.label73.AutoSize = true;
+            this.label73.Location = new System.Drawing.Point(5, 16);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(174, 13);
+            this.label73.TabIndex = 12;
+            this.label73.Text = "Considerar Materiais de Consumo: *";
+            // 
+            // rbtn18MatConsumoSim
+            // 
+            this.rbtn18MatConsumoSim.AutoSize = true;
+            this.rbtn18MatConsumoSim.Location = new System.Drawing.Point(187, 12);
+            this.rbtn18MatConsumoSim.Name = "rbtn18MatConsumoSim";
+            this.rbtn18MatConsumoSim.Size = new System.Drawing.Size(42, 17);
+            this.rbtn18MatConsumoSim.TabIndex = 24;
+            this.rbtn18MatConsumoSim.TabStop = true;
+            this.rbtn18MatConsumoSim.Text = "Sim";
+            this.rbtn18MatConsumoSim.UseVisualStyleBackColor = true;
+            // 
+            // btn18Excluir
+            // 
+            this.btn18Excluir.Location = new System.Drawing.Point(483, 191);
+            this.btn18Excluir.Name = "btn18Excluir";
+            this.btn18Excluir.Size = new System.Drawing.Size(75, 23);
+            this.btn18Excluir.TabIndex = 27;
+            this.btn18Excluir.Text = "Excluir";
+            this.btn18Excluir.UseVisualStyleBackColor = true;
+            this.btn18Excluir.Visible = false;
+            this.btn18Excluir.Click += new System.EventHandler(this.btn18Excluir_Click);
+            // 
+            // panel12
+            // 
+            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel12.Controls.Add(this.label74);
+            this.panel12.Controls.Add(this.rbtn18AlimentacaoFockink);
+            this.panel12.Controls.Add(this.rbtn18AlimentacaoCli);
+            this.panel12.Location = new System.Drawing.Point(327, 60);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(296, 45);
+            this.panel12.TabIndex = 14;
+            // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Location = new System.Drawing.Point(6, 15);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(157, 13);
+            this.label74.TabIndex = 18;
+            this.label74.Text = "Fornecimento de Alimentação: *";
+            // 
+            // rbtn18AlimentacaoFockink
+            // 
+            this.rbtn18AlimentacaoFockink.AutoSize = true;
+            this.rbtn18AlimentacaoFockink.Location = new System.Drawing.Point(168, 13);
+            this.rbtn18AlimentacaoFockink.Name = "rbtn18AlimentacaoFockink";
+            this.rbtn18AlimentacaoFockink.Size = new System.Drawing.Size(63, 17);
+            this.rbtn18AlimentacaoFockink.TabIndex = 23;
+            this.rbtn18AlimentacaoFockink.TabStop = true;
+            this.rbtn18AlimentacaoFockink.Text = "Fockink";
+            this.rbtn18AlimentacaoFockink.UseVisualStyleBackColor = true;
+            // 
+            // rbtn18AlimentacaoCli
+            // 
+            this.rbtn18AlimentacaoCli.AutoSize = true;
+            this.rbtn18AlimentacaoCli.Location = new System.Drawing.Point(237, 13);
+            this.rbtn18AlimentacaoCli.Name = "rbtn18AlimentacaoCli";
+            this.rbtn18AlimentacaoCli.Size = new System.Drawing.Size(57, 17);
+            this.rbtn18AlimentacaoCli.TabIndex = 18;
+            this.rbtn18AlimentacaoCli.TabStop = true;
+            this.rbtn18AlimentacaoCli.Text = "Cliente";
+            this.rbtn18AlimentacaoCli.UseVisualStyleBackColor = true;
+            // 
+            // txt18Obs
+            // 
+            this.txt18Obs.Location = new System.Drawing.Point(91, 119);
+            this.txt18Obs.MaxLength = 2000;
+            this.txt18Obs.Multiline = true;
+            this.txt18Obs.Name = "txt18Obs";
+            this.txt18Obs.Size = new System.Drawing.Size(841, 58);
+            this.txt18Obs.TabIndex = 25;
+            // 
+            // panel11
+            // 
+            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel11.Controls.Add(this.label72);
+            this.panel11.Controls.Add(this.rbtn18EstadiaFockink);
+            this.panel11.Controls.Add(this.rbtn18EstadiaCli);
+            this.panel11.Location = new System.Drawing.Point(327, 8);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(294, 45);
+            this.panel11.TabIndex = 13;
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Location = new System.Drawing.Point(8, 14);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(134, 13);
+            this.label72.TabIndex = 0;
+            this.label72.Text = "Fornecimento da Estadia: *";
+            // 
+            // rbtn18EstadiaFockink
+            // 
+            this.rbtn18EstadiaFockink.AutoSize = true;
+            this.rbtn18EstadiaFockink.Location = new System.Drawing.Point(147, 12);
+            this.rbtn18EstadiaFockink.Name = "rbtn18EstadiaFockink";
+            this.rbtn18EstadiaFockink.Size = new System.Drawing.Size(63, 17);
+            this.rbtn18EstadiaFockink.TabIndex = 22;
+            this.rbtn18EstadiaFockink.TabStop = true;
+            this.rbtn18EstadiaFockink.Text = "Fockink";
+            this.rbtn18EstadiaFockink.UseVisualStyleBackColor = true;
+            // 
+            // rbtn18EstadiaCli
+            // 
+            this.rbtn18EstadiaCli.AutoSize = true;
+            this.rbtn18EstadiaCli.Location = new System.Drawing.Point(216, 12);
+            this.rbtn18EstadiaCli.Name = "rbtn18EstadiaCli";
+            this.rbtn18EstadiaCli.Size = new System.Drawing.Size(57, 17);
+            this.rbtn18EstadiaCli.TabIndex = 16;
+            this.rbtn18EstadiaCli.TabStop = true;
+            this.rbtn18EstadiaCli.Text = "Cliente";
+            this.rbtn18EstadiaCli.UseVisualStyleBackColor = true;
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Location = new System.Drawing.Point(12, 143);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(73, 13);
+            this.label70.TabIndex = 6;
+            this.label70.Text = "Observações:";
+            // 
+            // panel10
+            // 
+            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel10.Controls.Add(this.label71);
+            this.panel10.Controls.Add(this.rbtn18ConsidTransladoSim);
+            this.panel10.Controls.Add(this.rbtn18ConsidTransladoNao);
+            this.panel10.Location = new System.Drawing.Point(13, 59);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(276, 46);
+            this.panel10.TabIndex = 12;
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Location = new System.Drawing.Point(4, 14);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(170, 13);
+            this.label71.TabIndex = 15;
+            this.label71.Text = "Considerar Translado até a Obra: *";
+            // 
+            // rbtn18ConsidTransladoSim
+            // 
+            this.rbtn18ConsidTransladoSim.AutoSize = true;
+            this.rbtn18ConsidTransladoSim.Location = new System.Drawing.Point(181, 12);
+            this.rbtn18ConsidTransladoSim.Name = "rbtn18ConsidTransladoSim";
+            this.rbtn18ConsidTransladoSim.Size = new System.Drawing.Size(42, 17);
+            this.rbtn18ConsidTransladoSim.TabIndex = 21;
+            this.rbtn18ConsidTransladoSim.TabStop = true;
+            this.rbtn18ConsidTransladoSim.Text = "Sim";
+            this.rbtn18ConsidTransladoSim.UseVisualStyleBackColor = true;
+            // 
+            // rbtn18ConsidTransladoNao
+            // 
+            this.rbtn18ConsidTransladoNao.AutoSize = true;
+            this.rbtn18ConsidTransladoNao.Location = new System.Drawing.Point(229, 12);
+            this.rbtn18ConsidTransladoNao.Name = "rbtn18ConsidTransladoNao";
+            this.rbtn18ConsidTransladoNao.Size = new System.Drawing.Size(45, 17);
+            this.rbtn18ConsidTransladoNao.TabIndex = 14;
+            this.rbtn18ConsidTransladoNao.TabStop = true;
+            this.rbtn18ConsidTransladoNao.Text = "Não";
+            this.rbtn18ConsidTransladoNao.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(380, 191);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 26;
+            this.button2.Text = "Salvar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // panel9
+            // 
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.rbtn18HrasExtrasNao);
+            this.panel9.Controls.Add(this.label69);
+            this.panel9.Controls.Add(this.rbtn18HrasExtrasSim);
+            this.panel9.Location = new System.Drawing.Point(12, 7);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(276, 46);
+            this.panel9.TabIndex = 11;
+            // 
+            // rbtn18HrasExtrasNao
+            // 
+            this.rbtn18HrasExtrasNao.AutoSize = true;
+            this.rbtn18HrasExtrasNao.Location = new System.Drawing.Point(188, 14);
+            this.rbtn18HrasExtrasNao.Name = "rbtn18HrasExtrasNao";
+            this.rbtn18HrasExtrasNao.Size = new System.Drawing.Size(45, 17);
+            this.rbtn18HrasExtrasNao.TabIndex = 12;
+            this.rbtn18HrasExtrasNao.TabStop = true;
+            this.rbtn18HrasExtrasNao.Text = "Não";
+            this.rbtn18HrasExtrasNao.UseVisualStyleBackColor = true;
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Location = new System.Drawing.Point(3, 16);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(130, 13);
+            this.label69.TabIndex = 0;
+            this.label69.Text = "Considerar Horas Extras: *";
+            // 
+            // rbtn18HrasExtrasSim
+            // 
+            this.rbtn18HrasExtrasSim.AutoSize = true;
+            this.rbtn18HrasExtrasSim.Location = new System.Drawing.Point(140, 14);
+            this.rbtn18HrasExtrasSim.Name = "rbtn18HrasExtrasSim";
+            this.rbtn18HrasExtrasSim.Size = new System.Drawing.Size(42, 17);
+            this.rbtn18HrasExtrasSim.TabIndex = 20;
+            this.rbtn18HrasExtrasSim.TabStop = true;
+            this.rbtn18HrasExtrasSim.Text = "Sim";
+            this.rbtn18HrasExtrasSim.UseVisualStyleBackColor = true;
+            // 
+            // tbpage18DefMaoObra
+            // 
+            this.tbpage18DefMaoObra.BackColor = System.Drawing.SystemColors.Control;
+            this.tbpage18DefMaoObra.Controls.Add(this.p18_2);
+            this.tbpage18DefMaoObra.Controls.Add(this.check18_2MaoObraDireta);
+            this.tbpage18DefMaoObra.Controls.Add(this.p18_1);
+            this.tbpage18DefMaoObra.Controls.Add(this.check18_1MaoObraIndireta);
+            this.tbpage18DefMaoObra.Location = new System.Drawing.Point(4, 22);
+            this.tbpage18DefMaoObra.Name = "tbpage18DefMaoObra";
+            this.tbpage18DefMaoObra.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpage18DefMaoObra.Size = new System.Drawing.Size(1039, 402);
+            this.tbpage18DefMaoObra.TabIndex = 1;
+            this.tbpage18DefMaoObra.Text = "Definição do Fornecimento de Mão de Obra";
+            // 
+            // p18_2
+            // 
+            this.p18_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.p18_2.Controls.Add(this.btn18_2Excluir);
+            this.p18_2.Controls.Add(this.txt18_2DescProfissional);
+            this.p18_2.Controls.Add(this.label81);
+            this.p18_2.Controls.Add(this.btn18_2Salvar);
+            this.p18_2.Controls.Add(this.check18_2Ferramental);
+            this.p18_2.Controls.Add(this.txt18_2Obs);
+            this.p18_2.Controls.Add(this.label78);
+            this.p18_2.Controls.Add(this.check18_2AuxiliarMontador);
+            this.p18_2.Controls.Add(this.check18_2Munck);
+            this.p18_2.Controls.Add(this.label79);
+            this.p18_2.Controls.Add(this.check18_2PlataformaElevatoria);
+            this.p18_2.Controls.Add(this.check18_2TecObras);
+            this.p18_2.Controls.Add(this.check18_2Almoxarife);
+            this.p18_2.Controls.Add(this.label77);
+            this.p18_2.Controls.Add(this.check18_2Montador);
+            this.p18_2.Controls.Add(this.check18_2Outro);
+            this.p18_2.Controls.Add(this.check18_2Soldador);
+            this.p18_2.Location = new System.Drawing.Point(540, 41);
+            this.p18_2.Name = "p18_2";
+            this.p18_2.Size = new System.Drawing.Size(493, 302);
+            this.p18_2.TabIndex = 26;
+            this.p18_2.Visible = false;
+            // 
+            // btn18_2Excluir
+            // 
+            this.btn18_2Excluir.Location = new System.Drawing.Point(271, 274);
+            this.btn18_2Excluir.Name = "btn18_2Excluir";
+            this.btn18_2Excluir.Size = new System.Drawing.Size(75, 23);
+            this.btn18_2Excluir.TabIndex = 25;
+            this.btn18_2Excluir.Text = "Excluir";
+            this.btn18_2Excluir.UseVisualStyleBackColor = true;
+            this.btn18_2Excluir.Visible = false;
+            this.btn18_2Excluir.Click += new System.EventHandler(this.btn18_2Excluir_Click);
+            // 
+            // txt18_2DescProfissional
+            // 
+            this.txt18_2DescProfissional.Location = new System.Drawing.Point(134, 80);
+            this.txt18_2DescProfissional.MaxLength = 200;
+            this.txt18_2DescProfissional.Name = "txt18_2DescProfissional";
+            this.txt18_2DescProfissional.Size = new System.Drawing.Size(344, 20);
+            this.txt18_2DescProfissional.TabIndex = 19;
+            this.txt18_2DescProfissional.Visible = false;
+            // 
+            // label81
+            // 
+            this.label81.AutoSize = true;
+            this.label81.Location = new System.Drawing.Point(0, 83);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(128, 13);
+            this.label81.TabIndex = 29;
+            this.label81.Text = "Descreva o Profissional: *";
+            this.label81.Visible = false;
+            // 
+            // btn18_2Salvar
+            // 
+            this.btn18_2Salvar.Location = new System.Drawing.Point(170, 274);
+            this.btn18_2Salvar.Name = "btn18_2Salvar";
+            this.btn18_2Salvar.Size = new System.Drawing.Size(75, 23);
+            this.btn18_2Salvar.TabIndex = 24;
+            this.btn18_2Salvar.Text = "Salvar";
+            this.btn18_2Salvar.UseVisualStyleBackColor = true;
+            this.btn18_2Salvar.Click += new System.EventHandler(this.btn18_2Salvar_Click);
+            // 
+            // check18_2Ferramental
+            // 
+            this.check18_2Ferramental.AutoSize = true;
+            this.check18_2Ferramental.Location = new System.Drawing.Point(340, 144);
+            this.check18_2Ferramental.Name = "check18_2Ferramental";
+            this.check18_2Ferramental.Size = new System.Drawing.Size(81, 17);
+            this.check18_2Ferramental.TabIndex = 22;
+            this.check18_2Ferramental.Text = "Ferramental";
+            this.check18_2Ferramental.UseVisualStyleBackColor = true;
+            // 
+            // txt18_2Obs
+            // 
+            this.txt18_2Obs.Location = new System.Drawing.Point(98, 179);
+            this.txt18_2Obs.MaxLength = 2000;
+            this.txt18_2Obs.Multiline = true;
+            this.txt18_2Obs.Name = "txt18_2Obs";
+            this.txt18_2Obs.Size = new System.Drawing.Size(370, 79);
+            this.txt18_2Obs.TabIndex = 23;
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Location = new System.Drawing.Point(13, 210);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(73, 13);
+            this.label78.TabIndex = 6;
+            this.label78.Text = "Observações:";
+            // 
+            // check18_2AuxiliarMontador
+            // 
+            this.check18_2AuxiliarMontador.AutoSize = true;
+            this.check18_2AuxiliarMontador.Location = new System.Drawing.Point(182, 44);
+            this.check18_2AuxiliarMontador.Name = "check18_2AuxiliarMontador";
+            this.check18_2AuxiliarMontador.Size = new System.Drawing.Size(122, 17);
+            this.check18_2AuxiliarMontador.TabIndex = 16;
+            this.check18_2AuxiliarMontador.Text = "Auxiliar de Montador";
+            this.check18_2AuxiliarMontador.UseVisualStyleBackColor = true;
+            // 
+            // check18_2Munck
+            // 
+            this.check18_2Munck.AutoSize = true;
+            this.check18_2Munck.Location = new System.Drawing.Point(186, 145);
+            this.check18_2Munck.Name = "check18_2Munck";
+            this.check18_2Munck.Size = new System.Drawing.Size(59, 17);
+            this.check18_2Munck.TabIndex = 21;
+            this.check18_2Munck.Text = "Munck";
+            this.check18_2Munck.UseVisualStyleBackColor = true;
+            // 
+            // label79
+            // 
+            this.label79.AutoSize = true;
+            this.label79.Location = new System.Drawing.Point(9, 5);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(60, 13);
+            this.label79.TabIndex = 12;
+            this.label79.Text = "Considerar:";
+            // 
+            // check18_2PlataformaElevatoria
+            // 
+            this.check18_2PlataformaElevatoria.AutoSize = true;
+            this.check18_2PlataformaElevatoria.Location = new System.Drawing.Point(33, 144);
+            this.check18_2PlataformaElevatoria.Name = "check18_2PlataformaElevatoria";
+            this.check18_2PlataformaElevatoria.Size = new System.Drawing.Size(126, 17);
+            this.check18_2PlataformaElevatoria.TabIndex = 20;
+            this.check18_2PlataformaElevatoria.Text = "Plataforma Elevatória";
+            this.check18_2PlataformaElevatoria.UseVisualStyleBackColor = true;
+            // 
+            // check18_2TecObras
+            // 
+            this.check18_2TecObras.AutoSize = true;
+            this.check18_2TecObras.Location = new System.Drawing.Point(29, 21);
+            this.check18_2TecObras.Name = "check18_2TecObras";
+            this.check18_2TecObras.Size = new System.Drawing.Size(96, 17);
+            this.check18_2TecObras.TabIndex = 13;
+            this.check18_2TecObras.Text = "Técnico Obras";
+            this.check18_2TecObras.UseVisualStyleBackColor = true;
+            // 
+            // check18_2Almoxarife
+            // 
+            this.check18_2Almoxarife.AutoSize = true;
+            this.check18_2Almoxarife.Location = new System.Drawing.Point(29, 44);
+            this.check18_2Almoxarife.Name = "check18_2Almoxarife";
+            this.check18_2Almoxarife.Size = new System.Drawing.Size(74, 17);
+            this.check18_2Almoxarife.TabIndex = 14;
+            this.check18_2Almoxarife.Text = "Almoxarife";
+            this.check18_2Almoxarife.UseVisualStyleBackColor = true;
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.Location = new System.Drawing.Point(13, 118);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(259, 13);
+            this.label77.TabIndex = 23;
+            this.label77.Text = "Considerar Fornecimento de Equipamentos Auxiliares:";
+            // 
+            // check18_2Montador
+            // 
+            this.check18_2Montador.AutoSize = true;
+            this.check18_2Montador.Location = new System.Drawing.Point(182, 21);
+            this.check18_2Montador.Name = "check18_2Montador";
+            this.check18_2Montador.Size = new System.Drawing.Size(71, 17);
+            this.check18_2Montador.TabIndex = 15;
+            this.check18_2Montador.Text = "Montador";
+            this.check18_2Montador.UseVisualStyleBackColor = true;
+            // 
+            // check18_2Outro
+            // 
+            this.check18_2Outro.AutoSize = true;
+            this.check18_2Outro.Location = new System.Drawing.Point(336, 44);
+            this.check18_2Outro.Name = "check18_2Outro";
+            this.check18_2Outro.Size = new System.Drawing.Size(52, 17);
+            this.check18_2Outro.TabIndex = 18;
+            this.check18_2Outro.Text = "Outro";
+            this.check18_2Outro.UseVisualStyleBackColor = true;
+            this.check18_2Outro.CheckedChanged += new System.EventHandler(this.check18_2Outro_CheckedChanged);
+            // 
+            // check18_2Soldador
+            // 
+            this.check18_2Soldador.AutoSize = true;
+            this.check18_2Soldador.Location = new System.Drawing.Point(336, 21);
+            this.check18_2Soldador.Name = "check18_2Soldador";
+            this.check18_2Soldador.Size = new System.Drawing.Size(68, 17);
+            this.check18_2Soldador.TabIndex = 17;
+            this.check18_2Soldador.Text = "Soldador";
+            this.check18_2Soldador.UseVisualStyleBackColor = true;
+            // 
+            // check18_2MaoObraDireta
+            // 
+            this.check18_2MaoObraDireta.AutoSize = true;
+            this.check18_2MaoObraDireta.Location = new System.Drawing.Point(520, 18);
+            this.check18_2MaoObraDireta.Name = "check18_2MaoObraDireta";
+            this.check18_2MaoObraDireta.Size = new System.Drawing.Size(146, 17);
+            this.check18_2MaoObraDireta.TabIndex = 24;
+            this.check18_2MaoObraDireta.Text = "18.2: Mão de Obra Direta";
+            this.check18_2MaoObraDireta.UseVisualStyleBackColor = true;
+            this.check18_2MaoObraDireta.CheckedChanged += new System.EventHandler(this.check18_2MaoObraDireta_CheckedChanged);
+            // 
+            // p18_1
+            // 
+            this.p18_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.p18_1.Controls.Add(this.btn18_1Excluir);
+            this.p18_1.Controls.Add(this.btn18_1Salvar);
+            this.p18_1.Controls.Add(this.txt18_1DescProfissional);
+            this.p18_1.Controls.Add(this.label76);
+            this.p18_1.Controls.Add(this.check18_1Outro);
+            this.p18_1.Controls.Add(this.txt18_1Obs);
+            this.p18_1.Controls.Add(this.label80);
+            this.p18_1.Controls.Add(this.check18_1Planejador);
+            this.p18_1.Controls.Add(this.check18_1TecSeguranca);
+            this.p18_1.Controls.Add(this.check18_1Encarregado);
+            this.p18_1.Controls.Add(this.check18_1Administrativo);
+            this.p18_1.Controls.Add(this.check18_1EngResidente);
+            this.p18_1.Controls.Add(this.label75);
+            this.p18_1.Location = new System.Drawing.Point(26, 41);
+            this.p18_1.Name = "p18_1";
+            this.p18_1.Size = new System.Drawing.Size(489, 302);
+            this.p18_1.TabIndex = 23;
+            this.p18_1.Visible = false;
+            // 
+            // btn18_1Excluir
+            // 
+            this.btn18_1Excluir.Location = new System.Drawing.Point(244, 222);
+            this.btn18_1Excluir.Name = "btn18_1Excluir";
+            this.btn18_1Excluir.Size = new System.Drawing.Size(75, 23);
+            this.btn18_1Excluir.TabIndex = 10;
+            this.btn18_1Excluir.Text = "Excluir";
+            this.btn18_1Excluir.UseVisualStyleBackColor = true;
+            this.btn18_1Excluir.Visible = false;
+            this.btn18_1Excluir.Click += new System.EventHandler(this.btn18_1Excluir_Click);
+            // 
+            // btn18_1Salvar
+            // 
+            this.btn18_1Salvar.Location = new System.Drawing.Point(136, 222);
+            this.btn18_1Salvar.Name = "btn18_1Salvar";
+            this.btn18_1Salvar.Size = new System.Drawing.Size(75, 23);
+            this.btn18_1Salvar.TabIndex = 9;
+            this.btn18_1Salvar.Text = "Salvar";
+            this.btn18_1Salvar.UseVisualStyleBackColor = true;
+            this.btn18_1Salvar.Click += new System.EventHandler(this.btn18_1Salvar_Click);
+            // 
+            // txt18_1DescProfissional
+            // 
+            this.txt18_1DescProfissional.Location = new System.Drawing.Point(136, 77);
+            this.txt18_1DescProfissional.MaxLength = 200;
+            this.txt18_1DescProfissional.Name = "txt18_1DescProfissional";
+            this.txt18_1DescProfissional.Size = new System.Drawing.Size(344, 20);
+            this.txt18_1DescProfissional.TabIndex = 7;
+            this.txt18_1DescProfissional.Visible = false;
+            // 
+            // label76
+            // 
+            this.label76.AutoSize = true;
+            this.label76.Location = new System.Drawing.Point(2, 80);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(128, 13);
+            this.label76.TabIndex = 23;
+            this.label76.Text = "Descreva o Profissional: *";
+            this.label76.Visible = false;
+            // 
+            // check18_1Outro
+            // 
+            this.check18_1Outro.AutoSize = true;
+            this.check18_1Outro.Location = new System.Drawing.Point(348, 44);
+            this.check18_1Outro.Name = "check18_1Outro";
+            this.check18_1Outro.Size = new System.Drawing.Size(52, 17);
+            this.check18_1Outro.TabIndex = 6;
+            this.check18_1Outro.Text = "Outro";
+            this.check18_1Outro.UseVisualStyleBackColor = true;
+            this.check18_1Outro.CheckedChanged += new System.EventHandler(this.check18_1Outro_CheckedChanged);
+            // 
+            // txt18_1Obs
+            // 
+            this.txt18_1Obs.Location = new System.Drawing.Point(136, 116);
+            this.txt18_1Obs.MaxLength = 2000;
+            this.txt18_1Obs.Multiline = true;
+            this.txt18_1Obs.Name = "txt18_1Obs";
+            this.txt18_1Obs.Size = new System.Drawing.Size(344, 80);
+            this.txt18_1Obs.TabIndex = 8;
+            // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.Location = new System.Drawing.Point(30, 138);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(73, 13);
+            this.label80.TabIndex = 6;
+            this.label80.Text = "Observações:";
+            // 
+            // check18_1Planejador
+            // 
+            this.check18_1Planejador.AutoSize = true;
+            this.check18_1Planejador.Location = new System.Drawing.Point(348, 21);
+            this.check18_1Planejador.Name = "check18_1Planejador";
+            this.check18_1Planejador.Size = new System.Drawing.Size(76, 17);
+            this.check18_1Planejador.TabIndex = 5;
+            this.check18_1Planejador.Text = "Planejador";
+            this.check18_1Planejador.UseVisualStyleBackColor = true;
+            // 
+            // check18_1TecSeguranca
+            // 
+            this.check18_1TecSeguranca.AutoSize = true;
+            this.check18_1TecSeguranca.Location = new System.Drawing.Point(174, 44);
+            this.check18_1TecSeguranca.Name = "check18_1TecSeguranca";
+            this.check18_1TecSeguranca.Size = new System.Drawing.Size(120, 17);
+            this.check18_1TecSeguranca.TabIndex = 4;
+            this.check18_1TecSeguranca.Text = "Técnico Segurança";
+            this.check18_1TecSeguranca.UseVisualStyleBackColor = true;
+            // 
+            // check18_1Encarregado
+            // 
+            this.check18_1Encarregado.AutoSize = true;
+            this.check18_1Encarregado.Location = new System.Drawing.Point(174, 21);
+            this.check18_1Encarregado.Name = "check18_1Encarregado";
+            this.check18_1Encarregado.Size = new System.Drawing.Size(87, 17);
+            this.check18_1Encarregado.TabIndex = 3;
+            this.check18_1Encarregado.Text = "Encarregado";
+            this.check18_1Encarregado.UseVisualStyleBackColor = true;
+            // 
+            // check18_1Administrativo
+            // 
+            this.check18_1Administrativo.AutoSize = true;
+            this.check18_1Administrativo.Location = new System.Drawing.Point(33, 44);
+            this.check18_1Administrativo.Name = "check18_1Administrativo";
+            this.check18_1Administrativo.Size = new System.Drawing.Size(91, 17);
+            this.check18_1Administrativo.TabIndex = 2;
+            this.check18_1Administrativo.Text = "Administrativo";
+            this.check18_1Administrativo.UseVisualStyleBackColor = true;
+            // 
+            // check18_1EngResidente
+            // 
+            this.check18_1EngResidente.AutoSize = true;
+            this.check18_1EngResidente.Location = new System.Drawing.Point(33, 21);
+            this.check18_1EngResidente.Name = "check18_1EngResidente";
+            this.check18_1EngResidente.Size = new System.Drawing.Size(100, 17);
+            this.check18_1EngResidente.TabIndex = 1;
+            this.check18_1EngResidente.Text = "Eng° Residente";
+            this.check18_1EngResidente.UseVisualStyleBackColor = true;
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Location = new System.Drawing.Point(3, 5);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(60, 13);
+            this.label75.TabIndex = 12;
+            this.label75.Text = "Considerar:";
+            // 
+            // check18_1MaoObraIndireta
+            // 
+            this.check18_1MaoObraIndireta.AutoSize = true;
+            this.check18_1MaoObraIndireta.Location = new System.Drawing.Point(15, 18);
+            this.check18_1MaoObraIndireta.Name = "check18_1MaoObraIndireta";
+            this.check18_1MaoObraIndireta.Size = new System.Drawing.Size(153, 17);
+            this.check18_1MaoObraIndireta.TabIndex = 22;
+            this.check18_1MaoObraIndireta.Text = "18.1: Mão de Obra Indireta";
+            this.check18_1MaoObraIndireta.UseVisualStyleBackColor = true;
+            this.check18_1MaoObraIndireta.CheckedChanged += new System.EventHandler(this.check18_1MaoObraIndireta_CheckedChanged);
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label68.ForeColor = System.Drawing.Color.Red;
+            this.label68.Location = new System.Drawing.Point(8, 12);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(238, 13);
+            this.label68.TabIndex = 4;
+            this.label68.Text = "Escopo 18: Fornecimento Somente Mão de Obra";
             // 
             // tabEscopo19
             // 
             this.tabEscopo19.BackColor = System.Drawing.SystemColors.Control;
             this.tabEscopo19.Controls.Add(this.groupBox4);
             this.tabEscopo19.Controls.Add(this.label65);
+            this.tabEscopo19.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabEscopo19.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo19.Name = "tabEscopo19";
             this.tabEscopo19.Padding = new System.Windows.Forms.Padding(3);
             this.tabEscopo19.Size = new System.Drawing.Size(1066, 555);
             this.tabEscopo19.TabIndex = 20;
-            this.tabEscopo19.Text = "19 - Outro";
+            this.tabEscopo19.Text = "19 - FCivil";
             // 
             // groupBox4
             // 
@@ -2230,16 +3376,17 @@
             this.btnEsc19Excluir.Location = new System.Drawing.Point(439, 322);
             this.btnEsc19Excluir.Name = "btnEsc19Excluir";
             this.btnEsc19Excluir.Size = new System.Drawing.Size(75, 23);
-            this.btnEsc19Excluir.TabIndex = 11;
+            this.btnEsc19Excluir.TabIndex = 9;
             this.btnEsc19Excluir.Text = "Excluir";
             this.btnEsc19Excluir.UseVisualStyleBackColor = true;
+            this.btnEsc19Excluir.Click += new System.EventHandler(this.btnEsc19Excluir_Click);
             // 
             // btnEsc19Salvar
             // 
             this.btnEsc19Salvar.Location = new System.Drawing.Point(322, 322);
             this.btnEsc19Salvar.Name = "btnEsc19Salvar";
             this.btnEsc19Salvar.Size = new System.Drawing.Size(75, 23);
-            this.btnEsc19Salvar.TabIndex = 10;
+            this.btnEsc19Salvar.TabIndex = 8;
             this.btnEsc19Salvar.Text = "Salvar";
             this.btnEsc19Salvar.UseVisualStyleBackColor = true;
             this.btnEsc19Salvar.Click += new System.EventHandler(this.btnEsc19Salvar_Click);
@@ -2251,7 +3398,7 @@
             this.txtEsc19Necessidade.Multiline = true;
             this.txtEsc19Necessidade.Name = "txtEsc19Necessidade";
             this.txtEsc19Necessidade.Size = new System.Drawing.Size(575, 58);
-            this.txtEsc19Necessidade.TabIndex = 9;
+            this.txtEsc19Necessidade.TabIndex = 7;
             this.txtEsc19Necessidade.Visible = false;
             // 
             // lblNecessidade
@@ -2271,7 +3418,7 @@
             this.txtEsc19Observacoes.Multiline = true;
             this.txtEsc19Observacoes.Name = "txtEsc19Observacoes";
             this.txtEsc19Observacoes.Size = new System.Drawing.Size(575, 58);
-            this.txtEsc19Observacoes.TabIndex = 7;
+            this.txtEsc19Observacoes.TabIndex = 6;
             // 
             // label66
             // 
@@ -2350,16 +3497,184 @@
             this.label65.ForeColor = System.Drawing.Color.Red;
             this.label65.Location = new System.Drawing.Point(8, 13);
             this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(173, 13);
+            this.label65.Size = new System.Drawing.Size(165, 13);
             this.label65.TabIndex = 3;
-            this.label65.Text = "Definição do escopo da solicitação";
+            this.label65.Text = "Escopo 19: Fornecimento de Civil";
+            // 
+            // tabEscopo20
+            // 
+            this.tabEscopo20.BackColor = System.Drawing.SystemColors.Control;
+            this.tabEscopo20.Controls.Add(this.dgvListaEsc20);
+            this.tabEscopo20.Controls.Add(this.groupBox5);
+            this.tabEscopo20.Controls.Add(this.label67);
+            this.tabEscopo20.Location = new System.Drawing.Point(4, 22);
+            this.tabEscopo20.Name = "tabEscopo20";
+            this.tabEscopo20.Size = new System.Drawing.Size(1066, 555);
+            this.tabEscopo20.TabIndex = 21;
+            this.tabEscopo20.Text = "20 - Outro";
+            // 
+            // dgvListaEsc20
+            // 
+            this.dgvListaEsc20.AllowUserToAddRows = false;
+            this.dgvListaEsc20.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaEsc20.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.NUMERO_SOLICITACAO,
+            this.REVISAO_SOLICITACAO,
+            this.SEQ,
+            this.TITULO_ESCOPO,
+            this.DESCRICAO_ESCOPO,
+            this.IND_PREENCHIDO,
+            this.acao});
+            this.dgvListaEsc20.Location = new System.Drawing.Point(129, 271);
+            this.dgvListaEsc20.MultiSelect = false;
+            this.dgvListaEsc20.Name = "dgvListaEsc20";
+            this.dgvListaEsc20.Size = new System.Drawing.Size(756, 259);
+            this.dgvListaEsc20.TabIndex = 7;
+            this.dgvListaEsc20.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaEsc20_CellContentClick);
+            // 
+            // NUMERO_SOLICITACAO
+            // 
+            this.NUMERO_SOLICITACAO.DataPropertyName = "NUMERO_SOLICITACAO";
+            this.NUMERO_SOLICITACAO.HeaderText = "NÚMERO";
+            this.NUMERO_SOLICITACAO.Name = "NUMERO_SOLICITACAO";
+            this.NUMERO_SOLICITACAO.ReadOnly = true;
+            this.NUMERO_SOLICITACAO.Width = 75;
+            // 
+            // REVISAO_SOLICITACAO
+            // 
+            this.REVISAO_SOLICITACAO.DataPropertyName = "REVISAO_SOLICITACAO";
+            this.REVISAO_SOLICITACAO.HeaderText = "REV.";
+            this.REVISAO_SOLICITACAO.Name = "REVISAO_SOLICITACAO";
+            this.REVISAO_SOLICITACAO.ReadOnly = true;
+            this.REVISAO_SOLICITACAO.Width = 50;
+            // 
+            // SEQ
+            // 
+            this.SEQ.DataPropertyName = "SEQ";
+            this.SEQ.HeaderText = "SEQ.";
+            this.SEQ.Name = "SEQ";
+            this.SEQ.ReadOnly = true;
+            this.SEQ.Width = 50;
+            // 
+            // TITULO_ESCOPO
+            // 
+            this.TITULO_ESCOPO.DataPropertyName = "TITULO_ESCOPO";
+            this.TITULO_ESCOPO.HeaderText = "TÍTULO";
+            this.TITULO_ESCOPO.Name = "TITULO_ESCOPO";
+            this.TITULO_ESCOPO.ReadOnly = true;
+            this.TITULO_ESCOPO.Width = 150;
+            // 
+            // DESCRICAO_ESCOPO
+            // 
+            this.DESCRICAO_ESCOPO.DataPropertyName = "DESCRICAO_ESCOPO";
+            this.DESCRICAO_ESCOPO.HeaderText = "DESCRIÇÃO";
+            this.DESCRICAO_ESCOPO.Name = "DESCRICAO_ESCOPO";
+            this.DESCRICAO_ESCOPO.ReadOnly = true;
+            this.DESCRICAO_ESCOPO.Width = 300;
+            // 
+            // IND_PREENCHIDO
+            // 
+            this.IND_PREENCHIDO.DataPropertyName = "IND_PREENCHIDO";
+            this.IND_PREENCHIDO.HeaderText = "";
+            this.IND_PREENCHIDO.Name = "IND_PREENCHIDO";
+            this.IND_PREENCHIDO.ReadOnly = true;
+            // 
+            // acao
+            // 
+            this.acao.HeaderText = "";
+            this.acao.Name = "acao";
+            this.acao.Text = "Excluir";
+            this.acao.ToolTipText = "Excluir Registro";
+            this.acao.UseColumnTextForButtonValue = true;
+            this.acao.Width = 85;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.btnEsc20Excluir);
+            this.groupBox5.Controls.Add(this.txtEsc20Titulo);
+            this.groupBox5.Controls.Add(this.btnEsc20Salvar);
+            this.groupBox5.Controls.Add(this.txtEsc20Desc);
+            this.groupBox5.Controls.Add(this.label15);
+            this.groupBox5.Controls.Add(this.label21);
+            this.groupBox5.Location = new System.Drawing.Point(129, 50);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(756, 215);
+            this.groupBox5.TabIndex = 6;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Definição do Escopo";
+            // 
+            // btnEsc20Excluir
+            // 
+            this.btnEsc20Excluir.Location = new System.Drawing.Point(414, 177);
+            this.btnEsc20Excluir.Name = "btnEsc20Excluir";
+            this.btnEsc20Excluir.Size = new System.Drawing.Size(75, 23);
+            this.btnEsc20Excluir.TabIndex = 15;
+            this.btnEsc20Excluir.Text = "Excluir";
+            this.btnEsc20Excluir.UseVisualStyleBackColor = true;
+            this.btnEsc20Excluir.Click += new System.EventHandler(this.btnEsc20Excluir_Click);
+            // 
+            // txtEsc20Titulo
+            // 
+            this.txtEsc20Titulo.Location = new System.Drawing.Point(137, 28);
+            this.txtEsc20Titulo.MaxLength = 100;
+            this.txtEsc20Titulo.Name = "txtEsc20Titulo";
+            this.txtEsc20Titulo.Size = new System.Drawing.Size(597, 20);
+            this.txtEsc20Titulo.TabIndex = 12;
+            // 
+            // btnEsc20Salvar
+            // 
+            this.btnEsc20Salvar.Location = new System.Drawing.Point(285, 177);
+            this.btnEsc20Salvar.Name = "btnEsc20Salvar";
+            this.btnEsc20Salvar.Size = new System.Drawing.Size(75, 23);
+            this.btnEsc20Salvar.TabIndex = 14;
+            this.btnEsc20Salvar.Text = "Salvar";
+            this.btnEsc20Salvar.UseVisualStyleBackColor = true;
+            this.btnEsc20Salvar.Click += new System.EventHandler(this.btnEsc20Salvar_Click);
+            // 
+            // txtEsc20Desc
+            // 
+            this.txtEsc20Desc.Location = new System.Drawing.Point(137, 63);
+            this.txtEsc20Desc.MaxLength = 2000;
+            this.txtEsc20Desc.Multiline = true;
+            this.txtEsc20Desc.Name = "txtEsc20Desc";
+            this.txtEsc20Desc.Size = new System.Drawing.Size(597, 75);
+            this.txtEsc20Desc.TabIndex = 13;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(16, 84);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(119, 13);
+            this.label15.TabIndex = 8;
+            this.label15.Text = "Descrição do Escopo: *";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(36, 31);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(99, 13);
+            this.label21.TabIndex = 6;
+            this.label21.Text = "Título do Escopo: *";
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label67.ForeColor = System.Drawing.Color.Red;
+            this.label67.Location = new System.Drawing.Point(12, 13);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(165, 13);
+            this.label67.TabIndex = 5;
+            this.label67.Text = "Escopo 19: Fornecimento de Civil";
             // 
             // btnVoltar
             // 
             this.btnVoltar.Location = new System.Drawing.Point(34, 583);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(75, 23);
-            this.btnVoltar.TabIndex = 2;
+            this.btnVoltar.TabIndex = 0;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
@@ -2374,11 +3689,10 @@
             this.MaximizeBox = false;
             this.Name = "frmNovaSolicitacao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SOEF - NOVA SOLICITAÇÃO DE ORÇAMENTO";
             this.Load += new System.EventHandler(this.frmNovaSolicitacao_Load);
             this.tabNovaSolicitacao.ResumeLayout(false);
-            this.btnSelecionaCli.ResumeLayout(false);
-            this.btnSelecionaCli.PerformLayout();
+            this.tabCabecalho.ResumeLayout(false);
+            this.tabCabecalho.PerformLayout();
             this.tbCabecalho.ResumeLayout(false);
             this.tbPageCabecalho1.ResumeLayout(false);
             this.gpBoxIdObra.ResumeLayout(false);
@@ -2407,10 +3721,41 @@
             this.tabDefEscopo.PerformLayout();
             this.groupBoxEscopo.ResumeLayout(false);
             this.groupBoxEscopo.PerformLayout();
+            this.tabEscopo1.ResumeLayout(false);
+            this.tabEscopo1.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.tabEscopo18.ResumeLayout(false);
+            this.tabEscopo18.PerformLayout();
+            this.tabEscopo18_1_2.ResumeLayout(false);
+            this.tbpage18InfoG.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.tbpage18DefMaoObra.ResumeLayout(false);
+            this.tbpage18DefMaoObra.PerformLayout();
+            this.p18_2.ResumeLayout(false);
+            this.p18_2.PerformLayout();
+            this.p18_1.ResumeLayout(false);
+            this.p18_1.PerformLayout();
             this.tabEscopo19.ResumeLayout(false);
             this.tabEscopo19.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.tabEscopo20.ResumeLayout(false);
+            this.tabEscopo20.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaEsc20)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2418,7 +3763,7 @@
         #endregion
 
         private System.Windows.Forms.TabControl tabNovaSolicitacao;
-        private System.Windows.Forms.TabPage btnSelecionaCli;
+        private System.Windows.Forms.TabPage tabCabecalho;
         private System.Windows.Forms.TabPage tabDefEscopo;
         private System.Windows.Forms.GroupBox groupBoxEscopo;
         private System.Windows.Forms.CheckBox checkEscopo19;
@@ -2600,7 +3945,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn desc_evento;
         private System.Windows.Forms.DataGridViewTextBoxColumn perc_corresp;
         private System.Windows.Forms.Button btnSalvaAlteracao;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox txtEsc19Necessidade;
         private System.Windows.Forms.Label lblNecessidade;
@@ -2615,5 +3959,113 @@
         private System.Windows.Forms.Label label65;
         private System.Windows.Forms.Button btnEsc19Excluir;
         private System.Windows.Forms.Button btnEsc19Salvar;
+        private System.Windows.Forms.CheckBox checkEscopo20;
+        private System.Windows.Forms.TabPage tabEscopo20;
+        private System.Windows.Forms.DataGridView dgvListaEsc20;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TextBox txtEsc20Titulo;
+        private System.Windows.Forms.Button btnEsc20Salvar;
+        private System.Windows.Forms.TextBox txtEsc20Desc;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NUMERO_SOLICITACAO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn REVISAO_SOLICITACAO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SEQ;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TITULO_ESCOPO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DESCRICAO_ESCOPO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IND_PREENCHIDO;
+        private System.Windows.Forms.DataGridViewButtonColumn acao;
+        private System.Windows.Forms.Button btnEsc20Excluir;
+        private System.Windows.Forms.RadioButton rbtn18EstadiaCli;
+        private System.Windows.Forms.Label label72;
+        private System.Windows.Forms.RadioButton rbtn18EstadiaFockink;
+        private System.Windows.Forms.RadioButton rbtn18ConsidTransladoNao;
+        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.RadioButton rbtn18ConsidTransladoSim;
+        private System.Windows.Forms.RadioButton rbtn18HrasExtrasNao;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.RadioButton rbtn18HrasExtrasSim;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txt18Obs;
+        private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.Label label74;
+        private System.Windows.Forms.RadioButton rbtn18AlimentacaoFockink;
+        private System.Windows.Forms.RadioButton rbtn18AlimentacaoCli;
+        private System.Windows.Forms.RadioButton rbtn18MatConsumoNao;
+        private System.Windows.Forms.RadioButton rbtn18MatConsumoSim;
+        private System.Windows.Forms.Label label73;
+        private System.Windows.Forms.TabControl tabEscopo18_1_2;
+        private System.Windows.Forms.TabPage tbpage18InfoG;
+        private System.Windows.Forms.TabPage tbpage18DefMaoObra;
+        private System.Windows.Forms.CheckBox check18_2Ferramental;
+        private System.Windows.Forms.CheckBox check18_2Munck;
+        private System.Windows.Forms.CheckBox check18_2PlataformaElevatoria;
+        private System.Windows.Forms.Button btn18_2Salvar;
+        private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.CheckBox check18_2Outro;
+        private System.Windows.Forms.TextBox txt18_2Obs;
+        private System.Windows.Forms.Label label78;
+        private System.Windows.Forms.CheckBox check18_2Montador;
+        private System.Windows.Forms.CheckBox check18_2Soldador;
+        private System.Windows.Forms.CheckBox check18_2Almoxarife;
+        private System.Windows.Forms.CheckBox check18_2AuxiliarMontador;
+        private System.Windows.Forms.CheckBox check18_2TecObras;
+        private System.Windows.Forms.Label label79;
+        private System.Windows.Forms.CheckBox check18_2MaoObraDireta;
+        private System.Windows.Forms.Panel p18_1;
+        private System.Windows.Forms.Button btn18_1Salvar;
+        private System.Windows.Forms.TextBox txt18_1DescProfissional;
+        private System.Windows.Forms.Label label76;
+        private System.Windows.Forms.CheckBox check18_1Outro;
+        private System.Windows.Forms.TextBox txt18_1Obs;
+        private System.Windows.Forms.Label label80;
+        private System.Windows.Forms.CheckBox check18_1Planejador;
+        private System.Windows.Forms.CheckBox check18_1TecSeguranca;
+        private System.Windows.Forms.CheckBox check18_1Encarregado;
+        private System.Windows.Forms.CheckBox check18_1Administrativo;
+        private System.Windows.Forms.CheckBox check18_1EngResidente;
+        private System.Windows.Forms.Label label75;
+        private System.Windows.Forms.CheckBox check18_1MaoObraIndireta;
+        private System.Windows.Forms.Panel p18_2;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.TextBox txt18_2DescProfissional;
+        private System.Windows.Forms.Label label81;
+        private System.Windows.Forms.Button btn18Excluir;
+        private System.Windows.Forms.Button btn18_2Excluir;
+        private System.Windows.Forms.Button btn18_1Excluir;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.ComboBox combo01Pintura;
+        private System.Windows.Forms.Label label90;
+        private System.Windows.Forms.TextBox txt01OutraFrequencia;
+        private System.Windows.Forms.Label label89;
+        private System.Windows.Forms.TextBox txt01OutroEnsaio;
+        private System.Windows.Forms.Label label88;
+        private System.Windows.Forms.ComboBox combo01DadosAmbientais;
+        private System.Windows.Forms.Label label87;
+        private System.Windows.Forms.ComboBox combo01Frequencia;
+        private System.Windows.Forms.Label label86;
+        private System.Windows.Forms.ComboBox combo01EnsaioPainel;
+        private System.Windows.Forms.Label label85;
+        private System.Windows.Forms.ComboBox combo01Instalacao;
+        private System.Windows.Forms.Label label84;
+        private System.Windows.Forms.ComboBox combo01Tensao;
+        private System.Windows.Forms.Label label83;
+        private System.Windows.Forms.Label label82;
+        private System.Windows.Forms.Button btn01Salvar;
+        private System.Windows.Forms.TextBox txt01Obs;
+        private System.Windows.Forms.Label label93;
+        private System.Windows.Forms.TextBox txt01Descricao;
+        private System.Windows.Forms.Label label92;
+        private System.Windows.Forms.RadioButton rbtn01Nao;
+        private System.Windows.Forms.RadioButton rbtn01Sim;
+        private System.Windows.Forms.Label label91;
+        private System.Windows.Forms.Button btn01Excluir;
     }
 }

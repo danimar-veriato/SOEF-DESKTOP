@@ -455,7 +455,7 @@ namespace ORCAMENTOS_FOCKINK
                     sql += ",[REPRES_DPES_CODIGO]) ";
                     sql += "VALUES ";
                     sql += "(" + p_num_solic + ", ";
-                    sql += "" + p_revisao + ", ";
+                    sql += "'" + p_revisao + "', ";
                     sql += "'" + p_status_solic + "', ";
                     sql += "'" + p_observacao + "', ";
                     sql += "'" + p_projeto + "', ";
@@ -559,7 +559,7 @@ namespace ORCAMENTOS_FOCKINK
                     sql += " WHERE[NUMERO] = " + p_num_solic + " ";
                     sql += "AND[REPRES_EMPR_CODIGO] = " + p_empr_repres + " ";
                     sql += "AND[REPRES_DPES_CODIGO] = " + p_cod_repres + " ";
-                    sql += "AND[REVISAO] = " + p_revisao + "";                    
+                    sql += "AND[REVISAO] = '" + p_revisao + "'";                    
                 }          
                 retorno = mBD.insertSOF(sql, p_dt_entrega_obra, p_dt_proposta);
             }
@@ -596,7 +596,7 @@ namespace ORCAMENTOS_FOCKINK
                 sql += "[PERC_CORRESPONDENTE]) ";
                 sql += "VALUES ";
                 sql += "(" + p_NumSolic + ", ";
-                sql += "" + p_RevSolic + ", ";
+                sql += "'" + p_RevSolic + "', ";
                 sql += "" + p_SeqSolic + ", ";
                 sql += "" + p_CodEvento + ", ";
                 sql += "" + p_Percentual + ")";
@@ -611,6 +611,8 @@ namespace ORCAMENTOS_FOCKINK
                 mBD.closeConnection();
             }
         }
+
+
 
         /// <summary>
         /// Método que busca o Indicador de Negócio de uma solicitação
@@ -632,7 +634,7 @@ namespace ORCAMENTOS_FOCKINK
                 sql += " AND DSO.[REPRES_EMPR_CODIGO] = DIN.[EMPR_CODIGO] ";
                 sql += " WHERE DSO.[REPRES_EMPR_CODIGO] = " + p_repres_empr_cod;
                 sql += " AND DSO.[NUMERO] = " + p_num_solic;
-                sql += " AND DSO.[REVISAO] = " + p_rev_solic;
+                sql += " AND DSO.[REVISAO] = '" + p_rev_solic +"'";
                 return mBD.selectListaSOF(sql, "DOM_SOLIC_ORCAMENTO");
             }
             catch (Exception)
@@ -666,7 +668,7 @@ namespace ORCAMENTOS_FOCKINK
                 sql += " INNER JOIN DOM_EVENTO_PAGAMENTO DEPGTO ";
                 sql += " ON DCOND.COD_EVENTO_PAGTO = DEPGTO.CODIGO ";
                 sql += "WHERE DCOND.NUMERO_SOLICITACAO = " + p_num_solic;
-                sql += "AND DCOND.REVISAO_SOLICITACAO = " + p_rev_solic;
+                sql += "AND DCOND.REVISAO_SOLICITACAO = '" + p_rev_solic + "'";
                 sql += "ORDER BY DCOND.SEQUENCIA ";
                 return mBD.selectListaSOF(sql, "DOM_SOLIC_ORC_COND_PGTO");
             }
@@ -696,7 +698,7 @@ namespace ORCAMENTOS_FOCKINK
                 string sql = "SELECT SUM([PERC_CORRESPONDENTE]) TOTAL ";
                 sql += " FROM [DOM_SOLIC_ORC_COND_PGTO] ";
                 sql += " WHERE [NUMERO_SOLICITACAO] = " + p_num_solic;
-                sql += " AND [REVISAO_SOLICITACAO] = " + p_num_rev;
+                sql += " AND [REVISAO_SOLICITACAO] = '" + p_num_rev + "'";
                 string total = mBD.selectSOF(sql);
                 if (string.IsNullOrEmpty(total))
                 {
@@ -732,7 +734,7 @@ namespace ORCAMENTOS_FOCKINK
                 string sql = "SELECT [PERC_CORRESPONDENTE] ";
                 sql += " FROM [DOM_SOLIC_ORC_COND_PGTO] ";
                 sql += "WHERE [NUMERO_SOLICITACAO] = " + p_num_solic;
-                sql += " AND [REVISAO_SOLICITACAO] = " + p_revisao;
+                sql += " AND [REVISAO_SOLICITACAO] = '" + p_revisao + "'";
                 sql += " AND [SEQUENCIA] = " + p_sequencia;
                 retorno = Convert.ToInt32(mBD.selectSOF(sql));
                 return retorno;
@@ -746,6 +748,7 @@ namespace ORCAMENTOS_FOCKINK
                 mBD.closeConnection();
             }
         }
+
 
 
         /// <summary>
@@ -765,7 +768,7 @@ namespace ORCAMENTOS_FOCKINK
                 string sql = "UPDATE DOM_SOLIC_ORC_COND_PGTO ";
                 sql += "SET [PERC_CORRESPONDENTE] = " + p_percent_corresp + " ";
                 sql += "WHERE [NUMERO_SOLICITACAO] = " + p_num_solic;
-                sql += "AND [REVISAO_SOLICITACAO] = " + p_revisao ;
+                sql += "AND [REVISAO_SOLICITACAO] = '" + p_revisao + "'";
                 sql += "AND [SEQUENCIA] = " + p_sequencia;
                 retorno = mBD.insertSOF(sql);
             }
@@ -796,7 +799,7 @@ namespace ORCAMENTOS_FOCKINK
             {
                 string sql = "DELETE FROM [DOM_SOLIC_ORC_COND_PGTO] ";
                 sql += "WHERE [NUMERO_SOLICITACAO] = " + p_num_solic;
-                sql += " AND [REVISAO_SOLICITACAO] = " + p_num_rev_solic;
+                sql += " AND [REVISAO_SOLICITACAO] = '" + p_num_rev_solic +"'";
                 sql += " AND [SEQUENCIA] = " + p_sequencia;
                 retorno = mBD.deleteSOF(sql);
                 return retorno;
@@ -826,10 +829,10 @@ namespace ORCAMENTOS_FOCKINK
             string sql = "";
             try
             {
-                
                 if (!string.IsNullOrEmpty(p_FiltroBusca)) 
                 {
                     sql += "SELECT DSO.[NUMERO], ";
+                    sql += "DSO.[REVISAO], ";
                     sql += "DSO.[STATUS], ";
                     sql += "DC.RAZAO_SOCIAL + ' - ' + DSO.[DPES_CODIGO_CLI] AS CLIENTE, ";
                     sql += "DSO.[NEGOCIO_ASSOCIADO], ";
@@ -897,7 +900,7 @@ namespace ORCAMENTOS_FOCKINK
                     //sql += " INNER JOIN [DOM_INDICADOR_NEGOCIO] DIN ON DSO.[INDIC_DPES_CODIGO] = DIN.[DPES_CODIGO] AND DSO.[REPRES_EMPR_CODIGO] = DIN.[EMPR_CODIGO] ";
                     sql += " WHERE [REPRES_EMPR_CODIGO] = " + p_empr_cod;
                     sql += " AND [NUMERO] = " + p_num_solic;
-                    sql += " AND [REVISAO] = " + p_rev_solic;
+                    sql += " AND [REVISAO] = '" + p_rev_solic + "'";
                 }
                 return mBD.selectListaSOF(sql, "DOM_SOLIC_ORCAMENTO");
             }
@@ -910,6 +913,7 @@ namespace ORCAMENTOS_FOCKINK
                 mBD.closeConnection();
             }
         }
+
 
 
     }

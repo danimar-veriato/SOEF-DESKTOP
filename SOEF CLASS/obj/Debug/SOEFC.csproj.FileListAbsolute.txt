@@ -1,0 +1,5 @@
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF-DESKTOP\SOEF CLASS\bin\Debug\SOEF CLASS.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF-DESKTOP\SOEF CLASS\bin\Debug\SOEF CLASS.pdb
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF-DESKTOP\SOEF CLASS\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF-DESKTOP\SOEF CLASS\obj\Debug\SOEF CLASS.dll
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF-DESKTOP\SOEF CLASS\obj\Debug\SOEF CLASS.pdb
