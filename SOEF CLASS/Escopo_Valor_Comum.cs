@@ -173,6 +173,34 @@ namespace SOEF_CLASS
         }
 
 
+        /// <summary>
+        /// Busca os campos comuns utilizados no ESCOPO 10_1
+        /// </summary>
+        /// <param name="numSolicitacao"></param>
+        /// <param name="revSolicitacao"></param>
+        /// <returns></returns>
+        public DataTable buscaEscopoValorComumE10_1(string numSolicitacao, string revSolicitacao)
+        {
+            DataTable dt = new DataTable();
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                string query = "";
+                query += " SELECT [TENSAO_TRIFASICA], [FREQUENCIA_HZ], [OUTRA_FREQUENCIA], [DADOS_AMBIENTAIS], [NORMATIVA_MAPA], [TIPO_PRODUTO], [OUTRO_PRODUTO] ";
+                query += " FROM [DOM_SOLIC_ORC_VALOR_COMUM] ";
+                query += " WHERE [NUMERO_SOLICITACAO] = " + Numero;
+                query += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
+                dt = sqlce.selectListaSOF(query, "DOM_SOLIC_ORC_VALOR_COMUM");
+                return dt;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
 
 
         /// <summary>

@@ -2432,7 +2432,11 @@ namespace ORCAMENTOS_FOCKINK
 
         private void tabNovaSolicitacao_Selected(object sender, TabControlEventArgs e)
         {
-            if(tabNovaSolicitacao.SelectedTab.Name == "tabDefEscopo")
+            //Instancia a classe do Escopo Valor Comum
+            SOEF_CLASS.Escopo_Valor_Comum EscopoValorComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+
+
+            if (tabNovaSolicitacao.SelectedTab.Name == "tabDefEscopo")
             {
                 ////Função que verifica os escopos existentes e ativa eles
                 verificaEscopos(this.numero_solic.ToString(), this.NumRevisaoSolic);
@@ -2448,8 +2452,6 @@ namespace ORCAMENTOS_FOCKINK
                     rbtn01Sim.Checked = true;
                     btn01Excluir.Visible = false;
 
-                    //Sugere campos comuns DOM_SOLIC_ORC_VALOR_COMUM
-                    SOEF_CLASS.Escopo_Valor_Comum EscopoValorComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
                     //Verifica se existe registro na tabela Valor Comum
                     DataTable dt = EscopoValorComum.buscaEscopoValorComumE01(this.numero_solic.ToString(), this.NumRevisaoSolic);
                     if (dt.Rows.Count > 0)
@@ -2531,6 +2533,87 @@ namespace ORCAMENTOS_FOCKINK
 
                 }           
             } //Fim Escopo 01
+
+
+            if(tabNovaSolicitacao.SelectedTab.Name == "tabEscopo10")
+            {
+                inicializaCamposE10_1();
+                if(AcaoTela == "N")
+                {
+                    //Verifica e sugere os campos comuns caso existir registro
+                    DataTable dtEscopo10_1 = EscopoValorComum.buscaEscopoValorComumE10_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    if(dtEscopo10_1.Rows.Count > 0)
+                    {
+                        foreach(DataRow dr in dtEscopo10_1.Rows)
+                        {
+                            //Tensao Trifásica
+                            comboE10_1TensaoTri.SelectedIndex = Convert.ToInt32(dr["TENSAO_TRIFASICA"].ToString());
+
+                            //Frequência
+                            comboE10_1Freq.SelectedIndex = Convert.ToInt32(dr["FREQUENCIA_HZ"].ToString());
+                            if(dr["FREQUENCIA_HZ"].ToString() == "3")
+                            {
+                                txtE10_1OutraFreq.Enabled = true;
+                                txtE10_1OutraFreq.Text = dr["OUTRA_FREQUENCIA"].ToString();
+                            }
+
+                            //Dados Ambientais
+                            if (dr["DADOS_AMBIENTAIS"].ToString() == "U")
+                            {
+                                comboE10_1DadosAmbientais.SelectedIndex = 1;
+                            }
+                            else if (dr["DADOS_AMBIENTAIS"].ToString() == "M")
+                            {
+                                comboE10_1DadosAmbientais.SelectedIndex = 2;
+                            }
+                            else if (dr["DADOS_AMBIENTAIS"].ToString() == "C")
+                            {
+                                comboE10_1DadosAmbientais.SelectedIndex = 3;
+                            }
+                            else if (dr["DADOS_AMBIENTAIS"].ToString() == "N")
+                            {
+                                comboE10_1DadosAmbientais.SelectedIndex = 4;
+                            }
+
+                            //Normativa Mapa
+                            if(dr["NORMATIVA_MAPA"].ToString() == "S")
+                            {
+                                radioE10_1NormativaS.Checked = true;
+                            }
+                            else
+                            {
+                                radioE10_1NormativaN.Checked = true;
+                            }
+
+                            //Tipo Produto
+                            if (dr["TIPO_PRODUTO"].ToString() == "S")
+                            {
+                                comboE10_1TipoProd.SelectedIndex = 1;
+                            }
+                            else if (dr["TIPO_PRODUTO"].ToString() == "M")
+                            {
+                                comboE10_1TipoProd.SelectedIndex = 2;
+                            }
+                            else if (dr["TIPO_PRODUTO"].ToString() == "T")
+                            {
+                                comboE10_1TipoProd.SelectedIndex = 3;
+                            }
+                            else if (dr["TIPO_PRODUTO"].ToString() == "A")
+                            {
+                                comboE10_1TipoProd.SelectedIndex = 4;
+                            }
+                            else if (dr["TIPO_PRODUTO"].ToString() == "O")
+                            {
+                                comboE10_1TipoProd.SelectedIndex = 5;
+                                txtE10_1OutroProd.Enabled = true;
+                                txtE10_1OutroProd.Text = dr["OUTRO_PRODUTO"].ToString();
+                            }
+                        }
+                    }
+
+                }
+            }
+
 
 
             if (tabNovaSolicitacao.SelectedTab.Name == "tabEscopo18")
@@ -3829,6 +3912,167 @@ namespace ORCAMENTOS_FOCKINK
                     MessageBox.Show("Ocorreu um erro ao excluir o registro. Por favor, contate o suporte do sistema e tente novamente.");
                 }
             }
+        }
+
+        private void comboE10_1Freq_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboE10_1Freq.SelectedIndex == 3)
+            {
+                txtE10_1OutraFreq.Enabled = true;
+            }
+            else
+            {
+                txtE10_1OutraFreq.Text = "";
+                txtE10_1OutraFreq.Enabled = false;
+            }
+        }
+
+        private void comboE10_1TipoProd_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboE10_1TipoProd.SelectedIndex == 5)
+            {
+                txtE10_1OutroProd.Enabled = true;
+            }
+            else
+            {
+                txtE10_1OutroProd.Text = "";
+                txtE10_1OutroProd.Enabled = false;
+            }
+
+        }
+
+        private void comboE10_1TipoInstalacao_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboE10_1TipoInstalacao.SelectedIndex == 2)
+            {
+                comboE10_1MatTampa.Enabled = true;
+            }
+            else
+            {
+                comboE10_1MatTampa.SelectedIndex = 0;
+                comboE10_1MatTampa.Enabled = false;
+            }
+        }
+
+        private void comboE10_1MatTampa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboE10_1MatTampa.SelectedIndex == 2)
+            {
+                comboE10_1TipoTampa.Enabled = true;
+            }
+            else
+            {
+                comboE10_1TipoTampa.SelectedIndex = 0;
+                comboE10_1TipoTampa.Enabled = false;
+            }
+        }
+
+        private void inicializaCamposE10_1()
+        {
+            comboE10_1TensaoTri.SelectedIndex = 0;
+            comboE10_1Freq.SelectedIndex = 0;
+            comboE10_1DadosAmbientais.SelectedIndex = 0;
+            radioE10_1NormativaS.Checked = false;
+            radioE10_1NormativaN.Checked = false;
+            comboE10_1TipoProd.SelectedIndex = 0;
+            comboE10_1Umidade.SelectedIndex = 0;
+            comboE10_1TipoAeracao.SelectedIndex = 0;
+            comboE10_1TipoInstalacao.SelectedIndex = 0;
+            comboE10_1MatTampa.SelectedIndex = 0;
+            comboE10_1TipoTampa.SelectedIndex = 0;
+            comboE10_1MatCasaMata.SelectedIndex = 0;            
+        }
+
+        private void tabsEscopo10_Selected(object sender, TabControlEventArgs e)
+        {
+            if (tabsEscopo10.SelectedTab.Name == "tabEscopo10_1")
+            {
+                //MessageBox.Show("show");
+            }
+        }
+
+        private void btnE10_1Salvar_Click(object sender, EventArgs e)
+        {
+            string erro = "";
+            if(comboE10_1TensaoTri.SelectedIndex == 0)
+            {
+                erro += "O campo Tensão Trifásica deve ser preenchido.\n";
+            }
+            if(comboE10_1Freq.SelectedIndex == 0)
+            {
+                erro += "O campo Tensão Trifásica deve ser preenchido.\n";
+            }
+            else if(comboE10_1Freq.SelectedIndex == 3)
+            {
+                if (string.IsNullOrEmpty(txtE10_1OutraFreq.Text))
+                {
+                    erro += "O campo Outra Frequência deve ser preenchido.\n";
+                }
+            }            
+            if(comboE10_1DadosAmbientais.SelectedIndex == 0)
+            {
+                erro += "O campo Dados Ambientais deve ser preenchido.\n";
+            }
+            if(radioE10_1NormativaS.Checked == false && radioE10_1NormativaN.Checked == false)
+            {
+                erro += "O campo Normativa do MAPA deve ser preenchido.\n";
+            }
+            if(comboE10_1TipoProd.SelectedIndex == 0)
+            {
+                erro += "O campo Tipo de Produto deve ser preenchido.\n";
+            }
+            else if(comboE10_1TipoProd.SelectedIndex == 5)
+            {
+                if (string.IsNullOrEmpty(txtE10_1OutroProd.Text))
+                {
+                    erro += "O campo Outro Produto deve ser preenchido.\n";
+                }
+            }
+            if(comboE10_1Umidade.SelectedIndex == 0)
+            {
+                erro += "O campo Umidade do Produto deve ser preenchido.\n";
+            }
+            if(comboE10_1TipoAeracao.SelectedIndex == 0)
+            {
+                erro += "O campo Tipo Aeração deve ser preenchido.\n";
+            }
+            if(comboE10_1TipoInstalacao.SelectedIndex == 0)
+            {
+                erro += "O campo Tipo Instalação deve ser preenchido.\n";
+            }
+            else if(comboE10_1TipoInstalacao.SelectedIndex == 2)
+            {
+                if(comboE10_1MatTampa.SelectedIndex == 0)
+                {
+                    erro += "O campo Material da Tampa deve ser preenchido.\n";
+                }
+                else if(comboE10_1MatTampa.SelectedIndex == 2)
+                {
+                    if(comboE10_1TipoTampa.SelectedIndex == 0)
+                    {
+                        erro += "O campo Tipo da Tampa deve ser preenchido.\n";
+                    }
+                }
+            }
+            if(comboE10_1MatCasaMata.SelectedIndex == 0)
+            {
+                erro += "O campo Material da Casa Mata deve ser preenchido.\n";
+            }
+
+            //Verifica se todos os campos foram inseridos corretamente
+            if (!string.IsNullOrEmpty(erro))
+            {
+                MessageBox.Show("Painel de erros:\n" + erro);
+            }
+            else
+            {
+                //Verifica se está cadastrando ou alterando o registro
+                if(AcaoTela == "N")
+                {
+
+                }
+            }
+
         }
     }
 }

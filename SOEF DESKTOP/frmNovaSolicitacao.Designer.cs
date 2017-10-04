@@ -229,6 +229,29 @@
             this.tabEscopo8 = new System.Windows.Forms.TabPage();
             this.tabEscopo9 = new System.Windows.Forms.TabPage();
             this.tabEscopo10 = new System.Windows.Forms.TabPage();
+            this.tabsEscopo10 = new System.Windows.Forms.TabControl();
+            this.tabEscopo10_1 = new System.Windows.Forms.TabPage();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.radioE10_1NormativaN = new System.Windows.Forms.RadioButton();
+            this.radioE10_1NormativaS = new System.Windows.Forms.RadioButton();
+            this.label101 = new System.Windows.Forms.Label();
+            this.comboE10_1DadosAmbientais = new System.Windows.Forms.ComboBox();
+            this.label100 = new System.Windows.Forms.Label();
+            this.txtE10_1OutraFreq = new System.Windows.Forms.TextBox();
+            this.label98 = new System.Windows.Forms.Label();
+            this.comboE10_1Freq = new System.Windows.Forms.ComboBox();
+            this.label99 = new System.Windows.Forms.Label();
+            this.comboE10_1TensaoTri = new System.Windows.Forms.ComboBox();
+            this.label97 = new System.Windows.Forms.Label();
+            this.btnE10_1Excluir = new System.Windows.Forms.Button();
+            this.btnE10_1Salvar = new System.Windows.Forms.Button();
+            this.txtE10_1Obs = new System.Windows.Forms.TextBox();
+            this.label96 = new System.Windows.Forms.Label();
+            this.checkEscopo10_1 = new System.Windows.Forms.CheckBox();
+            this.tabEscopo10_2 = new System.Windows.Forms.TabPage();
+            this.tabEscopo10_3 = new System.Windows.Forms.TabPage();
+            this.tabEscopo10_4 = new System.Windows.Forms.TabPage();
+            this.label94 = new System.Windows.Forms.Label();
             this.tabEscopo11 = new System.Windows.Forms.TabPage();
             this.tabEscopo12 = new System.Windows.Forms.TabPage();
             this.tabEscopo13 = new System.Windows.Forms.TabPage();
@@ -333,31 +356,22 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.label94 = new System.Windows.Forms.Label();
-            this.tabsEscopo10 = new System.Windows.Forms.TabControl();
-            this.tabEscopo10_1 = new System.Windows.Forms.TabPage();
-            this.tabEscopo10_2 = new System.Windows.Forms.TabPage();
-            this.tabEscopo10_3 = new System.Windows.Forms.TabPage();
-            this.tabEscopo10_4 = new System.Windows.Forms.TabPage();
-            this.checkEscopo10_1 = new System.Windows.Forms.CheckBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboE10_1TipoProd = new System.Windows.Forms.ComboBox();
+            this.label102 = new System.Windows.Forms.Label();
+            this.label103 = new System.Windows.Forms.Label();
+            this.txtE10_1OutroProd = new System.Windows.Forms.TextBox();
+            this.label104 = new System.Windows.Forms.Label();
+            this.comboE10_1Umidade = new System.Windows.Forms.ComboBox();
+            this.comboE10_1TipoAeracao = new System.Windows.Forms.ComboBox();
+            this.label105 = new System.Windows.Forms.Label();
+            this.comboE10_1TipoInstalacao = new System.Windows.Forms.ComboBox();
+            this.label106 = new System.Windows.Forms.Label();
+            this.comboE10_1MatTampa = new System.Windows.Forms.ComboBox();
+            this.label107 = new System.Windows.Forms.Label();
+            this.comboE10_1TipoTampa = new System.Windows.Forms.ComboBox();
+            this.label108 = new System.Windows.Forms.Label();
+            this.comboE10_1MatCasaMata = new System.Windows.Forms.ComboBox();
             this.label95 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label96 = new System.Windows.Forms.Label();
-            this.label97 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label98 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label99 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label100 = new System.Windows.Forms.Label();
-            this.label101 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.tabNovaSolicitacao.SuspendLayout();
             this.tabCabecalho.SuspendLayout();
             this.tbCabecalho.SuspendLayout();
@@ -379,6 +393,9 @@
             this.tabEscopo1.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.tabEscopo10.SuspendLayout();
+            this.tabsEscopo10.SuspendLayout();
+            this.tabEscopo10_1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.tabEscopo18.SuspendLayout();
             this.tabEscopo18_1_2.SuspendLayout();
             this.tbpage18InfoG.SuspendLayout();
@@ -396,9 +413,6 @@
             this.tabEscopo20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaEsc20)).BeginInit();
             this.groupBox5.SuspendLayout();
-            this.tabsEscopo10.SuspendLayout();
-            this.tabEscopo10_1.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabNovaSolicitacao
@@ -2608,6 +2622,289 @@
             this.tabEscopo10.TabIndex = 11;
             this.tabEscopo10.Text = "10 - ELE";
             // 
+            // tabsEscopo10
+            // 
+            this.tabsEscopo10.Controls.Add(this.tabEscopo10_1);
+            this.tabsEscopo10.Controls.Add(this.tabEscopo10_2);
+            this.tabsEscopo10.Controls.Add(this.tabEscopo10_3);
+            this.tabsEscopo10.Controls.Add(this.tabEscopo10_4);
+            this.tabsEscopo10.Location = new System.Drawing.Point(11, 40);
+            this.tabsEscopo10.Name = "tabsEscopo10";
+            this.tabsEscopo10.SelectedIndex = 0;
+            this.tabsEscopo10.Size = new System.Drawing.Size(1034, 473);
+            this.tabsEscopo10.TabIndex = 8;
+            this.tabsEscopo10.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabsEscopo10_Selected);
+            // 
+            // tabEscopo10_1
+            // 
+            this.tabEscopo10_1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabEscopo10_1.Controls.Add(this.panel3);
+            this.tabEscopo10_1.Controls.Add(this.checkEscopo10_1);
+            this.tabEscopo10_1.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.tabEscopo10_1.Location = new System.Drawing.Point(4, 22);
+            this.tabEscopo10_1.Name = "tabEscopo10_1";
+            this.tabEscopo10_1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabEscopo10_1.Size = new System.Drawing.Size(1026, 447);
+            this.tabEscopo10_1.TabIndex = 1;
+            this.tabEscopo10_1.Text = "10.1: Sistema de Aeração";
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.comboE10_1MatCasaMata);
+            this.panel3.Controls.Add(this.label95);
+            this.panel3.Controls.Add(this.comboE10_1TipoTampa);
+            this.panel3.Controls.Add(this.label108);
+            this.panel3.Controls.Add(this.comboE10_1MatTampa);
+            this.panel3.Controls.Add(this.label107);
+            this.panel3.Controls.Add(this.comboE10_1TipoInstalacao);
+            this.panel3.Controls.Add(this.label106);
+            this.panel3.Controls.Add(this.comboE10_1TipoAeracao);
+            this.panel3.Controls.Add(this.label105);
+            this.panel3.Controls.Add(this.comboE10_1Umidade);
+            this.panel3.Controls.Add(this.label104);
+            this.panel3.Controls.Add(this.txtE10_1OutroProd);
+            this.panel3.Controls.Add(this.label103);
+            this.panel3.Controls.Add(this.comboE10_1TipoProd);
+            this.panel3.Controls.Add(this.label102);
+            this.panel3.Controls.Add(this.radioE10_1NormativaN);
+            this.panel3.Controls.Add(this.radioE10_1NormativaS);
+            this.panel3.Controls.Add(this.label101);
+            this.panel3.Controls.Add(this.comboE10_1DadosAmbientais);
+            this.panel3.Controls.Add(this.label100);
+            this.panel3.Controls.Add(this.txtE10_1OutraFreq);
+            this.panel3.Controls.Add(this.label98);
+            this.panel3.Controls.Add(this.comboE10_1Freq);
+            this.panel3.Controls.Add(this.label99);
+            this.panel3.Controls.Add(this.comboE10_1TensaoTri);
+            this.panel3.Controls.Add(this.label97);
+            this.panel3.Controls.Add(this.btnE10_1Excluir);
+            this.panel3.Controls.Add(this.btnE10_1Salvar);
+            this.panel3.Controls.Add(this.txtE10_1Obs);
+            this.panel3.Controls.Add(this.label96);
+            this.panel3.Location = new System.Drawing.Point(27, 48);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(993, 373);
+            this.panel3.TabIndex = 24;
+            // 
+            // radioE10_1NormativaN
+            // 
+            this.radioE10_1NormativaN.AutoSize = true;
+            this.radioE10_1NormativaN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioE10_1NormativaN.Location = new System.Drawing.Point(549, 53);
+            this.radioE10_1NormativaN.Name = "radioE10_1NormativaN";
+            this.radioE10_1NormativaN.Size = new System.Drawing.Size(48, 17);
+            this.radioE10_1NormativaN.TabIndex = 33;
+            this.radioE10_1NormativaN.TabStop = true;
+            this.radioE10_1NormativaN.Text = "Não";
+            this.radioE10_1NormativaN.UseVisualStyleBackColor = true;
+            // 
+            // radioE10_1NormativaS
+            // 
+            this.radioE10_1NormativaS.AutoSize = true;
+            this.radioE10_1NormativaS.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioE10_1NormativaS.Location = new System.Drawing.Point(495, 53);
+            this.radioE10_1NormativaS.Name = "radioE10_1NormativaS";
+            this.radioE10_1NormativaS.Size = new System.Drawing.Size(45, 17);
+            this.radioE10_1NormativaS.TabIndex = 34;
+            this.radioE10_1NormativaS.TabStop = true;
+            this.radioE10_1NormativaS.Text = "Sim";
+            this.radioE10_1NormativaS.UseVisualStyleBackColor = true;
+            // 
+            // label101
+            // 
+            this.label101.AutoSize = true;
+            this.label101.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label101.ForeColor = System.Drawing.Color.Green;
+            this.label101.Location = new System.Drawing.Point(352, 55);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(129, 13);
+            this.label101.TabIndex = 32;
+            this.label101.Text = "Normativa do MAPA*:";
+            // 
+            // comboE10_1DadosAmbientais
+            // 
+            this.comboE10_1DadosAmbientais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboE10_1DadosAmbientais.FormattingEnabled = true;
+            this.comboE10_1DadosAmbientais.Items.AddRange(new object[] {
+            "Selecione...",
+            "Úmido",
+            "Maresia",
+            "Corrosivo",
+            "Normal"});
+            this.comboE10_1DadosAmbientais.Location = new System.Drawing.Point(150, 52);
+            this.comboE10_1DadosAmbientais.Name = "comboE10_1DadosAmbientais";
+            this.comboE10_1DadosAmbientais.Size = new System.Drawing.Size(146, 21);
+            this.comboE10_1DadosAmbientais.TabIndex = 30;
+            // 
+            // label100
+            // 
+            this.label100.AutoSize = true;
+            this.label100.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label100.ForeColor = System.Drawing.Color.Green;
+            this.label100.Location = new System.Drawing.Point(27, 55);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(117, 13);
+            this.label100.TabIndex = 31;
+            this.label100.Text = "Dados Ambientais*:";
+            // 
+            // txtE10_1OutraFreq
+            // 
+            this.txtE10_1OutraFreq.Enabled = false;
+            this.txtE10_1OutraFreq.Location = new System.Drawing.Point(856, 9);
+            this.txtE10_1OutraFreq.Name = "txtE10_1OutraFreq";
+            this.txtE10_1OutraFreq.Size = new System.Drawing.Size(122, 20);
+            this.txtE10_1OutraFreq.TabIndex = 27;
+            // 
+            // label98
+            // 
+            this.label98.AutoSize = true;
+            this.label98.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label98.ForeColor = System.Drawing.Color.Green;
+            this.label98.Location = new System.Drawing.Point(732, 11);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(109, 13);
+            this.label98.TabIndex = 29;
+            this.label98.Text = "Outra Frequência:";
+            // 
+            // comboE10_1Freq
+            // 
+            this.comboE10_1Freq.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboE10_1Freq.FormattingEnabled = true;
+            this.comboE10_1Freq.Items.AddRange(new object[] {
+            "Selecione",
+            "50Hz",
+            "60Hz",
+            "Outra"});
+            this.comboE10_1Freq.Location = new System.Drawing.Point(489, 9);
+            this.comboE10_1Freq.Name = "comboE10_1Freq";
+            this.comboE10_1Freq.Size = new System.Drawing.Size(146, 21);
+            this.comboE10_1Freq.TabIndex = 26;
+            this.comboE10_1Freq.SelectedIndexChanged += new System.EventHandler(this.comboE10_1Freq_SelectedIndexChanged);
+            // 
+            // label99
+            // 
+            this.label99.AutoSize = true;
+            this.label99.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label99.ForeColor = System.Drawing.Color.Green;
+            this.label99.Location = new System.Drawing.Point(401, 12);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(79, 13);
+            this.label99.TabIndex = 28;
+            this.label99.Text = "Frequência*:";
+            // 
+            // comboE10_1TensaoTri
+            // 
+            this.comboE10_1TensaoTri.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboE10_1TensaoTri.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboE10_1TensaoTri.FormattingEnabled = true;
+            this.comboE10_1TensaoTri.Items.AddRange(new object[] {
+            "Selecione",
+            "220V",
+            "380V",
+            "440V",
+            "660V"});
+            this.comboE10_1TensaoTri.Location = new System.Drawing.Point(151, 8);
+            this.comboE10_1TensaoTri.Name = "comboE10_1TensaoTri";
+            this.comboE10_1TensaoTri.Size = new System.Drawing.Size(146, 21);
+            this.comboE10_1TensaoTri.TabIndex = 25;
+            // 
+            // label97
+            // 
+            this.label97.AutoSize = true;
+            this.label97.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label97.ForeColor = System.Drawing.Color.Green;
+            this.label97.Location = new System.Drawing.Point(29, 12);
+            this.label97.Name = "label97";
+            this.label97.Size = new System.Drawing.Size(115, 13);
+            this.label97.TabIndex = 24;
+            this.label97.Text = "Tensão Trifásica: *";
+            // 
+            // btnE10_1Excluir
+            // 
+            this.btnE10_1Excluir.Location = new System.Drawing.Point(465, 323);
+            this.btnE10_1Excluir.Name = "btnE10_1Excluir";
+            this.btnE10_1Excluir.Size = new System.Drawing.Size(75, 23);
+            this.btnE10_1Excluir.TabIndex = 10;
+            this.btnE10_1Excluir.Text = "Excluir";
+            this.btnE10_1Excluir.UseVisualStyleBackColor = true;
+            // 
+            // btnE10_1Salvar
+            // 
+            this.btnE10_1Salvar.Location = new System.Drawing.Point(357, 323);
+            this.btnE10_1Salvar.Name = "btnE10_1Salvar";
+            this.btnE10_1Salvar.Size = new System.Drawing.Size(75, 23);
+            this.btnE10_1Salvar.TabIndex = 9;
+            this.btnE10_1Salvar.Text = "Salvar";
+            this.btnE10_1Salvar.UseVisualStyleBackColor = true;
+            this.btnE10_1Salvar.Click += new System.EventHandler(this.btnE10_1Salvar_Click);
+            // 
+            // txtE10_1Obs
+            // 
+            this.txtE10_1Obs.Location = new System.Drawing.Point(508, 233);
+            this.txtE10_1Obs.MaxLength = 2000;
+            this.txtE10_1Obs.Multiline = true;
+            this.txtE10_1Obs.Name = "txtE10_1Obs";
+            this.txtE10_1Obs.Size = new System.Drawing.Size(373, 51);
+            this.txtE10_1Obs.TabIndex = 8;
+            // 
+            // label96
+            // 
+            this.label96.AutoSize = true;
+            this.label96.Location = new System.Drawing.Point(400, 236);
+            this.label96.Name = "label96";
+            this.label96.Size = new System.Drawing.Size(73, 13);
+            this.label96.TabIndex = 6;
+            this.label96.Text = "Observações:";
+            // 
+            // checkEscopo10_1
+            // 
+            this.checkEscopo10_1.AutoSize = true;
+            this.checkEscopo10_1.Location = new System.Drawing.Point(15, 15);
+            this.checkEscopo10_1.Name = "checkEscopo10_1";
+            this.checkEscopo10_1.Size = new System.Drawing.Size(148, 17);
+            this.checkEscopo10_1.TabIndex = 23;
+            this.checkEscopo10_1.Text = "10.1: Sistema de Aeração";
+            this.checkEscopo10_1.UseVisualStyleBackColor = true;
+            // 
+            // tabEscopo10_2
+            // 
+            this.tabEscopo10_2.BackColor = System.Drawing.SystemColors.Control;
+            this.tabEscopo10_2.Location = new System.Drawing.Point(4, 22);
+            this.tabEscopo10_2.Name = "tabEscopo10_2";
+            this.tabEscopo10_2.Size = new System.Drawing.Size(1026, 447);
+            this.tabEscopo10_2.TabIndex = 2;
+            this.tabEscopo10_2.Text = "10.2: Espalhador de Grãos";
+            // 
+            // tabEscopo10_3
+            // 
+            this.tabEscopo10_3.BackColor = System.Drawing.SystemColors.Control;
+            this.tabEscopo10_3.Location = new System.Drawing.Point(4, 22);
+            this.tabEscopo10_3.Name = "tabEscopo10_3";
+            this.tabEscopo10_3.Size = new System.Drawing.Size(1026, 447);
+            this.tabEscopo10_3.TabIndex = 3;
+            this.tabEscopo10_3.Text = "10.3: Renovador de Ar";
+            // 
+            // tabEscopo10_4
+            // 
+            this.tabEscopo10_4.BackColor = System.Drawing.SystemColors.Control;
+            this.tabEscopo10_4.Location = new System.Drawing.Point(4, 22);
+            this.tabEscopo10_4.Name = "tabEscopo10_4";
+            this.tabEscopo10_4.Size = new System.Drawing.Size(1026, 447);
+            this.tabEscopo10_4.TabIndex = 4;
+            this.tabEscopo10_4.Text = "10.4: Tampas de Aeração";
+            // 
+            // label94
+            // 
+            this.label94.AutoSize = true;
+            this.label94.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label94.ForeColor = System.Drawing.Color.Red;
+            this.label94.Location = new System.Drawing.Point(8, 14);
+            this.label94.Name = "label94";
+            this.label94.Size = new System.Drawing.Size(225, 13);
+            this.label94.TabIndex = 5;
+            this.label94.Text = "Escopo 10: ELE-Sistema Aeração/Espalhador";
+            // 
             // tabEscopo11
             // 
             this.tabEscopo11.BackColor = System.Drawing.SystemColors.Control;
@@ -3710,293 +4007,189 @@
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // label94
+            // comboE10_1TipoProd
             // 
-            this.label94.AutoSize = true;
-            this.label94.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label94.ForeColor = System.Drawing.Color.Red;
-            this.label94.Location = new System.Drawing.Point(8, 14);
-            this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(225, 13);
-            this.label94.TabIndex = 5;
-            this.label94.Text = "Escopo 10: ELE-Sistema Aeração/Espalhador";
+            this.comboE10_1TipoProd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboE10_1TipoProd.FormattingEnabled = true;
+            this.comboE10_1TipoProd.Items.AddRange(new object[] {
+            "Selecione...",
+            "Soja",
+            "Milho",
+            "Trigo",
+            "Arroz",
+            "Outro"});
+            this.comboE10_1TipoProd.Location = new System.Drawing.Point(151, 95);
+            this.comboE10_1TipoProd.Name = "comboE10_1TipoProd";
+            this.comboE10_1TipoProd.Size = new System.Drawing.Size(146, 21);
+            this.comboE10_1TipoProd.TabIndex = 35;
+            this.comboE10_1TipoProd.SelectedIndexChanged += new System.EventHandler(this.comboE10_1TipoProd_SelectedIndexChanged);
             // 
-            // tabsEscopo10
+            // label102
             // 
-            this.tabsEscopo10.Controls.Add(this.tabEscopo10_1);
-            this.tabsEscopo10.Controls.Add(this.tabEscopo10_2);
-            this.tabsEscopo10.Controls.Add(this.tabEscopo10_3);
-            this.tabsEscopo10.Controls.Add(this.tabEscopo10_4);
-            this.tabsEscopo10.Location = new System.Drawing.Point(11, 40);
-            this.tabsEscopo10.Name = "tabsEscopo10";
-            this.tabsEscopo10.SelectedIndex = 0;
-            this.tabsEscopo10.Size = new System.Drawing.Size(1034, 473);
-            this.tabsEscopo10.TabIndex = 8;
+            this.label102.AutoSize = true;
+            this.label102.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label102.ForeColor = System.Drawing.Color.Green;
+            this.label102.Location = new System.Drawing.Point(46, 98);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(89, 13);
+            this.label102.TabIndex = 36;
+            this.label102.Text = "Tipo Produto*:";
             // 
-            // tabEscopo10_1
+            // label103
             // 
-            this.tabEscopo10_1.BackColor = System.Drawing.SystemColors.Control;
-            this.tabEscopo10_1.Controls.Add(this.panel3);
-            this.tabEscopo10_1.Controls.Add(this.checkEscopo10_1);
-            this.tabEscopo10_1.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.tabEscopo10_1.Location = new System.Drawing.Point(4, 22);
-            this.tabEscopo10_1.Name = "tabEscopo10_1";
-            this.tabEscopo10_1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo10_1.Size = new System.Drawing.Size(1026, 447);
-            this.tabEscopo10_1.TabIndex = 1;
-            this.tabEscopo10_1.Text = "10.1: Sistema de Aeração";
+            this.label103.AutoSize = true;
+            this.label103.Location = new System.Drawing.Point(401, 99);
+            this.label103.Name = "label103";
+            this.label103.Size = new System.Drawing.Size(80, 13);
+            this.label103.TabIndex = 37;
+            this.label103.Text = "Outro Produto*:";
             // 
-            // tabEscopo10_2
+            // txtE10_1OutroProd
             // 
-            this.tabEscopo10_2.BackColor = System.Drawing.SystemColors.Control;
-            this.tabEscopo10_2.Location = new System.Drawing.Point(4, 22);
-            this.tabEscopo10_2.Name = "tabEscopo10_2";
-            this.tabEscopo10_2.Size = new System.Drawing.Size(1026, 447);
-            this.tabEscopo10_2.TabIndex = 2;
-            this.tabEscopo10_2.Text = "10.2: Espalhador de Grãos";
+            this.txtE10_1OutroProd.Enabled = false;
+            this.txtE10_1OutroProd.Location = new System.Drawing.Point(489, 96);
+            this.txtE10_1OutroProd.MaxLength = 200;
+            this.txtE10_1OutroProd.Name = "txtE10_1OutroProd";
+            this.txtE10_1OutroProd.Size = new System.Drawing.Size(146, 20);
+            this.txtE10_1OutroProd.TabIndex = 38;
             // 
-            // tabEscopo10_3
+            // label104
             // 
-            this.tabEscopo10_3.BackColor = System.Drawing.SystemColors.Control;
-            this.tabEscopo10_3.Location = new System.Drawing.Point(4, 22);
-            this.tabEscopo10_3.Name = "tabEscopo10_3";
-            this.tabEscopo10_3.Size = new System.Drawing.Size(1026, 447);
-            this.tabEscopo10_3.TabIndex = 3;
-            this.tabEscopo10_3.Text = "10.3: Renovador de Ar";
+            this.label104.AutoSize = true;
+            this.label104.Location = new System.Drawing.Point(785, 98);
+            this.label104.Name = "label104";
+            this.label104.Size = new System.Drawing.Size(56, 13);
+            this.label104.TabIndex = 39;
+            this.label104.Text = "Umidade*:";
             // 
-            // tabEscopo10_4
+            // comboE10_1Umidade
             // 
-            this.tabEscopo10_4.BackColor = System.Drawing.SystemColors.Control;
-            this.tabEscopo10_4.Location = new System.Drawing.Point(4, 22);
-            this.tabEscopo10_4.Name = "tabEscopo10_4";
-            this.tabEscopo10_4.Size = new System.Drawing.Size(1026, 447);
-            this.tabEscopo10_4.TabIndex = 4;
-            this.tabEscopo10_4.Text = "10.4: Tampas de Aeração";
+            this.comboE10_1Umidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboE10_1Umidade.FormattingEnabled = true;
+            this.comboE10_1Umidade.Items.AddRange(new object[] {
+            "Selecione",
+            "14%",
+            "16%",
+            "18%"});
+            this.comboE10_1Umidade.Location = new System.Drawing.Point(856, 95);
+            this.comboE10_1Umidade.Name = "comboE10_1Umidade";
+            this.comboE10_1Umidade.Size = new System.Drawing.Size(93, 21);
+            this.comboE10_1Umidade.TabIndex = 40;
             // 
-            // checkEscopo10_1
+            // comboE10_1TipoAeracao
             // 
-            this.checkEscopo10_1.AutoSize = true;
-            this.checkEscopo10_1.Location = new System.Drawing.Point(15, 15);
-            this.checkEscopo10_1.Name = "checkEscopo10_1";
-            this.checkEscopo10_1.Size = new System.Drawing.Size(148, 17);
-            this.checkEscopo10_1.TabIndex = 23;
-            this.checkEscopo10_1.Text = "10.1: Sistema de Aeração";
-            this.checkEscopo10_1.UseVisualStyleBackColor = true;
+            this.comboE10_1TipoAeracao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboE10_1TipoAeracao.FormattingEnabled = true;
+            this.comboE10_1TipoAeracao.Items.AddRange(new object[] {
+            "Selecione",
+            "Lateral",
+            "Túnel"});
+            this.comboE10_1TipoAeracao.Location = new System.Drawing.Point(151, 140);
+            this.comboE10_1TipoAeracao.Name = "comboE10_1TipoAeracao";
+            this.comboE10_1TipoAeracao.Size = new System.Drawing.Size(145, 21);
+            this.comboE10_1TipoAeracao.TabIndex = 42;
             // 
-            // panel3
+            // label105
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.radioButton1);
-            this.panel3.Controls.Add(this.radioButton2);
-            this.panel3.Controls.Add(this.label101);
-            this.panel3.Controls.Add(this.comboBox3);
-            this.panel3.Controls.Add(this.label100);
-            this.panel3.Controls.Add(this.textBox3);
-            this.panel3.Controls.Add(this.label98);
-            this.panel3.Controls.Add(this.comboBox2);
-            this.panel3.Controls.Add(this.label99);
-            this.panel3.Controls.Add(this.comboBox1);
-            this.panel3.Controls.Add(this.label97);
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Controls.Add(this.label95);
-            this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.label96);
-            this.panel3.Location = new System.Drawing.Point(27, 48);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(993, 302);
-            this.panel3.TabIndex = 24;
-            this.panel3.Visible = false;
+            this.label105.AutoSize = true;
+            this.label105.Location = new System.Drawing.Point(57, 143);
+            this.label105.Name = "label105";
+            this.label105.Size = new System.Drawing.Size(78, 13);
+            this.label105.TabIndex = 41;
+            this.label105.Text = "Tipo Aeração*:";
             // 
-            // button1
+            // comboE10_1TipoInstalacao
             // 
-            this.button1.Location = new System.Drawing.Point(244, 261);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Excluir";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
+            this.comboE10_1TipoInstalacao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboE10_1TipoInstalacao.FormattingEnabled = true;
+            this.comboE10_1TipoInstalacao.Items.AddRange(new object[] {
+            "Selecione",
+            "Sobre o Piso",
+            "Canaleta"});
+            this.comboE10_1TipoInstalacao.Location = new System.Drawing.Point(490, 140);
+            this.comboE10_1TipoInstalacao.Name = "comboE10_1TipoInstalacao";
+            this.comboE10_1TipoInstalacao.Size = new System.Drawing.Size(145, 21);
+            this.comboE10_1TipoInstalacao.TabIndex = 44;
+            this.comboE10_1TipoInstalacao.SelectedIndexChanged += new System.EventHandler(this.comboE10_1TipoInstalacao_SelectedIndexChanged);
             // 
-            // button3
+            // label106
             // 
-            this.button3.Location = new System.Drawing.Point(136, 261);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Salvar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.label106.AutoSize = true;
+            this.label106.Location = new System.Drawing.Point(391, 143);
+            this.label106.Name = "label106";
+            this.label106.Size = new System.Drawing.Size(87, 13);
+            this.label106.TabIndex = 43;
+            this.label106.Text = "Tipo Instalação*:";
             // 
-            // textBox1
+            // comboE10_1MatTampa
             // 
-            this.textBox1.Location = new System.Drawing.Point(136, 116);
-            this.textBox1.MaxLength = 200;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(344, 20);
-            this.textBox1.TabIndex = 7;
-            this.textBox1.Visible = false;
+            this.comboE10_1MatTampa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboE10_1MatTampa.Enabled = false;
+            this.comboE10_1MatTampa.FormattingEnabled = true;
+            this.comboE10_1MatTampa.Items.AddRange(new object[] {
+            "Selecione",
+            "Polipropileno",
+            "Metálica"});
+            this.comboE10_1MatTampa.Location = new System.Drawing.Point(152, 185);
+            this.comboE10_1MatTampa.Name = "comboE10_1MatTampa";
+            this.comboE10_1MatTampa.Size = new System.Drawing.Size(145, 21);
+            this.comboE10_1MatTampa.TabIndex = 46;
+            this.comboE10_1MatTampa.SelectedIndexChanged += new System.EventHandler(this.comboE10_1MatTampa_SelectedIndexChanged);
+            // 
+            // label107
+            // 
+            this.label107.AutoSize = true;
+            this.label107.Location = new System.Drawing.Point(33, 188);
+            this.label107.Name = "label107";
+            this.label107.Size = new System.Drawing.Size(102, 13);
+            this.label107.TabIndex = 45;
+            this.label107.Text = "Material da Tampa*:";
+            // 
+            // comboE10_1TipoTampa
+            // 
+            this.comboE10_1TipoTampa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboE10_1TipoTampa.Enabled = false;
+            this.comboE10_1TipoTampa.FormattingEnabled = true;
+            this.comboE10_1TipoTampa.Items.AddRange(new object[] {
+            "Selecione",
+            "Plana",
+            "Ondulada"});
+            this.comboE10_1TipoTampa.Location = new System.Drawing.Point(489, 185);
+            this.comboE10_1TipoTampa.Name = "comboE10_1TipoTampa";
+            this.comboE10_1TipoTampa.Size = new System.Drawing.Size(145, 21);
+            this.comboE10_1TipoTampa.TabIndex = 48;
+            // 
+            // label108
+            // 
+            this.label108.AutoSize = true;
+            this.label108.Location = new System.Drawing.Point(391, 188);
+            this.label108.Name = "label108";
+            this.label108.Size = new System.Drawing.Size(86, 13);
+            this.label108.TabIndex = 47;
+            this.label108.Text = "Tipo da Tampa*:";
+            // 
+            // comboE10_1MatCasaMata
+            // 
+            this.comboE10_1MatCasaMata.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboE10_1MatCasaMata.FormattingEnabled = true;
+            this.comboE10_1MatCasaMata.Items.AddRange(new object[] {
+            "Selecione",
+            "Concreto",
+            "Metálica",
+            "Não se aplica"});
+            this.comboE10_1MatCasaMata.Location = new System.Drawing.Point(152, 228);
+            this.comboE10_1MatCasaMata.Name = "comboE10_1MatCasaMata";
+            this.comboE10_1MatCasaMata.Size = new System.Drawing.Size(145, 21);
+            this.comboE10_1MatCasaMata.TabIndex = 50;
             // 
             // label95
             // 
             this.label95.AutoSize = true;
-            this.label95.Location = new System.Drawing.Point(2, 119);
+            this.label95.Location = new System.Drawing.Point(33, 231);
             this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(128, 13);
-            this.label95.TabIndex = 23;
-            this.label95.Text = "Descreva o Profissional: *";
-            this.label95.Visible = false;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(136, 155);
-            this.textBox2.MaxLength = 2000;
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(344, 80);
-            this.textBox2.TabIndex = 8;
-            // 
-            // label96
-            // 
-            this.label96.AutoSize = true;
-            this.label96.Location = new System.Drawing.Point(30, 177);
-            this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(73, 13);
-            this.label96.TabIndex = 6;
-            this.label96.Text = "Observações:";
-            // 
-            // label97
-            // 
-            this.label97.AutoSize = true;
-            this.label97.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label97.ForeColor = System.Drawing.Color.Green;
-            this.label97.Location = new System.Drawing.Point(18, 11);
-            this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(115, 13);
-            this.label97.TabIndex = 24;
-            this.label97.Text = "Tensão Trifásica: *";
-            this.label97.Visible = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Selecione",
-            "13,8kV",
-            "23,1kV",
-            "34,5kV",
-            "Outra"});
-            this.comboBox1.Location = new System.Drawing.Point(151, 8);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(146, 21);
-            this.comboBox1.TabIndex = 25;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(856, 9);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(122, 20);
-            this.textBox3.TabIndex = 27;
-            // 
-            // label98
-            // 
-            this.label98.AutoSize = true;
-            this.label98.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label98.ForeColor = System.Drawing.Color.Green;
-            this.label98.Location = new System.Drawing.Point(732, 11);
-            this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(109, 13);
-            this.label98.TabIndex = 29;
-            this.label98.Text = "Outra Frequência:";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Selecione",
-            "50Hz",
-            "60Hz",
-            "Outra"});
-            this.comboBox2.Location = new System.Drawing.Point(489, 9);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(146, 21);
-            this.comboBox2.TabIndex = 26;
-            // 
-            // label99
-            // 
-            this.label99.AutoSize = true;
-            this.label99.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label99.ForeColor = System.Drawing.Color.Green;
-            this.label99.Location = new System.Drawing.Point(401, 12);
-            this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(79, 13);
-            this.label99.TabIndex = 28;
-            this.label99.Text = "Frequência*:";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Selecione...",
-            "Úmido",
-            "Maresia",
-            "Corrosivo",
-            "Normal"});
-            this.comboBox3.Location = new System.Drawing.Point(151, 60);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(146, 21);
-            this.comboBox3.TabIndex = 30;
-            // 
-            // label100
-            // 
-            this.label100.AutoSize = true;
-            this.label100.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label100.ForeColor = System.Drawing.Color.Green;
-            this.label100.Location = new System.Drawing.Point(28, 63);
-            this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(117, 13);
-            this.label100.TabIndex = 31;
-            this.label100.Text = "Dados Ambientais*:";
-            // 
-            // label101
-            // 
-            this.label101.AutoSize = true;
-            this.label101.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label101.ForeColor = System.Drawing.Color.Green;
-            this.label101.Location = new System.Drawing.Point(381, 68);
-            this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(129, 13);
-            this.label101.TabIndex = 32;
-            this.label101.Text = "Normativa do MAPA*:";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(577, 66);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(48, 17);
-            this.radioButton1.TabIndex = 33;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Não";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(523, 66);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(45, 17);
-            this.radioButton2.TabIndex = 34;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Sim";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.label95.Size = new System.Drawing.Size(105, 13);
+            this.label95.TabIndex = 49;
+            this.label95.Text = "Material Casa Mata*:";
             // 
             // frmNovaSolicitacao
             // 
@@ -4046,6 +4239,11 @@
             this.groupBox6.PerformLayout();
             this.tabEscopo10.ResumeLayout(false);
             this.tabEscopo10.PerformLayout();
+            this.tabsEscopo10.ResumeLayout(false);
+            this.tabEscopo10_1.ResumeLayout(false);
+            this.tabEscopo10_1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.tabEscopo18.ResumeLayout(false);
             this.tabEscopo18.PerformLayout();
             this.tabEscopo18_1_2.ResumeLayout(false);
@@ -4077,11 +4275,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaEsc20)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.tabsEscopo10.ResumeLayout(false);
-            this.tabEscopo10_1.ResumeLayout(false);
-            this.tabEscopo10_1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -4397,26 +4590,40 @@
         private System.Windows.Forms.TabPage tabEscopo10_1;
         private System.Windows.Forms.Label label94;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboE10_1TensaoTri;
         private System.Windows.Forms.Label label97;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label95;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnE10_1Excluir;
+        private System.Windows.Forms.Button btnE10_1Salvar;
+        private System.Windows.Forms.TextBox txtE10_1Obs;
         private System.Windows.Forms.Label label96;
         private System.Windows.Forms.CheckBox checkEscopo10_1;
         private System.Windows.Forms.TabPage tabEscopo10_2;
         private System.Windows.Forms.TabPage tabEscopo10_3;
         private System.Windows.Forms.TabPage tabEscopo10_4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtE10_1OutraFreq;
         private System.Windows.Forms.Label label98;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboE10_1Freq;
         private System.Windows.Forms.Label label99;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioE10_1NormativaN;
+        private System.Windows.Forms.RadioButton radioE10_1NormativaS;
         private System.Windows.Forms.Label label101;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboE10_1DadosAmbientais;
         private System.Windows.Forms.Label label100;
+        private System.Windows.Forms.ComboBox comboE10_1MatCasaMata;
+        private System.Windows.Forms.Label label95;
+        private System.Windows.Forms.ComboBox comboE10_1TipoTampa;
+        private System.Windows.Forms.Label label108;
+        private System.Windows.Forms.ComboBox comboE10_1MatTampa;
+        private System.Windows.Forms.Label label107;
+        private System.Windows.Forms.ComboBox comboE10_1TipoInstalacao;
+        private System.Windows.Forms.Label label106;
+        private System.Windows.Forms.ComboBox comboE10_1TipoAeracao;
+        private System.Windows.Forms.Label label105;
+        private System.Windows.Forms.ComboBox comboE10_1Umidade;
+        private System.Windows.Forms.Label label104;
+        private System.Windows.Forms.TextBox txtE10_1OutroProd;
+        private System.Windows.Forms.Label label103;
+        private System.Windows.Forms.ComboBox comboE10_1TipoProd;
+        private System.Windows.Forms.Label label102;
     }
 }
