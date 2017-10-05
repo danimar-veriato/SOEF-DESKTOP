@@ -4066,10 +4066,148 @@ namespace ORCAMENTOS_FOCKINK
             }
             else
             {
-                //Verifica se está cadastrando ou alterando o registro
-                if(AcaoTela == "N")
+                string tensaoTrifasica = comboE10_1TensaoTri.SelectedIndex.ToString();
+                string frequenciaHz = comboE10_1Freq.SelectedIndex.ToString();
+                string outraFrequencia = txtE10_1OutraFreq.Text;
+                string dadosAmbientais = "";
+                if(comboE10_1DadosAmbientais.SelectedIndex == 1)
                 {
+                    dadosAmbientais = "U";
+                }
+                else if (comboE10_1DadosAmbientais.SelectedIndex == 2)
+                {
+                    dadosAmbientais = "M";
+                }
+                else if (comboE10_1DadosAmbientais.SelectedIndex == 3)
+                {
+                    dadosAmbientais = "C";
+                }
+                else
+                {
+                    dadosAmbientais = "N";
+                }
+                //Normativa Mapa
+                string normativaMapa = "";
+                if (radioE10_1NormativaS.Checked)
+                {
+                    normativaMapa = "S";
+                }
+                else
+                {
+                    normativaMapa = "N";
+                }
+                //Tipo Produto
+                string tipoProduto = "";
+                //Outro Produto
+                string outroProduto = "";
+                if(comboE10_1TipoProd.SelectedIndex == 1)
+                {
+                    tipoProduto = "S";
+                }
+                else if (comboE10_1TipoProd.SelectedIndex == 2)
+                {
+                    tipoProduto = "M";
+                }
+                else if (comboE10_1TipoProd.SelectedIndex == 3)
+                {
+                    tipoProduto = "T";
+                }
+                else if (comboE10_1TipoProd.SelectedIndex == 4)
+                {
+                    tipoProduto = "A";
+                }
+                else
+                {
+                    tipoProduto = "O";
+                    outroProduto = txtE10_1OutroProd.Text;
+                }
+                //Umidade
+                string umidade;
+                if(comboE10_1Umidade.SelectedIndex == 1)
+                {
+                    umidade = "14";
+                }
+                else if (comboE10_1Umidade.SelectedIndex == 2)
+                {
+                    umidade = "16";
+                }
+                else
+                {
+                    umidade = "18";
+                }
 
+                //Tipo Aeração
+                string tipoAeracao = "";
+                if(comboE10_1TipoAeracao.SelectedIndex == 1)
+                {
+                    tipoAeracao = "L";
+                }
+                else
+                {
+                    tipoAeracao = "T";
+                }
+
+                //Tipo Instalação
+                string tipoInstalacao = "";
+                if(comboE10_1TipoInstalacao.SelectedIndex == 1)
+                {
+                    tipoInstalacao = "P";
+                }
+                else
+                {
+                    tipoInstalacao = "C";
+                }
+
+                //Material Tampa Canaleta
+                string matTampaCanaleta = "";
+                if(comboE10_1MatTampa.SelectedIndex == 1)
+                {
+                    matTampaCanaleta = "P";
+                }
+                else
+                {
+                    matTampaCanaleta = "M";
+                }
+
+                //Tipo Tampa Canaleta
+                string tipoTampaCanaleta = "";
+                if(comboE10_1TipoTampa.SelectedIndex == 1)
+                {
+                    tipoTampaCanaleta = "P";
+                }
+                else
+                {
+                    tipoTampaCanaleta = "O";
+                }
+                //Material Casa Mata
+                string matCasaMata = "";
+                if(comboE10_1MatCasaMata.SelectedIndex == 1)
+                {
+                    matCasaMata = "C";
+                }
+                else if (comboE10_1MatCasaMata.SelectedIndex == 2)
+                {
+                    matCasaMata = "M";
+                }
+                else if (comboE10_1MatCasaMata.SelectedIndex == 3)
+                {
+                    matCasaMata = "N";
+                }
+                //Observacoes
+                string obs = txtE10_1Obs.Text;
+                string indPreenchido = "S";
+
+
+
+                //Verifica se está cadastrando ou alterando o registro
+                if (AcaoTela == "N")
+                {
+                    SOEF_CLASS.Escopo_10_1 Escopo10_1 = new SOEF_CLASS.Escopo_10_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    int retornoInsert = Escopo10_1.gravaEscopo_10_1(tensaoTrifasica, frequenciaHz, outraFrequencia, dadosAmbientais, normativaMapa, tipoProduto, outroProduto, umidade, tipoAeracao, tipoInstalacao, matTampaCanaleta, tipoTampaCanaleta, matCasaMata, obs, indPreenchido);
+                    if(retornoInsert > 0)
+                    {
+
+                    }
                 }
             }
 
