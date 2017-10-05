@@ -25,6 +25,7 @@ namespace SOEF_CLASS
         //Métodos CRUD
         
        
+        //CRUD ESCOPO 01
         /// <summary>
         /// Grava dados na Tabela Valor Comum
         /// </summary>
@@ -173,6 +174,60 @@ namespace SOEF_CLASS
         }
 
 
+        //CRUD ESCOPO 10_1
+        /// <summary>
+        /// Grava os valores comuns do Escopo 10_1
+        /// </summary>
+        /// <param name="tensaoTrifasica"></param>
+        /// <param name="frequenciaHz"></param>
+        /// <param name="outraFrequencia"></param>
+        /// <param name="dadosAmbientais"></param>
+        /// <param name="normativaMapa"></param>
+        /// <param name="tipoProduto"></param>
+        /// <param name="outroProduto"></param>
+        /// <returns></returns>
+        public int gravaEscopo_Valor_Comum_E10_1(string tensaoTrifasica, string frequenciaHz, string outraFrequencia, string dadosAmbientais, string normativaMapa, string tipoProduto, string outroProduto)
+        {
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                int retorno = 0;
+                string query = "";
+                query += " INSERT INTO [DOM_SOLIC_ORC_VALOR_COMUM] ";
+                query += "    ([NUMERO_SOLICITACAO], ";
+                query += "    [REVISAO_SOLICITACAO], ";
+                query += "    [TENSAO_TRIFASICA], ";
+                query += "    [FREQUENCIA_HZ], ";
+                query += "    [OUTRA_FREQUENCIA], ";
+                query += "    [DADOS_AMBIENTAIS], ";
+                query += "    [NORMATIVA_MAPA], ";
+                query += "    [TIPO_PRODUTO], ";
+                query += "    [OUTRO_PRODUTO]) ";
+                query += " VALUES ";
+                query += " (" + Numero + ", ";
+                query += " '" + Revisao + "', ";
+                query += " '" + tensaoTrifasica + "', ";
+                query += " '" + frequenciaHz + "', ";
+                query += " '" + outraFrequencia + "', ";
+                query += " '" + dadosAmbientais + "', ";
+                query += " '" + normativaMapa + "', ";
+                query += " '" + tipoProduto + "', ";
+                query += " '" + outroProduto + "') ";
+                retorno = sqlce.insertSOF(query);
+                return retorno;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                sqlce.closeConnection();
+            }
+        }
+
+
         /// <summary>
         /// Busca os campos comuns utilizados no ESCOPO 10_1
         /// </summary>
@@ -200,6 +255,84 @@ namespace SOEF_CLASS
             }
         }
 
+
+        /// <summary>
+        /// Atualiza os campos do Escopo 10_1
+        /// </summary>
+        /// <param name="tensaoTrifasica"></param>
+        /// <param name="frequenciaHz"></param>
+        /// <param name="outraFrequencia"></param>
+        /// <param name="dadosAmbientais"></param>
+        /// <param name="normativaMapa"></param>
+        /// <param name="tipoProduto"></param>
+        /// <param name="outroProduto"></param>
+        /// <returns></returns>
+        public int atualizaEscopo_Valor_Comum_E10_1(string tensaoTrifasica, string frequenciaHz, string outraFrequencia, string dadosAmbientais, string normativaMapa, string tipoProduto, string outroProduto)
+        {
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                int retorno = 0;
+                string query = "";
+                query += " UPDATE [DOM_SOLIC_ORC_VALOR_COMUM] ";
+                query += " SET [TENSAO_TRIFASICA] = '" + dadosAmbientais + "', ";
+                query += "     [FREQUENCIA_HZ] = '" + frequenciaHz + "', ";
+                query += "     [OUTRA_FREQUENCIA] = '" + outraFrequencia + "', ";
+                query += "     [DADOS_AMBIENTAIS] = '" + dadosAmbientais + "', ";
+                query += "     [NORMATIVA_MAPA] = '" + normativaMapa + "' ";
+                query += "     [TIPO_PRODUTO] = '" + tipoProduto + "' ";
+                query += "     [OUTRO_PRODUTO] = '" + outroProduto + "' ";
+                query += " WHERE [NUMERO_SOLICITACAO] = " + Numero + "";
+                query += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
+                retorno = sqlce.insertSOF(query);
+                return retorno;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                sqlce.closeConnection();
+            }
+        }
+
+
+        /// <summary>
+        /// Deleta (deixa nulo) os campos do Escopo 10_1
+        /// </summary>
+        /// <returns></returns>
+        public int deleteEscopo_Valor_Comum_E10_1()
+        {
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                int retorno = 0;
+                string query = "";
+                query += " UPDATE [DOM_SOLIC_ORC_VALOR_COMUM] ";
+                query += " SET [TENSAO_TRIFASICA] = NULL ";
+                query += "     [FREQUENCIA_HZ] = NULL, ";
+                query += "     [OUTRA_FREQUENCIA] = NULL, ";
+                query += "     [DADOS_AMBIENTAIS] = NULL, ";
+                query += "     [NORMATIVA_MAPA] = NULL ";
+                query += "     [TIPO_PRODUTO] = NULL ";
+                query += "     [OUTRO_PRODUTO] = NULL ";
+                query += " WHERE [NUMERO_SOLICITACAO] = " + Numero + "";
+                query += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
+                retorno = sqlce.insertSOF(query);
+                return retorno;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                sqlce.closeConnection();
+            }
+        }
 
 
 
