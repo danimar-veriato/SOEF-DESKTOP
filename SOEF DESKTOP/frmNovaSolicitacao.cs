@@ -4206,6 +4206,20 @@ namespace ORCAMENTOS_FOCKINK
                     int retornoInsert = Escopo10_1.gravaEscopo_10_1(tensaoTrifasica, frequenciaHz, outraFrequencia, dadosAmbientais, normativaMapa, tipoProduto, outroProduto, umidade, tipoAeracao, tipoInstalacao, matTampaCanaleta, tipoTampaCanaleta, matCasaMata, obs, indPreenchido);
                     if(retornoInsert > 0)
                     {
+                        SOEF_CLASS.Escopo_Valor_Comum EscopoVlrComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                        //Verifica se já existe registro para essa solicitação. Se sim, atualiza com os valores deste escopo, se não, insere um novo registro
+                        DataTable dtBuscaEscopo10_1 = EscopoVlrComum.buscaEscopoValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                        if (dtBuscaEscopo10_1.Rows.Count > 0)
+                        {
+                            //Faz o update e grava os dados usados no Escopo 10_1
+                            int retornoInsert10_1 = EscopoVlrComum.atualizaEscopo_Valor_Comum_E10_1(tensaoTrifasica, frequenciaHz, outraFrequencia, dadosAmbientais, normativaMapa, tipoProduto, outroProduto);
+                            if(retornoInsert10_1 > 0)
+                            {
+
+                            }
+
+
+                        }
 
                     }
                 }
