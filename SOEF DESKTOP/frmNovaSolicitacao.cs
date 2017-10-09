@@ -4008,7 +4008,7 @@ namespace ORCAMENTOS_FOCKINK
                 {
                     erro += "O campo Outra Frequência deve ser preenchido.\n";
                 }
-            }            
+            }
             if(comboE10_1DadosAmbientais.SelectedIndex == 0)
             {
                 erro += "O campo Dados Ambientais deve ser preenchido.\n";
@@ -4196,7 +4196,7 @@ namespace ORCAMENTOS_FOCKINK
                 //Observacoes
                 string obs = txtE10_1Obs.Text;
                 string indPreenchido = "S";
-
+                bool sucesso = true;
 
 
                 //Verifica se está cadastrando ou alterando o registro
@@ -4213,12 +4213,19 @@ namespace ORCAMENTOS_FOCKINK
                         {
                             //Faz o update e grava os dados usados no Escopo 10_1
                             int retornoInsert10_1 = EscopoVlrComum.atualizaEscopo_Valor_Comum_E10_1(tensaoTrifasica, frequenciaHz, outraFrequencia, dadosAmbientais, normativaMapa, tipoProduto, outroProduto);
-                            if(retornoInsert10_1 > 0)
+                            if(retornoInsert10_1 <= 0)
                             {
-
+                                sucesso = false;
                             }
-
-
+                        }
+                        else
+                        {
+                            //Insere um novo registro na tabela Valor Comum
+                            int retornoInsert10_1 = EscopoVlrComum.gravaEscopo_Valor_Comum_E10_1(tensaoTrifasica, frequenciaHz, outraFrequencia, dadosAmbientais, normativaMapa, tipoProduto, outroProduto);
+                            if (retornoInsert10_1 <= 0)
+                            {
+                                sucesso = false;
+                            }
                         }
 
                     }
