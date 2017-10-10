@@ -197,7 +197,7 @@ namespace SOEF_CLASS
                 query += " INSERT INTO [DOM_SOLIC_ORC_VALOR_COMUM] ";
                 query += "    ([NUMERO_SOLICITACAO], ";
                 query += "    [REVISAO_SOLICITACAO], ";
-                query += "    [TENSAO_TRIFASICA], ";
+                query += "    [TENSAO_TRIFASICA_BT], ";
                 query += "    [FREQUENCIA_HZ], ";
                 query += "    [OUTRA_FREQUENCIA], ";
                 query += "    [DADOS_AMBIENTAIS], ";
@@ -276,12 +276,12 @@ namespace SOEF_CLASS
                 int retorno = 0;
                 string query = "";
                 query += " UPDATE [DOM_SOLIC_ORC_VALOR_COMUM] ";
-                query += " SET [TENSAO_TRIFASICA] = '" + dadosAmbientais + "', ";
-                query += "     [FREQUENCIA_HZ] = '" + frequenciaHz + "', ";
+                query += " SET [TENSAO_TRIFASICA_BT] = '" + dadosAmbientais + "', ";
+                query += "     [FREQUENCIA_HZ] = " + frequenciaHz + ", ";
                 query += "     [OUTRA_FREQUENCIA] = '" + outraFrequencia + "', ";
                 query += "     [DADOS_AMBIENTAIS] = '" + dadosAmbientais + "', ";
-                query += "     [NORMATIVA_MAPA] = '" + normativaMapa + "' ";
-                query += "     [TIPO_PRODUTO] = '" + tipoProduto + "' ";
+                query += "     [NORMATIVA_MAPA] = '" + normativaMapa + "', ";
+                query += "     [TIPO_PRODUTO] = '" + tipoProduto + "', ";
                 query += "     [OUTRO_PRODUTO] = '" + outroProduto + "' ";
                 query += " WHERE [NUMERO_SOLICITACAO] = " + Numero + "";
                 query += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";

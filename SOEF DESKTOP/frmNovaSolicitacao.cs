@@ -1798,6 +1798,147 @@ namespace ORCAMENTOS_FOCKINK
         }
 
 
+        /// <summary>
+        /// Lista dados na tela Escopo 10_1
+        /// </summary>
+        /// <param name="pNumSolic"></param>
+        /// <param name="pNumRev"></param>
+        protected void listaEscopo10_1(string pNumSolic, string pNumRev)
+        {
+            try
+            {
+                SOEF_CLASS.Escopo_10_1 Escopo10_1 = new SOEF_CLASS.Escopo_10_1(pNumSolic, pNumRev);
+                DataTable dt = Escopo10_1.getEscopo_10_1();
+                if(dt.Rows.Count > 0)
+                {
+                    foreach(DataRow dr in dt.Rows)
+                    {
+                        comboE10_1TensaoTri.SelectedIndex = Convert.ToInt32(dr["TENSAO_TRIFASICA"].ToString());
+                        comboE10_1Freq.SelectedIndex = Convert.ToInt32(dr["FREQUENCIA"].ToString());
+                        if (dr["FREQUENCIA"].ToString() == "3")
+                        {
+                            txtE10_1OutraFreq.Text = dr["DESC_OUTRA_FREQUENCIA"].ToString();
+                        }
+                        if(dr["DESC_OUTRA_FREQUENCIA"].ToString() == "U")
+                        {
+                            comboE10_1DadosAmbientais.SelectedIndex = 1;
+                        }
+                        else if (dr["DESC_OUTRA_FREQUENCIA"].ToString() == "M")
+                        {
+                            comboE10_1DadosAmbientais.SelectedIndex = 2;
+                        }
+                        else if (dr["DESC_OUTRA_FREQUENCIA"].ToString() == "C")
+                        {
+                            comboE10_1DadosAmbientais.SelectedIndex = 3;
+                        }
+                        else if (dr["DESC_OUTRA_FREQUENCIA"].ToString() == "N")
+                        {
+                            comboE10_1DadosAmbientais.SelectedIndex = 4;
+                        }
+
+                        if(dr["IND_NORMATIVA_MAPA"].ToString() == "S")
+                        {
+                            radioE10_1NormativaS.Checked = true;
+                            radioE10_1NormativaN.Checked = false;
+                        }
+                        else
+                        {
+                            radioE10_1NormativaS.Checked = false;
+                            radioE10_1NormativaN.Checked = true;
+                        }
+                        if (dr["TIPO_PRODUTO"].ToString() == "S")
+                        {
+                            comboE10_1TipoProd.SelectedIndex = 1;
+                        }
+                        else if (dr["TIPO_PRODUTO"].ToString() == "M")
+                        {
+                            comboE10_1TipoProd.SelectedIndex = 2;
+                        }
+                        else if (dr["TIPO_PRODUTO"].ToString() == "T")
+                        {
+                            comboE10_1TipoProd.SelectedIndex = 3;
+                        }
+                        else if (dr["TIPO_PRODUTO"].ToString() == "A")
+                        {
+                            comboE10_1TipoProd.SelectedIndex = 4;
+                        }
+                        else if (dr["TIPO_PRODUTO"].ToString() == "O")
+                        {
+                            comboE10_1TipoProd.SelectedIndex = 5;
+                            txtE10_1OutroProd.Enabled = true;
+                            txtE10_1OutroProd.Text = dr["DESC_TIPO_PRODUTO"].ToString();
+                        }
+                        if (dr["UMIDADE_PRODUTO"].ToString() == "14")
+                        {
+                            comboE10_1Umidade.SelectedIndex = 1;
+                        }
+                        else if (dr["UMIDADE_PRODUTO"].ToString() == "16")
+                        {
+                            comboE10_1Umidade.SelectedIndex = 2;
+                        }
+                        else if (dr["UMIDADE_PRODUTO"].ToString() == "18")
+                        {
+                            comboE10_1Umidade.SelectedIndex = 3;
+                        }
+                        if (dr["TIPO_AERACAO"].ToString() == "L")
+                        {
+                            comboE10_1TipoAeracao.SelectedIndex = 1;
+                        }
+                        else
+                        {
+                            comboE10_1TipoAeracao.SelectedIndex = 1;
+                        }
+                        if (dr["TIPO_INSTALACAO"].ToString() == "P")
+                        {
+                            comboE10_1TipoInstalacao.SelectedIndex = 1;
+                        }
+                        else
+                        {
+                            comboE10_1TipoInstalacao.SelectedIndex = 2;
+                            if(dr["MATERIAL_TAMPA_CANALETA"].ToString() == "P")
+                            {
+                                comboE10_1MatTampa.SelectedIndex = 1;
+                            }
+                            else
+                            {
+                                comboE10_1MatTampa.SelectedIndex = 2;
+                                if(dr["TIPO_TAMPA_CANALETA"].ToString() == "P")
+                                {
+                                    comboE10_1TipoTampa.SelectedIndex = 1;
+                                }
+                                else
+                                {
+                                    comboE10_1TipoTampa.SelectedIndex = 2;
+                                }
+                            }                            
+                        }
+                        if (dr["MATERIAL_CASA_MATA"].ToString() == "C")
+                        {
+                            comboE10_1MatCasaMata.SelectedIndex = 1;
+                        }
+                        else if (dr["MATERIAL_CASA_MATA"].ToString() == "M")
+                        {
+                            comboE10_1MatCasaMata.SelectedIndex = 2;
+                        }
+                        else if (dr["MATERIAL_CASA_MATA"].ToString() == "N")
+                        {
+                            comboE10_1MatCasaMata.SelectedIndex = 3;
+                        }
+                        txtE10_1Obs.Text = dr["OBSERVACOES"].ToString();                        
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Lista dados na tela Escopo 01
+        /// </summary>
+        /// <param name="pNumSolic"></param>
+        /// <param name="pNumRev"></param>
         protected void listaEscopo01(string pNumSolic, string pNumRev)
         {
             try
@@ -2611,6 +2752,11 @@ namespace ORCAMENTOS_FOCKINK
                         }
                     }
 
+                }
+                else
+                {
+                    //Se a AcaoTela for Atualizar, preenche os campos da tela com os dados
+                    listaEscopo10_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 }
             }
 
@@ -4198,15 +4344,15 @@ namespace ORCAMENTOS_FOCKINK
                 string indPreenchido = "S";
                 bool sucesso = true;
 
-
+                SOEF_CLASS.Escopo_10_1 Escopo10_1 = new SOEF_CLASS.Escopo_10_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                SOEF_CLASS.Escopo_Valor_Comum EscopoVlrComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 //Verifica se está cadastrando ou alterando o registro
+                //AcaoTela = "N";
                 if (AcaoTela == "N")
                 {
-                    SOEF_CLASS.Escopo_10_1 Escopo10_1 = new SOEF_CLASS.Escopo_10_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
                     int retornoInsert = Escopo10_1.gravaEscopo_10_1(tensaoTrifasica, frequenciaHz, outraFrequencia, dadosAmbientais, normativaMapa, tipoProduto, outroProduto, umidade, tipoAeracao, tipoInstalacao, matTampaCanaleta, tipoTampaCanaleta, matCasaMata, obs, indPreenchido);
                     if(retornoInsert > 0)
                     {
-                        SOEF_CLASS.Escopo_Valor_Comum EscopoVlrComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
                         //Verifica se já existe registro para essa solicitação. Se sim, atualiza com os valores deste escopo, se não, insere um novo registro
                         DataTable dtBuscaEscopo10_1 = EscopoVlrComum.buscaEscopoValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
                         if (dtBuscaEscopo10_1.Rows.Count > 0)
@@ -4227,8 +4373,79 @@ namespace ORCAMENTOS_FOCKINK
                                 sucesso = false;
                             }
                         }
-
+                        AcaoTela = "C";
                     }
+                    else
+                    {
+                        MessageBox.Show("Ocorreu um erro na inserção do registro. Tente novamente mais tarde.");
+                    }
+                }
+                else
+                {
+                    //AcaoTela - ATUALIZAR
+                    DataTable dtBuscaEscopo10_1 = Escopo10_1.getEscopo_10_1();
+                    int retornoUpdate = 0;
+                    if (dtBuscaEscopo10_1.Rows.Count > 0)
+                    {
+                        //Atualiza o Escopo 10_1 se já estiver cadastrado
+                        retornoUpdate = Escopo10_1.updateEscopo_10_1(tensaoTrifasica, frequenciaHz, outraFrequencia, dadosAmbientais, normativaMapa, tipoProduto, outroProduto, umidade, tipoAeracao, tipoInstalacao, matTampaCanaleta, tipoTampaCanaleta, matCasaMata, obs, indPreenchido);
+                    }
+                    else
+                    {
+                        //Cadastra o Escopo 10_1 se ainda não existir
+                        retornoUpdate = Escopo10_1.gravaEscopo_10_1(tensaoTrifasica, frequenciaHz, outraFrequencia, dadosAmbientais, normativaMapa, tipoProduto, outroProduto, umidade, tipoAeracao, tipoInstalacao, matTampaCanaleta, tipoTampaCanaleta, matCasaMata, obs, indPreenchido);
+                    }                    
+                    if(retornoUpdate > 0)
+                    {
+                        DataTable dtBuscaVCEscopo10_1 = EscopoVlrComum.buscaEscopoValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                        if (dtBuscaVCEscopo10_1.Rows.Count > 0)
+                        {
+                            //Faz o update e grava os dados usados no Escopo 10_1
+                            int retornoInsert10_1 = EscopoVlrComum.atualizaEscopo_Valor_Comum_E10_1(tensaoTrifasica, frequenciaHz, outraFrequencia, dadosAmbientais, normativaMapa, tipoProduto, outroProduto);
+                            if (retornoInsert10_1 <= 0)
+                            {
+                                sucesso = false;
+                            }
+                        }
+                        else
+                        {
+                            //Insere um novo registro na tabela Valor Comum
+                            int retornoInsert10_1 = EscopoVlrComum.gravaEscopo_Valor_Comum_E10_1(tensaoTrifasica, frequenciaHz, outraFrequencia, dadosAmbientais, normativaMapa, tipoProduto, outroProduto);
+                            if (retornoInsert10_1 <= 0)
+                            {
+                                sucesso = false;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocorreu um erro na atualização do registro. Tente novamente mais tarde.");
+                    }
+                }
+                //Verifica se ocorreu erro durante o processo de inserção no ESCOPO 10_1 e VALOR COMUM
+                if (sucesso)
+                {
+                    MessageBox.Show("Registro inserido/alterado com sucesso!");
+                    btnE10_1Excluir.Visible = true;
+                    listaEscopo01(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    //Muda o STATUS da AçãoTela p/ EDIÇÂO
+                    AcaoTela = "C";
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro ao ao inserir/alterar o registro. Por favor tente novamente ou contate o administrador do sistema.");
+                }
+
+
+
+                //Verifica Sucesso Operação
+                if (sucesso)
+                {
+                    MessageBox.Show("Registro inserido/alterado com sucesso!");
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro na inserção/atualização do registro. Tente novamente.");
                 }
             }
 

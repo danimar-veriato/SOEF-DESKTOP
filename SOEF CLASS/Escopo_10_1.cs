@@ -127,7 +127,7 @@ namespace SOEF_CLASS
             {
                 int retorno;
                 string query = "";
-                query += " UPDATE [DOM_SOLIC_ORC_ESCOPO_01] ";
+                query += " UPDATE [DOM_SOLIC_ORC_ESCOPO_10_1] ";
                 query += "   SET [TENSAO_TRIFASICA] = " + pTensaoTrifasica + ",  ";
                 query += "       [FREQUENCIA] = " + pFrequencia + ", ";
                 query += "       [DESC_OUTRA_FREQUENCIA] = '" + pOutraFrequencia + "', ";
