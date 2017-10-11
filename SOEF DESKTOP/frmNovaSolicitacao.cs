@@ -4214,6 +4214,7 @@ namespace ORCAMENTOS_FOCKINK
             {
                 string tensaoTrifasica = comboE10_1TensaoTri.SelectedIndex.ToString();
                 string frequenciaHz = comboE10_1Freq.SelectedIndex.ToString();
+                
                 string outraFrequencia = txtE10_1OutraFreq.Text;
                 string dadosAmbientais = "";
                 if(comboE10_1DadosAmbientais.SelectedIndex == 1)
@@ -4348,6 +4349,10 @@ namespace ORCAMENTOS_FOCKINK
                 SOEF_CLASS.Escopo_Valor_Comum EscopoVlrComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 //Verifica se está cadastrando ou alterando o registro
                 //AcaoTela = "N";
+                //MessageBox.Show("Freq: " + frequenciaHz);
+                //MessageBox.Show("Outro Prod.: " + outroProduto);
+                //MessageBox.Show("Dados: " + tensaoTrifasica + " | " + frequenciaHz + " | " + outraFrequencia + " | " + dadosAmbientais + " | " + normativaMapa + " | " + tipoProduto + " | " + outroProduto);
+
                 if (AcaoTela == "N")
                 {
                     int retornoInsert = Escopo10_1.gravaEscopo_10_1(tensaoTrifasica, frequenciaHz, outraFrequencia, dadosAmbientais, normativaMapa, tipoProduto, outroProduto, umidade, tipoAeracao, tipoInstalacao, matTampaCanaleta, tipoTampaCanaleta, matCasaMata, obs, indPreenchido);
@@ -4427,25 +4432,13 @@ namespace ORCAMENTOS_FOCKINK
                 {
                     MessageBox.Show("Registro inserido/alterado com sucesso!");
                     btnE10_1Excluir.Visible = true;
-                    listaEscopo01(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    listaEscopo10_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
                     //Muda o STATUS da AçãoTela p/ EDIÇÂO
                     AcaoTela = "C";
                 }
                 else
                 {
                     MessageBox.Show("Ocorreu um erro ao ao inserir/alterar o registro. Por favor tente novamente ou contate o administrador do sistema.");
-                }
-
-
-
-                //Verifica Sucesso Operação
-                if (sucesso)
-                {
-                    MessageBox.Show("Registro inserido/alterado com sucesso!");
-                }
-                else
-                {
-                    MessageBox.Show("Ocorreu um erro na inserção/atualização do registro. Tente novamente.");
                 }
             }
 
