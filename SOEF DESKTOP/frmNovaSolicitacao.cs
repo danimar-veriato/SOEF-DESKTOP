@@ -1819,19 +1819,19 @@ namespace ORCAMENTOS_FOCKINK
                         {
                             txtE10_1OutraFreq.Text = dr["DESC_OUTRA_FREQUENCIA"].ToString();
                         }
-                        if(dr["DESC_OUTRA_FREQUENCIA"].ToString() == "U")
+                        if(dr["DADOS_AMBIENTAIS"].ToString() == "U")
                         {
                             comboE10_1DadosAmbientais.SelectedIndex = 1;
                         }
-                        else if (dr["DESC_OUTRA_FREQUENCIA"].ToString() == "M")
+                        else if (dr["DADOS_AMBIENTAIS"].ToString() == "M")
                         {
                             comboE10_1DadosAmbientais.SelectedIndex = 2;
                         }
-                        else if (dr["DESC_OUTRA_FREQUENCIA"].ToString() == "C")
+                        else if (dr["DADOS_AMBIENTAIS"].ToString() == "C")
                         {
                             comboE10_1DadosAmbientais.SelectedIndex = 3;
                         }
-                        else if (dr["DESC_OUTRA_FREQUENCIA"].ToString() == "N")
+                        else if (dr["DADOS_AMBIENTAIS"].ToString() == "N")
                         {
                             comboE10_1DadosAmbientais.SelectedIndex = 4;
                         }
@@ -1866,7 +1866,7 @@ namespace ORCAMENTOS_FOCKINK
                         {
                             comboE10_1TipoProd.SelectedIndex = 5;
                             txtE10_1OutroProd.Enabled = true;
-                            txtE10_1OutroProd.Text = dr["DESC_TIPO_PRODUTO"].ToString();
+                            txtE10_1OutroProd.Text = dr["DESC_OUTRO_PRODUTO"].ToString();
                         }
                         if (dr["UMIDADE_PRODUTO"].ToString() == "14")
                         {
@@ -1926,6 +1926,11 @@ namespace ORCAMENTOS_FOCKINK
                         }
                         txtE10_1Obs.Text = dr["OBSERVACOES"].ToString();                        
                     }
+                    btnE10_1Excluir.Visible = true;
+                }
+                else
+                {
+                    btnE10_1Excluir.Visible = false;
                 }
             }
             catch (Exception)
@@ -2410,6 +2415,27 @@ namespace ORCAMENTOS_FOCKINK
                     }
                 }
 
+                //Escopo 10_1
+                DataTable dtVerifica10_1 = new DataTable();
+                //Escopo 01
+                SOEF_CLASS.Escopo_10_1 Escopo_10_1 = new SOEF_CLASS.Escopo_10_1(numSolic, numRev);
+                dtVerifica10_1 = Escopo_10_1.getEscopo_10_1();
+                if(dtVerifica10_1.Rows.Count > 0)
+                {
+                    if (dtVerifica10_1.Rows[0]["IND_PREENCHIDO"].ToString() == "S")
+                    {
+                        //Marca o Escopo_01 como preenchido na tela de escopos
+                        checkEscopo10.Checked = true;
+                        checkEscopo10.Enabled = false;
+                    }
+                    else
+                    {
+                        checkEscopo10.Checked = false;
+                        checkEscopo10.Enabled = true;
+                    }
+
+                }
+
                 //Escopo 18
                 SOEF_CLASS.Escopo_18 Escopo18 = new SOEF_CLASS.Escopo_18(numSolic, numRev);
                 DataTable dtVerifica18 = new DataTable();
@@ -2751,7 +2777,6 @@ namespace ORCAMENTOS_FOCKINK
                             }
                         }
                     }
-
                 }
                 else
                 {
@@ -4379,6 +4404,7 @@ namespace ORCAMENTOS_FOCKINK
                             }
                         }
                         AcaoTela = "C";
+                        btnE10_1Excluir.Visible = true;
                     }
                     else
                     {
@@ -4442,6 +4468,59 @@ namespace ORCAMENTOS_FOCKINK
                 }
             }
 
+        }
+
+        private void btnE10_1Excluir_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Deseja realmente excluir o Escopo 10_1 desta solicitação?", "SOEF", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                bool sucesso = true;
+                //Apaga os dados do Escopo 10_1
+                SOEF_CLASS.Escopo_10_1 Escopo10_1 = new SOEF_CLASS.Escopo_10_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                int retorno = Escopo10_1.deleteEscopo_10_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                if (retorno > 0)
+                {
+                    //Apaga (define como NULL) os campos comuns da tabela VALOR_COMUM
+                    SOEF_CLASS.Escopo_Valor_Comum EValorComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    int retornoUpdate = 0;
+                    retornoUpdate = EValorComum.deleteEscopo_Valor_Comum_E10_1();
+                    if (retornoUpdate > 0)
+                    {
+                        //Verifica se todos os campos do registro são nulos, se sim, apaga o registro em definitivo
+                        bool DeletaRegistro = verificaRegistroValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                        if (DeletaRegistro)//True - Deleta o registro
+                        {
+                            int retornoDelete = EValorComum.deleteEscopoValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                            if (retornoDelete <= 0)
+                            {
+                                sucesso = false;
+                                //MessageBox.Show("Não foi possível realizar a operação completa. Por favor, verifique os dados informados e tente novamente.");
+                            }
+                        }
+                    }
+                    else
+                    {
+                        sucesso = false;
+                    }
+                }
+                else
+                {
+                    sucesso = false;
+                }
+                if (sucesso)
+                {
+                    MessageBox.Show("Registro excluído com sucesso!");
+                    btnE10_1Excluir.Visible = false;
+                    checkEscopo10.Checked = false;
+                    checkEscopo10.Enabled = true;
+                    listaEscopo10_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro ao excluir o registro. Por favor, contate o suporte do sistema e tente novamente.");
+                }
+            }
         }
     }
 }

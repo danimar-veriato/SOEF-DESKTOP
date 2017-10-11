@@ -3013,6 +3013,7 @@
             this.btnE10_1Excluir.Text = "Excluir";
             this.btnE10_1Excluir.UseVisualStyleBackColor = true;
             this.btnE10_1Excluir.Visible = false;
+            this.btnE10_1Excluir.Click += new System.EventHandler(this.btnE10_1Excluir_Click);
             // 
             // btnE10_1Salvar
             // 

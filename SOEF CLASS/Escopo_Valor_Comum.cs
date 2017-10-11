@@ -276,7 +276,7 @@ namespace SOEF_CLASS
                 int retorno = 0;
                 string query = "";
                 query += " UPDATE [DOM_SOLIC_ORC_VALOR_COMUM] ";
-                query += " SET [TENSAO_TRIFASICA_BT] = '" + dadosAmbientais + "', ";
+                query += " SET [TENSAO_TRIFASICA_BT] = '" + tensaoTrifasica + "', ";
                 query += "     [FREQUENCIA_HZ] = " + frequenciaHz + ", ";
                 query += "     [OUTRA_FREQUENCIA] = '" + outraFrequencia + "', ";
                 query += "     [DADOS_AMBIENTAIS] = '" + dadosAmbientais + "', ";
@@ -285,7 +285,7 @@ namespace SOEF_CLASS
                 query += "     [OUTRO_PRODUTO] = '" + outroProduto + "' ";
                 query += " WHERE [NUMERO_SOLICITACAO] = " + Numero + "";
                 query += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
-                retorno = sqlce.insertSOF(query);
+                retorno = sqlce.insertSOF(query, null, null);
                 return retorno;
             }
             catch (Exception)
@@ -312,12 +312,12 @@ namespace SOEF_CLASS
                 int retorno = 0;
                 string query = "";
                 query += " UPDATE [DOM_SOLIC_ORC_VALOR_COMUM] ";
-                query += " SET [TENSAO_TRIFASICA] = NULL ";
+                query += " SET [TENSAO_TRIFASICA_BT] = NULL, ";
                 query += "     [FREQUENCIA_HZ] = NULL, ";
                 query += "     [OUTRA_FREQUENCIA] = NULL, ";
                 query += "     [DADOS_AMBIENTAIS] = NULL, ";
-                query += "     [NORMATIVA_MAPA] = NULL ";
-                query += "     [TIPO_PRODUTO] = NULL ";
+                query += "     [NORMATIVA_MAPA] = NULL, ";
+                query += "     [TIPO_PRODUTO] = NULL, ";
                 query += "     [OUTRO_PRODUTO] = NULL ";
                 query += " WHERE [NUMERO_SOLICITACAO] = " + Numero + "";
                 query += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";

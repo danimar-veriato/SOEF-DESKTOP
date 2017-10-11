@@ -144,7 +144,7 @@ namespace SOEF_CLASS
                 query += "       [OBSERVACOES] = '" + pObs + "', ";
                 query += "       [IND_PREENCHIDO] = '" + indPreenchido + "' ";
                 query += "  WHERE [NUMERO_SOLICITACAO] = " + Numero + " AND  [REVISAO_SOLICITACAO] = '" + Revisao + "'";
-                retorno = sqlce.insertSOF(query);
+                retorno = sqlce.insertSOF(query, null, null);
                 return retorno;
             }
             catch (Exception)
@@ -189,7 +189,7 @@ namespace SOEF_CLASS
         /// <param name="pNumero"></param>
         /// <param name="pRevisao"></param>
         /// <returns></returns>
-        public int deleteEscopo_01(string pNumero, string pRevisao)
+        public int deleteEscopo_10_1(string pNumero, string pRevisao)
         {
             SqlCE sqlce = new SqlCE();
             sqlce.openConnection();
