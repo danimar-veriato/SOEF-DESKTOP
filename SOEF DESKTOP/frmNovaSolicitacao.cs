@@ -2433,7 +2433,6 @@ namespace ORCAMENTOS_FOCKINK
                         checkEscopo10.Checked = false;
                         checkEscopo10.Enabled = true;
                     }
-
                 }
 
                 //Escopo 18
