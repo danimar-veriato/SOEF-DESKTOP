@@ -2593,6 +2593,8 @@ namespace ORCAMENTOS_FOCKINK
         }
 
 
+
+
        
 
 
@@ -4159,6 +4161,17 @@ namespace ORCAMENTOS_FOCKINK
             {
                 //MessageBox.Show("show");
             }
+            else if(tabsEscopo10.SelectedTab.Name == "tabEscopo10_2")
+            {
+                if(AcaoTela != "N")
+                {
+                    combo10_2CapacidadeArmazem.SelectedIndex = 0;
+                    combo10_2CapacidadeSilo.SelectedIndex = 0;
+                    combo10_2DadosAmbientais.SelectedIndex = 0;
+                    combo10_2Produto.SelectedIndex = 0;
+                    combo10_2Transportadores.SelectedIndex = 0;
+                }
+            }
         }
 
         private void btnE10_1Salvar_Click(object sender, EventArgs e)
@@ -4519,6 +4532,19 @@ namespace ORCAMENTOS_FOCKINK
                 {
                     MessageBox.Show("Ocorreu um erro ao excluir o registro. Por favor, contate o suporte do sistema e tente novamente.");
                 }
+            }
+        }
+
+        private void btn10_2Salvar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void combo10_2Produto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (combo10_2Produto.SelectedIndex == 5)
+            {
+
             }
         }
     }
