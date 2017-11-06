@@ -266,14 +266,14 @@
             this.checkEscopo10_1 = new System.Windows.Forms.CheckBox();
             this.tabEscopo10_2 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.gBox10_2Armazem = new System.Windows.Forms.GroupBox();
             this.combo10_2Transportadores = new System.Windows.Forms.ComboBox();
             this.text10_2CaractisticaEspalhadorA = new System.Windows.Forms.TextBox();
             this.label110 = new System.Windows.Forms.Label();
             this.label119 = new System.Windows.Forms.Label();
             this.combo10_2CapacidadeArmazem = new System.Windows.Forms.ComboBox();
             this.label120 = new System.Windows.Forms.Label();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.gBox10_2Silo = new System.Windows.Forms.GroupBox();
             this.text10_2CaractisticaEspalhadorS = new System.Windows.Forms.TextBox();
             this.label117 = new System.Windows.Forms.Label();
             this.msgPenduloCentral = new System.Windows.Forms.Label();
@@ -429,8 +429,8 @@
             this.panel3.SuspendLayout();
             this.tabEscopo10_2.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.groupBox8.SuspendLayout();
-            this.groupBox7.SuspendLayout();
+            this.gBox10_2Armazem.SuspendLayout();
+            this.gBox10_2Silo.SuspendLayout();
             this.tabEscopo18.SuspendLayout();
             this.tabEscopo18_1_2.SuspendLayout();
             this.tbpage18InfoG.SuspendLayout();
@@ -2893,7 +2893,7 @@
             this.comboE10_1TipoProd.Name = "comboE10_1TipoProd";
             this.comboE10_1TipoProd.Size = new System.Drawing.Size(146, 21);
             this.comboE10_1TipoProd.TabIndex = 35;
-            this.comboE10_1TipoProd.SelectedIndexChanged += new System.EventHandler(this.comboE10_1TipoProd_SelectedIndexChanged);
+            this.comboE10_1TipoProd.SelectedIndexChanged += new System.EventHandler(this.comboE10_1Freq_SelectedIndexChanged);
             // 
             // label102
             // 
@@ -3102,8 +3102,8 @@
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.groupBox8);
-            this.panel4.Controls.Add(this.groupBox7);
+            this.panel4.Controls.Add(this.gBox10_2Armazem);
+            this.panel4.Controls.Add(this.gBox10_2Silo);
             this.panel4.Controls.Add(this.check10_2Armazem);
             this.panel4.Controls.Add(this.check10_2Silos);
             this.panel4.Controls.Add(this.label113);
@@ -3122,20 +3122,21 @@
             this.panel4.Size = new System.Drawing.Size(993, 373);
             this.panel4.TabIndex = 26;
             // 
-            // groupBox8
+            // gBox10_2Armazem
             // 
-            this.groupBox8.Controls.Add(this.combo10_2Transportadores);
-            this.groupBox8.Controls.Add(this.text10_2CaractisticaEspalhadorA);
-            this.groupBox8.Controls.Add(this.label110);
-            this.groupBox8.Controls.Add(this.label119);
-            this.groupBox8.Controls.Add(this.combo10_2CapacidadeArmazem);
-            this.groupBox8.Controls.Add(this.label120);
-            this.groupBox8.Location = new System.Drawing.Point(535, 94);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(453, 169);
-            this.groupBox8.TabIndex = 54;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Armazém";
+            this.gBox10_2Armazem.Controls.Add(this.combo10_2Transportadores);
+            this.gBox10_2Armazem.Controls.Add(this.text10_2CaractisticaEspalhadorA);
+            this.gBox10_2Armazem.Controls.Add(this.label110);
+            this.gBox10_2Armazem.Controls.Add(this.label119);
+            this.gBox10_2Armazem.Controls.Add(this.combo10_2CapacidadeArmazem);
+            this.gBox10_2Armazem.Controls.Add(this.label120);
+            this.gBox10_2Armazem.Enabled = false;
+            this.gBox10_2Armazem.Location = new System.Drawing.Point(535, 94);
+            this.gBox10_2Armazem.Name = "gBox10_2Armazem";
+            this.gBox10_2Armazem.Size = new System.Drawing.Size(453, 169);
+            this.gBox10_2Armazem.TabIndex = 54;
+            this.gBox10_2Armazem.TabStop = false;
+            this.gBox10_2Armazem.Text = "Armazém";
             // 
             // combo10_2Transportadores
             // 
@@ -3204,22 +3205,23 @@
             this.label120.TabIndex = 47;
             this.label120.Text = "Capacidade Armazém:";
             // 
-            // groupBox7
+            // gBox10_2Silo
             // 
-            this.groupBox7.Controls.Add(this.text10_2CaractisticaEspalhadorS);
-            this.groupBox7.Controls.Add(this.label117);
-            this.groupBox7.Controls.Add(this.msgPenduloCentral);
-            this.groupBox7.Controls.Add(this.radioPenduloCentralN);
-            this.groupBox7.Controls.Add(this.radioPenduloCentralS);
-            this.groupBox7.Controls.Add(this.label109);
-            this.groupBox7.Controls.Add(this.combo10_2CapacidadeSilo);
-            this.groupBox7.Controls.Add(this.label111);
-            this.groupBox7.Location = new System.Drawing.Point(15, 94);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(500, 169);
-            this.groupBox7.TabIndex = 53;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Silos";
+            this.gBox10_2Silo.Controls.Add(this.text10_2CaractisticaEspalhadorS);
+            this.gBox10_2Silo.Controls.Add(this.label117);
+            this.gBox10_2Silo.Controls.Add(this.msgPenduloCentral);
+            this.gBox10_2Silo.Controls.Add(this.radioPenduloCentralN);
+            this.gBox10_2Silo.Controls.Add(this.radioPenduloCentralS);
+            this.gBox10_2Silo.Controls.Add(this.label109);
+            this.gBox10_2Silo.Controls.Add(this.combo10_2CapacidadeSilo);
+            this.gBox10_2Silo.Controls.Add(this.label111);
+            this.gBox10_2Silo.Enabled = false;
+            this.gBox10_2Silo.Location = new System.Drawing.Point(15, 94);
+            this.gBox10_2Silo.Name = "gBox10_2Silo";
+            this.gBox10_2Silo.Size = new System.Drawing.Size(500, 169);
+            this.gBox10_2Silo.TabIndex = 53;
+            this.gBox10_2Silo.TabStop = false;
+            this.gBox10_2Silo.Text = "Silos";
             // 
             // text10_2CaractisticaEspalhadorS
             // 
@@ -3329,6 +3331,7 @@
             this.check10_2Silos.TabIndex = 51;
             this.check10_2Silos.Text = "Silos";
             this.check10_2Silos.UseVisualStyleBackColor = true;
+            this.check10_2Silos.CheckedChanged += new System.EventHandler(this.check10_2Silos_CheckedChanged);
             // 
             // label113
             // 
@@ -4647,10 +4650,10 @@
             this.tabEscopo10_2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
+            this.gBox10_2Armazem.ResumeLayout(false);
+            this.gBox10_2Armazem.PerformLayout();
+            this.gBox10_2Silo.ResumeLayout(false);
+            this.gBox10_2Silo.PerformLayout();
             this.tabEscopo18.ResumeLayout(false);
             this.tabEscopo18.PerformLayout();
             this.tabEscopo18_1_2.ResumeLayout(false);
@@ -5047,7 +5050,7 @@
         private System.Windows.Forms.TextBox txt10_2Obs;
         private System.Windows.Forms.Label label122;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.GroupBox gBox10_2Silo;
         private System.Windows.Forms.TextBox text10_2CaractisticaEspalhadorS;
         private System.Windows.Forms.Label label117;
         private System.Windows.Forms.Label msgPenduloCentral;
@@ -5056,7 +5059,7 @@
         private System.Windows.Forms.Label label109;
         private System.Windows.Forms.ComboBox combo10_2CapacidadeSilo;
         private System.Windows.Forms.Label label111;
-        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.GroupBox gBox10_2Armazem;
         private System.Windows.Forms.ComboBox combo10_2Transportadores;
         private System.Windows.Forms.TextBox text10_2CaractisticaEspalhadorA;
         private System.Windows.Forms.Label label110;

@@ -4385,10 +4385,6 @@ namespace ORCAMENTOS_FOCKINK
                 SOEF_CLASS.Escopo_10_1 Escopo10_1 = new SOEF_CLASS.Escopo_10_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 SOEF_CLASS.Escopo_Valor_Comum EscopoVlrComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 //Verifica se está cadastrando ou alterando o registro
-                //AcaoTela = "N";
-                //MessageBox.Show("Freq: " + frequenciaHz);
-                //MessageBox.Show("Outro Prod.: " + outroProduto);
-                //MessageBox.Show("Dados: " + tensaoTrifasica + " | " + frequenciaHz + " | " + outraFrequencia + " | " + dadosAmbientais + " | " + normativaMapa + " | " + tipoProduto + " | " + outroProduto);
 
                 if (AcaoTela == "N")
                 {
@@ -4537,6 +4533,31 @@ namespace ORCAMENTOS_FOCKINK
 
         private void btn10_2Salvar_Click(object sender, EventArgs e)
         {
+            string erros = "Painel de Erros:\n";
+            if(combo10_2DadosAmbientais.SelectedIndex == 0)
+            {
+                erros += "O campo Dados Ambientais deve ser preenchido.\n";
+            }
+            if(combo10_2Produto.SelectedIndex == 0)
+            {
+                erros += "O campo Tipo de Produto deve ser preenchido.\n";
+            }
+            else if(combo10_2Produto.SelectedIndex == 5)
+            {
+                if (string.IsNullOrEmpty(txt10_2OutroProd.Text))
+                {
+                    erros += "O campo Outro Produto deve ser preenchido.\n";
+                }
+            }
+            
+
+
+            if(!check10_2Silos.Checked && !check10_2Armazem.Checked)
+            {
+                erros += "É obrigatório definir um local de instalação como Silo ou Armazém.\n";
+            }
+
+
 
         }
 
@@ -4544,7 +4565,28 @@ namespace ORCAMENTOS_FOCKINK
         {
             if (combo10_2Produto.SelectedIndex == 5)
             {
+                txt10_2OutroProd.Enabled = true;
+            }
+            else
+            {
+                txt10_2OutroProd.Enabled = false;
+            }
+        }
 
+        private void check10_2Silos_CheckedChanged(object sender, EventArgs e)
+        {
+            if (check10_2Silos.Checked)
+            {
+                gBox10_2Silo.Enabled = true;
+            }
+            else
+            {
+                combo10_2CapacidadeSilo.SelectedIndex = 0;
+                msgPenduloCentral.Visible = false;
+                radioPenduloCentralN.Checked = false;
+                radioPenduloCentralS.Checked = false;
+                text10_2CaractisticaEspalhadorS.Text = "";
+                gBox10_2Silo.Enabled = false; ;
             }
         }
     }
