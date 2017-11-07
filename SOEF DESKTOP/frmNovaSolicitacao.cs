@@ -4533,7 +4533,7 @@ namespace ORCAMENTOS_FOCKINK
 
         private void btn10_2Salvar_Click(object sender, EventArgs e)
         {
-            string erros = "Painel de Erros:\n";
+            string erros = "";
             if(combo10_2DadosAmbientais.SelectedIndex == 0)
             {
                 erros += "O campo Dados Ambientais deve ser preenchido.\n";
@@ -4549,15 +4549,200 @@ namespace ORCAMENTOS_FOCKINK
                     erros += "O campo Outro Produto deve ser preenchido.\n";
                 }
             }
-            
-
-
             if(!check10_2Silos.Checked && !check10_2Armazem.Checked)
             {
                 erros += "É obrigatório definir um local de instalação como Silo ou Armazém.\n";
             }
+            //Validação campos SILOS
+            if (check10_2Silos.Checked)
+            {
+                if(combo10_2CapacidadeSilo.SelectedIndex == 0)
+                {
+                    erros += "O campo Capacidade Silo deve ser preenchido.\n";
+                }
+                else if(combo10_2CapacidadeSilo.SelectedIndex == 1 || combo10_2CapacidadeSilo.SelectedIndex == 2 || combo10_2CapacidadeSilo.SelectedIndex == 3 || combo10_2CapacidadeSilo.SelectedIndex == 4)
+                {
+                    if(!radioPenduloCentralS.Checked && !radioPenduloCentralN.Checked)
+                    {
+                        erros += "O campo Considerar Suporte Pêndulo Central deve ser preenchido.\n";
+                    }
+                }
+                else if(combo10_2CapacidadeSilo.SelectedIndex == 6)
+                {
+                    if (string.IsNullOrEmpty(text10_2CaractisticaEspalhadorS.Text))
+                    {
+                        erros += "O campo Características Espalhador do silo deve ser preenchido.\n";
+                    }
+                }
+            }
+            //Validação campos ARMAZÉM
+            if (check10_2Armazem.Checked)
+            {
+                if(combo10_2Transportadores.SelectedIndex == 0)
+                {
+                    erros += "O campo Quantos Transportador(es) Tem deve ser preenchido.\n";
+                }
+                if (combo10_2CapacidadeArmazem.SelectedIndex == 0)
+                {
+                    erros += "O campo Capacidade do Armazém deve ser preenchido.\n";
+                }
+                else if (combo10_2CapacidadeArmazem.SelectedIndex == 6)
+                {
+                    if (string.IsNullOrEmpty(text10_2CaractisticaEspalhadorA.Text))
+                    {
+                        erros += "O campo Características Espalhador do armazém deve ser preenchido.\n";
+                    }
+                }
+            }
+            //Verifica se há erros de validação
+            if (!string.IsNullOrEmpty(erros))
+            {
+                MessageBox.Show("Painel de erros:\n" + erros);
+            }
+            else
+            {
+                //Variáveis da tabela
+                string DadosAmbientais;
+                string TipoProduto;
+                string DescOutroProduto;
+                string InstalArmazem;
+                string InstalSilo;
+                string CapacidadeSilo;
+                string SuportePendulo;
+                string CapacidadeArmazem;
+                string QtdTransportador;
+                string Obs;
+                string IndPreenchido = "S";
+                string CaracEspalhadorSil;
+                string CaracEspalhadorArm;
 
+                //Dados Ambientais
+                if(combo10_2DadosAmbientais.SelectedIndex == 1)
+                {
+                    DadosAmbientais = "U";
+                }
+                else if (combo10_2DadosAmbientais.SelectedIndex == 2)
+                {
+                    DadosAmbientais = "M";
+                }
+                else if (combo10_2DadosAmbientais.SelectedIndex == 3)
+                {
+                    DadosAmbientais = "C";
+                }
+                else if (combo10_2DadosAmbientais.SelectedIndex == 4)
+                {
+                    DadosAmbientais = "N";
+                }
 
+                //Tipo Produto
+                if(combo10_2Produto.SelectedIndex == 1)
+                {
+                    TipoProduto = "S";
+                }
+                else if (combo10_2Produto.SelectedIndex == 2)
+                {
+                    TipoProduto = "M";
+                }
+                else if (combo10_2Produto.SelectedIndex == 3)
+                {
+                    TipoProduto = "T";
+                }
+                else if (combo10_2Produto.SelectedIndex == 4)
+                {
+                    TipoProduto = "A";
+                }
+                else
+                {
+                    TipoProduto = "O";
+                    DescOutroProduto = txt10_2OutroProd.Text;
+                }
+                //Local de Instalação
+                if (check10_2Silos.Checked)
+                {
+                    InstalSilo = "S";
+                    //Capacidade Silo
+                    if(combo10_2CapacidadeSilo.SelectedIndex == 1)
+                    {
+                        CapacidadeSilo = "60";
+                    }
+                    else if (combo10_2CapacidadeSilo.SelectedIndex == 2)
+                    {
+                        CapacidadeSilo = "120";
+                    }
+                    else if (combo10_2CapacidadeSilo.SelectedIndex == 3)
+                    {
+                        CapacidadeSilo = "270";
+                    }
+                    else if (combo10_2CapacidadeSilo.SelectedIndex == 4)
+                    {
+                        CapacidadeSilo = "320";
+                    }
+                    else if (combo10_2CapacidadeSilo.SelectedIndex == 5)
+                    {
+                        CapacidadeSilo = "500";
+                    }
+                    else if (combo10_2CapacidadeSilo.SelectedIndex == 6)
+                    {
+                        CapacidadeSilo = "999";
+                    }
+                    //Pendulo Central
+                    if (radioPenduloCentralS.Checked)
+                    {
+                        SuportePendulo = "S";
+                    }
+                    else if (radioPenduloCentralN.Checked)
+                    {
+                        SuportePendulo = "N";
+                    }
+                }
+                else
+                {
+                    InstalSilo = "N";
+                }
+                if (check10_2Armazem.Checked)
+                {
+                    InstalArmazem = "S";
+                    //Capacidade Armazém
+                   if(combo10_2CapacidadeArmazem.SelectedIndex == 1)
+                    {
+                        CapacidadeArmazem = "60";
+                    }
+                    else if (combo10_2CapacidadeArmazem.SelectedIndex == 2)
+                    {
+                        CapacidadeArmazem = "120";
+                    }
+                    else if (combo10_2CapacidadeArmazem.SelectedIndex == 3)
+                    {
+                        CapacidadeArmazem = "270";
+                    }
+                    else if (combo10_2CapacidadeArmazem.SelectedIndex == 4)
+                    {
+                        CapacidadeArmazem = "320";
+                    }
+                    else if (combo10_2CapacidadeArmazem.SelectedIndex == 5)
+                    {
+                        CapacidadeArmazem = "500";
+                    }
+                    else if (combo10_2CapacidadeArmazem.SelectedIndex == 6)
+                    {
+                        CapacidadeArmazem = "999";
+                    }
+                    //Qtd Transportador
+                    QtdTransportador = Convert.ToString(combo10_2Transportadores.SelectedIndex);
+                }
+                else
+                {
+                    InstalArmazem = "N";
+                }
+                //Espalhador Silo
+                CaracEspalhadorSil = text10_2CaractisticaEspalhadorS.Text;
+                //Espalhador Armazém
+                CaracEspalhadorArm = text10_2CaractisticaEspalhadorA.Text;
+                //Obs
+                Obs = txt10_2Obs.Text;
+                
+
+            }
 
         }
 
@@ -4587,6 +4772,78 @@ namespace ORCAMENTOS_FOCKINK
                 radioPenduloCentralS.Checked = false;
                 text10_2CaractisticaEspalhadorS.Text = "";
                 gBox10_2Silo.Enabled = false; ;
+            }
+        }
+
+        private void check10_2Armazem_CheckedChanged(object sender, EventArgs e)
+        {
+            if (check10_2Armazem.Checked)
+            {
+                gBox10_2Armazem.Enabled = true;
+            }
+            else
+            {
+                combo10_2CapacidadeArmazem.SelectedIndex = 0;
+                combo10_2Transportadores.SelectedIndex = 0;
+                radioPenduloCentralN.Checked = false;
+                radioPenduloCentralS.Checked = false;
+                text10_2CaractisticaEspalhadorS.Text = "";
+                gBox10_2Armazem.Enabled = false; ;
+            }
+        }
+
+        private void combo10_2CapacidadeSilo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(combo10_2CapacidadeSilo.SelectedIndex == 6)
+            {
+                label117.Visible = true;
+                text10_2CaractisticaEspalhadorS.Visible = true;
+            }
+            else
+            {
+                label117.Visible = false;
+                text10_2CaractisticaEspalhadorS.Text = "";
+                text10_2CaractisticaEspalhadorS.Visible = false;
+            }
+            
+            if(combo10_2CapacidadeSilo.SelectedIndex == 1 || combo10_2CapacidadeSilo.SelectedIndex == 2 || combo10_2CapacidadeSilo.SelectedIndex == 3 || combo10_2CapacidadeSilo.SelectedIndex == 4)
+            {
+                label109.Visible = true;
+                radioPenduloCentralS.Checked = false;
+                radioPenduloCentralN.Checked = false;
+                radioPenduloCentralS.Visible = true;
+                radioPenduloCentralN.Visible = true;                
+            }
+            else
+            {
+                label109.Visible = false;
+                radioPenduloCentralS.Checked = false;
+                radioPenduloCentralN.Checked = false;
+                radioPenduloCentralS.Visible = false;
+                radioPenduloCentralN.Visible = false;
+            }
+            if(combo10_2CapacidadeSilo.SelectedIndex == 5)
+            {
+                msgPenduloCentral.Visible = true;
+            }
+            else
+            {
+                msgPenduloCentral.Visible = false;
+            }
+        }
+
+        private void combo10_2CapacidadeArmazem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(combo10_2CapacidadeArmazem.SelectedIndex == 6)
+            {
+                label110.Visible = true;
+                text10_2CaractisticaEspalhadorA.Visible = true;
+            }
+            else
+            {
+                label110.Visible = false;
+                text10_2CaractisticaEspalhadorA.Text = "";
+                text10_2CaractisticaEspalhadorA.Visible = false;
             }
         }
     }

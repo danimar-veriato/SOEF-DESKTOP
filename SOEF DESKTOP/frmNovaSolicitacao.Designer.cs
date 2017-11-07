@@ -3119,7 +3119,7 @@
             this.panel4.Controls.Add(this.label122);
             this.panel4.Location = new System.Drawing.Point(23, 53);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(993, 373);
+            this.panel4.Size = new System.Drawing.Size(993, 380);
             this.panel4.TabIndex = 26;
             // 
             // gBox10_2Armazem
@@ -3147,14 +3147,14 @@
             "Um",
             "Dois",
             "Três"});
-            this.combo10_2Transportadores.Location = new System.Drawing.Point(177, 62);
+            this.combo10_2Transportadores.Location = new System.Drawing.Point(177, 67);
             this.combo10_2Transportadores.Name = "combo10_2Transportadores";
             this.combo10_2Transportadores.Size = new System.Drawing.Size(127, 21);
             this.combo10_2Transportadores.TabIndex = 55;
             // 
             // text10_2CaractisticaEspalhadorA
             // 
-            this.text10_2CaractisticaEspalhadorA.Location = new System.Drawing.Point(153, 115);
+            this.text10_2CaractisticaEspalhadorA.Location = new System.Drawing.Point(153, 111);
             this.text10_2CaractisticaEspalhadorA.MaxLength = 2000;
             this.text10_2CaractisticaEspalhadorA.Multiline = true;
             this.text10_2CaractisticaEspalhadorA.Name = "text10_2CaractisticaEspalhadorA";
@@ -3164,7 +3164,7 @@
             // label110
             // 
             this.label110.AutoSize = true;
-            this.label110.Location = new System.Drawing.Point(11, 125);
+            this.label110.Location = new System.Drawing.Point(11, 121);
             this.label110.Name = "label110";
             this.label110.Size = new System.Drawing.Size(137, 13);
             this.label110.TabIndex = 53;
@@ -3173,7 +3173,7 @@
             // label119
             // 
             this.label119.AutoSize = true;
-            this.label119.Location = new System.Drawing.Point(11, 65);
+            this.label119.Location = new System.Drawing.Point(11, 70);
             this.label119.Name = "label119";
             this.label119.Size = new System.Drawing.Size(160, 13);
             this.label119.TabIndex = 49;
@@ -3195,6 +3195,7 @@
             this.combo10_2CapacidadeArmazem.Name = "combo10_2CapacidadeArmazem";
             this.combo10_2CapacidadeArmazem.Size = new System.Drawing.Size(127, 21);
             this.combo10_2CapacidadeArmazem.TabIndex = 48;
+            this.combo10_2CapacidadeArmazem.SelectedIndexChanged += new System.EventHandler(this.combo10_2CapacidadeArmazem_SelectedIndexChanged);
             // 
             // label120
             // 
@@ -3225,12 +3226,13 @@
             // 
             // text10_2CaractisticaEspalhadorS
             // 
-            this.text10_2CaractisticaEspalhadorS.Location = new System.Drawing.Point(155, 111);
+            this.text10_2CaractisticaEspalhadorS.Location = new System.Drawing.Point(156, 111);
             this.text10_2CaractisticaEspalhadorS.MaxLength = 2000;
             this.text10_2CaractisticaEspalhadorS.Multiline = true;
             this.text10_2CaractisticaEspalhadorS.Name = "text10_2CaractisticaEspalhadorS";
-            this.text10_2CaractisticaEspalhadorS.Size = new System.Drawing.Size(292, 43);
+            this.text10_2CaractisticaEspalhadorS.Size = new System.Drawing.Size(329, 43);
             this.text10_2CaractisticaEspalhadorS.TabIndex = 54;
+            this.text10_2CaractisticaEspalhadorS.Visible = false;
             // 
             // label117
             // 
@@ -3240,6 +3242,7 @@
             this.label117.Size = new System.Drawing.Size(137, 13);
             this.label117.TabIndex = 53;
             this.label117.Text = "Características Espalhador:";
+            this.label117.Visible = false;
             // 
             // msgPenduloCentral
             // 
@@ -3256,7 +3259,7 @@
             // radioPenduloCentralN
             // 
             this.radioPenduloCentralN.AutoSize = true;
-            this.radioPenduloCentralN.Location = new System.Drawing.Point(244, 66);
+            this.radioPenduloCentralN.Location = new System.Drawing.Point(244, 70);
             this.radioPenduloCentralN.Name = "radioPenduloCentralN";
             this.radioPenduloCentralN.Size = new System.Drawing.Size(45, 17);
             this.radioPenduloCentralN.TabIndex = 51;
@@ -3267,7 +3270,7 @@
             // radioPenduloCentralS
             // 
             this.radioPenduloCentralS.AutoSize = true;
-            this.radioPenduloCentralS.Location = new System.Drawing.Point(196, 66);
+            this.radioPenduloCentralS.Location = new System.Drawing.Point(196, 70);
             this.radioPenduloCentralS.Name = "radioPenduloCentralS";
             this.radioPenduloCentralS.Size = new System.Drawing.Size(42, 17);
             this.radioPenduloCentralS.TabIndex = 50;
@@ -3278,7 +3281,7 @@
             // label109
             // 
             this.label109.AutoSize = true;
-            this.label109.Location = new System.Drawing.Point(11, 68);
+            this.label109.Location = new System.Drawing.Point(11, 72);
             this.label109.Name = "label109";
             this.label109.Size = new System.Drawing.Size(178, 13);
             this.label109.TabIndex = 49;
@@ -3300,6 +3303,7 @@
             this.combo10_2CapacidadeSilo.Name = "combo10_2CapacidadeSilo";
             this.combo10_2CapacidadeSilo.Size = new System.Drawing.Size(127, 21);
             this.combo10_2CapacidadeSilo.TabIndex = 48;
+            this.combo10_2CapacidadeSilo.SelectedIndexChanged += new System.EventHandler(this.combo10_2CapacidadeSilo_SelectedIndexChanged);
             // 
             // label111
             // 
@@ -3320,6 +3324,7 @@
             this.check10_2Armazem.TabIndex = 52;
             this.check10_2Armazem.Text = "Armazém";
             this.check10_2Armazem.UseVisualStyleBackColor = true;
+            this.check10_2Armazem.CheckedChanged += new System.EventHandler(this.check10_2Armazem_CheckedChanged);
             // 
             // check10_2Silos
             // 
@@ -3440,13 +3445,13 @@
             this.txt10_2Obs.MaxLength = 2000;
             this.txt10_2Obs.Multiline = true;
             this.txt10_2Obs.Name = "txt10_2Obs";
-            this.txt10_2Obs.Size = new System.Drawing.Size(644, 31);
+            this.txt10_2Obs.Size = new System.Drawing.Size(644, 48);
             this.txt10_2Obs.TabIndex = 8;
             // 
             // label122
             // 
             this.label122.AutoSize = true;
-            this.label122.Location = new System.Drawing.Point(38, 287);
+            this.label122.Location = new System.Drawing.Point(40, 298);
             this.label122.Name = "label122";
             this.label122.Size = new System.Drawing.Size(73, 13);
             this.label122.TabIndex = 6;
