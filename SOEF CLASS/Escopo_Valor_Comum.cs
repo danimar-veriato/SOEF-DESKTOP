@@ -23,8 +23,68 @@ namespace SOEF_CLASS
         }
 
         //Métodos CRUD
-        
-       
+
+
+        //CRUD Table Valor Comum
+        /// <summary>
+        /// Busca os dados do Valor Comum
+        /// </summary>
+        /// <param name="numSolicitacao"></param>
+        /// <param name="revSolicitacao"></param>
+        /// <returns></returns>
+        public DataTable buscaEscopoValorComum(string numSolicitacao, string revSolicitacao)
+        {
+            DataTable dt = new DataTable();
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                string query = "";
+                query += " SELECT * FROM ";
+                query += " DOM_SOLIC_ORC_VALOR_COMUM ";
+                query += " WHERE NUMERO_SOLICITACAO = " + Numero;
+                query += " AND REVISAO_SOLICITACAO = '" + Revisao + "' ";
+                dt = sqlce.selectListaSOF(query, "DOM_SOLIC_ORC_VALOR_COMUM");
+                return dt;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Método que apaga o registro da tabela DOM_SOLIC_ORC_VALOR_COMUM
+        /// </summary>
+        /// <param name="pNumero"></param>
+        /// <param name="pRevisao"></param>
+        /// <returns></returns>
+        public int deleteEscopoValorComum(string pNumero, string pRevisao)
+        {
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                int retorno;
+                string query = "";
+                query += " DELETE FROM [DOM_SOLIC_ORC_VALOR_COMUM] ";
+                query += " WHERE [NUMERO_SOLICITACAO] = " + pNumero + " ";
+                query += " AND [REVISAO_SOLICITACAO] = '" + pRevisao + "' ";
+                retorno = sqlce.deleteSOF(query);
+                return retorno;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                sqlce.closeConnection();
+            }
+        }
+
+
+
         //CRUD ESCOPO 01
         /// <summary>
         /// Grava dados na Tabela Valor Comum
@@ -172,6 +232,7 @@ namespace SOEF_CLASS
                 throw;
             }
         }
+
 
 
         //CRUD ESCOPO 10_1
@@ -336,52 +397,35 @@ namespace SOEF_CLASS
 
 
 
+        //CRUD Escopo 10_2
         /// <summary>
-        /// Busca os dados do Valor Comum
+        /// Grava valores comuns Escopo 10_2
         /// </summary>
-        /// <param name="numSolicitacao"></param>
-        /// <param name="revSolicitacao"></param>
+        /// <param name="dadosAmbientais"></param>
+        /// <param name="tipoProduto"></param>
+        /// <param name="outroProduto"></param>
         /// <returns></returns>
-        public DataTable buscaEscopoValorComum(string numSolicitacao, string revSolicitacao)
-        {
-            DataTable dt = new DataTable();
-            SqlCE sqlce = new SqlCE();
-            sqlce.openConnection();
-            try
-            {
-                string query = "";
-                query += " SELECT * FROM ";
-                query += " DOM_SOLIC_ORC_VALOR_COMUM ";
-                query += " WHERE NUMERO_SOLICITACAO = " + Numero;
-                query += " AND REVISAO_SOLICITACAO = '" + Revisao + "' ";
-                dt = sqlce.selectListaSOF(query, "DOM_SOLIC_ORC_VALOR_COMUM");
-                return dt;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-
-
-        /// <summary>
-        /// Método que apaga o registro da tabela DOM_SOLIC_ORC_VALOR_COMUM
-        /// </summary>
-        /// <param name="pNumero"></param>
-        /// <param name="pRevisao"></param>
-        /// <returns></returns>
-        public int deleteEscopoValorComum(string pNumero, string pRevisao)
+        public int gravaEscopo_Valor_Comum_E10_2(string dadosAmbientais, string tipoProduto, string outroProduto)
         {
             SqlCE sqlce = new SqlCE();
             sqlce.openConnection();
             try
             {
-                int retorno;
+                int retorno = 0;
                 string query = "";
-                query += " DELETE FROM [DOM_SOLIC_ORC_VALOR_COMUM] ";
-                query += " WHERE [NUMERO_SOLICITACAO] = " + pNumero + " ";
-                query += " AND [REVISAO_SOLICITACAO] = '" + pRevisao + "' ";
-                retorno = sqlce.deleteSOF(query);
+                query += " INSERT INTO [DOM_SOLIC_ORC_VALOR_COMUM] ";
+                query += "    ([NUMERO_SOLICITACAO], ";
+                query += "    [REVISAO_SOLICITACAO], ";
+                query += "    [DADOS_AMBIENTAIS], ";
+                query += "    [TIPO_PRODUTO], ";
+                query += "    [OUTRO_PRODUTO]) ";
+                query += " VALUES ";
+                query += " (" + Numero + ", ";
+                query += " '" + Revisao + "', ";
+                query += " '" + dadosAmbientais + "', ";
+                query += " '" + tipoProduto + "', ";
+                query += " '" + outroProduto + "') ";
+                retorno = sqlce.insertSOF(query);
                 return retorno;
             }
             catch (Exception)
@@ -394,6 +438,101 @@ namespace SOEF_CLASS
             }
         }
 
+        /// <summary>
+        /// Busca os campos comuns utilizados no ESCOPO 10_2
+        /// </summary>
+        /// <param name="numSolicitacao"></param>
+        /// <param name="revSolicitacao"></param>
+        /// <returns></returns>
+        public DataTable buscaEscopoValorComumE10_2(string numSolicitacao, string revSolicitacao)
+        {
+            DataTable dt = new DataTable();
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                string query = "";
+                query += " SELECT [DADOS_AMBIENTAIS], [TIPO_PRODUTO], [OUTRO_PRODUTO] ";
+                query += " FROM [DOM_SOLIC_ORC_VALOR_COMUM] ";
+                query += " WHERE [NUMERO_SOLICITACAO] = " + Numero;
+                query += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
+                dt = sqlce.selectListaSOF(query, "DOM_SOLIC_ORC_VALOR_COMUM");
+                return dt;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        
+        /// <summary>
+        /// Atualiza os campos do Escopo 10_2
+        /// </summary>
+        /// <param name="dadosAmbientais"></param>
+        /// <param name="tipoProduto"></param>
+        /// <param name="outroProduto"></param>
+        /// <returns></returns>
+        public int atualizaEscopo_Valor_Comum_E10_2(string dadosAmbientais, string tipoProduto, string outroProduto)
+        {
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                int retorno = 0;
+                string query = "";
+                query += " UPDATE [DOM_SOLIC_ORC_VALOR_COMUM] ";
+                query += " SET [DADOS_AMBIENTAIS] = '" + dadosAmbientais + "', ";
+                query += "     [TIPO_PRODUTO] = '" + tipoProduto + "', ";
+                query += "     [OUTRO_PRODUTO] = '" + outroProduto + "' ";
+                query += " WHERE [NUMERO_SOLICITACAO] = " + Numero + "";
+                query += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
+                retorno = sqlce.insertSOF(query, null, null);
+                return retorno;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                sqlce.closeConnection();
+            }
+        }
+        
+        /// <summary>
+        /// Deleta (deixa nulo) os campos do Escopo 10_2
+        /// </summary>
+        /// <returns></returns>
+        public int deleteEscopo_Valor_Comum_E10_2()
+        {
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                int retorno = 0;
+                string query = "";
+                query += " UPDATE [DOM_SOLIC_ORC_VALOR_COMUM] ";
+                query += " SET [DADOS_AMBIENTAIS] = NULL, ";
+                query += "     [TIPO_PRODUTO] = NULL, ";
+                query += "     [OUTRO_PRODUTO] = NULL ";
+                query += " WHERE [NUMERO_SOLICITACAO] = " + Numero + "";
+                query += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
+                retorno = sqlce.insertSOF(query);
+                return retorno;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                sqlce.closeConnection();
+            }
+        }
+
+
+
+        
 
 
 

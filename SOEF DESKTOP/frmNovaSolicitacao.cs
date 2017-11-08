@@ -4602,19 +4602,19 @@ namespace ORCAMENTOS_FOCKINK
             else
             {
                 //Variáveis da tabela
-                string DadosAmbientais;
-                string TipoProduto;
-                string DescOutroProduto;
-                string InstalArmazem;
-                string InstalSilo;
-                string CapacidadeSilo;
-                string SuportePendulo;
-                string CapacidadeArmazem;
-                string QtdTransportador;
-                string Obs;
+                string DadosAmbientais = "";
+                string TipoProduto = "";
+                string DescOutroProduto = "";
+                string InstalArmazem = "";
+                string InstalSilo = "";
+                string CapacidadeSilo = "";
+                string SuportePendulo = "";
+                string CapacidadeArmazem = "";
+                string QtdTransportador = "";
+                string Obs = "";
                 string IndPreenchido = "S";
-                string CaracEspalhadorSil;
-                string CaracEspalhadorArm;
+                string CaracEspalhadorSil = "";
+                string CaracEspalhadorArm = "";
 
                 //Dados Ambientais
                 if(combo10_2DadosAmbientais.SelectedIndex == 1)
@@ -4740,7 +4740,21 @@ namespace ORCAMENTOS_FOCKINK
                 CaracEspalhadorArm = text10_2CaractisticaEspalhadorA.Text;
                 //Obs
                 Obs = txt10_2Obs.Text;
-                
+
+                SOEF_CLASS.Escopo_10_2 Escopo10_2 = new SOEF_CLASS.Escopo_10_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                SOEF_CLASS.Escopo_Valor_Comum EscopoVlrComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                //Verifica se está cadastrando ou alterando o registro
+                if(AcaoTela == "N")
+                {
+                    int retornoInsert = Escopo10_2.gravaEscopo_10_2(DadosAmbientais, TipoProduto, DescOutroProduto, InstalSilo, InstalArmazem, CapacidadeSilo, SuportePendulo, CapacidadeArmazem, QtdTransportador, Obs, IndPreenchido, CaracEspalhadorSil, CaracEspalhadorArm);
+                    if(retornoInsert > 0)
+                    {
+
+                    }
+
+
+
+                }
 
             }
 
