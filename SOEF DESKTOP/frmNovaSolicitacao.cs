@@ -4615,9 +4615,10 @@ namespace ORCAMENTOS_FOCKINK
                 string IndPreenchido = "S";
                 string CaracEspalhadorSil = "";
                 string CaracEspalhadorArm = "";
+                bool sucesso = true;
 
                 //Dados Ambientais
-                if(combo10_2DadosAmbientais.SelectedIndex == 1)
+                if (combo10_2DadosAmbientais.SelectedIndex == 1)
                 {
                     DadosAmbientais = "U";
                 }
@@ -4748,6 +4749,40 @@ namespace ORCAMENTOS_FOCKINK
                 {
                     int retornoInsert = Escopo10_2.gravaEscopo_10_2(DadosAmbientais, TipoProduto, DescOutroProduto, InstalSilo, InstalArmazem, CapacidadeSilo, SuportePendulo, CapacidadeArmazem, QtdTransportador, Obs, IndPreenchido, CaracEspalhadorSil, CaracEspalhadorArm);
                     if(retornoInsert > 0)
+                    {
+                        //Verifica valores comuns desta solicitação
+                        DataTable dtVlrComum10_2 = EscopoVlrComum.buscaEscopoValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                        if(dtVlrComum10_2.Rows.Count > 0)
+                        {
+                            //Se existe, faz o update dos Valores Comuns do Escopo 10_2
+                            int retornoInsertVC10_2 = EscopoVlrComum.atualizaEscopo_Valor_Comum_E10_2(DadosAmbientais, TipoProduto, DescOutroProduto);
+                            if(retornoInsertVC10_2 <= 0)
+                            {
+                                sucesso = false;
+                            }                            
+                        }
+                        else
+                        {
+                            //Insere um novo registro na tabela Valores Comuns
+                            int retornoInsertVC10_2 = EscopoVlrComum.gravaEscopo_Valor_Comum_E10_2(DadosAmbientais, TipoProduto, DescOutroProduto);
+                            if(retornoInsertVC10_2 <= 0)
+                            {
+                                sucesso = false;
+                            }
+                        }
+                        AcaoTela = "C";
+                        btn10_2Excluir.Visible = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocorreu um erro na inserção do registro. Tente novamente mais tarde.");
+                    }
+                }
+                else
+                {
+                    //AcaoTela - ATUALIZAR
+                    DataTable dtBuscaEscopo10_2 = Escopo10_2.getEscopo_10_2();
+                    if(dtBuscaEscopo10_2.Rows.Count > 0)
                     {
 
                     }

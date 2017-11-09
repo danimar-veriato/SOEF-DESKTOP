@@ -10,6 +10,7 @@ namespace SOEF_CLASS
 {
    public class Escopo_10_1: Escopo
    {
+
         /// <summary>
         /// Construtor da classe
         /// </summary>
