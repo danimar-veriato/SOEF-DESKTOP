@@ -4782,9 +4782,16 @@ namespace ORCAMENTOS_FOCKINK
                 {
                     //AcaoTela - ATUALIZAR
                     DataTable dtBuscaEscopo10_2 = Escopo10_2.getEscopo_10_2();
-                    if(dtBuscaEscopo10_2.Rows.Count > 0)
+                    int retornoUpdate;
+                    if (dtBuscaEscopo10_2.Rows.Count > 0)
                     {
-
+                        //Atualiza o Escopo 10_1 se já estiver cadastrado
+                        retornoUpdate = Escopo10_2.updateEscopo_10_2(DadosAmbientais, TipoProduto, DescOutroProduto, InstalSilo, pInstalArmazem, CapacidadeSilo, SuportePendulo, CapacidadeArmazem, QtdTransportador, Obs, IndPreenchido, CaracEspalhadorSil, CaracEspalhadorArm);
+                    }
+                    else
+                    {
+                        //Cadastra o Escopo 10_1 se ainda não existir
+                        retornoUpdate = Escopo10_2.gravaEscopo_10_2(DadosAmbientais, TipoProduto, DescOutroProduto, InstalSilo, InstalArmazem, CapacidadeSilo, SuportePendulo, CapacidadeArmazem, QtdTransportador, Obs, IndPreenchido, CaracEspalhadorSil, CaracEspalhadorArm);
                     }
 
 
