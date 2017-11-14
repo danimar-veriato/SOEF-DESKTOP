@@ -1939,6 +1939,91 @@ namespace ORCAMENTOS_FOCKINK
             }
         }
 
+
+
+        /// <summary>
+        /// Lista os dados na tela Escopo 10_2
+        /// </summary>
+        /// <param name="pNumSolic"></param>
+        /// <param name="pNumRev"></param>
+        protected void listaEscopo10_2(string pNumSolic, string pNumRev)
+        {
+            try
+            {
+                SOEF_CLASS.Escopo_10_2 Escopo10_2 = new SOEF_CLASS.Escopo_10_2(pNumSolic, pNumRev);
+                DataTable dt = Escopo10_2.getEscopo_10_2();
+                if (dt.Rows.Count > 0)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        if(dr["DADOS_AMBIENTAIS"].ToString() == "U")
+                        {
+                            combo10_2DadosAmbientais.SelectedIndex = 1;
+                        }
+                        else if (dr["DADOS_AMBIENTAIS"].ToString() == "M")
+                        {
+                            combo10_2DadosAmbientais.SelectedIndex = 2;
+                        }
+                        else if (dr["DADOS_AMBIENTAIS"].ToString() == "C")
+                        {
+                            combo10_2DadosAmbientais.SelectedIndex = 3;
+                        }
+                        else if (dr["DADOS_AMBIENTAIS"].ToString() == "N")
+                        {
+                            combo10_2DadosAmbientais.SelectedIndex = 4;
+                        }
+
+                        //Produto
+                        if(dr["TIPO_PRODUTO"].ToString() == "S")
+                        {
+                            combo10_2Produto.SelectedIndex = 1;
+                        }
+                        else if (dr["TIPO_PRODUTO"].ToString() == "M")
+                        {
+                            combo10_2Produto.SelectedIndex = 2;
+                        }
+                        else if (dr["TIPO_PRODUTO"].ToString() == "T")
+                        {
+                            combo10_2Produto.SelectedIndex = 3;
+                        }
+                        else if (dr["TIPO_PRODUTO"].ToString() == "A")
+                        {
+                            combo10_2Produto.SelectedIndex = 4;
+                        }
+                        else if (dr["TIPO_PRODUTO"].ToString() == "O")
+                        {
+                            combo10_2Produto.SelectedIndex = 5;
+                            txt10_2OutroProd.Enabled = true;
+                            txt10_2OutroProd.Text = dr["DESC_OUTRO_PRODUTO"].ToString();
+                        }
+                        else
+                        {
+                            txt10_2OutroProd.Text = "";
+                            txt10_2OutroProd.Enabled = false;
+                        }
+
+                        //Local Instalação
+                        if (check10_2Silos.Checked)
+                        {
+
+                        }
+
+
+                    }
+                    btn10_2Excluir.Visible = true;
+                }
+                else
+                {
+                    btn10_2Excluir.Visible = false;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
         /// <summary>
         /// Lista dados na tela Escopo 01
         /// </summary>
@@ -4786,18 +4871,56 @@ namespace ORCAMENTOS_FOCKINK
                     if (dtBuscaEscopo10_2.Rows.Count > 0)
                     {
                         //Atualiza o Escopo 10_1 se já estiver cadastrado
-                        retornoUpdate = Escopo10_2.updateEscopo_10_2(DadosAmbientais, TipoProduto, DescOutroProduto, InstalSilo, pInstalArmazem, CapacidadeSilo, SuportePendulo, CapacidadeArmazem, QtdTransportador, Obs, IndPreenchido, CaracEspalhadorSil, CaracEspalhadorArm);
+                        retornoUpdate = Escopo10_2.updateEscopo_10_2(DadosAmbientais, TipoProduto, DescOutroProduto, InstalSilo, InstalArmazem, CapacidadeSilo, SuportePendulo, CapacidadeArmazem, QtdTransportador, Obs, IndPreenchido, CaracEspalhadorSil, CaracEspalhadorArm);
                     }
                     else
                     {
                         //Cadastra o Escopo 10_1 se ainda não existir
                         retornoUpdate = Escopo10_2.gravaEscopo_10_2(DadosAmbientais, TipoProduto, DescOutroProduto, InstalSilo, InstalArmazem, CapacidadeSilo, SuportePendulo, CapacidadeArmazem, QtdTransportador, Obs, IndPreenchido, CaracEspalhadorSil, CaracEspalhadorArm);
                     }
-
-
-
+                    if(retornoUpdate > 0)
+                    {
+                        //Verifica se existe registro Valor Comum
+                        DataTable dtBuscaVCEscopo10_2 = EscopoVlrComum.buscaEscopoValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                        if(dtBuscaVCEscopo10_2.Rows.Count > 0)
+                        {
+                            //Faz o update e grava os dados usados no Escopo 10_2
+                            int retornoInsert10_2 = EscopoVlrComum.atualizaEscopo_Valor_Comum_E10_2(DadosAmbientais, TipoProduto, DescOutroProduto);
+                            if (retornoInsert10_2 <= 0)
+                            {
+                                sucesso = false;
+                            }
+                        }
+                        else
+                        {
+                            //Insere um novo registro na tabela Valor Comum
+                            int retornoInsert10_2 = EscopoVlrComum.gravaEscopo_Valor_Comum_E10_2(DadosAmbientais, TipoProduto, DescOutroProduto);
+                            if (retornoInsert10_2 <= 0)
+                            {
+                                sucesso = false;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocorreu um erro na atualização do registro. Tente novamente mais tarde.");
+                    }
                 }
-
+                //Verifica se ocorreu erro durante o processo de inserção no ESCOPO 10_2 e VALOR COMUM
+                if (sucesso)
+                {
+                    MessageBox.Show("Registro inserido/alterado com sucesso!");
+                    btn10_2Excluir.Visible = true;
+                    
+                    
+                    listaEscopo10_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    //Muda o STATUS da AçãoTela p/ EDIÇÂO
+                    AcaoTela = "C";
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro ao ao inserir/alterar o registro. Por favor tente novamente ou contate o administrador do sistema.");
+                }
             }
 
         }
