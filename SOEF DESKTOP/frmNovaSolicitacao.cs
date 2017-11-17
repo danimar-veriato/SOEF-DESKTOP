@@ -4830,6 +4830,7 @@ namespace ORCAMENTOS_FOCKINK
                 SOEF_CLASS.Escopo_10_2 Escopo10_2 = new SOEF_CLASS.Escopo_10_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 SOEF_CLASS.Escopo_Valor_Comum EscopoVlrComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 //Verifica se está cadastrando ou alterando o registro
+                AcaoTela = "N";
                 if(AcaoTela == "N")
                 {
                     int retornoInsert = Escopo10_2.gravaEscopo_10_2(DadosAmbientais, TipoProduto, DescOutroProduto, InstalSilo, InstalArmazem, CapacidadeSilo, SuportePendulo, CapacidadeArmazem, QtdTransportador, Obs, IndPreenchido, CaracEspalhadorSil, CaracEspalhadorArm);
@@ -4913,7 +4914,7 @@ namespace ORCAMENTOS_FOCKINK
                     btn10_2Excluir.Visible = true;
                     
                     
-                    listaEscopo10_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    listaEscopo10_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
                     //Muda o STATUS da AçãoTela p/ EDIÇÂO
                     AcaoTela = "C";
                 }
