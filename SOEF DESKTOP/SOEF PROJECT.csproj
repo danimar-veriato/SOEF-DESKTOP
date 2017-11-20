@@ -302,9 +302,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SOFDB.sdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="SOFDB.sdf" />
   </ItemGroup>
   <ItemGroup>
     <PublishFile Include="SOFDB.sdf">

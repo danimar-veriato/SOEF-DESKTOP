@@ -2002,19 +2002,175 @@ namespace ORCAMENTOS_FOCKINK
                             txt10_2OutroProd.Enabled = false;
                         }
 
-                        //Local Instalação
-                        if (check10_2Silos.Checked)
+                        //Local Instalação - SILO
+                        if(dr["IND_INSTAL_SILO"].ToString() == "S")
                         {
-
+                            check10_2Silos.Checked = true;
+                            //Habilita o box do Silo
+                            gBox10_2Silo.Visible = true;
+                            if (dr["CAPACIDADE_SILO"].ToString() == "60")
+                            {
+                                combo10_2CapacidadeSilo.SelectedIndex = 1;
+                                label109.Visible = true;
+                                radioPenduloCentralS.Visible = true;
+                                radioPenduloCentralN.Visible = true;
+                                if (dr["IND_SUPORTE_PENDULO"].ToString() == "S")
+                                {
+                                    radioPenduloCentralS.Checked = true;
+                                }
+                                else
+                                {
+                                    radioPenduloCentralN.Checked = true;
+                                }
+                            }
+                            else if (dr["CAPACIDADE_SILO"].ToString() == "120")
+                            {
+                                combo10_2CapacidadeSilo.SelectedIndex = 2;
+                                label109.Visible = true;
+                                radioPenduloCentralS.Visible = true;
+                                radioPenduloCentralN.Visible = true;
+                                if (dr["IND_SUPORTE_PENDULO"].ToString() == "S")
+                                {
+                                    radioPenduloCentralS.Checked = true;
+                                }
+                                else
+                                {
+                                    radioPenduloCentralN.Checked = true;
+                                }
+                            }
+                            else if (dr["CAPACIDADE_SILO"].ToString() == "270")
+                            {
+                                combo10_2CapacidadeSilo.SelectedIndex = 3;
+                                label109.Visible = true;
+                                radioPenduloCentralS.Visible = true;
+                                radioPenduloCentralN.Visible = true;
+                                if (dr["IND_SUPORTE_PENDULO"].ToString() == "S")
+                                {
+                                    radioPenduloCentralS.Checked = true;
+                                }
+                                else
+                                {
+                                    radioPenduloCentralN.Checked = true;
+                                }
+                            }
+                            else if (dr["CAPACIDADE_SILO"].ToString() == "320")
+                            {
+                                combo10_2CapacidadeSilo.SelectedIndex = 4;
+                                label109.Visible = true;
+                                radioPenduloCentralS.Visible = true;
+                                radioPenduloCentralN.Visible = true;
+                                if (dr["IND_SUPORTE_PENDULO"].ToString() == "S")
+                                {
+                                    radioPenduloCentralS.Checked = true;
+                                }
+                                else
+                                {
+                                    radioPenduloCentralN.Checked = true;
+                                }
+                            }
+                            else if (dr["CAPACIDADE_SILO"].ToString() == "500")
+                            {
+                                combo10_2CapacidadeSilo.SelectedIndex = 5;
+                                msgPenduloCentral.Visible = true;
+                                label109.Visible = false;
+                                radioPenduloCentralS.Visible = false;
+                                radioPenduloCentralN.Visible = false;
+                            }
+                            else if (dr["CAPACIDADE_SILO"].ToString() == "999")
+                            {
+                                combo10_2CapacidadeSilo.SelectedIndex = 6;
+                                label109.Visible = true;
+                                radioPenduloCentralS.Visible = true;
+                                radioPenduloCentralN.Visible = true;
+                                label117.Visible = true;
+                                text10_2CaractisticaEspalhadorS.Visible = true;
+                                text10_2CaractisticaEspalhadorS.Text = dr["CARACT_ESPALHADOR_ESP_SIL"].ToString();
+                            }
+                            else
+                            {
+                                text10_2CaractisticaEspalhadorS.Text = "";
+                                text10_2CaractisticaEspalhadorS.Visible = false;
+                            }
+                        }
+                        else
+                        {
+                            check10_2Armazem.Checked = false;
+                            //Habilita o box do Armazém
+                            //gBox10_2Armazem.Visible = false;
                         }
 
+                        //Armazém
+                        if(dr["IND_INSTAL_ARMAZEM"].ToString() == "S")
+                        {
+                            check10_2Armazem.Checked = true;
+                            gBox10_2Armazem.Visible = true;
+                            label120.Visible = true;
+                            combo10_2CapacidadeArmazem.Visible = true;
+                            label119.Visible = true;
+                            combo10_2Transportadores.Visible = true;
+                            if (dr["CAPACIDADE_ARMAZEM"].ToString() == "60")
+                            {
+                                combo10_2CapacidadeArmazem.SelectedIndex = 1;
+                            }
+                            else if (dr["CAPACIDADE_ARMAZEM"].ToString() == "120")
+                            {
+                                combo10_2CapacidadeArmazem.SelectedIndex = 2;
+                            }
+                            else if (dr["CAPACIDADE_ARMAZEM"].ToString() == "270")
+                            {
+                                combo10_2CapacidadeArmazem.SelectedIndex = 3;
+                            }
+                            else if (dr["CAPACIDADE_ARMAZEM"].ToString() == "320")
+                            {
+                                combo10_2CapacidadeArmazem.SelectedIndex = 4;
+                            }
+                            else if (dr["CAPACIDADE_ARMAZEM"].ToString() == "500")
+                            {
+                                combo10_2CapacidadeArmazem.SelectedIndex = 5;
+                            }
+                            else if (dr["CAPACIDADE_ARMAZEM"].ToString() == "999")
+                            {
+                                combo10_2CapacidadeArmazem.SelectedIndex = 6;
+                                label110.Visible = true;
+                                text10_2CaractisticaEspalhadorA.Visible = true;
+                                text10_2CaractisticaEspalhadorA.Text = dr["CARACT_ESPALHADOR_ESP_ARM"].ToString();
+                            }
+                            else
+                            {
+                                text10_2CaractisticaEspalhadorA.Text = "";
+                                text10_2CaractisticaEspalhadorA.Visible = false;
+                            }
+                        }
+                        else
+                        {
+                            //gBox10_2Armazem.Visible = false;
+                            check10_2Armazem.Checked = false;
+                        }
+                        if(dr["QTDE_TRANSPORTADOR"].ToString() == "1")
+                        {
+                            combo10_2Transportadores.SelectedIndex = 1;
+                        }
+                        else if (dr["QTDE_TRANSPORTADOR"].ToString() == "2")
+                        {
+                            combo10_2Transportadores.SelectedIndex = 2;
+                        }
+                        else if (dr["QTDE_TRANSPORTADOR"].ToString() == "3")
+                        {
+                            combo10_2Transportadores.SelectedIndex = 3;
+                        }
 
+                        txt10_2Obs.Text = dr["OBSERVACOES"].ToString();
                     }
                     btn10_2Excluir.Visible = true;
                 }
                 else
                 {
                     btn10_2Excluir.Visible = false;
+                    combo10_2CapacidadeArmazem.SelectedIndex = 0;
+                    combo10_2CapacidadeSilo.SelectedIndex = 0;
+                    combo10_2DadosAmbientais.SelectedIndex = 0;
+                    combo10_2Produto.SelectedIndex = 0;
+                    combo10_2Transportadores.SelectedIndex = 0;
                 }
             }
             catch (Exception)
@@ -4248,13 +4404,17 @@ namespace ORCAMENTOS_FOCKINK
             }
             else if(tabsEscopo10.SelectedTab.Name == "tabEscopo10_2")
             {
-                if(AcaoTela != "N")
+                if(AcaoTela == "N")
                 {
                     combo10_2CapacidadeArmazem.SelectedIndex = 0;
                     combo10_2CapacidadeSilo.SelectedIndex = 0;
                     combo10_2DadosAmbientais.SelectedIndex = 0;
                     combo10_2Produto.SelectedIndex = 0;
                     combo10_2Transportadores.SelectedIndex = 0;
+                }
+                else
+                {
+                    listaEscopo10_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 }
             }
         }
@@ -4784,7 +4944,11 @@ namespace ORCAMENTOS_FOCKINK
                 else
                 {
                     InstalSilo = "N";
+                    //CapacidadeSilo = null;
+
                 }
+
+
                 if (check10_2Armazem.Checked)
                 {
                     InstalArmazem = "S";
@@ -4819,6 +4983,8 @@ namespace ORCAMENTOS_FOCKINK
                 else
                 {
                     InstalArmazem = "N";
+                    //QtdTransportador = null;
+                    //CapacidadeArmazem = null;
                 }
                 //Espalhador Silo
                 CaracEspalhadorSil = text10_2CaractisticaEspalhadorS.Text;
@@ -4830,7 +4996,7 @@ namespace ORCAMENTOS_FOCKINK
                 SOEF_CLASS.Escopo_10_2 Escopo10_2 = new SOEF_CLASS.Escopo_10_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 SOEF_CLASS.Escopo_Valor_Comum EscopoVlrComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 //Verifica se está cadastrando ou alterando o registro
-                AcaoTela = "N";
+                //AcaoTela = "N";
                 if(AcaoTela == "N")
                 {
                     int retornoInsert = Escopo10_2.gravaEscopo_10_2(DadosAmbientais, TipoProduto, DescOutroProduto, InstalSilo, InstalArmazem, CapacidadeSilo, SuportePendulo, CapacidadeArmazem, QtdTransportador, Obs, IndPreenchido, CaracEspalhadorSil, CaracEspalhadorArm);
@@ -4911,9 +5077,7 @@ namespace ORCAMENTOS_FOCKINK
                 if (sucesso)
                 {
                     MessageBox.Show("Registro inserido/alterado com sucesso!");
-                    btn10_2Excluir.Visible = true;
-                    
-                    
+                    btn10_2Excluir.Visible = true;                   
                     listaEscopo10_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
                     //Muda o STATUS da AçãoTela p/ EDIÇÂO
                     AcaoTela = "C";
@@ -4967,7 +5131,7 @@ namespace ORCAMENTOS_FOCKINK
                 combo10_2Transportadores.SelectedIndex = 0;
                 radioPenduloCentralN.Checked = false;
                 radioPenduloCentralS.Checked = false;
-                text10_2CaractisticaEspalhadorS.Text = "";
+                text10_2CaractisticaEspalhadorA.Text = "";
                 gBox10_2Armazem.Enabled = false; ;
             }
         }
@@ -5026,5 +5190,59 @@ namespace ORCAMENTOS_FOCKINK
                 text10_2CaractisticaEspalhadorA.Visible = false;
             }
         }
+
+        private void btn10_2Excluir_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Deseja realmente excluir o Escopo 10_2 desta solicitação?", "SOEF", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                bool sucesso = true;
+                //Apaga os dados do Escopo 10_2
+                SOEF_CLASS.Escopo_10_2 Escopo10_2 = new SOEF_CLASS.Escopo_10_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                int retorno = Escopo10_2.deleteEscopo_10_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                if (retorno > 0)
+                {
+                    //Apaga (define como NULL) os campos comuns da tabela VALOR_COMUM
+                    SOEF_CLASS.Escopo_Valor_Comum EValorComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    int retornoUpdate = 0;
+                    retornoUpdate = EValorComum.deleteEscopo_Valor_Comum_E10_2();
+                    if (retornoUpdate > 0)
+                    {
+                        //Verifica se todos os campos do registro são nulos, se sim, apaga o registro em definitivo
+                        bool DeletaRegistro = verificaRegistroValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                        if (DeletaRegistro)//True - Deleta o registro
+                        {
+                            int retornoDelete = EValorComum.deleteEscopoValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                            if (retornoDelete <= 0)
+                            {
+                                sucesso = false;
+                                //MessageBox.Show("Não foi possível realizar a operação completa. Por favor, verifique os dados informados e tente novamente.");
+                            }
+                        }
+                    }
+                    else
+                    {
+                        sucesso = false;
+                    }
+                }
+                else
+                {
+                    sucesso = false;
+                }
+                if (sucesso)
+                {
+                    MessageBox.Show("Registro excluído com sucesso!");
+                    btn10_2Excluir.Visible = false;
+                    checkEscopo10.Checked = false;
+                    checkEscopo10.Enabled = true;
+                    listaEscopo10_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro ao excluir o registro. Por favor, contate o suporte do sistema e tente novamente.");
+                }
+            }
+        }
+            
     }
 }

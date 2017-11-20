@@ -117,6 +117,18 @@ namespace SOEF_CLASS
             sqlce.openConnection();
             try
             {
+                if (string.IsNullOrEmpty(pCapacidadeArmazem))
+                {
+                    pCapacidadeArmazem = "NULL";
+                }
+                if (string.IsNullOrEmpty(pQtdTransportador))
+                {
+                    pQtdTransportador = "NULL";
+                }
+                if (string.IsNullOrEmpty(pCapacidadeSilo))
+                {
+                    pCapacidadeSilo = "NULL";
+                }
                 int retorno;
                 string query = "";
                 query += " UPDATE [DOM_SOLIC_ORC_ESCOPO_10_2] ";
