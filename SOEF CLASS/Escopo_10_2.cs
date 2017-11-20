@@ -46,6 +46,14 @@ namespace SOEF_CLASS
             sqlce.openConnection();
             try
             {
+                if (string.IsNullOrEmpty(pCapacidadeArmazem))
+                {
+                    pCapacidadeArmazem = "NULL";
+                }
+                if (string.IsNullOrEmpty(pQtdTransportador))
+                {
+                    pQtdTransportador = "NULL";
+                }
                 int retorno;
                 string query = "";
                 query += " INSERT INTO [DOM_SOLIC_ORC_ESCOPO_10_2] ";

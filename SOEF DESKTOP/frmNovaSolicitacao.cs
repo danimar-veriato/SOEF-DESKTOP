@@ -2166,11 +2166,6 @@ namespace ORCAMENTOS_FOCKINK
                 else
                 {
                     btn10_2Excluir.Visible = false;
-                    combo10_2CapacidadeArmazem.SelectedIndex = 0;
-                    combo10_2CapacidadeSilo.SelectedIndex = 0;
-                    combo10_2DadosAmbientais.SelectedIndex = 0;
-                    combo10_2Produto.SelectedIndex = 0;
-                    combo10_2Transportadores.SelectedIndex = 0;
                 }
             }
             catch (Exception)
@@ -2832,11 +2827,7 @@ namespace ORCAMENTOS_FOCKINK
                 throw;
             }
         }
-
-
-
-
-       
+               
 
 
         private void tabNovaSolicitacao_Selected(object sender, TabControlEventArgs e)
@@ -4396,6 +4387,16 @@ namespace ORCAMENTOS_FOCKINK
             comboE10_1MatCasaMata.SelectedIndex = 0;            
         }
 
+        private void inicializaCamposE10_2()
+        {
+            combo10_2CapacidadeArmazem.SelectedIndex = 0;
+            combo10_2CapacidadeSilo.SelectedIndex = 0;
+            combo10_2DadosAmbientais.SelectedIndex = 0;
+            combo10_2Produto.SelectedIndex = 0;
+            combo10_2Transportadores.SelectedIndex = 0;
+
+        }
+
         private void tabsEscopo10_Selected(object sender, TabControlEventArgs e)
         {
             if (tabsEscopo10.SelectedTab.Name == "tabEscopo10_1")
@@ -4404,13 +4405,59 @@ namespace ORCAMENTOS_FOCKINK
             }
             else if(tabsEscopo10.SelectedTab.Name == "tabEscopo10_2")
             {
-                if(AcaoTela == "N")
+                inicializaCamposE10_2();
+                if (AcaoTela == "N")
                 {
-                    combo10_2CapacidadeArmazem.SelectedIndex = 0;
-                    combo10_2CapacidadeSilo.SelectedIndex = 0;
-                    combo10_2DadosAmbientais.SelectedIndex = 0;
-                    combo10_2Produto.SelectedIndex = 0;
-                    combo10_2Transportadores.SelectedIndex = 0;
+                    SOEF_CLASS.Escopo_Valor_Comum EscopoValorComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    //Verifica e sugere os campos comuns caso existir registro
+                    DataTable dtEscopo10_2 = EscopoValorComum.buscaEscopoValorComumE10_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    if (dtEscopo10_2.Rows.Count > 0)
+                    {
+                        foreach(DataRow dr in dtEscopo10_2.Rows)
+                        {
+                            //Dados Ambientais
+                            if (dr["DADOS_AMBIENTAIS"].ToString() == "U")
+                            {
+                                combo10_2DadosAmbientais.SelectedIndex = 1;
+                            }
+                            else if (dr["DADOS_AMBIENTAIS"].ToString() == "M")
+                            {
+                                combo10_2DadosAmbientais.SelectedIndex = 2;
+                            }
+                            else if (dr["DADOS_AMBIENTAIS"].ToString() == "C")
+                            {
+                                combo10_2DadosAmbientais.SelectedIndex = 3;
+                            }
+                            else if (dr["DADOS_AMBIENTAIS"].ToString() == "N")
+                            {
+                                combo10_2DadosAmbientais.SelectedIndex = 4;
+                            }
+
+                            //Tipo Produto
+                            if (dr["TIPO_PRODUTO"].ToString() == "S")
+                            {
+                                combo10_2Produto.SelectedIndex = 1;
+                            }
+                            else if (dr["TIPO_PRODUTO"].ToString() == "M")
+                            {
+                                combo10_2Produto.SelectedIndex = 2;
+                            }
+                            else if (dr["TIPO_PRODUTO"].ToString() == "T")
+                            {
+                                combo10_2Produto.SelectedIndex = 3;
+                            }
+                            else if (dr["TIPO_PRODUTO"].ToString() == "A")
+                            {
+                                combo10_2Produto.SelectedIndex = 4;
+                            }
+                            else if (dr["TIPO_PRODUTO"].ToString() == "O")
+                            {
+                                combo10_2Produto.SelectedIndex = 5;
+                                txt10_2OutroProd.Enabled = true;
+                                txt10_2OutroProd.Text = dr["OUTRO_PRODUTO"].ToString();
+                            }
+                        }
+                    }
                 }
                 else
                 {

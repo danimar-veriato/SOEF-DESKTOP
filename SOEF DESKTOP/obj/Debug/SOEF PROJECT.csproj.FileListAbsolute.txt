@@ -1,4 +1,3 @@
-C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF-DESKTOP\SOEF DESKTOP\bin\Debug\SOFDB.sdf
 C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF-DESKTOP\SOEF DESKTOP\bin\Debug\SOEF.exe.config
 C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF-DESKTOP\SOEF DESKTOP\bin\Debug\SOEF.exe.manifest
 C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF-DESKTOP\SOEF DESKTOP\bin\Debug\SOEF.application
