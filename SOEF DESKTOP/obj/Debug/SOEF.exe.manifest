@@ -133,19 +133,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hPUeyDwdHagkOWXSPwjxjFOn5pmyrfliZatYsF6RCtA=</dsig:DigestValue>
+        <dsig:DigestValue>yWyMh/tsx5/D+zSOFFwi0VGjg1dlpQHRZm5Xr/v4ZjM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SOEF.exe" size="275912">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SOEF.exe" size="276424">
       <assemblyIdentity name="SOEF" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>djPC9EpUTnzUsBnVdsoY8C68znwyUPlTo5aofbKKDK0=</dsig:DigestValue>
+        <dsig:DigestValue>fechjbFVXFLytJl8nZbSK07OCafT1KN9Z0jsCAmdde0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -170,13 +170,13 @@
       <dsig:DigestValue>dPjow2XWk6oa4JpjLkQ149MsXaavi6h+Y6/9mwBncww=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="SOFDB.sdf" size="589824">
+  <file name="SOFDB.sdf" size="655360">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>UghbpL0d076arIRUOPHq2JJwA5S97Tgblveczs8UsII=</dsig:DigestValue>
+      <dsig:DigestValue>yyBC7WwF1EW8o+MVFhpiK2JzJSMmG/f+nBSghKJjyyo=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

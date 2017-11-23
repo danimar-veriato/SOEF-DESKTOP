@@ -1930,7 +1930,24 @@ namespace ORCAMENTOS_FOCKINK
                 }
                 else
                 {
+                    //Reseta os campos da tela
+                    comboE10_1TensaoTri.SelectedIndex = 0;
+                    comboE10_1Freq.SelectedIndex = 0;
+                    txtE10_1OutraFreq.Text = "";
+                    comboE10_1DadosAmbientais.SelectedIndex = 0;
+                    radioE10_1NormativaS.Checked = false;
+                    radioE10_1NormativaN.Checked = false;
+                    comboE10_1TipoProd.SelectedIndex = 0;
+                    txtE10_1OutroProd.Text = "";
+                    comboE10_1Umidade.SelectedIndex = 0;
+                    comboE10_1TipoAeracao.SelectedIndex = 0;
+                    comboE10_1TipoInstalacao.SelectedIndex = 0;
+                    comboE10_1MatTampa.SelectedIndex = 0;
+                    comboE10_1TipoTampa.SelectedIndex = 0;
+                    comboE10_1MatCasaMata.SelectedIndex = 0;
+                    txtE10_1Obs.Text = "";
                     btnE10_1Excluir.Visible = false;
+                    tabNovaSolicitacao.SelectedTab.Name = "tabEscopo10_1";
                 }
             }
             catch (Exception)
@@ -2165,7 +2182,24 @@ namespace ORCAMENTOS_FOCKINK
                 }
                 else
                 {
+                    //Reseta campos da tela
+                    combo10_2DadosAmbientais.SelectedIndex = 0;
+                    combo10_2Produto.SelectedIndex = 0;
+                    txt10_2OutroProd.Text = "";
+                    txt10_2OutroProd.Enabled = false;
+                    check10_2Silos.Checked = false;
+                    check10_2Armazem.Checked = false;
+                    combo10_2CapacidadeSilo.SelectedIndex = 0;
+                    msgPenduloCentral.Visible = false;
+                    radioPenduloCentralS.Checked = false;
+                    radioPenduloCentralN.Checked = false;
+                    text10_2CaractisticaEspalhadorS.Text = "";
+                    text10_2CaractisticaEspalhadorA.Text = "";
+                    combo10_2Transportadores.SelectedIndex = 0;
+                    combo10_2CapacidadeArmazem.SelectedIndex = 0;
+                    txt10_2Obs.Text = "";
                     btn10_2Excluir.Visible = false;
+                    tabNovaSolicitacao.SelectedTab.Name = "tabEscopo10_2";
                 }
             }
             catch (Exception)
@@ -4405,7 +4439,6 @@ namespace ORCAMENTOS_FOCKINK
             }
             else if(tabsEscopo10.SelectedTab.Name == "tabEscopo10_2")
             {
-                inicializaCamposE10_2();
                 if (AcaoTela == "N")
                 {
                     SOEF_CLASS.Escopo_Valor_Comum EscopoValorComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
@@ -4457,6 +4490,10 @@ namespace ORCAMENTOS_FOCKINK
                                 txt10_2OutroProd.Text = dr["OUTRO_PRODUTO"].ToString();
                             }
                         }
+                    }
+                    else
+                    {
+                        inicializaCamposE10_2();
                     }
                 }
                 else
@@ -4812,8 +4849,8 @@ namespace ORCAMENTOS_FOCKINK
                 {
                     MessageBox.Show("Registro excluído com sucesso!");
                     btnE10_1Excluir.Visible = false;
-                    checkEscopo10.Checked = false;
-                    checkEscopo10.Enabled = true;
+                    //checkEscopo10.Checked = false;
+                    //checkEscopo10.Enabled = true;
                     listaEscopo10_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 }
                 else
@@ -5280,9 +5317,10 @@ namespace ORCAMENTOS_FOCKINK
                 {
                     MessageBox.Show("Registro excluído com sucesso!");
                     btn10_2Excluir.Visible = false;
-                    checkEscopo10.Checked = false;
-                    checkEscopo10.Enabled = true;
                     listaEscopo10_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    //checkEscopo10.Checked = false;
+                    //checkEscopo10.Enabled = true;
+                    // Fazer uma função que verifica se algum dos escopos 10_1, 2, 3 ou 4 estão preenchidos, habilita o check na tela dos escopos
                 }
                 else
                 {
