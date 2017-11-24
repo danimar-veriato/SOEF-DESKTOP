@@ -50,6 +50,7 @@
     <Compile Include="Escopo_01.cs" />
     <Compile Include="Escopo_10_1.cs" />
     <Compile Include="Escopo_10_2.cs" />
+    <Compile Include="Escopo_10_3.cs" />
     <Compile Include="Escopo_18.cs" />
     <Compile Include="Escopo_18_1.cs" />
     <Compile Include="Escopo_18_2.cs" />

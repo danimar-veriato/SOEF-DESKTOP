@@ -4405,6 +4405,9 @@ namespace ORCAMENTOS_FOCKINK
             }
         }
 
+        /// <summary>
+        /// Inicializa os campos do Escopo 10_1
+        /// </summary>
         private void inicializaCamposE10_1()
         {
             comboE10_1TensaoTri.SelectedIndex = 0;
@@ -4421,6 +4424,10 @@ namespace ORCAMENTOS_FOCKINK
             comboE10_1MatCasaMata.SelectedIndex = 0;            
         }
 
+
+        /// <summary>
+        /// Inicializa os campos do Escopo 10_2
+        /// </summary>
         private void inicializaCamposE10_2()
         {
             combo10_2CapacidadeArmazem.SelectedIndex = 0;
@@ -4428,6 +4435,16 @@ namespace ORCAMENTOS_FOCKINK
             combo10_2DadosAmbientais.SelectedIndex = 0;
             combo10_2Produto.SelectedIndex = 0;
             combo10_2Transportadores.SelectedIndex = 0;
+
+        }
+
+
+        private void inicializaCamposE10_3()
+        {
+            combo10_3Tensao.SelectedIndex = 0;
+            combo10_3Freq.SelectedIndex = 0;
+            combo10_3DadosAmbientais.SelectedIndex = 0;
+            combo10_3Local.SelectedIndex = 0;
 
         }
 
@@ -4500,7 +4517,13 @@ namespace ORCAMENTOS_FOCKINK
                 {
                     listaEscopo10_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 }
-            }
+            }//Fim Escopo 10_2
+            else if (tabsEscopo10.SelectedTab.Name == "tabEscopo10_3")
+            {
+                inicializaCamposE10_3();
+
+
+            }//Fim Escopo 10_3
         }
 
         private void btnE10_1Salvar_Click(object sender, EventArgs e)
@@ -5328,6 +5351,183 @@ namespace ORCAMENTOS_FOCKINK
                 }
             }
         }
+
+        private void combo10_3Freq_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(combo10_3Freq.SelectedIndex == 3)
+            {
+                txt10_3OutraFreq.Enabled = true;
+            }
+            else
+            {
+                txt10_3OutraFreq.Text = "";
+                txt10_3OutraFreq.Enabled = false;
+            }
+        }
+
+        private void combo10_3Local_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (combo10_3Local.SelectedIndex == 1 || combo10_3Local.SelectedIndex == 2 || combo10_3Local.SelectedIndex == 3)
+            {
+                txt10_3Tag.Enabled = true;
+                radio10_3ProjetoN.Enabled = true;
+                radio10_3ProjetoS.Enabled = true;
+                txt10_3Local.Text = "";
+                txt10_3Local.Enabled = false;
+            }
+            else if(combo10_3Local.SelectedIndex == 4)
+            {
+                txt10_3Local.Enabled = true;
+                txt10_3Tag.Enabled = true;
+                radio10_3ProjetoN.Enabled = true;
+                radio10_3ProjetoS.Enabled = true;
+            }
+            else
+            {
+                txt10_3Local.Text = "";
+                txt10_3Local.Enabled = false;
+                txt10_3Tag.Text = "";
+                txt10_3Tag.Enabled = false;
+                radio10_3ProjetoN.Checked = false;
+                radio10_3ProjetoN.Enabled = false;
+                radio10_3ProjetoS.Checked = false;
+                radio10_3ProjetoS.Enabled = false;
+            }
+        }
+
+        private void btn10_3Salvar_Click(object sender, EventArgs e)
+        {
+            string erros = "";
+
+            //Verificar se já foi cadatrado a tabela de Renovadores de Ar
+
+            if (combo10_3Tensao.SelectedIndex == 0)
+            {
+                erros += "Informe a Tensão Trifásica\n";
+            }
+            if (combo10_3Freq.SelectedIndex == 0)
+            {
+                erros += "Informe a Frequência\n";
+            }
+            else if (combo10_3Freq.SelectedIndex == 3)
+            {
+                if (string.IsNullOrEmpty(txt10_3OutraFreq.Text))
+                {
+                    erros += "Informe o campo Outra Frequência\n";
+                }
+            }
+            if (combo10_3DadosAmbientais.SelectedIndex == 0)
+            {
+                erros += "Informe o campo Dados Ambientais";
+            }
+
+            if (!string.IsNullOrEmpty(erros))
+            {
+                MessageBox.Show("Painel de erros:\n" + erros);
+            }
+            else
+            {
+                string TensaoTrifasica = "";
+                string Frequencia = "";
+                string OutraFrequencia = "";
+                string DadosAmbientais = "";
+
+                //Validação campos
+                TensaoTrifasica = combo10_3Tensao.SelectedIndex.ToString();
+                Frequencia = combo10_3Freq.SelectedIndex.ToString();
+                OutraFrequencia = txt10_3OutraFreq.Text;
+                //Dados Ambientais
+                if (combo10_3DadosAmbientais.SelectedIndex == 1)
+                {
+                    DadosAmbientais = "U";
+                }
+                else if (combo10_3DadosAmbientais.SelectedIndex == 2)
+                {
+                    DadosAmbientais = "M";
+                }
+                else if (combo10_3DadosAmbientais.SelectedIndex == 3)
+                {
+                    DadosAmbientais = "C";
+                }
+                else if (combo10_3DadosAmbientais.SelectedIndex == 4)
+                {
+                    DadosAmbientais = "N";
+                }
+
+
+            }
+
+        }
+
+        private void btn10_3Renovadores_Click(object sender, EventArgs e)
+        {
+            string erros = "";
+
             
+            if (combo10_3Local.SelectedIndex == 0)
+            {
+                erros += "Selecione um local nas opções disponíveis ou descreva um local no campo disponível para este fim caso seja um local diferente dos disponíveis.";
+            }
+            else
+            {
+                if (radio10_3ProjetoS.Checked == false && radio10_3ProjetoN.Checked == false)
+                {
+                    erros += "O campo Tem no Projeto, da montagem da relação de Renovadores deve ser informado.";
+                }
+            }
+            if (!string.IsNullOrEmpty(erros))
+            {
+                MessageBox.Show("Painel de erros:\n" + erros);
+            }
+            else
+            {
+                //Validando dados
+                string Local = ""; //T, S, P, D
+                string Tag = "";
+                string RenovadorProjeto = "";
+                string Comprimento = "";
+                string Largura = "";
+                string Altura = "";
+
+                //Local
+                if(combo10_3Local.SelectedIndex == 1)
+                {
+                    Local = "T";
+                }
+                else if (combo10_3Local.SelectedIndex == 2)
+                {
+                    Local = "S";
+                }
+                else if (combo10_3Local.SelectedIndex == 3)
+                {
+                    Local = "P";
+                }
+                else if (combo10_3Local.SelectedIndex == 4)
+                {
+                    Local = txt10_3Local.Text;
+                }                
+                //TAG
+                Tag = txt10_3Tag.Text;
+                //Tem Projeto
+                if (radio10_3ProjetoS.Checked)
+                {
+                    RenovadorProjeto = "S";
+                }
+                else if (radio10_3ProjetoN.Checked)
+                {
+                    RenovadorProjeto = "N";
+                }
+                //Comprimento
+                Comprimento = txt10_3Compr.Text;
+                //Largura
+                Largura = txt10_3Largura.Text;
+                //Altura 
+                Altura = txt10_3Altura.Text;
+
+
+
+            }
+        }
     }
 }
