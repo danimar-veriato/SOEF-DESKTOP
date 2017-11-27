@@ -62,6 +62,7 @@ namespace ORCAMENTOS_FOCKINK
                 updateBases.atualizaTipoNegocio(); //Atualiza lista de tipos de negócios - Cabeçalho Solicitação
                 updateBases.atualizaIndicadorNegocio(this.empresa_logada); //Atualiza lista de indicador de negócios - Cabeçalho Solicitação
                 updateBases.atualizaEventoPagamento();
+                updateBases.atualizaDomRefCodes();
                 MessageBox.Show("Base de dados atualizada com sucesso.", "Sincronização de dados", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 lblLoading.Text = "";
             }

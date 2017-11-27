@@ -233,6 +233,9 @@
     <None Include="Service References\Representantes\ORCAMENTOS_FOCKINK.Representantes.listaContatosClientesRepresentanteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\Representantes\ORCAMENTOS_FOCKINK.Representantes.listaDomobrRefCodesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\Representantes\ORCAMENTOS_FOCKINK.Representantes.listaEmpresaUsuarioSOEFResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

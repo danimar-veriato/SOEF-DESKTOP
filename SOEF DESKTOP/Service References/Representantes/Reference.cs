@@ -78,10 +78,18 @@ namespace ORCAMENTOS_FOCKINK.Representantes {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/listaEventoPagamento", ReplyAction="*")]
         System.Threading.Tasks.Task<ORCAMENTOS_FOCKINK.Representantes.listaEventoPagamentoResponse> listaEventoPagamentoAsync(ORCAMENTOS_FOCKINK.Representantes.listaEventoPagamentoRequest request);
+        
+        // CODEGEN: Generating message contract since message listaDomobrRefCodesRequest has headers
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/listaDomobrRefCodes", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        ORCAMENTOS_FOCKINK.Representantes.listaDomobrRefCodesResponse listaDomobrRefCodes(ORCAMENTOS_FOCKINK.Representantes.listaDomobrRefCodesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/listaDomobrRefCodes", ReplyAction="*")]
+        System.Threading.Tasks.Task<ORCAMENTOS_FOCKINK.Representantes.listaDomobrRefCodesResponse> listaDomobrRefCodesAsync(ORCAMENTOS_FOCKINK.Representantes.listaDomobrRefCodesRequest request);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2053.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -410,6 +418,44 @@ namespace ORCAMENTOS_FOCKINK.Representantes {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listaDomobrRefCodes", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class listaDomobrRefCodesRequest {
+        
+        [System.ServiceModel.MessageHeaderAttribute(Namespace="http://tempuri.org/")]
+        public ORCAMENTOS_FOCKINK.Representantes.Seguranca Seguranca;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public string rvDomain;
+        
+        public listaDomobrRefCodesRequest() {
+        }
+        
+        public listaDomobrRefCodesRequest(ORCAMENTOS_FOCKINK.Representantes.Seguranca Seguranca, string rvDomain) {
+            this.Seguranca = Seguranca;
+            this.rvDomain = rvDomain;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listaDomobrRefCodesResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class listaDomobrRefCodesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public System.Data.DataSet listaDomobrRefCodesResult;
+        
+        public listaDomobrRefCodesResponse() {
+        }
+        
+        public listaDomobrRefCodesResponse(System.Data.DataSet listaDomobrRefCodesResult) {
+            this.listaDomobrRefCodesResult = listaDomobrRefCodesResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface RepresentantesSoapChannel : ORCAMENTOS_FOCKINK.Representantes.RepresentantesSoap, System.ServiceModel.IClientChannel {
     }
@@ -620,6 +666,31 @@ namespace ORCAMENTOS_FOCKINK.Representantes {
             ORCAMENTOS_FOCKINK.Representantes.listaEventoPagamentoRequest inValue = new ORCAMENTOS_FOCKINK.Representantes.listaEventoPagamentoRequest();
             inValue.Seguranca = Seguranca;
             return ((ORCAMENTOS_FOCKINK.Representantes.RepresentantesSoap)(this)).listaEventoPagamentoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ORCAMENTOS_FOCKINK.Representantes.listaDomobrRefCodesResponse ORCAMENTOS_FOCKINK.Representantes.RepresentantesSoap.listaDomobrRefCodes(ORCAMENTOS_FOCKINK.Representantes.listaDomobrRefCodesRequest request) {
+            return base.Channel.listaDomobrRefCodes(request);
+        }
+        
+        public System.Data.DataSet listaDomobrRefCodes(ORCAMENTOS_FOCKINK.Representantes.Seguranca Seguranca, string rvDomain) {
+            ORCAMENTOS_FOCKINK.Representantes.listaDomobrRefCodesRequest inValue = new ORCAMENTOS_FOCKINK.Representantes.listaDomobrRefCodesRequest();
+            inValue.Seguranca = Seguranca;
+            inValue.rvDomain = rvDomain;
+            ORCAMENTOS_FOCKINK.Representantes.listaDomobrRefCodesResponse retVal = ((ORCAMENTOS_FOCKINK.Representantes.RepresentantesSoap)(this)).listaDomobrRefCodes(inValue);
+            return retVal.listaDomobrRefCodesResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ORCAMENTOS_FOCKINK.Representantes.listaDomobrRefCodesResponse> ORCAMENTOS_FOCKINK.Representantes.RepresentantesSoap.listaDomobrRefCodesAsync(ORCAMENTOS_FOCKINK.Representantes.listaDomobrRefCodesRequest request) {
+            return base.Channel.listaDomobrRefCodesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ORCAMENTOS_FOCKINK.Representantes.listaDomobrRefCodesResponse> listaDomobrRefCodesAsync(ORCAMENTOS_FOCKINK.Representantes.Seguranca Seguranca, string rvDomain) {
+            ORCAMENTOS_FOCKINK.Representantes.listaDomobrRefCodesRequest inValue = new ORCAMENTOS_FOCKINK.Representantes.listaDomobrRefCodesRequest();
+            inValue.Seguranca = Seguranca;
+            inValue.rvDomain = rvDomain;
+            return ((ORCAMENTOS_FOCKINK.Representantes.RepresentantesSoap)(this)).listaDomobrRefCodesAsync(inValue);
         }
     }
 }

@@ -125,7 +125,6 @@ namespace ORCAMENTOS_FOCKINK
                 if (dsRetorno != null && dsRetorno.Tables.Count > 0)
                 {
                     retorno = mBD.deleteSOF("DELETE FROM DOM_TIPO_NEGOCIO");
-                  //  MessageBox.Show("Retorno Tipo Negócio: " + retorno);
                     foreach (DataRow dr in dsRetorno.Tables[0].Rows)
                     {
                         string sql = "INSERT INTO [DOM_TIPO_NEGOCIO] ";
@@ -133,7 +132,6 @@ namespace ORCAMENTOS_FOCKINK
                         sql += " VALUES (" + dr["CODIGO"].ToString() + ", '" + dr["DESCRICAO"].ToString() + "') ";
                         retorno = mBD.insertSOF(sql);
                     }
-                   // MessageBox.Show("Rows Tipo Negócio: " + dsRetorno.Tables[0].Rows.Count);
                 }
             }
             catch (Exception exc)
@@ -167,7 +165,6 @@ namespace ORCAMENTOS_FOCKINK
                 if (dsRetorno != null && dsRetorno.Tables.Count > 0)
                 {
                     retorno = mBD.deleteSOF("DELETE FROM DOM_INDICADOR_NEGOCIO WHERE EMPR_CODIGO = '" + p_empr_codigo + "'");
-                 //   MessageBox.Show("Retorno Indicador Negócio: " + retorno);
                     foreach (DataRow dr in dsRetorno.Tables[0].Rows)
                     {
                         string sql = "INSERT INTO [DOM_INDICADOR_NEGOCIO] ";
@@ -175,7 +172,6 @@ namespace ORCAMENTOS_FOCKINK
                         sql += " VALUES ('" + dr["EMPR_CODIGO"].ToString() + "', " + dr["DPES_CODIGO"].ToString() + ", '" + dr["RAZAO_SOCIAL"].ToString() + "', '" + dr["COD_RAZAO_SOCIAL"].ToString() + "') ";
                         retorno = mBD.insertSOF(sql);
                     }
-                  //  MessageBox.Show("Rows Indicador Negócio: " + dsRetorno.Tables[0].Rows.Count);
                 }
             }
             catch (Exception exc)
@@ -218,6 +214,49 @@ namespace ORCAMENTOS_FOCKINK
                         retorno = mBD.insertSOF(sql);
                     }
                    // MessageBox.Show("Rows Evento Pagamento: " + dsRetorno.Tables[0].Rows.Count);
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+            finally
+            {
+                mBD.closeConnection();
+            }
+        }
+
+
+        /// <summary>
+        /// Método que atualiza a tabela DOMOBR_REF_CODES
+        /// </summary>
+        public void atualizaDomRefCodes()
+        {
+            int retorno = 0;
+            //Chama a classe que de conexão com o SQL Server
+            ManipulaBD mBD = new ManipulaBD();
+            try
+            {
+                //Busca a lista de clientes no WebService
+                Representantes.Seguranca login = new Representantes.Seguranca(); //Login = Usuário e Senha para acessar o método do WebService
+                login.Usuario = "Fockink";
+                login.Senha = "fockink147@1!";
+                Representantes.RepresentantesSoapClient RefCodes = new Representantes.RepresentantesSoapClient();
+                DataSet dsRetorno = new DataSet();
+                dsRetorno = RefCodes.listaDomobrRefCodes(login, "FORMA_PAGTO");
+
+                if (dsRetorno != null && dsRetorno.Tables.Count > 0)
+                {
+                    retorno = mBD.deleteSOF("DELETE FROM [DOMOBR_REF_CODES]");
+                    foreach (DataRow dr in dsRetorno.Tables[0].Rows)
+                    {
+                        string sql = "INSERT INTO [DOMOBR_REF_CODES] ";
+                        sql += "([VALOR], [DESCRICAO], [RV_DOMAIN]) ";
+                        sql += " VALUES (" + dr["VALOR"].ToString() + ", ";
+                        sql += " '" + dr["DESCRICAO"].ToString() + "', ";
+                        sql += " '" + dr["RV_DOMAIN"].ToString() + "')  ";
+                        retorno = mBD.insertSOF(sql);
+                    }
                 }
             }
             catch (Exception exc)
