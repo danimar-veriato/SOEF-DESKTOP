@@ -61,6 +61,8 @@ namespace ORCAMENTOS_FOCKINK
         public string indicComissao;
         public string margemDesconto;
         public string moeda;
+        public string informarAliqImposto;
+        public string considerarTaxaFlat;
 
         public static string CodCliente { get; set; }
         public static string CodClienteObra { get; set; }
@@ -79,7 +81,7 @@ namespace ORCAMENTOS_FOCKINK
                 representante = param_form_representante;
                 //Inicializa combos cabeçalho
                 inicializaCombos();
-                //Seta a Revisão p/ Novo Registro como 1 por default
+                //Seta a Revisão p/ Novo Registro como R0C0 por default
                 this.NumRevisaoSolic = "R0C0";
                 //Oculta as tabs do cabeçalho
                 tbCabecalho.Controls.Remove(tabCabecalhoCondPgto);
@@ -760,7 +762,7 @@ namespace ORCAMENTOS_FOCKINK
 
         private void comboCabPagmentos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboCabPagmentos.SelectedIndex == 2 || comboCabPagmentos.SelectedIndex == 3)
+            if (comboCabPagmentos.SelectedValue.ToString()  == "F" || comboCabPagmentos.SelectedValue.ToString() == "P")
             {
                 txtCabFinanciamento.Enabled = true;
                 txtCabInstFinanceira.Enabled = true;
@@ -786,10 +788,6 @@ namespace ORCAMENTOS_FOCKINK
             {
                 msgErro += "Finalidade não informada\n";
             }
-            if (string.IsNullOrEmpty(txtVlrEstimadoEscopo.Text))
-            {
-                msgErro += "Valor Estimado Escopo não informado\n";
-            }
             if(comboCabPadraoSolucao.SelectedIndex == 0)
             {
                 msgErro += "Campo Padrão Solução não informado\n";
@@ -814,6 +812,15 @@ namespace ORCAMENTOS_FOCKINK
             {
                 msgErro += "Campo Incentivo Fiscal não informado\n";
             }
+            if(!radioCabeAliqImpostoS.Checked && !radioCabeAliqImpostoN.Checked)
+            {
+                msgErro += "Marque uma opção no campo Informar Aliq. Imposto\n";
+            }
+            if(!radioCabeConsiderarFlatS.Checked && !radioCabeConsiderarFlatN.Checked)
+            {
+                msgErro += "Marque uma opção no campo Considerar Taxa Flat\n";
+            }
+
             if( (comboCabIndicNegocio.SelectedIndex != 0) && (string.IsNullOrEmpty(txtCabComissaoIndic.Text)) )
             {
                 msgErro += "Indicador de comissão não informado\n";
@@ -833,7 +840,7 @@ namespace ORCAMENTOS_FOCKINK
                     this.nome_projeto, this.cod_tecnico, CodPessoaContatoTecnico, this.cod_comercial, CodPessoaContatoComercial, this.tipo_negocio,
                     this.finalidade, this.empreendimento, this.idioma, this.outro_idioma, this.valor, this.dt_obra, this.dt_proposta, this.concorrentes, this.resp_padrao_solucao,
                     this.frete, this.faturamento, this.vendaPara, this.contICMS, this.incentFiscal, this.desc_incentivo, this.formaPagamento, this.financiamento, this.instFinanceira,
-                    this.indic_empr_codigo, this.indic_dpes_codigo, this.indicComissao, this.margemDesconto, this.moeda, this.cod_representante, this.empr_representante);
+                    this.indic_empr_codigo, this.indic_dpes_codigo, this.indicComissao, this.margemDesconto, this.moeda, this.cod_representante, this.empr_representante, this.informarAliqImposto, this.considerarTaxaFlat);
                     //Busca o número da solicitação cadastrada
                     this.numero_solic = Convert.ToInt32(cSolicitacao.getNumeroSolicitacao()) - 1;
                     //Ativa a Aba das condições de pagamento
@@ -913,9 +920,28 @@ namespace ORCAMENTOS_FOCKINK
                 this.incentFiscal = "N";
             }
             this.desc_incentivo = txtCabIncentivo.Text;
-            this.formaPagamento = comboCabPagmentos.SelectedIndex.ToString();
+            this.formaPagamento = comboCabPagmentos.SelectedValue.ToString();
             this.financiamento = txtCabFinanciamento.Text;
             this.instFinanceira = txtCabInstFinanceira.Text;
+
+            //Aliq. Imposto
+            if (radioCabeAliqImpostoS.Checked)
+            {
+                this.informarAliqImposto = "S";
+            }
+            else
+            {
+                this.informarAliqImposto = "N";
+            }
+            //Taxa Flat
+            if (radioCabeConsiderarFlatS.Checked)
+            {
+                this.considerarTaxaFlat = "S";
+            }
+            else
+            {
+                this.considerarTaxaFlat = "N";
+            }
             this.indic_dpes_codigo = comboCabIndicNegocio.SelectedValue.ToString();
             this.indic_empr_codigo = empr_representante;
             if (string.IsNullOrEmpty(txtCabComissaoIndic.Text))
@@ -1092,7 +1118,8 @@ namespace ORCAMENTOS_FOCKINK
                         radioIncentFiscalSim.Checked = false;
                         radioIncentFiscalNao.Checked = true;
                     }
-                    comboCabPagmentos.SelectedValue = Convert.ToInt32(dt.Rows[0]["FORMA_PAGAMENTO"].ToString());
+                    comboCabPagmentos.SelectedValue = dt.Rows[0]["FORMA_PAGAMENTO"].ToString();
+                    comboCabPagmentos.Text = dt.Rows[0]["DESC_FORMA_PAG"].ToString();
                     
                     if (dt.Rows[0]["FORMA_PAGAMENTO"].ToString() == "2" || dt.Rows[0]["FORMA_PAGAMENTO"].ToString() == "3")
                     {
@@ -1108,6 +1135,25 @@ namespace ORCAMENTOS_FOCKINK
                         txtCabInstFinanceira.Enabled = false;
                         txtCabInstFinanceira.Text = "";
                     }
+                    //Aliq. Imposto
+                    if(dt.Rows[0]["INFORMAR_ALIQ_IMPOSTO"].ToString() == "S")
+                    {
+                        radioCabeAliqImpostoS.Checked = true;
+                    }
+                    else
+                    {
+                        radioCabeAliqImpostoN.Checked = true;
+                    }
+                    //Taxa Flat
+                    if(dt.Rows[0]["CONSIDERAR_TAXA_FLAT"].ToString() == "S")
+                    {
+                        radioCabeConsiderarFlatS.Checked = true;
+                    }
+                    else
+                    {
+                        radioCabeConsiderarFlatN.Checked = true;
+                    }
+
                     if (!string.IsNullOrEmpty(dt.Rows[0]["INDIC_DPES_CODIGO"].ToString()))
                     {
                         //Busca o Indicador da Solicitação atual, se estiver cadastrado
@@ -1542,19 +1588,15 @@ namespace ORCAMENTOS_FOCKINK
             comboVendaP.SelectedValue = 0;
 
             //Combo Forma Pagamento
-            List<Combo> comboFormaPag = new List<Combo>();
-            comboFormaPag.Add(new Combo(0, "SELECIONE..."));
-            comboFormaPag.Add(new Combo(1, "RECURSOS PRÓPRIOS"));
-            comboFormaPag.Add(new Combo(2, "FINANCIAMENTO"));
-            comboFormaPag.Add(new Combo(3, "RECURSOS PRÓPRIOS/FINANCIAMENTOS"));
-            comboFormaPag.Add(new Combo(4, "CARTA FIANÇA"));
-            comboFormaPag.Add(new Combo(5, "SEGURO GARANTIA"));
-            comboFormaPag.Add(new Combo(6, "CARTA PERFORMANCE"));
-            comboCabPagmentos.DataSource = comboFormaPag;
-            comboCabPagmentos.ValueMember = "id";
-            comboCabPagmentos.DisplayMember = "valor";
-            comboCabPagmentos.SelectedValue = 0;
-
+            DataTable dt1 = csolicitacao.getFormaPagamento(null);
+            DataRow dr2 = dt1.NewRow();
+            dr2["VALOR"] = 0;
+            dr2["DESCRICAO"] = "SELECIONE...";
+            dt1.Rows.InsertAt(dr2, 0);
+            comboCabPagmentos.DataSource = dt1;
+            comboCabPagmentos.ValueMember = "VALOR";
+            comboCabPagmentos.DisplayMember = "DESCRICAO";
+            
             //Combo Moeda
             List<Combo> comboMoeda = new List<Combo>();
             comboMoeda.Add(new Combo(1, "REAIS"));
@@ -1588,10 +1630,6 @@ namespace ORCAMENTOS_FOCKINK
             if (comboCabFinalidade.SelectedIndex == 0)
             {
                 msgErro += "Finalidade não informada\n";
-            }
-            if (string.IsNullOrEmpty(txtVlrEstimadoEscopo.Text))
-            {
-                msgErro += "Valor Estimado Escopo não informado\n";
             }
             if (comboCabPadraoSolucao.SelectedIndex == 0)
             {
@@ -1630,15 +1668,15 @@ namespace ORCAMENTOS_FOCKINK
                 //Seta as variáveis do insert
                 setValores();
                 CadSolicitacao cSolicitacao = new CadSolicitacao();
-                cSolicitacao.setSolicitacao("U", this.numero_solic.ToString(), "1", status_solic, this.txtCabecalhoCodCliente.Text, this.cod_obra, this.observacao,
+                cSolicitacao.setSolicitacao("U", this.numero_solic.ToString(), this.NumRevisaoSolic, status_solic, this.txtCabecalhoCodCliente.Text, this.cod_obra, this.observacao,
                 this.nome_projeto, this.cod_tecnico, CodPessoaContatoTecnico, this.cod_comercial, CodPessoaContatoComercial, this.tipo_negocio,
                 this.finalidade, this.empreendimento, this.idioma, this.outro_idioma, this.valor, this.dt_obra, this.dt_proposta, this.concorrentes, this.resp_padrao_solucao,
                 this.frete, this.faturamento, this.vendaPara, this.contICMS, this.incentFiscal, this.desc_incentivo, this.formaPagamento, this.financiamento, this.instFinanceira,
-                this.indic_empr_codigo, this.indic_dpes_codigo, this.indicComissao, this.margemDesconto, this.moeda, this.cod_representante, this.empr_representante);
+                this.indic_empr_codigo, this.indic_dpes_codigo, this.indicComissao, this.margemDesconto, this.moeda, this.cod_representante, this.empr_representante, this.informarAliqImposto, this.considerarTaxaFlat);
 
                 MessageBox.Show("Alterações realizadas com sucesso!", "Cadastro de Solicitação", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //Traz os dados da solicitação gravada para os campos da tela
-                caregaCampos(empr_representante, numero_solic.ToString(), "1");
+                caregaCampos(empr_representante, numero_solic.ToString(), this.NumRevisaoSolic);
             }
         }
 
@@ -2869,14 +2907,14 @@ namespace ORCAMENTOS_FOCKINK
             //Instancia a classe do Escopo Valor Comum
             SOEF_CLASS.Escopo_Valor_Comum EscopoValorComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
 
-
+            //Lista de Escopos Preenchidos
             if (tabNovaSolicitacao.SelectedTab.Name == "tabDefEscopo")
             {
                 ////Função que verifica os escopos existentes e ativa eles
                 verificaEscopos(this.numero_solic.ToString(), this.NumRevisaoSolic);
             }
 
-
+            //Escopo 01
             if(tabNovaSolicitacao.SelectedTab.Name == "tabEscopo1")
             {
                 if(AcaoTela == "N")
@@ -2968,7 +3006,7 @@ namespace ORCAMENTOS_FOCKINK
                 }           
             } //Fim Escopo 01
 
-
+            //Escopo 10
             if(tabNovaSolicitacao.SelectedTab.Name == "tabEscopo10")
             {
                 inicializaCamposE10_1();
@@ -3052,8 +3090,7 @@ namespace ORCAMENTOS_FOCKINK
                 }
             }
 
-
-
+            //Escopo 18
             if (tabNovaSolicitacao.SelectedTab.Name == "tabEscopo18")
             {
                 //Novo Registro ou Consulta/Alteração
@@ -3069,6 +3106,7 @@ namespace ORCAMENTOS_FOCKINK
                 }
             } 
 
+            //Escopo 19
             if (tabNovaSolicitacao.SelectedTab.Name == "tabEscopo19")
             {
                 //Novo Registro ou Consulta/Alteração
@@ -3083,6 +3121,8 @@ namespace ORCAMENTOS_FOCKINK
                     btnEsc19Excluir.Visible = true;
                 }
             }
+
+            //Escopo 20
             else if(tabNovaSolicitacao.SelectedTab.Name == "tabEscopo20")
             {
                 listaEscopo20(this.numero_solic.ToString(), this.NumRevisaoSolic);

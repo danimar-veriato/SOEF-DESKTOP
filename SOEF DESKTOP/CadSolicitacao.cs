@@ -48,7 +48,9 @@ namespace ORCAMENTOS_FOCKINK
         private string moeda { get; set; }
         private string cod_repres { get; set; }
         private string empr_repres { get; set; }
-        
+        private string aliq_imposto { get; set; }
+        private string taxa_flat { get; set; }
+
         //Campos DOM_SOLIC_ORC_COND_PGTO
         private string revisaoSolic { get; set; }
         private string seqSolic { get; set; }
@@ -81,7 +83,7 @@ namespace ORCAMENTOS_FOCKINK
                 mBD.closeConnection();
             }
         }
-
+        
 
         /// <summary>
         /// Busca o próximo número de solicitação
@@ -327,6 +329,35 @@ namespace ORCAMENTOS_FOCKINK
 
 
         /// <summary>
+        /// Busca as formas de pagamento da tabela DOMOBR_REF_CODES
+        /// </summary>
+        /// <returns></returns>
+        public DataTable getFormaPagamento(string pVlr)
+        {
+            ManipulaBD mBD = new ManipulaBD();
+            mBD.openConnection();
+            try
+            {
+                string sql = "";
+                sql += "SELECT [VALOR], [DESCRICAO] FROM DOMOBR_REF_CODES";
+                if (!string.IsNullOrEmpty(pVlr))
+                {
+                    sql += " WHERE [VALOR] = '" + pVlr + "'";
+                }
+                return mBD.selectListaSOF(sql, "DOMOBR_REF_CODES");
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                mBD.closeConnection();
+            }
+        }
+
+
+        /// <summary>
         /// Realiza a gravação/alteração do registro de uma solicitação
         /// </summary>
         /// /// <param name="p_act">I - Insert U - Update</param>
@@ -366,7 +397,7 @@ namespace ORCAMENTOS_FOCKINK
         string p_finalidade, string p_empreendimento, string p_idioma, string p_outro_idioma, string p_valor, string p_dt_entrega_obra,
         string p_dt_proposta, string p_concorrentes, string p_resp_padrao_solucao, string p_frete, string p_faturamento, string p_destino_material, string p_contICMS,
         string p_incentFiscal, string p_desc_incentivo, string p_forma_pagamento, string p_financiamento, string p_instFinanceira, string p_indic_empr_codigo, 
-        string p_indic_dpes_codigo, string p_indic_comissao, string p_desconto, string p_moeda, string p_cod_repres, string p_empr_repres)
+        string p_indic_dpes_codigo, string p_indic_comissao, string p_desconto, string p_moeda, string p_cod_repres, string p_empr_repres, string pAliqImposto, string pTaxaFlat)
         {
             //Atualizando o valor nos atributos da classe
             this.numero_solic = p_num_solic;
@@ -404,6 +435,8 @@ namespace ORCAMENTOS_FOCKINK
             this.desconto = p_desconto;
             this.empr_repres = p_empr_repres;
             this.cod_repres = p_cod_repres;
+            this.aliq_imposto = pAliqImposto;
+            this.taxa_flat = taxa_flat;
 
             int retorno;
 
@@ -452,7 +485,9 @@ namespace ORCAMENTOS_FOCKINK
                     sql += ",[MOEDA_PROPOSTA] ";
                     sql += ",[DT_PROPOSTA] ";
                     sql += ",[REPRES_EMPR_CODIGO] ";
-                    sql += ",[REPRES_DPES_CODIGO]) ";
+                    sql += ",[REPRES_DPES_CODIGO] ";
+                    sql += ",[INFORMAR_ALIQ_IMPOSTO] ";
+                    sql += ",[CONSIDERAR_TAXA_FLAT]) ";
                     sql += "VALUES ";
                     sql += "(" + p_num_solic + ", ";
                     sql += "'" + p_revisao + "', ";
@@ -485,7 +520,14 @@ namespace ORCAMENTOS_FOCKINK
                     sql += "" + p_idioma + ", ";
                     sql += "'" + p_outro_idioma + "', ";
                     sql += "@p_data1, "; //DT_ENTREGA_OBRA
-                    sql += "" + p_valor + ", ";
+                    if (string.IsNullOrEmpty(p_valor))
+                    {
+                        sql += " NULL, ";
+                    }
+                    else
+                    {
+                        sql += " "+ p_valor + ", ";
+                    }
                     sql += "'" + p_concorrentes + "', ";
                     sql += "" + p_resp_padrao_solucao + ", ";
                     sql += "" + p_frete + ", ";
@@ -494,7 +536,7 @@ namespace ORCAMENTOS_FOCKINK
                     sql += "'" + p_contICMS + "', ";
                     sql += "'" + p_incentFiscal + "', ";
                     sql += "'" + p_desc_incentivo + "', ";
-                    sql += "" + p_forma_pagamento + ", ";
+                    sql += "'" + p_forma_pagamento + "', ";
                     sql += "'" + p_financiamento + "', ";
                     sql += "'" + p_instFinanceira + "', ";
                     sql += "'" + p_indic_empr_codigo + "', ";
@@ -504,7 +546,9 @@ namespace ORCAMENTOS_FOCKINK
                     sql += "" + p_moeda + ", ";
                     sql += "@p_data2, "; //DT_PROPOSTA
                     sql += "" + p_empr_repres + ", ";
-                    sql += "" + p_cod_repres + ") ";
+                    sql += "" + p_cod_repres + ", ";
+                    sql += "'" + pAliqImposto + "', ";
+                    sql += "'" + pTaxaFlat + "') ";
                 }
                 else //U - Update
                 {
@@ -538,7 +582,14 @@ namespace ORCAMENTOS_FOCKINK
                     sql += "    [IDIOMA_PROPOSTA] = " + p_idioma + ", ";
                     sql += "    [OUTRO_IDIOMA] = '" + p_outro_idioma + "', ";
                     sql += "    [DT_ENTREGA_OBRA] = @p_data1, ";
-                    sql += "    [VALOR_ESTIMADO] = " + p_valor + ", ";
+                    if (string.IsNullOrEmpty(p_valor))
+                    {
+                        sql += "    [VALOR_ESTIMADO] = NULL, ";
+                    }
+                    else
+                    {
+                        sql += "    [VALOR_ESTIMADO] = " + p_valor + ", ";
+                    }                    
                     sql += "    [DESCRICAO_CONCORRENTES] = '" + p_concorrentes + "',";
                     sql += "    [RESP_PADRAO_VENDOR_LIST] = " + p_resp_padrao_solucao + ", ";
                     sql += "    [TIPO_FRETE] = " + p_frete + ", ";
@@ -547,9 +598,11 @@ namespace ORCAMENTOS_FOCKINK
                     sql += "    [CLIENTE_CONTRIB_ICMS] = '" + p_contICMS + "', ";
                     sql += "    [CLIENTE_INCENTIVO_FISCAL] = '" + p_incentFiscal + "', ";
                     sql += "    [DESC_INCENTIVO_FISC] = '" + p_desc_incentivo + "', ";
-                    sql += "    [FORMA_PAGAMENTO] = " + p_forma_pagamento + ", ";
+                    sql += "    [FORMA_PAGAMENTO] = '" + p_forma_pagamento + "', ";
                     sql += "    [DESC_FINANCIAMENTO] = '" + p_financiamento + "', ";
                     sql += "    [INSTITUICAO_FINANCEIRA] = '" + p_instFinanceira + "', ";
+                    sql += "    [INFORMAR_ALIQ_IMPOSTO] = '" + pAliqImposto + "', ";
+                    sql += "    [CONSIDERAR_TAXA_FLAT] = '" + pTaxaFlat + "', ";
                     sql += "    [INDIC_EMPR_CODIGO] = '" + p_indic_empr_codigo + "', ";
                     sql += "    [INDIC_DPES_CODIGO] = " + p_indic_dpes_codigo + ", ";
                     sql += "    [INDIC_PERC_COMISSAO] = " + p_indic_comissao + ", ";
@@ -612,8 +665,7 @@ namespace ORCAMENTOS_FOCKINK
             }
         }
 
-
-
+        
         /// <summary>
         /// Método que busca o Indicador de Negócio de uma solicitação
         /// </summary>
@@ -748,8 +800,7 @@ namespace ORCAMENTOS_FOCKINK
                 mBD.closeConnection();
             }
         }
-
-
+        
 
         /// <summary>
         /// Edita o valor de uma condição de pagamento da solicitação de orçamento
@@ -884,6 +935,7 @@ namespace ORCAMENTOS_FOCKINK
                     sql += ",DSO.[CLIENTE_INCENTIVO_FISCAL] ";
                     sql += ",DSO.[DESC_INCENTIVO_FISC] ";
                     sql += ",DSO.[FORMA_PAGAMENTO] ";
+                    sql += ",DRC.[DESCRICAO] AS DESC_FORMA_PAG ";
                     sql += ",DSO.[DESC_FINANCIAMENTO] ";
                     sql += ",DSO.[INSTITUICAO_FINANCEIRA] ";
                     sql += ",DSO.[INDIC_EMPR_CODIGO] ";
@@ -895,9 +947,12 @@ namespace ORCAMENTOS_FOCKINK
                     sql += ",DSO.[DT_PROPOSTA] ";
                     sql += ",DSO.[REPRES_EMPR_CODIGO] ";
                     sql += ",DSO.[REPRES_DPES_CODIGO] ";
+                    sql += ",DSO.[INFORMAR_ALIQ_IMPOSTO] ";
+                    sql += ",DSO.[CONSIDERAR_TAXA_FLAT] ";
                     sql += " FROM [DOM_SOLIC_ORCAMENTO] DSO ";
                     sql += " INNER JOIN [DOM_TIPO_NEGOCIO] DTN ON DTN.[CODIGO] = DSO.[NEGOCIO_ASSOCIADO] ";
                     //sql += " INNER JOIN [DOM_INDICADOR_NEGOCIO] DIN ON DSO.[INDIC_DPES_CODIGO] = DIN.[DPES_CODIGO] AND DSO.[REPRES_EMPR_CODIGO] = DIN.[EMPR_CODIGO] ";
+                    sql += "INNER JOIN [DOMOBR_REF_CODES] DRC ON DRC.[VALOR] = DSO.[FORMA_PAGAMENTO] ";
                     sql += " WHERE [REPRES_EMPR_CODIGO] = " + p_empr_cod;
                     sql += " AND [NUMERO] = " + p_num_solic;
                     sql += " AND [REVISAO] = '" + p_rev_solic + "'";
@@ -913,7 +968,6 @@ namespace ORCAMENTOS_FOCKINK
                 mBD.closeConnection();
             }
         }
-
 
 
     }

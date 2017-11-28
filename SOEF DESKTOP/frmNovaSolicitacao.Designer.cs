@@ -84,9 +84,77 @@
             this.txtCabecalhoCli = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tbCabecalho2 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label145 = new System.Windows.Forms.Label();
+            this.txtCabDescNecessidade = new System.Windows.Forms.TextBox();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.label144 = new System.Windows.Forms.Label();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.radioCabExportN = new System.Windows.Forms.RadioButton();
+            this.label142 = new System.Windows.Forms.Label();
+            this.label143 = new System.Windows.Forms.Label();
+            this.radioCabExportS = new System.Windows.Forms.RadioButton();
+            this.comboCabTipoMaoObra = new System.Windows.Forms.ComboBox();
+            this.label141 = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.radioCabMaoObraCliN = new System.Windows.Forms.RadioButton();
+            this.label139 = new System.Windows.Forms.Label();
+            this.label140 = new System.Windows.Forms.Label();
+            this.radioCabMaoObraCliS = new System.Windows.Forms.RadioButton();
+            this.comboCabZelo = new System.Windows.Forms.ComboBox();
+            this.label137 = new System.Windows.Forms.Label();
+            this.label138 = new System.Windows.Forms.Label();
+            this.txtCabOutroIdioma = new System.Windows.Forms.TextBox();
+            this.comboCabFrete = new System.Windows.Forms.ComboBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.comboCabPadraoSolucao = new System.Windows.Forms.ComboBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.txtCabConcorrentes = new System.Windows.Forms.TextBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.dtpkCabDataObra = new System.Windows.Forms.DateTimePicker();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.txtVlrEstimadoEscopo = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.dtpkPrazoProposta = new System.Windows.Forms.DateTimePicker();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.comboCabIdioma = new System.Windows.Forms.ComboBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.comboCabEmpreend = new System.Windows.Forms.ComboBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.comboCabFinalidade = new System.Windows.Forms.ComboBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.comboCabTipo = new System.Windows.Forms.ComboBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.tbCabecalho3 = new System.Windows.Forms.TabPage();
             this.btnSalvaAlteracao = new System.Windows.Forms.Button();
             this.btnCabGravaCabecalho = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label136 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label134 = new System.Windows.Forms.Label();
+            this.radioCabeConsiderarFlatN = new System.Windows.Forms.RadioButton();
+            this.label135 = new System.Windows.Forms.Label();
+            this.radioCabeConsiderarFlatS = new System.Windows.Forms.RadioButton();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label35 = new System.Windows.Forms.Label();
+            this.radioCabeAliqImpostoN = new System.Windows.Forms.RadioButton();
+            this.label133 = new System.Windows.Forms.Label();
+            this.radioCabeAliqImpostoS = new System.Windows.Forms.RadioButton();
             this.comboCabIndicNegocio = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.radioIncentFiscalNao = new System.Windows.Forms.RadioButton();
@@ -120,37 +188,6 @@
             this.combocabFaturamento = new System.Windows.Forms.ComboBox();
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtCabOutroIdioma = new System.Windows.Forms.TextBox();
-            this.comboCabFrete = new System.Windows.Forms.ComboBox();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.comboCabPadraoSolucao = new System.Windows.Forms.ComboBox();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.txtCabConcorrentes = new System.Windows.Forms.TextBox();
-            this.label39 = new System.Windows.Forms.Label();
-            this.dtpkCabDataObra = new System.Windows.Forms.DateTimePicker();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.txtVlrEstimadoEscopo = new System.Windows.Forms.TextBox();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.dtpkPrazoProposta = new System.Windows.Forms.DateTimePicker();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.comboCabIdioma = new System.Windows.Forms.ComboBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.comboCabEmpreend = new System.Windows.Forms.ComboBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.comboCabFinalidade = new System.Windows.Forms.ComboBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.comboCabTipo = new System.Windows.Forms.ComboBox();
-            this.label25 = new System.Windows.Forms.Label();
             this.tabCabecalhoCondPgto = new System.Windows.Forms.TabPage();
             this.dgvCabCondicoesPgto = new System.Windows.Forms.DataGridView();
             this.sequencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -453,10 +490,15 @@
             this.gpboxIdSolicitacao.SuspendLayout();
             this.gpBoxIdCliente.SuspendLayout();
             this.tbCabecalho2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.panel15.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.tbCabecalho3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.tabCabecalhoCondPgto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCabCondicoesPgto)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -523,7 +565,7 @@
             this.tabNovaSolicitacao.Location = new System.Drawing.Point(0, 0);
             this.tabNovaSolicitacao.Name = "tabNovaSolicitacao";
             this.tabNovaSolicitacao.SelectedIndex = 0;
-            this.tabNovaSolicitacao.Size = new System.Drawing.Size(1074, 581);
+            this.tabNovaSolicitacao.Size = new System.Drawing.Size(1074, 580);
             this.tabNovaSolicitacao.TabIndex = 0;
             this.tabNovaSolicitacao.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabNovaSolicitacao_Selected);
             // 
@@ -535,7 +577,7 @@
             this.tabCabecalho.Location = new System.Drawing.Point(4, 22);
             this.tabCabecalho.Name = "tabCabecalho";
             this.tabCabecalho.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCabecalho.Size = new System.Drawing.Size(1066, 555);
+            this.tabCabecalho.Size = new System.Drawing.Size(1066, 554);
             this.tabCabecalho.TabIndex = 0;
             this.tabCabecalho.Text = "CABEÇALHO";
             // 
@@ -544,7 +586,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(11, 11);
+            this.label9.Location = new System.Drawing.Point(11, 6);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(173, 13);
             this.label9.TabIndex = 2;
@@ -554,11 +596,12 @@
             // 
             this.tbCabecalho.Controls.Add(this.tbPageCabecalho1);
             this.tbCabecalho.Controls.Add(this.tbCabecalho2);
+            this.tbCabecalho.Controls.Add(this.tbCabecalho3);
             this.tbCabecalho.Controls.Add(this.tabCabecalhoCondPgto);
-            this.tbCabecalho.Location = new System.Drawing.Point(8, 38);
+            this.tbCabecalho.Location = new System.Drawing.Point(14, 33);
             this.tbCabecalho.Name = "tbCabecalho";
             this.tbCabecalho.SelectedIndex = 0;
-            this.tbCabecalho.Size = new System.Drawing.Size(1065, 514);
+            this.tbCabecalho.Size = new System.Drawing.Size(1065, 513);
             this.tbCabecalho.TabIndex = 0;
             this.tbCabecalho.Selected += new System.Windows.Forms.TabControlEventHandler(this.tbCabecalho_Selected);
             // 
@@ -572,7 +615,7 @@
             this.tbPageCabecalho1.Location = new System.Drawing.Point(4, 22);
             this.tbPageCabecalho1.Name = "tbPageCabecalho1";
             this.tbPageCabecalho1.Padding = new System.Windows.Forms.Padding(3);
-            this.tbPageCabecalho1.Size = new System.Drawing.Size(1057, 488);
+            this.tbPageCabecalho1.Size = new System.Drawing.Size(1057, 487);
             this.tbPageCabecalho1.TabIndex = 0;
             this.tbPageCabecalho1.Text = "Cabeçalho - 01";
             // 
@@ -591,7 +634,7 @@
             this.gpBoxIdObra.Controls.Add(this.label3);
             this.gpBoxIdObra.Controls.Add(this.txtCabecalhoObra);
             this.gpBoxIdObra.Controls.Add(this.label5);
-            this.gpBoxIdObra.Location = new System.Drawing.Point(11, 122);
+            this.gpBoxIdObra.Location = new System.Drawing.Point(11, 125);
             this.gpBoxIdObra.Name = "gpBoxIdObra";
             this.gpBoxIdObra.Size = new System.Drawing.Size(825, 203);
             this.gpBoxIdObra.TabIndex = 8;
@@ -740,7 +783,7 @@
             this.gpBoxContatos.Controls.Add(this.txtContatoTecnico);
             this.gpBoxContatos.Controls.Add(this.txtCodTecnico);
             this.gpBoxContatos.Controls.Add(this.label16);
-            this.gpBoxContatos.Location = new System.Drawing.Point(11, 331);
+            this.gpBoxContatos.Location = new System.Drawing.Point(11, 337);
             this.gpBoxContatos.Name = "gpBoxContatos";
             this.gpBoxContatos.Size = new System.Drawing.Size(1040, 133);
             this.gpBoxContatos.TabIndex = 9;
@@ -1083,23 +1126,651 @@
             // tbCabecalho2
             // 
             this.tbCabecalho2.BackColor = System.Drawing.SystemColors.Control;
-            this.tbCabecalho2.Controls.Add(this.btnSalvaAlteracao);
-            this.tbCabecalho2.Controls.Add(this.btnCabGravaCabecalho);
-            this.tbCabecalho2.Controls.Add(this.groupBox2);
             this.tbCabecalho2.Controls.Add(this.groupBox1);
             this.tbCabecalho2.Location = new System.Drawing.Point(4, 22);
             this.tbCabecalho2.Name = "tbCabecalho2";
             this.tbCabecalho2.Padding = new System.Windows.Forms.Padding(3);
-            this.tbCabecalho2.Size = new System.Drawing.Size(1057, 488);
+            this.tbCabecalho2.Size = new System.Drawing.Size(1057, 487);
             this.tbCabecalho2.TabIndex = 1;
             this.tbCabecalho2.Text = "Cabeçalho - 02";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label145);
+            this.groupBox1.Controls.Add(this.txtCabDescNecessidade);
+            this.groupBox1.Controls.Add(this.checkBox9);
+            this.groupBox1.Controls.Add(this.checkBox8);
+            this.groupBox1.Controls.Add(this.checkBox7);
+            this.groupBox1.Controls.Add(this.checkBox6);
+            this.groupBox1.Controls.Add(this.checkBox5);
+            this.groupBox1.Controls.Add(this.checkBox4);
+            this.groupBox1.Controls.Add(this.checkBox3);
+            this.groupBox1.Controls.Add(this.checkBox2);
+            this.groupBox1.Controls.Add(this.label144);
+            this.groupBox1.Controls.Add(this.panel15);
+            this.groupBox1.Controls.Add(this.comboCabTipoMaoObra);
+            this.groupBox1.Controls.Add(this.label141);
+            this.groupBox1.Controls.Add(this.panel14);
+            this.groupBox1.Controls.Add(this.comboCabZelo);
+            this.groupBox1.Controls.Add(this.label137);
+            this.groupBox1.Controls.Add(this.label138);
+            this.groupBox1.Controls.Add(this.txtCabOutroIdioma);
+            this.groupBox1.Controls.Add(this.comboCabFrete);
+            this.groupBox1.Controls.Add(this.label42);
+            this.groupBox1.Controls.Add(this.label43);
+            this.groupBox1.Controls.Add(this.comboCabPadraoSolucao);
+            this.groupBox1.Controls.Add(this.label40);
+            this.groupBox1.Controls.Add(this.label41);
+            this.groupBox1.Controls.Add(this.txtCabConcorrentes);
+            this.groupBox1.Controls.Add(this.label39);
+            this.groupBox1.Controls.Add(this.dtpkCabDataObra);
+            this.groupBox1.Controls.Add(this.label37);
+            this.groupBox1.Controls.Add(this.label38);
+            this.groupBox1.Controls.Add(this.txtVlrEstimadoEscopo);
+            this.groupBox1.Controls.Add(this.label36);
+            this.groupBox1.Controls.Add(this.dtpkPrazoProposta);
+            this.groupBox1.Controls.Add(this.label33);
+            this.groupBox1.Controls.Add(this.label34);
+            this.groupBox1.Controls.Add(this.label32);
+            this.groupBox1.Controls.Add(this.label30);
+            this.groupBox1.Controls.Add(this.comboCabIdioma);
+            this.groupBox1.Controls.Add(this.label31);
+            this.groupBox1.Controls.Add(this.comboCabEmpreend);
+            this.groupBox1.Controls.Add(this.label29);
+            this.groupBox1.Controls.Add(this.label27);
+            this.groupBox1.Controls.Add(this.comboCabFinalidade);
+            this.groupBox1.Controls.Add(this.label28);
+            this.groupBox1.Controls.Add(this.label26);
+            this.groupBox1.Controls.Add(this.comboCabTipo);
+            this.groupBox1.Controls.Add(this.label25);
+            this.groupBox1.Location = new System.Drawing.Point(6, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1045, 469);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Informações do Negócio";
+            // 
+            // label145
+            // 
+            this.label145.AutoSize = true;
+            this.label145.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label145.Location = new System.Drawing.Point(701, 400);
+            this.label145.Name = "label145";
+            this.label145.Size = new System.Drawing.Size(151, 13);
+            this.label145.TabIndex = 57;
+            this.label145.Text = "Descreva a necessidade:";
+            // 
+            // txtCabDescNecessidade
+            // 
+            this.txtCabDescNecessidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCabDescNecessidade.Location = new System.Drawing.Point(704, 416);
+            this.txtCabDescNecessidade.MaxLength = 1000;
+            this.txtCabDescNecessidade.Multiline = true;
+            this.txtCabDescNecessidade.Name = "txtCabDescNecessidade";
+            this.txtCabDescNecessidade.Size = new System.Drawing.Size(330, 43);
+            this.txtCabDescNecessidade.TabIndex = 56;
+            // 
+            // checkBox9
+            // 
+            this.checkBox9.AutoSize = true;
+            this.checkBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox9.Location = new System.Drawing.Point(704, 363);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(93, 17);
+            this.checkBox9.TabIndex = 55;
+            this.checkBox9.Text = " Treinamentos";
+            this.checkBox9.UseVisualStyleBackColor = true;
+            // 
+            // checkBox8
+            // 
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox8.Location = new System.Drawing.Point(704, 326);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(169, 17);
+            this.checkBox8.TabIndex = 54;
+            this.checkBox8.Text = "Seguro Responsabilidade Civil";
+            this.checkBox8.UseVisualStyleBackColor = true;
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox7.Location = new System.Drawing.Point(439, 402);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(52, 17);
+            this.checkBox7.TabIndex = 53;
+            this.checkBox7.Text = "Outro";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox6.Location = new System.Drawing.Point(439, 363);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(76, 17);
+            this.checkBox6.TabIndex = 52;
+            this.checkBox6.Text = " Databook";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox5.Location = new System.Drawing.Point(439, 326);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(120, 17);
+            this.checkBox5.TabIndex = 51;
+            this.checkBox5.Text = "Técnico Segurança";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox4.Location = new System.Drawing.Point(119, 402);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(111, 17);
+            this.checkBox4.TabIndex = 50;
+            this.checkBox4.Text = "Canteiro de Obras";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox3.Location = new System.Drawing.Point(119, 363);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(79, 17);
+            this.checkBox3.TabIndex = 49;
+            this.checkBox3.Text = " Plataforma";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox2.Location = new System.Drawing.Point(119, 326);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(100, 17);
+            this.checkBox2.TabIndex = 48;
+            this.checkBox2.Text = "Engº Residente";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // label144
+            // 
+            this.label144.AutoSize = true;
+            this.label144.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label144.ForeColor = System.Drawing.Color.Red;
+            this.label144.Location = new System.Drawing.Point(28, 288);
+            this.label144.Name = "label144";
+            this.label144.Size = new System.Drawing.Size(134, 13);
+            this.label144.TabIndex = 47;
+            this.label144.Text = "Considerar no escopo:";
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.radioCabExportN);
+            this.panel15.Controls.Add(this.label142);
+            this.panel15.Controls.Add(this.label143);
+            this.panel15.Controls.Add(this.radioCabExportS);
+            this.panel15.Location = new System.Drawing.Point(405, 245);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(235, 29);
+            this.panel15.TabIndex = 46;
+            // 
+            // radioCabExportN
+            // 
+            this.radioCabExportN.AutoSize = true;
+            this.radioCabExportN.Location = new System.Drawing.Point(155, 8);
+            this.radioCabExportN.Name = "radioCabExportN";
+            this.radioCabExportN.Size = new System.Drawing.Size(45, 17);
+            this.radioCabExportN.TabIndex = 43;
+            this.radioCabExportN.TabStop = true;
+            this.radioCabExportN.Text = "Não";
+            this.radioCabExportN.UseVisualStyleBackColor = true;
+            // 
+            // label142
+            // 
+            this.label142.AutoSize = true;
+            this.label142.Location = new System.Drawing.Point(9, 9);
+            this.label142.Name = "label142";
+            this.label142.Size = new System.Drawing.Size(68, 13);
+            this.label142.TabIndex = 0;
+            this.label142.Text = "Exportação*:";
+            // 
+            // label143
+            // 
+            this.label143.AutoSize = true;
+            this.label143.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label143.ForeColor = System.Drawing.Color.Red;
+            this.label143.Location = new System.Drawing.Point(1, 5);
+            this.label143.Name = "label143";
+            this.label143.Size = new System.Drawing.Size(12, 15);
+            this.label143.TabIndex = 49;
+            this.label143.Text = "*";
+            // 
+            // radioCabExportS
+            // 
+            this.radioCabExportS.AutoSize = true;
+            this.radioCabExportS.Location = new System.Drawing.Point(99, 8);
+            this.radioCabExportS.Name = "radioCabExportS";
+            this.radioCabExportS.Size = new System.Drawing.Size(42, 17);
+            this.radioCabExportS.TabIndex = 42;
+            this.radioCabExportS.TabStop = true;
+            this.radioCabExportS.Text = "Sim";
+            this.radioCabExportS.UseVisualStyleBackColor = true;
+            // 
+            // comboCabTipoMaoObra
+            // 
+            this.comboCabTipoMaoObra.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboCabTipoMaoObra.FormattingEnabled = true;
+            this.comboCabTipoMaoObra.Items.AddRange(new object[] {
+            "Selecione...",
+            "C/Hospedagem-C/Alimentação",
+            "C/Hospedagem-S/Alimentação",
+            "S/Hospedagem-C/Alimentação",
+            "C/Hospedagem-S/Alimentação"});
+            this.comboCabTipoMaoObra.Location = new System.Drawing.Point(119, 247);
+            this.comboCabTipoMaoObra.Name = "comboCabTipoMaoObra";
+            this.comboCabTipoMaoObra.Size = new System.Drawing.Size(237, 21);
+            this.comboCabTipoMaoObra.TabIndex = 44;
+            // 
+            // label141
+            // 
+            this.label141.AutoSize = true;
+            this.label141.Location = new System.Drawing.Point(5, 250);
+            this.label141.Name = "label141";
+            this.label141.Size = new System.Drawing.Size(111, 13);
+            this.label141.TabIndex = 45;
+            this.label141.Text = "Tipo de Mão de Obra:";
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.radioCabMaoObraCliN);
+            this.panel14.Controls.Add(this.label139);
+            this.panel14.Controls.Add(this.label140);
+            this.panel14.Controls.Add(this.radioCabMaoObraCliS);
+            this.panel14.Location = new System.Drawing.Point(804, 209);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(235, 29);
+            this.panel14.TabIndex = 43;
+            // 
+            // radioCabMaoObraCliN
+            // 
+            this.radioCabMaoObraCliN.AutoSize = true;
+            this.radioCabMaoObraCliN.Location = new System.Drawing.Point(169, 8);
+            this.radioCabMaoObraCliN.Name = "radioCabMaoObraCliN";
+            this.radioCabMaoObraCliN.Size = new System.Drawing.Size(45, 17);
+            this.radioCabMaoObraCliN.TabIndex = 43;
+            this.radioCabMaoObraCliN.TabStop = true;
+            this.radioCabMaoObraCliN.Text = "Não";
+            this.radioCabMaoObraCliN.UseVisualStyleBackColor = true;
+            // 
+            // label139
+            // 
+            this.label139.AutoSize = true;
+            this.label139.Location = new System.Drawing.Point(9, 9);
+            this.label139.Name = "label139";
+            this.label139.Size = new System.Drawing.Size(96, 13);
+            this.label139.TabIndex = 0;
+            this.label139.Text = "Mão Obra Cliente*:";
+            // 
+            // label140
+            // 
+            this.label140.AutoSize = true;
+            this.label140.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label140.ForeColor = System.Drawing.Color.Red;
+            this.label140.Location = new System.Drawing.Point(1, 5);
+            this.label140.Name = "label140";
+            this.label140.Size = new System.Drawing.Size(12, 15);
+            this.label140.TabIndex = 49;
+            this.label140.Text = "*";
+            // 
+            // radioCabMaoObraCliS
+            // 
+            this.radioCabMaoObraCliS.AutoSize = true;
+            this.radioCabMaoObraCliS.Location = new System.Drawing.Point(113, 8);
+            this.radioCabMaoObraCliS.Name = "radioCabMaoObraCliS";
+            this.radioCabMaoObraCliS.Size = new System.Drawing.Size(42, 17);
+            this.radioCabMaoObraCliS.TabIndex = 42;
+            this.radioCabMaoObraCliS.TabStop = true;
+            this.radioCabMaoObraCliS.Text = "Sim";
+            this.radioCabMaoObraCliS.UseVisualStyleBackColor = true;
+            // 
+            // comboCabZelo
+            // 
+            this.comboCabZelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboCabZelo.FormattingEnabled = true;
+            this.comboCabZelo.Items.AddRange(new object[] {
+            "Selecione...",
+            "Cliente",
+            "Fockink-Não Armada",
+            "Fockink-Armada",
+            "Não se aplica"});
+            this.comboCabZelo.Location = new System.Drawing.Point(861, 254);
+            this.comboCabZelo.Name = "comboCabZelo";
+            this.comboCabZelo.Size = new System.Drawing.Size(178, 21);
+            this.comboCabZelo.TabIndex = 40;
+            // 
+            // label137
+            // 
+            this.label137.AutoSize = true;
+            this.label137.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label137.ForeColor = System.Drawing.Color.Red;
+            this.label137.Location = new System.Drawing.Point(691, 254);
+            this.label137.Name = "label137";
+            this.label137.Size = new System.Drawing.Size(12, 15);
+            this.label137.TabIndex = 42;
+            this.label137.Text = "*";
+            // 
+            // label138
+            // 
+            this.label138.AutoSize = true;
+            this.label138.Location = new System.Drawing.Point(701, 261);
+            this.label138.Name = "label138";
+            this.label138.Size = new System.Drawing.Size(154, 13);
+            this.label138.TabIndex = 41;
+            this.label138.Text = "O Zelo de Materiais Deve Ser*:";
+            // 
+            // txtCabOutroIdioma
+            // 
+            this.txtCabOutroIdioma.Enabled = false;
+            this.txtCabOutroIdioma.Location = new System.Drawing.Point(838, 62);
+            this.txtCabOutroIdioma.MaxLength = 30;
+            this.txtCabOutroIdioma.Name = "txtCabOutroIdioma";
+            this.txtCabOutroIdioma.Size = new System.Drawing.Size(204, 20);
+            this.txtCabOutroIdioma.TabIndex = 31;
+            // 
+            // comboCabFrete
+            // 
+            this.comboCabFrete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboCabFrete.FormattingEnabled = true;
+            this.comboCabFrete.Location = new System.Drawing.Point(439, 209);
+            this.comboCabFrete.Name = "comboCabFrete";
+            this.comboCabFrete.Size = new System.Drawing.Size(225, 21);
+            this.comboCabFrete.TabIndex = 9;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.ForeColor = System.Drawing.Color.Red;
+            this.label42.Location = new System.Drawing.Point(394, 207);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(12, 15);
+            this.label42.TabIndex = 39;
+            this.label42.Text = "*";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(402, 215);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(34, 13);
+            this.label43.TabIndex = 38;
+            this.label43.Text = "Frete:";
+            // 
+            // comboCabPadraoSolucao
+            // 
+            this.comboCabPadraoSolucao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboCabPadraoSolucao.FormattingEnabled = true;
+            this.comboCabPadraoSolucao.Location = new System.Drawing.Point(119, 207);
+            this.comboCabPadraoSolucao.Name = "comboCabPadraoSolucao";
+            this.comboCabPadraoSolucao.Size = new System.Drawing.Size(237, 21);
+            this.comboCabPadraoSolucao.TabIndex = 8;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.ForeColor = System.Drawing.Color.Red;
+            this.label40.Location = new System.Drawing.Point(7, 205);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(12, 15);
+            this.label40.TabIndex = 36;
+            this.label40.Text = "*";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(15, 212);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(86, 13);
+            this.label41.TabIndex = 35;
+            this.label41.Text = "Padrão Solução:";
+            // 
+            // txtCabConcorrentes
+            // 
+            this.txtCabConcorrentes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCabConcorrentes.Location = new System.Drawing.Point(119, 129);
+            this.txtCabConcorrentes.MaxLength = 4000;
+            this.txtCabConcorrentes.Multiline = true;
+            this.txtCabConcorrentes.Name = "txtCabConcorrentes";
+            this.txtCabConcorrentes.Size = new System.Drawing.Size(742, 66);
+            this.txtCabConcorrentes.TabIndex = 7;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(28, 142);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(73, 13);
+            this.label39.TabIndex = 33;
+            this.label39.Text = "Concorrentes:";
+            // 
+            // dtpkCabDataObra
+            // 
+            this.dtpkCabDataObra.CustomFormat = "dd/MM/yyyy";
+            this.dtpkCabDataObra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpkCabDataObra.Location = new System.Drawing.Point(837, 94);
+            this.dtpkCabDataObra.Name = "dtpkCabDataObra";
+            this.dtpkCabDataObra.Size = new System.Drawing.Size(206, 20);
+            this.dtpkCabDataObra.TabIndex = 34;
+            this.dtpkCabDataObra.Value = new System.DateTime(2017, 2, 14, 9, 37, 13, 0);
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.ForeColor = System.Drawing.Color.Red;
+            this.label37.Location = new System.Drawing.Point(767, 91);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(12, 15);
+            this.label37.TabIndex = 31;
+            this.label37.Text = "*";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(775, 98);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(59, 13);
+            this.label38.TabIndex = 30;
+            this.label38.Text = "Data Obra:";
+            // 
+            // txtVlrEstimadoEscopo
+            // 
+            this.txtVlrEstimadoEscopo.Location = new System.Drawing.Point(577, 94);
+            this.txtVlrEstimadoEscopo.MaxLength = 11;
+            this.txtVlrEstimadoEscopo.Name = "txtVlrEstimadoEscopo";
+            this.txtVlrEstimadoEscopo.Size = new System.Drawing.Size(176, 20);
+            this.txtVlrEstimadoEscopo.TabIndex = 6;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(517, 97);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(57, 13);
+            this.label36.TabIndex = 27;
+            this.label36.Text = "Valor (R$):";
+            // 
+            // dtpkPrazoProposta
+            // 
+            this.dtpkPrazoProposta.CustomFormat = "dd/MM/yyyy";
+            this.dtpkPrazoProposta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpkPrazoProposta.Location = new System.Drawing.Point(119, 94);
+            this.dtpkPrazoProposta.Name = "dtpkPrazoProposta";
+            this.dtpkPrazoProposta.Size = new System.Drawing.Size(237, 20);
+            this.dtpkPrazoProposta.TabIndex = 5;
+            this.dtpkPrazoProposta.Value = new System.DateTime(2017, 2, 14, 9, 37, 1, 0);
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.Red;
+            this.label33.Location = new System.Drawing.Point(11, 91);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(12, 15);
+            this.label33.TabIndex = 25;
+            this.label33.Text = "*";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(19, 97);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(82, 13);
+            this.label34.TabIndex = 24;
+            this.label34.Text = "Prazo Proposta:";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(797, 63);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(36, 13);
+            this.label32.TabIndex = 22;
+            this.label32.Text = "Outro:";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.Red;
+            this.label30.Location = new System.Drawing.Point(522, 58);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(12, 15);
+            this.label30.TabIndex = 21;
+            this.label30.Text = "*";
+            // 
+            // comboCabIdioma
+            // 
+            this.comboCabIdioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboCabIdioma.FormattingEnabled = true;
+            this.comboCabIdioma.Location = new System.Drawing.Point(576, 60);
+            this.comboCabIdioma.Name = "comboCabIdioma";
+            this.comboCabIdioma.Size = new System.Drawing.Size(177, 21);
+            this.comboCabIdioma.TabIndex = 4;
+            this.comboCabIdioma.SelectedIndexChanged += new System.EventHandler(this.comboCabIdioma_SelectedIndexChanged);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(532, 65);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(41, 13);
+            this.label31.TabIndex = 19;
+            this.label31.Text = "Idioma:";
+            // 
+            // comboCabEmpreend
+            // 
+            this.comboCabEmpreend.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboCabEmpreend.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboCabEmpreend.FormattingEnabled = true;
+            this.comboCabEmpreend.Location = new System.Drawing.Point(119, 61);
+            this.comboCabEmpreend.Name = "comboCabEmpreend";
+            this.comboCabEmpreend.Size = new System.Drawing.Size(237, 21);
+            this.comboCabEmpreend.TabIndex = 3;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(12, 65);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(89, 13);
+            this.label29.TabIndex = 17;
+            this.label29.Text = "Empreendimento:";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.Red;
+            this.label27.Location = new System.Drawing.Point(507, 21);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(12, 15);
+            this.label27.TabIndex = 16;
+            this.label27.Text = "*";
+            // 
+            // comboCabFinalidade
+            // 
+            this.comboCabFinalidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboCabFinalidade.FormattingEnabled = true;
+            this.comboCabFinalidade.Location = new System.Drawing.Point(576, 25);
+            this.comboCabFinalidade.Name = "comboCabFinalidade";
+            this.comboCabFinalidade.Size = new System.Drawing.Size(177, 21);
+            this.comboCabFinalidade.TabIndex = 2;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(515, 28);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(58, 13);
+            this.label28.TabIndex = 14;
+            this.label28.Text = "Finalidade:";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.Red;
+            this.label26.Location = new System.Drawing.Point(61, 23);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(12, 15);
+            this.label26.TabIndex = 13;
+            this.label26.Text = "*";
+            // 
+            // comboCabTipo
+            // 
+            this.comboCabTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboCabTipo.FormattingEnabled = true;
+            this.comboCabTipo.Location = new System.Drawing.Point(119, 25);
+            this.comboCabTipo.Name = "comboCabTipo";
+            this.comboCabTipo.Size = new System.Drawing.Size(374, 21);
+            this.comboCabTipo.TabIndex = 1;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(70, 28);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(31, 13);
+            this.label25.TabIndex = 0;
+            this.label25.Text = "Tipo:";
+            // 
+            // tbCabecalho3
+            // 
+            this.tbCabecalho3.BackColor = System.Drawing.SystemColors.Control;
+            this.tbCabecalho3.Controls.Add(this.btnSalvaAlteracao);
+            this.tbCabecalho3.Controls.Add(this.btnCabGravaCabecalho);
+            this.tbCabecalho3.Controls.Add(this.groupBox2);
+            this.tbCabecalho3.Location = new System.Drawing.Point(4, 22);
+            this.tbCabecalho3.Name = "tbCabecalho3";
+            this.tbCabecalho3.Size = new System.Drawing.Size(1057, 487);
+            this.tbCabecalho3.TabIndex = 3;
+            this.tbCabecalho3.Text = "Cabeçalho - 03";
+            // 
             // btnSalvaAlteracao
             // 
-            this.btnSalvaAlteracao.Location = new System.Drawing.Point(558, 449);
+            this.btnSalvaAlteracao.Location = new System.Drawing.Point(542, 278);
             this.btnSalvaAlteracao.Name = "btnSalvaAlteracao";
             this.btnSalvaAlteracao.Size = new System.Drawing.Size(103, 33);
-            this.btnSalvaAlteracao.TabIndex = 23;
+            this.btnSalvaAlteracao.TabIndex = 26;
             this.btnSalvaAlteracao.Text = "Salvar Alterações";
             this.btnSalvaAlteracao.UseVisualStyleBackColor = true;
             this.btnSalvaAlteracao.Visible = false;
@@ -1107,16 +1778,19 @@
             // 
             // btnCabGravaCabecalho
             // 
-            this.btnCabGravaCabecalho.Location = new System.Drawing.Point(398, 449);
+            this.btnCabGravaCabecalho.Location = new System.Drawing.Point(382, 278);
             this.btnCabGravaCabecalho.Name = "btnCabGravaCabecalho";
             this.btnCabGravaCabecalho.Size = new System.Drawing.Size(114, 33);
-            this.btnCabGravaCabecalho.TabIndex = 22;
+            this.btnCabGravaCabecalho.TabIndex = 25;
             this.btnCabGravaCabecalho.Text = "Gravar Cabeçalho";
             this.btnCabGravaCabecalho.UseVisualStyleBackColor = true;
             this.btnCabGravaCabecalho.Click += new System.EventHandler(this.btnCabGravaCabecalho_Click);
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label136);
+            this.groupBox2.Controls.Add(this.panel7);
+            this.groupBox2.Controls.Add(this.panel6);
             this.groupBox2.Controls.Add(this.comboCabIndicNegocio);
             this.groupBox2.Controls.Add(this.panel2);
             this.groupBox2.Controls.Add(this.panel1);
@@ -1142,20 +1816,136 @@
             this.groupBox2.Controls.Add(this.combocabFaturamento);
             this.groupBox2.Controls.Add(this.label44);
             this.groupBox2.Controls.Add(this.label45);
-            this.groupBox2.Location = new System.Drawing.Point(6, 247);
+            this.groupBox2.Location = new System.Drawing.Point(5, 16);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1041, 196);
-            this.groupBox2.TabIndex = 2;
+            this.groupBox2.Size = new System.Drawing.Size(1041, 243);
+            this.groupBox2.TabIndex = 24;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Informações Comerciais";
+            // 
+            // label136
+            // 
+            this.label136.AutoSize = true;
+            this.label136.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label136.Location = new System.Drawing.Point(279, 203);
+            this.label136.Name = "label136";
+            this.label136.Size = new System.Drawing.Size(24, 13);
+            this.label136.TabIndex = 58;
+            this.label136.Text = "(%)";
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.label134);
+            this.panel7.Controls.Add(this.radioCabeConsiderarFlatN);
+            this.panel7.Controls.Add(this.label135);
+            this.panel7.Controls.Add(this.radioCabeConsiderarFlatS);
+            this.panel7.Location = new System.Drawing.Point(332, 128);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(224, 27);
+            this.panel7.TabIndex = 57;
+            // 
+            // label134
+            // 
+            this.label134.AutoSize = true;
+            this.label134.Location = new System.Drawing.Point(6, 7);
+            this.label134.Name = "label134";
+            this.label134.Size = new System.Drawing.Size(111, 13);
+            this.label134.TabIndex = 0;
+            this.label134.Text = "Considerar Taxa Flat*:";
+            // 
+            // radioCabeConsiderarFlatN
+            // 
+            this.radioCabeConsiderarFlatN.AutoSize = true;
+            this.radioCabeConsiderarFlatN.Checked = true;
+            this.radioCabeConsiderarFlatN.Location = new System.Drawing.Point(174, 5);
+            this.radioCabeConsiderarFlatN.Name = "radioCabeConsiderarFlatN";
+            this.radioCabeConsiderarFlatN.Size = new System.Drawing.Size(45, 17);
+            this.radioCabeConsiderarFlatN.TabIndex = 41;
+            this.radioCabeConsiderarFlatN.TabStop = true;
+            this.radioCabeConsiderarFlatN.Text = "Não";
+            this.radioCabeConsiderarFlatN.UseVisualStyleBackColor = true;
+            // 
+            // label135
+            // 
+            this.label135.AutoSize = true;
+            this.label135.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label135.ForeColor = System.Drawing.Color.Red;
+            this.label135.Location = new System.Drawing.Point(-1, 0);
+            this.label135.Name = "label135";
+            this.label135.Size = new System.Drawing.Size(12, 15);
+            this.label135.TabIndex = 71;
+            this.label135.Text = "*";
+            // 
+            // radioCabeConsiderarFlatS
+            // 
+            this.radioCabeConsiderarFlatS.AutoSize = true;
+            this.radioCabeConsiderarFlatS.Location = new System.Drawing.Point(126, 5);
+            this.radioCabeConsiderarFlatS.Name = "radioCabeConsiderarFlatS";
+            this.radioCabeConsiderarFlatS.Size = new System.Drawing.Size(42, 17);
+            this.radioCabeConsiderarFlatS.TabIndex = 40;
+            this.radioCabeConsiderarFlatS.Text = "Sim";
+            this.radioCabeConsiderarFlatS.UseVisualStyleBackColor = true;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.label35);
+            this.panel6.Controls.Add(this.radioCabeAliqImpostoN);
+            this.panel6.Controls.Add(this.label133);
+            this.panel6.Controls.Add(this.radioCabeAliqImpostoS);
+            this.panel6.Location = new System.Drawing.Point(22, 129);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(243, 27);
+            this.panel6.TabIndex = 56;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(6, 7);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(115, 13);
+            this.label35.TabIndex = 0;
+            this.label35.Text = "Informar Aliq. Imposto*:";
+            // 
+            // radioCabeAliqImpostoN
+            // 
+            this.radioCabeAliqImpostoN.AutoSize = true;
+            this.radioCabeAliqImpostoN.Checked = true;
+            this.radioCabeAliqImpostoN.Location = new System.Drawing.Point(174, 5);
+            this.radioCabeAliqImpostoN.Name = "radioCabeAliqImpostoN";
+            this.radioCabeAliqImpostoN.Size = new System.Drawing.Size(45, 17);
+            this.radioCabeAliqImpostoN.TabIndex = 41;
+            this.radioCabeAliqImpostoN.TabStop = true;
+            this.radioCabeAliqImpostoN.Text = "Não";
+            this.radioCabeAliqImpostoN.UseVisualStyleBackColor = true;
+            // 
+            // label133
+            // 
+            this.label133.AutoSize = true;
+            this.label133.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label133.ForeColor = System.Drawing.Color.Red;
+            this.label133.Location = new System.Drawing.Point(-1, 0);
+            this.label133.Name = "label133";
+            this.label133.Size = new System.Drawing.Size(12, 15);
+            this.label133.TabIndex = 71;
+            this.label133.Text = "*";
+            // 
+            // radioCabeAliqImpostoS
+            // 
+            this.radioCabeAliqImpostoS.AutoSize = true;
+            this.radioCabeAliqImpostoS.Location = new System.Drawing.Point(126, 5);
+            this.radioCabeAliqImpostoS.Name = "radioCabeAliqImpostoS";
+            this.radioCabeAliqImpostoS.Size = new System.Drawing.Size(42, 17);
+            this.radioCabeAliqImpostoS.TabIndex = 40;
+            this.radioCabeAliqImpostoS.Text = "Sim";
+            this.radioCabeAliqImpostoS.UseVisualStyleBackColor = true;
             // 
             // comboCabIndicNegocio
             // 
             this.comboCabIndicNegocio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboCabIndicNegocio.FormattingEnabled = true;
-            this.comboCabIndicNegocio.Location = new System.Drawing.Point(125, 131);
+            this.comboCabIndicNegocio.Location = new System.Drawing.Point(113, 166);
             this.comboCabIndicNegocio.Name = "comboCabIndicNegocio";
-            this.comboCabIndicNegocio.Size = new System.Drawing.Size(427, 21);
+            this.comboCabIndicNegocio.Size = new System.Drawing.Size(488, 21);
             this.comboCabIndicNegocio.TabIndex = 18;
             this.comboCabIndicNegocio.SelectedIndexChanged += new System.EventHandler(this.comboCabIndicNegocio_SelectedIndexChanged);
             // 
@@ -1165,7 +1955,7 @@
             this.panel2.Controls.Add(this.label51);
             this.panel2.Controls.Add(this.label50);
             this.panel2.Controls.Add(this.radioIncentFiscalSim);
-            this.panel2.Location = new System.Drawing.Point(8, 51);
+            this.panel2.Location = new System.Drawing.Point(16, 57);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 29);
             this.panel2.TabIndex = 13;
@@ -1180,7 +1970,6 @@
             this.radioIncentFiscalNao.TabStop = true;
             this.radioIncentFiscalNao.Text = "Não";
             this.radioIncentFiscalNao.UseVisualStyleBackColor = true;
-            this.radioIncentFiscalNao.CheckedChanged += new System.EventHandler(this.radioIncentFiscalNao_CheckedChanged);
             // 
             // label51
             // 
@@ -1212,7 +2001,6 @@
             this.radioIncentFiscalSim.TabStop = true;
             this.radioIncentFiscalSim.Text = "Sim";
             this.radioIncentFiscalSim.UseVisualStyleBackColor = true;
-            this.radioIncentFiscalSim.CheckedChanged += new System.EventHandler(this.radioIncentFiscalSim_CheckedChanged);
             // 
             // panel1
             // 
@@ -1271,7 +2059,7 @@
             // 
             this.comboCabMoeda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboCabMoeda.FormattingEnabled = true;
-            this.comboCabMoeda.Location = new System.Drawing.Point(665, 167);
+            this.comboCabMoeda.Location = new System.Drawing.Point(836, 199);
             this.comboCabMoeda.Name = "comboCabMoeda";
             this.comboCabMoeda.Size = new System.Drawing.Size(194, 21);
             this.comboCabMoeda.TabIndex = 21;
@@ -1279,7 +2067,7 @@
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(614, 170);
+            this.label60.Location = new System.Drawing.Point(785, 202);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(43, 13);
             this.label60.TabIndex = 0;
@@ -1287,17 +2075,16 @@
             // 
             // txtCabDesconto
             // 
-            this.txtCabDesconto.Location = new System.Drawing.Point(392, 167);
+            this.txtCabDesconto.Location = new System.Drawing.Point(480, 202);
             this.txtCabDesconto.MaxLength = 3;
             this.txtCabDesconto.Name = "txtCabDesconto";
             this.txtCabDesconto.Size = new System.Drawing.Size(160, 20);
             this.txtCabDesconto.TabIndex = 20;
-            this.txtCabDesconto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCabDesconto_KeyPress);
             // 
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(318, 170);
+            this.label59.Location = new System.Drawing.Point(406, 205);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(73, 13);
             this.label59.TabIndex = 0;
@@ -1306,26 +2093,25 @@
             // txtCabComissaoIndic
             // 
             this.txtCabComissaoIndic.Enabled = false;
-            this.txtCabComissaoIndic.Location = new System.Drawing.Point(123, 163);
+            this.txtCabComissaoIndic.Location = new System.Drawing.Point(115, 200);
             this.txtCabComissaoIndic.MaxLength = 3;
             this.txtCabComissaoIndic.Name = "txtCabComissaoIndic";
             this.txtCabComissaoIndic.Size = new System.Drawing.Size(160, 20);
             this.txtCabComissaoIndic.TabIndex = 19;
-            this.txtCabComissaoIndic.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCabComissaoIndic_KeyPress);
             // 
             // label58
             // 
             this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(3, 169);
+            this.label58.Location = new System.Drawing.Point(8, 204);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(119, 13);
+            this.label58.Size = new System.Drawing.Size(102, 13);
             this.label58.TabIndex = 0;
-            this.label58.Text = "Comissão Indicador (%):";
+            this.label58.Text = "Comissão Indicador:";
             // 
             // label57
             // 
             this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(25, 134);
+            this.label57.Location = new System.Drawing.Point(11, 169);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(94, 13);
             this.label57.TabIndex = 0;
@@ -1334,16 +2120,16 @@
             // txtCabInstFinanceira
             // 
             this.txtCabInstFinanceira.Enabled = false;
-            this.txtCabInstFinanceira.Location = new System.Drawing.Point(552, 92);
+            this.txtCabInstFinanceira.Location = new System.Drawing.Point(617, 98);
             this.txtCabInstFinanceira.MaxLength = 70;
             this.txtCabInstFinanceira.Name = "txtCabInstFinanceira";
-            this.txtCabInstFinanceira.Size = new System.Drawing.Size(327, 20);
+            this.txtCabInstFinanceira.Size = new System.Drawing.Size(413, 20);
             this.txtCabInstFinanceira.TabIndex = 17;
             // 
             // label56
             // 
             this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(462, 95);
+            this.label56.Location = new System.Drawing.Point(527, 101);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(82, 13);
             this.label56.TabIndex = 0;
@@ -1352,16 +2138,16 @@
             // txtCabFinanciamento
             // 
             this.txtCabFinanciamento.Enabled = false;
-            this.txtCabFinanciamento.Location = new System.Drawing.Point(125, 92);
+            this.txtCabFinanciamento.Location = new System.Drawing.Point(113, 98);
             this.txtCabFinanciamento.MaxLength = 70;
             this.txtCabFinanciamento.Name = "txtCabFinanciamento";
-            this.txtCabFinanciamento.Size = new System.Drawing.Size(314, 20);
+            this.txtCabFinanciamento.Size = new System.Drawing.Size(366, 20);
             this.txtCabFinanciamento.TabIndex = 16;
             // 
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(51, 95);
+            this.label55.Location = new System.Drawing.Point(21, 101);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(73, 13);
             this.label55.TabIndex = 0;
@@ -1371,7 +2157,7 @@
             // 
             this.comboCabPagmentos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboCabPagmentos.FormattingEnabled = true;
-            this.comboCabPagmentos.Location = new System.Drawing.Point(798, 55);
+            this.comboCabPagmentos.Location = new System.Drawing.Point(798, 61);
             this.comboCabPagmentos.Name = "comboCabPagmentos";
             this.comboCabPagmentos.Size = new System.Drawing.Size(232, 21);
             this.comboCabPagmentos.TabIndex = 15;
@@ -1382,7 +2168,7 @@
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label53.ForeColor = System.Drawing.Color.Red;
-            this.label53.Location = new System.Drawing.Point(693, 52);
+            this.label53.Location = new System.Drawing.Point(693, 58);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(12, 15);
             this.label53.TabIndex = 55;
@@ -1391,7 +2177,7 @@
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(702, 59);
+            this.label54.Location = new System.Drawing.Point(702, 65);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(96, 13);
             this.label54.TabIndex = 0;
@@ -1399,7 +2185,7 @@
             // 
             // txtCabIncentivo
             // 
-            this.txtCabIncentivo.Location = new System.Drawing.Point(344, 57);
+            this.txtCabIncentivo.Location = new System.Drawing.Point(344, 63);
             this.txtCabIncentivo.MaxLength = 11;
             this.txtCabIncentivo.Name = "txtCabIncentivo";
             this.txtCabIncentivo.Size = new System.Drawing.Size(296, 20);
@@ -1408,7 +2194,7 @@
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(279, 60);
+            this.label52.Location = new System.Drawing.Point(279, 66);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(54, 13);
             this.label52.TabIndex = 0;
@@ -1447,7 +2233,7 @@
             // 
             this.combocabFaturamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combocabFaturamento.FormattingEnabled = true;
-            this.combocabFaturamento.Location = new System.Drawing.Point(98, 21);
+            this.combocabFaturamento.Location = new System.Drawing.Point(113, 21);
             this.combocabFaturamento.Name = "combocabFaturamento";
             this.combocabFaturamento.Size = new System.Drawing.Size(227, 21);
             this.combocabFaturamento.TabIndex = 10;
@@ -1457,7 +2243,7 @@
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.ForeColor = System.Drawing.Color.Red;
-            this.label44.Location = new System.Drawing.Point(5, 18);
+            this.label44.Location = new System.Drawing.Point(18, 18);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(12, 15);
             this.label44.TabIndex = 39;
@@ -1466,340 +2252,11 @@
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(14, 25);
+            this.label45.Location = new System.Drawing.Point(26, 25);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(69, 13);
             this.label45.TabIndex = 39;
             this.label45.Text = "Faturamento:";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.txtCabOutroIdioma);
-            this.groupBox1.Controls.Add(this.comboCabFrete);
-            this.groupBox1.Controls.Add(this.label42);
-            this.groupBox1.Controls.Add(this.label43);
-            this.groupBox1.Controls.Add(this.comboCabPadraoSolucao);
-            this.groupBox1.Controls.Add(this.label40);
-            this.groupBox1.Controls.Add(this.label41);
-            this.groupBox1.Controls.Add(this.txtCabConcorrentes);
-            this.groupBox1.Controls.Add(this.label39);
-            this.groupBox1.Controls.Add(this.dtpkCabDataObra);
-            this.groupBox1.Controls.Add(this.label37);
-            this.groupBox1.Controls.Add(this.label38);
-            this.groupBox1.Controls.Add(this.txtVlrEstimadoEscopo);
-            this.groupBox1.Controls.Add(this.label35);
-            this.groupBox1.Controls.Add(this.label36);
-            this.groupBox1.Controls.Add(this.dtpkPrazoProposta);
-            this.groupBox1.Controls.Add(this.label33);
-            this.groupBox1.Controls.Add(this.label34);
-            this.groupBox1.Controls.Add(this.label32);
-            this.groupBox1.Controls.Add(this.label30);
-            this.groupBox1.Controls.Add(this.comboCabIdioma);
-            this.groupBox1.Controls.Add(this.label31);
-            this.groupBox1.Controls.Add(this.comboCabEmpreend);
-            this.groupBox1.Controls.Add(this.label29);
-            this.groupBox1.Controls.Add(this.label27);
-            this.groupBox1.Controls.Add(this.comboCabFinalidade);
-            this.groupBox1.Controls.Add(this.label28);
-            this.groupBox1.Controls.Add(this.label26);
-            this.groupBox1.Controls.Add(this.comboCabTipo);
-            this.groupBox1.Controls.Add(this.label25);
-            this.groupBox1.Location = new System.Drawing.Point(6, 6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1045, 235);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Informações do Negócio";
-            // 
-            // txtCabOutroIdioma
-            // 
-            this.txtCabOutroIdioma.Enabled = false;
-            this.txtCabOutroIdioma.Location = new System.Drawing.Point(835, 57);
-            this.txtCabOutroIdioma.MaxLength = 30;
-            this.txtCabOutroIdioma.Name = "txtCabOutroIdioma";
-            this.txtCabOutroIdioma.Size = new System.Drawing.Size(204, 20);
-            this.txtCabOutroIdioma.TabIndex = 31;
-            // 
-            // comboCabFrete
-            // 
-            this.comboCabFrete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboCabFrete.FormattingEnabled = true;
-            this.comboCabFrete.Location = new System.Drawing.Point(531, 196);
-            this.comboCabFrete.Name = "comboCabFrete";
-            this.comboCabFrete.Size = new System.Drawing.Size(225, 21);
-            this.comboCabFrete.TabIndex = 9;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.ForeColor = System.Drawing.Color.Red;
-            this.label42.Location = new System.Drawing.Point(484, 195);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(12, 15);
-            this.label42.TabIndex = 39;
-            this.label42.Text = "*";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(494, 202);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(34, 13);
-            this.label43.TabIndex = 38;
-            this.label43.Text = "Frete:";
-            // 
-            // comboCabPadraoSolucao
-            // 
-            this.comboCabPadraoSolucao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboCabPadraoSolucao.FormattingEnabled = true;
-            this.comboCabPadraoSolucao.Location = new System.Drawing.Point(104, 199);
-            this.comboCabPadraoSolucao.Name = "comboCabPadraoSolucao";
-            this.comboCabPadraoSolucao.Size = new System.Drawing.Size(237, 21);
-            this.comboCabPadraoSolucao.TabIndex = 8;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.ForeColor = System.Drawing.Color.Red;
-            this.label40.Location = new System.Drawing.Point(5, 195);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(12, 15);
-            this.label40.TabIndex = 36;
-            this.label40.Text = "*";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(15, 202);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(86, 13);
-            this.label41.TabIndex = 35;
-            this.label41.Text = "Padrão Solução:";
-            // 
-            // txtCabConcorrentes
-            // 
-            this.txtCabConcorrentes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCabConcorrentes.Location = new System.Drawing.Point(104, 124);
-            this.txtCabConcorrentes.MaxLength = 4000;
-            this.txtCabConcorrentes.Multiline = true;
-            this.txtCabConcorrentes.Name = "txtCabConcorrentes";
-            this.txtCabConcorrentes.Size = new System.Drawing.Size(742, 66);
-            this.txtCabConcorrentes.TabIndex = 7;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(28, 137);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(73, 13);
-            this.label39.TabIndex = 33;
-            this.label39.Text = "Concorrentes:";
-            // 
-            // dtpkCabDataObra
-            // 
-            this.dtpkCabDataObra.CustomFormat = "dd/MM/yyyy";
-            this.dtpkCabDataObra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpkCabDataObra.Location = new System.Drawing.Point(835, 89);
-            this.dtpkCabDataObra.Name = "dtpkCabDataObra";
-            this.dtpkCabDataObra.Size = new System.Drawing.Size(206, 20);
-            this.dtpkCabDataObra.TabIndex = 34;
-            this.dtpkCabDataObra.Value = new System.DateTime(2017, 2, 14, 9, 37, 13, 0);
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.ForeColor = System.Drawing.Color.Red;
-            this.label37.Location = new System.Drawing.Point(763, 86);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(12, 15);
-            this.label37.TabIndex = 31;
-            this.label37.Text = "*";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(773, 93);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(59, 13);
-            this.label38.TabIndex = 30;
-            this.label38.Text = "Data Obra:";
-            // 
-            // txtVlrEstimadoEscopo
-            // 
-            this.txtVlrEstimadoEscopo.Location = new System.Drawing.Point(569, 89);
-            this.txtVlrEstimadoEscopo.MaxLength = 11;
-            this.txtVlrEstimadoEscopo.Name = "txtVlrEstimadoEscopo";
-            this.txtVlrEstimadoEscopo.Size = new System.Drawing.Size(176, 20);
-            this.txtVlrEstimadoEscopo.TabIndex = 6;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.Color.Red;
-            this.label35.Location = new System.Drawing.Point(499, 85);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(12, 15);
-            this.label35.TabIndex = 28;
-            this.label35.Text = "*";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(509, 92);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(57, 13);
-            this.label36.TabIndex = 27;
-            this.label36.Text = "Valor (R$):";
-            // 
-            // dtpkPrazoProposta
-            // 
-            this.dtpkPrazoProposta.CustomFormat = "dd/MM/yyyy";
-            this.dtpkPrazoProposta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpkPrazoProposta.Location = new System.Drawing.Point(104, 89);
-            this.dtpkPrazoProposta.Name = "dtpkPrazoProposta";
-            this.dtpkPrazoProposta.Size = new System.Drawing.Size(237, 20);
-            this.dtpkPrazoProposta.TabIndex = 5;
-            this.dtpkPrazoProposta.Value = new System.DateTime(2017, 2, 14, 9, 37, 1, 0);
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.Color.Red;
-            this.label33.Location = new System.Drawing.Point(9, 85);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(12, 15);
-            this.label33.TabIndex = 25;
-            this.label33.Text = "*";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(19, 92);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(82, 13);
-            this.label34.TabIndex = 24;
-            this.label34.Text = "Prazo Proposta:";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(795, 58);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(36, 13);
-            this.label32.TabIndex = 22;
-            this.label32.Text = "Outro:";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.Color.Red;
-            this.label30.Location = new System.Drawing.Point(514, 53);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(12, 15);
-            this.label30.TabIndex = 21;
-            this.label30.Text = "*";
-            // 
-            // comboCabIdioma
-            // 
-            this.comboCabIdioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboCabIdioma.FormattingEnabled = true;
-            this.comboCabIdioma.Location = new System.Drawing.Point(568, 55);
-            this.comboCabIdioma.Name = "comboCabIdioma";
-            this.comboCabIdioma.Size = new System.Drawing.Size(177, 21);
-            this.comboCabIdioma.TabIndex = 4;
-            this.comboCabIdioma.SelectedIndexChanged += new System.EventHandler(this.comboCabIdioma_SelectedIndexChanged);
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(524, 60);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(41, 13);
-            this.label31.TabIndex = 19;
-            this.label31.Text = "Idioma:";
-            // 
-            // comboCabEmpreend
-            // 
-            this.comboCabEmpreend.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboCabEmpreend.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.comboCabEmpreend.FormattingEnabled = true;
-            this.comboCabEmpreend.Location = new System.Drawing.Point(104, 56);
-            this.comboCabEmpreend.Name = "comboCabEmpreend";
-            this.comboCabEmpreend.Size = new System.Drawing.Size(237, 21);
-            this.comboCabEmpreend.TabIndex = 3;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(12, 60);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(89, 13);
-            this.label29.TabIndex = 17;
-            this.label29.Text = "Empreendimento:";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.Red;
-            this.label27.Location = new System.Drawing.Point(499, 21);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(12, 15);
-            this.label27.TabIndex = 16;
-            this.label27.Text = "*";
-            // 
-            // comboCabFinalidade
-            // 
-            this.comboCabFinalidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboCabFinalidade.FormattingEnabled = true;
-            this.comboCabFinalidade.Location = new System.Drawing.Point(568, 25);
-            this.comboCabFinalidade.Name = "comboCabFinalidade";
-            this.comboCabFinalidade.Size = new System.Drawing.Size(177, 21);
-            this.comboCabFinalidade.TabIndex = 2;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(507, 28);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(58, 13);
-            this.label28.TabIndex = 14;
-            this.label28.Text = "Finalidade:";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.Red;
-            this.label26.Location = new System.Drawing.Point(60, 21);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(12, 15);
-            this.label26.TabIndex = 13;
-            this.label26.Text = "*";
-            // 
-            // comboCabTipo
-            // 
-            this.comboCabTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboCabTipo.FormattingEnabled = true;
-            this.comboCabTipo.Location = new System.Drawing.Point(104, 25);
-            this.comboCabTipo.Name = "comboCabTipo";
-            this.comboCabTipo.Size = new System.Drawing.Size(374, 21);
-            this.comboCabTipo.TabIndex = 1;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(70, 28);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(31, 13);
-            this.label25.TabIndex = 0;
-            this.label25.Text = "Tipo:";
             // 
             // tabCabecalhoCondPgto
             // 
@@ -1813,7 +2270,7 @@
             this.tabCabecalhoCondPgto.Location = new System.Drawing.Point(4, 22);
             this.tabCabecalhoCondPgto.Name = "tabCabecalhoCondPgto";
             this.tabCabecalhoCondPgto.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCabecalhoCondPgto.Size = new System.Drawing.Size(1057, 488);
+            this.tabCabecalhoCondPgto.Size = new System.Drawing.Size(1057, 487);
             this.tabCabecalhoCondPgto.TabIndex = 2;
             this.tabCabecalhoCondPgto.Text = "Cabeçalho - Cond. Pagamento";
             // 
@@ -1998,7 +2455,7 @@
             this.tabDefEscopo.Location = new System.Drawing.Point(4, 22);
             this.tabDefEscopo.Name = "tabDefEscopo";
             this.tabDefEscopo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDefEscopo.Size = new System.Drawing.Size(1066, 555);
+            this.tabDefEscopo.Size = new System.Drawing.Size(1066, 554);
             this.tabDefEscopo.TabIndex = 1;
             this.tabDefEscopo.Text = " ESCOPO";
             // 
@@ -2270,7 +2727,7 @@
             this.tabEscopo1.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo1.Name = "tabEscopo1";
             this.tabEscopo1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo1.Size = new System.Drawing.Size(1066, 555);
+            this.tabEscopo1.Size = new System.Drawing.Size(1066, 554);
             this.tabEscopo1.TabIndex = 2;
             this.tabEscopo1.Text = "1 - AE";
             // 
@@ -2616,7 +3073,7 @@
             this.tabEscopo2.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo2.Name = "tabEscopo2";
             this.tabEscopo2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo2.Size = new System.Drawing.Size(1066, 555);
+            this.tabEscopo2.Size = new System.Drawing.Size(1066, 554);
             this.tabEscopo2.TabIndex = 3;
             this.tabEscopo2.Text = "2 - AE";
             // 
@@ -2626,7 +3083,7 @@
             this.tabEscopo3.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo3.Name = "tabEscopo3";
             this.tabEscopo3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo3.Size = new System.Drawing.Size(1066, 555);
+            this.tabEscopo3.Size = new System.Drawing.Size(1066, 554);
             this.tabEscopo3.TabIndex = 4;
             this.tabEscopo3.Text = "3 - AE";
             // 
@@ -2636,7 +3093,7 @@
             this.tabEscopo4.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo4.Name = "tabEscopo4";
             this.tabEscopo4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo4.Size = new System.Drawing.Size(1066, 555);
+            this.tabEscopo4.Size = new System.Drawing.Size(1066, 554);
             this.tabEscopo4.TabIndex = 5;
             this.tabEscopo4.Text = "4 - AU";
             // 
@@ -2646,7 +3103,7 @@
             this.tabEscopo5.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo5.Name = "tabEscopo5";
             this.tabEscopo5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo5.Size = new System.Drawing.Size(1066, 555);
+            this.tabEscopo5.Size = new System.Drawing.Size(1066, 554);
             this.tabEscopo5.TabIndex = 6;
             this.tabEscopo5.Text = "5 - TR";
             // 
@@ -2656,7 +3113,7 @@
             this.tabEscopo6.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo6.Name = "tabEscopo6";
             this.tabEscopo6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo6.Size = new System.Drawing.Size(1066, 555);
+            this.tabEscopo6.Size = new System.Drawing.Size(1066, 554);
             this.tabEscopo6.TabIndex = 7;
             this.tabEscopo6.Text = "6 - IE";
             // 
@@ -2666,7 +3123,7 @@
             this.tabEscopo7.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo7.Name = "tabEscopo7";
             this.tabEscopo7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo7.Size = new System.Drawing.Size(1066, 555);
+            this.tabEscopo7.Size = new System.Drawing.Size(1066, 554);
             this.tabEscopo7.TabIndex = 8;
             this.tabEscopo7.Text = "7 - IE";
             // 
@@ -2676,7 +3133,7 @@
             this.tabEscopo8.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo8.Name = "tabEscopo8";
             this.tabEscopo8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo8.Size = new System.Drawing.Size(1066, 555);
+            this.tabEscopo8.Size = new System.Drawing.Size(1066, 554);
             this.tabEscopo8.TabIndex = 9;
             this.tabEscopo8.Text = "8 - IM";
             // 
@@ -2686,7 +3143,7 @@
             this.tabEscopo9.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo9.Name = "tabEscopo9";
             this.tabEscopo9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo9.Size = new System.Drawing.Size(1066, 555);
+            this.tabEscopo9.Size = new System.Drawing.Size(1066, 554);
             this.tabEscopo9.TabIndex = 10;
             this.tabEscopo9.Text = "9 - ELE";
             // 
@@ -2698,7 +3155,7 @@
             this.tabEscopo10.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo10.Name = "tabEscopo10";
             this.tabEscopo10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo10.Size = new System.Drawing.Size(1066, 555);
+            this.tabEscopo10.Size = new System.Drawing.Size(1066, 554);
             this.tabEscopo10.TabIndex = 11;
             this.tabEscopo10.Text = "10 - ELE";
             // 
@@ -3994,7 +4451,7 @@
             this.tabEscopo11.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo11.Name = "tabEscopo11";
             this.tabEscopo11.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo11.Size = new System.Drawing.Size(1066, 555);
+            this.tabEscopo11.Size = new System.Drawing.Size(1066, 554);
             this.tabEscopo11.TabIndex = 12;
             this.tabEscopo11.Text = "11 - EN";
             // 
@@ -4004,7 +4461,7 @@
             this.tabEscopo12.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo12.Name = "tabEscopo12";
             this.tabEscopo12.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo12.Size = new System.Drawing.Size(1066, 555);
+            this.tabEscopo12.Size = new System.Drawing.Size(1066, 554);
             this.tabEscopo12.TabIndex = 13;
             this.tabEscopo12.Text = "12 - EN";
             // 
@@ -4014,7 +4471,7 @@
             this.tabEscopo13.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo13.Name = "tabEscopo13";
             this.tabEscopo13.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo13.Size = new System.Drawing.Size(1066, 555);
+            this.tabEscopo13.Size = new System.Drawing.Size(1066, 554);
             this.tabEscopo13.TabIndex = 14;
             this.tabEscopo13.Text = "13 - EN";
             // 
@@ -4024,7 +4481,7 @@
             this.tabEscopo14.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo14.Name = "tabEscopo14";
             this.tabEscopo14.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo14.Size = new System.Drawing.Size(1066, 555);
+            this.tabEscopo14.Size = new System.Drawing.Size(1066, 554);
             this.tabEscopo14.TabIndex = 15;
             this.tabEscopo14.Text = "14 - EN";
             // 
@@ -4034,7 +4491,7 @@
             this.tabEscopo15.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo15.Name = "tabEscopo15";
             this.tabEscopo15.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo15.Size = new System.Drawing.Size(1066, 555);
+            this.tabEscopo15.Size = new System.Drawing.Size(1066, 554);
             this.tabEscopo15.TabIndex = 16;
             this.tabEscopo15.Text = "15 - EM";
             // 
@@ -4044,7 +4501,7 @@
             this.tabEscopo16.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo16.Name = "tabEscopo16";
             this.tabEscopo16.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo16.Size = new System.Drawing.Size(1066, 555);
+            this.tabEscopo16.Size = new System.Drawing.Size(1066, 554);
             this.tabEscopo16.TabIndex = 17;
             this.tabEscopo16.Text = "16 - PVIM";
             // 
@@ -4054,7 +4511,7 @@
             this.tabEscopo17.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo17.Name = "tabEscopo17";
             this.tabEscopo17.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo17.Size = new System.Drawing.Size(1066, 555);
+            this.tabEscopo17.Size = new System.Drawing.Size(1066, 554);
             this.tabEscopo17.TabIndex = 18;
             this.tabEscopo17.Text = "17 - FSP";
             // 
@@ -4066,7 +4523,7 @@
             this.tabEscopo18.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo18.Name = "tabEscopo18";
             this.tabEscopo18.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo18.Size = new System.Drawing.Size(1066, 555);
+            this.tabEscopo18.Size = new System.Drawing.Size(1066, 554);
             this.tabEscopo18.TabIndex = 19;
             this.tabEscopo18.Text = "18 - FSMO";
             // 
@@ -4757,7 +5214,7 @@
             this.tabEscopo19.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo19.Name = "tabEscopo19";
             this.tabEscopo19.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo19.Size = new System.Drawing.Size(1066, 555);
+            this.tabEscopo19.Size = new System.Drawing.Size(1066, 554);
             this.tabEscopo19.TabIndex = 20;
             this.tabEscopo19.Text = "19 - FCivil";
             // 
@@ -4920,7 +5377,7 @@
             this.tabEscopo20.Controls.Add(this.label67);
             this.tabEscopo20.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo20.Name = "tabEscopo20";
-            this.tabEscopo20.Size = new System.Drawing.Size(1066, 555);
+            this.tabEscopo20.Size = new System.Drawing.Size(1066, 554);
             this.tabEscopo20.TabIndex = 21;
             this.tabEscopo20.Text = "20 - Outro";
             // 
@@ -5082,7 +5539,7 @@
             // 
             // btnVoltar
             // 
-            this.btnVoltar.Location = new System.Drawing.Point(34, 583);
+            this.btnVoltar.Location = new System.Drawing.Point(28, 584);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(75, 23);
             this.btnVoltar.TabIndex = 0;
@@ -5115,14 +5572,23 @@
             this.gpBoxIdCliente.ResumeLayout(false);
             this.gpBoxIdCliente.PerformLayout();
             this.tbCabecalho2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            this.tbCabecalho3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.tabCabecalhoCondPgto.ResumeLayout(false);
             this.tabCabecalhoCondPgto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCabCondicoesPgto)).EndInit();
@@ -5300,7 +5766,6 @@
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.TextBox txtVlrEstimadoEscopo;
-        private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.DateTimePicker dtpkPrazoProposta;
         private System.Windows.Forms.Label label33;
@@ -5323,41 +5788,6 @@
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.TextBox txtCabOutroIdioma;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox combocabFaturamento;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.ComboBox comboVendaP;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.RadioButton radioIncentFiscalNao;
-        private System.Windows.Forms.RadioButton radioIncentFiscalSim;
-        private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.TextBox txtCabIncentivo;
-        private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.ComboBox comboCabPagmentos;
-        private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.TextBox txtCabFinanciamento;
-        private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.TextBox txtCabInstFinanceira;
-        private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.ComboBox comboCabMoeda;
-        private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.TextBox txtCabDesconto;
-        private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.TextBox txtCabComissaoIndic;
-        private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.Button btnCabGravaCabecalho;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.RadioButton radioContICMSNao;
-        private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.RadioButton radioContICMSSim;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox comboCabIndicNegocio;
         private System.Windows.Forms.TabPage tabCabecalhoCondPgto;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnGravaCondPgto;
@@ -5376,7 +5806,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn evento;
         private System.Windows.Forms.DataGridViewTextBoxColumn desc_evento;
         private System.Windows.Forms.DataGridViewTextBoxColumn perc_corresp;
-        private System.Windows.Forms.Button btnSalvaAlteracao;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox txtEsc19Necessidade;
         private System.Windows.Forms.Label lblNecessidade;
@@ -5610,5 +6039,79 @@
         private System.Windows.Forms.RadioButton radio10_3ProjetoN;
         private System.Windows.Forms.RadioButton radio10_3ProjetoS;
         private System.Windows.Forms.Button btn10_3Renovadores;
+        private System.Windows.Forms.TabPage tbCabecalho3;
+        private System.Windows.Forms.Button btnSalvaAlteracao;
+        private System.Windows.Forms.Button btnCabGravaCabecalho;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label136;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label134;
+        private System.Windows.Forms.RadioButton radioCabeConsiderarFlatN;
+        private System.Windows.Forms.Label label135;
+        private System.Windows.Forms.RadioButton radioCabeConsiderarFlatS;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.RadioButton radioCabeAliqImpostoN;
+        private System.Windows.Forms.Label label133;
+        private System.Windows.Forms.RadioButton radioCabeAliqImpostoS;
+        private System.Windows.Forms.ComboBox comboCabIndicNegocio;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.RadioButton radioIncentFiscalNao;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.RadioButton radioIncentFiscalSim;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.RadioButton radioContICMSNao;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.RadioButton radioContICMSSim;
+        private System.Windows.Forms.ComboBox comboCabMoeda;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.TextBox txtCabDesconto;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.TextBox txtCabComissaoIndic;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.TextBox txtCabInstFinanceira;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.TextBox txtCabFinanciamento;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.ComboBox comboCabPagmentos;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.TextBox txtCabIncentivo;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.ComboBox comboVendaP;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.ComboBox combocabFaturamento;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.ComboBox comboCabZelo;
+        private System.Windows.Forms.Label label137;
+        private System.Windows.Forms.Label label138;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.RadioButton radioCabExportN;
+        private System.Windows.Forms.Label label142;
+        private System.Windows.Forms.Label label143;
+        private System.Windows.Forms.RadioButton radioCabExportS;
+        private System.Windows.Forms.ComboBox comboCabTipoMaoObra;
+        private System.Windows.Forms.Label label141;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.RadioButton radioCabMaoObraCliN;
+        private System.Windows.Forms.Label label139;
+        private System.Windows.Forms.Label label140;
+        private System.Windows.Forms.RadioButton radioCabMaoObraCliS;
+        private System.Windows.Forms.CheckBox checkBox9;
+        private System.Windows.Forms.CheckBox checkBox8;
+        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Label label144;
+        private System.Windows.Forms.Label label145;
+        private System.Windows.Forms.TextBox txtCabDescNecessidade;
     }
 }

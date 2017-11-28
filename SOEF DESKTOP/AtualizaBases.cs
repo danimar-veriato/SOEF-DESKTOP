@@ -204,7 +204,6 @@ namespace ORCAMENTOS_FOCKINK
                 if (dsRetorno != null && dsRetorno.Tables.Count > 0)
                 {
                     retorno = mBD.deleteSOF("DELETE FROM DOM_EVENTO_PAGAMENTO");
-                   // MessageBox.Show("Retorno Evento Pagamento: " + retorno);
                     foreach (DataRow dr in dsRetorno.Tables[0].Rows)
                     {
                         string sql = "INSERT INTO [DOM_EVENTO_PAGAMENTO] ";
@@ -213,7 +212,6 @@ namespace ORCAMENTOS_FOCKINK
                         sql += " (" + dr["CODIGO"].ToString() + ", '" + dr["DESCRICAO"].ToString() + "') ";
                         retorno = mBD.insertSOF(sql);
                     }
-                   // MessageBox.Show("Rows Evento Pagamento: " + dsRetorno.Tables[0].Rows.Count);
                 }
             }
             catch (Exception exc)
@@ -252,7 +250,7 @@ namespace ORCAMENTOS_FOCKINK
                     {
                         string sql = "INSERT INTO [DOMOBR_REF_CODES] ";
                         sql += "([VALOR], [DESCRICAO], [RV_DOMAIN]) ";
-                        sql += " VALUES (" + dr["VALOR"].ToString() + ", ";
+                        sql += " VALUES ('" + dr["VALOR"].ToString() + "', ";
                         sql += " '" + dr["DESCRICAO"].ToString() + "', ";
                         sql += " '" + dr["RV_DOMAIN"].ToString() + "')  ";
                         retorno = mBD.insertSOF(sql);
