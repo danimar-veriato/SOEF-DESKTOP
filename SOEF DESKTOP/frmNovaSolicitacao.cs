@@ -64,6 +64,20 @@ namespace ORCAMENTOS_FOCKINK
         public string informarAliqImposto;
         public string considerarTaxaFlat;
 
+        public string maoObraCli;
+        public string tipoMaoObra;
+        public string indExportacao;
+        public string indRespZeloMaterial;
+        public string indEngResidente;
+        public string indTecSeguranca;
+        public string indSegRespCivil;
+        public string indPlataforma;
+        public string indDatabook;
+        public string indTreinamentos;
+        public string indCanteiroObras;
+        public string indOutraNecessidade;
+        public string descOutraNecessidade;
+
         public static string CodCliente { get; set; }
         public static string CodClienteObra { get; set; }
         public static string CodContatoTecnico { get; set; }
@@ -825,6 +839,26 @@ namespace ORCAMENTOS_FOCKINK
             {
                 msgErro += "Indicador de comissão não informado\n";
             }
+            if(!radioCabMaoObraCliS.Checked && !radioCabMaoObraCliN.Checked)
+            {
+                msgErro += "Informe o campo Mão de Obra Cliente\n";
+            }
+            if(!radioCabExportS.Checked && !radioCabExportN.Checked)
+            {
+                msgErro += "Informe o campo Exportação\n";
+            }
+            if(comboCabZelo.SelectedIndex == 0)
+            {
+                msgErro += "Informe o campo O Zelo de Materiais Deve Ser\n";
+            }
+            if (checkCabOutro.Checked)
+            {
+                if (string.IsNullOrEmpty(txtCabDescNecessidade.Text))
+                {
+                    msgErro += "Informe o campo Descrição da Necessidade\n";
+                }
+            }
+
             if (!string.IsNullOrEmpty(msgErro))
             {
                 MessageBox.Show(msgErro, "Campos obrigatórios em branco", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -840,7 +874,9 @@ namespace ORCAMENTOS_FOCKINK
                     this.nome_projeto, this.cod_tecnico, CodPessoaContatoTecnico, this.cod_comercial, CodPessoaContatoComercial, this.tipo_negocio,
                     this.finalidade, this.empreendimento, this.idioma, this.outro_idioma, this.valor, this.dt_obra, this.dt_proposta, this.concorrentes, this.resp_padrao_solucao,
                     this.frete, this.faturamento, this.vendaPara, this.contICMS, this.incentFiscal, this.desc_incentivo, this.formaPagamento, this.financiamento, this.instFinanceira,
-                    this.indic_empr_codigo, this.indic_dpes_codigo, this.indicComissao, this.margemDesconto, this.moeda, this.cod_representante, this.empr_representante, this.informarAliqImposto, this.considerarTaxaFlat);
+                    this.indic_empr_codigo, this.indic_dpes_codigo, this.indicComissao, this.margemDesconto, this.moeda, this.cod_representante, this.empr_representante, this.informarAliqImposto, 
+                    this.considerarTaxaFlat, this.maoObraCli, this.tipoMaoObra, this.indExportacao, this.indRespZeloMaterial, this.indEngResidente, this.indTecSeguranca, this.indSegRespCivil, 
+                    this.indPlataforma, this.indDatabook, this.indTreinamentos, this.indCanteiroObras, this.indOutraNecessidade, this.descOutraNecessidade); 
                     //Busca o número da solicitação cadastrada
                     this.numero_solic = Convert.ToInt32(cSolicitacao.getNumeroSolicitacao()) - 1;
                     //Ativa a Aba das condições de pagamento
@@ -961,6 +997,106 @@ namespace ORCAMENTOS_FOCKINK
                 this.margemDesconto = txtCabDesconto.Text;
             }
             this.moeda = Convert.ToString(comboCabMoeda.SelectedIndex + 1);
+            //Mão de Obra Cliente
+            if (radioCabMaoObraCliS.Checked)
+            {
+                this.maoObraCli = "S";
+            }
+            else
+            {
+                this.maoObraCli = "N";
+            }
+
+            //Tipo Mão de Obra
+            this.tipoMaoObra = comboCabTipoMaoObra.SelectedIndex.ToString();
+            //Exportação
+            if (radioCabExportS.Checked)
+            {
+                this.indExportacao = "S";
+            }
+            else
+            {
+                this.indExportacao = "N";
+            }
+            //Zelo
+            this.indRespZeloMaterial = comboCabZelo.SelectedValue.ToString();
+            //Checkboxes
+            if (checkCabEngResidente.Checked)
+            {
+                this.indEngResidente = "S";
+            }
+            else
+            {
+                this.indEngResidente = "N";
+            }
+            if (checkCabTecSeg.Checked)
+            {
+                this.indTecSeguranca = "S";
+            }
+            else
+            {
+                this.indTecSeguranca = "N";
+            }
+            if (checkCabTecSeg.Checked)
+            {
+                this.indTecSeguranca = "S";
+            }
+            else
+            {
+                this.indTecSeguranca = "N";
+            }
+            if (checkCabSeguro.Checked)
+            {
+                this.indSegRespCivil = "S";
+            }
+            else
+            {
+                this.indSegRespCivil = "N";
+            }
+            if (checkCabPlataforma.Checked)
+            {
+                this.indPlataforma = "S";
+            }
+            else
+            {
+                this.indPlataforma = "N";
+            }
+            if (checkCabDatabook.Checked)
+            {
+                this.indDatabook = "S";
+            }
+            else
+            {
+                this.indDatabook = "N";
+            }
+            if (checkCabTreinamentos.Checked)
+            {
+                this.indTreinamentos = "S";
+            }
+            else
+            {
+                this.indTreinamentos = "N";
+            }
+            if (checkCabCanteiroObras.Checked)
+            {
+                this.indCanteiroObras = "S";
+            }
+            else
+            {
+                this.indCanteiroObras = "N";
+            }
+            if (checkCabOutro.Checked)
+            {
+                this.indOutraNecessidade = "S";
+                this.descOutraNecessidade = txtCabDescNecessidade.Text;
+            }
+            else
+            {
+                this.indOutraNecessidade = "N";
+                this.descOutraNecessidade = "NULL";
+            }
+
+
         }
 
 
@@ -1565,6 +1701,30 @@ namespace ORCAMENTOS_FOCKINK
             comboCabFrete.DisplayMember = "valor";
             comboCabFrete.SelectedValue = 0;
 
+            //Combo Tipo de Mão de Obra
+            List<Combo> TipoMaoObra = new List<Combo>();
+            TipoMaoObra.Add(new Combo(0, "SELECIONE..."));
+            TipoMaoObra.Add(new Combo(1, "C / HOSPEDAGEM - C / ALIMENTAÇÃO"));
+            TipoMaoObra.Add(new Combo(2, "C / HOSPEDAGEM - S / ALIMENTAÇÃO"));
+            TipoMaoObra.Add(new Combo(3, "S / HOSPEDAGEM - C / ALIMENTAÇÃO"));
+            TipoMaoObra.Add(new Combo(3, "C / HOSPEDAGEM - S / ALIMENTAÇÃO"));
+            comboCabTipoMaoObra.DataSource = TipoMaoObra;
+            comboCabTipoMaoObra.ValueMember = "id";
+            comboCabTipoMaoObra.DisplayMember = "valor";
+            comboCabTipoMaoObra.SelectedValue = 0;
+
+            //Combo O Zelo de Materiais deve ser
+            List<Combo> ZeloMateriais = new List<Combo>();
+            ZeloMateriais.Add(new Combo(0, "SELECIONE..."));           
+            ZeloMateriais.Add(new Combo(1, "CLIENTE"));
+            ZeloMateriais.Add(new Combo(2, "FOCKINK - NÃO ARMADA"));
+            ZeloMateriais.Add(new Combo(3, "FOCKINK - ARMADA"));
+            ZeloMateriais.Add(new Combo(3, "NÃO SE APLICA"));
+            comboCabZelo.DataSource = ZeloMateriais;
+            comboCabZelo.ValueMember = "id";
+            comboCabZelo.DisplayMember = "valor";
+            comboCabZelo.SelectedValue = 0;
+
             //Combo Faturamento
             List<Combo> comboFat = new List<Combo>();
             comboFat.Add(new Combo(0, "SELECIONE..."));
@@ -1672,7 +1832,9 @@ namespace ORCAMENTOS_FOCKINK
                 this.nome_projeto, this.cod_tecnico, CodPessoaContatoTecnico, this.cod_comercial, CodPessoaContatoComercial, this.tipo_negocio,
                 this.finalidade, this.empreendimento, this.idioma, this.outro_idioma, this.valor, this.dt_obra, this.dt_proposta, this.concorrentes, this.resp_padrao_solucao,
                 this.frete, this.faturamento, this.vendaPara, this.contICMS, this.incentFiscal, this.desc_incentivo, this.formaPagamento, this.financiamento, this.instFinanceira,
-                this.indic_empr_codigo, this.indic_dpes_codigo, this.indicComissao, this.margemDesconto, this.moeda, this.cod_representante, this.empr_representante, this.informarAliqImposto, this.considerarTaxaFlat);
+                this.indic_empr_codigo, this.indic_dpes_codigo, this.indicComissao, this.margemDesconto, this.moeda, this.cod_representante, this.empr_representante, this.informarAliqImposto, 
+                this.considerarTaxaFlat, this.maoObraCli, this.tipoMaoObra, this.indExportacao, this.indRespZeloMaterial, this.indEngResidente, this.indTecSeguranca, this.indSegRespCivil, 
+                this.indPlataforma, this.indDatabook, this.indTreinamentos, this.indCanteiroObras, this.indOutraNecessidade, this.descOutraNecessidade);
 
                 MessageBox.Show("Alterações realizadas com sucesso!", "Cadastro de Solicitação", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //Traz os dados da solicitação gravada para os campos da tela
@@ -5567,6 +5729,21 @@ namespace ORCAMENTOS_FOCKINK
 
 
 
+            }
+        }
+
+        private void checkCabOutro_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkCabOutro.Checked)
+            {
+                label145.Visible = true;
+                txtCabDescNecessidade.Visible = true;
+            }
+            else
+            {
+                txtCabDescNecessidade.Text = "";
+                label145.Visible = false;
+                txtCabDescNecessidade.Visible = false;
             }
         }
     }

@@ -87,14 +87,14 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label145 = new System.Windows.Forms.Label();
             this.txtCabDescNecessidade = new System.Windows.Forms.TextBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkCabTreinamentos = new System.Windows.Forms.CheckBox();
+            this.checkCabSeguro = new System.Windows.Forms.CheckBox();
+            this.checkCabOutro = new System.Windows.Forms.CheckBox();
+            this.checkCabDatabook = new System.Windows.Forms.CheckBox();
+            this.checkCabTecSeg = new System.Windows.Forms.CheckBox();
+            this.checkCabCanteiroObras = new System.Windows.Forms.CheckBox();
+            this.checkCabPlataforma = new System.Windows.Forms.CheckBox();
+            this.checkCabEngResidente = new System.Windows.Forms.CheckBox();
             this.label144 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
             this.radioCabExportN = new System.Windows.Forms.RadioButton();
@@ -1138,14 +1138,14 @@
             // 
             this.groupBox1.Controls.Add(this.label145);
             this.groupBox1.Controls.Add(this.txtCabDescNecessidade);
-            this.groupBox1.Controls.Add(this.checkBox9);
-            this.groupBox1.Controls.Add(this.checkBox8);
-            this.groupBox1.Controls.Add(this.checkBox7);
-            this.groupBox1.Controls.Add(this.checkBox6);
-            this.groupBox1.Controls.Add(this.checkBox5);
-            this.groupBox1.Controls.Add(this.checkBox4);
-            this.groupBox1.Controls.Add(this.checkBox3);
-            this.groupBox1.Controls.Add(this.checkBox2);
+            this.groupBox1.Controls.Add(this.checkCabTreinamentos);
+            this.groupBox1.Controls.Add(this.checkCabSeguro);
+            this.groupBox1.Controls.Add(this.checkCabOutro);
+            this.groupBox1.Controls.Add(this.checkCabDatabook);
+            this.groupBox1.Controls.Add(this.checkCabTecSeg);
+            this.groupBox1.Controls.Add(this.checkCabCanteiroObras);
+            this.groupBox1.Controls.Add(this.checkCabPlataforma);
+            this.groupBox1.Controls.Add(this.checkCabEngResidente);
             this.groupBox1.Controls.Add(this.label144);
             this.groupBox1.Controls.Add(this.panel15);
             this.groupBox1.Controls.Add(this.comboCabTipoMaoObra);
@@ -1194,109 +1194,111 @@
             // 
             this.label145.AutoSize = true;
             this.label145.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label145.Location = new System.Drawing.Point(701, 400);
+            this.label145.Location = new System.Drawing.Point(116, 441);
             this.label145.Name = "label145";
             this.label145.Size = new System.Drawing.Size(151, 13);
             this.label145.TabIndex = 57;
             this.label145.Text = "Descreva a necessidade:";
+            this.label145.Visible = false;
             // 
             // txtCabDescNecessidade
             // 
             this.txtCabDescNecessidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCabDescNecessidade.Location = new System.Drawing.Point(704, 416);
+            this.txtCabDescNecessidade.Location = new System.Drawing.Point(273, 437);
             this.txtCabDescNecessidade.MaxLength = 1000;
-            this.txtCabDescNecessidade.Multiline = true;
             this.txtCabDescNecessidade.Name = "txtCabDescNecessidade";
-            this.txtCabDescNecessidade.Size = new System.Drawing.Size(330, 43);
+            this.txtCabDescNecessidade.Size = new System.Drawing.Size(766, 20);
             this.txtCabDescNecessidade.TabIndex = 56;
+            this.txtCabDescNecessidade.Visible = false;
             // 
-            // checkBox9
+            // checkCabTreinamentos
             // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox9.Location = new System.Drawing.Point(704, 363);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(93, 17);
-            this.checkBox9.TabIndex = 55;
-            this.checkBox9.Text = " Treinamentos";
-            this.checkBox9.UseVisualStyleBackColor = true;
+            this.checkCabTreinamentos.AutoSize = true;
+            this.checkCabTreinamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkCabTreinamentos.Location = new System.Drawing.Point(704, 363);
+            this.checkCabTreinamentos.Name = "checkCabTreinamentos";
+            this.checkCabTreinamentos.Size = new System.Drawing.Size(93, 17);
+            this.checkCabTreinamentos.TabIndex = 55;
+            this.checkCabTreinamentos.Text = " Treinamentos";
+            this.checkCabTreinamentos.UseVisualStyleBackColor = true;
             // 
-            // checkBox8
+            // checkCabSeguro
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox8.Location = new System.Drawing.Point(704, 326);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(169, 17);
-            this.checkBox8.TabIndex = 54;
-            this.checkBox8.Text = "Seguro Responsabilidade Civil";
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.checkCabSeguro.AutoSize = true;
+            this.checkCabSeguro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkCabSeguro.Location = new System.Drawing.Point(704, 326);
+            this.checkCabSeguro.Name = "checkCabSeguro";
+            this.checkCabSeguro.Size = new System.Drawing.Size(169, 17);
+            this.checkCabSeguro.TabIndex = 54;
+            this.checkCabSeguro.Text = "Seguro Responsabilidade Civil";
+            this.checkCabSeguro.UseVisualStyleBackColor = true;
             // 
-            // checkBox7
+            // checkCabOutro
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox7.Location = new System.Drawing.Point(439, 402);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(52, 17);
-            this.checkBox7.TabIndex = 53;
-            this.checkBox7.Text = "Outro";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.checkCabOutro.AutoSize = true;
+            this.checkCabOutro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkCabOutro.Location = new System.Drawing.Point(439, 402);
+            this.checkCabOutro.Name = "checkCabOutro";
+            this.checkCabOutro.Size = new System.Drawing.Size(52, 17);
+            this.checkCabOutro.TabIndex = 53;
+            this.checkCabOutro.Text = "Outro";
+            this.checkCabOutro.UseVisualStyleBackColor = true;
+            this.checkCabOutro.CheckedChanged += new System.EventHandler(this.checkCabOutro_CheckedChanged);
             // 
-            // checkBox6
+            // checkCabDatabook
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox6.Location = new System.Drawing.Point(439, 363);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(76, 17);
-            this.checkBox6.TabIndex = 52;
-            this.checkBox6.Text = " Databook";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkCabDatabook.AutoSize = true;
+            this.checkCabDatabook.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkCabDatabook.Location = new System.Drawing.Point(439, 363);
+            this.checkCabDatabook.Name = "checkCabDatabook";
+            this.checkCabDatabook.Size = new System.Drawing.Size(76, 17);
+            this.checkCabDatabook.TabIndex = 52;
+            this.checkCabDatabook.Text = " Databook";
+            this.checkCabDatabook.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // checkCabTecSeg
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox5.Location = new System.Drawing.Point(439, 326);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(120, 17);
-            this.checkBox5.TabIndex = 51;
-            this.checkBox5.Text = "Técnico Segurança";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkCabTecSeg.AutoSize = true;
+            this.checkCabTecSeg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkCabTecSeg.Location = new System.Drawing.Point(439, 326);
+            this.checkCabTecSeg.Name = "checkCabTecSeg";
+            this.checkCabTecSeg.Size = new System.Drawing.Size(120, 17);
+            this.checkCabTecSeg.TabIndex = 51;
+            this.checkCabTecSeg.Text = "Técnico Segurança";
+            this.checkCabTecSeg.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // checkCabCanteiroObras
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox4.Location = new System.Drawing.Point(119, 402);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(111, 17);
-            this.checkBox4.TabIndex = 50;
-            this.checkBox4.Text = "Canteiro de Obras";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkCabCanteiroObras.AutoSize = true;
+            this.checkCabCanteiroObras.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkCabCanteiroObras.Location = new System.Drawing.Point(119, 402);
+            this.checkCabCanteiroObras.Name = "checkCabCanteiroObras";
+            this.checkCabCanteiroObras.Size = new System.Drawing.Size(111, 17);
+            this.checkCabCanteiroObras.TabIndex = 50;
+            this.checkCabCanteiroObras.Text = "Canteiro de Obras";
+            this.checkCabCanteiroObras.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // checkCabPlataforma
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(119, 363);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(79, 17);
-            this.checkBox3.TabIndex = 49;
-            this.checkBox3.Text = " Plataforma";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkCabPlataforma.AutoSize = true;
+            this.checkCabPlataforma.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkCabPlataforma.Location = new System.Drawing.Point(119, 363);
+            this.checkCabPlataforma.Name = "checkCabPlataforma";
+            this.checkCabPlataforma.Size = new System.Drawing.Size(79, 17);
+            this.checkCabPlataforma.TabIndex = 49;
+            this.checkCabPlataforma.Text = " Plataforma";
+            this.checkCabPlataforma.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // checkCabEngResidente
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(119, 326);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(100, 17);
-            this.checkBox2.TabIndex = 48;
-            this.checkBox2.Text = "Engº Residente";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkCabEngResidente.AutoSize = true;
+            this.checkCabEngResidente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkCabEngResidente.Location = new System.Drawing.Point(119, 326);
+            this.checkCabEngResidente.Name = "checkCabEngResidente";
+            this.checkCabEngResidente.Size = new System.Drawing.Size(100, 17);
+            this.checkCabEngResidente.TabIndex = 48;
+            this.checkCabEngResidente.Text = "Engº Residente";
+            this.checkCabEngResidente.UseVisualStyleBackColor = true;
             // 
             // label144
             // 
@@ -1970,6 +1972,7 @@
             this.radioIncentFiscalNao.TabStop = true;
             this.radioIncentFiscalNao.Text = "Não";
             this.radioIncentFiscalNao.UseVisualStyleBackColor = true;
+            this.radioIncentFiscalNao.CheckedChanged += new System.EventHandler(this.radioIncentFiscalNao_CheckedChanged);
             // 
             // label51
             // 
@@ -2001,6 +2004,7 @@
             this.radioIncentFiscalSim.TabStop = true;
             this.radioIncentFiscalSim.Text = "Sim";
             this.radioIncentFiscalSim.UseVisualStyleBackColor = true;
+            this.radioIncentFiscalSim.CheckedChanged += new System.EventHandler(this.radioIncentFiscalSim_CheckedChanged);
             // 
             // panel1
             // 
@@ -2098,6 +2102,7 @@
             this.txtCabComissaoIndic.Name = "txtCabComissaoIndic";
             this.txtCabComissaoIndic.Size = new System.Drawing.Size(160, 20);
             this.txtCabComissaoIndic.TabIndex = 19;
+            this.txtCabComissaoIndic.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCabComissaoIndic_KeyPress);
             // 
             // label58
             // 
@@ -6102,14 +6107,14 @@
         private System.Windows.Forms.Label label139;
         private System.Windows.Forms.Label label140;
         private System.Windows.Forms.RadioButton radioCabMaoObraCliS;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkCabTreinamentos;
+        private System.Windows.Forms.CheckBox checkCabSeguro;
+        private System.Windows.Forms.CheckBox checkCabOutro;
+        private System.Windows.Forms.CheckBox checkCabDatabook;
+        private System.Windows.Forms.CheckBox checkCabTecSeg;
+        private System.Windows.Forms.CheckBox checkCabCanteiroObras;
+        private System.Windows.Forms.CheckBox checkCabPlataforma;
+        private System.Windows.Forms.CheckBox checkCabEngResidente;
         private System.Windows.Forms.Label label144;
         private System.Windows.Forms.Label label145;
         private System.Windows.Forms.TextBox txtCabDescNecessidade;

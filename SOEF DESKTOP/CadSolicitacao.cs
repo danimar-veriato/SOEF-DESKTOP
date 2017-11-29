@@ -50,6 +50,19 @@ namespace ORCAMENTOS_FOCKINK
         private string empr_repres { get; set; }
         private string aliq_imposto { get; set; }
         private string taxa_flat { get; set; }
+        private string maoObraCli { get; set; }
+        private string tipoMaoObraCli { get; set; }
+        private string ind_exportacao { get; set; }
+        private string ind_resp_zelo_material { get; set; }
+        private string ind_eng_residente { get; set; }
+        private string ind_tec_seguranca { get; set; }
+        private string ind_seg_resp_civil { get; set; }
+        private string ind_plataforma { get; set; }
+        private string ind_databook { get; set; }
+        private string ind_treinamentos { get; set; }
+        private string ind_canteiro_obras { get; set; }
+        private string ind_outra_necessidade { get; set; }
+        private string desc_outra_necessidade { get; set; }
 
         //Campos DOM_SOLIC_ORC_COND_PGTO
         private string revisaoSolic { get; set; }
@@ -397,7 +410,9 @@ namespace ORCAMENTOS_FOCKINK
         string p_finalidade, string p_empreendimento, string p_idioma, string p_outro_idioma, string p_valor, string p_dt_entrega_obra,
         string p_dt_proposta, string p_concorrentes, string p_resp_padrao_solucao, string p_frete, string p_faturamento, string p_destino_material, string p_contICMS,
         string p_incentFiscal, string p_desc_incentivo, string p_forma_pagamento, string p_financiamento, string p_instFinanceira, string p_indic_empr_codigo, 
-        string p_indic_dpes_codigo, string p_indic_comissao, string p_desconto, string p_moeda, string p_cod_repres, string p_empr_repres, string pAliqImposto, string pTaxaFlat)
+        string p_indic_dpes_codigo, string p_indic_comissao, string p_desconto, string p_moeda, string p_cod_repres, string p_empr_repres, string pAliqImposto, string pTaxaFlat,
+        string p_maoObraCli, string p_tipoMaoObraCli, string p_indExportacao, string p_indRespZelo, string p_indEngResidente, string p_TecSeguranca, string p_SegRespCivil, 
+        string p_Plataforma, string p_Databook, string p_indTreinamentos, string p_CanteiroObras, string p_OutraNecessidade, string p_DescOutraNecessidade)
         {
             //Atualizando o valor nos atributos da classe
             this.numero_solic = p_num_solic;
@@ -437,6 +452,19 @@ namespace ORCAMENTOS_FOCKINK
             this.cod_repres = p_cod_repres;
             this.aliq_imposto = pAliqImposto;
             this.taxa_flat = taxa_flat;
+            this.maoObraCli = maoObraCli;
+            this.tipoMaoObraCli = tipoMaoObraCli;
+            this.ind_exportacao = ind_exportacao;
+            this.ind_resp_zelo_material = ind_resp_zelo_material;
+            this.ind_eng_residente = ind_eng_residente;
+            this.ind_tec_seguranca = ind_tec_seguranca;
+            this.ind_seg_resp_civil = ind_seg_resp_civil;
+            this.ind_plataforma = ind_plataforma;
+            this.ind_databook = ind_databook;
+            this.ind_treinamentos = ind_treinamentos;
+            this.ind_canteiro_obras = ind_canteiro_obras;
+            this.ind_outra_necessidade = ind_outra_necessidade;
+            this.desc_outra_necessidade = desc_outra_necessidade;
 
             int retorno;
 
@@ -487,7 +515,21 @@ namespace ORCAMENTOS_FOCKINK
                     sql += ",[REPRES_EMPR_CODIGO] ";
                     sql += ",[REPRES_DPES_CODIGO] ";
                     sql += ",[INFORMAR_ALIQ_IMPOSTO] ";
-                    sql += ",[CONSIDERAR_TAXA_FLAT]) ";
+                    sql += ",[CONSIDERAR_TAXA_FLAT] ";
+
+                    sql += ",[MAO_OBRA_CLIENTE] ";
+                    sql += ",[TIPO_MAO_OBRA] ";
+                    sql += ",[IND_EXPORTACAO] ";
+                    sql += ",[IND_RESP_ZELO_MATERIAL] ";
+                    sql += ",[IND_ENG_RESIDENTE] ";
+                    sql += ",[IND_TEC_SEGURANCA] ";
+                    sql += ",[IND_SEG_RESP_CIVIL] ";
+                    sql += ",[IND_PLATAFORMA] ";
+                    sql += ",[IND_DATABOOK] ";
+                    sql += ",[IND_TREINAMENTOS] ";
+                    sql += ",[IND_CANTEIRO_OBRAS] ";
+                    sql += ",[IND_OUTRA_NECESSIDADE] ";
+                    sql += ",[DESC_OUTRA_NECESSIDADE]) ";
                     sql += "VALUES ";
                     sql += "(" + p_num_solic + ", ";
                     sql += "'" + p_revisao + "', ";
@@ -548,7 +590,21 @@ namespace ORCAMENTOS_FOCKINK
                     sql += "" + p_empr_repres + ", ";
                     sql += "" + p_cod_repres + ", ";
                     sql += "'" + pAliqImposto + "', ";
-                    sql += "'" + pTaxaFlat + "') ";
+                    sql += "'" + pTaxaFlat + "', ";
+
+                    sql += "'" + p_maoObraCli + "', ";
+                    sql += "'" + p_tipoMaoObraCli + "', ";
+                    sql += "'" + p_indExportacao + "', ";
+                    sql += "'" + p_indRespZelo + "', ";
+                    sql += "'" + p_indEngResidente + "', ";
+                    sql += "'" + p_TecSeguranca + "', ";
+                    sql += "'" + p_SegRespCivil + "', ";
+                    sql += "'" + p_Plataforma + "', ";
+                    sql += "'" + p_Databook + "', ";
+                    sql += "'" + p_indTreinamentos + "', ";
+                    sql += "'" + p_CanteiroObras + "', ";
+                    sql += "'" + p_OutraNecessidade + "', ";
+                    sql += "'" + p_DescOutraNecessidade + "') ";
                 }
                 else //U - Update
                 {
@@ -608,7 +664,22 @@ namespace ORCAMENTOS_FOCKINK
                     sql += "    [INDIC_PERC_COMISSAO] = " + p_indic_comissao + ", ";
                     sql += "    [MARGEM_DESCONTO] = " + p_desconto + ", ";
                     sql += "    [MOEDA_PROPOSTA] = " + p_moeda + ", ";
-                    sql += "    [DT_PROPOSTA] = @p_data2 ";
+                    sql += "    [DT_PROPOSTA] = @p_data2, ";
+
+                    sql += "    [MAO_OBRA_CLIENTE] = '" + p_maoObraCli + "', ";
+                    sql += "    [TIPO_MAO_OBRA] = '" + p_tipoMaoObraCli + "', ";
+                    sql += "    [IND_EXPORTACAO] = '" + p_indExportacao + "', ";
+                    sql += "    [IND_RESP_ZELO_MATERIAL] = '" + p_indRespZelo + "', ";
+                    sql += "    [IND_ENG_RESIDENTE] = '" + p_indEngResidente + "', ";
+                    sql += "    [IND_TEC_SEGURANCA] = '" + p_TecSeguranca + "', ";
+                    sql += "    [IND_SEG_RESP_CIVIL] = '" + p_SegRespCivil + "', ";
+                    sql += "    [IND_PLATAFORMA] = '" + p_Plataforma + "', ";
+                    sql += "    [IND_DATABOOK] = '" + p_Databook + "', ";
+                    sql += "    [IND_TREINAMENTOS] = '" + p_indTreinamentos + "', ";
+                    sql += "    [IND_CANTEIRO_OBRAS] = '" + p_CanteiroObras + "', ";
+                    sql += "    [IND_OUTRA_NECESSIDADE] = '" + p_OutraNecessidade + "', ";
+                    sql += "    [DESC_OUTRA_NECESSIDADE] = '" + p_DescOutraNecessidade + "' ";
+
                     sql += " WHERE[NUMERO] = " + p_num_solic + " ";
                     sql += "AND[REPRES_EMPR_CODIGO] = " + p_empr_repres + " ";
                     sql += "AND[REPRES_DPES_CODIGO] = " + p_cod_repres + " ";
