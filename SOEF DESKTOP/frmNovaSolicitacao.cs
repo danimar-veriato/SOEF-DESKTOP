@@ -1093,7 +1093,7 @@ namespace ORCAMENTOS_FOCKINK
             else
             {
                 this.indOutraNecessidade = "N";
-                this.descOutraNecessidade = "NULL";
+                this.descOutraNecessidade = null;
             }
 
 
@@ -1310,6 +1310,114 @@ namespace ORCAMENTOS_FOCKINK
                     }
                     txtCabDesconto.Text = dt.Rows[0]["MARGEM_DESCONTO"].ToString();
                     comboCabMoeda.SelectedValue = Convert.ToInt32(dt.Rows[0]["MOEDA_PROPOSTA"].ToString());
+
+                    //Mão Obra Cliente
+                    if(dt.Rows[0]["MAO_OBRA_CLIENTE"].ToString() == "S")
+                    {
+                        radioCabeAliqImpostoS.Checked = true;
+                    }
+                    else
+                    {
+                        radioCabeAliqImpostoN.Checked = true;
+                    }
+                    //Tipo Mão de Obra
+                    comboCabTipoMaoObra.SelectedIndex = Convert.ToInt32(dt.Rows[0]["TIPO_MAO_OBRA"].ToString());
+                    if(dt.Rows[0]["IND_EXPORTACAO"].ToString() == "S")
+                    {
+                        radioCabExportS.Checked = true;
+                    }
+                    else
+                    {
+                        radioCabExportN.Checked = false;
+                    }
+                    //Zelo Material
+                    if(dt.Rows[0]["IND_RESP_ZELO_MATERIAL"].ToString() == "CL")
+                    {
+                        comboCabZelo.SelectedIndex = 1;
+                    }
+                    else if (dt.Rows[0]["IND_RESP_ZELO_MATERIAL"].ToString() == "FN")
+                    {
+                        comboCabZelo.SelectedIndex = 2;
+                    }
+                    else if (dt.Rows[0]["IND_RESP_ZELO_MATERIAL"].ToString() == "FA")
+                    {
+                        comboCabZelo.SelectedIndex = 3;
+                    }
+                    else if (dt.Rows[0]["IND_RESP_ZELO_MATERIAL"].ToString() == "NA")
+                    {
+                        comboCabZelo.SelectedIndex = 4;
+                    }
+                    //Checkboxes a considerar no escopo
+                    if (dt.Rows[0]["IND_ENG_RESIDENTE"].ToString() == "S")
+                    {
+                        checkCabEngResidente.Checked = true;
+                    }
+                    else
+                    {
+                        checkCabEngResidente.Checked = false;
+                    }
+                    if (dt.Rows[0]["IND_TEC_SEGURANCA"].ToString() == "S")
+                    {
+                        checkCabTecSeg.Checked = true;
+                    }
+                    else
+                    {
+                        checkCabTecSeg.Checked = false;
+                    }
+                    if (dt.Rows[0]["IND_SEG_RESP_CIVIL"].ToString() == "S")
+                    {
+                        checkCabSeguro.Checked = true;
+                    }
+                    else
+                    {
+                        checkCabSeguro.Checked = false;
+                    }
+                    if (dt.Rows[0]["IND_PLATAFORMA"].ToString() == "S")
+                    {
+                        checkCabPlataforma.Checked = true;
+                    }
+                    else
+                    {
+                        checkCabPlataforma.Checked = false;
+                    }
+                    if (dt.Rows[0]["IND_DATABOOK"].ToString() == "S")
+                    {
+                        checkCabDatabook.Checked = true;
+                    }
+                    else
+                    {
+                        checkCabDatabook.Checked = false;
+                    }
+                    if (dt.Rows[0]["IND_TREINAMENTOS"].ToString() == "S")
+                    {
+                        checkCabTreinamentos.Checked = true;
+                    }
+                    else
+                    {
+                        checkCabTreinamentos.Checked = false;
+                    }
+                    if (dt.Rows[0]["IND_CANTEIRO_OBRAS"].ToString() == "S")
+                    {
+                        checkCabCanteiroObras.Checked = true;
+                    }
+                    else
+                    {
+                        checkCabCanteiroObras.Checked = false;
+                    }
+                    if (dt.Rows[0]["IND_OUTRA_NECESSIDADE"].ToString() == "S")
+                    {
+                        checkCabOutro.Checked = true;
+                        label145.Visible = true;
+                        txtCabDescNecessidade.Visible = true;
+                        txtCabDescNecessidade.Text = dt.Rows[0]["DESC_OUTRA_NECESSIDADE"].ToString();
+                    }
+                    else
+                    {
+                        checkCabOutro.Checked = false;
+                        label145.Visible = false;
+                        txtCabDescNecessidade.Text = "";
+                        txtCabDescNecessidade.Visible = false;
+                    }
                 }
                 else
                 {

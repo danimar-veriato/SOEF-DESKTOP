@@ -586,7 +586,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(11, 6);
+            this.label9.Location = new System.Drawing.Point(17, 10);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(173, 13);
             this.label9.TabIndex = 2;
@@ -598,7 +598,7 @@
             this.tbCabecalho.Controls.Add(this.tbCabecalho2);
             this.tbCabecalho.Controls.Add(this.tbCabecalho3);
             this.tbCabecalho.Controls.Add(this.tabCabecalhoCondPgto);
-            this.tbCabecalho.Location = new System.Drawing.Point(14, 33);
+            this.tbCabecalho.Location = new System.Drawing.Point(14, 35);
             this.tbCabecalho.Name = "tbCabecalho";
             this.tbCabecalho.SelectedIndex = 0;
             this.tbCabecalho.Size = new System.Drawing.Size(1065, 513);

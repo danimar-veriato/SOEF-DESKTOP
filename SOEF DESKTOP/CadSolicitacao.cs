@@ -604,7 +604,15 @@ namespace ORCAMENTOS_FOCKINK
                     sql += "'" + p_indTreinamentos + "', ";
                     sql += "'" + p_CanteiroObras + "', ";
                     sql += "'" + p_OutraNecessidade + "', ";
-                    sql += "'" + p_DescOutraNecessidade + "') ";
+                    if (string.IsNullOrEmpty(p_DescOutraNecessidade))
+                    {
+                        sql += " NULL) ";
+                    }
+                    else
+                    {
+                        sql += "'" + p_DescOutraNecessidade + "') ";
+                    }
+                    
                 }
                 else //U - Update
                 {
@@ -667,7 +675,7 @@ namespace ORCAMENTOS_FOCKINK
                     sql += "    [DT_PROPOSTA] = @p_data2, ";
 
                     sql += "    [MAO_OBRA_CLIENTE] = '" + p_maoObraCli + "', ";
-                    sql += "    [TIPO_MAO_OBRA] = '" + p_tipoMaoObraCli + "', ";
+                    sql += "    [TIPO_MAO_OBRA] = " + p_tipoMaoObraCli + ", ";
                     sql += "    [IND_EXPORTACAO] = '" + p_indExportacao + "', ";
                     sql += "    [IND_RESP_ZELO_MATERIAL] = '" + p_indRespZelo + "', ";
                     sql += "    [IND_ENG_RESIDENTE] = '" + p_indEngResidente + "', ";
@@ -678,7 +686,14 @@ namespace ORCAMENTOS_FOCKINK
                     sql += "    [IND_TREINAMENTOS] = '" + p_indTreinamentos + "', ";
                     sql += "    [IND_CANTEIRO_OBRAS] = '" + p_CanteiroObras + "', ";
                     sql += "    [IND_OUTRA_NECESSIDADE] = '" + p_OutraNecessidade + "', ";
-                    sql += "    [DESC_OUTRA_NECESSIDADE] = '" + p_DescOutraNecessidade + "' ";
+                    if (string.IsNullOrEmpty(p_DescOutraNecessidade))
+                    {
+                        sql += "    [DESC_OUTRA_NECESSIDADE] = NULL ";
+                    }
+                    else
+                    {
+                        sql += "    [DESC_OUTRA_NECESSIDADE] = '" + p_DescOutraNecessidade + "' ";
+                    }                    
 
                     sql += " WHERE[NUMERO] = " + p_num_solic + " ";
                     sql += "AND[REPRES_EMPR_CODIGO] = " + p_empr_repres + " ";
@@ -1020,6 +1035,19 @@ namespace ORCAMENTOS_FOCKINK
                     sql += ",DSO.[REPRES_DPES_CODIGO] ";
                     sql += ",DSO.[INFORMAR_ALIQ_IMPOSTO] ";
                     sql += ",DSO.[CONSIDERAR_TAXA_FLAT] ";
+                    sql += ",DSO.[MAO_OBRA_CLIENTE] ";
+                    sql += ",DSO.[TIPO_MAO_OBRA] ";
+                    sql += ",DSO.[IND_EXPORTACAO] ";
+                    sql += ",DSO.[IND_RESP_ZELO_MATERIAL] ";
+                    sql += ",DSO.[IND_ENG_RESIDENTE] ";
+                    sql += ",DSO.[IND_TEC_SEGURANCA] ";
+                    sql += ",DSO.[IND_SEG_RESP_CIVIL] ";
+                    sql += ",DSO.[IND_PLATAFORMA] ";
+                    sql += ",DSO.[IND_DATABOOK] ";
+                    sql += ",DSO.[IND_TREINAMENTOS] ";
+                    sql += ",DSO.[IND_CANTEIRO_OBRAS] ";
+                    sql += ",DSO.[IND_OUTRA_NECESSIDADE] ";
+                    sql += ",DSO.[DESC_OUTRA_NECESSIDADE] ";
                     sql += " FROM [DOM_SOLIC_ORCAMENTO] DSO ";
                     sql += " INNER JOIN [DOM_TIPO_NEGOCIO] DTN ON DTN.[CODIGO] = DSO.[NEGOCIO_ASSOCIADO] ";
                     //sql += " INNER JOIN [DOM_INDICADOR_NEGOCIO] DIN ON DSO.[INDIC_DPES_CODIGO] = DIN.[DPES_CODIGO] AND DSO.[REPRES_EMPR_CODIGO] = DIN.[EMPR_CODIGO] ";
