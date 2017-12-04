@@ -95,7 +95,7 @@ namespace SOEF_CLASS
         /// <param name="tipoPintura"></param>
         /// <param name="tipoInstalacao"></param>
         /// <returns></returns>
-        public int gravaEscopo_Valor_Comum_E01(string dadosAmbientais, string frequenciaHz, string outraFrequencia, string tipoPintura, string tipoInstalacao)
+        public int gravaEscopo_Valor_Comum_E01(string dadosAmbientais, string frequenciaHz, string outraFrequencia, string tipoPintura, string tipoInstalacao, string tensaoDistribuicao, string outraTensaoD)
         {
             SqlCE sqlce = new SqlCE();
             sqlce.openConnection();
@@ -110,7 +110,9 @@ namespace SOEF_CLASS
                 query += "    [FREQUENCIA_HZ], ";
                 query += "    [OUTRA_FREQUENCIA], ";
                 query += "    [TIPO_PINTURA], ";
-                query += "    [IND_INSTAL_ABRIG_TEMPO]) ";
+                query += "    [IND_INSTAL_ABRIG_TEMPO], ";
+                query += "    [TENSAO_DISTRIBUICAO], ";
+                query += "    [OUTRA_TENSAO_DISTRIB]) ";
                 query += " VALUES ";
                 query += " (" + Numero + ", ";
                 query += " '" + Revisao + "', ";
@@ -118,7 +120,9 @@ namespace SOEF_CLASS
                 query += " '" + frequenciaHz + "', ";
                 query += " '" + outraFrequencia + "', ";
                 query += " '" + tipoPintura + "', ";
-                query += " '" + tipoInstalacao + "') ";
+                query += " '" + tipoInstalacao + "', ";
+                query += " " + tensaoDistribuicao + ", ";
+                query += " '" + outraTensaoD + "') ";
                 retorno = sqlce.insertSOF(query);
                 return retorno;
             }
@@ -142,7 +146,7 @@ namespace SOEF_CLASS
         /// <param name="tipoPintura"></param>
         /// <param name="tipoInstalacao"></param>
         /// <returns></returns>
-        public int atualizaEscopo_Valor_Comum_E01(string dadosAmbientais, string frequenciaHz, string outraFrequencia, string tipoPintura, string tipoInstalacao)
+        public int atualizaEscopo_Valor_Comum_E01(string dadosAmbientais, string frequenciaHz, string outraFrequencia, string tipoPintura, string tipoInstalacao, string tensaoDistribuicao, string outraTensaoD)
         {
             SqlCE sqlce = new SqlCE();
             sqlce.openConnection();
@@ -155,7 +159,9 @@ namespace SOEF_CLASS
                 query += "     [FREQUENCIA_HZ] = '" + frequenciaHz + "', ";
                 query += "     [OUTRA_FREQUENCIA] = '" + outraFrequencia + "', ";
                 query += "     [TIPO_PINTURA] = '" + tipoPintura + "', ";
-                query += "     [IND_INSTAL_ABRIG_TEMPO] = '" + tipoInstalacao + "' ";
+                query += "     [IND_INSTAL_ABRIG_TEMPO] = '" + tipoInstalacao + "', ";
+                query += "     [TENSAO_DISTRIBUICAO] = " + tensaoDistribuicao + ", ";
+                query += "     [OUTRA_TENSAO_DISTRIB] = '" + outraTensaoD + "' ";
                 query += " WHERE [NUMERO_SOLICITACAO] = " + Numero + "";
                 query += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
                 retorno = sqlce.insertSOF(query);
@@ -189,7 +195,9 @@ namespace SOEF_CLASS
                 query += "     [FREQUENCIA_HZ] = NULL, ";
                 query += "     [OUTRA_FREQUENCIA] = NULL, ";
                 query += "     [TIPO_PINTURA] = NULL, ";
-                query += "     [IND_INSTAL_ABRIG_TEMPO] = NULL ";
+                query += "     [IND_INSTAL_ABRIG_TEMPO] = NULL, ";
+                query += "     [TENSAO_DISTRIBUICAO] = NULL, ";
+                query += "     [OUTRA_TENSAO_DISTRIB] = NULL ";
                 query += " WHERE [NUMERO_SOLICITACAO] = " + Numero + "";
                 query += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
                 retorno = sqlce.insertSOF(query);
@@ -220,7 +228,7 @@ namespace SOEF_CLASS
             try
             {
                 string query = "";
-                query += " SELECT [DADOS_AMBIENTAIS], [FREQUENCIA_HZ], [OUTRA_FREQUENCIA], [TIPO_PINTURA], [IND_INSTAL_ABRIG_TEMPO] ";
+                query += " SELECT [DADOS_AMBIENTAIS], [FREQUENCIA_HZ], [OUTRA_FREQUENCIA], [TIPO_PINTURA], [IND_INSTAL_ABRIG_TEMPO], [TENSAO_DISTRIBUICAO], [OUTRA_TENSAO_DISTRIB] ";
                 query += " FROM [DOM_SOLIC_ORC_VALOR_COMUM] ";
                 query += " WHERE [NUMERO_SOLICITACAO] = " + Numero;
                 query += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";

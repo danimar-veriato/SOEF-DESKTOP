@@ -2079,6 +2079,22 @@ namespace ORCAMENTOS_FOCKINK
         }
 
 
+        protected void listaEscopo10_3(string pNumSolic, string pNumRev)
+        {
+            try
+            {
+                SOEF_CLASS.Escopo_10_3 Escopo10_3 = new SOEF_CLASS.Escopo_10_3(pNumSolic, pNumRev);
+                dgv10_3.DataSource = Escopo10_3.getRenovadoresAr(pNumSolic, pNumRev);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
+
+
         /// <summary>
         /// Lista os dados do Escopo 20
         /// </summary>
@@ -2533,6 +2549,16 @@ namespace ORCAMENTOS_FOCKINK
                     foreach (DataRow dr in dt.Rows)
                     {
                         combo01Tensao.SelectedIndex = Convert.ToInt32(dr["TENSAO_MEDIA"].ToString());
+                        if(combo01Tensao.SelectedIndex == 4)
+                        {
+                            txt01OutraTensao.Enabled = true;
+                            txt01OutraTensao.Text = dr["DESC_OUTRA_TENSAO"].ToString();
+                        }
+                        else
+                        {
+                            txt01OutraTensao.Enabled = false;
+                            txt01OutraTensao.Text = "";
+                        }
                         if (dr["IND_TIPO_INSTALACAO"].ToString() == "A")
                         {
                             combo01Instalacao.SelectedIndex = 1;
@@ -2545,7 +2571,7 @@ namespace ORCAMENTOS_FOCKINK
                         {
                             combo01Instalacao.SelectedIndex = 3;
                         }
-                        if (dr["IND_ENSAIO"].ToString() == "E")
+                        if (dr["IND_ENSAIO"].ToString() == "A")
                         {
                             combo01EnsaioPainel.SelectedIndex = 1;
                         }
@@ -2627,6 +2653,8 @@ namespace ORCAMENTOS_FOCKINK
                 {
                     //Limpa os campos
                     combo01Tensao.SelectedIndex = 0;
+                    txt01OutraTensao.Text = "";
+                    txt01OutraTensao.Enabled = false;
                     combo01Instalacao.SelectedIndex = 0;
                     combo01EnsaioPainel.SelectedIndex = 0;
                     combo01Pintura.SelectedIndex = 0;
@@ -2935,7 +2963,7 @@ namespace ORCAMENTOS_FOCKINK
                         {
                             rbtn18EstadiaCli.Checked = true; 
                         }
-                        txt18Obs.Text = dr["OBSERVACOES"].ToString();
+                        txt18DescServicos.Text = dr["DESCRICAO_SERVICO"].ToString();
                     }
                     btn18Excluir.Visible = true;
                 }
@@ -2952,7 +2980,7 @@ namespace ORCAMENTOS_FOCKINK
                     rbtn18AlimentacaoCli.Checked = false;
                     rbtn18EstadiaCli.Checked = false;
                     rbtn18EstadiaFockink.Checked = false;
-                    txt18Obs.Text = "";
+                    txt18DescServicos.Text = "";
                     btn18Excluir.Visible = false;
                 }
             }
@@ -3258,6 +3286,18 @@ namespace ORCAMENTOS_FOCKINK
                             {
                                 combo01DadosAmbientais.SelectedIndex = 3;
                             }
+                            //Tensao Distribuição
+                            combo01Tensao.SelectedIndex = Convert.ToInt32(dr["TENSAO_DISTRIBUICAO"].ToString());
+                            if(combo01Tensao.SelectedIndex == 4)
+                            {
+                                txt01OutraTensao.Enabled = true;
+                                txt01OutraTensao.Text = dr["OUTRA_TENSAO_DISTRIB"].ToString();
+                            }
+                            else
+                            {
+                                txt01OutraTensao.Text = "";
+                                txt01OutraTensao.Enabled = false;                           
+                            }
                         }
                     }
                     else
@@ -3267,6 +3307,8 @@ namespace ORCAMENTOS_FOCKINK
                         combo01Frequencia.SelectedIndex = 0;
                         combo01Instalacao.SelectedIndex = 0;
                         combo01Pintura.SelectedIndex = 0;
+                        combo01Tensao.SelectedIndex = 0;
+                        txt01OutraTensao.Enabled = false;
                     }
                 }
                 else
@@ -3395,7 +3437,14 @@ namespace ORCAMENTOS_FOCKINK
             //Escopo 20
             else if(tabNovaSolicitacao.SelectedTab.Name == "tabEscopo20")
             {
-                listaEscopo20(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                //    listaEscopo20(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                //Inicializa Campos
+                combo10_3DadosAmbientais.SelectedIndex = 0;
+                combo10_3Freq.SelectedIndex = 0;
+                combo10_3Local.SelectedIndex = 0;
+                combo10_3Tensao.SelectedIndex = 0;
+
+                //Verificar Escopo 10_3 - Tabela Valores Comum
 
             }
         }
@@ -3460,26 +3509,18 @@ namespace ORCAMENTOS_FOCKINK
                     SOEF_CLASS.Escopo_20 Escopo20 = new SOEF_CLASS.Escopo_20(this.numero_solic.ToString(), this.NumRevisaoSolic);
                     //Busca a última sequência inserida
                     sequencia = Escopo20.getSequencia(this.numero_solic.ToString(), this.NumRevisaoSolic) + 1;
-                   
-                    //Verifica se é um novo registro
-                   // if (AcaoTela != "N") 
-                  //  {
-                        vlrRetorno = Escopo20.gravaEscopo20(sequencia.ToString(), txtEsc20Titulo.Text, txtEsc20Desc.Text, EscopoPreenchido);
-                        if(vlrRetorno > 0)
-                        {
-                            listaEscopo20(this.numero_solic.ToString(), this.NumRevisaoSolic);
-                            MessageBox.Show("Escopo gravado com sucesso!");
-                            txtEsc20Desc.Text = "";
-                            txtEsc20Titulo.Text = "";
-                        }
-                        else
-                        {
-                            MessageBox.Show("Ocorreu um erro na gravação do escopo. Tente novamente.");
-                        }
-                   // }
-                    //else
-                    //{
-                   // }
+                    vlrRetorno = Escopo20.gravaEscopo20(sequencia.ToString(), txtEsc20Titulo.Text, txtEsc20Desc.Text, EscopoPreenchido);
+                    if(vlrRetorno > 0)
+                    {
+                        listaEscopo20(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                        MessageBox.Show("Escopo gravado com sucesso!");
+                        txtEsc20Desc.Text = "";
+                        txtEsc20Titulo.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocorreu um erro na gravação do escopo. Tente novamente.");
+                    }
                 }
                 catch (Exception)
                 {
@@ -3536,7 +3577,7 @@ namespace ORCAMENTOS_FOCKINK
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if( (rbtn18HrasExtrasNao.Checked == false && rbtn18HrasExtrasSim.Checked == false) || (rbtn18MatConsumoNao.Checked == false && rbtn18MatConsumoSim.Checked == false) || (rbtn18ConsidTransladoNao.Checked == false && rbtn18ConsidTransladoSim.Checked == false) || (rbtn18AlimentacaoCli.Checked == false && rbtn18AlimentacaoFockink.Checked == false) || (rbtn18EstadiaCli.Checked == false && rbtn18EstadiaFockink.Checked == false))
+            if( (rbtn18HrasExtrasNao.Checked == false && rbtn18HrasExtrasSim.Checked == false) || (rbtn18MatConsumoNao.Checked == false && rbtn18MatConsumoSim.Checked == false) || (rbtn18ConsidTransladoNao.Checked == false && rbtn18ConsidTransladoSim.Checked == false) || (rbtn18AlimentacaoCli.Checked == false && rbtn18AlimentacaoFockink.Checked == false) || (rbtn18EstadiaCli.Checked == false && rbtn18EstadiaFockink.Checked == false) || (string.IsNullOrEmpty(txt18DescServicos.Text)) )
             {
                 MessageBox.Show("Por favor, informe todos os campos obrigatórios.");
             }
@@ -3598,7 +3639,7 @@ namespace ORCAMENTOS_FOCKINK
                 if(AcaoTela == "N")
                 {
                     SOEF_CLASS.Escopo_18 Escopo18 = new SOEF_CLASS.Escopo_18(this.numero_solic.ToString(), this.NumRevisaoSolic);
-                    retorno = Escopo18.gravaEscopo18(HraExtra, MaterialConsumo, TransladoObra, FornecAlimentacao, FornecEstadia, txt18Obs.Text, "S");
+                    retorno = Escopo18.gravaEscopo18(HraExtra, MaterialConsumo, TransladoObra, FornecAlimentacao, FornecEstadia, txt18DescServicos.Text, "S");
                     if (retorno > 0)
                     {
                         MessageBox.Show("Registro inserido com sucesso!");
@@ -3615,7 +3656,17 @@ namespace ORCAMENTOS_FOCKINK
                 else
                 {
                     SOEF_CLASS.Escopo_18 Escopo18 = new SOEF_CLASS.Escopo_18(this.numero_solic.ToString(), this.NumRevisaoSolic);
-                    retorno = Escopo18.atualizaEscopo18(HraExtra, MaterialConsumo, TransladoObra, FornecAlimentacao, FornecEstadia, txt18Obs.Text, "S");
+                    //Verifica se existe Escopo 18 cadastrado
+                    DataTable dt18 = Escopo18.getEscopo18();
+                    if(dt18.Rows.Count > 0)
+                    {
+                        retorno = Escopo18.atualizaEscopo18(HraExtra, MaterialConsumo, TransladoObra, FornecAlimentacao, FornecEstadia, txt18DescServicos.Text, "S");
+                    }
+                    else
+                    {
+                        retorno = Escopo18.gravaEscopo18(HraExtra, MaterialConsumo, TransladoObra, FornecAlimentacao, FornecEstadia, txt18DescServicos.Text, "S");
+                    }
+                    
                     if (retorno > 0)
                     {
                         MessageBox.Show("Registro atualizado com sucesso!");
@@ -4286,6 +4337,7 @@ namespace ORCAMENTOS_FOCKINK
             string dadosAmbientais = "";
             string indDiagramaUnifilar = "";
             string descSolucao = "";
+            string outraTensaoD = "";
 
             //Tensão Distribuição
             if (combo01Tensao.SelectedIndex == 0)
@@ -4298,6 +4350,15 @@ namespace ORCAMENTOS_FOCKINK
                 {
                     erro += "Por favor, informe a descrição da Taxa de Distribuição no campo Observação.\n";
                 }
+                if (string.IsNullOrEmpty(txt01OutraTensao.Text))
+                {
+                    erro += "Informe o campo Outra Tensão\n";
+                }
+                else
+                {
+                    outraTensaoD = txt01OutraTensao.Text;
+                }
+
             }
             tensaoMedia = combo01Tensao.SelectedIndex.ToString();
 
@@ -4384,7 +4445,7 @@ namespace ORCAMENTOS_FOCKINK
             }
             else if(combo01EnsaioPainel.SelectedIndex == 1)
             {
-                indEnsaio = "E";
+                indEnsaio = "A";
             }
             else if (combo01EnsaioPainel.SelectedIndex == 2)
             {
@@ -4440,7 +4501,7 @@ namespace ORCAMENTOS_FOCKINK
                     if (AcaoTela == "N")
                     {
                         SOEF_CLASS.Escopo_01 Escopo01 = new SOEF_CLASS.Escopo_01(this.numero_solic.ToString(), this.NumRevisaoSolic);
-                        retornoInsertEscopo01 = Escopo01.gravaEscopo_01(tensaoMedia, indTipoInstalacao, indEnsaio, tipoPintura, txt01Obs.Text, "S", frequencia, descOutraFrequencia, dadosAmbientais, indDiagramaUnifilar, descSolucao, descOutroEnsaio);
+                        retornoInsertEscopo01 = Escopo01.gravaEscopo_01(tensaoMedia, indTipoInstalacao, indEnsaio, tipoPintura, txt01Obs.Text, "S", frequencia, descOutraFrequencia, dadosAmbientais, indDiagramaUnifilar, descSolucao, descOutroEnsaio, outraTensaoD);
                         if (retornoInsertEscopo01 > 0)
                         {
                             SOEF_CLASS.Escopo_Valor_Comum EscopoValorComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
@@ -4449,7 +4510,7 @@ namespace ORCAMENTOS_FOCKINK
                             if (dt.Rows.Count == 0)
                             {
                                 //Se não encontra registro para o registro, grava pela primeira vez
-                                retornoGravaVlrComum = EscopoValorComum.gravaEscopo_Valor_Comum_E01(dadosAmbientais, frequencia, descOutraFrequencia, tipoPintura, indTipoInstalacao);
+                                retornoGravaVlrComum = EscopoValorComum.gravaEscopo_Valor_Comum_E01(dadosAmbientais, frequencia, descOutraFrequencia, tipoPintura, indTipoInstalacao, tensaoMedia, outraTensaoD);
                                 if (retornoGravaVlrComum <= 0)
                                 {
                                     sucesso = false;
@@ -4459,7 +4520,7 @@ namespace ORCAMENTOS_FOCKINK
                             else
                             {
                                 //Atualiza os campos existentes no escopo 1
-                                retornoAtualizaVlrComum = EscopoValorComum.atualizaEscopo_Valor_Comum_E01(dadosAmbientais, frequencia, descOutraFrequencia, tipoPintura, indTipoInstalacao);
+                                retornoAtualizaVlrComum = EscopoValorComum.atualizaEscopo_Valor_Comum_E01(dadosAmbientais, frequencia, descOutraFrequencia, tipoPintura, indTipoInstalacao, tensaoMedia, outraTensaoD);
                                 if (retornoAtualizaVlrComum > 0)
                                 {
                                     //Verifica se os campos da tabela estão nullos
@@ -4496,11 +4557,11 @@ namespace ORCAMENTOS_FOCKINK
                         DataTable dtEscopo01 = Escopo01.getEscopo_01();
                         if(dtEscopo01.Rows.Count > 0)
                         {
-                            retornoInsertEscopo01 = Escopo01.updateEscopo_01(tensaoMedia, indTipoInstalacao, indEnsaio, tipoPintura, txt01Obs.Text, "S", frequencia, descOutraFrequencia, dadosAmbientais, indDiagramaUnifilar, descSolucao, descOutroEnsaio);
+                            retornoInsertEscopo01 = Escopo01.updateEscopo_01(tensaoMedia, indTipoInstalacao, indEnsaio, tipoPintura, txt01Obs.Text, "S", frequencia, descOutraFrequencia, dadosAmbientais, indDiagramaUnifilar, descSolucao, descOutroEnsaio, outraTensaoD);
                         }
                         else
                         {
-                            retornoInsertEscopo01 = Escopo01.gravaEscopo_01(tensaoMedia, indTipoInstalacao, indEnsaio, tipoPintura, txt01Obs.Text, "S", frequencia, descOutraFrequencia, dadosAmbientais, indDiagramaUnifilar, descSolucao, descOutroEnsaio);
+                            retornoInsertEscopo01 = Escopo01.gravaEscopo_01(tensaoMedia, indTipoInstalacao, indEnsaio, tipoPintura, txt01Obs.Text, "S", frequencia, descOutraFrequencia, dadosAmbientais, indDiagramaUnifilar, descSolucao, descOutroEnsaio, outraTensaoD);
                         }
                         
                         if (retornoInsertEscopo01 > 0)
@@ -4511,7 +4572,7 @@ namespace ORCAMENTOS_FOCKINK
                             if (dt.Rows.Count == 0)
                             {
                                 //Se não encontra registro para o registro, grava pela primeira vez
-                                retornoGravaVlrComum = EscopoValorComum.gravaEscopo_Valor_Comum_E01(dadosAmbientais, frequencia, descOutraFrequencia, tipoPintura, indTipoInstalacao);
+                                retornoGravaVlrComum = EscopoValorComum.gravaEscopo_Valor_Comum_E01(dadosAmbientais, frequencia, descOutraFrequencia, tipoPintura, indTipoInstalacao, tensaoMedia, outraTensaoD);
                                 if (retornoGravaVlrComum <= 0)
                                 {
                                     MessageBox.Show("Houve um problema na inserção dos Valores Comum. Por favor, tente novamente.");
@@ -4520,7 +4581,7 @@ namespace ORCAMENTOS_FOCKINK
                             else
                             {
                                 //Atualiza os campos existentes no escopo 1
-                                retornoAtualizaVlrComum = EscopoValorComum.atualizaEscopo_Valor_Comum_E01(dadosAmbientais, frequencia, descOutraFrequencia, tipoPintura, indTipoInstalacao);
+                                retornoAtualizaVlrComum = EscopoValorComum.atualizaEscopo_Valor_Comum_E01(dadosAmbientais, frequencia, descOutraFrequencia, tipoPintura, indTipoInstalacao, tensaoMedia, outraTensaoD);
                                 if (retornoAtualizaVlrComum > 0)
                                 {
                                     //Verifica se os campos da tabela estão nullos
@@ -4589,9 +4650,16 @@ namespace ORCAMENTOS_FOCKINK
 
         private void combo01Tensao_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //MessageBox.Show("Selecionado: " + combo01Tensao.SelectedIndex.ToString());
             if(combo01Tensao.SelectedIndex == 4)
             {
                 txt01Obs.Text = "";
+                txt01OutraTensao.Enabled = true;
+            }
+            else
+            {
+                txt01OutraTensao.Text = "";
+                txt01OutraTensao.Enabled = false;
             }
         }
 
@@ -4831,7 +4899,7 @@ namespace ORCAMENTOS_FOCKINK
             else if (tabsEscopo10.SelectedTab.Name == "tabEscopo10_3")
             {
                 inicializaCamposE10_3();
-
+                listaEscopo10_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
 
             }//Fim Escopo 10_3
         }
@@ -5786,6 +5854,11 @@ namespace ORCAMENTOS_FOCKINK
                     erros += "O campo Tem no Projeto, da montagem da relação de Renovadores deve ser informado.";
                 }
             }
+            if(!radio10_3ProjetoS.Checked && !radio10_3ProjetoN.Checked)
+            {
+                erros += "Informe o campo Tem no Projeto\n";
+            }
+
             if (!string.IsNullOrEmpty(erros))
             {
                 MessageBox.Show("Painel de erros:\n" + erros);
@@ -5799,9 +5872,10 @@ namespace ORCAMENTOS_FOCKINK
                 string Comprimento = "";
                 string Largura = "";
                 string Altura = "";
+                int sequencia = 0;
 
                 //Local
-                if(combo10_3Local.SelectedIndex == 1)
+                if (combo10_3Local.SelectedIndex == 1)
                 {
                     Local = "T";
                 }
@@ -5836,7 +5910,14 @@ namespace ORCAMENTOS_FOCKINK
                 Altura = txt10_3Altura.Text;
 
 
-
+                SOEF_CLASS.Escopo_10_3 Escopo10_3 = new SOEF_CLASS.Escopo_10_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                sequencia = Escopo10_3.getSequencia(this.numero_solic.ToString(), this.NumRevisaoSolic) + 1; //Última sequência inserida na tabela
+                int retorno = Escopo10_3.gravaRenovadoresAr(sequencia.ToString(), Local, Tag, RenovadorProjeto, Comprimento, Largura, Altura);
+                if(retorno > 0)
+                {
+                    listaEscopo10_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    MessageBox.Show("Registro inserido com sucesso!");
+                }
             }
         }
 
@@ -5853,6 +5934,41 @@ namespace ORCAMENTOS_FOCKINK
                 label145.Visible = false;
                 txtCabDescNecessidade.Visible = false;
             }
+        }
+
+        private void radio10_3ProjetoN_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radio10_3ProjetoN.Checked)
+            {
+                txt10_3Altura.Enabled = true;
+                txt10_3Compr.Enabled = true;
+                txt10_3Largura.Enabled = true;
+            }
+            else
+            {
+                txt10_3Altura.Enabled = false;
+                txt10_3Compr.Enabled = false;
+                txt10_3Largura.Enabled = false;
+            }
+        }
+
+        private void dgv10_3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
+            {
+                SOEF_CLASS.Escopo_10_3 Escopo10_3 = new SOEF_CLASS.Escopo_10_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                int retorno = Escopo10_3.deleteRenovadoresAr(dgv10_3.CurrentRow.Cells[1].Value.ToString(), dgv10_3.CurrentRow.Cells[2].Value.ToString(), dgv10_3.CurrentRow.Cells[3].Value.ToString());
+                if(retorno > 0)
+                {
+                    MessageBox.Show("Registro apagado com sucesso!");
+                    listaEscopo10_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                }
+
+            }
+
         }
     }
 }

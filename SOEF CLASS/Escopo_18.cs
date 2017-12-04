@@ -45,7 +45,7 @@ namespace SOEF_CLASS
         /// <param name="IndObservacoes"></param>
         /// <param name="IndPreenchido"></param>
         /// <returns></returns>
-        public int gravaEscopo18(string IndHraExtra, string IndMaterialConsumo, string IndTransladoObra, string IndFornecAlimentacao, string IndFornecEstadia, string IndObservacoes, string IndPreenchido)
+        public int gravaEscopo18(string IndHraExtra, string IndMaterialConsumo, string IndTransladoObra, string IndFornecAlimentacao, string IndFornecEstadia, string DescServicos, string IndPreenchido)
         {
             SqlCE sqlce = new SqlCE();
             sqlce.openConnection();
@@ -61,7 +61,7 @@ namespace SOEF_CLASS
                 query += "   [IND_TRANSLADO_OBRA], ";
                 query += "   [IND_FORNEC_ALIMENTACAO], ";
                 query += "   [IND_FORNEC_ESTADIA], ";
-                query += "   [OBSERVACOES], ";
+                query += "   [DESCRICAO_SERVICO], ";
                 query += "   [IND_PREENCHIDO]) ";
                 query += " VALUES ";
                 query += "   (" + Numero + ", ";
@@ -71,7 +71,7 @@ namespace SOEF_CLASS
                 query += "   '" + IndTransladoObra + "', ";
                 query += "   '" + IndFornecAlimentacao + "', ";
                 query += "   '" + IndFornecEstadia + "', ";
-                query += "   '" + IndObservacoes + "', ";
+                query += "   '" + DescServicos + "', ";
                 query += "   '" + IndPreenchido + "') ";
                 retorno = sqlce.insertSOF(query);
                 return retorno;
@@ -100,7 +100,7 @@ namespace SOEF_CLASS
                 query += "   [IND_TRANSLADO_OBRA], ";
                 query += "   [IND_FORNEC_ALIMENTACAO], ";
                 query += "   [IND_FORNEC_ESTADIA], ";
-                query += "   [OBSERVACOES], ";
+                query += "   [DESCRICAO_SERVICO], ";
                 query += "   [IND_PREENCHIDO] ";
                 query += " FROM [DOM_SOLIC_ORC_ESCOPO_18] ";
                 query += " WHERE [NUMERO_SOLICITACAO] = " + Numero + " ";
@@ -125,7 +125,7 @@ namespace SOEF_CLASS
         /// <param name="IndObservacoes"></param>
         /// <param name="IndPreenchido"></param>
         /// <returns></returns>
-        public int atualizaEscopo18(string IndHraExtra, string IndMaterialConsumo, string IndTransladoObra, string IndFornecAlimentacao, string IndFornecEstadia, string IndObservacoes, string IndPreenchido)
+        public int atualizaEscopo18(string IndHraExtra, string IndMaterialConsumo, string IndTransladoObra, string IndFornecAlimentacao, string IndFornecEstadia, string DescServicos, string IndPreenchido)
         {
             SqlCE sqlce = new SqlCE();
             sqlce.openConnection();
@@ -139,7 +139,7 @@ namespace SOEF_CLASS
                 query += "   [IND_TRANSLADO_OBRA] = '" + IndTransladoObra + "', ";
                 query += "   [IND_FORNEC_ALIMENTACAO] = '" + IndFornecAlimentacao + "', ";
                 query += "   [IND_FORNEC_ESTADIA] = '" + IndFornecEstadia + "', ";
-                query += "   [OBSERVACOES] = '" + IndObservacoes + "', ";
+                query += "   [DESCRICAO_SERVICO] = '" + DescServicos + "', ";
                 query += "   [IND_PREENCHIDO] = '" + IndPreenchido + "' ";
                 query += " WHERE [NUMERO_SOLICITACAO] = " + Numero + " ";
                 query += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";

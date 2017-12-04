@@ -60,9 +60,9 @@ namespace SOEF_CLASS
                 query += "   '" + pLocal + "', ";
                 query += "   '" + pTag + "', ";
                 query += "   '" + pIndRenovadorProjeto + "', ";
-                query += "   '" + pComprimento + "', ";
-                query += "   '" + pLargura + "', ";
-                query += "   '" + pAltura + "') ";
+                query += "   " + pComprimento + ", ";
+                query += "   " + pLargura + ", ";
+                query += "   " + pAltura + ") ";
                 retorno = sqlce.insertSOF(query);
                 return retorno;
             }
@@ -154,7 +154,7 @@ namespace SOEF_CLASS
         /// <param name="pNumSolic"></param>
         /// <param name="pRevisao"></param>
         /// <returns></returns>
-        public DataTable getEscopo20(string pNumSolic, string pRevisao)
+        public DataTable getRenovadoresAr(string pNumSolic, string pRevisao)
         {
             SqlCE sqlce = new SqlCE();
             sqlce.openConnection();
@@ -167,9 +167,9 @@ namespace SOEF_CLASS
                 sql += " [SEQUENCIA] SEQ, ";
                 sql += " [LOCAL], ";
                 sql += " [TAG], ";
-                sql += " [IND_RENOVADOR_PROJETO] ";
-                sql += " [COMPRIMENTO] ";
-                sql += " [LARGURA] ";
+                sql += " [IND_RENOVADOR_PROJETO], ";
+                sql += " [COMPRIMENTO], ";
+                sql += " [LARGURA], ";
                 sql += " [ALTURA] ";
                 sql += " FROM [DOM_SOLIC_ORC_RENOVADOR_AR]";
                 sql += " WHERE [NUMERO_SOLICITACAO] = " + pNumSolic + " AND [REVISAO_SOLICITACAO] = '" + pRevisao + "'";

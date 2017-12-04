@@ -41,7 +41,7 @@ namespace SOEF_CLASS
         /// <param name="pDescricaoSolucao"></param>
         /// <param name="pDescOutroEnsaio"></param>
         /// <returns></returns>
-        public int gravaEscopo_01(string pTensaoMedia, string pIndTipoInstalacao, string pIndEnsaio, string pTipoPintura, string pObs, string pIndPreenchido, string pFrequencia, string pDescOutraFrequencia, string pDadosAmbientais, string pIndDiagramaUnifilar, string pDescricaoSolucao, string pDescOutroEnsaio)
+        public int gravaEscopo_01(string pTensaoMedia, string pIndTipoInstalacao, string pIndEnsaio, string pTipoPintura, string pObs, string pIndPreenchido, string pFrequencia, string pDescOutraFrequencia, string pDadosAmbientais, string pIndDiagramaUnifilar, string pDescricaoSolucao, string pDescOutroEnsaio, string pDescOutraTensao)
         {
             SqlCE sqlce = new SqlCE();
             sqlce.openConnection();
@@ -54,6 +54,7 @@ namespace SOEF_CLASS
                 query += "   ([NUMERO_SOLICITACAO], ";
                 query += "   [REVISAO_SOLICITACAO], ";
                 query += "   [TENSAO_MEDIA], ";
+                query += "   [DESC_OUTRA_TENSAO], ";
                 query += "   [IND_TIPO_INSTALACAO], ";
                 query += "   [IND_ENSAIO], ";
                 query += "   [TIPO_PINTURA], ";
@@ -69,6 +70,7 @@ namespace SOEF_CLASS
                 query += "   (" + Numero + ", ";
                 query += "   '" + Revisao + "', ";
                 query += "   " + pTensaoMedia + ", ";
+                query += "   '" + pDescOutraTensao + "', ";
                 query += "   '" + pIndTipoInstalacao + "', ";
                 query += "   '" + pIndEnsaio + "', ";
                 query += "   '" + pTipoPintura + "', ";
@@ -110,7 +112,7 @@ namespace SOEF_CLASS
         /// <param name="pDescricaoSolucao"></param>
         /// <param name="pDescOutroEnsaio"></param>
         /// <returns></returns>
-        public int updateEscopo_01(string pTensaoMedia, string pIndTipoInstalacao, string pIndEnsaio, string pTipoPintura, string pObs, string pIndPreenchido, string pFrequencia, string pDescOutraFrequencia, string pDadosAmbientais, string pIndDiagramaUnifilar, string pDescricaoSolucao, string pDescOutroEnsaio)
+        public int updateEscopo_01(string pTensaoMedia, string pIndTipoInstalacao, string pIndEnsaio, string pTipoPintura, string pObs, string pIndPreenchido, string pFrequencia, string pDescOutraFrequencia, string pDadosAmbientais, string pIndDiagramaUnifilar, string pDescricaoSolucao, string pDescOutroEnsaio, string pDescOutraTensao)
         {
             SqlCE sqlce = new SqlCE();
             sqlce.openConnection();
@@ -120,6 +122,7 @@ namespace SOEF_CLASS
                 string query = "";
                 query += " UPDATE [DOM_SOLIC_ORC_ESCOPO_01] ";
                 query += "      SET [TENSAO_MEDIA] = " + pTensaoMedia;
+                query += "      ,[DESC_OUTRA_TENSAO] = '" + pDescOutraTensao + "'";
                 query += "      ,[IND_TIPO_INSTALACAO] = '" + pIndTipoInstalacao + "'";
                 query += "      ,[IND_ENSAIO] =  '" + pIndEnsaio + "'";
                 query += "      ,[TIPO_PINTURA] = '" + pTipoPintura + "'";

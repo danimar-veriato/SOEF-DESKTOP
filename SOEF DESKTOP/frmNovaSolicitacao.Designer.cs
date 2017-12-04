@@ -231,6 +231,8 @@
             this.checkEscopo1 = new System.Windows.Forms.CheckBox();
             this.tabEscopo1 = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.txt01OutraTensao = new System.Windows.Forms.TextBox();
+            this.label146 = new System.Windows.Forms.Label();
             this.btn01Excluir = new System.Windows.Forms.Button();
             this.btn01Salvar = new System.Windows.Forms.Button();
             this.txt01Obs = new System.Windows.Forms.TextBox();
@@ -337,17 +339,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.btn10_3Renovadores = new System.Windows.Forms.Button();
-            this.bnt10_3ExclSeq = new System.Windows.Forms.Button();
-            this.txt10_3DelSeq = new System.Windows.Forms.TextBox();
-            this.label123 = new System.Windows.Forms.Label();
             this.dgv10_3 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.txt10_3Altura = new System.Windows.Forms.TextBox();
             this.label132 = new System.Windows.Forms.Label();
             this.txt10_3Largura = new System.Windows.Forms.TextBox();
@@ -397,7 +389,7 @@
             this.label74 = new System.Windows.Forms.Label();
             this.rbtn18AlimentacaoFockink = new System.Windows.Forms.RadioButton();
             this.rbtn18AlimentacaoCli = new System.Windows.Forms.RadioButton();
-            this.txt18Obs = new System.Windows.Forms.TextBox();
+            this.txt18DescServicos = new System.Windows.Forms.TextBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label72 = new System.Windows.Forms.Label();
             this.rbtn18EstadiaFockink = new System.Windows.Forms.RadioButton();
@@ -407,7 +399,7 @@
             this.label71 = new System.Windows.Forms.Label();
             this.rbtn18ConsidTransladoSim = new System.Windows.Forms.RadioButton();
             this.rbtn18ConsidTransladoNao = new System.Windows.Forms.RadioButton();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn18Salvar = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.rbtn18HrasExtrasNao = new System.Windows.Forms.RadioButton();
             this.label69 = new System.Windows.Forms.Label();
@@ -481,6 +473,16 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.SOLICITACAO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RevisaoSolic = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Altura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabNovaSolicitacao.SuspendLayout();
             this.tabCabecalho.SuspendLayout();
             this.tbCabecalho.SuspendLayout();
@@ -2738,6 +2740,8 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.txt01OutraTensao);
+            this.groupBox6.Controls.Add(this.label146);
             this.groupBox6.Controls.Add(this.btn01Excluir);
             this.groupBox6.Controls.Add(this.btn01Salvar);
             this.groupBox6.Controls.Add(this.txt01Obs);
@@ -2765,15 +2769,34 @@
             this.groupBox6.Controls.Add(this.label83);
             this.groupBox6.Location = new System.Drawing.Point(30, 57);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(985, 351);
+            this.groupBox6.Size = new System.Drawing.Size(985, 397);
             this.groupBox6.TabIndex = 6;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Subestação Blindada";
             // 
+            // txt01OutraTensao
+            // 
+            this.txt01OutraTensao.Enabled = false;
+            this.txt01OutraTensao.Location = new System.Drawing.Point(472, 27);
+            this.txt01OutraTensao.Name = "txt01OutraTensao";
+            this.txt01OutraTensao.Size = new System.Drawing.Size(146, 20);
+            this.txt01OutraTensao.TabIndex = 24;
+            // 
+            // label146
+            // 
+            this.label146.AutoSize = true;
+            this.label146.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label146.ForeColor = System.Drawing.Color.Green;
+            this.label146.Location = new System.Drawing.Point(372, 30);
+            this.label146.Name = "label146";
+            this.label146.Size = new System.Drawing.Size(88, 13);
+            this.label146.TabIndex = 25;
+            this.label146.Text = "Outra Tensão:";
+            // 
             // btn01Excluir
             // 
             this.btn01Excluir.ForeColor = System.Drawing.Color.Black;
-            this.btn01Excluir.Location = new System.Drawing.Point(509, 312);
+            this.btn01Excluir.Location = new System.Drawing.Point(472, 353);
             this.btn01Excluir.Name = "btn01Excluir";
             this.btn01Excluir.Size = new System.Drawing.Size(75, 23);
             this.btn01Excluir.TabIndex = 23;
@@ -2785,7 +2808,7 @@
             // btn01Salvar
             // 
             this.btn01Salvar.ForeColor = System.Drawing.Color.Black;
-            this.btn01Salvar.Location = new System.Drawing.Point(411, 312);
+            this.btn01Salvar.Location = new System.Drawing.Point(374, 353);
             this.btn01Salvar.Name = "btn01Salvar";
             this.btn01Salvar.Size = new System.Drawing.Size(75, 23);
             this.btn01Salvar.TabIndex = 12;
@@ -2795,18 +2818,18 @@
             // 
             // txt01Obs
             // 
-            this.txt01Obs.Location = new System.Drawing.Point(138, 245);
+            this.txt01Obs.Location = new System.Drawing.Point(147, 282);
             this.txt01Obs.MaxLength = 4000;
             this.txt01Obs.Multiline = true;
             this.txt01Obs.Name = "txt01Obs";
-            this.txt01Obs.Size = new System.Drawing.Size(793, 40);
+            this.txt01Obs.Size = new System.Drawing.Size(789, 40);
             this.txt01Obs.TabIndex = 11;
             // 
             // label93
             // 
             this.label93.AutoSize = true;
             this.label93.ForeColor = System.Drawing.Color.Black;
-            this.label93.Location = new System.Drawing.Point(59, 259);
+            this.label93.Location = new System.Drawing.Point(69, 297);
             this.label93.Name = "label93";
             this.label93.Size = new System.Drawing.Size(65, 13);
             this.label93.TabIndex = 22;
@@ -2815,18 +2838,18 @@
             // txt01Descricao
             // 
             this.txt01Descricao.Enabled = false;
-            this.txt01Descricao.Location = new System.Drawing.Point(472, 173);
+            this.txt01Descricao.Location = new System.Drawing.Point(472, 212);
             this.txt01Descricao.MaxLength = 4000;
             this.txt01Descricao.Multiline = true;
             this.txt01Descricao.Name = "txt01Descricao";
-            this.txt01Descricao.Size = new System.Drawing.Size(459, 40);
+            this.txt01Descricao.Size = new System.Drawing.Size(464, 40);
             this.txt01Descricao.TabIndex = 10;
             // 
             // label92
             // 
             this.label92.AutoSize = true;
             this.label92.ForeColor = System.Drawing.Color.Black;
-            this.label92.Location = new System.Drawing.Point(353, 189);
+            this.label92.Location = new System.Drawing.Point(353, 228);
             this.label92.Name = "label92";
             this.label92.Size = new System.Drawing.Size(107, 13);
             this.label92.TabIndex = 20;
@@ -2836,7 +2859,7 @@
             // 
             this.rbtn01Nao.AutoSize = true;
             this.rbtn01Nao.ForeColor = System.Drawing.Color.Black;
-            this.rbtn01Nao.Location = new System.Drawing.Point(184, 189);
+            this.rbtn01Nao.Location = new System.Drawing.Point(196, 228);
             this.rbtn01Nao.Name = "rbtn01Nao";
             this.rbtn01Nao.Size = new System.Drawing.Size(45, 17);
             this.rbtn01Nao.TabIndex = 18;
@@ -2848,7 +2871,7 @@
             // 
             this.rbtn01Sim.AutoSize = true;
             this.rbtn01Sim.ForeColor = System.Drawing.Color.Black;
-            this.rbtn01Sim.Location = new System.Drawing.Point(136, 189);
+            this.rbtn01Sim.Location = new System.Drawing.Point(148, 228);
             this.rbtn01Sim.Name = "rbtn01Sim";
             this.rbtn01Sim.Size = new System.Drawing.Size(42, 17);
             this.rbtn01Sim.TabIndex = 9;
@@ -2861,7 +2884,7 @@
             // 
             this.label91.AutoSize = true;
             this.label91.ForeColor = System.Drawing.Color.Black;
-            this.label91.Location = new System.Drawing.Point(4, 190);
+            this.label91.Location = new System.Drawing.Point(16, 228);
             this.label91.Name = "label91";
             this.label91.Size = new System.Drawing.Size(118, 13);
             this.label91.TabIndex = 16;
@@ -2873,12 +2896,12 @@
             this.combo01Pintura.FormattingEnabled = true;
             this.combo01Pintura.Items.AddRange(new object[] {
             "Selecione...",
-            "RAL 7032",
+            "Bege RAL 7032 - Padrão",
             "Munsell N-6.5",
             "Especial"});
-            this.combo01Pintura.Location = new System.Drawing.Point(785, 75);
+            this.combo01Pintura.Location = new System.Drawing.Point(147, 117);
             this.combo01Pintura.Name = "combo01Pintura";
-            this.combo01Pintura.Size = new System.Drawing.Size(146, 21);
+            this.combo01Pintura.Size = new System.Drawing.Size(157, 21);
             this.combo01Pintura.TabIndex = 8;
             // 
             // label90
@@ -2886,7 +2909,7 @@
             this.label90.AutoSize = true;
             this.label90.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label90.ForeColor = System.Drawing.Color.Green;
-            this.label90.Location = new System.Drawing.Point(728, 78);
+            this.label90.Location = new System.Drawing.Point(90, 120);
             this.label90.Name = "label90";
             this.label90.Size = new System.Drawing.Size(51, 13);
             this.label90.TabIndex = 14;
@@ -2895,9 +2918,9 @@
             // txt01OutraFrequencia
             // 
             this.txt01OutraFrequencia.Enabled = false;
-            this.txt01OutraFrequencia.Location = new System.Drawing.Point(809, 30);
+            this.txt01OutraFrequencia.Location = new System.Drawing.Point(472, 73);
             this.txt01OutraFrequencia.Name = "txt01OutraFrequencia";
-            this.txt01OutraFrequencia.Size = new System.Drawing.Size(122, 20);
+            this.txt01OutraFrequencia.Size = new System.Drawing.Size(146, 20);
             this.txt01OutraFrequencia.TabIndex = 6;
             // 
             // label89
@@ -2905,27 +2928,27 @@
             this.label89.AutoSize = true;
             this.label89.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label89.ForeColor = System.Drawing.Color.Green;
-            this.label89.Location = new System.Drawing.Point(737, 33);
+            this.label89.Location = new System.Drawing.Point(357, 76);
             this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(42, 13);
+            this.label89.Size = new System.Drawing.Size(109, 13);
             this.label89.TabIndex = 12;
-            this.label89.Text = "Outra:";
+            this.label89.Text = "Outra Frequência:";
             // 
             // txt01OutroEnsaio
             // 
             this.txt01OutroEnsaio.Enabled = false;
-            this.txt01OutroEnsaio.Location = new System.Drawing.Point(472, 116);
+            this.txt01OutroEnsaio.Location = new System.Drawing.Point(147, 162);
             this.txt01OutroEnsaio.MaxLength = 500;
             this.txt01OutroEnsaio.Multiline = true;
             this.txt01OutroEnsaio.Name = "txt01OutroEnsaio";
-            this.txt01OutroEnsaio.Size = new System.Drawing.Size(459, 40);
+            this.txt01OutroEnsaio.Size = new System.Drawing.Size(789, 25);
             this.txt01OutroEnsaio.TabIndex = 4;
             // 
             // label88
             // 
             this.label88.AutoSize = true;
             this.label88.ForeColor = System.Drawing.Color.Black;
-            this.label88.Location = new System.Drawing.Point(340, 131);
+            this.label88.Location = new System.Drawing.Point(21, 167);
             this.label88.Name = "label88";
             this.label88.Size = new System.Drawing.Size(120, 13);
             this.label88.TabIndex = 10;
@@ -2941,9 +2964,9 @@
             "Maresia",
             "Corrosivo",
             "Normal"});
-            this.combo01DadosAmbientais.Location = new System.Drawing.Point(471, 77);
+            this.combo01DadosAmbientais.Location = new System.Drawing.Point(785, 123);
             this.combo01DadosAmbientais.Name = "combo01DadosAmbientais";
-            this.combo01DadosAmbientais.Size = new System.Drawing.Size(146, 21);
+            this.combo01DadosAmbientais.Size = new System.Drawing.Size(151, 21);
             this.combo01DadosAmbientais.TabIndex = 7;
             // 
             // label87
@@ -2951,7 +2974,7 @@
             this.label87.AutoSize = true;
             this.label87.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label87.ForeColor = System.Drawing.Color.Green;
-            this.label87.Location = new System.Drawing.Point(348, 80);
+            this.label87.Location = new System.Drawing.Point(662, 126);
             this.label87.Name = "label87";
             this.label87.Size = new System.Drawing.Size(117, 13);
             this.label87.TabIndex = 8;
@@ -2966,9 +2989,9 @@
             "50Hz",
             "60Hz",
             "Outra"});
-            this.combo01Frequencia.Location = new System.Drawing.Point(471, 28);
+            this.combo01Frequencia.Location = new System.Drawing.Point(147, 70);
             this.combo01Frequencia.Name = "combo01Frequencia";
-            this.combo01Frequencia.Size = new System.Drawing.Size(146, 21);
+            this.combo01Frequencia.Size = new System.Drawing.Size(157, 21);
             this.combo01Frequencia.TabIndex = 5;
             this.combo01Frequencia.SelectedIndexChanged += new System.EventHandler(this.combo01Frequencia_SelectedIndexChanged);
             // 
@@ -2977,7 +3000,7 @@
             this.label86.AutoSize = true;
             this.label86.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label86.ForeColor = System.Drawing.Color.Green;
-            this.label86.Location = new System.Drawing.Point(383, 31);
+            this.label86.Location = new System.Drawing.Point(59, 73);
             this.label86.Name = "label86";
             this.label86.Size = new System.Drawing.Size(79, 13);
             this.label86.TabIndex = 6;
@@ -2989,11 +3012,11 @@
             this.combo01EnsaioPainel.FormattingEnabled = true;
             this.combo01EnsaioPainel.Items.AddRange(new object[] {
             "Selecione...",
-            "Ensaiado Fockink",
+            "AFSEC",
             "Convencional Fockink",
             "Ensaiado Terceiros",
             "Outro"});
-            this.combo01EnsaioPainel.Location = new System.Drawing.Point(138, 116);
+            this.combo01EnsaioPainel.Location = new System.Drawing.Point(472, 120);
             this.combo01EnsaioPainel.Name = "combo01EnsaioPainel";
             this.combo01EnsaioPainel.Size = new System.Drawing.Size(146, 21);
             this.combo01EnsaioPainel.TabIndex = 3;
@@ -3003,11 +3026,11 @@
             // 
             this.label85.AutoSize = true;
             this.label85.ForeColor = System.Drawing.Color.Black;
-            this.label85.Location = new System.Drawing.Point(45, 119);
+            this.label85.Location = new System.Drawing.Point(381, 123);
             this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(78, 13);
+            this.label85.Size = new System.Drawing.Size(93, 13);
             this.label85.TabIndex = 4;
-            this.label85.Text = "Ensaio Painel*:";
+            this.label85.Text = "Opção de Painel*:";
             // 
             // combo01Instalacao
             // 
@@ -3018,9 +3041,9 @@
             "Abrigada",
             "Ao Tempo",
             "Mista"});
-            this.combo01Instalacao.Location = new System.Drawing.Point(138, 72);
+            this.combo01Instalacao.Location = new System.Drawing.Point(785, 75);
             this.combo01Instalacao.Name = "combo01Instalacao";
-            this.combo01Instalacao.Size = new System.Drawing.Size(146, 21);
+            this.combo01Instalacao.Size = new System.Drawing.Size(151, 21);
             this.combo01Instalacao.TabIndex = 2;
             // 
             // label84
@@ -3028,7 +3051,7 @@
             this.label84.AutoSize = true;
             this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label84.ForeColor = System.Drawing.Color.Green;
-            this.label84.Location = new System.Drawing.Point(49, 75);
+            this.label84.Location = new System.Drawing.Point(697, 78);
             this.label84.Name = "label84";
             this.label84.Size = new System.Drawing.Size(75, 13);
             this.label84.TabIndex = 2;
@@ -3045,19 +3068,20 @@
             "23,1kV",
             "34,5kV",
             "Outra"});
-            this.combo01Tensao.Location = new System.Drawing.Point(138, 28);
+            this.combo01Tensao.Location = new System.Drawing.Point(147, 28);
             this.combo01Tensao.Name = "combo01Tensao";
-            this.combo01Tensao.Size = new System.Drawing.Size(146, 21);
+            this.combo01Tensao.Size = new System.Drawing.Size(157, 21);
             this.combo01Tensao.TabIndex = 1;
             this.combo01Tensao.SelectedIndexChanged += new System.EventHandler(this.combo01Tensao_SelectedIndexChanged);
             // 
             // label83
             // 
             this.label83.AutoSize = true;
-            this.label83.ForeColor = System.Drawing.Color.Black;
-            this.label83.Location = new System.Drawing.Point(16, 31);
+            this.label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label83.ForeColor = System.Drawing.Color.Green;
+            this.label83.Location = new System.Drawing.Point(6, 30);
             this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(108, 13);
+            this.label83.Size = new System.Drawing.Size(129, 13);
             this.label83.TabIndex = 0;
             this.label83.Text = "Tensão Distribuição*:";
             // 
@@ -4007,9 +4031,6 @@
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.btn10_3Renovadores);
-            this.groupBox7.Controls.Add(this.bnt10_3ExclSeq);
-            this.groupBox7.Controls.Add(this.txt10_3DelSeq);
-            this.groupBox7.Controls.Add(this.label123);
             this.groupBox7.Controls.Add(this.dgv10_3);
             this.groupBox7.Controls.Add(this.txt10_3Altura);
             this.groupBox7.Controls.Add(this.label132);
@@ -4043,108 +4064,27 @@
             this.btn10_3Renovadores.UseVisualStyleBackColor = true;
             this.btn10_3Renovadores.Click += new System.EventHandler(this.btn10_3Renovadores_Click);
             // 
-            // bnt10_3ExclSeq
-            // 
-            this.bnt10_3ExclSeq.Location = new System.Drawing.Point(834, 208);
-            this.bnt10_3ExclSeq.Name = "bnt10_3ExclSeq";
-            this.bnt10_3ExclSeq.Size = new System.Drawing.Size(75, 23);
-            this.bnt10_3ExclSeq.TabIndex = 71;
-            this.bnt10_3ExclSeq.Text = "Excluir";
-            this.bnt10_3ExclSeq.UseVisualStyleBackColor = true;
-            this.bnt10_3ExclSeq.Visible = false;
-            // 
-            // txt10_3DelSeq
-            // 
-            this.txt10_3DelSeq.Location = new System.Drawing.Point(741, 208);
-            this.txt10_3DelSeq.MaxLength = 5;
-            this.txt10_3DelSeq.Name = "txt10_3DelSeq";
-            this.txt10_3DelSeq.Size = new System.Drawing.Size(78, 20);
-            this.txt10_3DelSeq.TabIndex = 70;
-            this.txt10_3DelSeq.Visible = false;
-            // 
-            // label123
-            // 
-            this.label123.AutoSize = true;
-            this.label123.Location = new System.Drawing.Point(627, 211);
-            this.label123.Name = "label123";
-            this.label123.Size = new System.Drawing.Size(108, 13);
-            this.label123.TabIndex = 69;
-            this.label123.Text = "Excluir a Sequência*:";
-            this.label123.Visible = false;
-            // 
             // dgv10_3
             // 
             this.dgv10_3.AllowUserToAddRows = false;
             this.dgv10_3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv10_3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SOLICITACAO,
+            this.RevisaoSolic,
+            this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
+            this.Altura,
             this.dataGridViewButtonColumn1});
-            this.dgv10_3.Location = new System.Drawing.Point(19, 105);
+            this.dgv10_3.Location = new System.Drawing.Point(73, 105);
             this.dgv10_3.MultiSelect = false;
             this.dgv10_3.Name = "dgv10_3";
-            this.dgv10_3.Size = new System.Drawing.Size(598, 138);
+            this.dgv10_3.Size = new System.Drawing.Size(715, 138);
             this.dgv10_3.TabIndex = 68;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "NUMERO_SOLICITACAO";
-            this.dataGridViewTextBoxColumn1.HeaderText = "NÚMERO";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 75;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "REVISAO_SOLICITACAO";
-            this.dataGridViewTextBoxColumn2.HeaderText = "REV.";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "SEQ";
-            this.dataGridViewTextBoxColumn3.HeaderText = "SEQ.";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "TITULO_ESCOPO";
-            this.dataGridViewTextBoxColumn4.HeaderText = "TÍTULO";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "DESCRICAO_ESCOPO";
-            this.dataGridViewTextBoxColumn5.HeaderText = "DESCRIÇÃO";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 300;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "IND_PREENCHIDO";
-            this.dataGridViewTextBoxColumn6.HeaderText = "";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewButtonColumn1
-            // 
-            this.dataGridViewButtonColumn1.HeaderText = "";
-            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
-            this.dataGridViewButtonColumn1.Text = "Excluir";
-            this.dataGridViewButtonColumn1.ToolTipText = "Excluir Registro";
-            this.dataGridViewButtonColumn1.UseColumnTextForButtonValue = true;
-            this.dataGridViewButtonColumn1.Width = 85;
+            this.dgv10_3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv10_3_CellContentClick);
             // 
             // txt10_3Altura
             // 
@@ -4211,6 +4151,7 @@
             this.radio10_3ProjetoN.TabStop = true;
             this.radio10_3ProjetoN.Text = "Não";
             this.radio10_3ProjetoN.UseVisualStyleBackColor = true;
+            this.radio10_3ProjetoN.CheckedChanged += new System.EventHandler(this.radio10_3ProjetoN_CheckedChanged);
             // 
             // radio10_3ProjetoS
             // 
@@ -4560,15 +4501,15 @@
             this.panel8.Controls.Add(this.panel13);
             this.panel8.Controls.Add(this.btn18Excluir);
             this.panel8.Controls.Add(this.panel12);
-            this.panel8.Controls.Add(this.txt18Obs);
+            this.panel8.Controls.Add(this.txt18DescServicos);
             this.panel8.Controls.Add(this.panel11);
             this.panel8.Controls.Add(this.label70);
             this.panel8.Controls.Add(this.panel10);
-            this.panel8.Controls.Add(this.button2);
+            this.panel8.Controls.Add(this.btn18Salvar);
             this.panel8.Controls.Add(this.panel9);
             this.panel8.Location = new System.Drawing.Point(42, 23);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(946, 227);
+            this.panel8.Size = new System.Drawing.Size(946, 272);
             this.panel8.TabIndex = 0;
             // 
             // panel13
@@ -4615,7 +4556,7 @@
             // 
             // btn18Excluir
             // 
-            this.btn18Excluir.Location = new System.Drawing.Point(483, 191);
+            this.btn18Excluir.Location = new System.Drawing.Point(475, 233);
             this.btn18Excluir.Name = "btn18Excluir";
             this.btn18Excluir.Size = new System.Drawing.Size(75, 23);
             this.btn18Excluir.TabIndex = 27;
@@ -4666,14 +4607,14 @@
             this.rbtn18AlimentacaoCli.Text = "Cliente";
             this.rbtn18AlimentacaoCli.UseVisualStyleBackColor = true;
             // 
-            // txt18Obs
+            // txt18DescServicos
             // 
-            this.txt18Obs.Location = new System.Drawing.Point(91, 119);
-            this.txt18Obs.MaxLength = 2000;
-            this.txt18Obs.Multiline = true;
-            this.txt18Obs.Name = "txt18Obs";
-            this.txt18Obs.Size = new System.Drawing.Size(841, 58);
-            this.txt18Obs.TabIndex = 25;
+            this.txt18DescServicos.Location = new System.Drawing.Point(134, 119);
+            this.txt18DescServicos.MaxLength = 4000;
+            this.txt18DescServicos.Multiline = true;
+            this.txt18DescServicos.Name = "txt18DescServicos";
+            this.txt18DescServicos.Size = new System.Drawing.Size(798, 101);
+            this.txt18DescServicos.TabIndex = 25;
             // 
             // panel11
             // 
@@ -4722,9 +4663,9 @@
             this.label70.AutoSize = true;
             this.label70.Location = new System.Drawing.Point(12, 143);
             this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(73, 13);
+            this.label70.Size = new System.Drawing.Size(116, 13);
             this.label70.TabIndex = 6;
-            this.label70.Text = "Observações:";
+            this.label70.Text = "Descrição do Serviço*:";
             // 
             // panel10
             // 
@@ -4768,15 +4709,15 @@
             this.rbtn18ConsidTransladoNao.Text = "Não";
             this.rbtn18ConsidTransladoNao.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn18Salvar
             // 
-            this.button2.Location = new System.Drawing.Point(380, 191);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "Salvar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btn18Salvar.Location = new System.Drawing.Point(372, 233);
+            this.btn18Salvar.Name = "btn18Salvar";
+            this.btn18Salvar.Size = new System.Drawing.Size(75, 23);
+            this.btn18Salvar.TabIndex = 26;
+            this.btn18Salvar.Text = "Salvar";
+            this.btn18Salvar.UseVisualStyleBackColor = true;
+            this.btn18Salvar.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel9
             // 
@@ -5552,6 +5493,82 @@
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // SOLICITACAO
+            // 
+            this.SOLICITACAO.DataPropertyName = "NUMERO_SOLICITACAO";
+            this.SOLICITACAO.HeaderText = "Num. Solic.";
+            this.SOLICITACAO.Name = "SOLICITACAO";
+            this.SOLICITACAO.ReadOnly = true;
+            this.SOLICITACAO.Visible = false;
+            // 
+            // RevisaoSolic
+            // 
+            this.RevisaoSolic.DataPropertyName = "REVISAO_SOLICITACAO";
+            this.RevisaoSolic.HeaderText = "Rev. Solicitação";
+            this.RevisaoSolic.Name = "RevisaoSolic";
+            this.RevisaoSolic.ReadOnly = true;
+            this.RevisaoSolic.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "SEQ";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Seq.";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "LOCAL";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Local";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "TAG";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tag";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "IND_RENOVADOR_PROJETO";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Tem no Projeto?";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "COMPRIMENTO";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Comprimento (m)";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "LARGURA";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Largura (m)";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // Altura
+            // 
+            this.Altura.DataPropertyName = "ALTURA";
+            this.Altura.HeaderText = "Altura (m)";
+            this.Altura.Name = "Altura";
+            this.Altura.ReadOnly = true;
+            // 
+            // dataGridViewButtonColumn1
+            // 
+            this.dataGridViewButtonColumn1.HeaderText = "";
+            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
+            this.dataGridViewButtonColumn1.Text = "Excluir";
+            this.dataGridViewButtonColumn1.UseColumnTextForButtonValue = true;
+            this.dataGridViewButtonColumn1.Width = 85;
+            // 
             // frmNovaSolicitacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5852,8 +5869,8 @@
         private System.Windows.Forms.RadioButton rbtn18HrasExtrasNao;
         private System.Windows.Forms.Label label69;
         private System.Windows.Forms.RadioButton rbtn18HrasExtrasSim;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox txt18Obs;
+        private System.Windows.Forms.Button btn18Salvar;
+        private System.Windows.Forms.TextBox txt18DescServicos;
         private System.Windows.Forms.Label label70;
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.Label label74;
@@ -6024,17 +6041,7 @@
         private System.Windows.Forms.Label label124;
         private System.Windows.Forms.ComboBox combo10_3Local;
         private System.Windows.Forms.Label label125;
-        private System.Windows.Forms.Button bnt10_3ExclSeq;
-        private System.Windows.Forms.TextBox txt10_3DelSeq;
-        private System.Windows.Forms.Label label123;
         private System.Windows.Forms.DataGridView dgv10_3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
         private System.Windows.Forms.TextBox txt10_3Altura;
         private System.Windows.Forms.Label label132;
         private System.Windows.Forms.TextBox txt10_3Largura;
@@ -6118,5 +6125,17 @@
         private System.Windows.Forms.Label label144;
         private System.Windows.Forms.Label label145;
         private System.Windows.Forms.TextBox txtCabDescNecessidade;
+        private System.Windows.Forms.TextBox txt01OutraTensao;
+        private System.Windows.Forms.Label label146;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SOLICITACAO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RevisaoSolic;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Altura;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
     }
 }
