@@ -2084,7 +2084,55 @@ namespace ORCAMENTOS_FOCKINK
             try
             {
                 SOEF_CLASS.Escopo_10_3 Escopo10_3 = new SOEF_CLASS.Escopo_10_3(pNumSolic, pNumRev);
-                dgv10_3.DataSource = Escopo10_3.getRenovadoresAr(pNumSolic, pNumRev);
+                DataTable dt = Escopo10_3.getEscopo_10_3();
+                if(dt.Rows.Count > 0)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        combo10_3Tensao.SelectedIndex = Convert.ToInt32(dr["TENSAO_TRIFASICA"].ToString());
+                        combo10_3Freq.SelectedIndex = Convert.ToInt32(dr["FREQUENCIA"].ToString());
+                        if(combo10_3Freq.SelectedIndex == 3)
+                        {
+                            txt10_3OutraFreq.Enabled = true;
+                            txt10_3OutraFreq.Text = dr["DESC_OUTRA_FREQUENCIA"].ToString();
+                        }
+                        else
+                        {
+                            txt10_3OutraFreq.Enabled = false;
+                            txt10_3OutraFreq.Text = "";
+                        }
+                        txt10_3Obs.Text = dr["OBSERVACOES"].ToString();
+
+                        if(dr["DADOS_AMBIENTAIS"].ToString() == "U")
+                        {
+                            combo10_3DadosAmbientais.SelectedIndex = 1;
+                        }
+                        else if (dr["DADOS_AMBIENTAIS"].ToString() == "M")
+                        {
+                            combo10_3DadosAmbientais.SelectedIndex = 2;
+                        }
+                        else if (dr["DADOS_AMBIENTAIS"].ToString() == "C")
+                        {
+                            combo10_3DadosAmbientais.SelectedIndex = 3;
+                        }
+                        else if (dr["DADOS_AMBIENTAIS"].ToString() == "N")
+                        {
+                            combo10_3DadosAmbientais.SelectedIndex = 4;
+                        }
+
+                        dgv10_3.DataSource = Escopo10_3.getRenovadoresAr(pNumSolic, pNumRev);
+                    }
+                }
+                else
+                {
+                    combo10_3Tensao.SelectedIndex = 0;
+                    combo10_3DadosAmbientais.SelectedIndex = 0;
+                    combo10_3Freq.SelectedIndex = 0;
+                    txt10_3OutraFreq.Text = "";
+                    txt10_3OutraFreq.Enabled = false;
+                }
+
+                
             }
             catch (Exception)
             {
@@ -4898,8 +4946,62 @@ namespace ORCAMENTOS_FOCKINK
             }//Fim Escopo 10_2
             else if (tabsEscopo10.SelectedTab.Name == "tabEscopo10_3")
             {
-                inicializaCamposE10_3();
-                listaEscopo10_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                if (AcaoTela == "N")
+                {
+                    SOEF_CLASS.Escopo_Valor_Comum EscopoValorComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    //Verifica e sugere os campos comuns caso existir registro
+                    DataTable dtEscopo10_3 = EscopoValorComum.buscaEscopoValorComumE10_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    if (dtEscopo10_3.Rows.Count > 0)
+                    {
+                        foreach (DataRow dr in dtEscopo10_3.Rows)
+                        {
+                            //Dados Ambientais
+                            if (dr["DADOS_AMBIENTAIS"].ToString() == "U")
+                            {
+                                combo10_2DadosAmbientais.SelectedIndex = 1;
+                            }
+                            else if (dr["DADOS_AMBIENTAIS"].ToString() == "M")
+                            {
+                                combo10_2DadosAmbientais.SelectedIndex = 2;
+                            }
+                            else if (dr["DADOS_AMBIENTAIS"].ToString() == "C")
+                            {
+                                combo10_2DadosAmbientais.SelectedIndex = 3;
+                            }
+                            else if (dr["DADOS_AMBIENTAIS"].ToString() == "N")
+                            {
+                                combo10_2DadosAmbientais.SelectedIndex = 4;
+                            }
+
+                            //Frequência
+                            combo10_3Freq.SelectedIndex = Convert.ToInt32(dr["FREQUENCIA_HZ"].ToString());
+                            if(combo10_3Freq.SelectedIndex == 3)
+                            {
+                                txt10_3OutraFreq.Enabled = true;
+                                txt10_3OutraFreq.Text = dr["OUTRA_FREQUENCIA"].ToString();
+                            }
+                            else
+                            {
+                                txt10_3OutraFreq.Enabled = false;
+                                txt10_3OutraFreq.Text = "";
+                            }
+
+                            //Tensao Trifásica
+                            combo10_3Tensao.SelectedIndex = Convert.ToInt32(dr["TENSAO_TRIFASICA_BT"].ToString());
+                        }
+                    }
+                    else
+                    {
+                        inicializaCamposE10_3();
+                    }
+                }
+                else
+                {
+                    listaEscopo10_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                }
+
+              //  inicializaCamposE10_3();
+             //   
 
             }//Fim Escopo 10_3
         }
@@ -5810,6 +5912,8 @@ namespace ORCAMENTOS_FOCKINK
                 string Frequencia = "";
                 string OutraFrequencia = "";
                 string DadosAmbientais = "";
+                string Obs;
+                bool sucesso = true;
 
                 //Validação campos
                 TensaoTrifasica = combo10_3Tensao.SelectedIndex.ToString();
@@ -5832,7 +5936,112 @@ namespace ORCAMENTOS_FOCKINK
                 {
                     DadosAmbientais = "N";
                 }
+                Obs = txt10_3Obs.Text;
 
+                //Verifica se a tabela Renovadores Ar está preenchida
+                SOEF_CLASS.Escopo_10_3 Escopo10_3 = new SOEF_CLASS.Escopo_10_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                DataTable dtRetorno = Escopo10_3.getRenovadoresAr(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                if(dtRetorno.Rows.Count > 0)
+                {
+                    //Prossegue com a inserção dos dados
+                    SOEF_CLASS.Escopo_Valor_Comum EscopoVlrComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    //Verifica se está cadastrando ou alterando o registro
+
+                    AcaoTela = "N";
+                    if (AcaoTela == "N")
+                    {
+                        int retornoInsert = Escopo10_3.gravaEscopo_10_3(TensaoTrifasica, Frequencia, OutraFrequencia, DadosAmbientais, Obs, "S");
+                        if (retornoInsert > 0)
+                        {
+                            //Verifica valores comuns desta solicitação
+                            DataTable dtVlrComum10_3 = EscopoVlrComum.buscaEscopoValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                            if (dtVlrComum10_3.Rows.Count > 0)
+                            {
+                                //Se existe, faz o update dos Valores Comuns do Escopo 10_2
+                                int retornoInsertVC10_3 = EscopoVlrComum.atualizaEscopo_Valor_Comum_E10_3(DadosAmbientais, TensaoTrifasica, Frequencia, OutraFrequencia);
+                                if (retornoInsertVC10_3 <= 0)
+                                {
+                                    sucesso = false;
+                                }
+                            }
+                            else
+                            {
+                                //Insere um novo registro na tabela Valores Comuns
+                                int retornoInsertVC10_3 = EscopoVlrComum.gravaEscopo_Valor_Comum_E10_3(DadosAmbientais, TensaoTrifasica, Frequencia, OutraFrequencia);
+                                if (retornoInsertVC10_3 <= 0)
+                                {
+                                    sucesso = false;
+                                }
+                            }
+                            AcaoTela = "C";
+                            btn10_3Excluir.Visible = true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ocorreu um erro na inserção do registro. Tente novamente mais tarde.");
+                        }
+                    }
+                    else
+                    {
+                        //AcaoTela - ATUALIZAR
+                        DataTable dtBuscaEscopo10_3 = Escopo10_3.getEscopo_10_3();
+                        int retornoUpdate;
+                        if (dtBuscaEscopo10_3.Rows.Count > 0)
+                        {
+                            //Atualiza o Escopo 10_3 se já estiver cadastrado
+                            retornoUpdate = Escopo10_3.updateEscopo_10_3(TensaoTrifasica, Frequencia, OutraFrequencia, DadosAmbientais, Obs, "S");
+                        }
+                        else
+                        {
+                            //Cadastra o Escopo 10_3 se ainda não existir
+                            retornoUpdate = Escopo10_3.gravaEscopo_10_3(TensaoTrifasica, Frequencia, OutraFrequencia, DadosAmbientais, Obs, "S");
+                        }
+                        if (retornoUpdate > 0)
+                        {
+                            //Verifica se existe registro Valor Comum
+                            DataTable dtBuscaVCEscopo10_3 = EscopoVlrComum.buscaEscopoValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                            if (dtBuscaVCEscopo10_3.Rows.Count > 0)
+                            {
+                                //Faz o update e grava os dados usados no Escopo 10_3
+                                int retornoInsert10_3 = EscopoVlrComum.atualizaEscopo_Valor_Comum_E10_3(DadosAmbientais, TensaoTrifasica, Frequencia, OutraFrequencia);
+                                if (retornoInsert10_3 <= 0)
+                                {
+                                    sucesso = false;
+                                }
+                            }
+                            else
+                            {
+                                //Insere um novo registro na tabela Valor Comum
+                                int retornoInsert10_3 = EscopoVlrComum.gravaEscopo_Valor_Comum_E10_3(DadosAmbientais, TensaoTrifasica, Frequencia, OutraFrequencia);
+                                if (retornoInsert10_3 <= 0)
+                                {
+                                    sucesso = false;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ocorreu um erro na atualização do registro. Tente novamente mais tarde.");
+                        }
+                    }
+
+                    if (sucesso)
+                    {
+                        MessageBox.Show("Registro inserido/alterado com sucesso!");
+                        btn10_3Excluir.Visible = true;
+                        listaEscopo10_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                        //Muda o STATUS da AçãoTela p/ EDIÇÂO
+                        AcaoTela = "C";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocorreu um erro ao ao inserir/alterar o registro. Por favor tente novamente ou contate o administrador do sistema.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("A tabela de renovadores de Ar não foi preenchida. Preencha a tabela de renovadores para poder gravar o escopo.");
+                }
 
             }
 

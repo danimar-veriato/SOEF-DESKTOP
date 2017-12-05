@@ -539,8 +539,149 @@ namespace SOEF_CLASS
         }
 
 
+        //CRUD Escopo 10_3
 
-        
+        /// <summary>
+        /// Grava valores comuns Escopo 10_3
+        /// </summary>
+        /// <param name="dadosAmbientais"></param>
+        /// <param name="tensaoTrif"></param>
+        /// <param name="frequencia"></param>
+        /// <param name="outraFreq"></param>
+        /// <returns></returns>
+        public int gravaEscopo_Valor_Comum_E10_3(string dadosAmbientais, string tensaoTrif, string frequencia, string outraFreq)
+        {
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                int retorno = 0;
+                string query = "";
+                query += " INSERT INTO [DOM_SOLIC_ORC_VALOR_COMUM] ";
+                query += "    ([NUMERO_SOLICITACAO], ";
+                query += "    [REVISAO_SOLICITACAO], ";
+                query += "    [DADOS_AMBIENTAIS], ";
+                query += "    [TENSAO_TRIFASICA_BT], ";
+                query += "    [FREQUENCIA_HZ], ";
+                query += "    [OUTRA_FREQUENCIA]) ";
+                query += " VALUES ";
+                query += " (" + Numero + ", ";
+                query += " '" + Revisao + "', ";
+                query += " '" + dadosAmbientais + "', ";
+                query += " " + tensaoTrif + ", ";
+                query += " " + frequencia + ", ";
+                query += " '" + outraFreq + "') ";
+                retorno = sqlce.insertSOF(query);
+                return retorno;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                sqlce.closeConnection();
+            }
+        }
+
+        /// <summary>
+        /// Busca valores comuns Escopo 10_3
+        /// </summary>
+        /// <param name="numSolicitacao"></param>
+        /// <param name="revSolicitacao"></param>
+        /// <returns></returns>
+        public DataTable buscaEscopoValorComumE10_3(string numSolicitacao, string revSolicitacao)
+        {
+            DataTable dt = new DataTable();
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                string query = "";
+                query += " SELECT [DADOS_AMBIENTAIS], ";
+                query += " [TENSAO_TRIFASICA_BT], ";
+                query += " [FREQUENCIA_HZ], ";
+                query += " [OUTRA_FREQUENCIA] ";
+                query += " FROM [DOM_SOLIC_ORC_VALOR_COMUM] ";
+                query += " WHERE [NUMERO_SOLICITACAO] = " + Numero;
+                query += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
+                dt = sqlce.selectListaSOF(query, "DOM_SOLIC_ORC_VALOR_COMUM");
+                return dt;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Atualiza campos valores comuns Escopo 10_3
+        /// </summary>
+        /// <param name="dadosAmbientais"></param>
+        /// <param name="tensaoTrif"></param>
+        /// <param name="frequencia"></param>
+        /// <param name="outraFreq"></param>
+        /// <returns></returns>
+        public int atualizaEscopo_Valor_Comum_E10_3(string dadosAmbientais, string tensaoTrif, string frequencia, string outraFreq)
+        {
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                int retorno = 0;
+                string query = "";
+                query += " UPDATE [DOM_SOLIC_ORC_VALOR_COMUM] ";
+                query += " SET [DADOS_AMBIENTAIS] = '" + dadosAmbientais + "', ";
+                query += "     [TENSAO_TRIFASICA_BT] = '" + tensaoTrif + "', ";
+                query += "     [FREQUENCIA_HZ] = '" + frequencia + "', ";
+                query += "     [OUTRA_FREQUENCIA] = '" + outraFreq + "' ";
+                query += " WHERE [NUMERO_SOLICITACAO] = " + Numero + "";
+                query += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
+                retorno = sqlce.insertSOF(query, null, null);
+                return retorno;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                sqlce.closeConnection();
+            }
+        }
+
+        /// <summary>
+        /// Deleta (deixa nulo) os campos comuns Escopo 10_3
+        /// </summary>
+        /// <returns></returns>
+        public int deleteEscopo_Valor_Comum_E10_3()
+        {
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                int retorno = 0;
+                string query = "";
+                query += " UPDATE [DOM_SOLIC_ORC_VALOR_COMUM] ";
+                query += " SET [DADOS_AMBIENTAIS] = NULL, ";
+                query += "     [TENSAO_TRIFASICA_BT] = NULL, ";
+                query += "     [FREQUENCIA_HZ] = NULL, ";
+                query += "     [OUTRA_FREQUENCIA] = NULL ";
+                query += " WHERE [NUMERO_SOLICITACAO] = " + Numero + "";
+                query += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
+                retorno = sqlce.insertSOF(query);
+                return retorno;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                sqlce.closeConnection();
+            }
+        }
+
 
 
 

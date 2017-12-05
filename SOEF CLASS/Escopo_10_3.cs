@@ -187,9 +187,155 @@ namespace SOEF_CLASS
             //}
         }
 
-        
+
         //Métodos Escopo 10_3
 
+        /// <summary>
+        /// Grava dados Escopo 10_3
+        /// </summary>
+        /// <param name="pTensaoTrifasica"></param>
+        /// <param name="pFrequencia"></param>
+        /// <param name="pDescOutraFrequencia"></param>
+        /// <param name="pDadosAmbientais"></param>
+        /// <param name="pObs"></param>
+        /// <param name="pIndPreenchido"></param>
+        /// <returns></returns>
+        public int gravaEscopo_10_3(string pTensaoTrifasica, string pFrequencia, string pDescOutraFrequencia, string pDadosAmbientais, string pObs, string pIndPreenchido)
+        {
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+              
+                int retorno;
+                string query = "";
+
+                query += " INSERT INTO [DOM_SOLIC_ORC_ESCOPO_10_3] ";
+                query += "   ([NUMERO_SOLICITACAO], ";
+                query += "   [REVISAO_SOLICITACAO], ";
+                query += "   [TENSAO_TRIFASICA], ";
+                query += "   [FREQUENCIA], ";
+                query += "   [DESC_OUTRA_FREQUENCIA], ";
+                query += "   [DADOS_AMBIENTAIS], ";                
+                query += "   [OBSERVACOES], ";
+                query += "   [IND_PREENCHIDO]) ";
+                query += " VALUES ";
+                query += "   (" + Numero + ", ";
+                query += "   '" + Revisao + "', ";
+                query += "   " + pTensaoTrifasica + ", ";
+                query += "   " + pFrequencia + ", ";
+                query += "   '" + pDescOutraFrequencia + "', ";
+                query += "   '" + pDadosAmbientais + "', ";
+                query += "   '" + pObs + "', ";
+                query += "   '" + pIndPreenchido + "') ";     
+                retorno = sqlce.insertSOF(query);
+                return retorno;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                sqlce.closeConnection();
+            }
+        }
+
+
+        /// <summary>
+        /// Atualiza as informações Escopo 10_3
+        /// </summary>
+        /// <param name="pTensaoTrifasica"></param>
+        /// <param name="pFrequencia"></param>
+        /// <param name="pDescOutraFrequencia"></param>
+        /// <param name="pDadosAmbientais"></param>
+        /// <param name="pObs"></param>
+        /// <param name="pIndPreenchido"></param>
+        /// <returns></returns>
+        public int updateEscopo_10_3(string pTensaoTrifasica, string pFrequencia, string pDescOutraFrequencia, string pDadosAmbientais, string pObs, string pIndPreenchido)
+        {
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                int retorno;
+                string query = "";
+                query += " UPDATE [DOM_SOLIC_ORC_ESCOPO_10_3] ";
+                query += "   SET [DADOS_AMBIENTAIS] = '" + pDadosAmbientais + "',  ";
+                query += "       [TENSAO_TRIFASICA] = " + pTensaoTrifasica + ", ";
+                query += "       [FREQUENCIA] = " + pFrequencia + ", ";
+                query += "       [DESC_OUTRA_FREQUENCIA] = '" + pDescOutraFrequencia + "', ";
+                query += "       [OBSERVACOES] = '" + pObs + "', ";
+                query += "       [IND_PREENCHIDO] = '" + pIndPreenchido + "' ";
+                query += "  WHERE [NUMERO_SOLICITACAO] = " + Numero + " AND  [REVISAO_SOLICITACAO] = '" + Revisao + "'";
+                retorno = sqlce.insertSOF(query, null, null);
+                return retorno;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                sqlce.closeConnection();
+            }
+        }
+
+
+        /// <summary>
+        /// Busca os dados do Escopo 10_3
+        /// </summary>
+        /// <returns></returns>
+        public DataTable getEscopo_10_3()
+        {
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                DataTable dt = new DataTable();
+                string sql;
+                sql = "SELECT * FROM [DOM_SOLIC_ORC_ESCOPO_10_3] ";
+                sql += " WHERE [NUMERO_SOLICITACAO] = " + Numero + " ";
+                sql += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
+                dt = sqlce.selectListaSOF(sql, "DOM_SOLIC_ORC_ESCOPO_10_3");
+                return dt;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
+        /// <summary>
+        /// Apaga os registros do Escopo 10_3
+        /// </summary>
+        /// <param name="pNumero"></param>
+        /// <param name="pRevisao"></param>
+        /// <returns></returns>
+        public int deleteEscopo_10_3(string pNumero, string pRevisao)
+        {
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                int retorno;
+                string query = "";
+                query += " DELETE FROM [DOM_SOLIC_ORC_ESCOPO_10_3] ";
+                query += " WHERE [NUMERO_SOLICITACAO] = " + pNumero + " ";
+                query += " AND [REVISAO_SOLICITACAO] = '" + pRevisao + "' ";
+                retorno = sqlce.deleteSOF(query);
+                return retorno;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                sqlce.closeConnection();
+            }
+        }
 
     }
 }
