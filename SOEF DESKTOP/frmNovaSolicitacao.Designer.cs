@@ -340,6 +340,16 @@
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.btn10_3Renovadores = new System.Windows.Forms.Button();
             this.dgv10_3 = new System.Windows.Forms.DataGridView();
+            this.SOLICITACAO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RevisaoSolic = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Altura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.txt10_3Altura = new System.Windows.Forms.TextBox();
             this.label132 = new System.Windows.Forms.Label();
             this.txt10_3Largura = new System.Windows.Forms.TextBox();
@@ -473,16 +483,6 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.SOLICITACAO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RevisaoSolic = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Altura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabNovaSolicitacao.SuspendLayout();
             this.tabCabecalho.SuspendLayout();
             this.tbCabecalho.SuspendLayout();
@@ -4086,6 +4086,82 @@
             this.dgv10_3.TabIndex = 68;
             this.dgv10_3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv10_3_CellContentClick);
             // 
+            // SOLICITACAO
+            // 
+            this.SOLICITACAO.DataPropertyName = "NUMERO_SOLICITACAO";
+            this.SOLICITACAO.HeaderText = "Num. Solic.";
+            this.SOLICITACAO.Name = "SOLICITACAO";
+            this.SOLICITACAO.ReadOnly = true;
+            this.SOLICITACAO.Visible = false;
+            // 
+            // RevisaoSolic
+            // 
+            this.RevisaoSolic.DataPropertyName = "REVISAO_SOLICITACAO";
+            this.RevisaoSolic.HeaderText = "Rev. Solicitação";
+            this.RevisaoSolic.Name = "RevisaoSolic";
+            this.RevisaoSolic.ReadOnly = true;
+            this.RevisaoSolic.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "SEQ";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Seq.";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "LOCAL";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Local";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "TAG";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tag";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "IND_RENOVADOR_PROJETO";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Tem no Projeto?";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "COMPRIMENTO";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Comprimento (m)";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "LARGURA";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Largura (m)";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // Altura
+            // 
+            this.Altura.DataPropertyName = "ALTURA";
+            this.Altura.HeaderText = "Altura (m)";
+            this.Altura.Name = "Altura";
+            this.Altura.ReadOnly = true;
+            // 
+            // dataGridViewButtonColumn1
+            // 
+            this.dataGridViewButtonColumn1.HeaderText = "";
+            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
+            this.dataGridViewButtonColumn1.Text = "Excluir";
+            this.dataGridViewButtonColumn1.UseColumnTextForButtonValue = true;
+            this.dataGridViewButtonColumn1.Width = 85;
+            // 
             // txt10_3Altura
             // 
             this.txt10_3Altura.Enabled = false;
@@ -4342,6 +4418,7 @@
             this.btn10_3Excluir.Text = "Excluir";
             this.btn10_3Excluir.UseVisualStyleBackColor = true;
             this.btn10_3Excluir.Visible = false;
+            this.btn10_3Excluir.Click += new System.EventHandler(this.btn10_3Excluir_Click);
             // 
             // btn10_3Salvar
             // 
@@ -5492,82 +5569,6 @@
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
-            // 
-            // SOLICITACAO
-            // 
-            this.SOLICITACAO.DataPropertyName = "NUMERO_SOLICITACAO";
-            this.SOLICITACAO.HeaderText = "Num. Solic.";
-            this.SOLICITACAO.Name = "SOLICITACAO";
-            this.SOLICITACAO.ReadOnly = true;
-            this.SOLICITACAO.Visible = false;
-            // 
-            // RevisaoSolic
-            // 
-            this.RevisaoSolic.DataPropertyName = "REVISAO_SOLICITACAO";
-            this.RevisaoSolic.HeaderText = "Rev. Solicitação";
-            this.RevisaoSolic.Name = "RevisaoSolic";
-            this.RevisaoSolic.ReadOnly = true;
-            this.RevisaoSolic.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "SEQ";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Seq.";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "LOCAL";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Local";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 75;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "TAG";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Tag";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "IND_RENOVADOR_PROJETO";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Tem no Projeto?";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "COMPRIMENTO";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Comprimento (m)";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "LARGURA";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Largura (m)";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // Altura
-            // 
-            this.Altura.DataPropertyName = "ALTURA";
-            this.Altura.HeaderText = "Altura (m)";
-            this.Altura.Name = "Altura";
-            this.Altura.ReadOnly = true;
-            // 
-            // dataGridViewButtonColumn1
-            // 
-            this.dataGridViewButtonColumn1.HeaderText = "";
-            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
-            this.dataGridViewButtonColumn1.Text = "Excluir";
-            this.dataGridViewButtonColumn1.UseColumnTextForButtonValue = true;
-            this.dataGridViewButtonColumn1.Width = 85;
             // 
             // frmNovaSolicitacao
             // 

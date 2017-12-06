@@ -311,7 +311,13 @@ namespace SOEF_CLASS
             try
             {
                 string query = "";
-                query += " SELECT [TENSAO_TRIFASICA], [FREQUENCIA_HZ], [OUTRA_FREQUENCIA], [DADOS_AMBIENTAIS], [NORMATIVA_MAPA], [TIPO_PRODUTO], [OUTRO_PRODUTO] ";
+                query += " SELECT [TENSAO_TRIFASICA_BT], ";
+                query += " [FREQUENCIA_HZ], ";
+                query += " [OUTRA_FREQUENCIA], ";
+                query += " [DADOS_AMBIENTAIS], ";
+                query += " [NORMATIVA_MAPA], ";
+                query += " [TIPO_PRODUTO], ";
+                query += " [OUTRO_PRODUTO] ";
                 query += " FROM [DOM_SOLIC_ORC_VALOR_COMUM] ";
                 query += " WHERE [NUMERO_SOLICITACAO] = " + Numero;
                 query += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";

@@ -2119,8 +2119,7 @@ namespace ORCAMENTOS_FOCKINK
                         {
                             combo10_3DadosAmbientais.SelectedIndex = 4;
                         }
-
-                        dgv10_3.DataSource = Escopo10_3.getRenovadoresAr(pNumSolic, pNumRev);
+                        btn10_3Excluir.Visible = true;
                     }
                 }
                 else
@@ -2130,6 +2129,9 @@ namespace ORCAMENTOS_FOCKINK
                     combo10_3Freq.SelectedIndex = 0;
                     txt10_3OutraFreq.Text = "";
                     txt10_3OutraFreq.Enabled = false;
+                    combo10_3Local.SelectedIndex = 0;
+                    txt10_3Obs.Text = "";
+                    btn10_3Excluir.Visible = false;
                 }
 
                 
@@ -4946,6 +4948,9 @@ namespace ORCAMENTOS_FOCKINK
             }//Fim Escopo 10_2
             else if (tabsEscopo10.SelectedTab.Name == "tabEscopo10_3")
             {
+                inicializaCamposE10_3();
+                SOEF_CLASS.Escopo_10_3 Escopo10_3 = new SOEF_CLASS.Escopo_10_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                dgv10_3.DataSource = Escopo10_3.getRenovadoresAr(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 if (AcaoTela == "N")
                 {
                     SOEF_CLASS.Escopo_Valor_Comum EscopoValorComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
@@ -5000,7 +5005,7 @@ namespace ORCAMENTOS_FOCKINK
                     listaEscopo10_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 }
 
-              //  inicializaCamposE10_3();
+               
              //   
 
             }//Fim Escopo 10_3
@@ -5938,7 +5943,7 @@ namespace ORCAMENTOS_FOCKINK
                 }
                 Obs = txt10_3Obs.Text;
 
-                //Verifica se a tabela Renovadores Ar está preenchida
+                //Verificar se a tabela Renovadores Ar está preenchida
                 SOEF_CLASS.Escopo_10_3 Escopo10_3 = new SOEF_CLASS.Escopo_10_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 DataTable dtRetorno = Escopo10_3.getRenovadoresAr(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 if(dtRetorno.Rows.Count > 0)
@@ -5947,7 +5952,7 @@ namespace ORCAMENTOS_FOCKINK
                     SOEF_CLASS.Escopo_Valor_Comum EscopoVlrComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
                     //Verifica se está cadastrando ou alterando o registro
 
-                    AcaoTela = "N";
+                    //AcaoTela = "N";
                     if (AcaoTela == "N")
                     {
                         int retornoInsert = Escopo10_3.gravaEscopo_10_3(TensaoTrifasica, Frequencia, OutraFrequencia, DadosAmbientais, Obs, "S");
@@ -6124,7 +6129,8 @@ namespace ORCAMENTOS_FOCKINK
                 int retorno = Escopo10_3.gravaRenovadoresAr(sequencia.ToString(), Local, Tag, RenovadorProjeto, Comprimento, Largura, Altura);
                 if(retorno > 0)
                 {
-                    listaEscopo10_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    //listaEscopo10_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    dgv10_3.DataSource = Escopo10_3.getRenovadoresAr(this.numero_solic.ToString(), this.NumRevisaoSolic);
                     MessageBox.Show("Registro inserido com sucesso!");
                 }
             }
@@ -6172,12 +6178,75 @@ namespace ORCAMENTOS_FOCKINK
                 int retorno = Escopo10_3.deleteRenovadoresAr(dgv10_3.CurrentRow.Cells[1].Value.ToString(), dgv10_3.CurrentRow.Cells[2].Value.ToString(), dgv10_3.CurrentRow.Cells[3].Value.ToString());
                 if(retorno > 0)
                 {
+                    dgv10_3.DataSource = Escopo10_3.getRenovadoresAr(this.numero_solic.ToString(), this.NumRevisaoSolic);
                     MessageBox.Show("Registro apagado com sucesso!");
-                    listaEscopo10_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 }
 
             }
 
+        }
+
+        private void btn10_3Excluir_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Deseja realmente excluir o Escopo 10_3 desta solicitação?", "SOEF", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                bool sucesso = true;
+                //Apaga os dados do Escopo 10_3
+                SOEF_CLASS.Escopo_10_3 Escopo10_3 = new SOEF_CLASS.Escopo_10_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                int retorno01 = Escopo10_3.deleteRenovadoresAr(this.numero_solic.ToString(), this.NumRevisaoSolic, null);
+                if(retorno01 > 0)
+                {
+                    int retorno = Escopo10_3.deleteEscopo_10_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    if (retorno > 0)
+                    {
+                        //Apaga (define como NULL) os campos comuns da tabela VALOR_COMUM
+                        SOEF_CLASS.Escopo_Valor_Comum EValorComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                        int retornoUpdate = 0;
+                        retornoUpdate = EValorComum.deleteEscopo_Valor_Comum_E10_3();
+                        if (retornoUpdate > 0)
+                        {
+                            //Verifica se todos os campos do registro são nulos, se sim, apaga o registro em definitivo
+                            bool DeletaRegistro = verificaRegistroValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                            if (DeletaRegistro)//True - Deleta o registro
+                            {
+                                int retornoDelete = EValorComum.deleteEscopoValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                                if (retornoDelete <= 0)
+                                {
+                                    sucesso = false;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            sucesso = false;
+                        }
+                    }
+                    else
+                    {
+                        sucesso = false;
+                    }
+                    if (sucesso)
+                    {
+                        MessageBox.Show("Registro excluído com sucesso!");
+                        btn10_3Excluir.Visible = false;
+                        listaEscopo10_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                        dgv10_3.DataSource = Escopo10_3.getRenovadoresAr(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                        //checkEscopo10.Checked = false;
+                        //checkEscopo10.Enabled = true;
+                        // Fazer uma função que verifica se algum dos escopos 10_1, 2, 3 ou 4 estão preenchidos, habilita o check na tela dos escopos
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocorreu um erro ao excluir o registro. Por favor, contate o suporte do sistema e tente novamente.");
+                    }
+                }
+                else
+                {
+                    sucesso = false;
+                }
+                
+            }
         }
     }
 }

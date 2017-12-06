@@ -41,6 +41,19 @@ namespace SOEF_CLASS
             sqlce.openConnection();
             try
             {
+                if (string.IsNullOrEmpty(pComprimento))
+                {
+                    pComprimento = "NULL";
+                }
+                if (string.IsNullOrEmpty(pLargura))
+                {
+                    pLargura = "NULL";
+                }
+                if (string.IsNullOrEmpty(pAltura))
+                {
+                    pAltura = "NULL";
+                }
+
                 int retorno;
                 string query = "";
                 query += " INSERT INTO [DOM_SOLIC_ORC_RENOVADOR_AR] ";
@@ -181,10 +194,6 @@ namespace SOEF_CLASS
             {
                 throw;
             }
-            //finally
-            //{
-            //    sqlce.closeConnection();
-            //}
         }
 
 
