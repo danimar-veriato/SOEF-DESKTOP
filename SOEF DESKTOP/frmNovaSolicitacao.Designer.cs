@@ -302,7 +302,6 @@
             this.btnE10_1Salvar = new System.Windows.Forms.Button();
             this.txtE10_1Obs = new System.Windows.Forms.TextBox();
             this.label96 = new System.Windows.Forms.Label();
-            this.checkEscopo10_1 = new System.Windows.Forms.CheckBox();
             this.tabEscopo10_2 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
             this.gBox10_2Armazem = new System.Windows.Forms.GroupBox();
@@ -334,7 +333,6 @@
             this.btn10_2Salvar = new System.Windows.Forms.Button();
             this.txt10_2Obs = new System.Windows.Forms.TextBox();
             this.label122 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.tabEscopo10_3 = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
@@ -378,6 +376,25 @@
             this.txt10_3Obs = new System.Windows.Forms.TextBox();
             this.label131 = new System.Windows.Forms.Label();
             this.tabEscopo10_4 = new System.Windows.Forms.TabPage();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.btn10_4GravaTampa = new System.Windows.Forms.Button();
+            this.txt10_4Largura = new System.Windows.Forms.TextBox();
+            this.label123 = new System.Windows.Forms.Label();
+            this.txt10_4Comprimento = new System.Windows.Forms.TextBox();
+            this.label151 = new System.Windows.Forms.Label();
+            this.txt10_4Qtd = new System.Windows.Forms.TextBox();
+            this.label149 = new System.Windows.Forms.Label();
+            this.combo10_4TipoTampa = new System.Windows.Forms.ComboBox();
+            this.label148 = new System.Windows.Forms.Label();
+            this.label150 = new System.Windows.Forms.Label();
+            this.txt10_4QtdTampa = new System.Windows.Forms.TextBox();
+            this.combo10_4MatTampa = new System.Windows.Forms.ComboBox();
+            this.label152 = new System.Windows.Forms.Label();
+            this.label154 = new System.Windows.Forms.Label();
+            this.btn10_4Excluir = new System.Windows.Forms.Button();
+            this.btn10_4Salvar = new System.Windows.Forms.Button();
+            this.txt10_4Obs = new System.Windows.Forms.TextBox();
+            this.label157 = new System.Windows.Forms.Label();
             this.label94 = new System.Windows.Forms.Label();
             this.tabEscopo11 = new System.Windows.Forms.TabPage();
             this.tabEscopo12 = new System.Windows.Forms.TabPage();
@@ -520,6 +537,8 @@
             this.panel5.SuspendLayout();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv10_3)).BeginInit();
+            this.tabEscopo10_4.SuspendLayout();
+            this.panel16.SuspendLayout();
             this.tabEscopo18.SuspendLayout();
             this.tabEscopo18_1_2.SuspendLayout();
             this.tbpage18InfoG.SuspendLayout();
@@ -3205,7 +3224,6 @@
             // 
             this.tabEscopo10_1.BackColor = System.Drawing.SystemColors.Control;
             this.tabEscopo10_1.Controls.Add(this.panel3);
-            this.tabEscopo10_1.Controls.Add(this.checkEscopo10_1);
             this.tabEscopo10_1.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.tabEscopo10_1.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo10_1.Name = "tabEscopo10_1";
@@ -3248,7 +3266,7 @@
             this.panel3.Controls.Add(this.btnE10_1Salvar);
             this.panel3.Controls.Add(this.txtE10_1Obs);
             this.panel3.Controls.Add(this.label96);
-            this.panel3.Location = new System.Drawing.Point(27, 48);
+            this.panel3.Location = new System.Drawing.Point(28, 26);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(959, 373);
             this.panel3.TabIndex = 24;
@@ -3609,21 +3627,10 @@
             this.label96.TabIndex = 6;
             this.label96.Text = "Observações:";
             // 
-            // checkEscopo10_1
-            // 
-            this.checkEscopo10_1.AutoSize = true;
-            this.checkEscopo10_1.Location = new System.Drawing.Point(15, 15);
-            this.checkEscopo10_1.Name = "checkEscopo10_1";
-            this.checkEscopo10_1.Size = new System.Drawing.Size(148, 17);
-            this.checkEscopo10_1.TabIndex = 23;
-            this.checkEscopo10_1.Text = "10.1: Sistema de Aeração";
-            this.checkEscopo10_1.UseVisualStyleBackColor = true;
-            // 
             // tabEscopo10_2
             // 
             this.tabEscopo10_2.BackColor = System.Drawing.SystemColors.Control;
             this.tabEscopo10_2.Controls.Add(this.panel4);
-            this.tabEscopo10_2.Controls.Add(this.checkBox1);
             this.tabEscopo10_2.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo10_2.Name = "tabEscopo10_2";
             this.tabEscopo10_2.Size = new System.Drawing.Size(1039, 447);
@@ -3648,7 +3655,7 @@
             this.panel4.Controls.Add(this.btn10_2Salvar);
             this.panel4.Controls.Add(this.txt10_2Obs);
             this.panel4.Controls.Add(this.label122);
-            this.panel4.Location = new System.Drawing.Point(23, 53);
+            this.panel4.Location = new System.Drawing.Point(24, 27);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(993, 380);
             this.panel4.TabIndex = 26;
@@ -3986,16 +3993,6 @@
             this.label122.Size = new System.Drawing.Size(73, 13);
             this.label122.TabIndex = 6;
             this.label122.Text = "Observações:";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(11, 20);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(152, 17);
-            this.checkBox1.TabIndex = 25;
-            this.checkBox1.Text = "10.2: Espalhador de Grãos";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // tabEscopo10_3
             // 
@@ -4451,11 +4448,215 @@
             // tabEscopo10_4
             // 
             this.tabEscopo10_4.BackColor = System.Drawing.SystemColors.Control;
+            this.tabEscopo10_4.Controls.Add(this.panel16);
             this.tabEscopo10_4.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo10_4.Name = "tabEscopo10_4";
             this.tabEscopo10_4.Size = new System.Drawing.Size(1039, 447);
             this.tabEscopo10_4.TabIndex = 4;
             this.tabEscopo10_4.Text = "10.4: Tampas de Aeração";
+            // 
+            // panel16
+            // 
+            this.panel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel16.Controls.Add(this.btn10_4GravaTampa);
+            this.panel16.Controls.Add(this.txt10_4Largura);
+            this.panel16.Controls.Add(this.label123);
+            this.panel16.Controls.Add(this.txt10_4Comprimento);
+            this.panel16.Controls.Add(this.label151);
+            this.panel16.Controls.Add(this.txt10_4Qtd);
+            this.panel16.Controls.Add(this.label149);
+            this.panel16.Controls.Add(this.combo10_4TipoTampa);
+            this.panel16.Controls.Add(this.label148);
+            this.panel16.Controls.Add(this.label150);
+            this.panel16.Controls.Add(this.txt10_4QtdTampa);
+            this.panel16.Controls.Add(this.combo10_4MatTampa);
+            this.panel16.Controls.Add(this.label152);
+            this.panel16.Controls.Add(this.label154);
+            this.panel16.Controls.Add(this.btn10_4Excluir);
+            this.panel16.Controls.Add(this.btn10_4Salvar);
+            this.panel16.Controls.Add(this.txt10_4Obs);
+            this.panel16.Controls.Add(this.label157);
+            this.panel16.Location = new System.Drawing.Point(23, 33);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(993, 346);
+            this.panel16.TabIndex = 27;
+            // 
+            // btn10_4GravaTampa
+            // 
+            this.btn10_4GravaTampa.Location = new System.Drawing.Point(703, 149);
+            this.btn10_4GravaTampa.Name = "btn10_4GravaTampa";
+            this.btn10_4GravaTampa.Size = new System.Drawing.Size(90, 23);
+            this.btn10_4GravaTampa.TabIndex = 7;
+            this.btn10_4GravaTampa.Text = "Gravar Tampa";
+            this.btn10_4GravaTampa.UseVisualStyleBackColor = true;
+            this.btn10_4GravaTampa.Click += new System.EventHandler(this.btn10_4GravaTampa_Click);
+            // 
+            // txt10_4Largura
+            // 
+            this.txt10_4Largura.Enabled = false;
+            this.txt10_4Largura.Location = new System.Drawing.Point(509, 152);
+            this.txt10_4Largura.MaxLength = 10;
+            this.txt10_4Largura.Name = "txt10_4Largura";
+            this.txt10_4Largura.Size = new System.Drawing.Size(158, 20);
+            this.txt10_4Largura.TabIndex = 6;
+            // 
+            // label123
+            // 
+            this.label123.AutoSize = true;
+            this.label123.Location = new System.Drawing.Point(425, 156);
+            this.label123.Name = "label123";
+            this.label123.Size = new System.Drawing.Size(75, 13);
+            this.label123.TabIndex = 60;
+            this.label123.Text = "Largura (mm)*:";
+            // 
+            // txt10_4Comprimento
+            // 
+            this.txt10_4Comprimento.Enabled = false;
+            this.txt10_4Comprimento.Location = new System.Drawing.Point(149, 149);
+            this.txt10_4Comprimento.MaxLength = 10;
+            this.txt10_4Comprimento.Name = "txt10_4Comprimento";
+            this.txt10_4Comprimento.Size = new System.Drawing.Size(157, 20);
+            this.txt10_4Comprimento.TabIndex = 5;
+            // 
+            // label151
+            // 
+            this.label151.AutoSize = true;
+            this.label151.Location = new System.Drawing.Point(33, 152);
+            this.label151.Name = "label151";
+            this.label151.Size = new System.Drawing.Size(100, 13);
+            this.label151.TabIndex = 58;
+            this.label151.Text = "Comprimento (mm)*:";
+            // 
+            // txt10_4Qtd
+            // 
+            this.txt10_4Qtd.Enabled = false;
+            this.txt10_4Qtd.Location = new System.Drawing.Point(149, 104);
+            this.txt10_4Qtd.MaxLength = 10;
+            this.txt10_4Qtd.Name = "txt10_4Qtd";
+            this.txt10_4Qtd.Size = new System.Drawing.Size(157, 20);
+            this.txt10_4Qtd.TabIndex = 3;
+            // 
+            // label149
+            // 
+            this.label149.AutoSize = true;
+            this.label149.Location = new System.Drawing.Point(64, 107);
+            this.label149.Name = "label149";
+            this.label149.Size = new System.Drawing.Size(69, 13);
+            this.label149.TabIndex = 56;
+            this.label149.Text = "Quantidade*:";
+            // 
+            // combo10_4TipoTampa
+            // 
+            this.combo10_4TipoTampa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo10_4TipoTampa.Enabled = false;
+            this.combo10_4TipoTampa.FormattingEnabled = true;
+            this.combo10_4TipoTampa.Items.AddRange(new object[] {
+            "Selecione",
+            "Plana",
+            "Ondulada"});
+            this.combo10_4TipoTampa.Location = new System.Drawing.Point(509, 101);
+            this.combo10_4TipoTampa.Name = "combo10_4TipoTampa";
+            this.combo10_4TipoTampa.Size = new System.Drawing.Size(158, 21);
+            this.combo10_4TipoTampa.TabIndex = 4;
+            // 
+            // label148
+            // 
+            this.label148.AutoSize = true;
+            this.label148.Location = new System.Drawing.Point(414, 104);
+            this.label148.Name = "label148";
+            this.label148.Size = new System.Drawing.Size(86, 13);
+            this.label148.TabIndex = 47;
+            this.label148.Text = "Tipo de Tampa*:";
+            // 
+            // label150
+            // 
+            this.label150.AutoSize = true;
+            this.label150.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label150.ForeColor = System.Drawing.Color.Black;
+            this.label150.Location = new System.Drawing.Point(16, 68);
+            this.label150.Name = "label150";
+            this.label150.Size = new System.Drawing.Size(240, 13);
+            this.label150.TabIndex = 52;
+            this.label150.Text = "Preencha a tabela de Tampas Metálicas*";
+            // 
+            // txt10_4QtdTampa
+            // 
+            this.txt10_4QtdTampa.Enabled = false;
+            this.txt10_4QtdTampa.Location = new System.Drawing.Point(509, 16);
+            this.txt10_4QtdTampa.MaxLength = 10;
+            this.txt10_4QtdTampa.Name = "txt10_4QtdTampa";
+            this.txt10_4QtdTampa.Size = new System.Drawing.Size(158, 20);
+            this.txt10_4QtdTampa.TabIndex = 2;
+            // 
+            // combo10_4MatTampa
+            // 
+            this.combo10_4MatTampa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo10_4MatTampa.FormattingEnabled = true;
+            this.combo10_4MatTampa.Items.AddRange(new object[] {
+            "Selecione",
+            "Polipropileno",
+            "Metálica"});
+            this.combo10_4MatTampa.Location = new System.Drawing.Point(149, 16);
+            this.combo10_4MatTampa.Name = "combo10_4MatTampa";
+            this.combo10_4MatTampa.Size = new System.Drawing.Size(157, 21);
+            this.combo10_4MatTampa.TabIndex = 1;
+            this.combo10_4MatTampa.SelectedIndexChanged += new System.EventHandler(this.combo10_4MatTampa_SelectedIndexChanged);
+            // 
+            // label152
+            // 
+            this.label152.AutoSize = true;
+            this.label152.Location = new System.Drawing.Point(16, 19);
+            this.label152.Name = "label152";
+            this.label152.Size = new System.Drawing.Size(127, 13);
+            this.label152.TabIndex = 47;
+            this.label152.Text = "Qual Material da Tampa*:";
+            // 
+            // label154
+            // 
+            this.label154.AutoSize = true;
+            this.label154.Location = new System.Drawing.Point(390, 19);
+            this.label154.Name = "label154";
+            this.label154.Size = new System.Drawing.Size(110, 13);
+            this.label154.TabIndex = 37;
+            this.label154.Text = "Quantidade Tampas*:";
+            // 
+            // btn10_4Excluir
+            // 
+            this.btn10_4Excluir.Location = new System.Drawing.Point(472, 292);
+            this.btn10_4Excluir.Name = "btn10_4Excluir";
+            this.btn10_4Excluir.Size = new System.Drawing.Size(75, 23);
+            this.btn10_4Excluir.TabIndex = 10;
+            this.btn10_4Excluir.Text = "Excluir";
+            this.btn10_4Excluir.UseVisualStyleBackColor = true;
+            this.btn10_4Excluir.Visible = false;
+            // 
+            // btn10_4Salvar
+            // 
+            this.btn10_4Salvar.Location = new System.Drawing.Point(364, 292);
+            this.btn10_4Salvar.Name = "btn10_4Salvar";
+            this.btn10_4Salvar.Size = new System.Drawing.Size(75, 23);
+            this.btn10_4Salvar.TabIndex = 9;
+            this.btn10_4Salvar.Text = "Salvar";
+            this.btn10_4Salvar.UseVisualStyleBackColor = true;
+            this.btn10_4Salvar.Click += new System.EventHandler(this.btn10_4Salvar_Click);
+            // 
+            // txt10_4Obs
+            // 
+            this.txt10_4Obs.Location = new System.Drawing.Point(149, 202);
+            this.txt10_4Obs.MaxLength = 2000;
+            this.txt10_4Obs.Multiline = true;
+            this.txt10_4Obs.Name = "txt10_4Obs";
+            this.txt10_4Obs.Size = new System.Drawing.Size(644, 48);
+            this.txt10_4Obs.TabIndex = 8;
+            // 
+            // label157
+            // 
+            this.label157.AutoSize = true;
+            this.label157.Location = new System.Drawing.Point(60, 221);
+            this.label157.Name = "label157";
+            this.label157.Size = new System.Drawing.Size(73, 13);
+            this.label157.TabIndex = 6;
+            this.label157.Text = "Observações:";
             // 
             // label94
             // 
@@ -5629,11 +5830,9 @@
             this.tabEscopo10.PerformLayout();
             this.tabsEscopo10.ResumeLayout(false);
             this.tabEscopo10_1.ResumeLayout(false);
-            this.tabEscopo10_1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.tabEscopo10_2.ResumeLayout(false);
-            this.tabEscopo10_2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.gBox10_2Armazem.ResumeLayout(false);
@@ -5646,6 +5845,9 @@
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv10_3)).EndInit();
+            this.tabEscopo10_4.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
             this.tabEscopo18.ResumeLayout(false);
             this.tabEscopo18.PerformLayout();
             this.tabEscopo18_1_2.ResumeLayout(false);
@@ -5989,7 +6191,6 @@
         private System.Windows.Forms.Label label103;
         private System.Windows.Forms.ComboBox comboE10_1TipoProd;
         private System.Windows.Forms.Label label102;
-        private System.Windows.Forms.CheckBox checkEscopo10_1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.CheckBox check10_2Armazem;
         private System.Windows.Forms.CheckBox check10_2Silos;
@@ -6004,7 +6205,6 @@
         private System.Windows.Forms.Button btn10_2Salvar;
         private System.Windows.Forms.TextBox txt10_2Obs;
         private System.Windows.Forms.Label label122;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.GroupBox gBox10_2Silo;
         private System.Windows.Forms.TextBox text10_2CaractisticaEspalhadorS;
         private System.Windows.Forms.Label label117;
@@ -6138,5 +6338,24 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Altura;
         private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Button btn10_4GravaTampa;
+        private System.Windows.Forms.TextBox txt10_4Largura;
+        private System.Windows.Forms.Label label123;
+        private System.Windows.Forms.TextBox txt10_4Comprimento;
+        private System.Windows.Forms.Label label151;
+        private System.Windows.Forms.TextBox txt10_4Qtd;
+        private System.Windows.Forms.Label label149;
+        private System.Windows.Forms.ComboBox combo10_4TipoTampa;
+        private System.Windows.Forms.Label label148;
+        private System.Windows.Forms.Label label150;
+        private System.Windows.Forms.TextBox txt10_4QtdTampa;
+        private System.Windows.Forms.ComboBox combo10_4MatTampa;
+        private System.Windows.Forms.Label label152;
+        private System.Windows.Forms.Label label154;
+        private System.Windows.Forms.Button btn10_4Excluir;
+        private System.Windows.Forms.Button btn10_4Salvar;
+        private System.Windows.Forms.TextBox txt10_4Obs;
+        private System.Windows.Forms.Label label157;
     }
 }

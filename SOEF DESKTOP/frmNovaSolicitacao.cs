@@ -4876,6 +4876,12 @@ namespace ORCAMENTOS_FOCKINK
 
         }
 
+        private void inicializaCamposE10_4()
+        {
+            combo10_4MatTampa.SelectedIndex = 0;
+            combo10_4TipoTampa.SelectedIndex = 0;
+        }
+
         private void tabsEscopo10_Selected(object sender, TabControlEventArgs e)
         {
             if (tabsEscopo10.SelectedTab.Name == "tabEscopo10_1")
@@ -5004,11 +5010,12 @@ namespace ORCAMENTOS_FOCKINK
                 {
                     listaEscopo10_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 }
-
-               
-             //   
-
             }//Fim Escopo 10_3
+            else if (tabsEscopo10.SelectedTab.Name == "tabEscopo10_4")
+            {
+                inicializaCamposE10_4();
+
+            }
         }
 
         private void btnE10_1Salvar_Click(object sender, EventArgs e)
@@ -6246,6 +6253,134 @@ namespace ORCAMENTOS_FOCKINK
                     sucesso = false;
                 }
                 
+            }
+        }
+
+        private void combo10_4MatTampa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(combo10_4MatTampa.SelectedIndex == 1)
+            {
+                //Mostra opções 1
+                //label154.Visible = true;
+                txt10_4QtdTampa.Enabled = true;
+                txt10_4Qtd.Text = "";
+                txt10_4Qtd.Enabled = false;
+                txt10_4Comprimento.Text = "";
+                txt10_4Comprimento.Enabled = false;
+                combo10_4TipoTampa.SelectedIndex = 0;
+                combo10_4TipoTampa.Enabled = false;
+                txt10_4Largura.Text = "";
+                txt10_4Largura.Enabled = false;
+            }
+
+            if(combo10_4MatTampa.SelectedIndex == 2)
+            {
+                txt10_4QtdTampa.Text = "";
+                txt10_4QtdTampa.Enabled = false;
+                txt10_4Qtd.Enabled = true;
+                txt10_4Comprimento.Enabled = true;
+                combo10_4TipoTampa.SelectedIndex = 0;
+                combo10_4TipoTampa.Enabled = true;
+                txt10_4Largura.Enabled = true;
+            }
+        }
+
+        private void btn10_4Salvar_Click(object sender, EventArgs e)
+        {
+            string erros = "";
+            if(combo10_4MatTampa.SelectedIndex == 0)
+            {
+                erros += "O campo Qual Material da Tampa deve ser preenchido.\n";
+            }
+            else if (combo10_4MatTampa.SelectedIndex == 1)
+            {
+                if (string.IsNullOrEmpty(txt10_4QtdTampa.Text))
+                {
+                    erros += "O campo Quantidade Tampas deve ser preenchido.\n";
+                }
+            }
+            else if (combo10_4MatTampa.SelectedIndex == 2)
+            {
+                //Verificar se foi preenchido a tabela de tampas
+
+            }
+
+
+            if (!string.IsNullOrEmpty(erros))
+            {
+                MessageBox.Show("Painel de erros:\n" + erros);
+            }
+            else
+            {
+                //Continua com a validação dos dados e insere no banco
+                //Variaveis Escopo 10_4
+                string MatTampa = "";
+                string Quantidade = "";
+                string Observacoes = "";
+                string IndPreenchido = "S";
+
+                if (combo10_4MatTampa.SelectedIndex == 1)
+                {
+                    MatTampa = "P";
+                }
+                else if (combo10_4MatTampa.SelectedIndex == 2)
+                {
+                    MatTampa = "M";
+                }
+                Quantidade = txt10_4QtdTampa.Text;
+                Observacoes = txt10_4Obs.Text;
+
+            }
+        }
+
+        private void btn10_4GravaTampa_Click(object sender, EventArgs e)
+        {
+            string erros = "";
+
+            if (string.IsNullOrEmpty(txt10_4Qtd.Text))
+            {
+                erros += "O campo Quantidade deve ser preenchido.\n";
+            }
+            if (string.IsNullOrEmpty(txt10_4Comprimento.Text))
+            {
+                erros += "O campo Comprimento (mm) deve ser preenchido.\n";
+            }
+            if (string.IsNullOrEmpty(txt10_4Largura.Text))
+            {
+                erros += "O campo Largura (mm) deve ser preenchido.\n";
+            }
+            if(combo10_4TipoTampa.SelectedIndex == 0)
+            {
+                erros += "O campo Tipo de Tampa deve ser preenchido.\n";
+            }
+
+            if (!string.IsNullOrEmpty(erros))
+            {
+                MessageBox.Show("Painel de erros:\n" + erros);
+            }
+            else
+            {
+                //Variáveis Tampa Escopo
+                string Escopo = "";
+                string Seq = "";
+                string Qtd = "";
+                string TipoTampa = "";
+                string Comprimento = "";
+                string Largura = "";
+
+               
+                Escopo = "10_4";
+                Qtd = txt10_4Qtd.Text;
+                if(combo10_4TipoTampa.SelectedIndex == 1)
+                {
+                    TipoTampa = "P";
+                }
+                else
+                {
+                    TipoTampa = "O";
+                }
+                Comprimento = txt10_4Comprimento.Text;
+                Largura = txt10_4Largura.Text;
             }
         }
     }
