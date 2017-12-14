@@ -121,7 +121,6 @@ namespace SOEF_CLASS
             {
                 throw;
             }
-
         }
 
 

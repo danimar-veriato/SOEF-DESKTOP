@@ -6271,6 +6271,7 @@ namespace ORCAMENTOS_FOCKINK
                 combo10_4TipoTampa.Enabled = false;
                 txt10_4Largura.Text = "";
                 txt10_4Largura.Enabled = false;
+                btn10_4GravaTampa.Enabled = false;
             }
 
             if(combo10_4MatTampa.SelectedIndex == 2)
@@ -6282,6 +6283,7 @@ namespace ORCAMENTOS_FOCKINK
                 combo10_4TipoTampa.SelectedIndex = 0;
                 combo10_4TipoTampa.Enabled = true;
                 txt10_4Largura.Enabled = true;
+                btn10_4GravaTampa.Enabled = true;
             }
         }
 
@@ -6337,6 +6339,7 @@ namespace ORCAMENTOS_FOCKINK
         {
             string erros = "";
 
+
             if (string.IsNullOrEmpty(txt10_4Qtd.Text))
             {
                 erros += "O campo Quantidade deve ser preenchido.\n";
@@ -6367,6 +6370,7 @@ namespace ORCAMENTOS_FOCKINK
                 string TipoTampa = "";
                 string Comprimento = "";
                 string Largura = "";
+                int sequencia = 0;
 
                
                 Escopo = "10_4";
@@ -6381,6 +6385,19 @@ namespace ORCAMENTOS_FOCKINK
                 }
                 Comprimento = txt10_4Comprimento.Text;
                 Largura = txt10_4Largura.Text;
+
+                SOEF_CLASS.Escopo_10_4 Escopo10_4 = new SOEF_CLASS.Escopo_10_4(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                sequencia = Escopo10_4.getSequencia(this.numero_solic.ToString(), this.NumRevisaoSolic) + 1; //Última sequência inserida na tabela
+                int retorno = Escopo10_4.gravaTampaEscopo10_4(Escopo, sequencia.ToString(), Qtd, TipoTampa, Comprimento, Largura);
+                if(retorno > 0)
+                {
+                    dgv10_4Tampa.DataSource = Escopo10_4.getTampaEscopo("10_4", sequencia.ToString());
+                    MessageBox.Show("Registro inserido com sucesso!");
+                }
+                else
+                {
+                    MessageBox.Show("Não foi possível inserir registro Tampa Escopo");
+                }
             }
         }
     }

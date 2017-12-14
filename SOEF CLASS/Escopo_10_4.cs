@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SOEF_CLASS
 {
-    class Escopo_10_4 : Escopo
+    public class Escopo_10_4 : Escopo
     {
         /// <summary>
         /// Construtor do Escopo 10_4
@@ -216,6 +216,40 @@ namespace SOEF_CLASS
 
 
         /// <summary>
+        /// Busca a última sequência registrada
+        /// </summary>
+        /// <param name="pNumSolic"></param>
+        /// <param name="pRevisao"></param>
+        /// <returns></returns>
+        public int getSequencia(string pNumSolic, string pRevisao)
+        {
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            string retorno;
+            try
+            {
+                string sql;
+                sql = " SELECT MAX([SEQUENCIA]) ";
+                sql += " FROM [DOM_SOLIC_ORC_TAMPA_ESCOPO] ";
+                sql += " WHERE [NUMERO_SOLICITACAO] = " + pNumSolic;
+                sql += " AND [REVISAO_SOLICITACAO] = '" + pRevisao + "'";
+                retorno = sqlce.selectSOF(sql);
+
+                if (string.IsNullOrEmpty(retorno))
+                {
+                    retorno = "0";
+                }
+
+                return Convert.ToInt32(retorno);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
+        /// <summary>
         /// Atualiza dados da tabela Tampa Escopo
         /// </summary>
         /// <param name="pEscopo"></param>
@@ -267,7 +301,14 @@ namespace SOEF_CLASS
             {
                 DataTable dt = new DataTable();
                 string sql;
-                sql = "SELECT * FROM [DOM_SOLIC_ORC_TAMPA_ESCOPO] ";
+             //   sql = "SELECT [NUMERO_SOLICITACAO], ";
+               // sql = " [REVISAO_SOLICITACAO], ";
+                sql = " SELECT [SEQUENCIA] SEQ, ";
+                sql += " [QUANTIDADE], ";
+                sql += " [TIPO_TAMPA], ";
+                sql += " [COMPRIMENTO], ";
+                sql += " [LARGURA] ";
+                sql += " FROM [DOM_SOLIC_ORC_TAMPA_ESCOPO] ";
                 sql += " WHERE [NUMERO_SOLICITACAO] = " + Numero + " ";
                 sql += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
                 sql += " AND [ESCOPO] = '" + pEscopo + "' ";

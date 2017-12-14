@@ -377,6 +377,7 @@
             this.label131 = new System.Windows.Forms.Label();
             this.tabEscopo10_4 = new System.Windows.Forms.TabPage();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.dgv10_4Tampa = new System.Windows.Forms.DataGridView();
             this.btn10_4GravaTampa = new System.Windows.Forms.Button();
             this.txt10_4Largura = new System.Windows.Forms.TextBox();
             this.label123 = new System.Windows.Forms.Label();
@@ -500,6 +501,14 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewButtonColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabNovaSolicitacao.SuspendLayout();
             this.tabCabecalho.SuspendLayout();
             this.tbCabecalho.SuspendLayout();
@@ -539,6 +548,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv10_3)).BeginInit();
             this.tabEscopo10_4.SuspendLayout();
             this.panel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv10_4Tampa)).BeginInit();
             this.tabEscopo18.SuspendLayout();
             this.tabEscopo18_1_2.SuspendLayout();
             this.tbpage18InfoG.SuspendLayout();
@@ -3266,7 +3276,7 @@
             this.panel3.Controls.Add(this.btnE10_1Salvar);
             this.panel3.Controls.Add(this.txtE10_1Obs);
             this.panel3.Controls.Add(this.label96);
-            this.panel3.Location = new System.Drawing.Point(28, 26);
+            this.panel3.Location = new System.Drawing.Point(15, 15);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(959, 373);
             this.panel3.TabIndex = 24;
@@ -3655,7 +3665,7 @@
             this.panel4.Controls.Add(this.btn10_2Salvar);
             this.panel4.Controls.Add(this.txt10_2Obs);
             this.panel4.Controls.Add(this.label122);
-            this.panel4.Location = new System.Drawing.Point(24, 27);
+            this.panel4.Location = new System.Drawing.Point(15, 13);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(993, 380);
             this.panel4.TabIndex = 26;
@@ -4458,6 +4468,7 @@
             // panel16
             // 
             this.panel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel16.Controls.Add(this.dgv10_4Tampa);
             this.panel16.Controls.Add(this.btn10_4GravaTampa);
             this.panel16.Controls.Add(this.txt10_4Largura);
             this.panel16.Controls.Add(this.label123);
@@ -4476,14 +4487,34 @@
             this.panel16.Controls.Add(this.btn10_4Salvar);
             this.panel16.Controls.Add(this.txt10_4Obs);
             this.panel16.Controls.Add(this.label157);
-            this.panel16.Location = new System.Drawing.Point(23, 33);
+            this.panel16.Location = new System.Drawing.Point(13, 14);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(993, 346);
+            this.panel16.Size = new System.Drawing.Size(1010, 416);
             this.panel16.TabIndex = 27;
+            // 
+            // dgv10_4Tampa
+            // 
+            this.dgv10_4Tampa.AllowUserToAddRows = false;
+            this.dgv10_4Tampa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv10_4Tampa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewButtonColumn2});
+            this.dgv10_4Tampa.Location = new System.Drawing.Point(149, 172);
+            this.dgv10_4Tampa.MultiSelect = false;
+            this.dgv10_4Tampa.Name = "dgv10_4Tampa";
+            this.dgv10_4Tampa.Size = new System.Drawing.Size(643, 138);
+            this.dgv10_4Tampa.TabIndex = 61;
             // 
             // btn10_4GravaTampa
             // 
-            this.btn10_4GravaTampa.Location = new System.Drawing.Point(703, 149);
+            this.btn10_4GravaTampa.Enabled = false;
+            this.btn10_4GravaTampa.Location = new System.Drawing.Point(703, 128);
             this.btn10_4GravaTampa.Name = "btn10_4GravaTampa";
             this.btn10_4GravaTampa.Size = new System.Drawing.Size(90, 23);
             this.btn10_4GravaTampa.TabIndex = 7;
@@ -4494,7 +4525,7 @@
             // txt10_4Largura
             // 
             this.txt10_4Largura.Enabled = false;
-            this.txt10_4Largura.Location = new System.Drawing.Point(509, 152);
+            this.txt10_4Largura.Location = new System.Drawing.Point(509, 131);
             this.txt10_4Largura.MaxLength = 10;
             this.txt10_4Largura.Name = "txt10_4Largura";
             this.txt10_4Largura.Size = new System.Drawing.Size(158, 20);
@@ -4503,7 +4534,7 @@
             // label123
             // 
             this.label123.AutoSize = true;
-            this.label123.Location = new System.Drawing.Point(425, 156);
+            this.label123.Location = new System.Drawing.Point(425, 135);
             this.label123.Name = "label123";
             this.label123.Size = new System.Drawing.Size(75, 13);
             this.label123.TabIndex = 60;
@@ -4512,7 +4543,7 @@
             // txt10_4Comprimento
             // 
             this.txt10_4Comprimento.Enabled = false;
-            this.txt10_4Comprimento.Location = new System.Drawing.Point(149, 149);
+            this.txt10_4Comprimento.Location = new System.Drawing.Point(149, 128);
             this.txt10_4Comprimento.MaxLength = 10;
             this.txt10_4Comprimento.Name = "txt10_4Comprimento";
             this.txt10_4Comprimento.Size = new System.Drawing.Size(157, 20);
@@ -4521,7 +4552,7 @@
             // label151
             // 
             this.label151.AutoSize = true;
-            this.label151.Location = new System.Drawing.Point(33, 152);
+            this.label151.Location = new System.Drawing.Point(33, 131);
             this.label151.Name = "label151";
             this.label151.Size = new System.Drawing.Size(100, 13);
             this.label151.TabIndex = 58;
@@ -4530,7 +4561,7 @@
             // txt10_4Qtd
             // 
             this.txt10_4Qtd.Enabled = false;
-            this.txt10_4Qtd.Location = new System.Drawing.Point(149, 104);
+            this.txt10_4Qtd.Location = new System.Drawing.Point(149, 89);
             this.txt10_4Qtd.MaxLength = 10;
             this.txt10_4Qtd.Name = "txt10_4Qtd";
             this.txt10_4Qtd.Size = new System.Drawing.Size(157, 20);
@@ -4539,7 +4570,7 @@
             // label149
             // 
             this.label149.AutoSize = true;
-            this.label149.Location = new System.Drawing.Point(64, 107);
+            this.label149.Location = new System.Drawing.Point(64, 92);
             this.label149.Name = "label149";
             this.label149.Size = new System.Drawing.Size(69, 13);
             this.label149.TabIndex = 56;
@@ -4554,7 +4585,7 @@
             "Selecione",
             "Plana",
             "Ondulada"});
-            this.combo10_4TipoTampa.Location = new System.Drawing.Point(509, 101);
+            this.combo10_4TipoTampa.Location = new System.Drawing.Point(509, 86);
             this.combo10_4TipoTampa.Name = "combo10_4TipoTampa";
             this.combo10_4TipoTampa.Size = new System.Drawing.Size(158, 21);
             this.combo10_4TipoTampa.TabIndex = 4;
@@ -4562,7 +4593,7 @@
             // label148
             // 
             this.label148.AutoSize = true;
-            this.label148.Location = new System.Drawing.Point(414, 104);
+            this.label148.Location = new System.Drawing.Point(414, 89);
             this.label148.Name = "label148";
             this.label148.Size = new System.Drawing.Size(86, 13);
             this.label148.TabIndex = 47;
@@ -4573,7 +4604,7 @@
             this.label150.AutoSize = true;
             this.label150.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label150.ForeColor = System.Drawing.Color.Black;
-            this.label150.Location = new System.Drawing.Point(16, 68);
+            this.label150.Location = new System.Drawing.Point(16, 58);
             this.label150.Name = "label150";
             this.label150.Size = new System.Drawing.Size(240, 13);
             this.label150.TabIndex = 52;
@@ -4622,7 +4653,7 @@
             // 
             // btn10_4Excluir
             // 
-            this.btn10_4Excluir.Location = new System.Drawing.Point(472, 292);
+            this.btn10_4Excluir.Location = new System.Drawing.Point(472, 388);
             this.btn10_4Excluir.Name = "btn10_4Excluir";
             this.btn10_4Excluir.Size = new System.Drawing.Size(75, 23);
             this.btn10_4Excluir.TabIndex = 10;
@@ -4632,7 +4663,7 @@
             // 
             // btn10_4Salvar
             // 
-            this.btn10_4Salvar.Location = new System.Drawing.Point(364, 292);
+            this.btn10_4Salvar.Location = new System.Drawing.Point(364, 388);
             this.btn10_4Salvar.Name = "btn10_4Salvar";
             this.btn10_4Salvar.Size = new System.Drawing.Size(75, 23);
             this.btn10_4Salvar.TabIndex = 9;
@@ -4642,7 +4673,7 @@
             // 
             // txt10_4Obs
             // 
-            this.txt10_4Obs.Location = new System.Drawing.Point(149, 202);
+            this.txt10_4Obs.Location = new System.Drawing.Point(149, 325);
             this.txt10_4Obs.MaxLength = 2000;
             this.txt10_4Obs.Multiline = true;
             this.txt10_4Obs.Name = "txt10_4Obs";
@@ -4652,7 +4683,7 @@
             // label157
             // 
             this.label157.AutoSize = true;
-            this.label157.Location = new System.Drawing.Point(60, 221);
+            this.label157.Location = new System.Drawing.Point(60, 344);
             this.label157.Name = "label157";
             this.label157.Size = new System.Drawing.Size(73, 13);
             this.label157.TabIndex = 6;
@@ -5771,6 +5802,69 @@
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "NUMERO_SOLICITACAO";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Num. Solic.";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "REVISAO_SOLICITACAO";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Rev. Solicitação";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "SEQ";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Seq.";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "QUANTIDADE";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Quantidade";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "TIPO_TAMPA";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Tipo";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            this.dataGridViewTextBoxColumn11.Width = 130;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "COMPRIMENTO";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Comprimento (mm)";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            this.dataGridViewTextBoxColumn12.Width = 130;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "LARGURA";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Largura (m)";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // dataGridViewButtonColumn2
+            // 
+            this.dataGridViewButtonColumn2.HeaderText = "";
+            this.dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
+            this.dataGridViewButtonColumn2.Text = "Excluir";
+            this.dataGridViewButtonColumn2.UseColumnTextForButtonValue = true;
+            this.dataGridViewButtonColumn2.Width = 85;
+            // 
             // frmNovaSolicitacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5848,6 +5942,7 @@
             this.tabEscopo10_4.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv10_4Tampa)).EndInit();
             this.tabEscopo18.ResumeLayout(false);
             this.tabEscopo18.PerformLayout();
             this.tabEscopo18_1_2.ResumeLayout(false);
@@ -6357,5 +6452,14 @@
         private System.Windows.Forms.Button btn10_4Salvar;
         private System.Windows.Forms.TextBox txt10_4Obs;
         private System.Windows.Forms.Label label157;
+        private System.Windows.Forms.DataGridView dgv10_4Tampa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn2;
     }
 }
