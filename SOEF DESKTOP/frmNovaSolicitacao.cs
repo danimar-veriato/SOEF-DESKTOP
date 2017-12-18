@@ -5014,6 +5014,12 @@ namespace ORCAMENTOS_FOCKINK
             else if (tabsEscopo10.SelectedTab.Name == "tabEscopo10_4")
             {
                 inicializaCamposE10_4();
+                SOEF_CLASS.Escopo_10_4 Escopo10_4 = new SOEF_CLASS.Escopo_10_4(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                //dgv10_3.DataSource = Escopo10_4.get (this.numero_solic.ToString(), this.NumRevisaoSolic);
+                if (AcaoTela == "N")
+                {
+                    
+                }
 
             }
         }
@@ -6258,6 +6264,20 @@ namespace ORCAMENTOS_FOCKINK
 
         private void combo10_4MatTampa_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if(combo10_4MatTampa.SelectedIndex == 0)
+            {
+                txt10_4QtdTampa.Enabled = false;
+                txt10_4Qtd.Text = "";
+                txt10_4Qtd.Enabled = false;
+                combo10_4TipoTampa.SelectedIndex = 0;
+                combo10_4TipoTampa.Enabled = false;
+                txt10_4Comprimento.Text = "";
+                txt10_4Comprimento.Enabled = false;
+                txt10_4Largura.Text = "";
+                txt10_4Largura.Enabled = false;
+                dgv10_4Tampa.Enabled = false;
+                btn10_4GravaTampa.Enabled = false;
+            }
             if(combo10_4MatTampa.SelectedIndex == 1)
             {
                 //Mostra opções 1
@@ -6386,18 +6406,27 @@ namespace ORCAMENTOS_FOCKINK
                 Comprimento = txt10_4Comprimento.Text;
                 Largura = txt10_4Largura.Text;
 
-                SOEF_CLASS.Escopo_10_4 Escopo10_4 = new SOEF_CLASS.Escopo_10_4(this.numero_solic.ToString(), this.NumRevisaoSolic);
-                sequencia = Escopo10_4.getSequencia(this.numero_solic.ToString(), this.NumRevisaoSolic) + 1; //Última sequência inserida na tabela
-                int retorno = Escopo10_4.gravaTampaEscopo10_4(Escopo, sequencia.ToString(), Qtd, TipoTampa, Comprimento, Largura);
-                if(retorno > 0)
+                try
                 {
-                    dgv10_4Tampa.DataSource = Escopo10_4.getTampaEscopo("10_4", sequencia.ToString());
-                    MessageBox.Show("Registro inserido com sucesso!");
+                    SOEF_CLASS.Escopo_10_4 Escopo10_4 = new SOEF_CLASS.Escopo_10_4(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    sequencia = Escopo10_4.getSequencia(this.numero_solic.ToString(), this.NumRevisaoSolic) + 1; //Última sequência inserida na tabela
+                    int retorno = Escopo10_4.gravaTampaEscopo10_4(Escopo, sequencia.ToString(), Qtd, TipoTampa, Comprimento, Largura);
+                    if (retorno > 0)
+                    {
+                        dgv10_4Tampa.DataSource = Escopo10_4.getTampaEscopo("10_4", sequencia.ToString());
+                        MessageBox.Show("Registro inserido com sucesso!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Não foi possível inserir registro Tampa Escopo");
+                    }
                 }
-                else
+                catch (Exception)
                 {
-                    MessageBox.Show("Não foi possível inserir registro Tampa Escopo");
+                    throw;
                 }
+
+                
             }
         }
     }

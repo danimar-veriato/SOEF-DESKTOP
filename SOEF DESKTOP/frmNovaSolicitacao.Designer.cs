@@ -377,7 +377,6 @@
             this.label131 = new System.Windows.Forms.Label();
             this.tabEscopo10_4 = new System.Windows.Forms.TabPage();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.dgv10_4Tampa = new System.Windows.Forms.DataGridView();
             this.btn10_4GravaTampa = new System.Windows.Forms.Button();
             this.txt10_4Largura = new System.Windows.Forms.TextBox();
             this.label123 = new System.Windows.Forms.Label();
@@ -501,14 +500,15 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewButtonColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv10_4Tampa = new System.Windows.Forms.DataGridView();
             this.tabNovaSolicitacao.SuspendLayout();
             this.tabCabecalho.SuspendLayout();
             this.tbCabecalho.SuspendLayout();
@@ -548,7 +548,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv10_3)).BeginInit();
             this.tabEscopo10_4.SuspendLayout();
             this.panel16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv10_4Tampa)).BeginInit();
             this.tabEscopo18.SuspendLayout();
             this.tabEscopo18_1_2.SuspendLayout();
             this.tbpage18InfoG.SuspendLayout();
@@ -566,6 +565,7 @@
             this.tabEscopo20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaEsc20)).BeginInit();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv10_4Tampa)).BeginInit();
             this.SuspendLayout();
             // 
             // tabNovaSolicitacao
@@ -4492,25 +4492,6 @@
             this.panel16.Size = new System.Drawing.Size(1010, 416);
             this.panel16.TabIndex = 27;
             // 
-            // dgv10_4Tampa
-            // 
-            this.dgv10_4Tampa.AllowUserToAddRows = false;
-            this.dgv10_4Tampa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv10_4Tampa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewButtonColumn2});
-            this.dgv10_4Tampa.Location = new System.Drawing.Point(149, 172);
-            this.dgv10_4Tampa.MultiSelect = false;
-            this.dgv10_4Tampa.Name = "dgv10_4Tampa";
-            this.dgv10_4Tampa.Size = new System.Drawing.Size(643, 138);
-            this.dgv10_4Tampa.TabIndex = 61;
-            // 
             // btn10_4GravaTampa
             // 
             this.btn10_4GravaTampa.Enabled = false;
@@ -5802,45 +5783,20 @@
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // dataGridViewTextBoxColumn7
+            // dataGridViewButtonColumn2
             // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "NUMERO_SOLICITACAO";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Num. Solic.";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Visible = false;
+            this.dataGridViewButtonColumn2.HeaderText = "";
+            this.dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
+            this.dataGridViewButtonColumn2.Text = "Excluir";
+            this.dataGridViewButtonColumn2.UseColumnTextForButtonValue = true;
+            this.dataGridViewButtonColumn2.Width = 85;
             // 
-            // dataGridViewTextBoxColumn8
+            // dataGridViewTextBoxColumn14
             // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "REVISAO_SOLICITACAO";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Rev. Solicitação";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "SEQ";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Seq.";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            this.dataGridViewTextBoxColumn9.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "QUANTIDADE";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Quantidade";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            this.dataGridViewTextBoxColumn10.Width = 75;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "TIPO_TAMPA";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Tipo";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            this.dataGridViewTextBoxColumn11.Width = 130;
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "LARGURA";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Largura (m)";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn12
             // 
@@ -5850,20 +5806,64 @@
             this.dataGridViewTextBoxColumn12.ReadOnly = true;
             this.dataGridViewTextBoxColumn12.Width = 130;
             // 
-            // dataGridViewTextBoxColumn14
+            // dataGridViewTextBoxColumn11
             // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "LARGURA";
-            this.dataGridViewTextBoxColumn14.HeaderText = "Largura (m)";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "TIPO_TAMPA";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Tipo";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            this.dataGridViewTextBoxColumn11.Width = 130;
             // 
-            // dataGridViewButtonColumn2
+            // dataGridViewTextBoxColumn10
             // 
-            this.dataGridViewButtonColumn2.HeaderText = "";
-            this.dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
-            this.dataGridViewButtonColumn2.Text = "Excluir";
-            this.dataGridViewButtonColumn2.UseColumnTextForButtonValue = true;
-            this.dataGridViewButtonColumn2.Width = 85;
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "QUANTIDADE";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Quantidade";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "SEQ";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Seq.";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "REVISAO_SOLICITACAO";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Rev. Solicitação";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "NUMERO_SOLICITACAO";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Num. Solic.";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Visible = false;
+            // 
+            // dgv10_4Tampa
+            // 
+            this.dgv10_4Tampa.AllowUserToAddRows = false;
+            this.dgv10_4Tampa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv10_4Tampa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewButtonColumn2});
+            this.dgv10_4Tampa.Location = new System.Drawing.Point(149, 172);
+            this.dgv10_4Tampa.MultiSelect = false;
+            this.dgv10_4Tampa.Name = "dgv10_4Tampa";
+            this.dgv10_4Tampa.Size = new System.Drawing.Size(643, 138);
+            this.dgv10_4Tampa.TabIndex = 61;
             // 
             // frmNovaSolicitacao
             // 
@@ -5942,7 +5942,6 @@
             this.tabEscopo10_4.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv10_4Tampa)).EndInit();
             this.tabEscopo18.ResumeLayout(false);
             this.tabEscopo18.PerformLayout();
             this.tabEscopo18_1_2.ResumeLayout(false);
@@ -5974,6 +5973,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaEsc20)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv10_4Tampa)).EndInit();
             this.ResumeLayout(false);
 
         }
