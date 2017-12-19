@@ -5015,7 +5015,7 @@ namespace ORCAMENTOS_FOCKINK
             {
                 inicializaCamposE10_4();
                 SOEF_CLASS.Escopo_10_4 Escopo10_4 = new SOEF_CLASS.Escopo_10_4(this.numero_solic.ToString(), this.NumRevisaoSolic);
-                //dgv10_3.DataSource = Escopo10_4.get (this.numero_solic.ToString(), this.NumRevisaoSolic);
+                dgv10_4Tampa.DataSource = Escopo10_4.getTampaEscopo("10_4", null);
                 if (AcaoTela == "N")
                 {
                     
@@ -6194,7 +6194,6 @@ namespace ORCAMENTOS_FOCKINK
                     dgv10_3.DataSource = Escopo10_3.getRenovadoresAr(this.numero_solic.ToString(), this.NumRevisaoSolic);
                     MessageBox.Show("Registro apagado com sucesso!");
                 }
-
             }
 
         }
@@ -6275,7 +6274,7 @@ namespace ORCAMENTOS_FOCKINK
                 txt10_4Comprimento.Enabled = false;
                 txt10_4Largura.Text = "";
                 txt10_4Largura.Enabled = false;
-                dgv10_4Tampa.Enabled = false;
+               // dgv10_4Tampa.Enabled = false;
                 btn10_4GravaTampa.Enabled = false;
             }
             if(combo10_4MatTampa.SelectedIndex == 1)
@@ -6427,6 +6426,24 @@ namespace ORCAMENTOS_FOCKINK
                 }
 
                 
+            }
+        }
+
+        private void dgv10_4Tampa_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
+            {
+                SOEF_CLASS.Escopo_10_4 Escopo10_4 = new SOEF_CLASS.Escopo_10_4(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                MessageBox.Show("1 - " + dgv10_4Tampa.CurrentRow.Cells[1].Value.ToString() + " 2 - " + dgv10_4Tampa.CurrentRow.Cells[2].Value.ToString() + " 3 - " + dgv10_4Tampa.CurrentRow.Cells[3].Value.ToString());
+                //int retorno = Escopo10_4.deleteTampaEscopo(dgv10_4Tampa.CurrentRow.Cells[1].Value.ToString(), dgv10_4Tampa.CurrentRow.Cells[2].Value.ToString(), "10_4", dgv10_4Tampa.CurrentRow.Cells[3].Value.ToString());
+                //if (retorno > 0)
+                //{
+                //    dgv10_4Tampa.DataSource = Escopo10_4.getTampaEscopo("10_4", null);
+                //    MessageBox.Show("Registro apagado com sucesso!");
+                //}
             }
         }
     }

@@ -312,7 +312,10 @@ namespace SOEF_CLASS
                 sql += " WHERE [NUMERO_SOLICITACAO] = " + Numero + " ";
                 sql += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
                 sql += " AND [ESCOPO] = '" + pEscopo + "' ";
-                sql += " AND [SEQUENCIA] = " + pSequencia + " ";
+                if (!string.IsNullOrEmpty(pSequencia))
+                {
+                    sql += " AND [SEQUENCIA] = " + pSequencia + " ";
+                }                
                 dt = sqlce.selectListaSOF(sql, "DOM_SOLIC_ORC_TAMPA_ESCOPO");
                 return dt;
             }
@@ -342,7 +345,10 @@ namespace SOEF_CLASS
                 query += " WHERE [NUMERO_SOLICITACAO] = " + pNumero + " ";
                 query += " AND [REVISAO_SOLICITACAO] = '" + pRevisao + "' ";
                 query += " AND [ESCOPO] = '" + pEscopo + "' ";
-                query += " AND [SEQUENCIA] = " + pSequencia + " ";
+                if (!string.IsNullOrEmpty(pSequencia))
+                {
+                    query += " AND [SEQUENCIA] = " + pSequencia + " ";
+                }                
                 retorno = sqlce.deleteSOF(query);
                 return retorno;
             }
