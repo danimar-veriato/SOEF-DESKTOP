@@ -6313,18 +6313,60 @@ namespace ORCAMENTOS_FOCKINK
             {
                 erros += "O campo Qual Material da Tampa deve ser preenchido.\n";
             }
-            else if (combo10_4MatTampa.SelectedIndex == 1)
+            else
             {
-                if (string.IsNullOrEmpty(txt10_4QtdTampa.Text))
+                SOEF_CLASS.Escopo_10_4 Escopo10_4 = new SOEF_CLASS.Escopo_10_4(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                string matTampa = "";
+                string qtdTampas;
+                string obs;
+                string indPre = "S";
+
+                if (combo10_4MatTampa.SelectedIndex == 1)
                 {
-                    erros += "O campo Quantidade Tampas deve ser preenchido.\n";
+                    if (string.IsNullOrEmpty(txt10_4QtdTampa.Text))
+                    {
+                        erros += "O campo Quantidade Tampas deve ser preenchido.\n";
+                    }
+                }
+
+                if (AcaoTela == "N")
+                {
+                    
+                    if (combo10_4MatTampa.SelectedIndex == 2)
+                    {
+                        //Verifica se foi preenchido a tabela de tampas
+                        DataTable dt = Escopo10_4.getTampaEscopo("10_4", null);
+                        if (dt.Rows.Count <= 0)
+                        {
+                            MessageBox.Show("Para tampa metálica é obrigatório preencher a tabela de tampas. Preencha a tabela de tampas.");
+                        }
+                        else
+                        {    
+                            if (combo10_4MatTampa.SelectedIndex == 1)
+                            {
+                                matTampa = "P";
+                            }
+                            else if (combo10_4MatTampa.SelectedIndex == 2)
+                            {
+                                matTampa = "M";
+                            }
+                            qtdTampas = txt10_4QtdTampa.Text;
+                            obs = txt10_4Obs.Text;
+
+                            int retorno = Escopo10_4.gravaEscopo_10_4(matTampa, qtdTampas, obs, indPre);
+                            if (retorno > 0)
+                            {
+                                MessageBox.Show("Registro inserido com sucesso!");
+                                btn10_4Excluir.Visible = true;
+                            }
+                        }
+
+                    }
+
                 }
             }
-            else if (combo10_4MatTampa.SelectedIndex == 2)
-            {
-                //Verificar se foi preenchido a tabela de tampas
 
-            }
+            
 
 
             if (!string.IsNullOrEmpty(erros))
@@ -6437,13 +6479,13 @@ namespace ORCAMENTOS_FOCKINK
                 e.RowIndex >= 0)
             {
                 SOEF_CLASS.Escopo_10_4 Escopo10_4 = new SOEF_CLASS.Escopo_10_4(this.numero_solic.ToString(), this.NumRevisaoSolic);
-                MessageBox.Show("1 - " + dgv10_4Tampa.CurrentRow.Cells[1].Value.ToString() + " 2 - " + dgv10_4Tampa.CurrentRow.Cells[2].Value.ToString() + " 3 - " + dgv10_4Tampa.CurrentRow.Cells[3].Value.ToString());
-                //int retorno = Escopo10_4.deleteTampaEscopo(dgv10_4Tampa.CurrentRow.Cells[1].Value.ToString(), dgv10_4Tampa.CurrentRow.Cells[2].Value.ToString(), "10_4", dgv10_4Tampa.CurrentRow.Cells[3].Value.ToString());
-                //if (retorno > 0)
-                //{
-                //    dgv10_4Tampa.DataSource = Escopo10_4.getTampaEscopo("10_4", null);
-                //    MessageBox.Show("Registro apagado com sucesso!");
-                //}
+
+                int retorno = Escopo10_4.deleteTampaEscopo(dgv10_4Tampa.CurrentRow.Cells[1].Value.ToString(), dgv10_4Tampa.CurrentRow.Cells[2].Value.ToString(), "10_4", dgv10_4Tampa.CurrentRow.Cells[3].Value.ToString());
+                if (retorno > 0)
+                {
+                    dgv10_4Tampa.DataSource = Escopo10_4.getTampaEscopo("10_4", null);
+                    MessageBox.Show("Registro apagado com sucesso!");
+                }
             }
         }
     }

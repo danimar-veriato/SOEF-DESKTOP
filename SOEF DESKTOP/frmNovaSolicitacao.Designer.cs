@@ -4505,10 +4505,10 @@
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn14,
             this.dataGridViewButtonColumn2});
-            this.dgv10_4Tampa.Location = new System.Drawing.Point(149, 172);
+            this.dgv10_4Tampa.Location = new System.Drawing.Point(149, 162);
             this.dgv10_4Tampa.MultiSelect = false;
             this.dgv10_4Tampa.Name = "dgv10_4Tampa";
-            this.dgv10_4Tampa.Size = new System.Drawing.Size(643, 138);
+            this.dgv10_4Tampa.Size = new System.Drawing.Size(643, 153);
             this.dgv10_4Tampa.TabIndex = 61;
             this.dgv10_4Tampa.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv10_4Tampa_CellContentClick);
             // 
@@ -4737,7 +4737,7 @@
             // 
             // txt10_4Obs
             // 
-            this.txt10_4Obs.Location = new System.Drawing.Point(149, 325);
+            this.txt10_4Obs.Location = new System.Drawing.Point(149, 328);
             this.txt10_4Obs.MaxLength = 2000;
             this.txt10_4Obs.Multiline = true;
             this.txt10_4Obs.Name = "txt10_4Obs";

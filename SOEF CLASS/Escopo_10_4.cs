@@ -37,10 +37,8 @@ namespace SOEF_CLASS
             sqlce.openConnection();
             try
             {
-
                 int retorno;
                 string query = "";
-
                 query += " INSERT INTO [DOM_SOLIC_ORC_ESCOPO_10_4] ";
                 query += "   ([NUMERO_SOLICITACAO], ";
                 query += "   [REVISAO_SOLICITACAO], ";
@@ -301,9 +299,9 @@ namespace SOEF_CLASS
             {
                 DataTable dt = new DataTable();
                 string sql;
-             //   sql = "SELECT [NUMERO_SOLICITACAO], ";
-               // sql = " [REVISAO_SOLICITACAO], ";
-                sql = " SELECT [SEQUENCIA] SEQ, ";
+                sql = "SELECT [NUMERO_SOLICITACAO], ";
+                sql += " [REVISAO_SOLICITACAO], ";
+                sql += " [SEQUENCIA] SEQ, ";
                 sql += " [QUANTIDADE], ";
                 sql += " [TIPO_TAMPA], ";
                 sql += " [COMPRIMENTO], ";
