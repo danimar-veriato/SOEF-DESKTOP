@@ -2078,7 +2078,11 @@ namespace ORCAMENTOS_FOCKINK
             }
         }
 
-
+        /// <summary>
+        /// Lista os dados do Escopo 10_3
+        /// </summary>
+        /// <param name="pNumSolic"></param>
+        /// <param name="pNumRev"></param>
         protected void listaEscopo10_3(string pNumSolic, string pNumRev)
         {
             try
@@ -2141,6 +2145,90 @@ namespace ORCAMENTOS_FOCKINK
                 throw;
             }
         }
+
+
+        protected void listaEscopo10_4(string pNumSolic, string pNumRev)
+        {
+            try
+            {
+                SOEF_CLASS.Escopo_10_4 Escopo10_4 = new SOEF_CLASS.Escopo_10_4(pNumSolic, pNumRev);
+                DataTable dt = Escopo10_4.getEscopo_10_4();
+                if (dt.Rows.Count > 0)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        if(dr["MATERIAL_TAMPA"].ToString() == "P")
+                        {
+                            combo10_4MatTampa.SelectedIndex = 1;
+                        }
+                        else
+                        {
+                            combo10_4MatTampa.SelectedIndex = 2;
+                        }
+                        
+                        if(combo10_4MatTampa.SelectedIndex == 1)
+                        {
+                            txt10_4QtdTampa.Enabled = true;
+                            txt10_4QtdTampa.Text = dr["QUANTIDADE"].ToString();
+                            //Desabilita campos da segunda opção
+                            txt10_4Qtd.Text = "";
+                            txt10_4Qtd.Enabled = false;
+                            txt10_4Comprimento.Text = "";
+                            txt10_4Comprimento.Enabled = false;
+                            txt10_4Largura.Text = "";
+                            txt10_4Largura.Enabled = false;
+                            combo10_4TipoTampa.SelectedIndex = 0;
+                            combo10_4TipoTampa.Enabled = false;
+                            btn10_4GravaTampa.Enabled = false;
+                            dgv10_4Tampa.DataSource = null;
+                            dgv10_4Tampa.Enabled = false;
+                        }
+                        else if (combo10_4MatTampa.SelectedIndex == 2)
+                        {
+                            txt10_4Qtd.Enabled = true;
+                            txt10_4Qtd.Text = "";
+                            txt10_4Comprimento.Enabled = true;
+                            txt10_4Comprimento.Text = "";
+                            txt10_4Largura.Enabled = true;
+                            txt10_4Largura.Text = "";
+                            combo10_4TipoTampa.Enabled = true;
+                            combo10_4TipoTampa.SelectedIndex = 0;
+                            dgv10_4Tampa.Enabled = true;
+                            //Popula o Data Grid com os dados da Tampa Escopo
+                            dgv10_4Tampa.DataSource = Escopo10_4.getTampaEscopo("10_4", null);
+                            btn10_4GravaTampa.Enabled = true;
+                            //Desabilita campos 1° opcao
+                            txt10_4QtdTampa.Text = "";
+                            txt10_4QtdTampa.Enabled = false;
+                        }
+                        txt10_4Obs.Text = dr["OBSERVACOES"].ToString();
+                        btn10_4Excluir.Visible = true;
+                    }
+                }
+                else
+                {
+                    txt10_4Qtd.Text = "";
+                    txt10_4Qtd.Enabled = false;
+                    txt10_4Comprimento.Text = "";
+                    txt10_4Comprimento.Enabled = false;
+                    txt10_4Largura.Text = "";
+                    txt10_4Largura.Enabled = false;
+                    combo10_4TipoTampa.SelectedIndex = 0;
+                    combo10_4TipoTampa.Enabled = false;
+                    btn10_4GravaTampa.Enabled = false;
+                    combo10_4MatTampa.SelectedIndex = 0;
+                    dgv10_4Tampa.DataSource = null;
+                    dgv10_4Tampa.Enabled = false;
+                    txt10_4Obs.Text = "";
+                    btn10_3Excluir.Visible = false;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
 
 
 
@@ -5012,13 +5100,15 @@ namespace ORCAMENTOS_FOCKINK
                 }
             }//Fim Escopo 10_3
             else if (tabsEscopo10.SelectedTab.Name == "tabEscopo10_4")
-            {
-                inicializaCamposE10_4();
-                SOEF_CLASS.Escopo_10_4 Escopo10_4 = new SOEF_CLASS.Escopo_10_4(this.numero_solic.ToString(), this.NumRevisaoSolic);
-                dgv10_4Tampa.DataSource = Escopo10_4.getTampaEscopo("10_4", null);
+            {                
+                
                 if (AcaoTela == "N")
                 {
-                    
+                    inicializaCamposE10_4();
+                }
+                else
+                {
+                    listaEscopo10_4(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 }
 
             }
@@ -6327,43 +6417,105 @@ namespace ORCAMENTOS_FOCKINK
                     {
                         erros += "O campo Quantidade Tampas deve ser preenchido.\n";
                     }
-                }
-
-                if (AcaoTela == "N")
-                {
-                    
-                    if (combo10_4MatTampa.SelectedIndex == 2)
+                    else
                     {
-                        //Verifica se foi preenchido a tabela de tampas
-                        DataTable dt = Escopo10_4.getTampaEscopo("10_4", null);
-                        if (dt.Rows.Count <= 0)
+                        matTampa = "P";
+                        qtdTampas = txt10_4QtdTampa.Text;
+                        obs = txt10_4Obs.Text;
+                        if(AcaoTela == "N")
                         {
-                            MessageBox.Show("Para tampa metálica é obrigatório preencher a tabela de tampas. Preencha a tabela de tampas.");
-                        }
-                        else
-                        {    
-                            if (combo10_4MatTampa.SelectedIndex == 1)
+                            int RIEscopo = Escopo10_4.gravaEscopo_10_4(matTampa, qtdTampas, obs, indPre);
+                            if(RIEscopo > 0)
                             {
-                                matTampa = "P";
-                            }
-                            else if (combo10_4MatTampa.SelectedIndex == 2)
-                            {
-                                matTampa = "M";
-                            }
-                            qtdTampas = txt10_4QtdTampa.Text;
-                            obs = txt10_4Obs.Text;
-
-                            int retorno = Escopo10_4.gravaEscopo_10_4(matTampa, qtdTampas, obs, indPre);
-                            if (retorno > 0)
-                            {
-                                MessageBox.Show("Registro inserido com sucesso!");
+                                MessageBox.Show("Escopo 10_4 inserido com sucesso!");
+                                listaEscopo10_4(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                                AcaoTela = "C";
                                 btn10_4Excluir.Visible = true;
                             }
+                            else
+                            {
+                                MessageBox.Show("Ocorreu um erro na inserção do registro!");
+                            }
                         }
-
+                        else
+                        {
+                            //Verifica se não tem registro na tabela
+                            int RIEscopo = 0;
+                            DataTable dt1 = Escopo10_4.getEscopo_10_4();
+                            if(dt1.Rows.Count > 0)
+                            {
+                                //Verificar se tem registro na ORC_TAMPA_ESCOPO
+                                //Se tiver, apagar o registro antes de fazer o update
+                                RIEscopo = Escopo10_4.updateEscopo_10_4(matTampa, qtdTampas, obs, indPre);
+                            }
+                            else
+                            {
+                                RIEscopo = Escopo10_4.gravaEscopo_10_4(matTampa, qtdTampas, obs, indPre);
+                            }                            
+                            if(RIEscopo > 0)
+                            {
+                                MessageBox.Show("Escopo 10.4 atualizado com sucesso!");
+                                listaEscopo10_4(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Ocorreu um erro na atualização do escopo!");
+                            }
+                        }
                     }
-
                 }
+                else if (combo10_4MatTampa.SelectedIndex == 2)
+                {
+                    //Verifica se foi preenchido a tabela de tampas
+                    DataTable dt = Escopo10_4.getTampaEscopo("10_4", null);
+                    if (dt.Rows.Count <= 0)
+                    {
+                        MessageBox.Show("Para tampa metálica é obrigatório preencher a tabela de tampas. Preencha a tabela de tampas.");
+                    }
+                    else
+                    {
+                        matTampa = "M";
+                        qtdTampas = txt10_4QtdTampa.Text;
+                        obs = txt10_4Obs.Text;
+                        if (AcaoTela == "N")
+                        {
+                            int RIEscopo = Escopo10_4.gravaEscopo_10_4(matTampa, qtdTampas, obs, indPre);
+                            if (RIEscopo > 0)
+                            {
+                                MessageBox.Show("Registro inserido com sucesso!");
+                                listaEscopo10_4(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                                AcaoTela = "C";
+                                btn10_4Excluir.Visible = true;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Ocorreu um erro na inserção do registro!");
+                            }
+                        }
+                        else
+                        {
+                            int RIEscopo = 0;
+                            DataTable dt1 = Escopo10_4.getEscopo_10_4();
+                            if (dt1.Rows.Count > 0)
+                            {
+                                RIEscopo = Escopo10_4.updateEscopo_10_4(matTampa, qtdTampas, obs, indPre);
+                            }
+                            else
+                            {
+                                RIEscopo = Escopo10_4.gravaEscopo_10_4(matTampa, qtdTampas, obs, indPre);
+                            }
+                            if (RIEscopo > 0)
+                            {
+                                MessageBox.Show("Escopo 10.4 atualizado com sucesso!");
+                                listaEscopo10_4(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Ocorreu um erro na atualização do escopo!");
+                            }
+                        }
+                    }
+                }                
             }
 
             

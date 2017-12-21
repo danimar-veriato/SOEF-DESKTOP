@@ -49,7 +49,7 @@ namespace SOEF_CLASS
                 query += " VALUES ";
                 query += "   (" + Numero + ", ";
                 query += "   '" + Revisao + "', ";
-                query += "   " + pMaterialTampa + ", ";
+                query += "   '" + pMaterialTampa + "', ";
                 query += "   " + pQuantidade + ", ";
                 query += "   '" + pObs + "', ";
                 query += "   '" + pIndPre + "') ";
@@ -75,7 +75,7 @@ namespace SOEF_CLASS
         /// <param name="pObs"></param>
         /// <param name="pIndPre"></param>
         /// <returns></returns>
-        public int updateEscopo_10_3(string pMaterialTampa, string pQuantidade, string pObs, string pIndPre)
+        public int updateEscopo_10_4(string pMaterialTampa, string pQuantidade, string pObs, string pIndPre)
         {
             SqlCE sqlce = new SqlCE();
             sqlce.openConnection();
@@ -107,7 +107,7 @@ namespace SOEF_CLASS
         /// Busca os dados do Escopo 10_4
         /// </summary>
         /// <returns></returns>
-        public DataTable getEscopo_10_3()
+        public DataTable getEscopo_10_4()
         {
             SqlCE sqlce = new SqlCE();
             sqlce.openConnection();
