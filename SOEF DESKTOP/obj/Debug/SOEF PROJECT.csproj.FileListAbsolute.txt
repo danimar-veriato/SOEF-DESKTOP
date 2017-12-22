@@ -106,3 +106,4 @@ C:\Users\danim\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\obj\Debug\
 C:\Users\danim\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\obj\Debug\SOEF.application
 C:\Users\danim\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\obj\Debug\SOEF.exe
 C:\Users\danim\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\obj\Debug\SOEF.pdb
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF-DESKTOP\SOEF DESKTOP\bin\Debug\SOFDB.sdf

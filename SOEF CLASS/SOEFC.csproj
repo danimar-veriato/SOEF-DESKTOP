@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Escopo.cs" />
     <Compile Include="Escopo_01.cs" />
+    <Compile Include="Escopo_05.cs" />
     <Compile Include="Escopo_10_1.cs" />
     <Compile Include="Escopo_10_2.cs" />
     <Compile Include="Escopo_10_3.cs" />
