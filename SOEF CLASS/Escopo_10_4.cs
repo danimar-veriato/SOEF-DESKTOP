@@ -50,7 +50,14 @@ namespace SOEF_CLASS
                 query += "   (" + Numero + ", ";
                 query += "   '" + Revisao + "', ";
                 query += "   '" + pMaterialTampa + "', ";
-                query += "   " + pQuantidade + ", ";
+                if (string.IsNullOrEmpty(pQuantidade))
+                {
+                    query += " NULL, ";
+                }
+                else
+                {
+                    query += "   " + pQuantidade + ", ";
+                }
                 query += "   '" + pObs + "', ";
                 query += "   '" + pIndPre + "') ";
                 retorno = sqlce.insertSOF(query);
@@ -85,7 +92,14 @@ namespace SOEF_CLASS
                 string query = "";
                 query += " UPDATE [DOM_SOLIC_ORC_ESCOPO_10_4] ";
                 query += "   SET [MATERIAL_TAMPA] = '" + pMaterialTampa + "',  ";
-                query += "       [QUANTIDADE] = " + pQuantidade + ", ";
+                if (string.IsNullOrEmpty(pQuantidade))
+                {
+                    query += "       [QUANTIDADE] = NULL, ";
+                }
+                else
+                {
+                    query += "       [QUANTIDADE] = " + pQuantidade + ", ";
+                }                
                 query += "       [OBSERVACOES] = '" + pObs + "', ";
                 query += "       [IND_PREENCHIDO] = '" + pIndPre + "' ";
                 query += "  WHERE [NUMERO_SOLICITACAO] = " + Numero + " AND  [REVISAO_SOLICITACAO] = '" + Revisao + "'";

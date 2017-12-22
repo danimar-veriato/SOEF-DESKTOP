@@ -4724,6 +4724,7 @@
             this.btn10_4Excluir.Text = "Excluir";
             this.btn10_4Excluir.UseVisualStyleBackColor = true;
             this.btn10_4Excluir.Visible = false;
+            this.btn10_4Excluir.Click += new System.EventHandler(this.btn10_4Excluir_Click);
             // 
             // btn10_4Salvar
             // 

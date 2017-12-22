@@ -5691,7 +5691,6 @@ namespace ORCAMENTOS_FOCKINK
                 SOEF_CLASS.Escopo_10_2 Escopo10_2 = new SOEF_CLASS.Escopo_10_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 SOEF_CLASS.Escopo_Valor_Comum EscopoVlrComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 //Verifica se está cadastrando ou alterando o registro
-                //AcaoTela = "N";
                 if(AcaoTela == "N")
                 {
                     int retornoInsert = Escopo10_2.gravaEscopo_10_2(DadosAmbientais, TipoProduto, DescOutroProduto, InstalSilo, InstalArmazem, CapacidadeSilo, SuportePendulo, CapacidadeArmazem, QtdTransportador, Obs, IndPreenchido, CaracEspalhadorSil, CaracEspalhadorArm);
@@ -6055,7 +6054,6 @@ namespace ORCAMENTOS_FOCKINK
                     SOEF_CLASS.Escopo_Valor_Comum EscopoVlrComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
                     //Verifica se está cadastrando ou alterando o registro
 
-                    //AcaoTela = "N";
                     if (AcaoTela == "N")
                     {
                         int retornoInsert = Escopo10_3.gravaEscopo_10_3(TensaoTrifasica, Frequencia, OutraFrequencia, DadosAmbientais, Obs, "S");
@@ -6364,13 +6362,11 @@ namespace ORCAMENTOS_FOCKINK
                 txt10_4Comprimento.Enabled = false;
                 txt10_4Largura.Text = "";
                 txt10_4Largura.Enabled = false;
-               // dgv10_4Tampa.Enabled = false;
                 btn10_4GravaTampa.Enabled = false;
             }
             if(combo10_4MatTampa.SelectedIndex == 1)
             {
                 //Mostra opções 1
-                //label154.Visible = true;
                 txt10_4QtdTampa.Enabled = true;
                 txt10_4Qtd.Text = "";
                 txt10_4Qtd.Enabled = false;
@@ -6444,9 +6440,22 @@ namespace ORCAMENTOS_FOCKINK
                             DataTable dt1 = Escopo10_4.getEscopo_10_4();
                             if(dt1.Rows.Count > 0)
                             {
-                                //Verificar se tem registro na ORC_TAMPA_ESCOPO
-                                //Se tiver, apagar o registro antes de fazer o update
-                                RIEscopo = Escopo10_4.updateEscopo_10_4(matTampa, qtdTampas, obs, indPre);
+                                //Verificar se tem registro na ORC_TAMPA_ESCOPO, se tiver, apagar o registro antes de fazer o update
+                                DataTable dtRetorno = Escopo10_4.getTampaEscopo("10_4", null);
+                                if(dtRetorno.Rows.Count > 0)
+                                {
+                                    //Apaga o registro da tabela DOM_SOLIC_ORC_TAMPA_ESCOPO antes de atualizar o ESCOPO 10_4
+                                    int rDelete = Escopo10_4.deleteTampaEscopo(this.numero_solic.ToString(), this.NumRevisaoSolic, "10_4", null);
+                                    if(rDelete < 0)
+                                    {
+                                        MessageBox.Show("Não foi possível apagar o registro da DOM_SOLIC_ORC_TAMPA_ESCOPO. Tente novamente.");
+                                    }
+                                    else
+                                    {
+                                        //Faz a atualização do ESCOPO 10_4
+                                        RIEscopo = Escopo10_4.updateEscopo_10_4(matTampa, qtdTampas, obs, indPre);
+                                    }
+                                }
                             }
                             else
                             {
@@ -6506,7 +6515,7 @@ namespace ORCAMENTOS_FOCKINK
                             }
                             if (RIEscopo > 0)
                             {
-                                MessageBox.Show("Escopo 10.4 atualizado com sucesso!");
+                                MessageBox.Show("Escopo 10.4 gravado com sucesso!");
                                 listaEscopo10_4(this.numero_solic.ToString(), this.NumRevisaoSolic);
                             }
                             else
@@ -6516,10 +6525,7 @@ namespace ORCAMENTOS_FOCKINK
                         }
                     }
                 }                
-            }
-
-            
-
+            }   
 
             if (!string.IsNullOrEmpty(erros))
             {
@@ -6551,8 +6557,6 @@ namespace ORCAMENTOS_FOCKINK
         private void btn10_4GravaTampa_Click(object sender, EventArgs e)
         {
             string erros = "";
-
-
             if (string.IsNullOrEmpty(txt10_4Qtd.Text))
             {
                 erros += "O campo Quantidade deve ser preenchido.\n";
@@ -6583,9 +6587,7 @@ namespace ORCAMENTOS_FOCKINK
                 string TipoTampa = "";
                 string Comprimento = "";
                 string Largura = "";
-                int sequencia = 0;
-
-               
+                int sequencia = 0;               
                 Escopo = "10_4";
                 Qtd = txt10_4Qtd.Text;
                 if(combo10_4TipoTampa.SelectedIndex == 1)
@@ -6617,9 +6619,7 @@ namespace ORCAMENTOS_FOCKINK
                 catch (Exception)
                 {
                     throw;
-                }
-
-                
+                }               
             }
         }
 
@@ -6639,6 +6639,49 @@ namespace ORCAMENTOS_FOCKINK
                     MessageBox.Show("Registro apagado com sucesso!");
                 }
             }
+        }
+
+        private void btn10_4Excluir_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Deseja realmente excluir o Escopo 10_4 desta solicitação?", "SOEF", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                SOEF_CLASS.Escopo_10_4 Escopo10_4 = new SOEF_CLASS.Escopo_10_4(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                bool erros = false;
+                //Verifica se existe registro na DOM_SOLIC_ORC_TAMPA_ESCOPO
+                DataTable dtTampaEscopo = Escopo10_4.getTampaEscopo("10_4", null);
+                if(dtTampaEscopo.Rows.Count > 0)
+                {
+                    //Deleta os registros da TAMPA_ESCOPO
+                    int retTampaEscopo = Escopo10_4.deleteTampaEscopo(this.numero_solic.ToString(), this.NumRevisaoSolic, "10_4", null);
+                    if(retTampaEscopo <= 0)
+                    {
+                        erros = true;
+                    }
+                }
+                //Verifica se existe registro na DOM_ORC_ESCOPO_10_4
+                DataTable dtEscopo10_4 = Escopo10_4.getEscopo_10_4();
+                if(dtEscopo10_4.Rows.Count > 0)
+                {
+                    //Delete os registros do Escopo 10_4
+                    int retEscopo10_4 = Escopo10_4.deleteEscopo_10_4(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    if(retEscopo10_4 <= 0)
+                    {
+                        erros = true;
+                    }
+                }
+                if (erros)
+                {
+                    MessageBox.Show("Não foi possível excluir os dados deste escopo. Favor tentar novamente.");
+                }
+                else
+                {
+                    MessageBox.Show("Registro do Escopo 10_4 apagado com sucesso!");
+                    btn10_4Excluir.Visible = false;
+                    listaEscopo10_4(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                }
+            }
+
         }
     }
 }
