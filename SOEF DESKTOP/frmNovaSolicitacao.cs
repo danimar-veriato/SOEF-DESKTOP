@@ -2288,7 +2288,6 @@ namespace ORCAMENTOS_FOCKINK
         }
 
 
-
         /// <summary>
         /// Lista os dados do Escopo 20
         /// </summary>
