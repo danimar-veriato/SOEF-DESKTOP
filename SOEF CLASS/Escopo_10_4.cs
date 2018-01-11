@@ -191,10 +191,8 @@ namespace SOEF_CLASS
             sqlce.openConnection();
             try
             {
-
                 int retorno;
                 string query = "";
-
                 query += " INSERT INTO [DOM_SOLIC_ORC_TAMPA_ESCOPO] ";
                 query += "   ([NUMERO_SOLICITACAO], ";
                 query += "   [REVISAO_SOLICITACAO], ";

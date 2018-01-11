@@ -7030,5 +7030,101 @@ namespace ORCAMENTOS_FOCKINK
                 }
             }
         }
+
+        private void comboTensaoPrimaria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboTensaoPrimaria.SelectedIndex == 4)
+            {
+                txt5_1DescTensaoPrim.Enabled = true;
+            }
+            else
+            {
+                txt5_1DescTensaoPrim.Text = "";
+                txt5_1DescTensaoPrim.Enabled = false;
+            }
+        }
+
+        private void combo5_1TensaoSec_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(combo5_1TensaoSec.SelectedIndex == 4)
+            {
+                txt5_1DescTenSec.Enabled = true;
+            }
+            else
+            {
+                txt5_1DescTenSec.Text = "";
+                txt5_1DescTenSec.Enabled = false;
+            }
+        }
+
+        private void radio5_1InProtecaoS_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radio5_1InProtecaoS.Checked)
+            {
+                combo5_1Pintura.Visible = true;
+                label162.Visible = true;
+            }
+            else
+            {
+                combo5_1Pintura.Visible = false;
+                label162.Visible = false;
+            }
+        }
+
+        private void radio5_1InProtecaoN_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radio5_1InProtecaoN.Checked)
+            {
+                combo5_1Pintura.Visible = false;
+                label162.Visible = false;
+            }
+            else
+            {
+                combo5_1Pintura.Visible = true;
+                label162.Visible = true;
+            }
+        }
+
+        private void btn05_1Salvar_Click(object sender, EventArgs e)
+        {
+
+            string erros = "";
+            if(radio5_1PotInf.Checked)
+            {
+                //Potencia Informada
+            }
+        }
+
+        private void btn5_1GravaPotencia_Click(object sender, EventArgs e)
+        {
+            string erros = "";
+            if (string.IsNullOrEmpty(txt5_1Potencia.Text))
+            {
+                erros += "O campo Informe a Potência, deve ser preenchido.";
+            }
+            if (string.IsNullOrEmpty(txt5_1Qtd.Text))
+            {
+                erros += "O campo Quantidade, deve ser preenchido.";
+            }
+
+            if (!string.IsNullOrEmpty(erros))
+            {
+                MessageBox.Show("Painel de erros:\n" + erros);
+            }
+            else
+            {
+                string escopo = "05_1";
+                string sequencia = "";
+                string quantidade = "";
+                string potKva = "";
+                string fatorK = "";
+                string modelo = "";
+
+
+
+            }
+
+
+        }
     }
 }
