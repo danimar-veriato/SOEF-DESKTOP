@@ -5087,6 +5087,16 @@ namespace ORCAMENTOS_FOCKINK
             btn05Excluir.Visible = false;
         }
 
+        /// <summary>
+        /// Inicializa campos Escopo 05_1
+        /// </summary>
+        private void inicializaCamposE05_1()
+        {
+            radio5_1PotInf.Checked = true;
+            combo5_1TensaoPrimaria.SelectedIndex = 0;
+            combo5_1TensaoSec.SelectedIndex = 0;
+            
+        }
 
         /// <summary>
         /// Inicializa os campos do Escopo 10_1
@@ -7033,7 +7043,7 @@ namespace ORCAMENTOS_FOCKINK
 
         private void comboTensaoPrimaria_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(comboTensaoPrimaria.SelectedIndex == 4)
+            if(combo5_1TensaoPrimaria.SelectedIndex == 4)
             {
                 txt5_1DescTensaoPrim.Enabled = true;
             }
@@ -7087,12 +7097,133 @@ namespace ORCAMENTOS_FOCKINK
 
         private void btn05_1Salvar_Click(object sender, EventArgs e)
         {
-
             string erros = "";
-            if(radio5_1PotInf.Checked)
+            if(radio5_1PotFD.Checked)
             {
-                //Potencia Informada
+                if(!radio5_1ListaCargaS.Checked && !radio5_1ListaCargaN.Checked)
+                {
+                    erros += "O campo Tem Lista de Cargas, deve ser preenchido.\n";
+                }
             }
+            //Tensão Primária
+            if(combo5_1TensaoPrimaria.SelectedIndex == 0)
+            {
+                erros += "O campo Tensão Primária, deve ser preenchido.\n";
+            }
+            else if(combo5_1TensaoPrimaria.SelectedIndex == 4)
+            {
+                if (string.IsNullOrEmpty(txt5_1DescTensaoPrim.Text))
+                {
+                    erros += "O campo Descrição da Outra Tensão Primária, deve ser preenchido.\n";
+                }
+            }
+            //Tensão Secundária
+            if(combo5_1TensaoSec.SelectedIndex == 0)
+            {
+                erros += "O campo Tensão Secundária, deve ser preenchido.\n";
+            }
+            else if (combo5_1TensaoSec.SelectedIndex == 4)
+            {
+                if (string.IsNullOrEmpty(txt5_1DescTenSec.Text))
+                {
+                    erros += "O campo Descrição da Outra Tensão Secundária, deve ser preenchido.\n";
+                }
+            }
+            //Invólucro de Proteção
+            if(!radio5_1InProtecaoS.Checked && !radio5_1InProtecaoN.Checked)
+            {
+                erros += "O campo Invólucro de Proteção, deve ser preenchido.\n";
+            }
+            else if (radio5_1InProtecaoS.Checked)
+            {
+                if(combo5_1Pintura.SelectedIndex == 0)
+                {
+                    erros += "O campo Pinturas, deve ser preenchido.\n";
+                }
+            }
+
+            if (!string.IsNullOrEmpty(erros))
+            {
+                MessageBox.Show("Painel de erros:\n" + erros);
+            }
+            else
+            {
+                //Verifica se foi cadastrado a Potência
+                SOEF_CLASS.Escopo_05_1 Escopo_05_1 = new SOEF_CLASS.Escopo_05_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                DataTable retPotencia = Escopo_05_1.getPotenciaEscopo("05_1", null);
+                if (retPotencia.Rows.Count <= 0)
+                {
+                    MessageBox.Show("A Potência do transformador BT-BT foi definida como Informada, mas não foi associada nenhuma potência. Informe a lista de potências desejada.");
+                }
+                else
+                {
+                    string TensaoPrimaria;
+                    string TensaoSecundaria;
+                    string indPotenciaInformDef;
+                    string indListaCargas;
+                    string indInvolucroProtec;
+                    string obs;
+                    string indPre = "S";
+                    string tipoPinturaInvolucro;
+                    string descOutTensaoPrim;
+                    string descOutTensaoSecun;
+
+                    //Tensão Primária
+                    TensaoPrimaria = combo5_1TensaoPrimaria.SelectedIndex.ToString();
+                    if (combo5_1TensaoPrimaria.SelectedIndex == 4)
+                    {
+                        descOutTensaoPrim = txt5_1DescTensaoPrim.Text;
+                    }
+                    //Tensão Secundária
+                    TensaoSecundaria = combo5_1TensaoSec.SelectedIndex.ToString();
+                    if (combo5_1TensaoSec.SelectedIndex == 4)
+                    {
+                        descOutTensaoSecun = txt5_1DescTenSec.Text;
+                    }
+
+                    if (radio5_1PotInf.Checked)
+                    {
+                        indPotenciaInformDef = "I";
+                    }
+                    else if (radio5_1PotFD.Checked)
+                    {
+                        indPotenciaInformDef = "D";
+                        if (radio5_1ListaCargaS.Checked)
+                        {
+                            indListaCargas = "S";
+                        }
+                        else
+                        {
+                            indListaCargas = "N";
+                        }
+                    }
+                    if (radio5_1InProtecaoS.Checked)
+                    {
+                        indInvolucroProtec = "S";
+                        //Pintura
+                        if (combo01Pintura.SelectedIndex == 1)
+                        {
+                            tipoPinturaInvolucro = "R";
+                        }
+                        else if (combo01Pintura.SelectedIndex == 2)
+                        {
+                            tipoPinturaInvolucro = "M";
+                        }
+                        else if (combo01Pintura.SelectedIndex == 3)
+                        {
+                            tipoPinturaInvolucro = "E";
+                        }
+                    }
+                    else
+                    {
+                        indInvolucroProtec = "N";
+                    }
+                    obs = txt5_1Obs.Text;
+                }                         
+            }
+            
+
+
         }
 
         private void btn5_1GravaPotencia_Click(object sender, EventArgs e)
@@ -7100,11 +7231,11 @@ namespace ORCAMENTOS_FOCKINK
             string erros = "";
             if (string.IsNullOrEmpty(txt5_1Potencia.Text))
             {
-                erros += "O campo Informe a Potência, deve ser preenchido.";
+                erros += "O campo Informe a Potência, deve ser preenchido.\n";
             }
             if (string.IsNullOrEmpty(txt5_1Qtd.Text))
             {
-                erros += "O campo Quantidade, deve ser preenchido.";
+                erros += "O campo Quantidade, deve ser preenchido.\n";
             }
 
             if (!string.IsNullOrEmpty(erros))
@@ -7119,12 +7250,116 @@ namespace ORCAMENTOS_FOCKINK
                 string potKva = "";
                 string fatorK = "";
                 string modelo = "";
+                int retorno;
+                potKva = txt5_1Potencia.Text;
+                quantidade = txt5_1Qtd.Text;
 
-
+                SOEF_CLASS.Escopo_05_1 Escopo_05_1 = new SOEF_CLASS.Escopo_05_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                sequencia = Convert.ToString(Escopo_05_1.getSequencia(this.numero_solic.ToString(), this.NumRevisaoSolic, escopo) + 1);
+                retorno = Escopo_05_1.gravaPotencEscopo(escopo, sequencia, quantidade, potKva, null, null);
+                if(retorno > 0)
+                {
+                    MessageBox.Show("Registro inserido com sucesso!");
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro na inserção do registro.");
+                }
 
             }
 
 
+        }
+
+        private void tabE5_Selected(object sender, TabControlEventArgs e)
+        {
+            if(tabE5.SelectedTab.Name == "tabPE5_1")
+            {
+                SOEF_CLASS.Escopo_05_1 Escopo_05_1 = new SOEF_CLASS.Escopo_05_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                dgv5_1Potencias.DataSource = Escopo_05_1.getPotenciaEscopo("05_1", null);
+
+                inicializaCamposE05_1();
+
+            }
+        }
+
+        private void dgv5_1Potencias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
+            {
+                SOEF_CLASS.Escopo_05_1 Escopo_05_1 = new SOEF_CLASS.Escopo_05_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
+
+                int retorno = Escopo_05_1.deletePotencEscopo(dgv5_1Potencias.CurrentRow.Cells[1].Value.ToString(), dgv5_1Potencias.CurrentRow.Cells[2].Value.ToString(), "05_1", dgv5_1Potencias.CurrentRow.Cells[3].Value.ToString());
+                if (retorno > 0)
+                {
+                    dgv5_1Potencias.DataSource = Escopo_05_1.getPotenciaEscopo("05_1", null);
+                    MessageBox.Show("Registro apagado com sucesso!");
+                }
+            }
+        }
+
+        private void radio5_1PotFD_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radio5_1PotFD.Checked)
+            {
+                pListaCargas.Visible = true;
+
+                //Oculta campos
+                label155.Visible = false;
+                txt5_1Potencia.Visible = false;
+                label158.Visible = false;
+                txt5_1Qtd.Visible = false;
+                btn5_1GravaPotencia.Visible = false;
+                label164.Visible = false;
+                dgv5_1Potencias.Visible = false;
+                label156.Visible = false;
+            }
+            else
+            {
+                pListaCargas.Visible = false;
+
+                label155.Visible = true;
+                txt5_1Potencia.Visible = true;
+                label158.Visible = true;
+                txt5_1Qtd.Visible = true;
+                btn5_1GravaPotencia.Visible = true;
+                label164.Visible = true;
+                dgv5_1Potencias.Visible = true;
+                label156.Visible = true;
+            }
+        }
+
+        private void radio5_1PotInf_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radio5_1PotInf.Checked)
+            {
+                label155.Visible = true;
+                txt5_1Potencia.Visible = true;
+                label158.Visible = true;
+                txt5_1Qtd.Visible = true;
+                btn5_1GravaPotencia.Visible = true;
+                label164.Visible = true;
+                dgv5_1Potencias.Visible = true;
+                label156.Visible = true;
+
+                pListaCargas.Visible = false;
+            }
+            else
+            {
+                label155.Visible = false;
+                txt5_1Potencia.Visible = false;
+                label158.Visible = false;
+                txt5_1Qtd.Visible = false;
+                btn5_1GravaPotencia.Visible = false;
+                label164.Visible = false;
+                dgv5_1Potencias.Visible = false;
+                label156.Visible = false;
+
+                pListaCargas.Visible = true;
+            }
         }
     }
 }
