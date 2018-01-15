@@ -106,3 +106,36 @@ C:\Users\danim\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\obj\Debug\
 C:\Users\danim\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\obj\Debug\SOEF.application
 C:\Users\danim\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\obj\Debug\SOEF.exe
 C:\Users\danim\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\obj\Debug\SOEF.pdb
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\bin\Debug\SOEF.exe.config
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\bin\Debug\SOEF.exe.manifest
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\bin\Debug\SOEF.application
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\bin\Debug\SOEF.exe
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\bin\Debug\SOEF.pdb
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\bin\Debug\EntityFramework.dll
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\bin\Debug\EntityFramework.SqlServerCompact.dll
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\bin\Debug\SOEF CLASS.dll
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\bin\Debug\SOEF CLASS.pdb
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\bin\Debug\EntityFramework.xml
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\bin\Debug\EntityFramework.SqlServerCompact.xml
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\obj\Debug\SOEF PROJECT.csprojResolveAssemblyReference.cache
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\obj\Debug\ORCAMENTOS_FOCKINK.Form1.resources
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\obj\Debug\ORCAMENTOS_FOCKINK.frmBuscaClientes.resources
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\obj\Debug\ORCAMENTOS_FOCKINK.frmBuscaContatos.resources
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\obj\Debug\ORCAMENTOS_FOCKINK.frmBuscaObra.resources
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\obj\Debug\ORCAMENTOS_FOCKINK.frmBuscaSolicitacao.resources
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\obj\Debug\ORCAMENTOS_FOCKINK.frmEmpresa.resources
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\obj\Debug\ORCAMENTOS_FOCKINK.frmLogin.resources
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\obj\Debug\ORCAMENTOS_FOCKINK.frmMenu.resources
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\obj\Debug\ORCAMENTOS_FOCKINK.frmNovaSolicitacao.resources
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\obj\Debug\ORCAMENTOS_FOCKINK.Properties.Resources.resources
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\obj\Debug\SOEF PROJECT.csproj.GenerateResource.Cache
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\obj\Debug\SOEF PROJECT.csproj.CoreCompileInputs.cache
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\obj\Debug\SOEF.TrustInfo.xml
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\obj\Debug\SOEF.exe.manifest
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\obj\Debug\SOEF.application
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\obj\Debug\SOEF.exe
+C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\obj\Debug\SOEF.pdb

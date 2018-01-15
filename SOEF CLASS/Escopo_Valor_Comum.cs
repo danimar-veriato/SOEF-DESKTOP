@@ -473,7 +473,7 @@ namespace SOEF_CLASS
         /// <param name="numSolicitacao"></param>
         /// <param name="revSolicitacao"></param>
         /// <returns></returns>
-        public DataTable buscaEscopoValorComumE05_1(string pTipoPintura)
+        public DataTable buscaEscopoValorComumE05_1()
         {
             DataTable dt = new DataTable();
             SqlCE sqlce = new SqlCE();

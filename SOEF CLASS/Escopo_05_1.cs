@@ -203,6 +203,8 @@ namespace SOEF_CLASS
 
 
         //CRUD DOM_SOLIC_ORC_POTENC_ESCOPO
+
+            
         /// <summary>
         /// Insere o registro na Potenc Escopo
         /// </summary>
