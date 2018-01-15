@@ -21,6 +21,7 @@ namespace SOEF_CLASS
             Revisao = revSolicitacao;
         }
         
+
         //CRUD Escopo 05_1
 
         /// <summary>
@@ -70,7 +71,7 @@ namespace SOEF_CLASS
                 query += "   '" + pIndPre + "', ";
                 if (string.IsNullOrEmpty(pTipoPintura))
                 {
-                    query += " NULL ";
+                    query += " NULL, ";
                 }
                 else
                 {
@@ -121,7 +122,7 @@ namespace SOEF_CLASS
                 query += "       [IND_LISTA_CARGAS] = '" + pIndListaCargas + "', ";
                 query += "       [IND_INVOLUCRO_PROTEC] = '" + pIndInvolucro + "', ";
                 query += "       [OBSERVACOES] = '" + pObs + "', ";
-                query += "       [IND_PREENCHIDO] = '" + pIndPre + "' ";
+                query += "       [IND_PREENCHIDO] = '" + pIndPre + "', ";
                 if (string.IsNullOrEmpty(pTipoPintura))
                 {
                     query += "       [TIPO_PINTURA_INVOLUCRO] = NULL, ";
@@ -131,7 +132,7 @@ namespace SOEF_CLASS
                     query += "       [TIPO_PINTURA_INVOLUCRO] = '" + pTipoPintura + "', ";
                 }                
                 query += "       [DESC_OUTRA_TENSAO_PRIM] = '" + pDescOutraTensaoPri + "', ";
-                query += "       [DESC_OUTRA_TENSAO_SECUN] = '" + pDescOutraTensaoSec + "', ";
+                query += "       [DESC_OUTRA_TENSAO_SECUN] = '" + pDescOutraTensaoSec + "' ";
                 query += "  WHERE [NUMERO_SOLICITACAO] = " + Numero + " AND  [REVISAO_SOLICITACAO] = '" + Revisao + "'";
                 retorno = sqlce.insertSOF(query, null, null);
                 return retorno;

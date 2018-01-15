@@ -2369,7 +2369,8 @@ namespace ORCAMENTOS_FOCKINK
                     //Reseta os campos da tela
                     radio5_1PotInf.Checked = true;
                     combo5_1TensaoPrimaria.SelectedIndex = 0;
-                    combo5_1TensaoSec.SelectedIndex = 0;                    
+                    combo5_1TensaoSec.SelectedIndex = 0;
+                    combo5_1Pintura.SelectedIndex = 0;
                     txt5_1Obs.Text = "";
                     btn05_1Excluir.Visible = false;
                     tabNovaSolicitacao.SelectedTab.Name = "tabEscopo5"; //Conferir se o nome está correto
@@ -5192,7 +5193,7 @@ namespace ORCAMENTOS_FOCKINK
             radio5_1PotInf.Checked = true;
             combo5_1TensaoPrimaria.SelectedIndex = 0;
             combo5_1TensaoSec.SelectedIndex = 0;
-            
+            combo5_1Pintura.SelectedIndex = 0;            
         }
 
         /// <summary>
@@ -7169,6 +7170,7 @@ namespace ORCAMENTOS_FOCKINK
             if (radio5_1InProtecaoS.Checked)
             {
                 combo5_1Pintura.Visible = true;
+                combo5_1Pintura.Enabled = true;
                 label162.Visible = true;
             }
             else
@@ -7245,27 +7247,31 @@ namespace ORCAMENTOS_FOCKINK
             }
             else
             {
-                //Verifica se foi cadastrado a Potência
                 SOEF_CLASS.Escopo_05_1 Escopo_05_1 = new SOEF_CLASS.Escopo_05_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
-                DataTable retPotencia = Escopo_05_1.getPotenciaEscopo("05_1", null);
-                if (retPotencia.Rows.Count <= 0)
+                //Verifica se foi cadastrado a Potência caso seja obrigatória
+                if (radio5_1PotInf.Checked)
                 {
-                    MessageBox.Show("A Potência do transformador BT-BT foi definida como Informada, mas não foi associada nenhuma potência. Informe a lista de potências desejada.");
-                }
-                else
-                {
+                    DataTable retPotencia = Escopo_05_1.getPotenciaEscopo("05_1", null);
+                    if (retPotencia.Rows.Count <= 0)
+                    {
+                        MessageBox.Show("A Potência do transformador BT-BT foi definida como Informada, mas não foi associada nenhuma potência. Informe a lista de potências desejada.");
+                    }
+                }                
+              //  else
+              //  {
                     string TensaoPrimaria;
                     string TensaoSecundaria;
-                    string indPotenciaInformDef = "";
+                    string indPotenciaInformDef = null;
                     string indListaCargas;
                     string indInvolucroProtec;
                     string obs;
                     string indPre = "S";
-                    string tipoPinturaInvolucro = "";
-                    string descOutTensaoPrim = "";
-                    string descOutTensaoSecun = "";
+                    string tipoPinturaInvolucro = null;
+                    string descOutTensaoPrim = null;
+                    string descOutTensaoSecun = null;
                     bool sucesso = true;
 
+                    
                     //Tensão Primária
                     TensaoPrimaria = combo5_1TensaoPrimaria.SelectedIndex.ToString();
                     if (combo5_1TensaoPrimaria.SelectedIndex == 4)
@@ -7299,15 +7305,15 @@ namespace ORCAMENTOS_FOCKINK
                     {
                         indInvolucroProtec = "S";
                         //Pintura
-                        if (combo01Pintura.SelectedIndex == 1)
+                        if (combo5_1Pintura.SelectedIndex == 1)
                         {
                             tipoPinturaInvolucro = "R";
                         }
-                        else if (combo01Pintura.SelectedIndex == 2)
+                        else if (combo5_1Pintura.SelectedIndex == 2)
                         {
                             tipoPinturaInvolucro = "M";
                         }
-                        else if (combo01Pintura.SelectedIndex == 3)
+                        else if (combo5_1Pintura.SelectedIndex == 3)
                         {
                             tipoPinturaInvolucro = "E";
                         }
@@ -7335,10 +7341,10 @@ namespace ORCAMENTOS_FOCKINK
                     }
                     SOEF_CLASS.Escopo_Valor_Comum EscopoVlrComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
                     //Verifica se está cadastrando ou alterando o registro
-                    AcaoTela = "N"; //Para testar
-
+                  //  AcaoTela = "N"; //Para testar
                     if (AcaoTela == "N")
                     {
+                        MessageBox.Show("Pintura: " + tipoPinturaInvolucro);
                         int retornoInsert = Escopo_05_1.gravaEscopo_05_1(TensaoPrimaria, TensaoSecundaria, indPotenciaInformDef, indListaCargas, indInvolucroProtec, obs, indPre, tipoPinturaInvolucro, descOutTensaoPrim, descOutTensaoSecun);
                         if (retornoInsert > 0)
                         {
@@ -7420,7 +7426,7 @@ namespace ORCAMENTOS_FOCKINK
                     {
                         MessageBox.Show("Registro inserido/alterado com sucesso!");
                         btn05_1Excluir.Visible = true;
-                        listaEscopo10_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                        listaEscopo05_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
                         //Muda o STATUS da AçãoTela p/ EDIÇÂO
                         AcaoTela = "C";
                     }
@@ -7434,7 +7440,7 @@ namespace ORCAMENTOS_FOCKINK
 
 
 
-                }                         
+               // }                         
             }
             
 
@@ -7474,6 +7480,7 @@ namespace ORCAMENTOS_FOCKINK
                 retorno = Escopo_05_1.gravaPotencEscopo(escopo, sequencia, quantidade, potKva, null, null);
                 if(retorno > 0)
                 {
+                    dgv5_1Potencias.DataSource = Escopo_05_1.getPotenciaEscopo("05_1", null);
                     MessageBox.Show("Registro inserido com sucesso!");
                 }
                 else
@@ -7536,7 +7543,6 @@ namespace ORCAMENTOS_FOCKINK
                 e.RowIndex >= 0)
             {
                 SOEF_CLASS.Escopo_05_1 Escopo_05_1 = new SOEF_CLASS.Escopo_05_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
-
                 int retorno = Escopo_05_1.deletePotencEscopo(dgv5_1Potencias.CurrentRow.Cells[1].Value.ToString(), dgv5_1Potencias.CurrentRow.Cells[2].Value.ToString(), "05_1", dgv5_1Potencias.CurrentRow.Cells[3].Value.ToString());
                 if (retorno > 0)
                 {
@@ -7613,18 +7619,26 @@ namespace ORCAMENTOS_FOCKINK
             if (dialogResult == DialogResult.Yes)
             {
                 bool sucesso = true;
-                //Apaga os dados do Escopo 05_1
                 SOEF_CLASS.Escopo_05_1 Escopo05_1 = new SOEF_CLASS.Escopo_05_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                //Apaga os dados da tabela POTENC_ESCOPO
+                DataTable dtPotencia = Escopo05_1.getPotenciaEscopo("05_1", null);
+                if(dtPotencia.Rows.Count > 0)
+                {
+                    int retornoPotencia = Escopo05_1.deletePotencEscopo(this.numero_solic.ToString(), this.NumRevisaoSolic, "05_1", null);
+                    if(retornoPotencia <= 0)
+                    {
+                        sucesso = false;
+                    }
+                }
+                //Apaga os dados do Escopo 5_1
                 int retorno = Escopo05_1.deleteEscopo_05_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 if (retorno > 0)
                 {
                     //Verifica se o campo da Tabela VALOR_COMUM é requerido
-                    DataTable dtBusca = Escopo05_1.getEscopo_05_1();
-                    if(dtBusca.Rows[0]["IND_INVOLUCRO_PROTEC"].ToString() == "S")
+                    SOEF_CLASS.Escopo_Valor_Comum EValorComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    DataTable dtBusca = EValorComum.buscaEscopoValorComumE05_1();
+                    if(dtBusca.Rows.Count > 0)
                     {
-                        MessageBox.Show("Apaga valor comum!");
-                        //Apaga (define como NULL) os campos comuns da tabela VALOR_COMUM
-                        SOEF_CLASS.Escopo_Valor_Comum EValorComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
                         int retornoUpdate = 0;
                         retornoUpdate = EValorComum.deleteEscopo_Valor_Comum_E05_1();
                         if (retornoUpdate > 0)
@@ -7644,7 +7658,7 @@ namespace ORCAMENTOS_FOCKINK
                         {
                             sucesso = false;
                         }
-                    }                    
+                    }          
                 }
                 else
                 {
@@ -7654,6 +7668,7 @@ namespace ORCAMENTOS_FOCKINK
                 {
                     MessageBox.Show("Registro excluído com sucesso!");
                     btn05_1Excluir.Visible = false;
+                    dgv5_1Potencias.DataSource = Escopo05_1.getPotenciaEscopo("05_1", null);
                     listaEscopo05_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 }
                 else

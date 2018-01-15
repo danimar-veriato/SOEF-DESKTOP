@@ -7,14 +7,14 @@
     <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="SOEF.exe.manifest" size="9725">
+    <dependentAssembly dependencyType="install" codebase="SOEF.exe.manifest" size="10983">
       <assemblyIdentity name="SOEF.exe" version="1.0.0.39" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>5hiaWniknRNdSFjfzEBpNmAno7ut6HVif6iskM09iT4=</dsig:DigestValue>
+        <dsig:DigestValue>/SsYdJjX5Z1jybuAjIwRpfd2cDvP8owaqhZNFDRvv14=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

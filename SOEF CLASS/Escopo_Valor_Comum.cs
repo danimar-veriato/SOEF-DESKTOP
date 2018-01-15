@@ -422,7 +422,14 @@ namespace SOEF_CLASS
                 int retorno = 0;
                 string query = "";
                 query += " UPDATE [DOM_SOLIC_ORC_VALOR_COMUM] ";
-                query += " SET [TIPO_PINTURA] = '" + pTipoPintura + "', ";
+                if (string.IsNullOrEmpty(pTipoPintura))
+                {
+                    query += " SET [TIPO_PINTURA] = NULL ";
+                }
+                else
+                {
+                    query += " SET [TIPO_PINTURA] = '" + pTipoPintura + "' ";
+                }
                 query += " WHERE [NUMERO_SOLICITACAO] = " + Numero + "";
                 query += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
                 retorno = sqlce.insertSOF(query);
@@ -451,7 +458,7 @@ namespace SOEF_CLASS
                 int retorno = 0;
                 string query = "";
                 query += " UPDATE [DOM_SOLIC_ORC_VALOR_COMUM] ";
-                query += " SET [TIPO_PINTURA] = NULL, ";
+                query += " SET [TIPO_PINTURA] = NULL ";
                 query += " WHERE [NUMERO_SOLICITACAO] = " + Numero + "";
                 query += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
                 retorno = sqlce.insertSOF(query);
