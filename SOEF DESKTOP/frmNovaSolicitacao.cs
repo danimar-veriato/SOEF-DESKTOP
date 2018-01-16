@@ -7677,5 +7677,127 @@ namespace ORCAMENTOS_FOCKINK
                 }
             }
         }
+
+        private void btn5_2GravaPotencia_Click(object sender, EventArgs e)
+        {
+            string erros = "";
+            if (combo5_2Potencia.SelectedIndex == 0)
+            {
+                if (string.IsNullOrEmpty(txt5_2PotKva.Text))
+                {
+                    erros += "Selecione uma potência ou informe um valor para a Potência do transformador.\n";
+                }
+            }
+            if (string.IsNullOrEmpty(txt5_2Qtd.Text))
+            {
+                erros += "O campo Quantidade, deve ser preenchido.\n";
+            }
+
+
+        }
+
+        private void combo5_2Potencia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(combo5_2Potencia.SelectedIndex == 0)
+            {
+                txt5_2PotKva.Enabled = true;
+            }
+            else
+            {
+                txt5_2PotKva.Text = "";
+                txt5_2PotKva.Enabled = false;
+            }
+        }
+
+        private void radio5_2PotInf_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radio5_2PotInf.Checked)
+            {
+                //Oculta campos
+                label171.Visible = true;
+                combo5_2Potencia.Visible = true;
+                label169.Visible = true;
+                txt5_2Qtd.Visible = true;
+                label183.Visible = true;
+                txt5_2PotKva.Visible = true;
+                label184.Visible = true;
+                txt5_2FatorK.Visible = true;
+                label170.Visible = true;
+                btn5_2GravaPotencia.Visible = true;
+                label168.Visible = true;
+                dgv5_2Potencias.Visible = true;
+
+                //Oculta campo Lista Cargas
+                panel25.Visible = false;
+                radio5_2ListaCargasS.Checked = false;
+                radio5_2ListaCargasN.Checked = false;
+            }
+            else
+            {
+
+            }
+        }
+
+        private void combo5_2TensaoPrim_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(combo5_2TensaoPrim.SelectedIndex == 0)
+            {
+                txt5_2DescOutraTensaoPrim.Enabled = true;
+            }
+            else
+            {
+                txt5_2DescOutraTensaoPrim.Enabled = false;
+            }
+        }
+
+        private void combo5_2TensaoSec_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(combo5_2TensaoSec.SelectedIndex == 7)
+            {
+                txt5_2DescOutraTensaoSec.Enabled = true;
+            }
+            else
+            {
+                txt5_2DescOutraTensaoSec.Enabled = false;
+            }
+        }
+
+        private void radio5_2PotDef_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radio5_2PotDef.Checked)
+            {
+                //Mostra campos
+                label171.Visible = false;
+                combo5_2Potencia.Visible = false;
+                label169.Visible = false;
+                txt5_2Qtd.Visible = false;
+                label183.Visible = false;
+                txt5_2PotKva.Visible = false;
+                label184.Visible = false;
+                txt5_2FatorK.Visible = false;
+                label170.Visible = false;
+                btn5_2GravaPotencia.Visible = false;
+                label168.Visible = false;
+                dgv5_2Potencias.Visible = false;
+
+                //Oculta campo Lista Cargas
+                panel25.Visible = true;
+                radio5_2ListaCargasS.Checked = true;
+                radio5_2ListaCargasN.Checked = true;
+            }
+        }
+
+        private void combo5_2MeioIsol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(combo5_2MeioIsol.SelectedIndex == 1)
+            {
+                //Mostra buchas mt e bt
+            }
+
+            if(combo5_2MeioIsol.SelectedIndex == 3)
+            {
+                //mostra pintura
+            }
+        }
     }
 }

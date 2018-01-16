@@ -318,45 +318,60 @@
             this.btn05_1Excluir = new System.Windows.Forms.Button();
             this.btn05_1Salvar = new System.Windows.Forms.Button();
             this.tabPE5_2 = new System.Windows.Forms.TabPage();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.radio5_2ListaCargasN = new System.Windows.Forms.RadioButton();
+            this.radio5_2ListaCargasS = new System.Windows.Forms.RadioButton();
+            this.label190 = new System.Windows.Forms.Label();
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txt5_2DescOutraBuchaMT = new System.Windows.Forms.TextBox();
+            this.label189 = new System.Windows.Forms.Label();
+            this.txt5_2DescOutraBuchaBT = new System.Windows.Forms.TextBox();
+            this.label188 = new System.Windows.Forms.Label();
+            this.label187 = new System.Windows.Forms.Label();
+            this.combo5_2BuchaBT = new System.Windows.Forms.ComboBox();
+            this.combo5_2BuchaMT = new System.Windows.Forms.ComboBox();
+            this.label186 = new System.Windows.Forms.Label();
+            this.txt5_2DescOutroMeio = new System.Windows.Forms.TextBox();
+            this.label185 = new System.Windows.Forms.Label();
+            this.combo5_2MeioIsol = new System.Windows.Forms.ComboBox();
+            this.txt5_2FatorK = new System.Windows.Forms.TextBox();
             this.label184 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.combo5_2Potencia = new System.Windows.Forms.ComboBox();
             this.label183 = new System.Windows.Forms.Label();
             this.label168 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv5_2Potencias = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewButtonColumn3 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btn5_2GravaPotencia = new System.Windows.Forms.Button();
+            this.txt5_2Qtd = new System.Windows.Forms.TextBox();
             this.label169 = new System.Windows.Forms.Label();
             this.label170 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt5_2PotKva = new System.Windows.Forms.TextBox();
             this.label171 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.combo5_2Pintura = new System.Windows.Forms.ComboBox();
             this.label172 = new System.Windows.Forms.Label();
             this.label174 = new System.Windows.Forms.Label();
             this.label175 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.txt5_2DescOutraTensaoSec = new System.Windows.Forms.TextBox();
+            this.combo5_2TensaoSec = new System.Windows.Forms.ComboBox();
             this.label177 = new System.Windows.Forms.Label();
             this.label178 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.combo5_2TensaoPrim = new System.Windows.Forms.ComboBox();
+            this.txt5_2DescOutraTensaoPrim = new System.Windows.Forms.TextBox();
             this.label180 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txt5_2Obs = new System.Windows.Forms.TextBox();
             this.label181 = new System.Windows.Forms.Label();
             this.panel24 = new System.Windows.Forms.Panel();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radio5_2PotDef = new System.Windows.Forms.RadioButton();
+            this.radio5_2PotInf = new System.Windows.Forms.RadioButton();
             this.label182 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn5_2Excluir = new System.Windows.Forms.Button();
+            this.btn5_2Salvar = new System.Windows.Forms.Button();
             this.tabPE5_3 = new System.Windows.Forms.TabPage();
             this.panel20 = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -633,17 +648,6 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.label185 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.label186 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.label187 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label188 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label189 = new System.Windows.Forms.Label();
             this.tabNovaSolicitacao.SuspendLayout();
             this.tabCabecalho.SuspendLayout();
             this.tbCabecalho.SuspendLayout();
@@ -680,9 +684,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv5_1Potencias)).BeginInit();
             this.panel21.SuspendLayout();
             this.tabPE5_2.SuspendLayout();
+            this.panel25.SuspendLayout();
             this.panel19.SuspendLayout();
             this.panel22.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv5_2Potencias)).BeginInit();
             this.panel24.SuspendLayout();
             this.tabPE5_3.SuspendLayout();
             this.panel20.SuspendLayout();
@@ -3918,6 +3923,7 @@
             // tabPE5_2
             // 
             this.tabPE5_2.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPE5_2.Controls.Add(this.panel25);
             this.tabPE5_2.Controls.Add(this.panel19);
             this.tabPE5_2.Location = new System.Drawing.Point(4, 22);
             this.tabPE5_2.Name = "tabPE5_2";
@@ -3925,13 +3931,54 @@
             this.tabPE5_2.TabIndex = 3;
             this.tabPE5_2.Text = "05.2: Transformador BT-MT/MT-BT";
             // 
+            // panel25
+            // 
+            this.panel25.Controls.Add(this.radio5_2ListaCargasN);
+            this.panel25.Controls.Add(this.radio5_2ListaCargasS);
+            this.panel25.Controls.Add(this.label190);
+            this.panel25.Location = new System.Drawing.Point(615, 5);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(243, 30);
+            this.panel25.TabIndex = 59;
+            // 
+            // radio5_2ListaCargasN
+            // 
+            this.radio5_2ListaCargasN.AutoSize = true;
+            this.radio5_2ListaCargasN.Location = new System.Drawing.Point(180, 7);
+            this.radio5_2ListaCargasN.Name = "radio5_2ListaCargasN";
+            this.radio5_2ListaCargasN.Size = new System.Drawing.Size(45, 17);
+            this.radio5_2ListaCargasN.TabIndex = 51;
+            this.radio5_2ListaCargasN.TabStop = true;
+            this.radio5_2ListaCargasN.Text = "Não";
+            this.radio5_2ListaCargasN.UseVisualStyleBackColor = true;
+            // 
+            // radio5_2ListaCargasS
+            // 
+            this.radio5_2ListaCargasS.AutoSize = true;
+            this.radio5_2ListaCargasS.Location = new System.Drawing.Point(132, 7);
+            this.radio5_2ListaCargasS.Name = "radio5_2ListaCargasS";
+            this.radio5_2ListaCargasS.Size = new System.Drawing.Size(42, 17);
+            this.radio5_2ListaCargasS.TabIndex = 50;
+            this.radio5_2ListaCargasS.TabStop = true;
+            this.radio5_2ListaCargasS.Text = "Sim";
+            this.radio5_2ListaCargasS.UseVisualStyleBackColor = true;
+            // 
+            // label190
+            // 
+            this.label190.AutoSize = true;
+            this.label190.Location = new System.Drawing.Point(4, 8);
+            this.label190.Name = "label190";
+            this.label190.Size = new System.Drawing.Size(111, 13);
+            this.label190.TabIndex = 52;
+            this.label190.Text = "Tem Lista de Cargas*:";
+            // 
             // panel19
             // 
             this.panel19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel19.Controls.Add(this.panel22);
             this.panel19.Controls.Add(this.panel24);
-            this.panel19.Controls.Add(this.button2);
-            this.panel19.Controls.Add(this.button3);
+            this.panel19.Controls.Add(this.btn5_2Excluir);
+            this.panel19.Controls.Add(this.btn5_2Salvar);
             this.panel19.Location = new System.Drawing.Point(17, 3);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(977, 453);
@@ -3939,54 +3986,173 @@
             // 
             // panel22
             // 
-            this.panel22.Controls.Add(this.textBox9);
+            this.panel22.Controls.Add(this.txt5_2DescOutraBuchaMT);
             this.panel22.Controls.Add(this.label189);
-            this.panel22.Controls.Add(this.textBox8);
+            this.panel22.Controls.Add(this.txt5_2DescOutraBuchaBT);
             this.panel22.Controls.Add(this.label188);
             this.panel22.Controls.Add(this.label187);
-            this.panel22.Controls.Add(this.comboBox7);
-            this.panel22.Controls.Add(this.comboBox6);
+            this.panel22.Controls.Add(this.combo5_2BuchaBT);
+            this.panel22.Controls.Add(this.combo5_2BuchaMT);
             this.panel22.Controls.Add(this.label186);
-            this.panel22.Controls.Add(this.textBox7);
+            this.panel22.Controls.Add(this.txt5_2DescOutroMeio);
             this.panel22.Controls.Add(this.label185);
-            this.panel22.Controls.Add(this.comboBox5);
-            this.panel22.Controls.Add(this.textBox6);
+            this.panel22.Controls.Add(this.combo5_2MeioIsol);
+            this.panel22.Controls.Add(this.txt5_2FatorK);
             this.panel22.Controls.Add(this.label184);
-            this.panel22.Controls.Add(this.comboBox4);
+            this.panel22.Controls.Add(this.combo5_2Potencia);
             this.panel22.Controls.Add(this.label183);
             this.panel22.Controls.Add(this.label168);
-            this.panel22.Controls.Add(this.dataGridView1);
-            this.panel22.Controls.Add(this.button1);
-            this.panel22.Controls.Add(this.textBox1);
+            this.panel22.Controls.Add(this.dgv5_2Potencias);
+            this.panel22.Controls.Add(this.btn5_2GravaPotencia);
+            this.panel22.Controls.Add(this.txt5_2Qtd);
             this.panel22.Controls.Add(this.label169);
             this.panel22.Controls.Add(this.label170);
-            this.panel22.Controls.Add(this.textBox2);
+            this.panel22.Controls.Add(this.txt5_2PotKva);
             this.panel22.Controls.Add(this.label171);
-            this.panel22.Controls.Add(this.comboBox1);
+            this.panel22.Controls.Add(this.combo5_2Pintura);
             this.panel22.Controls.Add(this.label172);
             this.panel22.Controls.Add(this.label174);
             this.panel22.Controls.Add(this.label175);
-            this.panel22.Controls.Add(this.textBox3);
-            this.panel22.Controls.Add(this.comboBox2);
+            this.panel22.Controls.Add(this.txt5_2DescOutraTensaoSec);
+            this.panel22.Controls.Add(this.combo5_2TensaoSec);
             this.panel22.Controls.Add(this.label177);
             this.panel22.Controls.Add(this.label178);
-            this.panel22.Controls.Add(this.comboBox3);
-            this.panel22.Controls.Add(this.textBox4);
+            this.panel22.Controls.Add(this.combo5_2TensaoPrim);
+            this.panel22.Controls.Add(this.txt5_2DescOutraTensaoPrim);
             this.panel22.Controls.Add(this.label180);
-            this.panel22.Controls.Add(this.textBox5);
+            this.panel22.Controls.Add(this.txt5_2Obs);
             this.panel22.Controls.Add(this.label181);
             this.panel22.Location = new System.Drawing.Point(5, 32);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(967, 390);
             this.panel22.TabIndex = 57;
             // 
-            // textBox6
+            // txt5_2DescOutraBuchaMT
             // 
-            this.textBox6.Location = new System.Drawing.Point(366, 271);
-            this.textBox6.MaxLength = 10;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(71, 20);
-            this.textBox6.TabIndex = 94;
+            this.txt5_2DescOutraBuchaMT.Enabled = false;
+            this.txt5_2DescOutraBuchaMT.Location = new System.Drawing.Point(793, 117);
+            this.txt5_2DescOutraBuchaMT.MaxLength = 200;
+            this.txt5_2DescOutraBuchaMT.Name = "txt5_2DescOutraBuchaMT";
+            this.txt5_2DescOutraBuchaMT.Size = new System.Drawing.Size(169, 20);
+            this.txt5_2DescOutraBuchaMT.TabIndex = 106;
+            // 
+            // label189
+            // 
+            this.label189.AutoSize = true;
+            this.label189.Location = new System.Drawing.Point(632, 120);
+            this.label189.Name = "label189";
+            this.label189.Size = new System.Drawing.Size(155, 13);
+            this.label189.TabIndex = 105;
+            this.label189.Text = "Descrição da Outra Bucha MT:";
+            // 
+            // txt5_2DescOutraBuchaBT
+            // 
+            this.txt5_2DescOutraBuchaBT.Enabled = false;
+            this.txt5_2DescOutraBuchaBT.Location = new System.Drawing.Point(793, 147);
+            this.txt5_2DescOutraBuchaBT.MaxLength = 200;
+            this.txt5_2DescOutraBuchaBT.Name = "txt5_2DescOutraBuchaBT";
+            this.txt5_2DescOutraBuchaBT.Size = new System.Drawing.Size(169, 20);
+            this.txt5_2DescOutraBuchaBT.TabIndex = 104;
+            // 
+            // label188
+            // 
+            this.label188.AutoSize = true;
+            this.label188.Location = new System.Drawing.Point(632, 150);
+            this.label188.Name = "label188";
+            this.label188.Size = new System.Drawing.Size(153, 13);
+            this.label188.TabIndex = 103;
+            this.label188.Text = "Descrição da Outra Bucha BT:";
+            // 
+            // label187
+            // 
+            this.label187.AutoSize = true;
+            this.label187.Location = new System.Drawing.Point(2, 154);
+            this.label187.Name = "label187";
+            this.label187.Size = new System.Drawing.Size(119, 13);
+            this.label187.TabIndex = 102;
+            this.label187.Text = "Buchas BT Devem Ser:";
+            // 
+            // combo5_2BuchaBT
+            // 
+            this.combo5_2BuchaBT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo5_2BuchaBT.FormattingEnabled = true;
+            this.combo5_2BuchaBT.Items.AddRange(new object[] {
+            "Selecione",
+            "Na lateral com flange",
+            "Na lateral sem flange",
+            "Na tampa sem flange",
+            "Com caixa de cabos",
+            "Outra"});
+            this.combo5_2BuchaBT.Location = new System.Drawing.Point(128, 151);
+            this.combo5_2BuchaBT.Name = "combo5_2BuchaBT";
+            this.combo5_2BuchaBT.Size = new System.Drawing.Size(140, 21);
+            this.combo5_2BuchaBT.TabIndex = 101;
+            // 
+            // combo5_2BuchaMT
+            // 
+            this.combo5_2BuchaMT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo5_2BuchaMT.FormattingEnabled = true;
+            this.combo5_2BuchaMT.Items.AddRange(new object[] {
+            "Selecione",
+            "Na lateral flangeado",
+            "Na tampa sem flange",
+            "Com caixa de cabos",
+            "Outra"});
+            this.combo5_2BuchaMT.Location = new System.Drawing.Point(128, 116);
+            this.combo5_2BuchaMT.Name = "combo5_2BuchaMT";
+            this.combo5_2BuchaMT.Size = new System.Drawing.Size(140, 21);
+            this.combo5_2BuchaMT.TabIndex = 99;
+            // 
+            // label186
+            // 
+            this.label186.AutoSize = true;
+            this.label186.Location = new System.Drawing.Point(1, 119);
+            this.label186.Name = "label186";
+            this.label186.Size = new System.Drawing.Size(121, 13);
+            this.label186.TabIndex = 98;
+            this.label186.Text = "Buchas MT Devem Ser:";
+            // 
+            // txt5_2DescOutroMeio
+            // 
+            this.txt5_2DescOutroMeio.Enabled = false;
+            this.txt5_2DescOutroMeio.Location = new System.Drawing.Point(795, 81);
+            this.txt5_2DescOutroMeio.MaxLength = 200;
+            this.txt5_2DescOutroMeio.Name = "txt5_2DescOutroMeio";
+            this.txt5_2DescOutroMeio.Size = new System.Drawing.Size(169, 20);
+            this.txt5_2DescOutroMeio.TabIndex = 97;
+            // 
+            // label185
+            // 
+            this.label185.AutoSize = true;
+            this.label185.Location = new System.Drawing.Point(620, 85);
+            this.label185.Name = "label185";
+            this.label185.Size = new System.Drawing.Size(172, 13);
+            this.label185.TabIndex = 96;
+            this.label185.Text = "Descrição do Outro Meio Isolante*:";
+            // 
+            // combo5_2MeioIsol
+            // 
+            this.combo5_2MeioIsol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo5_2MeioIsol.FormattingEnabled = true;
+            this.combo5_2MeioIsol.Items.AddRange(new object[] {
+            "Selecione",
+            "Óleo",
+            "Seco IP00",
+            "Seco IP21",
+            "Outro"});
+            this.combo5_2MeioIsol.Location = new System.Drawing.Point(128, 80);
+            this.combo5_2MeioIsol.Name = "combo5_2MeioIsol";
+            this.combo5_2MeioIsol.Size = new System.Drawing.Size(140, 21);
+            this.combo5_2MeioIsol.TabIndex = 95;
+            this.combo5_2MeioIsol.SelectedIndexChanged += new System.EventHandler(this.combo5_2MeioIsol_SelectedIndexChanged);
+            // 
+            // txt5_2FatorK
+            // 
+            this.txt5_2FatorK.Location = new System.Drawing.Point(366, 271);
+            this.txt5_2FatorK.MaxLength = 10;
+            this.txt5_2FatorK.Name = "txt5_2FatorK";
+            this.txt5_2FatorK.Size = new System.Drawing.Size(71, 20);
+            this.txt5_2FatorK.TabIndex = 94;
             // 
             // label184
             // 
@@ -3997,20 +4163,34 @@
             this.label184.TabIndex = 93;
             this.label184.Text = "Fator K:";
             // 
-            // comboBox4
+            // combo5_2Potencia
             // 
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.combo5_2Potencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo5_2Potencia.FormattingEnabled = true;
+            this.combo5_2Potencia.Items.AddRange(new object[] {
             "Selecione",
-            "220V",
-            "380V",
-            "440V",
-            "Outra"});
-            this.comboBox4.Location = new System.Drawing.Point(122, 232);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(135, 21);
-            this.comboBox4.TabIndex = 92;
+            "30",
+            "45",
+            "75",
+            "112.5",
+            "150",
+            "225",
+            "300",
+            "500",
+            "750",
+            "1000",
+            "1500",
+            "2000",
+            "2500",
+            "3000",
+            "3750",
+            "4000",
+            "5000"});
+            this.combo5_2Potencia.Location = new System.Drawing.Point(122, 232);
+            this.combo5_2Potencia.Name = "combo5_2Potencia";
+            this.combo5_2Potencia.Size = new System.Drawing.Size(135, 21);
+            this.combo5_2Potencia.TabIndex = 92;
+            this.combo5_2Potencia.SelectedIndexChanged += new System.EventHandler(this.combo5_2Potencia_SelectedIndexChanged);
             // 
             // label183
             // 
@@ -4032,22 +4212,22 @@
             this.label168.TabIndex = 90;
             this.label168.Text = "Potências associadas ao Trafo BT-MT/MT-BT:";
             // 
-            // dataGridView1
+            // dgv5_2Potencias
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv5_2Potencias.AllowUserToAddRows = false;
+            this.dgv5_2Potencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv5_2Potencias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn13,
             this.dataGridViewTextBoxColumn15,
             this.dataGridViewTextBoxColumn16,
             this.dataGridViewTextBoxColumn17,
             this.dataGridViewTextBoxColumn18,
             this.dataGridViewButtonColumn3});
-            this.dataGridView1.Location = new System.Drawing.Point(495, 267);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(456, 119);
-            this.dataGridView1.TabIndex = 89;
+            this.dgv5_2Potencias.Location = new System.Drawing.Point(495, 267);
+            this.dgv5_2Potencias.MultiSelect = false;
+            this.dgv5_2Potencias.Name = "dgv5_2Potencias";
+            this.dgv5_2Potencias.Size = new System.Drawing.Size(456, 119);
+            this.dgv5_2Potencias.TabIndex = 89;
             // 
             // dataGridViewTextBoxColumn13
             // 
@@ -4096,22 +4276,23 @@
             this.dataGridViewButtonColumn3.UseColumnTextForButtonValue = true;
             this.dataGridViewButtonColumn3.Width = 85;
             // 
-            // button1
+            // btn5_2GravaPotencia
             // 
-            this.button1.Location = new System.Drawing.Point(496, 231);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 31);
-            this.button1.TabIndex = 88;
-            this.button1.Text = "Gravar Potência";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn5_2GravaPotencia.Location = new System.Drawing.Point(496, 231);
+            this.btn5_2GravaPotencia.Name = "btn5_2GravaPotencia";
+            this.btn5_2GravaPotencia.Size = new System.Drawing.Size(94, 31);
+            this.btn5_2GravaPotencia.TabIndex = 88;
+            this.btn5_2GravaPotencia.Text = "Gravar Potência";
+            this.btn5_2GravaPotencia.UseVisualStyleBackColor = true;
+            this.btn5_2GravaPotencia.Click += new System.EventHandler(this.btn5_2GravaPotencia_Click);
             // 
-            // textBox1
+            // txt5_2Qtd
             // 
-            this.textBox1.Location = new System.Drawing.Point(122, 268);
-            this.textBox1.MaxLength = 10;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(71, 20);
-            this.textBox1.TabIndex = 87;
+            this.txt5_2Qtd.Location = new System.Drawing.Point(122, 268);
+            this.txt5_2Qtd.MaxLength = 10;
+            this.txt5_2Qtd.Name = "txt5_2Qtd";
+            this.txt5_2Qtd.Size = new System.Drawing.Size(71, 20);
+            this.txt5_2Qtd.TabIndex = 87;
             // 
             // label169
             // 
@@ -4132,13 +4313,13 @@
             this.label170.TabIndex = 85;
             this.label170.Text = "kVA";
             // 
-            // textBox2
+            // txt5_2PotKva
             // 
-            this.textBox2.Location = new System.Drawing.Point(366, 233);
-            this.textBox2.MaxLength = 10;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(71, 20);
-            this.textBox2.TabIndex = 84;
+            this.txt5_2PotKva.Location = new System.Drawing.Point(366, 233);
+            this.txt5_2PotKva.MaxLength = 10;
+            this.txt5_2PotKva.Name = "txt5_2PotKva";
+            this.txt5_2PotKva.Size = new System.Drawing.Size(71, 20);
+            this.txt5_2PotKva.TabIndex = 84;
             // 
             // label171
             // 
@@ -4149,20 +4330,20 @@
             this.label171.TabIndex = 83;
             this.label171.Text = "Selecione a potência*:";
             // 
-            // comboBox1
+            // combo5_2Pintura
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.combo5_2Pintura.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo5_2Pintura.FormattingEnabled = true;
+            this.combo5_2Pintura.Items.AddRange(new object[] {
             "Selecione...",
             "Bege RAL 7032 - Padrão",
             "Munsell N-6.5",
             "Especial"});
-            this.comboBox1.Location = new System.Drawing.Point(427, 80);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(168, 21);
-            this.comboBox1.TabIndex = 72;
-            this.comboBox1.Visible = false;
+            this.combo5_2Pintura.Location = new System.Drawing.Point(427, 80);
+            this.combo5_2Pintura.Name = "combo5_2Pintura";
+            this.combo5_2Pintura.Size = new System.Drawing.Size(168, 21);
+            this.combo5_2Pintura.TabIndex = 72;
+            this.combo5_2Pintura.Visible = false;
             // 
             // label172
             // 
@@ -4194,29 +4375,33 @@
             this.label175.TabIndex = 68;
             this.label175.Text = "Descrição da Outra Tensão Secundária*:";
             // 
-            // textBox3
+            // txt5_2DescOutraTensaoSec
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(794, 47);
-            this.textBox3.MaxLength = 200;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(169, 20);
-            this.textBox3.TabIndex = 67;
+            this.txt5_2DescOutraTensaoSec.Enabled = false;
+            this.txt5_2DescOutraTensaoSec.Location = new System.Drawing.Point(794, 47);
+            this.txt5_2DescOutraTensaoSec.MaxLength = 200;
+            this.txt5_2DescOutraTensaoSec.Name = "txt5_2DescOutraTensaoSec";
+            this.txt5_2DescOutraTensaoSec.Size = new System.Drawing.Size(169, 20);
+            this.txt5_2DescOutraTensaoSec.TabIndex = 67;
             // 
-            // comboBox2
+            // combo5_2TensaoSec
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.combo5_2TensaoSec.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo5_2TensaoSec.FormattingEnabled = true;
+            this.combo5_2TensaoSec.Items.AddRange(new object[] {
             "Selecione",
             "220V",
             "380V",
             "440V",
+            "13,8kV",
+            "23,1kV",
+            "34,5kV",
             "Outra"});
-            this.comboBox2.Location = new System.Drawing.Point(128, 44);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(140, 21);
-            this.comboBox2.TabIndex = 66;
+            this.combo5_2TensaoSec.Location = new System.Drawing.Point(128, 44);
+            this.combo5_2TensaoSec.Name = "combo5_2TensaoSec";
+            this.combo5_2TensaoSec.Size = new System.Drawing.Size(140, 21);
+            this.combo5_2TensaoSec.TabIndex = 66;
+            this.combo5_2TensaoSec.SelectedIndexChanged += new System.EventHandler(this.combo5_2TensaoSec_SelectedIndexChanged);
             // 
             // label177
             // 
@@ -4236,29 +4421,32 @@
             this.label178.TabIndex = 64;
             this.label178.Text = "Descrição da Outra Tensão Primária*:";
             // 
-            // comboBox3
+            // combo5_2TensaoPrim
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.combo5_2TensaoPrim.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo5_2TensaoPrim.FormattingEnabled = true;
+            this.combo5_2TensaoPrim.Items.AddRange(new object[] {
             "Selecione",
             "220V",
             "380V",
             "440V",
+            "13,8kV",
+            "23,1kV",
+            "34,5kV",
             "Outra"});
-            this.comboBox3.Location = new System.Drawing.Point(128, 11);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(140, 21);
-            this.comboBox3.TabIndex = 63;
+            this.combo5_2TensaoPrim.Location = new System.Drawing.Point(128, 11);
+            this.combo5_2TensaoPrim.Name = "combo5_2TensaoPrim";
+            this.combo5_2TensaoPrim.Size = new System.Drawing.Size(140, 21);
+            this.combo5_2TensaoPrim.TabIndex = 63;
+            this.combo5_2TensaoPrim.SelectedIndexChanged += new System.EventHandler(this.combo5_2TensaoPrim_SelectedIndexChanged);
             // 
-            // textBox4
+            // txt5_2DescOutraTensaoPrim
             // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(793, 11);
-            this.textBox4.MaxLength = 200;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(169, 20);
-            this.textBox4.TabIndex = 32;
+            this.txt5_2DescOutraTensaoPrim.Location = new System.Drawing.Point(793, 11);
+            this.txt5_2DescOutraTensaoPrim.MaxLength = 200;
+            this.txt5_2DescOutraTensaoPrim.Name = "txt5_2DescOutraTensaoPrim";
+            this.txt5_2DescOutraTensaoPrim.Size = new System.Drawing.Size(169, 20);
+            this.txt5_2DescOutraTensaoPrim.TabIndex = 32;
             // 
             // label180
             // 
@@ -4269,14 +4457,14 @@
             this.label180.TabIndex = 37;
             this.label180.Text = "Tensão Primária*:";
             // 
-            // textBox5
+            // txt5_2Obs
             // 
-            this.textBox5.Location = new System.Drawing.Point(122, 184);
-            this.textBox5.MaxLength = 2000;
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(840, 35);
-            this.textBox5.TabIndex = 42;
+            this.txt5_2Obs.Location = new System.Drawing.Point(122, 184);
+            this.txt5_2Obs.MaxLength = 2000;
+            this.txt5_2Obs.Multiline = true;
+            this.txt5_2Obs.Name = "txt5_2Obs";
+            this.txt5_2Obs.Size = new System.Drawing.Size(840, 35);
+            this.txt5_2Obs.TabIndex = 42;
             // 
             // label181
             // 
@@ -4289,35 +4477,37 @@
             // 
             // panel24
             // 
-            this.panel24.Controls.Add(this.radioButton3);
-            this.panel24.Controls.Add(this.radioButton4);
+            this.panel24.Controls.Add(this.radio5_2PotDef);
+            this.panel24.Controls.Add(this.radio5_2PotInf);
             this.panel24.Controls.Add(this.label182);
             this.panel24.Location = new System.Drawing.Point(23, 2);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(294, 28);
             this.panel24.TabIndex = 55;
             // 
-            // radioButton3
+            // radio5_2PotDef
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(157, 5);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(97, 17);
-            this.radioButton3.TabIndex = 51;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Fockink Define";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radio5_2PotDef.AutoSize = true;
+            this.radio5_2PotDef.Location = new System.Drawing.Point(157, 5);
+            this.radio5_2PotDef.Name = "radio5_2PotDef";
+            this.radio5_2PotDef.Size = new System.Drawing.Size(97, 17);
+            this.radio5_2PotDef.TabIndex = 51;
+            this.radio5_2PotDef.TabStop = true;
+            this.radio5_2PotDef.Text = "Fockink Define";
+            this.radio5_2PotDef.UseVisualStyleBackColor = true;
+            this.radio5_2PotDef.CheckedChanged += new System.EventHandler(this.radio5_2PotDef_CheckedChanged);
             // 
-            // radioButton4
+            // radio5_2PotInf
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(74, 6);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(72, 17);
-            this.radioButton4.TabIndex = 50;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Informada";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.radio5_2PotInf.AutoSize = true;
+            this.radio5_2PotInf.Location = new System.Drawing.Point(74, 6);
+            this.radio5_2PotInf.Name = "radio5_2PotInf";
+            this.radio5_2PotInf.Size = new System.Drawing.Size(72, 17);
+            this.radio5_2PotInf.TabIndex = 50;
+            this.radio5_2PotInf.TabStop = true;
+            this.radio5_2PotInf.Text = "Informada";
+            this.radio5_2PotInf.UseVisualStyleBackColor = true;
+            this.radio5_2PotInf.CheckedChanged += new System.EventHandler(this.radio5_2PotInf_CheckedChanged);
             // 
             // label182
             // 
@@ -4328,24 +4518,24 @@
             this.label182.TabIndex = 52;
             this.label182.Text = "Potência*:";
             // 
-            // button2
+            // btn5_2Excluir
             // 
-            this.button2.Location = new System.Drawing.Point(486, 426);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 44;
-            this.button2.Text = "Excluir";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
+            this.btn5_2Excluir.Location = new System.Drawing.Point(486, 426);
+            this.btn5_2Excluir.Name = "btn5_2Excluir";
+            this.btn5_2Excluir.Size = new System.Drawing.Size(75, 23);
+            this.btn5_2Excluir.TabIndex = 44;
+            this.btn5_2Excluir.Text = "Excluir";
+            this.btn5_2Excluir.UseVisualStyleBackColor = true;
+            this.btn5_2Excluir.Visible = false;
             // 
-            // button3
+            // btn5_2Salvar
             // 
-            this.button3.Location = new System.Drawing.Point(378, 426);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 43;
-            this.button3.Text = "Salvar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn5_2Salvar.Location = new System.Drawing.Point(378, 426);
+            this.btn5_2Salvar.Name = "btn5_2Salvar";
+            this.btn5_2Salvar.Size = new System.Drawing.Size(75, 23);
+            this.btn5_2Salvar.TabIndex = 43;
+            this.btn5_2Salvar.Text = "Salvar";
+            this.btn5_2Salvar.UseVisualStyleBackColor = true;
             // 
             // tabPE5_3
             // 
@@ -4353,7 +4543,7 @@
             this.tabPE5_3.Controls.Add(this.panel20);
             this.tabPE5_3.Location = new System.Drawing.Point(4, 22);
             this.tabPE5_3.Name = "tabPE5_3";
-            this.tabPE5_3.Size = new System.Drawing.Size(1039, 468);
+            this.tabPE5_3.Size = new System.Drawing.Size(993, 468);
             this.tabPE5_3.TabIndex = 4;
             this.tabPE5_3.Text = "05.3: Serviços em Transformadores";
             // 
@@ -7354,123 +7544,6 @@
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // comboBox5
-            // 
-            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "Selecione",
-            "220V",
-            "380V",
-            "440V",
-            "Outra"});
-            this.comboBox5.Location = new System.Drawing.Point(128, 80);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(140, 21);
-            this.comboBox5.TabIndex = 95;
-            // 
-            // label185
-            // 
-            this.label185.AutoSize = true;
-            this.label185.Location = new System.Drawing.Point(620, 85);
-            this.label185.Name = "label185";
-            this.label185.Size = new System.Drawing.Size(172, 13);
-            this.label185.TabIndex = 96;
-            this.label185.Text = "Descrição do Outro Meio Isolante*:";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Enabled = false;
-            this.textBox7.Location = new System.Drawing.Point(795, 81);
-            this.textBox7.MaxLength = 200;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(169, 20);
-            this.textBox7.TabIndex = 97;
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
-            "Selecione",
-            "220V",
-            "380V",
-            "440V",
-            "Outra"});
-            this.comboBox6.Location = new System.Drawing.Point(128, 116);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(140, 21);
-            this.comboBox6.TabIndex = 99;
-            // 
-            // label186
-            // 
-            this.label186.AutoSize = true;
-            this.label186.Location = new System.Drawing.Point(1, 119);
-            this.label186.Name = "label186";
-            this.label186.Size = new System.Drawing.Size(121, 13);
-            this.label186.TabIndex = 98;
-            this.label186.Text = "Buchas MT Devem Ser:";
-            // 
-            // comboBox7
-            // 
-            this.comboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Items.AddRange(new object[] {
-            "Selecione",
-            "220V",
-            "380V",
-            "440V",
-            "Outra"});
-            this.comboBox7.Location = new System.Drawing.Point(128, 151);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(140, 21);
-            this.comboBox7.TabIndex = 101;
-            // 
-            // label187
-            // 
-            this.label187.AutoSize = true;
-            this.label187.Location = new System.Drawing.Point(2, 154);
-            this.label187.Name = "label187";
-            this.label187.Size = new System.Drawing.Size(119, 13);
-            this.label187.TabIndex = 102;
-            this.label187.Text = "Buchas BT Devem Ser:";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Enabled = false;
-            this.textBox8.Location = new System.Drawing.Point(793, 147);
-            this.textBox8.MaxLength = 200;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(169, 20);
-            this.textBox8.TabIndex = 104;
-            // 
-            // label188
-            // 
-            this.label188.AutoSize = true;
-            this.label188.Location = new System.Drawing.Point(632, 150);
-            this.label188.Name = "label188";
-            this.label188.Size = new System.Drawing.Size(153, 13);
-            this.label188.TabIndex = 103;
-            this.label188.Text = "Descrição da Outra Bucha BT:";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Enabled = false;
-            this.textBox9.Location = new System.Drawing.Point(793, 117);
-            this.textBox9.MaxLength = 200;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(169, 20);
-            this.textBox9.TabIndex = 106;
-            // 
-            // label189
-            // 
-            this.label189.AutoSize = true;
-            this.label189.Location = new System.Drawing.Point(632, 120);
-            this.label189.Name = "label189";
-            this.label189.Size = new System.Drawing.Size(155, 13);
-            this.label189.TabIndex = 105;
-            this.label189.Text = "Descrição da Outra Bucha MT:";
-            // 
             // frmNovaSolicitacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -7543,10 +7616,12 @@
             this.panel21.ResumeLayout(false);
             this.panel21.PerformLayout();
             this.tabPE5_2.ResumeLayout(false);
+            this.panel25.ResumeLayout(false);
+            this.panel25.PerformLayout();
             this.panel19.ResumeLayout(false);
             this.panel22.ResumeLayout(false);
             this.panel22.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv5_2Potencias)).EndInit();
             this.panel24.ResumeLayout(false);
             this.panel24.PerformLayout();
             this.tabPE5_3.ResumeLayout(false);
@@ -8181,53 +8256,57 @@
         private System.Windows.Forms.Label label155;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Panel panel22;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txt5_2FatorK;
         private System.Windows.Forms.Label label184;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox combo5_2Potencia;
         private System.Windows.Forms.Label label183;
         private System.Windows.Forms.Label label168;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv5_2Potencias;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
         private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btn5_2GravaPotencia;
+        private System.Windows.Forms.TextBox txt5_2Qtd;
         private System.Windows.Forms.Label label169;
         private System.Windows.Forms.Label label170;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt5_2PotKva;
         private System.Windows.Forms.Label label171;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox combo5_2Pintura;
         private System.Windows.Forms.Label label172;
         private System.Windows.Forms.Label label174;
         private System.Windows.Forms.Label label175;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox txt5_2DescOutraTensaoSec;
+        private System.Windows.Forms.ComboBox combo5_2TensaoSec;
         private System.Windows.Forms.Label label177;
         private System.Windows.Forms.Label label178;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.ComboBox combo5_2TensaoPrim;
+        private System.Windows.Forms.TextBox txt5_2DescOutraTensaoPrim;
         private System.Windows.Forms.Label label180;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txt5_2Obs;
         private System.Windows.Forms.Label label181;
         private System.Windows.Forms.Panel panel24;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton radio5_2PotDef;
+        private System.Windows.Forms.RadioButton radio5_2PotInf;
         private System.Windows.Forms.Label label182;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Button btn5_2Excluir;
+        private System.Windows.Forms.Button btn5_2Salvar;
+        private System.Windows.Forms.TextBox txt5_2DescOutroMeio;
         private System.Windows.Forms.Label label185;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox combo5_2MeioIsol;
+        private System.Windows.Forms.ComboBox combo5_2BuchaBT;
+        private System.Windows.Forms.ComboBox combo5_2BuchaMT;
         private System.Windows.Forms.Label label186;
         private System.Windows.Forms.Label label187;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txt5_2DescOutraBuchaMT;
         private System.Windows.Forms.Label label189;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txt5_2DescOutraBuchaBT;
         private System.Windows.Forms.Label label188;
+        private System.Windows.Forms.Panel panel25;
+        private System.Windows.Forms.RadioButton radio5_2ListaCargasN;
+        private System.Windows.Forms.RadioButton radio5_2ListaCargasS;
+        private System.Windows.Forms.Label label190;
     }
 }
