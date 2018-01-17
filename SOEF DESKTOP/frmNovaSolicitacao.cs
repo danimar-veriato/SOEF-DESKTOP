@@ -7746,6 +7746,7 @@ namespace ORCAMENTOS_FOCKINK
             }
             else
             {
+                txt5_2DescOutraTensaoPrim.Text = "";
                 txt5_2DescOutraTensaoPrim.Enabled = false;
             }
         }
@@ -7758,6 +7759,7 @@ namespace ORCAMENTOS_FOCKINK
             }
             else
             {
+                txt5_2DescOutraTensaoSec.Text = "";
                 txt5_2DescOutraTensaoSec.Enabled = false;
             }
         }
@@ -7791,12 +7793,71 @@ namespace ORCAMENTOS_FOCKINK
         {
             if(combo5_2MeioIsol.SelectedIndex == 1)
             {
-                //Mostra buchas mt e bt
-            }
+                label186.Visible = true;
+                label189.Visible = true;
+                label187.Visible = true;
+                label188.Visible = true;
+                combo5_2BuchaMT.Visible = true;
+                combo5_2BuchaBT.Visible = true;
+                txt5_2DescOutraBuchaMT.Visible = true;
+                txt5_2DescOutraBuchaBT.Visible = true;
 
-            if(combo5_2MeioIsol.SelectedIndex == 3)
+                label172.Visible = false;
+                combo5_2Pintura.Visible = false;
+            }
+            else if (combo5_2MeioIsol.SelectedIndex == 2)
             {
-                //mostra pintura
+                label186.Visible = false;
+                label189.Visible = false;
+                label187.Visible = false;
+                label188.Visible = false;
+                combo5_2BuchaMT.Visible = false;
+                combo5_2BuchaBT.Visible = false;
+                txt5_2DescOutraBuchaMT.Visible = false;
+                txt5_2DescOutraBuchaBT.Visible = false;
+
+                label172.Visible = false;
+                combo5_2Pintura.Visible = false;
+
+                label185.Visible = false;
+                txt5_2DescOutroMeio.Text = "";
+                txt5_2DescOutroMeio.Visible = false;
+            }
+            else if (combo5_2MeioIsol.SelectedIndex == 3)
+            {
+                label186.Visible = false;
+                label189.Visible = false;
+                label187.Visible = false;
+                label188.Visible = false;
+                combo5_2BuchaMT.Visible = false;
+                combo5_2BuchaBT.Visible = false;
+                txt5_2DescOutraBuchaMT.Visible = false;
+                txt5_2DescOutraBuchaBT.Visible = false;
+
+                label172.Visible = true;
+                combo5_2Pintura.Visible = true;
+
+                label185.Visible = false;
+                txt5_2DescOutroMeio.Text = "";
+                txt5_2DescOutroMeio.Visible = false;
+            }
+            else if (combo5_2MeioIsol.SelectedIndex == 4)
+            {
+                label186.Visible = false;
+                label189.Visible = false;
+                label187.Visible = false;
+                label188.Visible = false;
+                combo5_2BuchaMT.Visible = false;
+                combo5_2BuchaBT.Visible = false;
+                txt5_2DescOutraBuchaMT.Visible = false;
+                txt5_2DescOutraBuchaBT.Visible = false;
+
+                label172.Visible = false;
+                combo5_2Pintura.Visible = false;
+
+                label185.Visible = true;
+                txt5_2DescOutroMeio.Visible = true;
+
             }
         }
     }

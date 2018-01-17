@@ -3331,7 +3331,7 @@
             this.tabE5.Controls.Add(this.tabPE5_1);
             this.tabE5.Controls.Add(this.tabPE5_2);
             this.tabE5.Controls.Add(this.tabPE5_3);
-            this.tabE5.Location = new System.Drawing.Point(10, 51);
+            this.tabE5.Location = new System.Drawing.Point(10, 45);
             this.tabE5.Name = "tabE5";
             this.tabE5.SelectedIndex = 0;
             this.tabE5.Size = new System.Drawing.Size(1001, 494);
@@ -4836,7 +4836,7 @@
             this.label200.AutoSize = true;
             this.label200.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label200.ForeColor = System.Drawing.Color.Red;
-            this.label200.Location = new System.Drawing.Point(8, 28);
+            this.label200.Location = new System.Drawing.Point(8, 18);
             this.label200.Name = "label200";
             this.label200.Size = new System.Drawing.Size(161, 13);
             this.label200.TabIndex = 9;
