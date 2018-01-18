@@ -5197,6 +5197,25 @@ namespace ORCAMENTOS_FOCKINK
         }
 
         /// <summary>
+        /// Inicializa campos Escopo 05_2
+        /// </summary>
+        private void inicializaCamposE05_2()
+        {
+            radio5_2PotInf.Checked = true;
+            combo5_2TensaoPrim.SelectedIndex = 0;
+            combo5_2TensaoSec.SelectedIndex = 0;
+            combo5_2MeioIsol.SelectedIndex = 0;
+            combo5_2Pintura.SelectedIndex = 0;
+            combo5_2BuchaMT.SelectedIndex = 0;
+            combo5_2BuchaBT.SelectedIndex = 0;
+            txt5_2DescOutraBuchaMT.Text = "";
+            txt5_2DescOutraBuchaMT.Visible = true;
+            txt5_2DescOutraBuchaBT.Text = "";
+            txt5_2DescOutraBuchaBT.Visible = true;
+            combo5_2Potencia.SelectedIndex = 0;
+        }
+
+        /// <summary>
         /// Inicializa os campos do Escopo 10_1
         /// </summary>
         private void inicializaCamposE10_1()
@@ -7533,6 +7552,10 @@ namespace ORCAMENTOS_FOCKINK
                 }
 
             }
+            else if (tabE5.SelectedTab.Name == "tabPE5_2")
+            {
+                inicializaCamposE05_2();
+            }
         }
 
         private void dgv5_1Potencias_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -7740,7 +7763,7 @@ namespace ORCAMENTOS_FOCKINK
 
         private void combo5_2TensaoPrim_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(combo5_2TensaoPrim.SelectedIndex == 0)
+            if(combo5_2TensaoPrim.SelectedIndex == 7)
             {
                 txt5_2DescOutraTensaoPrim.Enabled = true;
             }
@@ -7791,74 +7814,66 @@ namespace ORCAMENTOS_FOCKINK
 
         private void combo5_2MeioIsol_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(combo5_2MeioIsol.SelectedIndex == 1)
+            if (combo5_2MeioIsol.SelectedIndex == 0)
             {
-                label186.Visible = true;
-                label189.Visible = true;
-                label187.Visible = true;
-                label188.Visible = true;
-                combo5_2BuchaMT.Visible = true;
-                combo5_2BuchaBT.Visible = true;
-                txt5_2DescOutraBuchaMT.Visible = true;
-                txt5_2DescOutraBuchaBT.Visible = true;
+                combo5_2BuchaMT.Enabled = false;
+                combo5_2BuchaBT.Enabled = false;
+                txt5_2DescOutraBuchaMT.Enabled = false;
+                txt5_2DescOutraBuchaBT.Enabled = false;
+                combo5_2Pintura.Enabled = false;
+                txt5_2DescOutroMeio.Text = "";
+                txt5_2DescOutroMeio.Enabled = false;
 
+            }
+           if (combo5_2MeioIsol.SelectedIndex == 1)
+            {
+                combo5_2BuchaMT.Enabled = true;
+                combo5_2BuchaBT.Enabled = true;
+                txt5_2DescOutraBuchaMT.Enabled = true;
+                txt5_2DescOutraBuchaBT.Enabled = true;
                 label172.Visible = false;
                 combo5_2Pintura.Visible = false;
             }
             else if (combo5_2MeioIsol.SelectedIndex == 2)
             {
-                label186.Visible = false;
-                label189.Visible = false;
-                label187.Visible = false;
-                label188.Visible = false;
-                combo5_2BuchaMT.Visible = false;
-                combo5_2BuchaBT.Visible = false;
-                txt5_2DescOutraBuchaMT.Visible = false;
-                txt5_2DescOutraBuchaBT.Visible = false;
-
+                combo5_2BuchaMT.Enabled = false;
+                combo5_2BuchaBT.Enabled = false;
+                txt5_2DescOutraBuchaMT.Enabled = false;
+                txt5_2DescOutraBuchaBT.Enabled = false;
                 label172.Visible = false;
                 combo5_2Pintura.Visible = false;
-
-                label185.Visible = false;
+                label185.Enabled = false;
                 txt5_2DescOutroMeio.Text = "";
-                txt5_2DescOutroMeio.Visible = false;
+                txt5_2DescOutroMeio.Enabled = false;
             }
             else if (combo5_2MeioIsol.SelectedIndex == 3)
             {
-                label186.Visible = false;
-                label189.Visible = false;
-                label187.Visible = false;
-                label188.Visible = false;
-                combo5_2BuchaMT.Visible = false;
-                combo5_2BuchaBT.Visible = false;
-                txt5_2DescOutraBuchaMT.Visible = false;
-                txt5_2DescOutraBuchaBT.Visible = false;
-
+                combo5_2BuchaMT.Enabled = false;
+                combo5_2BuchaBT.Enabled = false;
+                txt5_2DescOutraBuchaMT.Enabled = false;
+                txt5_2DescOutraBuchaBT.Enabled = false;
                 label172.Visible = true;
                 combo5_2Pintura.Visible = true;
-
-                label185.Visible = false;
+                combo5_2Pintura.Enabled = true;
                 txt5_2DescOutroMeio.Text = "";
-                txt5_2DescOutroMeio.Visible = false;
+                txt5_2DescOutroMeio.Enabled = false;
             }
             else if (combo5_2MeioIsol.SelectedIndex == 4)
             {
-                label186.Visible = false;
-                label189.Visible = false;
-                label187.Visible = false;
-                label188.Visible = false;
-                combo5_2BuchaMT.Visible = false;
-                combo5_2BuchaBT.Visible = false;
-                txt5_2DescOutraBuchaMT.Visible = false;
-                txt5_2DescOutraBuchaBT.Visible = false;
-
+                combo5_2BuchaMT.Enabled = false;
+                combo5_2BuchaBT.Enabled = false;
+                txt5_2DescOutraBuchaMT.Enabled = false;
+                txt5_2DescOutraBuchaBT.Enabled = false;
                 label172.Visible = false;
                 combo5_2Pintura.Visible = false;
-
-                label185.Visible = true;
-                txt5_2DescOutroMeio.Visible = true;
+                txt5_2DescOutroMeio.Enabled = true;
 
             }
+        }
+
+        private void btn5_2Salvar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

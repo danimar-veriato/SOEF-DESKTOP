@@ -4075,6 +4075,7 @@
             // combo5_2BuchaBT
             // 
             this.combo5_2BuchaBT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo5_2BuchaBT.Enabled = false;
             this.combo5_2BuchaBT.FormattingEnabled = true;
             this.combo5_2BuchaBT.Items.AddRange(new object[] {
             "Selecione",
@@ -4091,6 +4092,7 @@
             // combo5_2BuchaMT
             // 
             this.combo5_2BuchaMT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo5_2BuchaMT.Enabled = false;
             this.combo5_2BuchaMT.FormattingEnabled = true;
             this.combo5_2BuchaMT.Items.AddRange(new object[] {
             "Selecione",
@@ -4333,6 +4335,7 @@
             // combo5_2Pintura
             // 
             this.combo5_2Pintura.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combo5_2Pintura.Enabled = false;
             this.combo5_2Pintura.FormattingEnabled = true;
             this.combo5_2Pintura.Items.AddRange(new object[] {
             "Selecione...",
@@ -4343,7 +4346,6 @@
             this.combo5_2Pintura.Name = "combo5_2Pintura";
             this.combo5_2Pintura.Size = new System.Drawing.Size(168, 21);
             this.combo5_2Pintura.TabIndex = 72;
-            this.combo5_2Pintura.Visible = false;
             // 
             // label172
             // 
@@ -4355,7 +4357,6 @@
             this.label172.Size = new System.Drawing.Size(136, 13);
             this.label172.TabIndex = 73;
             this.label172.Text = "Pintura Meio Isolante*:";
-            this.label172.Visible = false;
             // 
             // label174
             // 
@@ -4442,6 +4443,7 @@
             // 
             // txt5_2DescOutraTensaoPrim
             // 
+            this.txt5_2DescOutraTensaoPrim.Enabled = false;
             this.txt5_2DescOutraTensaoPrim.Location = new System.Drawing.Point(793, 11);
             this.txt5_2DescOutraTensaoPrim.MaxLength = 200;
             this.txt5_2DescOutraTensaoPrim.Name = "txt5_2DescOutraTensaoPrim";
@@ -4536,6 +4538,7 @@
             this.btn5_2Salvar.TabIndex = 43;
             this.btn5_2Salvar.Text = "Salvar";
             this.btn5_2Salvar.UseVisualStyleBackColor = true;
+            this.btn5_2Salvar.Click += new System.EventHandler(this.btn5_2Salvar_Click);
             // 
             // tabPE5_3
             // 
