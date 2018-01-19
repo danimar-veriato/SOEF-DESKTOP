@@ -7715,8 +7715,6 @@ namespace ORCAMENTOS_FOCKINK
             {
                 erros += "O campo Quantidade, deve ser preenchido.\n";
             }
-
-
         }
 
         private void combo5_2Potencia_SelectedIndexChanged(object sender, EventArgs e)
@@ -7873,7 +7871,86 @@ namespace ORCAMENTOS_FOCKINK
 
         private void btn5_2Salvar_Click(object sender, EventArgs e)
         {
+            string erros = "";
+            if (radio5_2PotInf.Checked)
+            {
+                //Verificar se foi informado o cadastro de Potencia..
+            }
+            else if (radio5_2PotDef.Checked)
+            {
+                if(!radio5_2ListaCargasS.Checked || !radio5_2ListaCargasN.Checked)
+                {
+                    erros += "O campo Tem Lista de Cargas, deve ser preenchido.\n";
+                }
+            }
 
+            if(combo5_2TensaoPrim.SelectedIndex == 0)
+            {
+                erros += "O campo Tensão Primária, deve ser preenchido.\n";
+            }
+            else if(combo5_2TensaoPrim.SelectedIndex == 7)
+            {
+                if (string.IsNullOrEmpty(txt5_2DescOutraTensaoPrim.Text))
+                {
+                    erros += "O campo Descrição da Outra Tensão Primária, deve ser preenchido.\n";
+                }
+            }
+            if(combo5_2TensaoSec.SelectedIndex == 0)
+            {
+                erros += "O campo Tensão Secundária, deve ser preenchido.\n";
+            }
+            else if (string.IsNullOrEmpty(txt5_2DescOutraTensaoSec.Text))
+            {
+                erros += "O campo Descrição da Outra Tensão Secundária, deve ser preenchido.\n";
+            }
+            if (combo5_2MeioIsol.SelectedIndex == 0)
+            {
+                erros += "O campo Meio Isolante, deve ser preenchido.\n";
+            }
+            else if (combo5_2MeioIsol.SelectedIndex == 1)
+            {
+                if(combo5_2BuchaMT.SelectedIndex == 0)
+                {
+                    erros += "O campo Buchas MT Devem Ser, deve ser preenchido.\n";
+                }
+                else if(combo5_2BuchaMT.SelectedIndex == 4)
+                {
+                    if (string.IsNullOrEmpty(txt5_2DescOutraBuchaMT.Text))
+                    {
+                        erros += "O campo Descrição da Outra Bucha MT, deve ser preenchido.\n";
+                    }                    
+                }
+                if (combo5_2BuchaBT.SelectedIndex == 0)
+                {
+                    erros += "O campo Buchas BT Devem Ser, deve ser preenchido.\n";
+                }
+                else if (combo5_2BuchaMT.SelectedIndex == 5)
+                {
+                    if (string.IsNullOrEmpty(txt5_2DescOutraBuchaBT.Text))
+                    {
+                        erros += "O campo Descrição da Outra Bucha BT, deve ser preenchido.\n";
+                    }
+                }
+            }
+            else if (combo5_2MeioIsol.SelectedIndex == 3)
+            {
+                if(combo5_2Pintura.SelectedIndex == 0)
+                {
+                    erros += "O campo Pintura Meio Isolante, deve ser preenchido.\n";
+                }
+            }
+            else if (combo5_2MeioIsol.SelectedIndex == 4)
+            {
+                if (string.IsNullOrEmpty(txt5_2DescOutraBuchaBT.Text))
+                {
+                    erros += "O campo Descrição do Outro Meio Isolante, deve ser preenchido.\n";
+                }
+            }
+
+            if (!string.IsNullOrEmpty(erros))
+            {
+                MessageBox.Show("Painel de erros:\n" + erros);
+            }
         }
     }
 }
