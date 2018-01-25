@@ -125,15 +125,15 @@ namespace SOEF_CLASS
                 query += "       [IND_PREENCHIDO] = '" + pIndPre + "', ";
                 if (string.IsNullOrEmpty(pTipoPintura))
                 {
-                    query += "       [TIPO_PINTURA_INVOLUCRO] = NULL, ";
+                    query += "   [TIPO_PINTURA_INVOLUCRO] = NULL, ";
                 }
                 else
                 {
-                    query += "       [TIPO_PINTURA_INVOLUCRO] = '" + pTipoPintura + "', ";
+                    query += "   [TIPO_PINTURA_INVOLUCRO] = '" + pTipoPintura + "', ";
                 }                
                 query += "       [DESC_OUTRA_TENSAO_PRIM] = '" + pDescOutraTensaoPri + "', ";
                 query += "       [DESC_OUTRA_TENSAO_SECUN] = '" + pDescOutraTensaoSec + "' ";
-                query += "  WHERE [NUMERO_SOLICITACAO] = " + Numero + " AND  [REVISAO_SOLICITACAO] = '" + Revisao + "'";
+                query += " WHERE [NUMERO_SOLICITACAO] = " + Numero + " AND  [REVISAO_SOLICITACAO] = '" + Revisao + "'";
                 retorno = sqlce.insertSOF(query, null, null);
                 return retorno;
             }

@@ -1,6 +1,7 @@
 ﻿using SOEFC;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -66,7 +67,7 @@ namespace SOEF_CLASS
                 }
                 else
                 {
-                    query += "   '" + pTipoPintura + "', ";
+                    query += " '" + pTipoPintura + "', ";
                 }
                 query += "   '" + pMeioIsolante + "', ";
                 query += "   '" + pDescOutraTensaoPri + "', ";
@@ -89,6 +90,25 @@ namespace SOEF_CLASS
 
 
 
+        /// <summary>
+        /// Atualiza as informações do Escopo 05_2
+        /// </summary>
+        /// <param name="pTensaoPrim"></param>
+        /// <param name="pTensaoSec"></param>
+        /// <param name="pIndPotenciaInfDef"></param>
+        /// <param name="pIndListaCargas"></param>
+        /// <param name="pMeioIsolante"></param>
+        /// <param name="pBuchaMT"></param>
+        /// <param name="pBuchaBT"></param>
+        /// <param name="pObs"></param>
+        /// <param name="pIndPre"></param>
+        /// <param name="pTipoPintura"></param>
+        /// <param name="pDescOutraTensaoPri"></param>
+        /// <param name="pDescOutraTensaoSec"></param>
+        /// <param name="pDescOutraBuchaMT"></param>
+        /// <param name="pDescOutraBuchaBT"></param>
+        /// <param name="pDescMeioIsolante"></param>
+        /// <returns></returns>
         public int updateEscopo_05_2(string pTensaoPrim, string pTensaoSec, string pIndPotenciaInfDef, string pIndListaCargas, string pMeioIsolante, string pBuchaMT, string pBuchaBT, string pObs, string pIndPre, string pTipoPintura, string pDescOutraTensaoPri, string pDescOutraTensaoSec, string pDescOutraBuchaMT, string pDescOutraBuchaBT, string pDescMeioIsolante)
         {
             SqlCE sqlce = new SqlCE();
@@ -131,6 +151,31 @@ namespace SOEF_CLASS
             finally
             {
                 sqlce.closeConnection();
+            }
+        }
+
+
+        /// <summary>
+        /// Busca os dados do Escopo 05_2
+        /// </summary>
+        /// <returns></returns>
+        public DataTable getEscopo_05_2()
+        {
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                DataTable dt = new DataTable();
+                string sql;
+                sql = "SELECT * FROM [DOM_SOLIC_ORC_ESCOPO_05_2] ";
+                sql += " WHERE [NUMERO_SOLICITACAO] = " + Numero + " ";
+                sql += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
+                dt = sqlce.selectListaSOF(sql, "DOM_SOLIC_ORC_ESCOPO_05_2");
+                return dt;
+            }
+            catch (Exception)
+            {
+                throw;
             }
         }
 
