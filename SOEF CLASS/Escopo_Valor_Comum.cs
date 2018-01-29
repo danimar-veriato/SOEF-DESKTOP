@@ -10,7 +10,6 @@ namespace SOEF_CLASS
 {
     public class Escopo_Valor_Comum: Escopo
     {
-
         /// <summary>
         /// Construtor da Classe Escopo_Valor_Comum
         /// </summary>
@@ -82,10 +81,10 @@ namespace SOEF_CLASS
                 sqlce.closeConnection();
             }
         }
-
-
+        
 
         //CRUD ESCOPO 01
+
         /// <summary>
         /// Grava dados na Tabela Valor Comum
         /// </summary>
@@ -135,8 +134,7 @@ namespace SOEF_CLASS
                 sqlce.closeConnection();
             }
         }
-
-
+        
         /// <summary>
         /// Atualiza os valores da tabela Escopo Valor Comum
         /// </summary>
@@ -176,8 +174,7 @@ namespace SOEF_CLASS
                 sqlce.closeConnection();
             }
         }
-
-
+        
         /// <summary>
         /// Define como NULL os campos dos valores comuns referentes ao Escopo 01
         /// </summary>
@@ -212,8 +209,7 @@ namespace SOEF_CLASS
                 sqlce.closeConnection();
             }
         }
-
-
+        
         /// <summary>
         /// Busca os campos da DOM_SOLIC_ORC_VALOR_COMUM utilizados no ESCOPO 01
         /// </summary>
@@ -240,8 +236,7 @@ namespace SOEF_CLASS
                 throw;
             }
         }
-
-
+        
 
         //CRUD ESCOPO 05
 
@@ -281,8 +276,7 @@ namespace SOEF_CLASS
                 sqlce.closeConnection();
             }
         }
-
-
+        
         /// <summary>
         /// Atualiza os campos do Escopo 05 na tabela VALOR_COMUM
         /// </summary>
@@ -371,6 +365,7 @@ namespace SOEF_CLASS
                 throw;
             }
         }
+
 
         //CRUD ESCOPO 05_1
 
@@ -502,6 +497,137 @@ namespace SOEF_CLASS
         }
 
 
+        //CRUD ESCOPO 5_2
+
+        /// <summary>
+        /// Grava Escopo 05_2
+        /// </summary>
+        /// <param name="pTipoPintura"></param>
+        /// <returns></returns>
+        public int gravaEscopo_Valor_Comum_E05_2(string pTipoPintura)
+        {
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                int retorno = 0;
+                string query = "";
+                query += " INSERT INTO [DOM_SOLIC_ORC_VALOR_COMUM] ";
+                query += "    ([NUMERO_SOLICITACAO], ";
+                query += "    [REVISAO_SOLICITACAO], ";
+                query += "    [TIPO_PINTURA]) ";
+                query += " VALUES ";
+                query += " (" + Numero + ", ";
+                query += " '" + Revisao + "', ";
+                query += " '" + pTipoPintura + "') ";
+                retorno = sqlce.insertSOF(query);
+                return retorno;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                sqlce.closeConnection();
+            }
+        }
+
+        /// <summary>
+        /// Atualiza o registro do Escopo 05_2 na tabela de valores comuns
+        /// </summary>
+        /// <param name="pTipoPintura"></param>
+        /// <returns></returns>
+        public int atualizaEscopo_Valor_Comum_E05_2(string pTipoPintura)
+        {
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                int retorno = 0;
+                string query = "";
+                query += " UPDATE [DOM_SOLIC_ORC_VALOR_COMUM] ";
+                if (string.IsNullOrEmpty(pTipoPintura))
+                {
+                    query += " SET [TIPO_PINTURA] = NULL ";
+                }
+                else
+                {
+                    query += " SET [TIPO_PINTURA] = '" + pTipoPintura + "' ";
+                }
+                query += " WHERE [NUMERO_SOLICITACAO] = " + Numero + "";
+                query += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
+                retorno = sqlce.insertSOF(query);
+                return retorno;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                sqlce.closeConnection();
+            }
+        }
+
+        /// <summary>
+        /// Apaga (SETA COMO NULL) os campos do Escopo 05_2
+        /// </summary>
+        /// <returns></returns>
+        public int deleteEscopo_Valor_Comum_E05_2()
+        {
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                int retorno = 0;
+                string query = "";
+                query += " UPDATE [DOM_SOLIC_ORC_VALOR_COMUM] ";
+                query += " SET [TIPO_PINTURA] = NULL ";
+                query += " WHERE [NUMERO_SOLICITACAO] = " + Numero + "";
+                query += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
+                retorno = sqlce.insertSOF(query);
+                return retorno;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                sqlce.closeConnection();
+            }
+        }
+
+        /// <summary>
+        /// Busca os campos utilizados pelo Escopo 05_2 na VALOR_COMUM
+        /// </summary>
+        /// <param name="numSolicitacao"></param>
+        /// <param name="revSolicitacao"></param>
+        /// <returns></returns>
+        public DataTable buscaEscopoValorComumE05_2()
+        {
+            DataTable dt = new DataTable();
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                string query = "";
+                query += " SELECT [TIPO_PINTURA] ";
+                query += " FROM [DOM_SOLIC_ORC_VALOR_COMUM] ";
+                query += " WHERE [NUMERO_SOLICITACAO] = " + Numero;
+                query += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
+                dt = sqlce.selectListaSOF(query, "DOM_SOLIC_ORC_VALOR_COMUM");
+                return dt;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        
+
+
         //CRUD ESCOPO 10_1
         /// <summary>
         /// Grava os valores comuns do Escopo 10_1
@@ -554,8 +680,7 @@ namespace SOEF_CLASS
                 sqlce.closeConnection();
             }
         }
-
-
+        
         /// <summary>
         /// Busca os campos comuns utilizados no ESCOPO 10_1
         /// </summary>
@@ -588,8 +713,7 @@ namespace SOEF_CLASS
                 throw;
             }
         }
-
-
+        
         /// <summary>
         /// Atualiza os campos do Escopo 10_1
         /// </summary>
@@ -631,8 +755,7 @@ namespace SOEF_CLASS
                 sqlce.closeConnection();
             }
         }
-
-
+        
         /// <summary>
         /// Deleta (deixa nulo) os campos do Escopo 10_1
         /// </summary>
@@ -667,10 +790,10 @@ namespace SOEF_CLASS
                 sqlce.closeConnection();
             }
         }
-
-
+        
 
         //CRUD Escopo 10_2
+
         /// <summary>
         /// Grava valores comuns Escopo 10_2
         /// </summary>
@@ -946,9 +1069,6 @@ namespace SOEF_CLASS
                 sqlce.closeConnection();
             }
         }
-
-
-
-
+        
     }
 }

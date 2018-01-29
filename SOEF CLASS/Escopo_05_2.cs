@@ -180,6 +180,198 @@ namespace SOEF_CLASS
         }
 
 
+        public int deleteEscopo_05_2(string pNumero, string pRevisao)
+        {
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                int retorno;
+                string query = "";
+                query += " DELETE FROM [DOM_SOLIC_ORC_ESCOPO_05_2] ";
+                query += " WHERE [NUMERO_SOLICITACAO] = " + pNumero + " ";
+                query += " AND [REVISAO_SOLICITACAO] = '" + pRevisao + "' ";
+                retorno = sqlce.deleteSOF(query);
+                return retorno;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                sqlce.closeConnection();
+            }
+        }
+
+        //CRUD DOM_SOLIC_ORC_POTENC_ESCOPO
+
+
+        /// <summary>
+        /// Insere o registro na Potenc Escopo
+        /// </summary>
+        /// <param name="pEscopo"></param>
+        /// <param name="pSequencia"></param>
+        /// <param name="pQuantidade"></param>
+        /// <param name="pPotKva"></param>
+        /// <param name="pFatorK"></param>
+        /// <param name="pModelo"></param>
+        /// <returns></returns>
+        public int gravaPotencEscopo(string pEscopo, string pSequencia, string pQuantidade, string pPotKva, string pFatorK)
+        {
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                int retorno;
+                string query = "";
+                query += " INSERT INTO [DOM_SOLIC_ORC_POTENC_ESCOPO] ";
+                query += "   ([NUMERO_SOLICITACAO], ";
+                query += "   [REVISAO_SOLICITACAO], ";
+                query += "   [ESCOPO], ";
+                query += "   [SEQUENCIA], ";
+                query += "   [QUANTIDADE], ";
+                query += "   [POTENCIA_KVA], ";
+                query += "   [FATOR_K]) ";
+                query += " VALUES ";
+                query += "   (" + Numero + ", ";
+                query += "   '" + Revisao + "', ";
+                query += "   '" + pEscopo + "', ";
+                query += "   " + pSequencia + ", ";
+                query += "   " + pQuantidade + ", ";
+                query += "   '" + pPotKva + "', ";
+                if (string.IsNullOrEmpty(pFatorK))
+                {
+                    query += " NULL) ";
+                }
+                else
+                {
+                    query += "   " + pFatorK + ") ";
+                }
+                retorno = sqlce.insertSOF(query);
+                return retorno;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                sqlce.closeConnection();
+            }
+        }
+
+        /// <summary>
+        /// Busca os dados da tabela DOM_SOLIC_ORC_POTENC_ESCOPO
+        /// </summary>
+        /// <param name="pEscopo"></param>
+        /// <param name="pSequencia"></param>
+        /// <returns></returns>
+        public DataTable getPotenciaEscopo(string pEscopo, string pSequencia)
+        {
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                DataTable dt = new DataTable();
+                string sql;
+                sql = "SELECT [NUMERO_SOLICITACAO], ";
+                sql += " [REVISAO_SOLICITACAO], ";
+                sql += " [SEQUENCIA] SEQ, ";
+                sql += " [QUANTIDADE], ";
+                sql += " [POTENCIA_KVA], ";
+                sql += " [FATOR_K] ";
+                sql += " FROM [DOM_SOLIC_ORC_POTENC_ESCOPO] ";
+                sql += " WHERE [NUMERO_SOLICITACAO] = " + Numero + " ";
+                sql += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
+                sql += " AND [ESCOPO] = '" + pEscopo + "' ";
+                if (!string.IsNullOrEmpty(pSequencia))
+                {
+                    sql += " AND [SEQUENCIA] = " + pSequencia + " ";
+                    sql += " ORDER BY [SEQ] ";
+                }
+                dt = sqlce.selectListaSOF(sql, "DOM_SOLIC_ORC_TAMPA_ESCOPO");
+                return dt;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Busca a última sequência gravada
+        /// </summary>
+        /// <param name="pNumSolic"></param>
+        /// <param name="pRevisao"></param>
+        /// <param name="pEscopo"></param>
+        /// <returns></returns>
+        public int getSequencia(string pNumSolic, string pRevisao, string pEscopo)
+        {
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            string retorno;
+            try
+            {
+                string sql;
+                sql = " SELECT MAX([SEQUENCIA]) ";
+                sql += " FROM [DOM_SOLIC_ORC_POTENC_ESCOPO] ";
+                sql += " WHERE [NUMERO_SOLICITACAO] = " + pNumSolic;
+                sql += " AND [REVISAO_SOLICITACAO] = '" + pRevisao + "'";
+                sql += " AND [ESCOPO] = '" + pEscopo + "'";
+                retorno = sqlce.selectSOF(sql);
+
+                if (string.IsNullOrEmpty(retorno))
+                {
+                    retorno = "0";
+                }
+
+                return Convert.ToInt32(retorno);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Método que remove um ou todos os registros da Potenc Escopo
+        /// </summary>
+        /// <param name="pNumero"></param>
+        /// <param name="pRevisao"></param>
+        /// <param name="pEscopo"></param>
+        /// <param name="pSequencia"></param>
+        /// <returns></returns>
+        public int deletePotencEscopo(string pNumero, string pRevisao, string pEscopo, string pSequencia)
+        {
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                int retorno;
+                string query = "";
+                query += " DELETE FROM [DOM_SOLIC_ORC_POTENC_ESCOPO] ";
+                query += " WHERE [NUMERO_SOLICITACAO] = " + pNumero + " ";
+                query += " AND [REVISAO_SOLICITACAO] = '" + pRevisao + "' ";
+                query += " AND [ESCOPO] = '" + pEscopo + "' ";
+                if (!string.IsNullOrEmpty(pSequencia))
+                {
+                    query += " AND [SEQUENCIA] = " + pSequencia + " ";
+                }
+                retorno = sqlce.deleteSOF(query);
+                return retorno;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                sqlce.closeConnection();
+            }
+        }
+
+
 
     }
 }

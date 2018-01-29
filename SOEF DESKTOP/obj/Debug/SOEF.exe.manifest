@@ -126,26 +126,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SOEF CLASS.dll" size="64512">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SOEF CLASS.dll" size="70144">
       <assemblyIdentity name="SOEF CLASS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>sn+xI/o2yqOxPfHYBvP5Htl7isuKaZ6ro1lMj7slYCo=</dsig:DigestValue>
+        <dsig:DigestValue>6NvCy58jsUFvRb8KXXRdxR3iY34mbcEmI69ADILMKRI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SOEF.exe" size="364488">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SOEF.exe" size="365000">
       <assemblyIdentity name="SOEF" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Vn/APvId/sg3PRMt0pItXK7N5U/sgOH8KQEOhMjztMw=</dsig:DigestValue>
+        <dsig:DigestValue>WjLI0nuAmPrqUDvHJOMz1+mozJdOLJpKPNurWvubddg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -170,13 +170,13 @@
       <dsig:DigestValue>dPjow2XWk6oa4JpjLkQ149MsXaavi6h+Y6/9mwBncww=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="SOFDB.sdf" size="786432">
+  <file name="SOFDB.sdf" size="851968">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>5oHCq8g4kQqgbDrmvt4+J04Qr5V6QHqnFVl9Z2XgPgk=</dsig:DigestValue>
+      <dsig:DigestValue>sRGUHKdWgzTlccC49+en8JGsFrr78PzW6tWjSE8dxvE=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

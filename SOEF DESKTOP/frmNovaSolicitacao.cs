@@ -7452,18 +7452,8 @@ namespace ORCAMENTOS_FOCKINK
                     else
                     {
                         MessageBox.Show("Ocorreu um erro ao ao inserir/alterar o registro. Por favor tente novamente ou contate o administrador do sistema.");
-                    }
-
-
-
-
-
-
-               // }                         
-            }
-            
-
-
+                    }               
+            }  
         }
 
         private void btn5_1GravaPotencia_Click(object sender, EventArgs e)
@@ -7555,6 +7545,8 @@ namespace ORCAMENTOS_FOCKINK
             else if (tabE5.SelectedTab.Name == "tabPE5_2")
             {
                 inicializaCamposE05_2();
+                SOEF_CLASS.Escopo_05_2 Escopo_05_2 = new SOEF_CLASS.Escopo_05_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                dgv5_2Potencias.DataSource = Escopo_05_2.getPotenciaEscopo("05_2", null);
             }
         }
 
@@ -7714,6 +7706,37 @@ namespace ORCAMENTOS_FOCKINK
             if (string.IsNullOrEmpty(txt5_2Qtd.Text))
             {
                 erros += "O campo Quantidade, deve ser preenchido.\n";
+            }
+            
+            if (!string.IsNullOrEmpty(erros))
+            {
+                MessageBox.Show("Painel de erros:\n" + erros);
+            }
+            else
+            {
+                string escopo = "05_2";
+                string sequencia = "";
+                string quantidade = "";
+                string potKva = "";
+                string fatorK = "";
+                int retorno;
+
+                potKva = txt5_2PotKva.Text;
+                quantidade = txt5_2Qtd.Text;
+
+                SOEF_CLASS.Escopo_05_2 Escopo_05_2 = new SOEF_CLASS.Escopo_05_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                sequencia = Convert.ToString(Escopo_05_2.getSequencia(this.numero_solic.ToString(), this.NumRevisaoSolic, escopo) + 1);
+                retorno = Escopo_05_2.gravaPotencEscopo(escopo, sequencia, quantidade, potKva, fatorK);
+                if (retorno > 0)
+                {
+                    dgv5_2Potencias.DataSource = Escopo_05_2.getPotenciaEscopo("05_2", null);
+                    MessageBox.Show("Registro inserido com sucesso!");
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro na inserção do registro.");
+                }
+
             }
         }
 
