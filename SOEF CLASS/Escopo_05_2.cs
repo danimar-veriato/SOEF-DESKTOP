@@ -57,18 +57,32 @@ namespace SOEF_CLASS
                 query += "   " + pTensaoSec + ", ";
                 query += "   '" + pIndPotenciaInfDef + "', ";
                 query += "   '" + pIndListaCargas + "', ";
-                query += "   " + pBuchaMT + ", ";
-                query += "   " + pBuchaBT + ", ";
-                query += "   '" + pObs + "', ";
-                query += "   '" + pIndPre + "', ";
-                if (string.IsNullOrEmpty(pTipoPintura))
+                if (string.IsNullOrEmpty(pBuchaMT))
                 {
-                   query += " NULL, ";
+                    query += " NULL, ";
                 }
                 else
                 {
-                    query += " '" + pTipoPintura + "', ";
+                    query += " " + pBuchaMT + ", ";
                 }
+                if (string.IsNullOrEmpty(pBuchaBT))
+                {
+                    query += " NULL, ";
+                }
+                else
+                {
+                    query += " " + pBuchaBT + ", ";
+                }
+                query += "   '" + pObs + "', ";
+                query += "   '" + pIndPre + "', ";
+                //if (string.IsNullOrEmpty(pTipoPintura))
+                //{
+                //   query += " NULL, ";
+                //}
+                //else
+                //{
+                    query += " '" + pTipoPintura + "', ";
+               // }
                 query += "   '" + pMeioIsolante + "', ";
                 query += "   '" + pDescOutraTensaoPri + "', ";
                 query += "   '" + pDescOutraTensaoSec + "', ";

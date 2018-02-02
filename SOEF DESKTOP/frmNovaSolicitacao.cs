@@ -2288,7 +2288,11 @@ namespace ORCAMENTOS_FOCKINK
         }
 
 
-
+        /// <summary>
+        /// Lista os dados do Escopo 05_1
+        /// </summary>
+        /// <param name="pNumSolic"></param>
+        /// <param name="pNumRev"></param>
         protected void listaEscopo05_1(string pNumSolic, string pNumRev)
         {
             try
@@ -2382,7 +2386,143 @@ namespace ORCAMENTOS_FOCKINK
             }
         }
 
+        /// <summary>
+        /// Lista os dados do Escopo 05_2
+        /// </summary>
+        /// <param name="pNumSolic"></param>
+        /// <param name="pNumRev"></param>
+        protected void listaEscopo05_2(string pNumSolic, string pNumRev)
+        {
+            try
+            {
+                SOEF_CLASS.Escopo_05_2 Escopo05_2 = new SOEF_CLASS.Escopo_05_2(pNumSolic, pNumRev);
+                DataTable dt = Escopo05_2.getEscopo_05_2();
+                if (dt.Rows.Count > 0)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        if (dr["IND_POTENCIA_INFORM_DEF"].ToString() == "I")
+                        {
+                            radio5_2PotInf.Checked = true;
+                        }
+                        else
+                        {
+                            radio5_2PotDef.Checked = true;
+                            if (dr["IND_LISTA_CARGAS"].ToString() == "S")
+                            {
+                                radio5_2ListaCargasS.Checked = true;
+                            }
+                            else
+                            {
+                                radio5_2ListaCargasN.Checked = true;
+                            }
+                        }
+                        //Tensão Primária
+                        combo5_2TensaoPrim.SelectedIndex = Convert.ToInt32(dr["TENSAO_PRIMARIA"].ToString());
+                        if (combo5_2TensaoPrim.SelectedIndex == 4)
+                        {
+                            txt5_2DescOutraTensaoPrim.Enabled = true;
+                            txt5_2DescOutraTensaoPrim.Text = dr["DESC_OUTRA_TENSAO_PRIM"].ToString();
+                        }
+                        else
+                        {
+                            txt5_2DescOutraTensaoPrim.Text = "";
+                            txt5_2DescOutraTensaoPrim.Enabled = false;
+                        }
+                        //Tensão Secundária
+                        combo5_2TensaoSec.SelectedIndex = Convert.ToInt32(dr["TENSAO_SECUNDARIA"].ToString());
+                        if (combo5_2TensaoSec.SelectedIndex == 4)
+                        {
+                            txt5_2DescOutraTensaoSec.Enabled = true;
+                            txt5_2DescOutraTensaoSec.Text = dr["DESC_OUTRA_TENSAO_SECUN"].ToString();
+                        }
+                        else
+                        {
+                            txt5_2DescOutraTensaoSec.Text = "";
+                            txt5_2DescOutraTensaoSec.Enabled = false;
+                        }
+                        //Meio Isolante
+                        combo5_2MeioIsol.SelectedIndex = Convert.ToInt32(dr["MEIO_ISOLANTE"].ToString());
+                        if(combo5_2MeioIsol.SelectedIndex == 1)
+                        {
+                            //Exige Buchas MT e BT
+                            combo5_2BuchaMT.SelectedIndex = Convert.ToInt32(dr["BUCHAS_MT"].ToString());
+                            if(combo5_2BuchaMT.SelectedIndex == 4)
+                            {
+                                txt5_2DescOutraBuchaMT.Enabled = true;
+                                txt5_2DescOutraBuchaMT.Text = dr["DESC_OUTRA_BUCHA_MT"].ToString();
+                            }
+                            else
+                            {
+                                txt5_2DescOutraBuchaMT.Text = "";
+                                txt5_2DescOutraBuchaMT.Enabled = false;
+                            }
 
+                            combo5_2BuchaBT.SelectedIndex = Convert.ToInt32(dr["BUCHAS_BT"].ToString());
+                            if (combo5_2BuchaBT.SelectedIndex == 5)
+                            {
+                                txt5_2DescOutraBuchaBT.Enabled = true;
+                                txt5_2DescOutraBuchaBT.Text = dr["DESC_OUTRA_BUCHA_BT"].ToString();
+                            }
+                            else
+                            {
+                                txt5_2DescOutraBuchaBT.Text = "";
+                                txt5_2DescOutraBuchaBT.Enabled = false;
+                            }
+                        }
+                        else if (combo5_2MeioIsol.SelectedIndex == 3)
+                        {
+                            //Exige Pintura Meio Isolante
+                            label172.Visible = true;
+                            combo5_2Pintura.Visible = true;
+                            if (dr["TIPO_PINTURA_MEIO_ISOLANTE"].ToString() == "R")
+                            {
+                                combo5_2Pintura.SelectedIndex = 1;
+                            }
+                            else if (dr["TIPO_PINTURA_MEIO_ISOLANTE"].ToString() == "M")
+                            {
+                                combo5_2Pintura.SelectedIndex = 2;
+                            }
+                            else if (dr["TIPO_PINTURA_MEIO_ISOLANTE"].ToString() == "E")
+                            {
+                                combo5_2Pintura.SelectedIndex = 3;
+                            }
+                        }
+                        else if(combo5_2MeioIsol.SelectedIndex == 4)
+                        {
+                            //Exige Descrição outro meio Isolante
+                            txt5_2DescOutroMeio.Enabled = true;
+                            txt5_2DescOutroMeio.Text = dr["DESC_OUTRO_MEIO_ISOLANTE"].ToString();
+                        }
+                        txt5_2Obs.Text = dr["OBSERVACOES"].ToString();
+                    }
+                    btn5_2Excluir.Visible = true;
+                }
+                else
+                {
+                    //Reseta os campos da tela
+                    txt5_2Obs.Text = "";
+                    radio5_2PotInf.Checked = true;
+                    combo5_2TensaoPrim.SelectedIndex = 0;
+                    combo5_2TensaoSec.SelectedIndex = 0;
+                    combo5_2MeioIsol.SelectedIndex = 0;
+                    combo5_2Pintura.SelectedIndex = 0;
+                    combo5_2BuchaMT.SelectedIndex = 0;
+                    combo5_2BuchaBT.SelectedIndex = 0;
+                    txt5_2DescOutraBuchaMT.Text = "";
+                    txt5_2DescOutraBuchaMT.Visible = true;
+                    txt5_2DescOutraBuchaBT.Text = "";
+                    txt5_2DescOutraBuchaBT.Visible = true;
+                    combo5_2Potencia.SelectedIndex = 0;
+                    btn5_2Excluir.Visible = false;
+                    tabNovaSolicitacao.SelectedTab.Name = "tabEscopo5_2"; //Conferir se o nome está correto
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
 
 
 
@@ -7266,6 +7406,7 @@ namespace ORCAMENTOS_FOCKINK
             }
             else
             {
+                bool validaPotencia = true;
                 SOEF_CLASS.Escopo_05_1 Escopo_05_1 = new SOEF_CLASS.Escopo_05_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 //Verifica se foi cadastrado a Potência caso seja obrigatória
                 if (radio5_1PotInf.Checked)
@@ -7273,11 +7414,15 @@ namespace ORCAMENTOS_FOCKINK
                     DataTable retPotencia = Escopo_05_1.getPotenciaEscopo("05_1", null);
                     if (retPotencia.Rows.Count <= 0)
                     {
-                        MessageBox.Show("A Potência do transformador BT-BT foi definida como Informada, mas não foi associada nenhuma potência. Informe a lista de potências desejada.");
+                        validaPotencia = false;
                     }
-                }                
-              //  else
-              //  {
+                }
+                if (!validaPotencia)
+                {
+                    MessageBox.Show("A Potência do transformador BT-BT foi definida como Informada, mas não foi associada nenhuma potência. Informe a lista de potências desejada.");
+                }
+                else
+                {
                     string TensaoPrimaria;
                     string TensaoSecundaria;
                     string indPotenciaInformDef = null;
@@ -7290,7 +7435,7 @@ namespace ORCAMENTOS_FOCKINK
                     string descOutTensaoSecun = null;
                     bool sucesso = true;
 
-                    
+
                     //Tensão Primária
                     TensaoPrimaria = combo5_1TensaoPrimaria.SelectedIndex.ToString();
                     if (combo5_1TensaoPrimaria.SelectedIndex == 4)
@@ -7343,7 +7488,7 @@ namespace ORCAMENTOS_FOCKINK
                     }
                     obs = txt5_1Obs.Text;
 
-                    if(indPotenciaInformDef == "D")
+                    if (indPotenciaInformDef == "D")
                     {
                         if (radio5_1ListaCargaS.Checked)
                         {
@@ -7360,7 +7505,6 @@ namespace ORCAMENTOS_FOCKINK
                     }
                     SOEF_CLASS.Escopo_Valor_Comum EscopoVlrComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
                     //Verifica se está cadastrando ou alterando o registro
-                  //  AcaoTela = "N"; //Para testar
                     if (AcaoTela == "N")
                     {
                         MessageBox.Show("Pintura: " + tipoPinturaInvolucro);
@@ -7368,7 +7512,7 @@ namespace ORCAMENTOS_FOCKINK
                         if (retornoInsert > 0)
                         {
                             //Verifica se o campo pintura é requerido
-                            if(indInvolucroProtec == "S")
+                            if (indInvolucroProtec == "S")
                             {
                                 //Verifica se já existe registro para essa solicitação. Se sim, atualiza com os valores deste escopo, se não, insere um novo registro
                                 DataTable dtBuscaEscopo05_1 = EscopoVlrComum.buscaEscopoValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
@@ -7390,7 +7534,7 @@ namespace ORCAMENTOS_FOCKINK
                                         sucesso = false;
                                     }
                                 }
-                            }                            
+                            }
                             AcaoTela = "C";
                             btn05_1Excluir.Visible = true;
                         }
@@ -7452,7 +7596,9 @@ namespace ORCAMENTOS_FOCKINK
                     else
                     {
                         MessageBox.Show("Ocorreu um erro ao ao inserir/alterar o registro. Por favor tente novamente ou contate o administrador do sistema.");
-                    }               
+                    }
+                }
+                                  
             }  
         }
 
@@ -7547,6 +7693,34 @@ namespace ORCAMENTOS_FOCKINK
                 inicializaCamposE05_2();
                 SOEF_CLASS.Escopo_05_2 Escopo_05_2 = new SOEF_CLASS.Escopo_05_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 dgv5_2Potencias.DataSource = Escopo_05_2.getPotenciaEscopo("05_2", null);
+                if (AcaoTela == "N")
+                {
+                    SOEF_CLASS.Escopo_Valor_Comum EscopoValorComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    //Verifica e sugere os campos comuns caso existir registro
+                    DataTable dtEscopo05_2 = EscopoValorComum.buscaEscopoValorComumE05_2();
+                    if (dtEscopo05_2.Rows.Count > 0)
+                    {
+                        foreach (DataRow dr in dtEscopo05_2.Rows)
+                        {
+                            if (dr["TIPO_PINTURA"].ToString() == "R")
+                            {
+                                combo5_1Pintura.SelectedIndex = 1;
+                            }
+                            else if (dr["TIPO_PINTURA"].ToString() == "M")
+                            {
+                                combo5_1Pintura.SelectedIndex = 2;
+                            }
+                            else if (dr["TIPO_PINTURA"].ToString() == "E")
+                            {
+                                combo5_1Pintura.SelectedIndex = 3;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        inicializaCamposE05_2();
+                    }
+                }
             }
         }
 
@@ -7723,6 +7897,7 @@ namespace ORCAMENTOS_FOCKINK
 
                 potKva = txt5_2PotKva.Text;
                 quantidade = txt5_2Qtd.Text;
+                fatorK = txt5_2FatorK.Text;
 
                 SOEF_CLASS.Escopo_05_2 Escopo_05_2 = new SOEF_CLASS.Escopo_05_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 sequencia = Convert.ToString(Escopo_05_2.getSequencia(this.numero_solic.ToString(), this.NumRevisaoSolic, escopo) + 1);
@@ -7731,6 +7906,11 @@ namespace ORCAMENTOS_FOCKINK
                 {
                     dgv5_2Potencias.DataSource = Escopo_05_2.getPotenciaEscopo("05_2", null);
                     MessageBox.Show("Registro inserido com sucesso!");
+                    //Limpa campos
+                    combo5_2Potencia.SelectedIndex = 0;
+                    txt5_2PotKva.Text = "";
+                    txt5_2Qtd.Text = "";
+                    txt5_2FatorK.Text = "";
                 }
                 else
                 {
@@ -7828,8 +8008,8 @@ namespace ORCAMENTOS_FOCKINK
 
                 //Oculta campo Lista Cargas
                 panel25.Visible = true;
-                radio5_2ListaCargasS.Checked = true;
-                radio5_2ListaCargasN.Checked = true;
+                radio5_2ListaCargasS.Checked = false;
+                radio5_2ListaCargasN.Checked = false;
             }
         }
 
@@ -7846,12 +8026,12 @@ namespace ORCAMENTOS_FOCKINK
                 txt5_2DescOutroMeio.Enabled = false;
 
             }
-           if (combo5_2MeioIsol.SelectedIndex == 1)
+            else if (combo5_2MeioIsol.SelectedIndex == 1)
             {
                 combo5_2BuchaMT.Enabled = true;
                 combo5_2BuchaBT.Enabled = true;
-                txt5_2DescOutraBuchaMT.Enabled = true;
-                txt5_2DescOutraBuchaBT.Enabled = true;
+                //txt5_2DescOutraBuchaMT.Enabled = true;
+                //txt5_2DescOutraBuchaBT.Enabled = true;
                 label172.Visible = false;
                 combo5_2Pintura.Visible = false;
             }
@@ -7879,7 +8059,7 @@ namespace ORCAMENTOS_FOCKINK
                 txt5_2DescOutroMeio.Text = "";
                 txt5_2DescOutroMeio.Enabled = false;
             }
-            else if (combo5_2MeioIsol.SelectedIndex == 4)
+            else //if (combo5_2MeioIsol.SelectedIndex == 4)
             {
                 combo5_2BuchaMT.Enabled = false;
                 combo5_2BuchaBT.Enabled = false;
@@ -7901,12 +8081,12 @@ namespace ORCAMENTOS_FOCKINK
             }
             else if (radio5_2PotDef.Checked)
             {
-                if(!radio5_2ListaCargasS.Checked || !radio5_2ListaCargasN.Checked)
+                if(!radio5_2ListaCargasS.Checked && !radio5_2ListaCargasN.Checked)
                 {
                     erros += "O campo Tem Lista de Cargas, deve ser preenchido.\n";
                 }
             }
-
+            //Tensão Primária
             if(combo5_2TensaoPrim.SelectedIndex == 0)
             {
                 erros += "O campo Tensão Primária, deve ser preenchido.\n";
@@ -7918,14 +8098,20 @@ namespace ORCAMENTOS_FOCKINK
                     erros += "O campo Descrição da Outra Tensão Primária, deve ser preenchido.\n";
                 }
             }
+            //Tensão Secundária
+            MessageBox.Show(combo5_2TensaoSec.SelectedIndex.ToString());
             if(combo5_2TensaoSec.SelectedIndex == 0)
             {
                 erros += "O campo Tensão Secundária, deve ser preenchido.\n";
             }
-            else if (string.IsNullOrEmpty(txt5_2DescOutraTensaoSec.Text))
+            else  if(combo5_2TensaoSec.SelectedIndex == 7)
             {
-                erros += "O campo Descrição da Outra Tensão Secundária, deve ser preenchido.\n";
+                if (string.IsNullOrEmpty(txt5_2DescOutraTensaoSec.Text))
+                {
+                    erros += "O campo Descrição da Outra Tensão Secundária, deve ser preenchido.\n";
+                }
             }
+            //Meio Isolante
             if (combo5_2MeioIsol.SelectedIndex == 0)
             {
                 erros += "O campo Meio Isolante, deve ser preenchido.\n";
@@ -7974,6 +8160,311 @@ namespace ORCAMENTOS_FOCKINK
             {
                 MessageBox.Show("Painel de erros:\n" + erros);
             }
+            else
+            {
+                bool validaPotencia = true;
+                SOEF_CLASS.Escopo_05_2 Escopo_05_2 = new SOEF_CLASS.Escopo_05_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                //Verifica se foi cadastrado a Potência caso seja obrigatória
+                if (radio5_1PotInf.Checked)
+                {
+                    DataTable retPotencia = Escopo_05_2.getPotenciaEscopo("05_2", null);
+                    if (retPotencia.Rows.Count <= 0)
+                    {
+                        validaPotencia = false;
+                    }
+                }
+                if (!validaPotencia)
+                {
+                    MessageBox.Show("A Potência do transformador BT-MT/MT-BT foi definida como Informada, mas não foi associada nenhuma potência. Informe a lista de potências desejada.");
+                }
+                else
+                {
+                    string TensaoPrimaria = "";
+                    string TensaoSecundaria = "";
+                    string indPotenciaInformDef = "";
+                    string indListaCargas = "";
+                    string MeioIsolante = "";
+                    string BuchasMT = "";
+                    string BuchasBT = "";
+                    string Obs = "";
+                    string indPre = "S";
+                    string tipoPinturaMeioIsol = "";
+                    string descOutraTensaoPrim = "";
+                    string descOutraTensaoSec = "";
+                    string descOutraBuchaMT = "";
+                    string descOutraBuchaBT = "";
+                    string descOutroMeioIsolante = "";
+                    bool sucesso = true;
+
+                    //Tensão Primária
+                    TensaoPrimaria = combo5_2TensaoPrim.SelectedIndex.ToString();
+                    if (combo5_2TensaoPrim.SelectedIndex == 4)
+                    {
+                        descOutraTensaoPrim = txt5_2DescOutraTensaoPrim .Text;
+                    }
+                    //Tensão Secundária
+                    TensaoSecundaria = combo5_2TensaoSec.SelectedIndex.ToString();
+                    if (combo5_2TensaoSec.SelectedIndex == 4)
+                    {
+                        descOutraTensaoSec = txt5_2DescOutraTensaoSec.Text;
+                    }
+                    //IND_POTENCIA_INFORM_DEF
+                    if (radio5_2PotInf.Checked)
+                    {
+                        indPotenciaInformDef = "I";
+                    }
+                    else if (radio5_1PotFD.Checked)
+                    {
+                        indPotenciaInformDef = "D";
+                        if (radio5_2ListaCargasS.Checked)
+                        {
+                            indListaCargas = "S";
+                        }
+                        else
+                        {
+                            indListaCargas = "N";
+                        }
+                    }
+                    //Meio Isolante
+                    MeioIsolante = combo5_2MeioIsol.SelectedIndex.ToString();
+                    if(combo5_2MeioIsol.SelectedIndex == 1)
+                    {
+                        //Obriga Buchas MT e BT
+                        BuchasMT = combo5_2BuchaMT.SelectedIndex.ToString();
+                        if(combo5_2BuchaMT.SelectedIndex == 4)
+                        {
+                            BuchasMT = combo5_2BuchaMT.SelectedIndex.ToString();
+                            descOutraBuchaMT = txt5_2DescOutraBuchaMT.Text;
+                        }
+                        else
+                        {
+                            descOutraBuchaMT = "";
+                        }
+                        if(combo5_2BuchaBT.SelectedIndex == 5)
+                        {
+                            BuchasBT = combo5_2BuchaBT.SelectedIndex.ToString();
+                            descOutraBuchaBT = txt5_2DescOutraBuchaBT.Text;
+                        }
+                        else
+                        {
+                            descOutraBuchaBT = "";
+                        }   
+                    }
+                    else if(combo5_2MeioIsol.SelectedIndex == 3)
+                    {
+                        //Pintura
+                        if (combo5_1Pintura.SelectedIndex == 1)
+                        {
+                            tipoPinturaMeioIsol = "R";
+                        }
+                        else if (combo5_1Pintura.SelectedIndex == 2)
+                        {
+                            tipoPinturaMeioIsol = "M";
+                        }
+                        else if (combo5_1Pintura.SelectedIndex == 3)
+                        {
+                            tipoPinturaMeioIsol = "E";
+                        }
+                    }
+                    else if(combo5_2MeioIsol.SelectedIndex == 4)
+                    {
+                        descOutroMeioIsolante = txt5_2DescOutroMeio.Text;
+                    }
+                    //Obs
+                    Obs = txt5_2Obs.Text;
+
+                    SOEF_CLASS.Escopo_Valor_Comum EscopoVlrComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    //Verifica se está cadastrando ou alterando o registro
+                    AcaoTela = "N";
+                    if (AcaoTela == "N")
+                    {
+                        int retornoInsert = Escopo_05_2.gravaEscopo_05_2(TensaoPrimaria, TensaoSecundaria, indPotenciaInformDef, indListaCargas, MeioIsolante, BuchasMT, BuchasBT, Obs, indPre, tipoPinturaMeioIsol, descOutraTensaoPrim, descOutraTensaoSec, descOutraBuchaMT, descOutraBuchaBT, descOutroMeioIsolante);
+                        if (retornoInsert > 0)
+                        {
+                            //Verifica se o campo pintura é requerido
+                            if (combo5_2MeioIsol.SelectedIndex == 3)
+                            {
+                                //Verifica se já existe registro para essa solicitação. Se sim, atualiza com os valores deste escopo, se não, insere um novo registro
+                                DataTable dtBuscaEscopo05_2 = EscopoVlrComum.buscaEscopoValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                                if (dtBuscaEscopo05_2.Rows.Count > 0)
+                                {
+                                    //Faz o update e grava os dados usados no Escopo 10_2
+                                    int retornoInsert05_2 = EscopoVlrComum.atualizaEscopo_Valor_Comum_E05_2(tipoPinturaMeioIsol);
+                                    if (retornoInsert05_2 <= 0)
+                                    {
+                                        sucesso = false;
+                                    }
+                                }
+                                else
+                                {
+                                    //Insere um novo registro na tabela Valor Comum
+                                    int retornoInsert05_2 = EscopoVlrComum.gravaEscopo_Valor_Comum_E05_2(tipoPinturaMeioIsol);
+                                    if (retornoInsert05_2 <= 0)
+                                    {
+                                        sucesso = false;
+                                    }
+                                }
+                            }
+                            AcaoTela = "C";
+                            btn5_2Excluir.Visible = true;                        }
+                        else
+                        {
+                            MessageBox.Show("Ocorreu um erro na inserção do registro. Tente novamente mais tarde.");
+                        }
+                    }
+                    else
+                    {
+                        //AcaoTela - ATUALIZAR
+                        DataTable dtBuscaEscopo05_2 = Escopo_05_2.getEscopo_05_2();
+                        int retornoUpdate = 0;
+                        if (dtBuscaEscopo05_2.Rows.Count > 0)
+                        {
+                            //Atualiza o Escopo 05_1 se já estiver cadastrado
+                            retornoUpdate = Escopo_05_2.updateEscopo_05_2(TensaoPrimaria, TensaoSecundaria, indPotenciaInformDef, indListaCargas, MeioIsolante, BuchasMT, BuchasBT, Obs, indPre, tipoPinturaMeioIsol, descOutraTensaoPrim, descOutraTensaoSec, descOutraBuchaMT, descOutraBuchaBT, descOutroMeioIsolante);
+                        }
+                        else
+                        {
+                            //Cadastra o Escopo 05_1 se ainda não existir
+                            retornoUpdate = Escopo_05_2.gravaEscopo_05_2(TensaoPrimaria, TensaoSecundaria, indPotenciaInformDef, indListaCargas, MeioIsolante, BuchasMT, BuchasBT, Obs, indPre, tipoPinturaMeioIsol, descOutraTensaoPrim, descOutraTensaoSec, descOutraBuchaMT, descOutraBuchaBT, descOutroMeioIsolante);
+                        }
+                        if (retornoUpdate > 0)
+                        {
+                            DataTable dtBuscaVCEscopo05_2 = EscopoVlrComum.buscaEscopoValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                            if (dtBuscaVCEscopo05_2.Rows.Count > 0)
+                            {
+                                //Faz o update e grava os dados usados no Escopo 05_1
+                                int retornoInsert05_2 = EscopoVlrComum.atualizaEscopo_Valor_Comum_E05_2(tipoPinturaMeioIsol);
+                                if (retornoInsert05_2 <= 0)
+                                {
+                                    sucesso = false;
+                                }
+                            }
+                            else
+                            {
+                                //Insere um novo registro na tabela Valor Comum
+                                int retornoInsert05_2 = EscopoVlrComum.gravaEscopo_Valor_Comum_E05_2(tipoPinturaMeioIsol);
+                                if (retornoInsert05_2 <= 0)
+                                {
+                                    sucesso = false;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Ocorreu um erro na atualização do registro. Tente novamente mais tarde.");
+                        }
+                    }
+                    if (sucesso)
+                    {
+                        MessageBox.Show("Registro inserido/alterado com sucesso!");
+                        btn5_2Excluir.Visible = true;
+                        listaEscopo05_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                        //Muda o STATUS da AçãoTela p/ EDIÇÂO
+                        AcaoTela = "C";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocorreu um erro ao ao inserir/alterar o registro. Por favor tente novamente ou contate o administrador do sistema.");
+                    }
+
+
+
+
+
+
+
+
+                }
+            }
+
+
+        }
+
+        private void dgv5_2Potencias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
+            {
+                SOEF_CLASS.Escopo_05_2 Escopo_05_2 = new SOEF_CLASS.Escopo_05_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                int retorno = Escopo_05_2.deletePotencEscopo(dgv5_2Potencias.CurrentRow.Cells[1].Value.ToString(), dgv5_2Potencias.CurrentRow.Cells[2].Value.ToString(), "05_2", dgv5_2Potencias.CurrentRow.Cells[3].Value.ToString());
+                if (retorno > 0)
+                {
+                    dgv5_2Potencias.DataSource = Escopo_05_2.getPotenciaEscopo("05_2", null);
+                    MessageBox.Show("Registro apagado com sucesso!");
+                }
+            }
+        }
+
+        private void btn5_2Excluir_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Deseja realmente excluir o Escopo 05_2 desta solicitação?", "SOEF", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                bool sucesso = true;
+                SOEF_CLASS.Escopo_05_2 Escopo05_2 = new SOEF_CLASS.Escopo_05_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                //Apaga os dados da tabela POTENC_ESCOPO
+                DataTable dtPotencia = Escopo05_2.getPotenciaEscopo("05_2", null);
+                if (dtPotencia.Rows.Count > 0)
+                {
+                    int retornoPotencia = Escopo05_2.deletePotencEscopo(this.numero_solic.ToString(), this.NumRevisaoSolic, "05_1", null);
+                    if (retornoPotencia <= 0)
+                    {
+                        sucesso = false;
+                    }
+                }
+                //Apaga os dados do Escopo 5_2
+                int retorno = Escopo05_2.deleteEscopo_05_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                if (retorno > 0)
+                {
+                    //Verifica se o campo da Tabela VALOR_COMUM é requerido
+                    SOEF_CLASS.Escopo_Valor_Comum EValorComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    DataTable dtBusca = EValorComum.buscaEscopoValorComumE05_2();
+                    if (dtBusca.Rows.Count > 0)
+                    {
+                        int retornoUpdate = 0;
+                        retornoUpdate = EValorComum.deleteEscopo_Valor_Comum_E05_2();
+                        if (retornoUpdate > 0)
+                        {
+                            //Verifica se todos os campos do registro são nulos, se sim, apaga o registro em definitivo
+                            bool DeletaRegistro = verificaRegistroValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                            if (DeletaRegistro)//True - Deleta o registro
+                            {
+                                int retornoDelete = EValorComum.deleteEscopoValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                                if (retornoDelete <= 0)
+                                {
+                                    sucesso = false;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            sucesso = false;
+                        }
+                    }
+                }
+                else
+                {
+                    sucesso = false;
+                }
+                if (sucesso)
+                {
+                    MessageBox.Show("Registro excluído com sucesso!");
+                    btn5_2Excluir.Visible = false;
+                    dgv5_2Potencias.DataSource = Escopo05_2.getPotenciaEscopo("05_2", null);
+                    listaEscopo05_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro ao excluir o registro. Por favor, contate o suporte do sistema e tente novamente.");
+                }
+            }
+        }
+
+        private void combo5_2Pintura_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
