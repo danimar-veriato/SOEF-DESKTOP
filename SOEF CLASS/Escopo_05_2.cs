@@ -57,6 +57,7 @@ namespace SOEF_CLASS
                 query += "   " + pTensaoSec + ", ";
                 query += "   '" + pIndPotenciaInfDef + "', ";
                 query += "   '" + pIndListaCargas + "', ";
+                query += "   " + pMeioIsolante + ", ";
                 if (string.IsNullOrEmpty(pBuchaMT))
                 {
                     query += " NULL, ";
@@ -75,15 +76,7 @@ namespace SOEF_CLASS
                 }
                 query += "   '" + pObs + "', ";
                 query += "   '" + pIndPre + "', ";
-                //if (string.IsNullOrEmpty(pTipoPintura))
-                //{
-                //   query += " NULL, ";
-                //}
-                //else
-                //{
-                    query += " '" + pTipoPintura + "', ";
-               // }
-                query += "   '" + pMeioIsolante + "', ";
+                query += " '" + pTipoPintura + "', ";
                 query += "   '" + pDescOutraTensaoPri + "', ";
                 query += "   '" + pDescOutraTensaoSec + "', ";
                 query += "   '" + pDescOutraBuchaMT + "', ";
@@ -137,8 +130,22 @@ namespace SOEF_CLASS
                 query += "       [IND_POTENCIA_INFORM_DEF] = '" + pIndPotenciaInfDef + "', ";
                 query += "       [IND_LISTA_CARGAS] = '" + pIndListaCargas + "', ";
                 query += "       [MEIO_ISOLANTE] = " + pMeioIsolante + ", ";
-                query += "       [BUCHAS_MT] = " + pBuchaMT + ", ";
-                query += "       [BUCHAS_BT] = " + pBuchaBT + ", ";
+                if (string.IsNullOrEmpty(pBuchaMT))
+                {
+                    query += "       [BUCHAS_MT] = NULL, ";
+                }
+                else
+                {
+                    query += "       [BUCHAS_MT] = " + pBuchaMT + ", ";
+                }
+                if (string.IsNullOrEmpty(pBuchaBT))
+                {
+                    query += "       [BUCHAS_BT] = NULL, ";
+                }
+                else
+                {
+                    query += "       [BUCHAS_BT] = " + pBuchaBT + ", ";
+                }
                 query += "       [OBSERVACOES] = '" + pObs + "', ";
                 query += "       [IND_PREENCHIDO] = '" + pIndPre + "', ";
                 if (string.IsNullOrEmpty(pTipoPintura))
@@ -149,10 +156,10 @@ namespace SOEF_CLASS
                 {
                     query += "       [TIPO_PINTURA_MEIO_ISOLANTE] = '" + pTipoPintura + "', ";
                 }
-                query += "       [DESC_OUTRA_TENSAO_PRIM] = " + pDescOutraTensaoPri + ", ";
-                query += "       [DESC_OUTRA_TENSAO_SECUN] = " + pDescOutraTensaoSec + ", ";
+                query += "       [DESC_OUTRA_TENSAO_PRIM] = '" + pDescOutraTensaoPri + "', ";
+                query += "       [DESC_OUTRA_TENSAO_SECUN] = '" + pDescOutraTensaoSec + "', ";
                 query += "       [DESC_OUTRA_BUCHA_MT] = '" + pDescOutraBuchaMT + "', ";
-                query += "       [DESC_OUTRA_BUCHA_BT] = '" + pDescOutraBuchaBT + "' "; 
+                query += "       [DESC_OUTRA_BUCHA_BT] = '" + pDescOutraBuchaBT + "', "; 
                 query += "       [DESC_OUTRO_MEIO_ISOLANTE] = '" + pDescMeioIsolante + "' ";
                 query += "  WHERE [NUMERO_SOLICITACAO] = " + Numero + " AND  [REVISAO_SOLICITACAO] = '" + Revisao + "'";
                 retorno = sqlce.insertSOF(query, null, null);

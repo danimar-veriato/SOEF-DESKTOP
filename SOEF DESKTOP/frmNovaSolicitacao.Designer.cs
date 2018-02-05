@@ -3290,7 +3290,7 @@
             this.tabEscopo2.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo2.Name = "tabEscopo2";
             this.tabEscopo2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo2.Size = new System.Drawing.Size(1014, 554);
+            this.tabEscopo2.Size = new System.Drawing.Size(1073, 554);
             this.tabEscopo2.TabIndex = 3;
             this.tabEscopo2.Text = "2 - AE";
             // 
@@ -3300,7 +3300,7 @@
             this.tabEscopo3.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo3.Name = "tabEscopo3";
             this.tabEscopo3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo3.Size = new System.Drawing.Size(1014, 554);
+            this.tabEscopo3.Size = new System.Drawing.Size(1073, 554);
             this.tabEscopo3.TabIndex = 4;
             this.tabEscopo3.Text = "3 - AE";
             // 
@@ -3310,7 +3310,7 @@
             this.tabEscopo4.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo4.Name = "tabEscopo4";
             this.tabEscopo4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo4.Size = new System.Drawing.Size(1014, 554);
+            this.tabEscopo4.Size = new System.Drawing.Size(1073, 554);
             this.tabEscopo4.TabIndex = 5;
             this.tabEscopo4.Text = "4 - AU";
             // 
@@ -4089,6 +4089,7 @@
             this.combo5_2BuchaBT.Name = "combo5_2BuchaBT";
             this.combo5_2BuchaBT.Size = new System.Drawing.Size(140, 21);
             this.combo5_2BuchaBT.TabIndex = 101;
+            this.combo5_2BuchaBT.SelectedIndexChanged += new System.EventHandler(this.combo5_2BuchaBT_SelectedIndexChanged);
             // 
             // combo5_2BuchaMT
             // 
@@ -4105,6 +4106,7 @@
             this.combo5_2BuchaMT.Name = "combo5_2BuchaMT";
             this.combo5_2BuchaMT.Size = new System.Drawing.Size(140, 21);
             this.combo5_2BuchaMT.TabIndex = 99;
+            this.combo5_2BuchaMT.SelectedIndexChanged += new System.EventHandler(this.combo5_2BuchaMT_SelectedIndexChanged);
             // 
             // label186
             // 
@@ -4867,7 +4869,7 @@
             this.tabEscopo6.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo6.Name = "tabEscopo6";
             this.tabEscopo6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo6.Size = new System.Drawing.Size(1014, 554);
+            this.tabEscopo6.Size = new System.Drawing.Size(1073, 554);
             this.tabEscopo6.TabIndex = 7;
             this.tabEscopo6.Text = "6 - IE";
             // 
@@ -4877,7 +4879,7 @@
             this.tabEscopo7.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo7.Name = "tabEscopo7";
             this.tabEscopo7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo7.Size = new System.Drawing.Size(1014, 554);
+            this.tabEscopo7.Size = new System.Drawing.Size(1073, 554);
             this.tabEscopo7.TabIndex = 8;
             this.tabEscopo7.Text = "7 - IE";
             // 
@@ -4887,7 +4889,7 @@
             this.tabEscopo8.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo8.Name = "tabEscopo8";
             this.tabEscopo8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo8.Size = new System.Drawing.Size(1014, 554);
+            this.tabEscopo8.Size = new System.Drawing.Size(1073, 554);
             this.tabEscopo8.TabIndex = 9;
             this.tabEscopo8.Text = "8 - IM";
             // 
@@ -4897,7 +4899,7 @@
             this.tabEscopo9.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo9.Name = "tabEscopo9";
             this.tabEscopo9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo9.Size = new System.Drawing.Size(1014, 554);
+            this.tabEscopo9.Size = new System.Drawing.Size(1073, 554);
             this.tabEscopo9.TabIndex = 10;
             this.tabEscopo9.Text = "9 - ELE";
             // 
@@ -4909,7 +4911,7 @@
             this.tabEscopo10.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo10.Name = "tabEscopo10";
             this.tabEscopo10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo10.Size = new System.Drawing.Size(1014, 554);
+            this.tabEscopo10.Size = new System.Drawing.Size(1073, 554);
             this.tabEscopo10.TabIndex = 11;
             this.tabEscopo10.Text = "10 - ELE";
             // 
@@ -6467,7 +6469,7 @@
             this.tabEscopo11.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo11.Name = "tabEscopo11";
             this.tabEscopo11.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo11.Size = new System.Drawing.Size(1014, 554);
+            this.tabEscopo11.Size = new System.Drawing.Size(1073, 554);
             this.tabEscopo11.TabIndex = 12;
             this.tabEscopo11.Text = "11 - EN";
             // 
@@ -6477,7 +6479,7 @@
             this.tabEscopo12.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo12.Name = "tabEscopo12";
             this.tabEscopo12.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo12.Size = new System.Drawing.Size(1014, 554);
+            this.tabEscopo12.Size = new System.Drawing.Size(1073, 554);
             this.tabEscopo12.TabIndex = 13;
             this.tabEscopo12.Text = "12 - EN";
             // 
@@ -6487,7 +6489,7 @@
             this.tabEscopo13.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo13.Name = "tabEscopo13";
             this.tabEscopo13.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo13.Size = new System.Drawing.Size(1014, 554);
+            this.tabEscopo13.Size = new System.Drawing.Size(1073, 554);
             this.tabEscopo13.TabIndex = 14;
             this.tabEscopo13.Text = "13 - EN";
             // 
@@ -6497,7 +6499,7 @@
             this.tabEscopo14.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo14.Name = "tabEscopo14";
             this.tabEscopo14.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo14.Size = new System.Drawing.Size(1014, 554);
+            this.tabEscopo14.Size = new System.Drawing.Size(1073, 554);
             this.tabEscopo14.TabIndex = 15;
             this.tabEscopo14.Text = "14 - EN";
             // 
@@ -6507,7 +6509,7 @@
             this.tabEscopo15.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo15.Name = "tabEscopo15";
             this.tabEscopo15.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo15.Size = new System.Drawing.Size(1014, 554);
+            this.tabEscopo15.Size = new System.Drawing.Size(1073, 554);
             this.tabEscopo15.TabIndex = 16;
             this.tabEscopo15.Text = "15 - EM";
             // 
@@ -6517,7 +6519,7 @@
             this.tabEscopo16.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo16.Name = "tabEscopo16";
             this.tabEscopo16.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo16.Size = new System.Drawing.Size(1014, 554);
+            this.tabEscopo16.Size = new System.Drawing.Size(1073, 554);
             this.tabEscopo16.TabIndex = 17;
             this.tabEscopo16.Text = "16 - PVIM";
             // 
@@ -6527,7 +6529,7 @@
             this.tabEscopo17.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo17.Name = "tabEscopo17";
             this.tabEscopo17.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo17.Size = new System.Drawing.Size(1014, 554);
+            this.tabEscopo17.Size = new System.Drawing.Size(1073, 554);
             this.tabEscopo17.TabIndex = 18;
             this.tabEscopo17.Text = "17 - FSP";
             // 
@@ -6539,7 +6541,7 @@
             this.tabEscopo18.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo18.Name = "tabEscopo18";
             this.tabEscopo18.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo18.Size = new System.Drawing.Size(1014, 554);
+            this.tabEscopo18.Size = new System.Drawing.Size(1073, 554);
             this.tabEscopo18.TabIndex = 19;
             this.tabEscopo18.Text = "18 - FSMO";
             // 
@@ -7230,7 +7232,7 @@
             this.tabEscopo19.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo19.Name = "tabEscopo19";
             this.tabEscopo19.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEscopo19.Size = new System.Drawing.Size(1014, 554);
+            this.tabEscopo19.Size = new System.Drawing.Size(1073, 554);
             this.tabEscopo19.TabIndex = 20;
             this.tabEscopo19.Text = "19 - FCivil";
             // 
@@ -7393,7 +7395,7 @@
             this.tabEscopo20.Controls.Add(this.label67);
             this.tabEscopo20.Location = new System.Drawing.Point(4, 22);
             this.tabEscopo20.Name = "tabEscopo20";
-            this.tabEscopo20.Size = new System.Drawing.Size(1014, 554);
+            this.tabEscopo20.Size = new System.Drawing.Size(1073, 554);
             this.tabEscopo20.TabIndex = 21;
             this.tabEscopo20.Text = "20 - Outro";
             // 

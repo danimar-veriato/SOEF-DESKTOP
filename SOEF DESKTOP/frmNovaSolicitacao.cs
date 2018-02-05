@@ -2419,7 +2419,7 @@ namespace ORCAMENTOS_FOCKINK
                         }
                         //Tensão Primária
                         combo5_2TensaoPrim.SelectedIndex = Convert.ToInt32(dr["TENSAO_PRIMARIA"].ToString());
-                        if (combo5_2TensaoPrim.SelectedIndex == 4)
+                        if (combo5_2TensaoPrim.SelectedIndex == 7)
                         {
                             txt5_2DescOutraTensaoPrim.Enabled = true;
                             txt5_2DescOutraTensaoPrim.Text = dr["DESC_OUTRA_TENSAO_PRIM"].ToString();
@@ -2431,7 +2431,7 @@ namespace ORCAMENTOS_FOCKINK
                         }
                         //Tensão Secundária
                         combo5_2TensaoSec.SelectedIndex = Convert.ToInt32(dr["TENSAO_SECUNDARIA"].ToString());
-                        if (combo5_2TensaoSec.SelectedIndex == 4)
+                        if (combo5_2TensaoSec.SelectedIndex == 7)
                         {
                             txt5_2DescOutraTensaoSec.Enabled = true;
                             txt5_2DescOutraTensaoSec.Text = dr["DESC_OUTRA_TENSAO_SECUN"].ToString();
@@ -2446,8 +2446,18 @@ namespace ORCAMENTOS_FOCKINK
                         if(combo5_2MeioIsol.SelectedIndex == 1)
                         {
                             //Exige Buchas MT e BT
-                            combo5_2BuchaMT.SelectedIndex = Convert.ToInt32(dr["BUCHAS_MT"].ToString());
-                            if(combo5_2BuchaMT.SelectedIndex == 4)
+                            //int teste = Convert.ToInt32(dr["BUCHAS_MT"].ToString());
+                            //combo5_2BuchaMT.SelectedIndex = teste;
+                            if (string.IsNullOrEmpty(dr["BUCHAS_MT"].ToString()))
+                            {
+                                combo5_2BuchaMT.SelectedIndex = 0;
+                            }
+                            else
+                            {
+                                combo5_2BuchaMT.SelectedIndex = Convert.ToInt32(dr["BUCHAS_MT"].ToString());
+                            }
+                            //MessageBox.Show("Bucha MT: "+combo5_2BuchaMT.SelectedIndex.ToString());
+                            if (combo5_2BuchaMT.SelectedIndex == 4)
                             {
                                 txt5_2DescOutraBuchaMT.Enabled = true;
                                 txt5_2DescOutraBuchaMT.Text = dr["DESC_OUTRA_BUCHA_MT"].ToString();
@@ -2457,8 +2467,15 @@ namespace ORCAMENTOS_FOCKINK
                                 txt5_2DescOutraBuchaMT.Text = "";
                                 txt5_2DescOutraBuchaMT.Enabled = false;
                             }
-
-                            combo5_2BuchaBT.SelectedIndex = Convert.ToInt32(dr["BUCHAS_BT"].ToString());
+                            if (string.IsNullOrEmpty(dr["BUCHAS_BT"].ToString()))
+                            {
+                                combo5_2BuchaBT.SelectedIndex = 0;
+                            }
+                            else
+                            {
+                                combo5_2BuchaBT.SelectedIndex = Convert.ToInt32(dr["BUCHAS_BT"].ToString());
+                            }
+                            MessageBox.Show("Bucha BT: " + combo5_2BuchaBT.SelectedIndex.ToString());
                             if (combo5_2BuchaBT.SelectedIndex == 5)
                             {
                                 txt5_2DescOutraBuchaBT.Enabled = true;
@@ -7721,6 +7738,10 @@ namespace ORCAMENTOS_FOCKINK
                         inicializaCamposE05_2();
                     }
                 }
+                else
+                {
+                    listaEscopo05_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                }
             }
         }
 
@@ -8043,7 +8064,7 @@ namespace ORCAMENTOS_FOCKINK
                 txt5_2DescOutraBuchaBT.Enabled = false;
                 label172.Visible = false;
                 combo5_2Pintura.Visible = false;
-                label185.Enabled = false;
+              //  label185.Enabled = false;
                 txt5_2DescOutroMeio.Text = "";
                 txt5_2DescOutroMeio.Enabled = false;
             }
@@ -8133,7 +8154,7 @@ namespace ORCAMENTOS_FOCKINK
                 {
                     erros += "O campo Buchas BT Devem Ser, deve ser preenchido.\n";
                 }
-                else if (combo5_2BuchaMT.SelectedIndex == 5)
+                else if (combo5_2BuchaBT.SelectedIndex == 5)
                 {
                     if (string.IsNullOrEmpty(txt5_2DescOutraBuchaBT.Text))
                     {
@@ -8179,8 +8200,8 @@ namespace ORCAMENTOS_FOCKINK
                 }
                 else
                 {
-                    string TensaoPrimaria = "";
-                    string TensaoSecundaria = "";
+                    string TensaoPrimaria;
+                    string TensaoSecundaria;
                     string indPotenciaInformDef = "";
                     string indListaCargas = "";
                     string MeioIsolante = "";
@@ -8198,13 +8219,13 @@ namespace ORCAMENTOS_FOCKINK
 
                     //Tensão Primária
                     TensaoPrimaria = combo5_2TensaoPrim.SelectedIndex.ToString();
-                    if (combo5_2TensaoPrim.SelectedIndex == 4)
+                    if (combo5_2TensaoPrim.SelectedIndex == 7)
                     {
                         descOutraTensaoPrim = txt5_2DescOutraTensaoPrim .Text;
                     }
                     //Tensão Secundária
                     TensaoSecundaria = combo5_2TensaoSec.SelectedIndex.ToString();
-                    if (combo5_2TensaoSec.SelectedIndex == 4)
+                    if (combo5_2TensaoSec.SelectedIndex == 7)
                     {
                         descOutraTensaoSec = txt5_2DescOutraTensaoSec.Text;
                     }
@@ -8233,16 +8254,17 @@ namespace ORCAMENTOS_FOCKINK
                         BuchasMT = combo5_2BuchaMT.SelectedIndex.ToString();
                         if(combo5_2BuchaMT.SelectedIndex == 4)
                         {
-                            BuchasMT = combo5_2BuchaMT.SelectedIndex.ToString();
+                           // BuchasMT = combo5_2BuchaMT.SelectedIndex.ToString();
                             descOutraBuchaMT = txt5_2DescOutraBuchaMT.Text;
                         }
                         else
                         {
                             descOutraBuchaMT = "";
                         }
-                        if(combo5_2BuchaBT.SelectedIndex == 5)
+                        //Bucha BT
+                        BuchasBT = combo5_2BuchaBT.SelectedIndex.ToString();
+                        if (combo5_2BuchaBT.SelectedIndex == 5)
                         {
-                            BuchasBT = combo5_2BuchaBT.SelectedIndex.ToString();
                             descOutraBuchaBT = txt5_2DescOutraBuchaBT.Text;
                         }
                         else
@@ -8275,9 +8297,10 @@ namespace ORCAMENTOS_FOCKINK
 
                     SOEF_CLASS.Escopo_Valor_Comum EscopoVlrComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
                     //Verifica se está cadastrando ou alterando o registro
-                    AcaoTela = "N";
+                    //AcaoTela = "N";
                     if (AcaoTela == "N")
                     {
+                        MessageBox.Show(BuchasBT);
                         int retornoInsert = Escopo_05_2.gravaEscopo_05_2(TensaoPrimaria, TensaoSecundaria, indPotenciaInformDef, indListaCargas, MeioIsolante, BuchasMT, BuchasBT, Obs, indPre, tipoPinturaMeioIsol, descOutraTensaoPrim, descOutraTensaoSec, descOutraBuchaMT, descOutraBuchaBT, descOutroMeioIsolante);
                         if (retornoInsert > 0)
                         {
@@ -8332,7 +8355,7 @@ namespace ORCAMENTOS_FOCKINK
                             DataTable dtBuscaVCEscopo05_2 = EscopoVlrComum.buscaEscopoValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
                             if (dtBuscaVCEscopo05_2.Rows.Count > 0)
                             {
-                                //Faz o update e grava os dados usados no Escopo 05_1
+                                //Faz o update e grava os dados usados no Escopo 05_2
                                 int retornoInsert05_2 = EscopoVlrComum.atualizaEscopo_Valor_Comum_E05_2(tipoPinturaMeioIsol);
                                 if (retornoInsert05_2 <= 0)
                                 {
@@ -8465,6 +8488,32 @@ namespace ORCAMENTOS_FOCKINK
         private void combo5_2Pintura_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void combo5_2BuchaMT_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(combo5_2BuchaMT.SelectedIndex == 4)
+            {
+                txt5_2DescOutraBuchaMT.Enabled = true;
+            }
+            else
+            {
+                txt5_2DescOutraBuchaMT.Text = "";
+                txt5_2DescOutraBuchaMT.Enabled = false;
+            }
+        }
+
+        private void combo5_2BuchaBT_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (combo5_2BuchaBT.SelectedIndex == 5)
+            {
+                txt5_2DescOutraBuchaBT.Enabled = true;
+            }
+            else
+            {
+                txt5_2DescOutraBuchaBT.Text = "";
+                txt5_2DescOutraBuchaBT.Enabled = false;
+            }
         }
     }
 }
