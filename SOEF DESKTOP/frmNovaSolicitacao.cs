@@ -2446,8 +2446,6 @@ namespace ORCAMENTOS_FOCKINK
                         if(combo5_2MeioIsol.SelectedIndex == 1)
                         {
                             //Exige Buchas MT e BT
-                            //int teste = Convert.ToInt32(dr["BUCHAS_MT"].ToString());
-                            //combo5_2BuchaMT.SelectedIndex = teste;
                             if (string.IsNullOrEmpty(dr["BUCHAS_MT"].ToString()))
                             {
                                 combo5_2BuchaMT.SelectedIndex = 0;
@@ -7524,7 +7522,6 @@ namespace ORCAMENTOS_FOCKINK
                     //Verifica se está cadastrando ou alterando o registro
                     if (AcaoTela == "N")
                     {
-                        MessageBox.Show("Pintura: " + tipoPinturaInvolucro);
                         int retornoInsert = Escopo_05_1.gravaEscopo_05_1(TensaoPrimaria, TensaoSecundaria, indPotenciaInformDef, indListaCargas, indInvolucroProtec, obs, indPre, tipoPinturaInvolucro, descOutTensaoPrim, descOutTensaoSecun);
                         if (retornoInsert > 0)
                         {
@@ -8205,11 +8202,11 @@ namespace ORCAMENTOS_FOCKINK
                     string indPotenciaInformDef = "";
                     string indListaCargas = "";
                     string MeioIsolante = "";
-                    string BuchasMT = "";
-                    string BuchasBT = "";
+                    string BuchasMT = null;
+                    string BuchasBT = null;
                     string Obs = "";
                     string indPre = "S";
-                    string tipoPinturaMeioIsol = "";
+                    string tipoPinturaMeioIsol = null;
                     string descOutraTensaoPrim = "";
                     string descOutraTensaoSec = "";
                     string descOutraBuchaMT = "";
@@ -8270,34 +8267,54 @@ namespace ORCAMENTOS_FOCKINK
                         else
                         {
                             descOutraBuchaBT = "";
-                        }   
+                        }
+                        tipoPinturaMeioIsol = null;
+                        descOutroMeioIsolante = null;
+                    }
+                    else if (combo5_2MeioIsol.SelectedIndex == 2)
+                    {
+                        BuchasMT = null;
+                        BuchasBT = null;
+                        descOutraBuchaMT = "";
+                        descOutraBuchaBT = "";
+                        tipoPinturaMeioIsol = null;
+                        descOutroMeioIsolante = "";
                     }
                     else if(combo5_2MeioIsol.SelectedIndex == 3)
                     {
                         //Pintura
-                        if (combo5_1Pintura.SelectedIndex == 1)
+                        if (combo5_2Pintura.SelectedIndex == 1)
                         {
                             tipoPinturaMeioIsol = "R";
                         }
-                        else if (combo5_1Pintura.SelectedIndex == 2)
+                        else if (combo5_2Pintura.SelectedIndex == 2)
                         {
                             tipoPinturaMeioIsol = "M";
                         }
-                        else if (combo5_1Pintura.SelectedIndex == 3)
+                        else if (combo5_2Pintura.SelectedIndex == 3)
                         {
                             tipoPinturaMeioIsol = "E";
                         }
+                        BuchasMT = null;
+                        BuchasBT = null;
+                        descOutraBuchaMT = "";
+                        descOutraBuchaBT = "";
+                        descOutroMeioIsolante = "";
                     }
                     else if(combo5_2MeioIsol.SelectedIndex == 4)
                     {
                         descOutroMeioIsolante = txt5_2DescOutroMeio.Text;
+                        BuchasMT = null;
+                        BuchasBT = null;
+                        descOutraBuchaMT = "";
+                        descOutraBuchaBT = "";
+                        tipoPinturaMeioIsol = null;
                     }
                     //Obs
                     Obs = txt5_2Obs.Text;
 
                     SOEF_CLASS.Escopo_Valor_Comum EscopoVlrComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
                     //Verifica se está cadastrando ou alterando o registro
-                    //AcaoTela = "N";
                     if (AcaoTela == "N")
                     {
                         MessageBox.Show(BuchasBT);
@@ -8329,7 +8346,8 @@ namespace ORCAMENTOS_FOCKINK
                                 }
                             }
                             AcaoTela = "C";
-                            btn5_2Excluir.Visible = true;                        }
+                            btn5_2Excluir.Visible = true;
+                        }
                         else
                         {
                             MessageBox.Show("Ocorreu um erro na inserção do registro. Tente novamente mais tarde.");
@@ -8389,18 +8407,8 @@ namespace ORCAMENTOS_FOCKINK
                     {
                         MessageBox.Show("Ocorreu um erro ao ao inserir/alterar o registro. Por favor tente novamente ou contate o administrador do sistema.");
                     }
-
-
-
-
-
-
-
-
                 }
             }
-
-
         }
 
         private void dgv5_2Potencias_CellContentClick(object sender, DataGridViewCellEventArgs e)

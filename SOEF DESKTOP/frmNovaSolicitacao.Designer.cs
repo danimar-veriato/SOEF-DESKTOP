@@ -4356,9 +4356,9 @@
             "Bege RAL 7032 - Padrão",
             "Munsell N-6.5",
             "Especial"});
-            this.combo5_2Pintura.Location = new System.Drawing.Point(444, 83);
+            this.combo5_2Pintura.Location = new System.Drawing.Point(441, 83);
             this.combo5_2Pintura.Name = "combo5_2Pintura";
-            this.combo5_2Pintura.Size = new System.Drawing.Size(140, 21);
+            this.combo5_2Pintura.Size = new System.Drawing.Size(149, 21);
             this.combo5_2Pintura.TabIndex = 72;
             this.combo5_2Pintura.Visible = false;
             this.combo5_2Pintura.SelectedIndexChanged += new System.EventHandler(this.combo5_2Pintura_SelectedIndexChanged);
@@ -4368,7 +4368,7 @@
             this.label172.AutoSize = true;
             this.label172.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label172.ForeColor = System.Drawing.Color.Green;
-            this.label172.Location = new System.Drawing.Point(301, 87);
+            this.label172.Location = new System.Drawing.Point(298, 87);
             this.label172.Name = "label172";
             this.label172.Size = new System.Drawing.Size(136, 13);
             this.label172.TabIndex = 73;
