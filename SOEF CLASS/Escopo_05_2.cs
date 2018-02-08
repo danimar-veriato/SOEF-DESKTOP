@@ -24,6 +24,25 @@ namespace SOEF_CLASS
 
         //CRUD Escopo 05_2
 
+        /// <summary>
+        /// Grava os dados do Escopo 05_2
+        /// </summary>
+        /// <param name="pTensaoPrim"></param>
+        /// <param name="pTensaoSec"></param>
+        /// <param name="pIndPotenciaInfDef"></param>
+        /// <param name="pIndListaCargas"></param>
+        /// <param name="pMeioIsolante"></param>
+        /// <param name="pBuchaMT"></param>
+        /// <param name="pBuchaBT"></param>
+        /// <param name="pObs"></param>
+        /// <param name="pIndPre"></param>
+        /// <param name="pTipoPintura"></param>
+        /// <param name="pDescOutraTensaoPri"></param>
+        /// <param name="pDescOutraTensaoSec"></param>
+        /// <param name="pDescOutraBuchaMT"></param>
+        /// <param name="pDescOutraBuchaBT"></param>
+        /// <param name="pDescMeioIsolante"></param>
+        /// <returns></returns>
         public int gravaEscopo_05_2(string pTensaoPrim, string pTensaoSec, string pIndPotenciaInfDef, string pIndListaCargas, string pMeioIsolante, string pBuchaMT, string pBuchaBT, string pObs, string pIndPre, string pTipoPintura, string pDescOutraTensaoPri, string pDescOutraTensaoSec, string pDescOutraBuchaMT, string pDescOutraBuchaBT, string pDescMeioIsolante)
         {
             SqlCE sqlce = new SqlCE();
@@ -94,8 +113,6 @@ namespace SOEF_CLASS
                 sqlce.closeConnection();
             }
         }
-
-
 
         /// <summary>
         /// Atualiza as informações do Escopo 05_2
@@ -174,8 +191,7 @@ namespace SOEF_CLASS
                 sqlce.closeConnection();
             }
         }
-
-
+        
         /// <summary>
         /// Busca os dados do Escopo 05_2
         /// </summary>
@@ -200,7 +216,12 @@ namespace SOEF_CLASS
             }
         }
 
-
+        /// <summary>
+        /// Apaga os dados do Escopo 05_2
+        /// </summary>
+        /// <param name="pNumero"></param>
+        /// <param name="pRevisao"></param>
+        /// <returns></returns>
         public int deleteEscopo_05_2(string pNumero, string pRevisao)
         {
             SqlCE sqlce = new SqlCE();
@@ -225,8 +246,8 @@ namespace SOEF_CLASS
             }
         }
 
-        //CRUD DOM_SOLIC_ORC_POTENC_ESCOPO
 
+        //CRUD DOM_SOLIC_ORC_POTENC_ESCOPO
 
         /// <summary>
         /// Insere o registro na Potenc Escopo
@@ -391,7 +412,6 @@ namespace SOEF_CLASS
                 sqlce.closeConnection();
             }
         }
-
 
 
     }

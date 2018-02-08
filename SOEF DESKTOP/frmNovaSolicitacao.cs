@@ -2286,8 +2286,7 @@ namespace ORCAMENTOS_FOCKINK
                 throw;
             }
         }
-
-
+        
         /// <summary>
         /// Lista os dados do Escopo 05_1
         /// </summary>
@@ -2539,6 +2538,39 @@ namespace ORCAMENTOS_FOCKINK
             }
         }
 
+
+        /// <summary>
+        /// Lista os dados do Escopo 05_3
+        /// </summary>
+        /// <param name="pNumSolic"></param>
+        /// <param name="pNumRev"></param>
+        protected void listaEscopo05_3(string pNumSolic, string pNumRev)
+        {
+            try
+            {
+                SOEF_CLASS.Escopo_05_3 Escopo05_3 = new SOEF_CLASS.Escopo_05_3(pNumSolic, pNumRev);
+                DataTable dt = Escopo05_3.getEscopo_05_3();
+                if (dt.Rows.Count > 0)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        txt5_3DescServico.Text = dr["DESCRICAO_SERVICO"].ToString();
+                    }
+                    btn5_3Excluir.Visible = true;
+                }
+                else
+                {
+                    //Reseta os campos da tela
+                    txt5_3DescServico.Text = "";
+                    btn5_3Excluir.Visible = false;
+                    tabNovaSolicitacao.SelectedTab.Name = "tabEscopo5"; //Conferir se o nome está correto
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
 
 
         /// <summary>
@@ -3466,6 +3498,69 @@ namespace ORCAMENTOS_FOCKINK
                         checkEscopo1.Enabled = true;
                     }
                 }
+
+
+                //Escopos 05
+                bool E05_1 = false;
+                bool E05_2 = false;
+                bool E05_3 = false;
+                //Escopo 05_1
+                DataTable dtVerifica05_1 = new DataTable();
+                SOEF_CLASS.Escopo_05_1 Escopo_05_1 = new SOEF_CLASS.Escopo_05_1(numSolic, numRev);
+                dtVerifica05_1 = Escopo_05_1.getEscopo_05_1();
+                if (dtVerifica05_1.Rows.Count > 0)
+                {
+                    if (dtVerifica05_1.Rows[0]["IND_PREENCHIDO"].ToString() == "S")
+                    {
+                        E05_1 = true;
+                    }
+                    else
+                    {
+                        E05_1 = false;
+                    }
+                }
+                //Escopo 05_2
+                DataTable dtVerifica05_2 = new DataTable();
+                SOEF_CLASS.Escopo_05_2 Escopo_05_2 = new SOEF_CLASS.Escopo_05_2(numSolic, numRev);
+                dtVerifica05_2 = Escopo_05_2.getEscopo_05_2();
+                if (dtVerifica05_2.Rows.Count > 0)
+                {
+                    if (dtVerifica05_2.Rows[0]["IND_PREENCHIDO"].ToString() == "S")
+                    {
+                        E05_2 = true;
+                    }
+                    else
+                    {
+                        E05_2 = false;
+                    }
+                }
+                //Escopo 05_3
+                DataTable dtVerifica05_3 = new DataTable();
+                SOEF_CLASS.Escopo_05_3 Escopo_05_3 = new SOEF_CLASS.Escopo_05_3(numSolic, numRev);
+                dtVerifica05_3 = Escopo_05_3.getEscopo_05_3();
+                if (dtVerifica05_3.Rows.Count > 0)
+                {
+                    if (dtVerifica05_3.Rows[0]["IND_PREENCHIDO"].ToString() == "S")
+                    {
+                        E05_3 = true;
+                    }
+                    else
+                    {
+                        E05_3 = false;
+                    }
+                }
+                if (E05_1 || E05_2 || E05_3)
+                {
+                    checkEscopo5.Checked = true;
+                    checkEscopo5.Enabled = false;
+                }
+                else
+                {
+                    checkEscopo5.Checked = false;
+                    checkEscopo5.Enabled = true;
+                }
+
+
 
                 //Escopos 10
                 bool E10_1 = false;
@@ -7740,6 +7835,22 @@ namespace ORCAMENTOS_FOCKINK
                     listaEscopo05_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 }
             }
+            else if(tabE5.SelectedTab.Name == "tabPE5_3")
+            {
+                SOEF_CLASS.Escopo_05_3 Escopo_05_3 = new SOEF_CLASS.Escopo_05_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                DataTable dt05_3 = Escopo_05_3.getEscopo_05_3();
+                if(dt05_3.Rows.Count > 0)
+                {
+                    txt5_3DescServico.Text = dt05_3.Rows[0]["DESCRICAO_SERVICO"].ToString();
+                    btn5_3Excluir.Visible = true;
+                }
+                else
+                {
+                    txt5_3DescServico.Text = "";
+                    btn5_3Excluir.Visible = false;
+                }
+
+            }
         }
 
         private void dgv5_1Potencias_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -8519,6 +8630,85 @@ namespace ORCAMENTOS_FOCKINK
             {
                 txt5_2DescOutraBuchaBT.Text = "";
                 txt5_2DescOutraBuchaBT.Enabled = false;
+            }
+        }
+
+        private void btn5_3Salvar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt5_3DescServico.Text))
+            {
+                MessageBox.Show("O campo Descrição do Serviço, deve ser preenchido.");
+            }
+            else
+            {
+                string DescServico = txt5_3DescServico.Text;
+                string indPre = "S";
+                int retornoInsert = 0;
+                int retornoUpdate = 0;
+                SOEF_CLASS.Escopo_05_3 Escopo_05_3 = new SOEF_CLASS.Escopo_05_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                //Verifica se está cadastrando ou alterando o registro
+                if (AcaoTela == "N")
+                {
+                    retornoInsert = Escopo_05_3.gravaEscopo_05_3(DescServico, indPre);
+                    if (retornoInsert > 0)
+                    {
+                        AcaoTela = "C";
+                        btn5_3Excluir.Visible = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocorreu um erro na inserção do registro. Tente novamente mais tarde.");
+                    }
+                }
+                else
+                {
+                    //AcaoTela - ATUALIZAR
+                    DataTable dtBuscaEscopo05_3 = Escopo_05_3.getEscopo_05_3();
+                    if (dtBuscaEscopo05_3.Rows.Count > 0)
+                    {
+                        //Atualiza o Escopo 05_3 se já estiver cadastrado
+                        retornoUpdate = Escopo_05_3.updateEscopo_05_3(DescServico, indPre);
+                    }
+                    else
+                    {
+                        //Cadastra o Escopo 05_3 se ainda não existir
+                        retornoUpdate = Escopo_05_3.gravaEscopo_05_3(DescServico, indPre);
+                    }
+                    
+                    if(retornoUpdate > 0 || retornoInsert > 0)
+                    {
+                        MessageBox.Show("Registro inserido/alterado com sucesso!");
+                        btn5_3Excluir.Visible = true;
+                        listaEscopo05(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                        //Muda o STATUS da AçãoTela p/ EDIÇÂO
+                        AcaoTela = "C";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocorreu um erro na atualização do registro. Tente novamente mais tarde.");
+                    }
+                }
+            }
+        }
+
+        private void btn5_3Excluir_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Deseja realmente excluir o Escopo 05_3 desta solicitação?", "SOEF", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                //Apaga os dados do Escopo 05_3
+                SOEF_CLASS.Escopo_05_3 Escopo05_3 = new SOEF_CLASS.Escopo_05_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                int retorno = Escopo05_3.deleteEscopo_05_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                if (retorno > 0)
+                {
+                    MessageBox.Show("Registro excluído com sucesso!");
+                    btn5_3Excluir.Visible = false;
+                    listaEscopo05_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro ao excluir o registro. Por favor, contate o suporte do sistema e tente novamente.");
+                }
             }
         }
     }

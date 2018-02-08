@@ -375,32 +375,9 @@
             this.btn5_2Salvar = new System.Windows.Forms.Button();
             this.tabPE5_3 = new System.Windows.Forms.TabPage();
             this.panel20 = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewButtonColumn4 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.button8 = new System.Windows.Forms.Button();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.label192 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.label193 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.label194 = new System.Windows.Forms.Label();
-            this.comboBox20 = new System.Windows.Forms.ComboBox();
-            this.label195 = new System.Windows.Forms.Label();
-            this.label196 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.comboBox21 = new System.Windows.Forms.ComboBox();
-            this.label197 = new System.Windows.Forms.Label();
-            this.label198 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.btn5_3Excluir = new System.Windows.Forms.Button();
+            this.btn5_3Salvar = new System.Windows.Forms.Button();
+            this.txt5_3DescServico = new System.Windows.Forms.TextBox();
             this.label199 = new System.Windows.Forms.Label();
             this.label200 = new System.Windows.Forms.Label();
             this.tabEscopo6 = new System.Windows.Forms.TabPage();
@@ -692,7 +669,6 @@
             this.panel24.SuspendLayout();
             this.tabPE5_3.SuspendLayout();
             this.panel20.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabEscopo10.SuspendLayout();
             this.tabsEscopo10.SuspendLayout();
             this.tabEscopo10_1.SuspendLayout();
@@ -3477,7 +3453,7 @@
             this.pListaCargas.Location = new System.Drawing.Point(607, 44);
             this.pListaCargas.Name = "pListaCargas";
             this.pListaCargas.Size = new System.Drawing.Size(243, 40);
-            this.pListaCargas.TabIndex = 58;
+            this.pListaCargas.TabIndex = 4;
             // 
             // radio5_1ListaCargaN
             // 
@@ -3485,7 +3461,7 @@
             this.radio5_1ListaCargaN.Location = new System.Drawing.Point(179, 13);
             this.radio5_1ListaCargaN.Name = "radio5_1ListaCargaN";
             this.radio5_1ListaCargaN.Size = new System.Drawing.Size(45, 17);
-            this.radio5_1ListaCargaN.TabIndex = 51;
+            this.radio5_1ListaCargaN.TabIndex = 6;
             this.radio5_1ListaCargaN.TabStop = true;
             this.radio5_1ListaCargaN.Text = "Não";
             this.radio5_1ListaCargaN.UseVisualStyleBackColor = true;
@@ -3496,7 +3472,7 @@
             this.radio5_1ListaCargaS.Location = new System.Drawing.Point(131, 13);
             this.radio5_1ListaCargaS.Name = "radio5_1ListaCargaS";
             this.radio5_1ListaCargaS.Size = new System.Drawing.Size(42, 17);
-            this.radio5_1ListaCargaS.TabIndex = 50;
+            this.radio5_1ListaCargaS.TabIndex = 5;
             this.radio5_1ListaCargaS.TabStop = true;
             this.radio5_1ListaCargaS.Text = "Sim";
             this.radio5_1ListaCargaS.UseVisualStyleBackColor = true;
@@ -3561,7 +3537,7 @@
             this.panel23.Location = new System.Drawing.Point(14, 45);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(958, 329);
-            this.panel23.TabIndex = 57;
+            this.panel23.TabIndex = 7;
             // 
             // label164
             // 
@@ -3589,7 +3565,7 @@
             this.dgv5_1Potencias.MultiSelect = false;
             this.dgv5_1Potencias.Name = "dgv5_1Potencias";
             this.dgv5_1Potencias.Size = new System.Drawing.Size(379, 121);
-            this.dgv5_1Potencias.TabIndex = 89;
+            this.dgv5_1Potencias.TabIndex = 14;
             this.dgv5_1Potencias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv5_1Potencias_CellContentClick);
             // 
             // dataGridViewTextBoxColumn30
@@ -3644,7 +3620,7 @@
             this.btn5_1GravaPotencia.Location = new System.Drawing.Point(472, 168);
             this.btn5_1GravaPotencia.Name = "btn5_1GravaPotencia";
             this.btn5_1GravaPotencia.Size = new System.Drawing.Size(111, 31);
-            this.btn5_1GravaPotencia.TabIndex = 88;
+            this.btn5_1GravaPotencia.TabIndex = 13;
             this.btn5_1GravaPotencia.Text = "Gravar Potência";
             this.btn5_1GravaPotencia.UseVisualStyleBackColor = true;
             this.btn5_1GravaPotencia.Click += new System.EventHandler(this.btn5_1GravaPotencia_Click);
@@ -3655,7 +3631,7 @@
             this.txt5_1Qtd.MaxLength = 10;
             this.txt5_1Qtd.Name = "txt5_1Qtd";
             this.txt5_1Qtd.Size = new System.Drawing.Size(71, 20);
-            this.txt5_1Qtd.TabIndex = 87;
+            this.txt5_1Qtd.TabIndex = 12;
             // 
             // label158
             // 
@@ -3682,7 +3658,7 @@
             this.txt5_1Potencia.MaxLength = 10;
             this.txt5_1Potencia.Name = "txt5_1Potencia";
             this.txt5_1Potencia.Size = new System.Drawing.Size(71, 20);
-            this.txt5_1Potencia.TabIndex = 84;
+            this.txt5_1Potencia.TabIndex = 11;
             // 
             // label155
             // 
@@ -3705,7 +3681,7 @@
             this.combo5_1Pintura.Location = new System.Drawing.Point(729, 86);
             this.combo5_1Pintura.Name = "combo5_1Pintura";
             this.combo5_1Pintura.Size = new System.Drawing.Size(168, 21);
-            this.combo5_1Pintura.TabIndex = 72;
+            this.combo5_1Pintura.TabIndex = 9;
             this.combo5_1Pintura.Visible = false;
             // 
             // label162
@@ -3726,7 +3702,7 @@
             this.radio5_1InProtecaoN.Location = new System.Drawing.Point(202, 88);
             this.radio5_1InProtecaoN.Name = "radio5_1InProtecaoN";
             this.radio5_1InProtecaoN.Size = new System.Drawing.Size(45, 17);
-            this.radio5_1InProtecaoN.TabIndex = 70;
+            this.radio5_1InProtecaoN.TabIndex = 8;
             this.radio5_1InProtecaoN.TabStop = true;
             this.radio5_1InProtecaoN.Text = "Não";
             this.radio5_1InProtecaoN.UseVisualStyleBackColor = true;
@@ -3738,7 +3714,7 @@
             this.radio5_1InProtecaoS.Location = new System.Drawing.Point(154, 88);
             this.radio5_1InProtecaoS.Name = "radio5_1InProtecaoS";
             this.radio5_1InProtecaoS.Size = new System.Drawing.Size(42, 17);
-            this.radio5_1InProtecaoS.TabIndex = 69;
+            this.radio5_1InProtecaoS.TabIndex = 7;
             this.radio5_1InProtecaoS.TabStop = true;
             this.radio5_1InProtecaoS.Text = "Sim";
             this.radio5_1InProtecaoS.UseVisualStyleBackColor = true;
@@ -3769,7 +3745,7 @@
             this.txt5_1DescTenSec.MaxLength = 200;
             this.txt5_1DescTenSec.Name = "txt5_1DescTenSec";
             this.txt5_1DescTenSec.Size = new System.Drawing.Size(169, 20);
-            this.txt5_1DescTenSec.TabIndex = 67;
+            this.txt5_1DescTenSec.TabIndex = 6;
             // 
             // combo5_1TensaoSec
             // 
@@ -3784,7 +3760,7 @@
             this.combo5_1TensaoSec.Location = new System.Drawing.Point(156, 48);
             this.combo5_1TensaoSec.Name = "combo5_1TensaoSec";
             this.combo5_1TensaoSec.Size = new System.Drawing.Size(135, 21);
-            this.combo5_1TensaoSec.TabIndex = 66;
+            this.combo5_1TensaoSec.TabIndex = 5;
             this.combo5_1TensaoSec.SelectedIndexChanged += new System.EventHandler(this.combo5_1TensaoSec_SelectedIndexChanged);
             // 
             // label160
@@ -3818,7 +3794,7 @@
             this.combo5_1TensaoPrimaria.Location = new System.Drawing.Point(156, 8);
             this.combo5_1TensaoPrimaria.Name = "combo5_1TensaoPrimaria";
             this.combo5_1TensaoPrimaria.Size = new System.Drawing.Size(135, 21);
-            this.combo5_1TensaoPrimaria.TabIndex = 63;
+            this.combo5_1TensaoPrimaria.TabIndex = 3;
             this.combo5_1TensaoPrimaria.SelectedIndexChanged += new System.EventHandler(this.comboTensaoPrimaria_SelectedIndexChanged);
             // 
             // txt5_1DescTensaoPrim
@@ -3828,7 +3804,7 @@
             this.txt5_1DescTensaoPrim.MaxLength = 200;
             this.txt5_1DescTensaoPrim.Name = "txt5_1DescTensaoPrim";
             this.txt5_1DescTensaoPrim.Size = new System.Drawing.Size(169, 20);
-            this.txt5_1DescTensaoPrim.TabIndex = 32;
+            this.txt5_1DescTensaoPrim.TabIndex = 4;
             // 
             // label176
             // 
@@ -3846,7 +3822,7 @@
             this.txt5_1Obs.Multiline = true;
             this.txt5_1Obs.Name = "txt5_1Obs";
             this.txt5_1Obs.Size = new System.Drawing.Size(745, 40);
-            this.txt5_1Obs.TabIndex = 42;
+            this.txt5_1Obs.TabIndex = 10;
             // 
             // label179
             // 
@@ -3865,7 +3841,7 @@
             this.panel21.Location = new System.Drawing.Point(13, 2);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(294, 40);
-            this.panel21.TabIndex = 55;
+            this.panel21.TabIndex = 1;
             // 
             // radio5_1PotFD
             // 
@@ -3873,7 +3849,7 @@
             this.radio5_1PotFD.Location = new System.Drawing.Point(157, 12);
             this.radio5_1PotFD.Name = "radio5_1PotFD";
             this.radio5_1PotFD.Size = new System.Drawing.Size(97, 17);
-            this.radio5_1PotFD.TabIndex = 51;
+            this.radio5_1PotFD.TabIndex = 3;
             this.radio5_1PotFD.TabStop = true;
             this.radio5_1PotFD.Text = "Fockink Define";
             this.radio5_1PotFD.UseVisualStyleBackColor = true;
@@ -3885,7 +3861,7 @@
             this.radio5_1PotInf.Location = new System.Drawing.Point(74, 13);
             this.radio5_1PotInf.Name = "radio5_1PotInf";
             this.radio5_1PotInf.Size = new System.Drawing.Size(72, 17);
-            this.radio5_1PotInf.TabIndex = 50;
+            this.radio5_1PotInf.TabIndex = 2;
             this.radio5_1PotInf.TabStop = true;
             this.radio5_1PotInf.Text = "Informada";
             this.radio5_1PotInf.UseVisualStyleBackColor = true;
@@ -3905,7 +3881,7 @@
             this.btn05_1Excluir.Location = new System.Drawing.Point(486, 383);
             this.btn05_1Excluir.Name = "btn05_1Excluir";
             this.btn05_1Excluir.Size = new System.Drawing.Size(75, 23);
-            this.btn05_1Excluir.TabIndex = 44;
+            this.btn05_1Excluir.TabIndex = 16;
             this.btn05_1Excluir.Text = "Excluir";
             this.btn05_1Excluir.UseVisualStyleBackColor = true;
             this.btn05_1Excluir.Visible = false;
@@ -3916,7 +3892,7 @@
             this.btn05_1Salvar.Location = new System.Drawing.Point(378, 383);
             this.btn05_1Salvar.Name = "btn05_1Salvar";
             this.btn05_1Salvar.Size = new System.Drawing.Size(75, 23);
-            this.btn05_1Salvar.TabIndex = 43;
+            this.btn05_1Salvar.TabIndex = 15;
             this.btn05_1Salvar.Text = "Salvar";
             this.btn05_1Salvar.UseVisualStyleBackColor = true;
             this.btn05_1Salvar.Click += new System.EventHandler(this.btn05_1Salvar_Click);
@@ -3940,7 +3916,7 @@
             this.panel25.Location = new System.Drawing.Point(615, 5);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(243, 30);
-            this.panel25.TabIndex = 59;
+            this.panel25.TabIndex = 2;
             // 
             // radio5_2ListaCargasN
             // 
@@ -4026,7 +4002,7 @@
             this.panel22.Location = new System.Drawing.Point(5, 32);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(967, 398);
-            this.panel22.TabIndex = 57;
+            this.panel22.TabIndex = 3;
             // 
             // txt5_2DescOutraBuchaMT
             // 
@@ -4035,7 +4011,7 @@
             this.txt5_2DescOutraBuchaMT.MaxLength = 200;
             this.txt5_2DescOutraBuchaMT.Name = "txt5_2DescOutraBuchaMT";
             this.txt5_2DescOutraBuchaMT.Size = new System.Drawing.Size(164, 20);
-            this.txt5_2DescOutraBuchaMT.TabIndex = 106;
+            this.txt5_2DescOutraBuchaMT.TabIndex = 9;
             // 
             // label189
             // 
@@ -4053,7 +4029,7 @@
             this.txt5_2DescOutraBuchaBT.MaxLength = 200;
             this.txt5_2DescOutraBuchaBT.Name = "txt5_2DescOutraBuchaBT";
             this.txt5_2DescOutraBuchaBT.Size = new System.Drawing.Size(164, 20);
-            this.txt5_2DescOutraBuchaBT.TabIndex = 104;
+            this.txt5_2DescOutraBuchaBT.TabIndex = 11;
             // 
             // label188
             // 
@@ -4088,7 +4064,7 @@
             this.combo5_2BuchaBT.Location = new System.Drawing.Point(128, 154);
             this.combo5_2BuchaBT.Name = "combo5_2BuchaBT";
             this.combo5_2BuchaBT.Size = new System.Drawing.Size(140, 21);
-            this.combo5_2BuchaBT.TabIndex = 101;
+            this.combo5_2BuchaBT.TabIndex = 10;
             this.combo5_2BuchaBT.SelectedIndexChanged += new System.EventHandler(this.combo5_2BuchaBT_SelectedIndexChanged);
             // 
             // combo5_2BuchaMT
@@ -4105,7 +4081,7 @@
             this.combo5_2BuchaMT.Location = new System.Drawing.Point(128, 119);
             this.combo5_2BuchaMT.Name = "combo5_2BuchaMT";
             this.combo5_2BuchaMT.Size = new System.Drawing.Size(140, 21);
-            this.combo5_2BuchaMT.TabIndex = 99;
+            this.combo5_2BuchaMT.TabIndex = 8;
             this.combo5_2BuchaMT.SelectedIndexChanged += new System.EventHandler(this.combo5_2BuchaMT_SelectedIndexChanged);
             // 
             // label186
@@ -4124,7 +4100,7 @@
             this.txt5_2DescOutroMeio.MaxLength = 200;
             this.txt5_2DescOutroMeio.Name = "txt5_2DescOutroMeio";
             this.txt5_2DescOutroMeio.Size = new System.Drawing.Size(166, 20);
-            this.txt5_2DescOutroMeio.TabIndex = 97;
+            this.txt5_2DescOutroMeio.TabIndex = 7;
             // 
             // label185
             // 
@@ -4148,7 +4124,7 @@
             this.combo5_2MeioIsol.Location = new System.Drawing.Point(128, 83);
             this.combo5_2MeioIsol.Name = "combo5_2MeioIsol";
             this.combo5_2MeioIsol.Size = new System.Drawing.Size(140, 21);
-            this.combo5_2MeioIsol.TabIndex = 95;
+            this.combo5_2MeioIsol.TabIndex = 5;
             this.combo5_2MeioIsol.SelectedIndexChanged += new System.EventHandler(this.combo5_2MeioIsol_SelectedIndexChanged);
             // 
             // txt5_2FatorK
@@ -4157,7 +4133,7 @@
             this.txt5_2FatorK.MaxLength = 10;
             this.txt5_2FatorK.Name = "txt5_2FatorK";
             this.txt5_2FatorK.Size = new System.Drawing.Size(71, 20);
-            this.txt5_2FatorK.TabIndex = 94;
+            this.txt5_2FatorK.TabIndex = 16;
             // 
             // label184
             // 
@@ -4194,7 +4170,7 @@
             this.combo5_2Potencia.Location = new System.Drawing.Point(128, 231);
             this.combo5_2Potencia.Name = "combo5_2Potencia";
             this.combo5_2Potencia.Size = new System.Drawing.Size(135, 21);
-            this.combo5_2Potencia.TabIndex = 92;
+            this.combo5_2Potencia.TabIndex = 13;
             this.combo5_2Potencia.SelectedIndexChanged += new System.EventHandler(this.combo5_2Potencia_SelectedIndexChanged);
             // 
             // label183
@@ -4233,7 +4209,7 @@
             this.dgv5_2Potencias.MultiSelect = false;
             this.dgv5_2Potencias.Name = "dgv5_2Potencias";
             this.dgv5_2Potencias.Size = new System.Drawing.Size(421, 127);
-            this.dgv5_2Potencias.TabIndex = 89;
+            this.dgv5_2Potencias.TabIndex = 18;
             this.dgv5_2Potencias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv5_2Potencias_CellContentClick);
             // 
             // dataGridViewTextBoxColumn13
@@ -4297,7 +4273,7 @@
             this.btn5_2GravaPotencia.Location = new System.Drawing.Point(496, 231);
             this.btn5_2GravaPotencia.Name = "btn5_2GravaPotencia";
             this.btn5_2GravaPotencia.Size = new System.Drawing.Size(94, 31);
-            this.btn5_2GravaPotencia.TabIndex = 88;
+            this.btn5_2GravaPotencia.TabIndex = 17;
             this.btn5_2GravaPotencia.Text = "Gravar Potência";
             this.btn5_2GravaPotencia.UseVisualStyleBackColor = true;
             this.btn5_2GravaPotencia.Click += new System.EventHandler(this.btn5_2GravaPotencia_Click);
@@ -4308,7 +4284,7 @@
             this.txt5_2Qtd.MaxLength = 10;
             this.txt5_2Qtd.Name = "txt5_2Qtd";
             this.txt5_2Qtd.Size = new System.Drawing.Size(71, 20);
-            this.txt5_2Qtd.TabIndex = 87;
+            this.txt5_2Qtd.TabIndex = 15;
             // 
             // label169
             // 
@@ -4335,7 +4311,7 @@
             this.txt5_2PotKva.MaxLength = 10;
             this.txt5_2PotKva.Name = "txt5_2PotKva";
             this.txt5_2PotKva.Size = new System.Drawing.Size(71, 20);
-            this.txt5_2PotKva.TabIndex = 84;
+            this.txt5_2PotKva.TabIndex = 14;
             // 
             // label171
             // 
@@ -4359,7 +4335,7 @@
             this.combo5_2Pintura.Location = new System.Drawing.Point(441, 83);
             this.combo5_2Pintura.Name = "combo5_2Pintura";
             this.combo5_2Pintura.Size = new System.Drawing.Size(149, 21);
-            this.combo5_2Pintura.TabIndex = 72;
+            this.combo5_2Pintura.TabIndex = 6;
             this.combo5_2Pintura.Visible = false;
             this.combo5_2Pintura.SelectedIndexChanged += new System.EventHandler(this.combo5_2Pintura_SelectedIndexChanged);
             // 
@@ -4400,7 +4376,7 @@
             this.txt5_2DescOutraTensaoSec.MaxLength = 200;
             this.txt5_2DescOutraTensaoSec.Name = "txt5_2DescOutraTensaoSec";
             this.txt5_2DescOutraTensaoSec.Size = new System.Drawing.Size(166, 20);
-            this.txt5_2DescOutraTensaoSec.TabIndex = 67;
+            this.txt5_2DescOutraTensaoSec.TabIndex = 4;
             // 
             // combo5_2TensaoSec
             // 
@@ -4418,7 +4394,7 @@
             this.combo5_2TensaoSec.Location = new System.Drawing.Point(128, 47);
             this.combo5_2TensaoSec.Name = "combo5_2TensaoSec";
             this.combo5_2TensaoSec.Size = new System.Drawing.Size(140, 21);
-            this.combo5_2TensaoSec.TabIndex = 66;
+            this.combo5_2TensaoSec.TabIndex = 3;
             this.combo5_2TensaoSec.SelectedIndexChanged += new System.EventHandler(this.combo5_2TensaoSec_SelectedIndexChanged);
             // 
             // label177
@@ -4455,7 +4431,7 @@
             this.combo5_2TensaoPrim.Location = new System.Drawing.Point(128, 11);
             this.combo5_2TensaoPrim.Name = "combo5_2TensaoPrim";
             this.combo5_2TensaoPrim.Size = new System.Drawing.Size(140, 21);
-            this.combo5_2TensaoPrim.TabIndex = 63;
+            this.combo5_2TensaoPrim.TabIndex = 1;
             this.combo5_2TensaoPrim.SelectedIndexChanged += new System.EventHandler(this.combo5_2TensaoPrim_SelectedIndexChanged);
             // 
             // txt5_2DescOutraTensaoPrim
@@ -4465,7 +4441,7 @@
             this.txt5_2DescOutraTensaoPrim.MaxLength = 200;
             this.txt5_2DescOutraTensaoPrim.Name = "txt5_2DescOutraTensaoPrim";
             this.txt5_2DescOutraTensaoPrim.Size = new System.Drawing.Size(164, 20);
-            this.txt5_2DescOutraTensaoPrim.TabIndex = 32;
+            this.txt5_2DescOutraTensaoPrim.TabIndex = 2;
             // 
             // label180
             // 
@@ -4483,7 +4459,7 @@
             this.txt5_2Obs.Multiline = true;
             this.txt5_2Obs.Name = "txt5_2Obs";
             this.txt5_2Obs.Size = new System.Drawing.Size(834, 35);
-            this.txt5_2Obs.TabIndex = 42;
+            this.txt5_2Obs.TabIndex = 12;
             // 
             // label181
             // 
@@ -4502,7 +4478,7 @@
             this.panel24.Location = new System.Drawing.Point(23, 2);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(294, 28);
-            this.panel24.TabIndex = 55;
+            this.panel24.TabIndex = 1;
             // 
             // radio5_2PotDef
             // 
@@ -4542,7 +4518,7 @@
             this.btn5_2Excluir.Location = new System.Drawing.Point(486, 436);
             this.btn5_2Excluir.Name = "btn5_2Excluir";
             this.btn5_2Excluir.Size = new System.Drawing.Size(75, 23);
-            this.btn5_2Excluir.TabIndex = 44;
+            this.btn5_2Excluir.TabIndex = 20;
             this.btn5_2Excluir.Text = "Excluir";
             this.btn5_2Excluir.UseVisualStyleBackColor = true;
             this.btn5_2Excluir.Visible = false;
@@ -4553,7 +4529,7 @@
             this.btn5_2Salvar.Location = new System.Drawing.Point(378, 436);
             this.btn5_2Salvar.Name = "btn5_2Salvar";
             this.btn5_2Salvar.Size = new System.Drawing.Size(75, 23);
-            this.btn5_2Salvar.TabIndex = 43;
+            this.btn5_2Salvar.TabIndex = 19;
             this.btn5_2Salvar.Text = "Salvar";
             this.btn5_2Salvar.UseVisualStyleBackColor = true;
             this.btn5_2Salvar.Click += new System.EventHandler(this.btn5_2Salvar_Click);
@@ -4571,286 +4547,53 @@
             // panel20
             // 
             this.panel20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel20.Controls.Add(this.dataGridView2);
-            this.panel20.Controls.Add(this.button8);
-            this.panel20.Controls.Add(this.textBox15);
-            this.panel20.Controls.Add(this.label192);
-            this.panel20.Controls.Add(this.textBox16);
-            this.panel20.Controls.Add(this.label193);
-            this.panel20.Controls.Add(this.textBox17);
-            this.panel20.Controls.Add(this.label194);
-            this.panel20.Controls.Add(this.comboBox20);
-            this.panel20.Controls.Add(this.label195);
-            this.panel20.Controls.Add(this.label196);
-            this.panel20.Controls.Add(this.textBox18);
-            this.panel20.Controls.Add(this.comboBox21);
-            this.panel20.Controls.Add(this.label197);
-            this.panel20.Controls.Add(this.label198);
-            this.panel20.Controls.Add(this.button9);
-            this.panel20.Controls.Add(this.button10);
-            this.panel20.Controls.Add(this.textBox19);
+            this.panel20.Controls.Add(this.btn5_3Excluir);
+            this.panel20.Controls.Add(this.btn5_3Salvar);
+            this.panel20.Controls.Add(this.txt5_3DescServico);
             this.panel20.Controls.Add(this.label199);
             this.panel20.Location = new System.Drawing.Point(13, 14);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(1010, 416);
+            this.panel20.Size = new System.Drawing.Size(964, 191);
             this.panel20.TabIndex = 27;
             // 
-            // dataGridView2
+            // btn5_3Excluir
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn23,
-            this.dataGridViewTextBoxColumn24,
-            this.dataGridViewTextBoxColumn25,
-            this.dataGridViewTextBoxColumn26,
-            this.dataGridViewTextBoxColumn27,
-            this.dataGridViewTextBoxColumn28,
-            this.dataGridViewTextBoxColumn29,
-            this.dataGridViewButtonColumn4});
-            this.dataGridView2.Location = new System.Drawing.Point(149, 162);
-            this.dataGridView2.MultiSelect = false;
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(643, 153);
-            this.dataGridView2.TabIndex = 61;
+            this.btn5_3Excluir.Location = new System.Drawing.Point(456, 145);
+            this.btn5_3Excluir.Name = "btn5_3Excluir";
+            this.btn5_3Excluir.Size = new System.Drawing.Size(75, 23);
+            this.btn5_3Excluir.TabIndex = 10;
+            this.btn5_3Excluir.Text = "Excluir";
+            this.btn5_3Excluir.UseVisualStyleBackColor = true;
+            this.btn5_3Excluir.Visible = false;
+            this.btn5_3Excluir.Click += new System.EventHandler(this.btn5_3Excluir_Click);
             // 
-            // dataGridViewTextBoxColumn23
+            // btn5_3Salvar
             // 
-            this.dataGridViewTextBoxColumn23.DataPropertyName = "NUMERO_SOLICITACAO";
-            this.dataGridViewTextBoxColumn23.HeaderText = "Num. Solic.";
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            this.dataGridViewTextBoxColumn23.ReadOnly = true;
-            this.dataGridViewTextBoxColumn23.Visible = false;
+            this.btn5_3Salvar.Location = new System.Drawing.Point(348, 145);
+            this.btn5_3Salvar.Name = "btn5_3Salvar";
+            this.btn5_3Salvar.Size = new System.Drawing.Size(75, 23);
+            this.btn5_3Salvar.TabIndex = 9;
+            this.btn5_3Salvar.Text = "Salvar";
+            this.btn5_3Salvar.UseVisualStyleBackColor = true;
+            this.btn5_3Salvar.Click += new System.EventHandler(this.btn5_3Salvar_Click);
             // 
-            // dataGridViewTextBoxColumn24
+            // txt5_3DescServico
             // 
-            this.dataGridViewTextBoxColumn24.DataPropertyName = "REVISAO_SOLICITACAO";
-            this.dataGridViewTextBoxColumn24.HeaderText = "Rev. Solicitação";
-            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            this.dataGridViewTextBoxColumn24.ReadOnly = true;
-            this.dataGridViewTextBoxColumn24.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn25
-            // 
-            this.dataGridViewTextBoxColumn25.DataPropertyName = "SEQ";
-            this.dataGridViewTextBoxColumn25.HeaderText = "Seq.";
-            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            this.dataGridViewTextBoxColumn25.ReadOnly = true;
-            this.dataGridViewTextBoxColumn25.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn26
-            // 
-            this.dataGridViewTextBoxColumn26.DataPropertyName = "QUANTIDADE";
-            this.dataGridViewTextBoxColumn26.HeaderText = "Quantidade";
-            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
-            this.dataGridViewTextBoxColumn26.ReadOnly = true;
-            this.dataGridViewTextBoxColumn26.Width = 75;
-            // 
-            // dataGridViewTextBoxColumn27
-            // 
-            this.dataGridViewTextBoxColumn27.DataPropertyName = "TIPO_TAMPA";
-            this.dataGridViewTextBoxColumn27.HeaderText = "Tipo";
-            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
-            this.dataGridViewTextBoxColumn27.ReadOnly = true;
-            this.dataGridViewTextBoxColumn27.Width = 130;
-            // 
-            // dataGridViewTextBoxColumn28
-            // 
-            this.dataGridViewTextBoxColumn28.DataPropertyName = "COMPRIMENTO";
-            this.dataGridViewTextBoxColumn28.HeaderText = "Comprimento (mm)";
-            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
-            this.dataGridViewTextBoxColumn28.ReadOnly = true;
-            this.dataGridViewTextBoxColumn28.Width = 130;
-            // 
-            // dataGridViewTextBoxColumn29
-            // 
-            this.dataGridViewTextBoxColumn29.DataPropertyName = "LARGURA";
-            this.dataGridViewTextBoxColumn29.HeaderText = "Largura (m)";
-            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
-            this.dataGridViewTextBoxColumn29.ReadOnly = true;
-            // 
-            // dataGridViewButtonColumn4
-            // 
-            this.dataGridViewButtonColumn4.HeaderText = "";
-            this.dataGridViewButtonColumn4.Name = "dataGridViewButtonColumn4";
-            this.dataGridViewButtonColumn4.Text = "Excluir";
-            this.dataGridViewButtonColumn4.UseColumnTextForButtonValue = true;
-            this.dataGridViewButtonColumn4.Width = 85;
-            // 
-            // button8
-            // 
-            this.button8.Enabled = false;
-            this.button8.Location = new System.Drawing.Point(703, 128);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(90, 23);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "Gravar Tampa";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // textBox15
-            // 
-            this.textBox15.Enabled = false;
-            this.textBox15.Location = new System.Drawing.Point(509, 131);
-            this.textBox15.MaxLength = 10;
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(158, 20);
-            this.textBox15.TabIndex = 6;
-            // 
-            // label192
-            // 
-            this.label192.AutoSize = true;
-            this.label192.Location = new System.Drawing.Point(425, 135);
-            this.label192.Name = "label192";
-            this.label192.Size = new System.Drawing.Size(75, 13);
-            this.label192.TabIndex = 60;
-            this.label192.Text = "Largura (mm)*:";
-            // 
-            // textBox16
-            // 
-            this.textBox16.Enabled = false;
-            this.textBox16.Location = new System.Drawing.Point(149, 128);
-            this.textBox16.MaxLength = 10;
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(157, 20);
-            this.textBox16.TabIndex = 5;
-            // 
-            // label193
-            // 
-            this.label193.AutoSize = true;
-            this.label193.Location = new System.Drawing.Point(33, 131);
-            this.label193.Name = "label193";
-            this.label193.Size = new System.Drawing.Size(100, 13);
-            this.label193.TabIndex = 58;
-            this.label193.Text = "Comprimento (mm)*:";
-            // 
-            // textBox17
-            // 
-            this.textBox17.Enabled = false;
-            this.textBox17.Location = new System.Drawing.Point(149, 89);
-            this.textBox17.MaxLength = 10;
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(157, 20);
-            this.textBox17.TabIndex = 3;
-            // 
-            // label194
-            // 
-            this.label194.AutoSize = true;
-            this.label194.Location = new System.Drawing.Point(64, 92);
-            this.label194.Name = "label194";
-            this.label194.Size = new System.Drawing.Size(69, 13);
-            this.label194.TabIndex = 56;
-            this.label194.Text = "Quantidade*:";
-            // 
-            // comboBox20
-            // 
-            this.comboBox20.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox20.Enabled = false;
-            this.comboBox20.FormattingEnabled = true;
-            this.comboBox20.Items.AddRange(new object[] {
-            "Selecione",
-            "Plana",
-            "Ondulada"});
-            this.comboBox20.Location = new System.Drawing.Point(509, 86);
-            this.comboBox20.Name = "comboBox20";
-            this.comboBox20.Size = new System.Drawing.Size(158, 21);
-            this.comboBox20.TabIndex = 4;
-            // 
-            // label195
-            // 
-            this.label195.AutoSize = true;
-            this.label195.Location = new System.Drawing.Point(414, 89);
-            this.label195.Name = "label195";
-            this.label195.Size = new System.Drawing.Size(86, 13);
-            this.label195.TabIndex = 47;
-            this.label195.Text = "Tipo de Tampa*:";
-            // 
-            // label196
-            // 
-            this.label196.AutoSize = true;
-            this.label196.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label196.ForeColor = System.Drawing.Color.Black;
-            this.label196.Location = new System.Drawing.Point(16, 58);
-            this.label196.Name = "label196";
-            this.label196.Size = new System.Drawing.Size(240, 13);
-            this.label196.TabIndex = 52;
-            this.label196.Text = "Preencha a tabela de Tampas Metálicas*";
-            // 
-            // textBox18
-            // 
-            this.textBox18.Enabled = false;
-            this.textBox18.Location = new System.Drawing.Point(509, 16);
-            this.textBox18.MaxLength = 10;
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(158, 20);
-            this.textBox18.TabIndex = 2;
-            // 
-            // comboBox21
-            // 
-            this.comboBox21.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox21.FormattingEnabled = true;
-            this.comboBox21.Items.AddRange(new object[] {
-            "Selecione",
-            "Polipropileno",
-            "Metálica"});
-            this.comboBox21.Location = new System.Drawing.Point(149, 16);
-            this.comboBox21.Name = "comboBox21";
-            this.comboBox21.Size = new System.Drawing.Size(157, 21);
-            this.comboBox21.TabIndex = 1;
-            // 
-            // label197
-            // 
-            this.label197.AutoSize = true;
-            this.label197.Location = new System.Drawing.Point(16, 19);
-            this.label197.Name = "label197";
-            this.label197.Size = new System.Drawing.Size(127, 13);
-            this.label197.TabIndex = 47;
-            this.label197.Text = "Qual Material da Tampa*:";
-            // 
-            // label198
-            // 
-            this.label198.AutoSize = true;
-            this.label198.Location = new System.Drawing.Point(390, 19);
-            this.label198.Name = "label198";
-            this.label198.Size = new System.Drawing.Size(110, 13);
-            this.label198.TabIndex = 37;
-            this.label198.Text = "Quantidade Tampas*:";
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(472, 388);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 10;
-            this.button9.Text = "Excluir";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Visible = false;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(364, 388);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 9;
-            this.button10.Text = "Salvar";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // textBox19
-            // 
-            this.textBox19.Location = new System.Drawing.Point(149, 328);
-            this.textBox19.MaxLength = 2000;
-            this.textBox19.Multiline = true;
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(644, 48);
-            this.textBox19.TabIndex = 8;
+            this.txt5_3DescServico.Location = new System.Drawing.Point(158, 29);
+            this.txt5_3DescServico.MaxLength = 4000;
+            this.txt5_3DescServico.Multiline = true;
+            this.txt5_3DescServico.Name = "txt5_3DescServico";
+            this.txt5_3DescServico.Size = new System.Drawing.Size(762, 96);
+            this.txt5_3DescServico.TabIndex = 8;
             // 
             // label199
             // 
             this.label199.AutoSize = true;
-            this.label199.Location = new System.Drawing.Point(60, 344);
+            this.label199.Location = new System.Drawing.Point(23, 72);
             this.label199.Name = "label199";
-            this.label199.Size = new System.Drawing.Size(73, 13);
+            this.label199.Size = new System.Drawing.Size(116, 13);
             this.label199.TabIndex = 6;
-            this.label199.Text = "Observações:";
+            this.label199.Text = "Descrição do Serviço*:";
             // 
             // label200
             // 
@@ -7648,7 +7391,6 @@
             this.tabPE5_3.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabEscopo10.ResumeLayout(false);
             this.tabEscopo10.PerformLayout();
             this.tabsEscopo10.ResumeLayout(false);
@@ -8210,32 +7952,9 @@
         private System.Windows.Forms.TabPage tabPE5_2;
         private System.Windows.Forms.TabPage tabPE5_3;
         private System.Windows.Forms.Panel panel20;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn4;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.Label label192;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.Label label193;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.Label label194;
-        private System.Windows.Forms.ComboBox comboBox20;
-        private System.Windows.Forms.Label label195;
-        private System.Windows.Forms.Label label196;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.ComboBox comboBox21;
-        private System.Windows.Forms.Label label197;
-        private System.Windows.Forms.Label label198;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.Button btn5_3Excluir;
+        private System.Windows.Forms.Button btn5_3Salvar;
+        private System.Windows.Forms.TextBox txt5_3DescServico;
         private System.Windows.Forms.Label label199;
         private System.Windows.Forms.Label label200;
         private System.Windows.Forms.Label label147;
