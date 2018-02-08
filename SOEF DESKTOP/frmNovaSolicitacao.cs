@@ -8117,7 +8117,6 @@ namespace ORCAMENTOS_FOCKINK
                 }
             }
             //Tensão Secundária
-            MessageBox.Show(combo5_2TensaoSec.SelectedIndex.ToString());
             if(combo5_2TensaoSec.SelectedIndex == 0)
             {
                 erros += "O campo Tensão Secundária, deve ser preenchido.\n";
@@ -8317,7 +8316,6 @@ namespace ORCAMENTOS_FOCKINK
                     //Verifica se está cadastrando ou alterando o registro
                     if (AcaoTela == "N")
                     {
-                        MessageBox.Show(BuchasBT);
                         int retornoInsert = Escopo_05_2.gravaEscopo_05_2(TensaoPrimaria, TensaoSecundaria, indPotenciaInformDef, indListaCargas, MeioIsolante, BuchasMT, BuchasBT, Obs, indPre, tipoPinturaMeioIsol, descOutraTensaoPrim, descOutraTensaoSec, descOutraBuchaMT, descOutraBuchaBT, descOutroMeioIsolante);
                         if (retornoInsert > 0)
                         {
@@ -8439,7 +8437,7 @@ namespace ORCAMENTOS_FOCKINK
                 DataTable dtPotencia = Escopo05_2.getPotenciaEscopo("05_2", null);
                 if (dtPotencia.Rows.Count > 0)
                 {
-                    int retornoPotencia = Escopo05_2.deletePotencEscopo(this.numero_solic.ToString(), this.NumRevisaoSolic, "05_1", null);
+                    int retornoPotencia = Escopo05_2.deletePotencEscopo(this.numero_solic.ToString(), this.NumRevisaoSolic, "05_2", null);
                     if (retornoPotencia <= 0)
                     {
                         sucesso = false;
