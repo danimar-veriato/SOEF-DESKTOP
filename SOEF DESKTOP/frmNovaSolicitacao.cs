@@ -2136,17 +2136,14 @@ namespace ORCAMENTOS_FOCKINK
                     combo10_3Local.SelectedIndex = 0;
                     txt10_3Obs.Text = "";
                     btn10_3Excluir.Visible = false;
-                }
-
-                
+                }                
             }
             catch (Exception)
             {
                 throw;
             }
         }
-
-
+        
         /// <summary>
         /// Lista os dados do Escopo 10_4
         /// </summary>
@@ -2233,8 +2230,7 @@ namespace ORCAMENTOS_FOCKINK
                 throw;
             }
         }
-
-
+        
         /// <summary>
         /// Lista os dados do Escopo 05
         /// </summary>
@@ -2269,7 +2265,7 @@ namespace ORCAMENTOS_FOCKINK
                         }
                         txt05Obs.Text = dr["OBSERVACOES"].ToString();
                     }
-                    btnE10_1Excluir.Visible = true;
+                    btn05Excluir.Visible = true;
                 }
                 else
                 {
@@ -2453,7 +2449,6 @@ namespace ORCAMENTOS_FOCKINK
                             {
                                 combo5_2BuchaMT.SelectedIndex = Convert.ToInt32(dr["BUCHAS_MT"].ToString());
                             }
-                            //MessageBox.Show("Bucha MT: "+combo5_2BuchaMT.SelectedIndex.ToString());
                             if (combo5_2BuchaMT.SelectedIndex == 4)
                             {
                                 txt5_2DescOutraBuchaMT.Enabled = true;
@@ -2472,7 +2467,6 @@ namespace ORCAMENTOS_FOCKINK
                             {
                                 combo5_2BuchaBT.SelectedIndex = Convert.ToInt32(dr["BUCHAS_BT"].ToString());
                             }
-                            MessageBox.Show("Bucha BT: " + combo5_2BuchaBT.SelectedIndex.ToString());
                             if (combo5_2BuchaBT.SelectedIndex == 5)
                             {
                                 txt5_2DescOutraBuchaBT.Enabled = true;
@@ -2538,7 +2532,6 @@ namespace ORCAMENTOS_FOCKINK
             }
         }
 
-
         /// <summary>
         /// Lista os dados do Escopo 05_3
         /// </summary>
@@ -2572,7 +2565,6 @@ namespace ORCAMENTOS_FOCKINK
             }
         }
 
-
         /// <summary>
         /// Lista os dados do Escopo 20
         /// </summary>
@@ -2598,8 +2590,7 @@ namespace ORCAMENTOS_FOCKINK
                 throw;
             }
         }
-
-
+        
         /// <summary>
         /// Lista dados na tela Escopo 10_1
         /// </summary>
@@ -2757,9 +2748,7 @@ namespace ORCAMENTOS_FOCKINK
                 throw;
             }
         }
-
-
-
+        
         /// <summary>
         /// Lista os dados na tela Escopo 10_2
         /// </summary>
@@ -3009,7 +2998,6 @@ namespace ORCAMENTOS_FOCKINK
                 throw;
             }
         }
-
 
         /// <summary>
         /// Lista dados na tela Escopo 01
@@ -3275,7 +3263,6 @@ namespace ORCAMENTOS_FOCKINK
             }
         }
         
-
         /// <summary>
         /// Lista o Escopo 18_1
         /// </summary>
@@ -3468,8 +3455,7 @@ namespace ORCAMENTOS_FOCKINK
                 throw;
             }
         }
-
-
+        
         /// <summary>
         /// Função que verifica os escopos que já estão preenchidos
         /// </summary>
@@ -3501,9 +3487,25 @@ namespace ORCAMENTOS_FOCKINK
 
 
                 //Escopos 05
+                bool E05 = false;
                 bool E05_1 = false;
                 bool E05_2 = false;
                 bool E05_3 = false;
+                //Escopo 05
+                DataTable dtVerifica05 = new DataTable();
+                SOEF_CLASS.Escopo_05 Escopo_05 = new SOEF_CLASS.Escopo_05(numSolic, numRev);
+                dtVerifica05 = Escopo_05.getEscopo_05();
+                if (dtVerifica05.Rows.Count > 0)
+                {
+                    if (dtVerifica05.Rows[0]["IND_PREENCHIDO"].ToString() == "S")
+                    {
+                        E05 = true;
+                    }
+                    else
+                    {
+                        E05 = false;
+                    }
+                }
                 //Escopo 05_1
                 DataTable dtVerifica05_1 = new DataTable();
                 SOEF_CLASS.Escopo_05_1 Escopo_05_1 = new SOEF_CLASS.Escopo_05_1(numSolic, numRev);
@@ -3549,7 +3551,7 @@ namespace ORCAMENTOS_FOCKINK
                         E05_3 = false;
                     }
                 }
-                if (E05_1 || E05_2 || E05_3)
+                if (E05 || E05_1 || E05_2 || E05_3)
                 {
                     checkEscopo5.Checked = true;
                     checkEscopo5.Enabled = false;
@@ -3797,7 +3799,6 @@ namespace ORCAMENTOS_FOCKINK
         }
                
 
-
         private void tabNovaSolicitacao_Selected(object sender, TabControlEventArgs e)
         {
             //Instancia a classe do Escopo Valor Comum
@@ -3919,6 +3920,7 @@ namespace ORCAMENTOS_FOCKINK
             //Escopo 05
             if(tabNovaSolicitacao.SelectedTab.Name == "tabEscopo5")
             {
+                verInformacoesGeraisE05();
                 inicializaCamposE05();
                 if(AcaoTela == "N")
                 {
@@ -7347,6 +7349,7 @@ namespace ORCAMENTOS_FOCKINK
                     listaEscopo05(this.numero_solic.ToString(), this.NumRevisaoSolic);
                     //Muda o STATUS da AçãoTela p/ EDIÇÂO
                     AcaoTela = "C";
+                    verInformacoesGeraisE05();
                 }
                 else
                 {
@@ -7393,12 +7396,119 @@ namespace ORCAMENTOS_FOCKINK
                 {
                     sucesso = false;
                 }
+                //Apaga Registro Escopo 05_1
+                SOEF_CLASS.Escopo_05_1 Escopo05_1 = new SOEF_CLASS.Escopo_05_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                DataTable dt5_1 = Escopo05_1.getEscopo_05_1();
+                if (dt5_1.Rows.Count > 0)
+                {
+                    //Apaga os dados da tabela POTENC_ESCOPO
+                    DataTable dtPotencia = Escopo05_1.getPotenciaEscopo("05_1", null);
+                    if (dtPotencia.Rows.Count > 0)
+                    {
+                        int retornoPotencia = Escopo05_1.deletePotencEscopo(this.numero_solic.ToString(), this.NumRevisaoSolic, "05_1", null);
+                        if (retornoPotencia <= 0)
+                        {
+                            sucesso = false;
+                        }
+                    }
+                    int retorno5_1 = Escopo05_1.deleteEscopo_05_1(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    if (retorno5_1 > 0)
+                    {
+                        //Verifica se o campo da Tabela VALOR_COMUM é requerido
+                        SOEF_CLASS.Escopo_Valor_Comum EValorComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                        DataTable dtBusca = EValorComum.buscaEscopoValorComumE05_1();
+                        if (dtBusca.Rows.Count > 0)
+                        {
+                            int retornoUpdate = 0;
+                            retornoUpdate = EValorComum.deleteEscopo_Valor_Comum_E05_1();
+                            if (retornoUpdate > 0)
+                            {
+                                //Verifica se todos os campos do registro são nulos, se sim, apaga o registro em definitivo
+                                bool DeletaRegistro = verificaRegistroValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                                if (DeletaRegistro)//True - Deleta o registro
+                                {
+                                    int retornoDelete = EValorComum.deleteEscopoValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                                    if (retornoDelete <= 0)
+                                    {
+                                        sucesso = false;
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                sucesso = false;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        sucesso = false;
+                    }
+                }                
+                //Apaga Registro Escopo 05_2
+                SOEF_CLASS.Escopo_05_2 Escopo05_2 = new SOEF_CLASS.Escopo_05_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                DataTable dt5_2 = Escopo05_2.getEscopo_05_2();
+                if(dt5_2.Rows.Count > 0)
+                {
+                    //Apaga os dados da tabela POTENC_ESCOPO
+                    DataTable dtPotencia5_2 = Escopo05_2.getPotenciaEscopo("05_2", null);
+                    if (dtPotencia5_2.Rows.Count > 0)
+                    {
+                        int retornoPotencia5_2 = Escopo05_2.deletePotencEscopo(this.numero_solic.ToString(), this.NumRevisaoSolic, "05_2", null);
+                        if (retornoPotencia5_2 <= 0)
+                        {
+                            sucesso = false;
+                        }
+                    }
+                    int retorno5_2 = Escopo05_2.deleteEscopo_05_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    if (retorno5_2 > 0)
+                    {
+                        //Verifica se o campo da Tabela VALOR_COMUM é requerido
+                        SOEF_CLASS.Escopo_Valor_Comum EValorComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                        DataTable dtBusca5_2 = EValorComum.buscaEscopoValorComumE05_2();
+                        if (dtBusca5_2.Rows.Count > 0)
+                        {
+                            int retornoUpdate5_2 = 0;
+                            retornoUpdate5_2 = EValorComum.deleteEscopo_Valor_Comum_E05_2();
+                            if (retornoUpdate5_2 > 0)
+                            {
+                                //Verifica se todos os campos do registro são nulos, se sim, apaga o registro em definitivo
+                                bool DeletaRegistro5_2 = verificaRegistroValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                                if (DeletaRegistro5_2)//True - Deleta o registro
+                                {
+                                    int retornoDelete5_2 = EValorComum.deleteEscopoValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                                    if (retornoDelete5_2 <= 0)
+                                    {
+                                        sucesso = false;
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                sucesso = false;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        sucesso = false;
+                    }
+                }                
+                //Apaga os dados do Escopo 05_3
+                SOEF_CLASS.Escopo_05_3 Escopo05_3 = new SOEF_CLASS.Escopo_05_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                DataTable dt5_3 = Escopo05_3.getEscopo_05_3();
+                if(dt5_3.Rows.Count > 0)
+                {
+                    int retorno5_3 = Escopo05_3.deleteEscopo_05_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    if (retorno5_3 <= 0)
+                    {
+                        sucesso = false;
+                    }
+                }           
                 if (sucesso)
                 {
                     MessageBox.Show("Registro excluído com sucesso!");
                     btn05Excluir.Visible = false;
-                    //checkEscopo10.Checked = false;
-                    //checkEscopo10.Enabled = true;
                     listaEscopo05(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 }
                 else
@@ -7756,6 +7866,38 @@ namespace ORCAMENTOS_FOCKINK
 
 
         }
+
+        /// <summary>
+        /// Habilita os Escopos 05_1, 05_2 e 05_3 caso tenha sido cadastrado as Informações Gerais do Escopo
+        /// </summary>
+        protected void verInformacoesGeraisE05()
+        {
+            SOEF_CLASS.Escopo_05 Escopo_05 = new SOEF_CLASS.Escopo_05(this.numero_solic.ToString(), this.NumRevisaoSolic);
+            DataTable dtE5 = Escopo_05.getEscopo_05();
+            if(dtE5.Rows.Count <= 0)
+            {                
+                //Escopo 05_1
+                btn5_1GravaPotencia.Enabled = false;
+                btn05_1Salvar.Enabled = false;
+                //Escopo 05_2
+                btn5_2GravaPotencia.Enabled = false;
+                btn5_2Salvar.Enabled = false;
+                //Escopo 05_3
+                btn5_3Salvar.Enabled = false;
+            }
+            else
+            {
+                //Escopo 05_1
+                btn5_1GravaPotencia.Enabled = true;
+                btn05_1Salvar.Enabled = true;
+                //Escopo 05_2
+                btn5_2GravaPotencia.Enabled = true;
+                btn5_2Salvar.Enabled = true;
+                //Escopo 05_3
+                btn5_3Salvar.Enabled = true;
+            }
+        }
+
 
         private void tabE5_Selected(object sender, TabControlEventArgs e)
         {

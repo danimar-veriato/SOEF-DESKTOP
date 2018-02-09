@@ -2663,7 +2663,7 @@
             this.groupBoxEscopo.Controls.Add(this.checkEscopo3);
             this.groupBoxEscopo.Controls.Add(this.checkEscopo2);
             this.groupBoxEscopo.Controls.Add(this.checkEscopo1);
-            this.groupBoxEscopo.Location = new System.Drawing.Point(90, 27);
+            this.groupBoxEscopo.Location = new System.Drawing.Point(90, 32);
             this.groupBoxEscopo.Name = "groupBoxEscopo";
             this.groupBoxEscopo.Size = new System.Drawing.Size(627, 299);
             this.groupBoxEscopo.TabIndex = 0;
@@ -3617,6 +3617,7 @@
             // 
             // btn5_1GravaPotencia
             // 
+            this.btn5_1GravaPotencia.Enabled = false;
             this.btn5_1GravaPotencia.Location = new System.Drawing.Point(472, 168);
             this.btn5_1GravaPotencia.Name = "btn5_1GravaPotencia";
             this.btn5_1GravaPotencia.Size = new System.Drawing.Size(111, 31);
@@ -3889,6 +3890,7 @@
             // 
             // btn05_1Salvar
             // 
+            this.btn05_1Salvar.Enabled = false;
             this.btn05_1Salvar.Location = new System.Drawing.Point(378, 383);
             this.btn05_1Salvar.Name = "btn05_1Salvar";
             this.btn05_1Salvar.Size = new System.Drawing.Size(75, 23);
@@ -4270,6 +4272,7 @@
             // 
             // btn5_2GravaPotencia
             // 
+            this.btn5_2GravaPotencia.Enabled = false;
             this.btn5_2GravaPotencia.Location = new System.Drawing.Point(496, 231);
             this.btn5_2GravaPotencia.Name = "btn5_2GravaPotencia";
             this.btn5_2GravaPotencia.Size = new System.Drawing.Size(94, 31);
@@ -4526,6 +4529,7 @@
             // 
             // btn5_2Salvar
             // 
+            this.btn5_2Salvar.Enabled = false;
             this.btn5_2Salvar.Location = new System.Drawing.Point(378, 436);
             this.btn5_2Salvar.Name = "btn5_2Salvar";
             this.btn5_2Salvar.Size = new System.Drawing.Size(75, 23);
@@ -4569,6 +4573,7 @@
             // 
             // btn5_3Salvar
             // 
+            this.btn5_3Salvar.Enabled = false;
             this.btn5_3Salvar.Location = new System.Drawing.Point(348, 145);
             this.btn5_3Salvar.Name = "btn5_3Salvar";
             this.btn5_3Salvar.Size = new System.Drawing.Size(75, 23);
