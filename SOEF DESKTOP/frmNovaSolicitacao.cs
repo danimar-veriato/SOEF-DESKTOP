@@ -1098,8 +1098,7 @@ namespace ORCAMENTOS_FOCKINK
 
 
         }
-
-
+        
         /// <summary>
         /// Busca os dados da solicitaçao no banco e carrega nos campos da tela
         /// </summary>
@@ -1429,7 +1428,6 @@ namespace ORCAMENTOS_FOCKINK
                 throw;
             }
         }
-
 
         /// <summary>
         /// Retorna o percentual das condições de pagamento atualizadas
@@ -4045,6 +4043,12 @@ namespace ORCAMENTOS_FOCKINK
                 }
             }
 
+            //Escopo 17
+            if(tabNovaSolicitacao.SelectedTab.Name == "tabEscopo17")
+            {
+                inicializaCamposE17();
+            }
+
             //Escopo 18
             if (tabNovaSolicitacao.SelectedTab.Name == "tabEscopo18")
             {
@@ -5519,6 +5523,16 @@ namespace ORCAMENTOS_FOCKINK
             combo10_4MatTampa.SelectedIndex = 0;
             combo10_4TipoTampa.SelectedIndex = 0;
         }
+
+        /// <summary>
+        /// Inicializa campos Escopo 17
+        /// </summary>
+        private void inicializaCamposE17()
+        {
+            combo17FinalidadeProj.SelectedIndex = 0;
+
+        }
+
 
 
         private void tabsEscopo10_Selected(object sender, TabControlEventArgs e)
@@ -8851,6 +8865,110 @@ namespace ORCAMENTOS_FOCKINK
                 {
                     MessageBox.Show("Ocorreu um erro ao excluir o registro. Por favor, contate o suporte do sistema e tente novamente.");
                 }
+            }
+        }
+
+        private void combo17FinalidadeProj_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(combo17FinalidadeProj.SelectedIndex == 3)
+            {
+                txt17OutraFinalidade.Enabled = true;
+            }
+            else
+            {
+                txt17OutraFinalidade.Text = "";
+                txt17OutraFinalidade.Enabled = false;
+            }
+        }
+
+        private void radio17TemProjN_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radio17TemProjN.Checked)
+            {
+                txt17LayoutObra.Enabled = true;
+            }
+            else
+            {
+                txt17LayoutObra.Enabled = false;
+            }
+        }
+
+        private void radio17TemProjS_CheckedChanged(object sender, EventArgs e)
+        {
+            if(radio17TemProjS.Checked)
+            {
+                txt17LayoutObra.Enabled = false;
+            }
+            else
+            {
+                txt17LayoutObra.Enabled = true;
+            }
+        }
+
+        private void btn17Salvar_Click(object sender, EventArgs e)
+        {
+            string erros = "";
+            if(combo17FinalidadeProj.SelectedIndex == 0)
+            {
+                erros += "O campo Finalidade do Projeto deve ser preenchido.";
+            }
+            else if(combo17FinalidadeProj.SelectedIndex == 3)
+            {
+                if (string.IsNullOrEmpty(txt17OutraFinalidade.Text))
+                {
+                    erros += "O campo Outra Finalidade deve ser preenchido.";
+                }
+            }
+            if (radio17TemProjN.Checked)
+            {
+                if (string.IsNullOrEmpty(txt17LayoutObra.Text))
+                {
+                    erros += "O campo Layout da Obra deve ser preenchido.";
+                }
+            }
+
+            if (!string.IsNullOrEmpty(erros))
+            {
+                MessageBox.Show("Painel de erros:\n" + erros);
+            }
+            else
+            {
+                string FinalidadeProj = "";
+                string descOutraFinalidade = "";
+                string indProjetoImplantacao = "";
+                string descLayoutObra;
+                string Obs = "";
+                string indPre = "S";
+
+                //Finalidade
+                if(combo17FinalidadeProj.SelectedIndex == 1)
+                {
+                    FinalidadeProj = "PO";
+                }
+                else if (combo17FinalidadeProj.SelectedIndex == 2)
+                {
+                    FinalidadeProj = "E";
+                }
+                else
+                {
+                    FinalidadeProj = "O";
+                    descOutraFinalidade = txt17OutraFinalidade.Text;
+                }
+
+                //Projeto Implantação
+                if (radio17TemProjS.Checked)
+                {
+                    indProjetoImplantacao = "S";
+                }
+                else
+                {
+                    indProjetoImplantacao = "N";
+                    descLayoutObra = txt17LayoutObra.Text;
+                }
+                Obs = txt17Obs.Text;
+
+                //Prosseguir com a inserção no Banco de Dados
+
             }
         }
     }
