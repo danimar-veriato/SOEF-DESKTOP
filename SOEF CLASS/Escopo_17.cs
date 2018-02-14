@@ -30,7 +30,7 @@ namespace SOEF_CLASS
         /// <param name="pDescServico"></param>
         /// <param name="pIndPre"></param>
         /// <returns></returns>
-        public int gravaEscopo_05_3(string pFinalidadeProj, string pDescOutraFinalidade, string pProjetoImplantacao, string pDescLayoutObra, string pObs, string pIndPre)
+        public int gravaEscopo_17(string pFinalidadeProj, string pDescOutraFinalidade, string pProjetoImplantacao, string pDescLayoutObra, string pObs, string pIndPre)
         {
             SqlCE sqlce = new SqlCE();
             sqlce.openConnection();
@@ -75,7 +75,7 @@ namespace SOEF_CLASS
         /// <param name="pDescServico"></param>
         /// <param name="pIndPre"></param>
         /// <returns></returns>
-        public int updateEscopo_05_3(string pFinalidadeProj, string pDescOutraFinalidade, string pProjetoImplantacao, string pDescLayoutObra, string pObs, string pIndPre)
+        public int updateEscopo_17(string pFinalidadeProj, string pDescOutraFinalidade, string pProjetoImplantacao, string pDescLayoutObra, string pObs, string pIndPre)
         {
             SqlCE sqlce = new SqlCE();
             sqlce.openConnection();
@@ -85,10 +85,10 @@ namespace SOEF_CLASS
                 string query = "";
                 query += " UPDATE [DOM_SOLIC_ORC_ESCOPO_17] ";
                 query += "   SET [IND_FINALIDADE_PROJETO] = '" + pFinalidadeProj + "', ";
-                query += "       [DESC_OUTRA_FINALIDADE] = '" + pDescOutraFinalidade + "' ";
-                query += "       [IND_PROJETO_IMPLANTACAO] = '" + pProjetoImplantacao + "' ";
-                query += "       [DESC_LAYOUT_OBRA] = '" + pDescLayoutObra + "' ";
-                query += "       [OBSERVACOES] = '" + pObs + "' ";
+                query += "       [DESC_OUTRA_FINALIDADE] = '" + pDescOutraFinalidade + "', ";
+                query += "       [IND_PROJETO_IMPLANTACAO] = '" + pProjetoImplantacao + "', ";
+                query += "       [DESC_LAYOUT_OBRA] = '" + pDescLayoutObra + "', ";
+                query += "       [OBSERVACOES] = '" + pObs + "', ";
                 query += "       [IND_PREENCHIDO] = '" + pIndPre + "' ";
                 query += "  WHERE [NUMERO_SOLICITACAO] = " + Numero + " AND  [REVISAO_SOLICITACAO] = '" + Revisao + "'";
                 retorno = sqlce.insertSOF(query, null, null);
@@ -158,9 +158,6 @@ namespace SOEF_CLASS
                 sqlce.closeConnection();
             }
         }
-
-
-
 
 
     }

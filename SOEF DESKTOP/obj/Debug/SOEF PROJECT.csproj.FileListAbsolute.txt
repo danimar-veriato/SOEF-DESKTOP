@@ -139,3 +139,4 @@ C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\o
 C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\obj\Debug\SOEF.application
 C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\obj\Debug\SOEF.exe
 C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF DESKTOP\obj\Debug\SOEF.pdb
+C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF-DESKTOP\SOEF DESKTOP\obj\Debug\SOEF PROJECT.csproj.CoreCompileInputs.cache

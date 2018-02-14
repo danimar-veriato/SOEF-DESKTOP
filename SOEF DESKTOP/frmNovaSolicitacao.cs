@@ -3142,234 +3142,70 @@ namespace ORCAMENTOS_FOCKINK
         }
 
         /// <summary>
-        /// Lista o Escopo 18_2
+        /// Lista os dados do Escopo 17
         /// </summary>
         /// <param name="pNumSolic"></param>
         /// <param name="pNumRev"></param>
-        protected void listaEscopo18_2(string pNumSolic, string pNumRev)
+        protected void listaEscopo17(string pNumSolic, string pNumRev)
         {
             try
             {
-                SOEF_CLASS.Escopo_18_2 Escopo18_2 = new SOEF_CLASS.Escopo_18_2(pNumSolic, pNumRev);
-                DataTable dt = Escopo18_2.getEscopo18_2();
-                if(dt.Rows.Count > 0)
-                {
-                    foreach(DataRow dr in dt.Rows)
-                    {
-                        if(dr["IND_TECNICO_OBRAS"].ToString() == "S")
-                        {
-                            check18_2TecObras.Checked = true;
-                        }
-                        else
-                        {
-                            check18_2TecObras.Checked = false;
-                        }
-                        if (dr["IND_ALMOXARIFE"].ToString() == "S")
-                        {
-                            check18_2Almoxarife.Checked = true;
-                        }
-                        else
-                        {
-                            check18_2Almoxarife.Checked = false;
-                        }
-                        if (dr["IND_MONTADOR"].ToString() == "S")
-                        {
-                            check18_2Montador.Checked = true;
-                        }
-                        else
-                        {
-                            check18_2Montador.Checked = false;
-                        }
-                        if (dr["IND_SOLDADOR"].ToString() == "S")
-                        {
-                            check18_2Soldador.Checked = true;
-                        }
-                        else
-                        {
-                            check18_2Soldador.Checked = false;
-                        }
-                        if (dr["IND_OUTRO_PROFISSIONAL"].ToString() == "S")
-                        {
-                            check18_2Outro.Checked = true;
-                            label81.Visible = true;
-                            txt18_2DescProfissional.Visible = true;
-                        }
-                        else
-                        {
-                            check18_2Soldador.Checked = false;
-                            label81.Visible = false;
-                            txt18_2DescProfissional.Text = "";
-                            txt18_2DescProfissional.Visible = false;
-                        }
-                        if (dr["IND_PLATAFORMA_ELEVATORIA"].ToString() == "S")
-                        {
-                            check18_2PlataformaElevatoria.Checked = true;
-                        }
-                        else
-                        {
-                            check18_2PlataformaElevatoria.Checked = false;
-                        }
-                        if (dr["IND_MUNCK"].ToString() == "S")
-                        {
-                            check18_2Munck.Checked = true;
-                        }
-                        else
-                        {
-                            check18_2Munck.Checked = false;
-                        }
-                        if (dr["IND_FERRAMENTAL"].ToString() == "S")
-                        {
-                            check18_2Ferramental.Checked = true;
-                        }
-                        else
-                        {
-                            check18_2Ferramental.Checked = false;
-                        }
-                        txt18_2Obs.Text = dr["OBSERVACOES"].ToString();
-                    }
-                    btn18_2Excluir.Visible = true;
-                    //Marca o CheckBox 18.2 se existir registro
-                    check18_2MaoObraDireta.Checked = true;
-                    check18_2MaoObraDireta.Enabled = false;                    
-                }
-                else
-                {
-                    //Limpa os campos da  tela
-                    check18_2TecObras.Checked = false;
-                    check18_2Almoxarife.Checked = false;
-                    check18_2Montador.Checked = false;
-                    check18_2AuxiliarMontador.Checked = false;
-                    check18_2Soldador.Checked = false;
-                    check18_2Outro.Checked = false;
-                    txt18_2DescProfissional.Text = "";
-                    label81.Visible = false;
-                    txt18_2DescProfissional.Visible = false;
-                    check18_2PlataformaElevatoria.Checked = false;
-                    check18_2Munck.Checked = false;
-                    check18_2Ferramental.Checked = false;
-                    txt18_2Obs.Text = "";
-                    btn18_2Excluir.Visible = false;
-                    //Marca o Checkbox 18.1 se não existir registro cadastrado
-                    check18_2MaoObraDireta.Checked = false;
-                    check18_2MaoObraDireta.Enabled = true;
-                    p18_2.Visible = false;
-                }
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-        
-        /// <summary>
-        /// Lista o Escopo 18_1
-        /// </summary>
-        /// <param name="pNumSolic"></param>
-        /// <param name="pNumRev"></param>
-        protected void listaEscopo18_1(string pNumSolic, string pNumRev)
-        {
-            try
-            {
-                SOEF_CLASS.Escopo_18_1 Escopo18_1 = new SOEF_CLASS.Escopo_18_1(pNumSolic, pNumRev);
-                DataTable dt = Escopo18_1.getEscopo18_1();
+                SOEF_CLASS.Escopo_17 Escopo_17 = new SOEF_CLASS.Escopo_17(pNumSolic, pNumRev);
+                DataTable dt = Escopo_17.getEscopo_17();
                 if (dt.Rows.Count > 0)
                 {
                     foreach (DataRow dr in dt.Rows)
                     {
-                        if (dr["IND_ENGENHEIRO_RESIDENTE"].ToString() == "S")
+                        if(dr["IND_FINALIDADE_PROJETO"].ToString() == "PO")
                         {
-                            check18_1EngResidente.Checked = true;
+                            combo17FinalidadeProj.SelectedIndex = 1;
+                        }
+                        else if (dr["IND_FINALIDADE_PROJETO"].ToString() == "E")
+                        {
+                            combo17FinalidadeProj.SelectedIndex = 2;
                         }
                         else
                         {
-                            check18_1EngResidente.Checked = false;
+                            combo17FinalidadeProj.SelectedIndex = 3;
+                            txt17OutraFinalidade.Enabled = true;
+                            txt17OutraFinalidade.Text = dr["DESC_OUTRA_FINALIDADE"].ToString();
                         }
 
-                        if(dr["IND_ADMINISTRATIVO"].ToString() == "S")
+                        if(dr["IND_PROJETO_IMPLANTACAO"].ToString() == "S")
                         {
-                            check18_1Administrativo.Checked = true;
+                            radio17TemProjS.Checked = true;
                         }
                         else
                         {
-                            check18_1Administrativo.Checked = false;
+                            radio17TemProjN.Checked = false;
+                            txt17LayoutObra.Enabled = true;
+                            txt17LayoutObra.Text = dr["DESC_LAYOUT_OBRA"].ToString();
                         }
-
-                        if (dr["IND_TECNICO_SEGURANCA"].ToString() == "S")
-                        {
-                            check18_1TecSeguranca.Checked = true;
-                        }
-                        else
-                        {
-                            check18_1TecSeguranca.Checked = false;
-                        }
-
-                        if(dr["IND_PLANEJADOR"].ToString() == "S")
-                        {
-                            check18_1Planejador.Checked = true;
-                        }
-                        else
-                        {
-                            check18_1Planejador.Checked = false;
-                        }
-
-                        if (dr["IND_OUTRO_PROFISSIONAL"].ToString() == "S")
-                        {
-                            check18_1Outro.Checked = true;
-                            label76.Visible = true;
-                            txt18_1DescProfissional.Visible = true;
-                            txt18_1DescProfissional.Text = dr["DESC_OUTRO_PROFISSIONAL"].ToString();
-                        }
-                        else
-                        {
-                            check18_1Outro.Checked = false;
-                            label76.Visible = false;
-                            txt18_1DescProfissional.Visible = false;
-                            txt18_1DescProfissional.Text = "";
-                        }
-                        if (dr["IND_ENCARREGADO"].ToString() == "S")
-                        {
-                            check18_1Encarregado.Checked = true;
-                        }
-                        else
-                        {
-                            check18_1Encarregado.Checked = false;
-                        }
-
-                        txt18_1Obs.Text = dr["OBSERVACOES"].ToString();
+                        
+                        txt17Obs.Text = dr["OBSERVACOES"].ToString();
                     }
-                    btn18_1Excluir.Visible = true;
-
-                    //Marca o Checkbox 18.1 se existir registro cadastrado
-                    check18_1MaoObraIndireta.Checked = true;
-                    check18_1MaoObraIndireta.Enabled = false;
+                    btn17Excluir.Visible = true;
                 }
                 else
                 {
-                    //Limpa os campos da tela
-                    check18_1EngResidente.Checked = false;
-                    check18_1Administrativo.Checked = false;
-                    check18_1TecSeguranca.Checked = false;
-                    check18_1Planejador.Checked = false;
-                    check18_1Outro.Checked = false;
-                    txt18_1DescProfissional.Text = "";
-                    label76.Visible = false;
-                    txt18_1DescProfissional.Visible = false;
-                    txt18_1Obs.Text = "";
-                    check18_1Encarregado.Checked = false;
-                    btn18_1Excluir.Visible = false;
-                    //Marca o Checkbox 18.1 se não existir registro cadastrado
-                    check18_1MaoObraIndireta.Checked = false;
-                    check18_1MaoObraIndireta.Enabled = true;
-                    p18_1.Visible = false;
+                    //Reseta os campos da tela
+                    combo17FinalidadeProj.SelectedIndex = 0;
+                    txt17OutraFinalidade.Text = "";
+                    txt17OutraFinalidade.Enabled = false;
+                    txt17LayoutObra.Text = "";
+                    txt17LayoutObra.Enabled = false;
+                    btn17Excluir.Visible = false;
+                    txt17Obs.Text = "";
+                    tabNovaSolicitacao.SelectedTab.Name = "tabEscopo17"; //Conferir se o nome está correto
                 }
             }
             catch (Exception)
             {
                 throw;
             }
-        }
+        }     
+       
         
-
         /// <summary>
         /// Lista o Escopo 18
         /// </summary>
@@ -3450,6 +3286,234 @@ namespace ORCAMENTOS_FOCKINK
             catch (Exception)
             {
 
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Lista o Escopo 18_1
+        /// </summary>
+        /// <param name="pNumSolic"></param>
+        /// <param name="pNumRev"></param>
+        protected void listaEscopo18_1(string pNumSolic, string pNumRev)
+        {
+            try
+            {
+                SOEF_CLASS.Escopo_18_1 Escopo18_1 = new SOEF_CLASS.Escopo_18_1(pNumSolic, pNumRev);
+                DataTable dt = Escopo18_1.getEscopo18_1();
+                if (dt.Rows.Count > 0)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        if (dr["IND_ENGENHEIRO_RESIDENTE"].ToString() == "S")
+                        {
+                            check18_1EngResidente.Checked = true;
+                        }
+                        else
+                        {
+                            check18_1EngResidente.Checked = false;
+                        }
+
+                        if (dr["IND_ADMINISTRATIVO"].ToString() == "S")
+                        {
+                            check18_1Administrativo.Checked = true;
+                        }
+                        else
+                        {
+                            check18_1Administrativo.Checked = false;
+                        }
+
+                        if (dr["IND_TECNICO_SEGURANCA"].ToString() == "S")
+                        {
+                            check18_1TecSeguranca.Checked = true;
+                        }
+                        else
+                        {
+                            check18_1TecSeguranca.Checked = false;
+                        }
+
+                        if (dr["IND_PLANEJADOR"].ToString() == "S")
+                        {
+                            check18_1Planejador.Checked = true;
+                        }
+                        else
+                        {
+                            check18_1Planejador.Checked = false;
+                        }
+
+                        if (dr["IND_OUTRO_PROFISSIONAL"].ToString() == "S")
+                        {
+                            check18_1Outro.Checked = true;
+                            label76.Visible = true;
+                            txt18_1DescProfissional.Visible = true;
+                            txt18_1DescProfissional.Text = dr["DESC_OUTRO_PROFISSIONAL"].ToString();
+                        }
+                        else
+                        {
+                            check18_1Outro.Checked = false;
+                            label76.Visible = false;
+                            txt18_1DescProfissional.Visible = false;
+                            txt18_1DescProfissional.Text = "";
+                        }
+                        if (dr["IND_ENCARREGADO"].ToString() == "S")
+                        {
+                            check18_1Encarregado.Checked = true;
+                        }
+                        else
+                        {
+                            check18_1Encarregado.Checked = false;
+                        }
+
+                        txt18_1Obs.Text = dr["OBSERVACOES"].ToString();
+                    }
+                    btn18_1Excluir.Visible = true;
+
+                    //Marca o Checkbox 18.1 se existir registro cadastrado
+                    check18_1MaoObraIndireta.Checked = true;
+                    check18_1MaoObraIndireta.Enabled = false;
+                }
+                else
+                {
+                    //Limpa os campos da tela
+                    check18_1EngResidente.Checked = false;
+                    check18_1Administrativo.Checked = false;
+                    check18_1TecSeguranca.Checked = false;
+                    check18_1Planejador.Checked = false;
+                    check18_1Outro.Checked = false;
+                    txt18_1DescProfissional.Text = "";
+                    label76.Visible = false;
+                    txt18_1DescProfissional.Visible = false;
+                    txt18_1Obs.Text = "";
+                    check18_1Encarregado.Checked = false;
+                    btn18_1Excluir.Visible = false;
+                    //Marca o Checkbox 18.1 se não existir registro cadastrado
+                    check18_1MaoObraIndireta.Checked = false;
+                    check18_1MaoObraIndireta.Enabled = true;
+                    p18_1.Visible = false;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Lista o Escopo 18_2
+        /// </summary>
+        /// <param name="pNumSolic"></param>
+        /// <param name="pNumRev"></param>
+        protected void listaEscopo18_2(string pNumSolic, string pNumRev)
+        {
+            try
+            {
+                SOEF_CLASS.Escopo_18_2 Escopo18_2 = new SOEF_CLASS.Escopo_18_2(pNumSolic, pNumRev);
+                DataTable dt = Escopo18_2.getEscopo18_2();
+                if (dt.Rows.Count > 0)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        if (dr["IND_TECNICO_OBRAS"].ToString() == "S")
+                        {
+                            check18_2TecObras.Checked = true;
+                        }
+                        else
+                        {
+                            check18_2TecObras.Checked = false;
+                        }
+                        if (dr["IND_ALMOXARIFE"].ToString() == "S")
+                        {
+                            check18_2Almoxarife.Checked = true;
+                        }
+                        else
+                        {
+                            check18_2Almoxarife.Checked = false;
+                        }
+                        if (dr["IND_MONTADOR"].ToString() == "S")
+                        {
+                            check18_2Montador.Checked = true;
+                        }
+                        else
+                        {
+                            check18_2Montador.Checked = false;
+                        }
+                        if (dr["IND_SOLDADOR"].ToString() == "S")
+                        {
+                            check18_2Soldador.Checked = true;
+                        }
+                        else
+                        {
+                            check18_2Soldador.Checked = false;
+                        }
+                        if (dr["IND_OUTRO_PROFISSIONAL"].ToString() == "S")
+                        {
+                            check18_2Outro.Checked = true;
+                            label81.Visible = true;
+                            txt18_2DescProfissional.Visible = true;
+                        }
+                        else
+                        {
+                            check18_2Soldador.Checked = false;
+                            label81.Visible = false;
+                            txt18_2DescProfissional.Text = "";
+                            txt18_2DescProfissional.Visible = false;
+                        }
+                        if (dr["IND_PLATAFORMA_ELEVATORIA"].ToString() == "S")
+                        {
+                            check18_2PlataformaElevatoria.Checked = true;
+                        }
+                        else
+                        {
+                            check18_2PlataformaElevatoria.Checked = false;
+                        }
+                        if (dr["IND_MUNCK"].ToString() == "S")
+                        {
+                            check18_2Munck.Checked = true;
+                        }
+                        else
+                        {
+                            check18_2Munck.Checked = false;
+                        }
+                        if (dr["IND_FERRAMENTAL"].ToString() == "S")
+                        {
+                            check18_2Ferramental.Checked = true;
+                        }
+                        else
+                        {
+                            check18_2Ferramental.Checked = false;
+                        }
+                        txt18_2Obs.Text = dr["OBSERVACOES"].ToString();
+                    }
+                    btn18_2Excluir.Visible = true;
+                    //Marca o CheckBox 18.2 se existir registro
+                    check18_2MaoObraDireta.Checked = true;
+                    check18_2MaoObraDireta.Enabled = false;
+                }
+                else
+                {
+                    //Limpa os campos da  tela
+                    check18_2TecObras.Checked = false;
+                    check18_2Almoxarife.Checked = false;
+                    check18_2Montador.Checked = false;
+                    check18_2AuxiliarMontador.Checked = false;
+                    check18_2Soldador.Checked = false;
+                    check18_2Outro.Checked = false;
+                    txt18_2DescProfissional.Text = "";
+                    label81.Visible = false;
+                    txt18_2DescProfissional.Visible = false;
+                    check18_2PlataformaElevatoria.Checked = false;
+                    check18_2Munck.Checked = false;
+                    check18_2Ferramental.Checked = false;
+                    txt18_2Obs.Text = "";
+                    btn18_2Excluir.Visible = false;
+                    //Marca o Checkbox 18.1 se não existir registro cadastrado
+                    check18_2MaoObraDireta.Checked = false;
+                    check18_2MaoObraDireta.Enabled = true;
+                    p18_2.Visible = false;
+                }
+            }
+            catch (Exception)
+            {
                 throw;
             }
         }
@@ -3700,8 +3764,7 @@ namespace ORCAMENTOS_FOCKINK
             }
 
        }
-
-
+        
         /// <summary>
         /// Função que lista os dados do Escopo 19 na tela
         /// </summary>
@@ -4046,7 +4109,15 @@ namespace ORCAMENTOS_FOCKINK
             //Escopo 17
             if(tabNovaSolicitacao.SelectedTab.Name == "tabEscopo17")
             {
-                inicializaCamposE17();
+                if(AcaoTela == "N")
+                {
+                    inicializaCamposE17();
+                }
+                else
+                {
+                    listaEscopo17(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                }
+                
             }
 
             //Escopo 18
@@ -5530,6 +5601,11 @@ namespace ORCAMENTOS_FOCKINK
         private void inicializaCamposE17()
         {
             combo17FinalidadeProj.SelectedIndex = 0;
+            txt17OutraFinalidade.Text = "";
+            txt17OutraFinalidade.Enabled = false;
+            txt17LayoutObra.Text = "";
+            txt17LayoutObra.Enabled = false;
+            btn17Excluir.Visible = false;
 
         }
 
@@ -8830,8 +8906,7 @@ namespace ORCAMENTOS_FOCKINK
                         //Cadastra o Escopo 05_3 se ainda não existir
                         retornoUpdate = Escopo_05_3.gravaEscopo_05_3(DescServico, indPre);
                     }
-                    
-                    if(retornoUpdate > 0 || retornoInsert > 0)
+                    if(retornoUpdate > 0)
                     {
                         MessageBox.Show("Registro inserido/alterado com sucesso!");
                         btn5_3Excluir.Visible = true;
@@ -8936,9 +9011,10 @@ namespace ORCAMENTOS_FOCKINK
                 string FinalidadeProj = "";
                 string descOutraFinalidade = "";
                 string indProjetoImplantacao = "";
-                string descLayoutObra;
+                string descLayoutObra = "";
                 string Obs = "";
                 string indPre = "S";
+                bool sucesso = true;
 
                 //Finalidade
                 if(combo17FinalidadeProj.SelectedIndex == 1)
@@ -8968,7 +9044,68 @@ namespace ORCAMENTOS_FOCKINK
                 Obs = txt17Obs.Text;
 
                 //Prosseguir com a inserção no Banco de Dados
+                SOEF_CLASS.Escopo_17 Escopo_17 = new SOEF_CLASS.Escopo_17(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                int retornoInsert = 0;
+                int retornoUpdate = 0;
+                if (AcaoTela == "N")
+                {
+                    retornoInsert = Escopo_17.gravaEscopo_17(FinalidadeProj, descOutraFinalidade, indProjetoImplantacao, descLayoutObra, Obs, indPre);
+                    if (retornoInsert > 0)
+                    {
+                        AcaoTela = "C";
+                    }
+                    else
+                    {
+                        sucesso = false;
+                    }
+                    
+                }
+                else
+                {
+                    //Verifica se já existe registro no escopo
+                    DataTable dt = Escopo_17.getEscopo_17();
+                    if(dt.Rows.Count <= 0)
+                    {
+                        retornoUpdate = Escopo_17.gravaEscopo_17(FinalidadeProj, descOutraFinalidade, indProjetoImplantacao, descLayoutObra, Obs, indPre);
+                    }
+                    else
+                    {
+                        retornoUpdate = Escopo_17.updateEscopo_17(FinalidadeProj, descOutraFinalidade, indProjetoImplantacao, descLayoutObra, Obs, indPre);
+                    }
+                }
+                if (retornoInsert > 0 || retornoUpdate > 0)
+                {
+                    MessageBox.Show("Registro inserido/alterado com sucesso!");
+                    btn17Excluir.Visible = true;
+                    listaEscopo17(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    //Muda o STATUS da AçãoTela p/ EDIÇÂO
+                    AcaoTela = "C";
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro na atualização do registro. Tente novamente mais tarde.");
+                }
+            }
+        }
 
+        private void btn17Excluir_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Deseja realmente excluir o Escopo 17 desta solicitação?", "SOEF", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                //Apaga os dados do Escopo 17
+                SOEF_CLASS.Escopo_17 Escopo17 = new SOEF_CLASS.Escopo_17(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                int retorno = Escopo17.deleteEscopo_17(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                if (retorno > 0)
+                {
+                    MessageBox.Show("Registro excluído com sucesso!");
+                    btn17Excluir.Visible = false;
+                    listaEscopo17(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro ao excluir o registro. Por favor, contate o suporte do sistema e tente novamente.");
+                }
             }
         }
     }

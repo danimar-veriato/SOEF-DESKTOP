@@ -6480,7 +6480,7 @@
             this.txt17LayoutObra.Multiline = true;
             this.txt17LayoutObra.Name = "txt17LayoutObra";
             this.txt17LayoutObra.Size = new System.Drawing.Size(254, 47);
-            this.txt17LayoutObra.TabIndex = 76;
+            this.txt17LayoutObra.TabIndex = 5;
             // 
             // label233
             // 
@@ -6497,7 +6497,7 @@
             this.radio17TemProjN.Location = new System.Drawing.Point(229, 63);
             this.radio17TemProjN.Name = "radio17TemProjN";
             this.radio17TemProjN.Size = new System.Drawing.Size(45, 17);
-            this.radio17TemProjN.TabIndex = 73;
+            this.radio17TemProjN.TabIndex = 4;
             this.radio17TemProjN.TabStop = true;
             this.radio17TemProjN.Text = "Não";
             this.radio17TemProjN.UseVisualStyleBackColor = true;
@@ -6510,7 +6510,7 @@
             this.radio17TemProjS.Location = new System.Drawing.Point(181, 63);
             this.radio17TemProjS.Name = "radio17TemProjS";
             this.radio17TemProjS.Size = new System.Drawing.Size(42, 17);
-            this.radio17TemProjS.TabIndex = 72;
+            this.radio17TemProjS.TabIndex = 3;
             this.radio17TemProjS.TabStop = true;
             this.radio17TemProjS.Text = "Sim";
             this.radio17TemProjS.UseVisualStyleBackColor = true;
@@ -6532,7 +6532,7 @@
             this.txt17OutraFinalidade.MaxLength = 200;
             this.txt17OutraFinalidade.Name = "txt17OutraFinalidade";
             this.txt17OutraFinalidade.Size = new System.Drawing.Size(254, 20);
-            this.txt17OutraFinalidade.TabIndex = 48;
+            this.txt17OutraFinalidade.TabIndex = 2;
             // 
             // label232
             // 
@@ -6564,7 +6564,7 @@
             this.combo17FinalidadeProj.Location = new System.Drawing.Point(181, 12);
             this.combo17FinalidadeProj.Name = "combo17FinalidadeProj";
             this.combo17FinalidadeProj.Size = new System.Drawing.Size(155, 21);
-            this.combo17FinalidadeProj.TabIndex = 26;
+            this.combo17FinalidadeProj.TabIndex = 1;
             this.combo17FinalidadeProj.SelectedIndexChanged += new System.EventHandler(this.combo17FinalidadeProj_SelectedIndexChanged);
             // 
             // btn17Excluir
@@ -6572,17 +6572,18 @@
             this.btn17Excluir.Location = new System.Drawing.Point(511, 206);
             this.btn17Excluir.Name = "btn17Excluir";
             this.btn17Excluir.Size = new System.Drawing.Size(75, 23);
-            this.btn17Excluir.TabIndex = 45;
+            this.btn17Excluir.TabIndex = 8;
             this.btn17Excluir.Text = "Excluir";
             this.btn17Excluir.UseVisualStyleBackColor = true;
             this.btn17Excluir.Visible = false;
+            this.btn17Excluir.Click += new System.EventHandler(this.btn17Excluir_Click);
             // 
             // btn17Salvar
             // 
             this.btn17Salvar.Location = new System.Drawing.Point(403, 206);
             this.btn17Salvar.Name = "btn17Salvar";
             this.btn17Salvar.Size = new System.Drawing.Size(75, 23);
-            this.btn17Salvar.TabIndex = 44;
+            this.btn17Salvar.TabIndex = 7;
             this.btn17Salvar.Text = "Salvar";
             this.btn17Salvar.UseVisualStyleBackColor = true;
             this.btn17Salvar.Click += new System.EventHandler(this.btn17Salvar_Click);
@@ -6594,7 +6595,7 @@
             this.txt17Obs.Multiline = true;
             this.txt17Obs.Name = "txt17Obs";
             this.txt17Obs.Size = new System.Drawing.Size(732, 51);
-            this.txt17Obs.TabIndex = 43;
+            this.txt17Obs.TabIndex = 6;
             // 
             // label193
             // 
@@ -8803,7 +8804,7 @@
             this.btnVoltar.Location = new System.Drawing.Point(28, 579);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(75, 23);
-            this.btnVoltar.TabIndex = 0;
+            this.btnVoltar.TabIndex = 9;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
