@@ -562,61 +562,7 @@
             this.label208 = new System.Windows.Forms.Label();
             this.label195 = new System.Windows.Forms.Label();
             this.tab17_2 = new System.Windows.Forms.TabPage();
-            this.panel31 = new System.Windows.Forms.Panel();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.label210 = new System.Windows.Forms.Label();
             this.panel32 = new System.Windows.Forms.Panel();
-            this.panel33 = new System.Windows.Forms.Panel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label211 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label212 = new System.Windows.Forms.Label();
-            this.label213 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.label214 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label215 = new System.Windows.Forms.Label();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label216 = new System.Windows.Forms.Label();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.label217 = new System.Windows.Forms.Label();
-            this.label218 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewButtonColumn6 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.button6 = new System.Windows.Forms.Button();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label219 = new System.Windows.Forms.Label();
-            this.label220 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label221 = new System.Windows.Forms.Label();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
-            this.label222 = new System.Windows.Forms.Label();
-            this.label223 = new System.Windows.Forms.Label();
-            this.label224 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
-            this.label225 = new System.Windows.Forms.Label();
-            this.label226 = new System.Windows.Forms.Label();
-            this.comboBox12 = new System.Windows.Forms.ComboBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.label227 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.label228 = new System.Windows.Forms.Label();
-            this.panel34 = new System.Windows.Forms.Panel();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.label229 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.tab17_3 = new System.Windows.Forms.TabPage();
             this.panel35 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
@@ -723,6 +669,28 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.check17_2InstalacaoTelefonia = new System.Windows.Forms.CheckBox();
+            this.btn17_2Excluir = new System.Windows.Forms.Button();
+            this.btn17_2Salvar = new System.Windows.Forms.Button();
+            this.check17_2IluminacaoExt = new System.Windows.Forms.CheckBox();
+            this.check17_2InstalacaoForca = new System.Windows.Forms.CheckBox();
+            this.check17_2IluminacaoInterna = new System.Windows.Forms.CheckBox();
+            this.check17_2CaboGeral = new System.Windows.Forms.CheckBox();
+            this.check17_2InstAterramento = new System.Windows.Forms.CheckBox();
+            this.check17_2InstalacaoComando = new System.Windows.Forms.CheckBox();
+            this.check17_2MemorialDesc = new System.Windows.Forms.CheckBox();
+            this.check17_2InstalacaoMT = new System.Windows.Forms.CheckBox();
+            this.txt17_2Obs = new System.Windows.Forms.TextBox();
+            this.label194 = new System.Windows.Forms.Label();
+            this.check17_2InstalacaoCFTV = new System.Windows.Forms.CheckBox();
+            this.check17_2InstalRedeDados = new System.Windows.Forms.CheckBox();
+            this.check17_2Outro = new System.Windows.Forms.CheckBox();
+            this.check17_2InstalRedeEstab = new System.Windows.Forms.CheckBox();
+            this.check17_2ListaMateriais = new System.Windows.Forms.CheckBox();
+            this.label196 = new System.Windows.Forms.Label();
+            this.rbtn17_2AprovConcessionariaN = new System.Windows.Forms.RadioButton();
+            this.rbtn17_2AprovConcessionariaS = new System.Windows.Forms.RadioButton();
             this.tabNovaSolicitacao.SuspendLayout();
             this.tabCabecalho.SuspendLayout();
             this.tbCabecalho.SuspendLayout();
@@ -788,11 +756,7 @@
             this.tab17_1.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.tab17_2.SuspendLayout();
-            this.panel31.SuspendLayout();
             this.panel32.SuspendLayout();
-            this.panel33.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.panel34.SuspendLayout();
             this.tab17_3.SuspendLayout();
             this.panel35.SuspendLayout();
             this.tabEscopo18.SuspendLayout();
@@ -812,6 +776,7 @@
             this.tabEscopo20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaEsc20)).BeginInit();
             this.groupBox5.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabNovaSolicitacao
@@ -6607,7 +6572,7 @@
             this.groupBox8.Size = new System.Drawing.Size(906, 316);
             this.groupBox8.TabIndex = 74;
             this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Definição do Fornecimento de Projetos";
+            this.groupBox8.Text = "17.1: Painéis Elétricos";
             // 
             // check17_1Outro
             // 
@@ -6754,7 +6719,6 @@
             // tab17_2
             // 
             this.tab17_2.BackColor = System.Drawing.SystemColors.Control;
-            this.tab17_2.Controls.Add(this.panel31);
             this.tab17_2.Controls.Add(this.panel32);
             this.tab17_2.Location = new System.Drawing.Point(4, 22);
             this.tab17_2.Name = "tab17_2";
@@ -6762,620 +6726,14 @@
             this.tab17_2.TabIndex = 3;
             this.tab17_2.Text = "17.2: Instalações Elétricas";
             // 
-            // panel31
-            // 
-            this.panel31.Controls.Add(this.radioButton7);
-            this.panel31.Controls.Add(this.radioButton8);
-            this.panel31.Controls.Add(this.label210);
-            this.panel31.Location = new System.Drawing.Point(615, 5);
-            this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(243, 30);
-            this.panel31.TabIndex = 2;
-            // 
-            // radioButton7
-            // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(180, 7);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(45, 17);
-            this.radioButton7.TabIndex = 51;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "Não";
-            this.radioButton7.UseVisualStyleBackColor = true;
-            // 
-            // radioButton8
-            // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(132, 7);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(42, 17);
-            this.radioButton8.TabIndex = 50;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "Sim";
-            this.radioButton8.UseVisualStyleBackColor = true;
-            // 
-            // label210
-            // 
-            this.label210.AutoSize = true;
-            this.label210.Location = new System.Drawing.Point(4, 8);
-            this.label210.Name = "label210";
-            this.label210.Size = new System.Drawing.Size(111, 13);
-            this.label210.TabIndex = 52;
-            this.label210.Text = "Tem Lista de Cargas*:";
-            // 
             // panel32
             // 
             this.panel32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel32.Controls.Add(this.panel33);
-            this.panel32.Controls.Add(this.panel34);
-            this.panel32.Controls.Add(this.button7);
-            this.panel32.Controls.Add(this.button8);
+            this.panel32.Controls.Add(this.groupBox9);
             this.panel32.Location = new System.Drawing.Point(7, 3);
             this.panel32.Name = "panel32";
             this.panel32.Size = new System.Drawing.Size(981, 464);
             this.panel32.TabIndex = 27;
-            // 
-            // panel33
-            // 
-            this.panel33.Controls.Add(this.textBox7);
-            this.panel33.Controls.Add(this.label211);
-            this.panel33.Controls.Add(this.textBox8);
-            this.panel33.Controls.Add(this.label212);
-            this.panel33.Controls.Add(this.label213);
-            this.panel33.Controls.Add(this.comboBox6);
-            this.panel33.Controls.Add(this.comboBox7);
-            this.panel33.Controls.Add(this.label214);
-            this.panel33.Controls.Add(this.textBox9);
-            this.panel33.Controls.Add(this.label215);
-            this.panel33.Controls.Add(this.comboBox8);
-            this.panel33.Controls.Add(this.textBox10);
-            this.panel33.Controls.Add(this.label216);
-            this.panel33.Controls.Add(this.comboBox9);
-            this.panel33.Controls.Add(this.label217);
-            this.panel33.Controls.Add(this.label218);
-            this.panel33.Controls.Add(this.dataGridView2);
-            this.panel33.Controls.Add(this.button6);
-            this.panel33.Controls.Add(this.textBox11);
-            this.panel33.Controls.Add(this.label219);
-            this.panel33.Controls.Add(this.label220);
-            this.panel33.Controls.Add(this.textBox12);
-            this.panel33.Controls.Add(this.label221);
-            this.panel33.Controls.Add(this.comboBox10);
-            this.panel33.Controls.Add(this.label222);
-            this.panel33.Controls.Add(this.label223);
-            this.panel33.Controls.Add(this.label224);
-            this.panel33.Controls.Add(this.textBox13);
-            this.panel33.Controls.Add(this.comboBox11);
-            this.panel33.Controls.Add(this.label225);
-            this.panel33.Controls.Add(this.label226);
-            this.panel33.Controls.Add(this.comboBox12);
-            this.panel33.Controls.Add(this.textBox14);
-            this.panel33.Controls.Add(this.label227);
-            this.panel33.Controls.Add(this.textBox15);
-            this.panel33.Controls.Add(this.label228);
-            this.panel33.Location = new System.Drawing.Point(5, 32);
-            this.panel33.Name = "panel33";
-            this.panel33.Size = new System.Drawing.Size(967, 398);
-            this.panel33.TabIndex = 3;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Enabled = false;
-            this.textBox7.Location = new System.Drawing.Point(798, 119);
-            this.textBox7.MaxLength = 200;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(164, 20);
-            this.textBox7.TabIndex = 9;
-            // 
-            // label211
-            // 
-            this.label211.AutoSize = true;
-            this.label211.Location = new System.Drawing.Point(632, 122);
-            this.label211.Name = "label211";
-            this.label211.Size = new System.Drawing.Size(155, 13);
-            this.label211.TabIndex = 105;
-            this.label211.Text = "Descrição da Outra Bucha MT:";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Enabled = false;
-            this.textBox8.Location = new System.Drawing.Point(798, 154);
-            this.textBox8.MaxLength = 200;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(164, 20);
-            this.textBox8.TabIndex = 11;
-            // 
-            // label212
-            // 
-            this.label212.AutoSize = true;
-            this.label212.Location = new System.Drawing.Point(632, 157);
-            this.label212.Name = "label212";
-            this.label212.Size = new System.Drawing.Size(153, 13);
-            this.label212.TabIndex = 103;
-            this.label212.Text = "Descrição da Outra Bucha BT:";
-            // 
-            // label213
-            // 
-            this.label213.AutoSize = true;
-            this.label213.Location = new System.Drawing.Point(5, 157);
-            this.label213.Name = "label213";
-            this.label213.Size = new System.Drawing.Size(119, 13);
-            this.label213.TabIndex = 102;
-            this.label213.Text = "Buchas BT Devem Ser:";
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox6.Enabled = false;
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
-            "Selecione",
-            "Na lateral com flange",
-            "Na lateral sem flange",
-            "Na tampa sem flange",
-            "Com caixa de cabos",
-            "Outra"});
-            this.comboBox6.Location = new System.Drawing.Point(128, 154);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(140, 21);
-            this.comboBox6.TabIndex = 10;
-            // 
-            // comboBox7
-            // 
-            this.comboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox7.Enabled = false;
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Items.AddRange(new object[] {
-            "Selecione",
-            "Na lateral flangeado",
-            "Na tampa sem flange",
-            "Com caixa de cabos",
-            "Outra"});
-            this.comboBox7.Location = new System.Drawing.Point(128, 119);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(140, 21);
-            this.comboBox7.TabIndex = 8;
-            // 
-            // label214
-            // 
-            this.label214.AutoSize = true;
-            this.label214.Location = new System.Drawing.Point(3, 122);
-            this.label214.Name = "label214";
-            this.label214.Size = new System.Drawing.Size(121, 13);
-            this.label214.TabIndex = 98;
-            this.label214.Text = "Buchas MT Devem Ser:";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Enabled = false;
-            this.textBox9.Location = new System.Drawing.Point(797, 84);
-            this.textBox9.MaxLength = 200;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(166, 20);
-            this.textBox9.TabIndex = 7;
-            // 
-            // label215
-            // 
-            this.label215.AutoSize = true;
-            this.label215.Location = new System.Drawing.Point(620, 90);
-            this.label215.Name = "label215";
-            this.label215.Size = new System.Drawing.Size(172, 13);
-            this.label215.TabIndex = 96;
-            this.label215.Text = "Descrição do Outro Meio Isolante*:";
-            // 
-            // comboBox8
-            // 
-            this.comboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Items.AddRange(new object[] {
-            "Selecione",
-            "Óleo",
-            "Seco IP00",
-            "Seco IP21",
-            "Outro"});
-            this.comboBox8.Location = new System.Drawing.Point(128, 83);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(140, 21);
-            this.comboBox8.TabIndex = 5;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(366, 271);
-            this.textBox10.MaxLength = 10;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(71, 20);
-            this.textBox10.TabIndex = 16;
-            // 
-            // label216
-            // 
-            this.label216.AutoSize = true;
-            this.label216.Location = new System.Drawing.Point(316, 274);
-            this.label216.Name = "label216";
-            this.label216.Size = new System.Drawing.Size(44, 13);
-            this.label216.TabIndex = 93;
-            this.label216.Text = "Fator K:";
-            // 
-            // comboBox9
-            // 
-            this.comboBox9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Items.AddRange(new object[] {
-            "Selecione",
-            "30",
-            "45",
-            "75",
-            "112.5",
-            "150",
-            "225",
-            "300",
-            "500",
-            "750",
-            "1000",
-            "1500",
-            "2000",
-            "2500",
-            "3000",
-            "3750",
-            "4000",
-            "5000"});
-            this.comboBox9.Location = new System.Drawing.Point(128, 231);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(135, 21);
-            this.comboBox9.TabIndex = 13;
-            // 
-            // label217
-            // 
-            this.label217.AutoSize = true;
-            this.label217.Location = new System.Drawing.Point(308, 238);
-            this.label217.Name = "label217";
-            this.label217.Size = new System.Drawing.Size(52, 13);
-            this.label217.TabIndex = 91;
-            this.label217.Text = "Ou digite:";
-            // 
-            // label218
-            // 
-            this.label218.AutoSize = true;
-            this.label218.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label218.ForeColor = System.Drawing.Color.SlateGray;
-            this.label218.Location = new System.Drawing.Point(165, 337);
-            this.label218.Name = "label218";
-            this.label218.Size = new System.Drawing.Size(272, 13);
-            this.label218.TabIndex = 90;
-            this.label218.Text = "Potências associadas ao Trafo BT-MT/MT-BT:";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn24,
-            this.dataGridViewTextBoxColumn25,
-            this.dataGridViewTextBoxColumn26,
-            this.dataGridViewTextBoxColumn27,
-            this.dataGridViewTextBoxColumn28,
-            this.dataGridViewTextBoxColumn29,
-            this.dataGridViewButtonColumn6});
-            this.dataGridView2.Location = new System.Drawing.Point(496, 268);
-            this.dataGridView2.MultiSelect = false;
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(421, 127);
-            this.dataGridView2.TabIndex = 18;
-            // 
-            // dataGridViewTextBoxColumn24
-            // 
-            this.dataGridViewTextBoxColumn24.DataPropertyName = "NUMERO_SOLICITACAO";
-            this.dataGridViewTextBoxColumn24.HeaderText = "Num. Solic.";
-            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            this.dataGridViewTextBoxColumn24.ReadOnly = true;
-            this.dataGridViewTextBoxColumn24.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn25
-            // 
-            this.dataGridViewTextBoxColumn25.DataPropertyName = "REVISAO_SOLICITACAO";
-            this.dataGridViewTextBoxColumn25.HeaderText = "Rev. Solicitação";
-            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            this.dataGridViewTextBoxColumn25.ReadOnly = true;
-            this.dataGridViewTextBoxColumn25.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn26
-            // 
-            this.dataGridViewTextBoxColumn26.DataPropertyName = "SEQ";
-            this.dataGridViewTextBoxColumn26.HeaderText = "Seq.";
-            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
-            this.dataGridViewTextBoxColumn26.ReadOnly = true;
-            this.dataGridViewTextBoxColumn26.Width = 75;
-            // 
-            // dataGridViewTextBoxColumn27
-            // 
-            this.dataGridViewTextBoxColumn27.DataPropertyName = "QUANTIDADE";
-            this.dataGridViewTextBoxColumn27.HeaderText = "Quantidade";
-            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
-            this.dataGridViewTextBoxColumn27.ReadOnly = true;
-            this.dataGridViewTextBoxColumn27.Width = 75;
-            // 
-            // dataGridViewTextBoxColumn28
-            // 
-            this.dataGridViewTextBoxColumn28.DataPropertyName = "POTENCIA_KVA";
-            this.dataGridViewTextBoxColumn28.HeaderText = "Potência (kVA)";
-            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
-            this.dataGridViewTextBoxColumn28.ReadOnly = true;
-            this.dataGridViewTextBoxColumn28.Width = 70;
-            // 
-            // dataGridViewTextBoxColumn29
-            // 
-            this.dataGridViewTextBoxColumn29.DataPropertyName = "FATOR_K";
-            this.dataGridViewTextBoxColumn29.HeaderText = "Fator K";
-            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
-            this.dataGridViewTextBoxColumn29.ReadOnly = true;
-            this.dataGridViewTextBoxColumn29.Width = 70;
-            // 
-            // dataGridViewButtonColumn6
-            // 
-            this.dataGridViewButtonColumn6.HeaderText = "";
-            this.dataGridViewButtonColumn6.Name = "dataGridViewButtonColumn6";
-            this.dataGridViewButtonColumn6.Text = "Excluir";
-            this.dataGridViewButtonColumn6.UseColumnTextForButtonValue = true;
-            this.dataGridViewButtonColumn6.Width = 85;
-            // 
-            // button6
-            // 
-            this.button6.Enabled = false;
-            this.button6.Location = new System.Drawing.Point(496, 231);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(94, 31);
-            this.button6.TabIndex = 17;
-            this.button6.Text = "Gravar Potência";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(128, 267);
-            this.textBox11.MaxLength = 10;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(71, 20);
-            this.textBox11.TabIndex = 15;
-            // 
-            // label219
-            // 
-            this.label219.AutoSize = true;
-            this.label219.Location = new System.Drawing.Point(52, 271);
-            this.label219.Name = "label219";
-            this.label219.Size = new System.Drawing.Size(69, 13);
-            this.label219.TabIndex = 86;
-            this.label219.Text = "Quantidade*:";
-            // 
-            // label220
-            // 
-            this.label220.AutoSize = true;
-            this.label220.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label220.Location = new System.Drawing.Point(439, 238);
-            this.label220.Name = "label220";
-            this.label220.Size = new System.Drawing.Size(30, 13);
-            this.label220.TabIndex = 85;
-            this.label220.Text = "kVA";
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(366, 233);
-            this.textBox12.MaxLength = 10;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(71, 20);
-            this.textBox12.TabIndex = 14;
-            // 
-            // label221
-            // 
-            this.label221.AutoSize = true;
-            this.label221.Location = new System.Drawing.Point(7, 236);
-            this.label221.Name = "label221";
-            this.label221.Size = new System.Drawing.Size(114, 13);
-            this.label221.TabIndex = 83;
-            this.label221.Text = "Selecione a potência*:";
-            // 
-            // comboBox10
-            // 
-            this.comboBox10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox10.Enabled = false;
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Items.AddRange(new object[] {
-            "Selecione...",
-            "Bege RAL 7032 - Padrão",
-            "Munsell N-6.5",
-            "Especial"});
-            this.comboBox10.Location = new System.Drawing.Point(441, 83);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(149, 21);
-            this.comboBox10.TabIndex = 6;
-            this.comboBox10.Visible = false;
-            // 
-            // label222
-            // 
-            this.label222.AutoSize = true;
-            this.label222.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label222.ForeColor = System.Drawing.Color.Green;
-            this.label222.Location = new System.Drawing.Point(298, 87);
-            this.label222.Name = "label222";
-            this.label222.Size = new System.Drawing.Size(136, 13);
-            this.label222.TabIndex = 73;
-            this.label222.Text = "Pintura Meio Isolante*:";
-            this.label222.Visible = false;
-            // 
-            // label223
-            // 
-            this.label223.AutoSize = true;
-            this.label223.Location = new System.Drawing.Point(44, 84);
-            this.label223.Name = "label223";
-            this.label223.Size = new System.Drawing.Size(77, 13);
-            this.label223.TabIndex = 71;
-            this.label223.Text = "Meio Isolante*:";
-            // 
-            // label224
-            // 
-            this.label224.AutoSize = true;
-            this.label224.Location = new System.Drawing.Point(589, 50);
-            this.label224.Name = "label224";
-            this.label224.Size = new System.Drawing.Size(202, 13);
-            this.label224.TabIndex = 68;
-            this.label224.Text = "Descrição da Outra Tensão Secundária*:";
-            // 
-            // textBox13
-            // 
-            this.textBox13.Enabled = false;
-            this.textBox13.Location = new System.Drawing.Point(797, 47);
-            this.textBox13.MaxLength = 200;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(166, 20);
-            this.textBox13.TabIndex = 4;
-            // 
-            // comboBox11
-            // 
-            this.comboBox11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Items.AddRange(new object[] {
-            "Selecione",
-            "220V",
-            "380V",
-            "440V",
-            "13,8kV",
-            "23,1kV",
-            "34,5kV",
-            "Outra"});
-            this.comboBox11.Location = new System.Drawing.Point(128, 47);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(140, 21);
-            this.comboBox11.TabIndex = 3;
-            // 
-            // label225
-            // 
-            this.label225.AutoSize = true;
-            this.label225.Location = new System.Drawing.Point(15, 47);
-            this.label225.Name = "label225";
-            this.label225.Size = new System.Drawing.Size(107, 13);
-            this.label225.TabIndex = 65;
-            this.label225.Text = "Tensão Secundária*:";
-            // 
-            // label226
-            // 
-            this.label226.AutoSize = true;
-            this.label226.Location = new System.Drawing.Point(604, 14);
-            this.label226.Name = "label226";
-            this.label226.Size = new System.Drawing.Size(185, 13);
-            this.label226.TabIndex = 64;
-            this.label226.Text = "Descrição da Outra Tensão Primária*:";
-            // 
-            // comboBox12
-            // 
-            this.comboBox12.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Items.AddRange(new object[] {
-            "Selecione",
-            "220V",
-            "380V",
-            "440V",
-            "13,8kV",
-            "23,1kV",
-            "34,5kV",
-            "Outra"});
-            this.comboBox12.Location = new System.Drawing.Point(128, 11);
-            this.comboBox12.Name = "comboBox12";
-            this.comboBox12.Size = new System.Drawing.Size(140, 21);
-            this.comboBox12.TabIndex = 1;
-            // 
-            // textBox14
-            // 
-            this.textBox14.Enabled = false;
-            this.textBox14.Location = new System.Drawing.Point(798, 11);
-            this.textBox14.MaxLength = 200;
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(164, 20);
-            this.textBox14.TabIndex = 2;
-            // 
-            // label227
-            // 
-            this.label227.AutoSize = true;
-            this.label227.Location = new System.Drawing.Point(32, 11);
-            this.label227.Name = "label227";
-            this.label227.Size = new System.Drawing.Size(90, 13);
-            this.label227.TabIndex = 37;
-            this.label227.Text = "Tensão Primária*:";
-            // 
-            // textBox15
-            // 
-            this.textBox15.Location = new System.Drawing.Point(128, 186);
-            this.textBox15.MaxLength = 2000;
-            this.textBox15.Multiline = true;
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(834, 35);
-            this.textBox15.TabIndex = 12;
-            // 
-            // label228
-            // 
-            this.label228.AutoSize = true;
-            this.label228.Location = new System.Drawing.Point(48, 198);
-            this.label228.Name = "label228";
-            this.label228.Size = new System.Drawing.Size(73, 13);
-            this.label228.TabIndex = 6;
-            this.label228.Text = "Observações:";
-            // 
-            // panel34
-            // 
-            this.panel34.Controls.Add(this.radioButton9);
-            this.panel34.Controls.Add(this.radioButton10);
-            this.panel34.Controls.Add(this.label229);
-            this.panel34.Location = new System.Drawing.Point(23, 2);
-            this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(294, 28);
-            this.panel34.TabIndex = 1;
-            // 
-            // radioButton9
-            // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(157, 5);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(97, 17);
-            this.radioButton9.TabIndex = 51;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "Fockink Define";
-            this.radioButton9.UseVisualStyleBackColor = true;
-            // 
-            // radioButton10
-            // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(74, 6);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(72, 17);
-            this.radioButton10.TabIndex = 50;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "Informada";
-            this.radioButton10.UseVisualStyleBackColor = true;
-            // 
-            // label229
-            // 
-            this.label229.AutoSize = true;
-            this.label229.Location = new System.Drawing.Point(3, 7);
-            this.label229.Name = "label229";
-            this.label229.Size = new System.Drawing.Size(56, 13);
-            this.label229.TabIndex = 52;
-            this.label229.Text = "Potência*:";
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(486, 436);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 20;
-            this.button7.Text = "Excluir";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Visible = false;
-            // 
-            // button8
-            // 
-            this.button8.Enabled = false;
-            this.button8.Location = new System.Drawing.Point(378, 436);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 19;
-            this.button8.Text = "Salvar";
-            this.button8.UseVisualStyleBackColor = true;
             // 
             // tab17_3
             // 
@@ -8498,6 +7856,254 @@
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.rbtn17_2AprovConcessionariaN);
+            this.groupBox9.Controls.Add(this.rbtn17_2AprovConcessionariaS);
+            this.groupBox9.Controls.Add(this.label196);
+            this.groupBox9.Controls.Add(this.check17_2ListaMateriais);
+            this.groupBox9.Controls.Add(this.check17_2Outro);
+            this.groupBox9.Controls.Add(this.check17_2InstalRedeEstab);
+            this.groupBox9.Controls.Add(this.check17_2InstalRedeDados);
+            this.groupBox9.Controls.Add(this.check17_2InstalacaoCFTV);
+            this.groupBox9.Controls.Add(this.check17_2InstalacaoTelefonia);
+            this.groupBox9.Controls.Add(this.btn17_2Excluir);
+            this.groupBox9.Controls.Add(this.btn17_2Salvar);
+            this.groupBox9.Controls.Add(this.check17_2IluminacaoExt);
+            this.groupBox9.Controls.Add(this.check17_2InstalacaoForca);
+            this.groupBox9.Controls.Add(this.check17_2IluminacaoInterna);
+            this.groupBox9.Controls.Add(this.check17_2CaboGeral);
+            this.groupBox9.Controls.Add(this.check17_2InstAterramento);
+            this.groupBox9.Controls.Add(this.check17_2InstalacaoComando);
+            this.groupBox9.Controls.Add(this.check17_2MemorialDesc);
+            this.groupBox9.Controls.Add(this.check17_2InstalacaoMT);
+            this.groupBox9.Controls.Add(this.txt17_2Obs);
+            this.groupBox9.Controls.Add(this.label194);
+            this.groupBox9.Location = new System.Drawing.Point(31, 29);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(906, 376);
+            this.groupBox9.TabIndex = 75;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "17.2: Instalações Elétricas";
+            // 
+            // check17_2InstalacaoTelefonia
+            // 
+            this.check17_2InstalacaoTelefonia.AutoSize = true;
+            this.check17_2InstalacaoTelefonia.Location = new System.Drawing.Point(335, 150);
+            this.check17_2InstalacaoTelefonia.Name = "check17_2InstalacaoTelefonia";
+            this.check17_2InstalacaoTelefonia.Size = new System.Drawing.Size(137, 17);
+            this.check17_2InstalacaoTelefonia.TabIndex = 82;
+            this.check17_2InstalacaoTelefonia.Text = "Instalação de Telefonia";
+            this.check17_2InstalacaoTelefonia.UseVisualStyleBackColor = true;
+            // 
+            // btn17_2Excluir
+            // 
+            this.btn17_2Excluir.Location = new System.Drawing.Point(475, 332);
+            this.btn17_2Excluir.Name = "btn17_2Excluir";
+            this.btn17_2Excluir.Size = new System.Drawing.Size(75, 23);
+            this.btn17_2Excluir.TabIndex = 16;
+            this.btn17_2Excluir.Text = "Excluir";
+            this.btn17_2Excluir.UseVisualStyleBackColor = true;
+            this.btn17_2Excluir.Visible = false;
+            // 
+            // btn17_2Salvar
+            // 
+            this.btn17_2Salvar.Location = new System.Drawing.Point(367, 332);
+            this.btn17_2Salvar.Name = "btn17_2Salvar";
+            this.btn17_2Salvar.Size = new System.Drawing.Size(75, 23);
+            this.btn17_2Salvar.TabIndex = 15;
+            this.btn17_2Salvar.Text = "Salvar";
+            this.btn17_2Salvar.UseVisualStyleBackColor = true;
+            this.btn17_2Salvar.Click += new System.EventHandler(this.btn17_2Salvar_Click);
+            // 
+            // check17_2IluminacaoExt
+            // 
+            this.check17_2IluminacaoExt.AutoSize = true;
+            this.check17_2IluminacaoExt.Location = new System.Drawing.Point(335, 113);
+            this.check17_2IluminacaoExt.Name = "check17_2IluminacaoExt";
+            this.check17_2IluminacaoExt.Size = new System.Drawing.Size(186, 17);
+            this.check17_2IluminacaoExt.TabIndex = 81;
+            this.check17_2IluminacaoExt.Text = " Instalação de Iluminação Externa";
+            this.check17_2IluminacaoExt.UseVisualStyleBackColor = true;
+            // 
+            // check17_2InstalacaoForca
+            // 
+            this.check17_2InstalacaoForca.AutoSize = true;
+            this.check17_2InstalacaoForca.Location = new System.Drawing.Point(335, 77);
+            this.check17_2InstalacaoForca.Name = "check17_2InstalacaoForca";
+            this.check17_2InstalacaoForca.Size = new System.Drawing.Size(120, 17);
+            this.check17_2InstalacaoForca.TabIndex = 80;
+            this.check17_2InstalacaoForca.Text = "Instalação de Força";
+            this.check17_2InstalacaoForca.UseVisualStyleBackColor = true;
+            // 
+            // check17_2IluminacaoInterna
+            // 
+            this.check17_2IluminacaoInterna.AutoSize = true;
+            this.check17_2IluminacaoInterna.Location = new System.Drawing.Point(65, 113);
+            this.check17_2IluminacaoInterna.Name = "check17_2IluminacaoInterna";
+            this.check17_2IluminacaoInterna.Size = new System.Drawing.Size(183, 17);
+            this.check17_2IluminacaoInterna.TabIndex = 79;
+            this.check17_2IluminacaoInterna.Text = " Instalação de Iluminação Interna";
+            this.check17_2IluminacaoInterna.UseVisualStyleBackColor = true;
+            // 
+            // check17_2CaboGeral
+            // 
+            this.check17_2CaboGeral.AutoSize = true;
+            this.check17_2CaboGeral.Location = new System.Drawing.Point(65, 77);
+            this.check17_2CaboGeral.Name = "check17_2CaboGeral";
+            this.check17_2CaboGeral.Size = new System.Drawing.Size(79, 17);
+            this.check17_2CaboGeral.TabIndex = 78;
+            this.check17_2CaboGeral.Text = "Cabo Geral";
+            this.check17_2CaboGeral.UseVisualStyleBackColor = true;
+            // 
+            // check17_2InstAterramento
+            // 
+            this.check17_2InstAterramento.AutoSize = true;
+            this.check17_2InstAterramento.Location = new System.Drawing.Point(637, 113);
+            this.check17_2InstAterramento.Name = "check17_2InstAterramento";
+            this.check17_2InstAterramento.Size = new System.Drawing.Size(191, 17);
+            this.check17_2InstAterramento.TabIndex = 77;
+            this.check17_2InstAterramento.Text = "Instalação de Aterramento e SPDA";
+            this.check17_2InstAterramento.UseVisualStyleBackColor = true;
+            // 
+            // check17_2InstalacaoComando
+            // 
+            this.check17_2InstalacaoComando.AutoSize = true;
+            this.check17_2InstalacaoComando.Location = new System.Drawing.Point(637, 77);
+            this.check17_2InstalacaoComando.Name = "check17_2InstalacaoComando";
+            this.check17_2InstalacaoComando.Size = new System.Drawing.Size(138, 17);
+            this.check17_2InstalacaoComando.TabIndex = 76;
+            this.check17_2InstalacaoComando.Text = "Instalação de Comando";
+            this.check17_2InstalacaoComando.UseVisualStyleBackColor = true;
+            // 
+            // check17_2MemorialDesc
+            // 
+            this.check17_2MemorialDesc.AutoSize = true;
+            this.check17_2MemorialDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check17_2MemorialDesc.ForeColor = System.Drawing.Color.Green;
+            this.check17_2MemorialDesc.Location = new System.Drawing.Point(335, 184);
+            this.check17_2MemorialDesc.Name = "check17_2MemorialDesc";
+            this.check17_2MemorialDesc.Size = new System.Drawing.Size(141, 17);
+            this.check17_2MemorialDesc.TabIndex = 75;
+            this.check17_2MemorialDesc.Text = " Memorial Descritivo";
+            this.check17_2MemorialDesc.UseVisualStyleBackColor = true;
+            // 
+            // check17_2InstalacaoMT
+            // 
+            this.check17_2InstalacaoMT.AutoSize = true;
+            this.check17_2InstalacaoMT.Location = new System.Drawing.Point(65, 41);
+            this.check17_2InstalacaoMT.Name = "check17_2InstalacaoMT";
+            this.check17_2InstalacaoMT.Size = new System.Drawing.Size(161, 17);
+            this.check17_2InstalacaoMT.TabIndex = 74;
+            this.check17_2InstalacaoMT.Text = "Instalação de Média Tensão";
+            this.check17_2InstalacaoMT.UseVisualStyleBackColor = true;
+            this.check17_2InstalacaoMT.CheckedChanged += new System.EventHandler(this.check17_2InstalacaoMT_CheckedChanged);
+            // 
+            // txt17_2Obs
+            // 
+            this.txt17_2Obs.Location = new System.Drawing.Point(146, 262);
+            this.txt17_2Obs.MaxLength = 2000;
+            this.txt17_2Obs.Multiline = true;
+            this.txt17_2Obs.Name = "txt17_2Obs";
+            this.txt17_2Obs.Size = new System.Drawing.Size(745, 40);
+            this.txt17_2Obs.TabIndex = 10;
+            // 
+            // label194
+            // 
+            this.label194.AutoSize = true;
+            this.label194.Location = new System.Drawing.Point(54, 274);
+            this.label194.Name = "label194";
+            this.label194.Size = new System.Drawing.Size(73, 13);
+            this.label194.TabIndex = 6;
+            this.label194.Text = "Observações:";
+            // 
+            // check17_2InstalacaoCFTV
+            // 
+            this.check17_2InstalacaoCFTV.AutoSize = true;
+            this.check17_2InstalacaoCFTV.Location = new System.Drawing.Point(65, 150);
+            this.check17_2InstalacaoCFTV.Name = "check17_2InstalacaoCFTV";
+            this.check17_2InstalacaoCFTV.Size = new System.Drawing.Size(123, 17);
+            this.check17_2InstalacaoCFTV.TabIndex = 83;
+            this.check17_2InstalacaoCFTV.Text = " Instalação de CFTV";
+            this.check17_2InstalacaoCFTV.UseVisualStyleBackColor = true;
+            // 
+            // check17_2InstalRedeDados
+            // 
+            this.check17_2InstalRedeDados.AutoSize = true;
+            this.check17_2InstalRedeDados.Location = new System.Drawing.Point(637, 150);
+            this.check17_2InstalRedeDados.Name = "check17_2InstalRedeDados";
+            this.check17_2InstalRedeDados.Size = new System.Drawing.Size(168, 17);
+            this.check17_2InstalRedeDados.TabIndex = 84;
+            this.check17_2InstalRedeDados.Text = "Instalação de Rede de Dados";
+            this.check17_2InstalRedeDados.UseVisualStyleBackColor = true;
+            // 
+            // check17_2Outro
+            // 
+            this.check17_2Outro.AutoSize = true;
+            this.check17_2Outro.Location = new System.Drawing.Point(65, 222);
+            this.check17_2Outro.Name = "check17_2Outro";
+            this.check17_2Outro.Size = new System.Drawing.Size(52, 17);
+            this.check17_2Outro.TabIndex = 87;
+            this.check17_2Outro.Text = "Outro";
+            this.check17_2Outro.UseVisualStyleBackColor = true;
+            // 
+            // check17_2InstalRedeEstab
+            // 
+            this.check17_2InstalRedeEstab.AutoSize = true;
+            this.check17_2InstalRedeEstab.Location = new System.Drawing.Point(65, 184);
+            this.check17_2InstalRedeEstab.Name = "check17_2InstalRedeEstab";
+            this.check17_2InstalRedeEstab.Size = new System.Drawing.Size(181, 17);
+            this.check17_2InstalRedeEstab.TabIndex = 86;
+            this.check17_2InstalRedeEstab.Text = " Instalação de Rede Estabilizada";
+            this.check17_2InstalRedeEstab.UseVisualStyleBackColor = true;
+            // 
+            // check17_2ListaMateriais
+            // 
+            this.check17_2ListaMateriais.AutoSize = true;
+            this.check17_2ListaMateriais.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check17_2ListaMateriais.ForeColor = System.Drawing.Color.Green;
+            this.check17_2ListaMateriais.Location = new System.Drawing.Point(637, 184);
+            this.check17_2ListaMateriais.Name = "check17_2ListaMateriais";
+            this.check17_2ListaMateriais.Size = new System.Drawing.Size(130, 17);
+            this.check17_2ListaMateriais.TabIndex = 88;
+            this.check17_2ListaMateriais.Text = " Lista de Materiais";
+            this.check17_2ListaMateriais.UseVisualStyleBackColor = true;
+            // 
+            // label196
+            // 
+            this.label196.AutoSize = true;
+            this.label196.Location = new System.Drawing.Point(332, 41);
+            this.label196.Name = "label196";
+            this.label196.Size = new System.Drawing.Size(248, 13);
+            this.label196.TabIndex = 89;
+            this.label196.Text = "Considerar Aprovação Concessionária de Energia*:";
+            this.label196.Visible = false;
+            // 
+            // rbtn17_2AprovConcessionariaN
+            // 
+            this.rbtn17_2AprovConcessionariaN.AutoSize = true;
+            this.rbtn17_2AprovConcessionariaN.Location = new System.Drawing.Point(637, 39);
+            this.rbtn17_2AprovConcessionariaN.Name = "rbtn17_2AprovConcessionariaN";
+            this.rbtn17_2AprovConcessionariaN.Size = new System.Drawing.Size(45, 17);
+            this.rbtn17_2AprovConcessionariaN.TabIndex = 91;
+            this.rbtn17_2AprovConcessionariaN.TabStop = true;
+            this.rbtn17_2AprovConcessionariaN.Text = "Não";
+            this.rbtn17_2AprovConcessionariaN.UseVisualStyleBackColor = true;
+            this.rbtn17_2AprovConcessionariaN.Visible = false;
+            // 
+            // rbtn17_2AprovConcessionariaS
+            // 
+            this.rbtn17_2AprovConcessionariaS.AutoSize = true;
+            this.rbtn17_2AprovConcessionariaS.Checked = true;
+            this.rbtn17_2AprovConcessionariaS.Location = new System.Drawing.Point(589, 39);
+            this.rbtn17_2AprovConcessionariaS.Name = "rbtn17_2AprovConcessionariaS";
+            this.rbtn17_2AprovConcessionariaS.Size = new System.Drawing.Size(42, 17);
+            this.rbtn17_2AprovConcessionariaS.TabIndex = 90;
+            this.rbtn17_2AprovConcessionariaS.TabStop = true;
+            this.rbtn17_2AprovConcessionariaS.Text = "Sim";
+            this.rbtn17_2AprovConcessionariaS.UseVisualStyleBackColor = true;
+            this.rbtn17_2AprovConcessionariaS.Visible = false;
+            // 
             // frmNovaSolicitacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -8615,14 +8221,7 @@
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.tab17_2.ResumeLayout(false);
-            this.panel31.ResumeLayout(false);
-            this.panel31.PerformLayout();
             this.panel32.ResumeLayout(false);
-            this.panel33.ResumeLayout(false);
-            this.panel33.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.panel34.ResumeLayout(false);
-            this.panel34.PerformLayout();
             this.tab17_3.ResumeLayout(false);
             this.panel35.ResumeLayout(false);
             this.panel35.PerformLayout();
@@ -8657,6 +8256,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaEsc20)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -9275,61 +8876,7 @@
         private System.Windows.Forms.Button btn17_1Excluir;
         private System.Windows.Forms.Button btn17_1Salvar;
         private System.Windows.Forms.TabPage tab17_2;
-        private System.Windows.Forms.Panel panel31;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.Label label210;
         private System.Windows.Forms.Panel panel32;
-        private System.Windows.Forms.Panel panel33;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label211;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label212;
-        private System.Windows.Forms.Label label213;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.Label label214;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label215;
-        private System.Windows.Forms.ComboBox comboBox8;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label216;
-        private System.Windows.Forms.ComboBox comboBox9;
-        private System.Windows.Forms.Label label217;
-        private System.Windows.Forms.Label label218;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn6;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Label label219;
-        private System.Windows.Forms.Label label220;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Label label221;
-        private System.Windows.Forms.ComboBox comboBox10;
-        private System.Windows.Forms.Label label222;
-        private System.Windows.Forms.Label label223;
-        private System.Windows.Forms.Label label224;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.ComboBox comboBox11;
-        private System.Windows.Forms.Label label225;
-        private System.Windows.Forms.Label label226;
-        private System.Windows.Forms.ComboBox comboBox12;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.Label label227;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.Label label228;
-        private System.Windows.Forms.Panel panel34;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.RadioButton radioButton10;
-        private System.Windows.Forms.Label label229;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.TabPage tab17_3;
         private System.Windows.Forms.Panel panel35;
         private System.Windows.Forms.Button button9;
@@ -9358,5 +8905,27 @@
         private System.Windows.Forms.CheckBox check17_1ControleMotores;
         private System.Windows.Forms.CheckBox check17_1MemorialDesc;
         private System.Windows.Forms.CheckBox check17_1SubstacaoBlindada;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.CheckBox check17_2ListaMateriais;
+        private System.Windows.Forms.CheckBox check17_2Outro;
+        private System.Windows.Forms.CheckBox check17_2InstalRedeEstab;
+        private System.Windows.Forms.CheckBox check17_2InstalRedeDados;
+        private System.Windows.Forms.CheckBox check17_2InstalacaoCFTV;
+        private System.Windows.Forms.CheckBox check17_2InstalacaoTelefonia;
+        private System.Windows.Forms.Button btn17_2Excluir;
+        private System.Windows.Forms.Button btn17_2Salvar;
+        private System.Windows.Forms.CheckBox check17_2IluminacaoExt;
+        private System.Windows.Forms.CheckBox check17_2InstalacaoForca;
+        private System.Windows.Forms.CheckBox check17_2IluminacaoInterna;
+        private System.Windows.Forms.CheckBox check17_2CaboGeral;
+        private System.Windows.Forms.CheckBox check17_2InstAterramento;
+        private System.Windows.Forms.CheckBox check17_2InstalacaoComando;
+        private System.Windows.Forms.CheckBox check17_2MemorialDesc;
+        private System.Windows.Forms.CheckBox check17_2InstalacaoMT;
+        private System.Windows.Forms.TextBox txt17_2Obs;
+        private System.Windows.Forms.Label label194;
+        private System.Windows.Forms.RadioButton rbtn17_2AprovConcessionariaN;
+        private System.Windows.Forms.RadioButton rbtn17_2AprovConcessionariaS;
+        private System.Windows.Forms.Label label196;
     }
 }

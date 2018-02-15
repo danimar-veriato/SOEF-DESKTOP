@@ -9539,5 +9539,66 @@ namespace ORCAMENTOS_FOCKINK
                 }
             }
         }
+
+        private void check17_2InstalacaoMT_CheckedChanged(object sender, EventArgs e)
+        {
+            if (check17_2InstalacaoMT.Checked)
+            {
+                label196.Visible = true;
+                rbtn17_2AprovConcessionariaS.Visible = true;
+                rbtn17_2AprovConcessionariaS.Checked = false;
+                rbtn17_2AprovConcessionariaN.Visible = true;
+                rbtn17_2AprovConcessionariaN.Checked = false;
+            }
+            else
+            {
+                label196.Visible = false;
+                rbtn17_2AprovConcessionariaS.Visible = false;
+                rbtn17_2AprovConcessionariaN.Visible = false;
+            }
+        }
+
+        private void btn17_2Salvar_Click(object sender, EventArgs e)
+        {
+            string erros = "";
+            if (check17_2InstalacaoMT.Checked)
+            {
+                if (!rbtn17_2AprovConcessionariaS.Checked && !rbtn17_2AprovConcessionariaN.Checked)
+                {
+                    erros += "O campo Considerar Aprovação Concessionária de Energia deve ser preenchido.\n";
+                }
+            }
+            else if(!check17_2CaboGeral.Checked && !check17_2IluminacaoInterna.Checked && !check17_2IluminacaoExt.Checked && !check17_2InstalacaoCFTV.Checked && !check17_2InstalRedeEstab.Checked && !check17_2Outro.Checked && !check17_2InstalacaoForca.Checked && !check17_2InstalacaoTelefonia.Checked && !check17_2MemorialDesc.Checked && !check17_2InstalacaoComando.Checked && !check17_2InstAterramento.Checked && !check17_2InstalRedeDados.Checked && !check17_2ListaMateriais.Checked)
+            {
+                erros += "Pelo menos uma opção de projeto para instalações elétricas deve ser marcada.\n";
+            }
+
+            if (!string.IsNullOrEmpty(erros))
+            {
+                MessageBox.Show("Painel de erros: \n" + erros);
+            }
+            else
+            {
+                string MediaTensao = "";
+                string AprovConcessionaria = "";
+                string CaboGeral = "";
+                string InstalForca = "";
+                string InstalComando = "";
+                string IluminacaoInt = "";
+                string IluminacaoExt = "";
+                string InstalAterramento = "";
+                string InstalCFTV = "";
+                string InstalTelefonia = "";
+                string InstalRedeDados = "";
+                string InstalRedeEstabilizada = "";
+                string MemorialDesc = "";
+                string Outro = "";
+                string Obs = "";
+                string indPre = "S";
+
+
+
+            }
+        }
     }
 }
