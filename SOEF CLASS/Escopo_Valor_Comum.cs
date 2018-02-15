@@ -1069,6 +1069,136 @@ namespace SOEF_CLASS
                 sqlce.closeConnection();
             }
         }
-        
+
+        //CRUD Escopo 17_1
+
+        /// <summary>
+        /// Grava valores do Escopo 17_1
+        /// </summary>
+        /// <param name="pMemorialDescritivo"></param>
+        /// <returns></returns>
+        public int gravaEscopo_Valor_Comum_E17_1(string pMemorialDescritivo)
+        {
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                int retorno = 0;
+                string query = "";
+                query += " INSERT INTO [DOM_SOLIC_ORC_VALOR_COMUM] ";
+                query += "    ([NUMERO_SOLICITACAO], ";
+                query += "    [REVISAO_SOLICITACAO], ";
+                query += "    [IND_MEMORIAL_DESCRITIVO]) ";
+                query += " VALUES ";
+                query += " (" + Numero + ", ";
+                query += " '" + Revisao + "', ";
+                query += " '" + pMemorialDescritivo + "') ";
+                retorno = sqlce.insertSOF(query);
+                return retorno;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                sqlce.closeConnection();
+            }
+        }
+
+        /// <summary>
+        /// Atualiza o registro do Escopo 17_1 na tabela de valores comuns
+        /// </summary>
+        /// <param name="pMemorialDescritivo"></param>
+        /// <returns></returns>
+        public int atualizaEscopo_Valor_Comum_E17_1(string pMemorialDescritivo)
+        {
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                int retorno = 0;
+                string query = "";
+                query += " UPDATE [DOM_SOLIC_ORC_VALOR_COMUM] ";
+                if (string.IsNullOrEmpty(pMemorialDescritivo))
+                {
+                    query += " SET [IND_MEMORIAL_DESCRITIVO] = NULL ";
+                }
+                else
+                {
+                    query += " SET [IND_MEMORIAL_DESCRITIVO] = '" + pMemorialDescritivo + "' ";
+                }
+                query += " WHERE [NUMERO_SOLICITACAO] = " + Numero + "";
+                query += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
+                retorno = sqlce.insertSOF(query);
+                return retorno;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                sqlce.closeConnection();
+            }
+        }
+
+        /// <summary>
+        /// Apaga (SETA COMO NULL) os campos do Escopo 17_1
+        /// </summary>
+        /// <returns></returns>
+        public int deleteEscopo_Valor_Comum_E17_1()
+        {
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                int retorno = 0;
+                string query = "";
+                query += " UPDATE [DOM_SOLIC_ORC_VALOR_COMUM] ";
+                query += " SET [IND_MEMORIAL_DESCRITIVO] = NULL ";
+                query += " WHERE [NUMERO_SOLICITACAO] = " + Numero + "";
+                query += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
+                retorno = sqlce.insertSOF(query);
+                return retorno;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                sqlce.closeConnection();
+            }
+        }
+
+        /// <summary>
+        /// Busca os campos utilizados pelo Escopo 17_1 na VALOR_COMUM
+        /// </summary>
+        /// <param name="numSolicitacao"></param>
+        /// <param name="revSolicitacao"></param>
+        /// <returns></returns>
+        public DataTable buscaEscopoValorComumE17_1()
+        {
+            DataTable dt = new DataTable();
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                string query = "";
+                query += " SELECT [IND_MEMORIAL_DESCRITIVO] ";
+                query += " FROM [DOM_SOLIC_ORC_VALOR_COMUM] ";
+                query += " WHERE [NUMERO_SOLICITACAO] = " + Numero;
+                query += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
+                dt = sqlce.selectListaSOF(query, "DOM_SOLIC_ORC_VALOR_COMUM");
+                return dt;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
     }
 }

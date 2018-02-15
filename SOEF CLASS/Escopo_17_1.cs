@@ -8,29 +8,29 @@ using System.Threading.Tasks;
 
 namespace SOEF_CLASS
 {
-    public class Escopo_17: Escopo
+    public class Escopo_17_1:Escopo
     {
         /// <summary>
-        /// Construtor Escopo 17
+        /// Construtor Escopo 17_1
         /// </summary>
         /// <param name="numSolicitacao"></param>
         /// <param name="revSolicitacao"></param>
-        public Escopo_17(string numSolicitacao, string revSolicitacao)
+        public Escopo_17_1(string numSolicitacao, string revSolicitacao)
         {
             Numero = numSolicitacao;
             Revisao = revSolicitacao;
         }
 
 
-        //Métodos CRUD Escopo 17
+        //Métodos CRUD Escopo 17_1
 
         /// <summary>
-        /// Grava os dados do Escopo 17
+        /// Grava os dados do Escopo 17_1
         /// </summary>
         /// <param name="pDescServico"></param>
         /// <param name="pIndPre"></param>
         /// <returns></returns>
-        public int gravaEscopo_17(string pFinalidadeProj, string pDescOutraFinalidade, string pProjetoImplantacao, string pDescLayoutObra, string pObs, string pIndPre)
+        public int gravaEscopo_17_1(string pSubstacaoBlidada, string pQuadroBaixaTensao, string pConjCorrecFP, string pPainelContMotores, string pQuadroDistribIluminacao, string pPainelSinotico, string pPainelComandoLocal, string pMemorialDesc, string pIndOutro, string pObs, string pIndPre)
         {
             SqlCE sqlce = new SqlCE();
             sqlce.openConnection();
@@ -38,22 +38,32 @@ namespace SOEF_CLASS
             {
                 int retorno;
                 string query = "";
-                query += " INSERT INTO [DOM_SOLIC_ORC_ESCOPO_17] ";
+                query += " INSERT INTO [DOM_SOLIC_ORC_ESCOPO_17_1] ";
                 query += "   ([NUMERO_SOLICITACAO], ";
                 query += "   [REVISAO_SOLICITACAO], ";
-                query += "   [IND_FINALIDADE_PROJETO], ";
-                query += "   [DESC_OUTRA_FINALIDADE], ";
-                query += "   [IND_PROJETO_IMPLANTACAO], ";
-                query += "   [DESC_LAYOUT_OBRA], ";
+                query += "   [IND_SUBSTACAO_BLINDADA], ";
+                query += "   [IND_QUADRO_GER_BAIXA_TENSAO], ";
+                query += "   [IND_CONJ_CORREC_FATOR_POT], ";
+                query += "   [IND_PAINEL_CONT_MOTORES], ";
+                query += "   [IND_QUADRO_DISTRIB_ILUMINACAO], ";
+                query += "   [IND_PAINEL_SINOTICO], ";
+                query += "   [IND_PAINEL_COMANDO_LOCAL], ";
+                query += "   [IND_MEMORIAL_DESCRITIVO], ";
+                query += "   [IND_OUTRO], ";
                 query += "   [OBSERVACOES], ";
                 query += "   [IND_PREENCHIDO]) ";
                 query += " VALUES ";
                 query += "   (" + Numero + ", ";
                 query += "   '" + Revisao + "', ";
-                query += "   '" + pFinalidadeProj + "', ";
-                query += "   '" + pDescOutraFinalidade + "', ";
-                query += "   '" + pProjetoImplantacao + "', ";
-                query += "   '" + pDescLayoutObra + "', ";
+                query += "   '" + pSubstacaoBlidada + "', ";
+                query += "   '" + pQuadroBaixaTensao + "', ";
+                query += "   '" + pConjCorrecFP + "', ";
+                query += "   '" + pPainelContMotores + "', ";
+                query += "   '" + pQuadroDistribIluminacao + "', ";
+                query += "   '" + pPainelSinotico + "', ";
+                query += "   '" + pPainelComandoLocal + "', ";
+                query += "   '" + pMemorialDesc + "', ";
+                query += "   '" + pIndOutro + "', ";
                 query += "   '" + pObs + "', ";
                 query += "   '" + pIndPre + "') ";
                 retorno = sqlce.insertSOF(query);
@@ -69,13 +79,14 @@ namespace SOEF_CLASS
             }
         }
 
+
         /// <summary>
-        /// Atualiza os dados do Escopo 17
+        /// Atualiza os dados do Escopo 17_1
         /// </summary>
         /// <param name="pDescServico"></param>
         /// <param name="pIndPre"></param>
         /// <returns></returns>
-        public int updateEscopo_17(string pFinalidadeProj, string pDescOutraFinalidade, string pProjetoImplantacao, string pDescLayoutObra, string pObs, string pIndPre)
+        public int updateEscopo_17_1(string pSubstacaoBlidada, string pQuadroBaixaTensao, string pConjCorrecFP, string pPainelContMotores, string pQuadroDistribIluminacao, string pPainelSinotico, string pPainelComandoLocal, string pMemorialDesc, string pIndOutro, string pObs, string pIndPre)
         {
             SqlCE sqlce = new SqlCE();
             sqlce.openConnection();
@@ -83,11 +94,16 @@ namespace SOEF_CLASS
             {
                 int retorno;
                 string query = "";
-                query += " UPDATE [DOM_SOLIC_ORC_ESCOPO_17] ";
-                query += "   SET [IND_FINALIDADE_PROJETO] = '" + pFinalidadeProj + "', ";
-                query += "       [DESC_OUTRA_FINALIDADE] = '" + pDescOutraFinalidade + "', ";
-                query += "       [IND_PROJETO_IMPLANTACAO] = '" + pProjetoImplantacao + "', ";
-                query += "       [DESC_LAYOUT_OBRA] = '" + pDescLayoutObra + "', ";
+                query += " UPDATE [DOM_SOLIC_ORC_ESCOPO_17_1] ";
+                query += "   SET [IND_SUBSTACAO_BLINDADA] = '" + pSubstacaoBlidada + "', ";
+                query += "       [IND_QUADRO_GER_BAIXA_TENSAO] = '" + pQuadroBaixaTensao + "', ";
+                query += "       [IND_CONJ_CORREC_FATOR_POT] = '" + pConjCorrecFP + "', ";
+                query += "       [IND_PAINEL_CONT_MOTORES] = '" + pPainelContMotores + "', ";
+                query += "       [IND_QUADRO_DISTRIB_ILUMINACAO] = '" + pQuadroDistribIluminacao + "', ";
+                query += "       [IND_PAINEL_SINOTICO] = '" + pPainelSinotico + "', ";
+                query += "       [IND_PAINEL_COMANDO_LOCAL] = '" + pPainelComandoLocal + "', ";
+                query += "       [IND_MEMORIAL_DESCRITIVO] = '" + pMemorialDesc + "', ";
+                query += "       [IND_OUTRO] = '" + pIndOutro + "', ";
                 query += "       [OBSERVACOES] = '" + pObs + "', ";
                 query += "       [IND_PREENCHIDO] = '" + pIndPre + "' ";
                 query += "  WHERE [NUMERO_SOLICITACAO] = " + Numero + " AND  [REVISAO_SOLICITACAO] = '" + Revisao + "'";
@@ -106,10 +122,10 @@ namespace SOEF_CLASS
 
 
         /// <summary>
-        /// Busca os dados do Escopo 17
+        /// Busca os dados do Escopo 17_1
         /// </summary>
         /// <returns></returns>
-        public DataTable getEscopo_17()
+        public DataTable getEscopo_17_1()
         {
             SqlCE sqlce = new SqlCE();
             sqlce.openConnection();
@@ -117,10 +133,10 @@ namespace SOEF_CLASS
             {
                 DataTable dt = new DataTable();
                 string sql;
-                sql = "SELECT * FROM [DOM_SOLIC_ORC_ESCOPO_17] ";
+                sql = "SELECT * FROM [DOM_SOLIC_ORC_ESCOPO_17_1] ";
                 sql += " WHERE [NUMERO_SOLICITACAO] = " + Numero + " ";
                 sql += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
-                dt = sqlce.selectListaSOF(sql, "DOM_SOLIC_ORC_ESCOPO_17");
+                dt = sqlce.selectListaSOF(sql, "DOM_SOLIC_ORC_ESCOPO_17_1");
                 return dt;
             }
             catch (Exception)
@@ -130,12 +146,12 @@ namespace SOEF_CLASS
         }
 
         /// <summary>
-        /// Apaga os dados do Escopo 17
+        /// Apaga os dados do Escopo 17_1
         /// </summary>
         /// <param name="pNumero"></param>
         /// <param name="pRevisao"></param>
         /// <returns></returns>
-        public int deleteEscopo_17(string pNumero, string pRevisao)
+        public int deleteEscopo_17_1(string pNumero, string pRevisao)
         {
             SqlCE sqlce = new SqlCE();
             sqlce.openConnection();
@@ -143,7 +159,7 @@ namespace SOEF_CLASS
             {
                 int retorno;
                 string query = "";
-                query += " DELETE FROM [DOM_SOLIC_ORC_ESCOPO_17] ";
+                query += " DELETE FROM [DOM_SOLIC_ORC_ESCOPO_17_1] ";
                 query += " WHERE [NUMERO_SOLICITACAO] = " + pNumero + " ";
                 query += " AND [REVISAO_SOLICITACAO] = '" + pRevisao + "' ";
                 retorno = sqlce.deleteSOF(query);
@@ -158,6 +174,7 @@ namespace SOEF_CLASS
                 sqlce.closeConnection();
             }
         }
+
 
 
     }
