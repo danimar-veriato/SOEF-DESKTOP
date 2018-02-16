@@ -562,7 +562,29 @@
             this.label208 = new System.Windows.Forms.Label();
             this.label195 = new System.Windows.Forms.Label();
             this.tab17_2 = new System.Windows.Forms.TabPage();
-            this.panel32 = new System.Windows.Forms.Panel();
+            this.E17_2 = new System.Windows.Forms.Panel();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.rbtn17_2AprovConcessionariaN = new System.Windows.Forms.RadioButton();
+            this.rbtn17_2AprovConcessionariaS = new System.Windows.Forms.RadioButton();
+            this.label196 = new System.Windows.Forms.Label();
+            this.check17_2ListaMateriais = new System.Windows.Forms.CheckBox();
+            this.check17_2Outro = new System.Windows.Forms.CheckBox();
+            this.check17_2InstalRedeEstab = new System.Windows.Forms.CheckBox();
+            this.check17_2InstalRedeDados = new System.Windows.Forms.CheckBox();
+            this.check17_2InstalacaoCFTV = new System.Windows.Forms.CheckBox();
+            this.check17_2InstalacaoTelefonia = new System.Windows.Forms.CheckBox();
+            this.btn17_2Excluir = new System.Windows.Forms.Button();
+            this.btn17_2Salvar = new System.Windows.Forms.Button();
+            this.check17_2IluminacaoExt = new System.Windows.Forms.CheckBox();
+            this.check17_2InstalacaoForca = new System.Windows.Forms.CheckBox();
+            this.check17_2IluminacaoInterna = new System.Windows.Forms.CheckBox();
+            this.check17_2CaboGeral = new System.Windows.Forms.CheckBox();
+            this.check17_2InstAterramento = new System.Windows.Forms.CheckBox();
+            this.check17_2InstalacaoComando = new System.Windows.Forms.CheckBox();
+            this.check17_2MemorialDesc = new System.Windows.Forms.CheckBox();
+            this.check17_2InstalacaoMT = new System.Windows.Forms.CheckBox();
+            this.txt17_2Obs = new System.Windows.Forms.TextBox();
+            this.label194 = new System.Windows.Forms.Label();
             this.tab17_3 = new System.Windows.Forms.TabPage();
             this.panel35 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
@@ -669,28 +691,6 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.check17_2InstalacaoTelefonia = new System.Windows.Forms.CheckBox();
-            this.btn17_2Excluir = new System.Windows.Forms.Button();
-            this.btn17_2Salvar = new System.Windows.Forms.Button();
-            this.check17_2IluminacaoExt = new System.Windows.Forms.CheckBox();
-            this.check17_2InstalacaoForca = new System.Windows.Forms.CheckBox();
-            this.check17_2IluminacaoInterna = new System.Windows.Forms.CheckBox();
-            this.check17_2CaboGeral = new System.Windows.Forms.CheckBox();
-            this.check17_2InstAterramento = new System.Windows.Forms.CheckBox();
-            this.check17_2InstalacaoComando = new System.Windows.Forms.CheckBox();
-            this.check17_2MemorialDesc = new System.Windows.Forms.CheckBox();
-            this.check17_2InstalacaoMT = new System.Windows.Forms.CheckBox();
-            this.txt17_2Obs = new System.Windows.Forms.TextBox();
-            this.label194 = new System.Windows.Forms.Label();
-            this.check17_2InstalacaoCFTV = new System.Windows.Forms.CheckBox();
-            this.check17_2InstalRedeDados = new System.Windows.Forms.CheckBox();
-            this.check17_2Outro = new System.Windows.Forms.CheckBox();
-            this.check17_2InstalRedeEstab = new System.Windows.Forms.CheckBox();
-            this.check17_2ListaMateriais = new System.Windows.Forms.CheckBox();
-            this.label196 = new System.Windows.Forms.Label();
-            this.rbtn17_2AprovConcessionariaN = new System.Windows.Forms.RadioButton();
-            this.rbtn17_2AprovConcessionariaS = new System.Windows.Forms.RadioButton();
             this.tabNovaSolicitacao.SuspendLayout();
             this.tabCabecalho.SuspendLayout();
             this.tbCabecalho.SuspendLayout();
@@ -756,7 +756,8 @@
             this.tab17_1.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.tab17_2.SuspendLayout();
-            this.panel32.SuspendLayout();
+            this.E17_2.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.tab17_3.SuspendLayout();
             this.panel35.SuspendLayout();
             this.tabEscopo18.SuspendLayout();
@@ -776,7 +777,6 @@
             this.tabEscopo20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaEsc20)).BeginInit();
             this.groupBox5.SuspendLayout();
-            this.groupBox9.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabNovaSolicitacao
@@ -6719,21 +6719,270 @@
             // tab17_2
             // 
             this.tab17_2.BackColor = System.Drawing.SystemColors.Control;
-            this.tab17_2.Controls.Add(this.panel32);
+            this.tab17_2.Controls.Add(this.E17_2);
             this.tab17_2.Location = new System.Drawing.Point(4, 22);
             this.tab17_2.Name = "tab17_2";
             this.tab17_2.Size = new System.Drawing.Size(993, 482);
             this.tab17_2.TabIndex = 3;
             this.tab17_2.Text = "17.2: Instalações Elétricas";
             // 
-            // panel32
+            // E17_2
             // 
-            this.panel32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel32.Controls.Add(this.groupBox9);
-            this.panel32.Location = new System.Drawing.Point(7, 3);
-            this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(981, 464);
-            this.panel32.TabIndex = 27;
+            this.E17_2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.E17_2.Controls.Add(this.groupBox9);
+            this.E17_2.Location = new System.Drawing.Point(7, 3);
+            this.E17_2.Name = "E17_2";
+            this.E17_2.Size = new System.Drawing.Size(981, 464);
+            this.E17_2.TabIndex = 27;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.rbtn17_2AprovConcessionariaN);
+            this.groupBox9.Controls.Add(this.rbtn17_2AprovConcessionariaS);
+            this.groupBox9.Controls.Add(this.label196);
+            this.groupBox9.Controls.Add(this.check17_2ListaMateriais);
+            this.groupBox9.Controls.Add(this.check17_2Outro);
+            this.groupBox9.Controls.Add(this.check17_2InstalRedeEstab);
+            this.groupBox9.Controls.Add(this.check17_2InstalRedeDados);
+            this.groupBox9.Controls.Add(this.check17_2InstalacaoCFTV);
+            this.groupBox9.Controls.Add(this.check17_2InstalacaoTelefonia);
+            this.groupBox9.Controls.Add(this.btn17_2Excluir);
+            this.groupBox9.Controls.Add(this.btn17_2Salvar);
+            this.groupBox9.Controls.Add(this.check17_2IluminacaoExt);
+            this.groupBox9.Controls.Add(this.check17_2InstalacaoForca);
+            this.groupBox9.Controls.Add(this.check17_2IluminacaoInterna);
+            this.groupBox9.Controls.Add(this.check17_2CaboGeral);
+            this.groupBox9.Controls.Add(this.check17_2InstAterramento);
+            this.groupBox9.Controls.Add(this.check17_2InstalacaoComando);
+            this.groupBox9.Controls.Add(this.check17_2MemorialDesc);
+            this.groupBox9.Controls.Add(this.check17_2InstalacaoMT);
+            this.groupBox9.Controls.Add(this.txt17_2Obs);
+            this.groupBox9.Controls.Add(this.label194);
+            this.groupBox9.Location = new System.Drawing.Point(31, 29);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(906, 376);
+            this.groupBox9.TabIndex = 75;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "17.2: Instalações Elétricas";
+            // 
+            // rbtn17_2AprovConcessionariaN
+            // 
+            this.rbtn17_2AprovConcessionariaN.AutoSize = true;
+            this.rbtn17_2AprovConcessionariaN.Location = new System.Drawing.Point(637, 39);
+            this.rbtn17_2AprovConcessionariaN.Name = "rbtn17_2AprovConcessionariaN";
+            this.rbtn17_2AprovConcessionariaN.Size = new System.Drawing.Size(45, 17);
+            this.rbtn17_2AprovConcessionariaN.TabIndex = 91;
+            this.rbtn17_2AprovConcessionariaN.TabStop = true;
+            this.rbtn17_2AprovConcessionariaN.Text = "Não";
+            this.rbtn17_2AprovConcessionariaN.UseVisualStyleBackColor = true;
+            this.rbtn17_2AprovConcessionariaN.Visible = false;
+            // 
+            // rbtn17_2AprovConcessionariaS
+            // 
+            this.rbtn17_2AprovConcessionariaS.AutoSize = true;
+            this.rbtn17_2AprovConcessionariaS.Checked = true;
+            this.rbtn17_2AprovConcessionariaS.Location = new System.Drawing.Point(589, 39);
+            this.rbtn17_2AprovConcessionariaS.Name = "rbtn17_2AprovConcessionariaS";
+            this.rbtn17_2AprovConcessionariaS.Size = new System.Drawing.Size(42, 17);
+            this.rbtn17_2AprovConcessionariaS.TabIndex = 90;
+            this.rbtn17_2AprovConcessionariaS.TabStop = true;
+            this.rbtn17_2AprovConcessionariaS.Text = "Sim";
+            this.rbtn17_2AprovConcessionariaS.UseVisualStyleBackColor = true;
+            this.rbtn17_2AprovConcessionariaS.Visible = false;
+            // 
+            // label196
+            // 
+            this.label196.AutoSize = true;
+            this.label196.Location = new System.Drawing.Point(332, 41);
+            this.label196.Name = "label196";
+            this.label196.Size = new System.Drawing.Size(248, 13);
+            this.label196.TabIndex = 89;
+            this.label196.Text = "Considerar Aprovação Concessionária de Energia*:";
+            this.label196.Visible = false;
+            // 
+            // check17_2ListaMateriais
+            // 
+            this.check17_2ListaMateriais.AutoSize = true;
+            this.check17_2ListaMateriais.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check17_2ListaMateriais.ForeColor = System.Drawing.Color.Green;
+            this.check17_2ListaMateriais.Location = new System.Drawing.Point(637, 184);
+            this.check17_2ListaMateriais.Name = "check17_2ListaMateriais";
+            this.check17_2ListaMateriais.Size = new System.Drawing.Size(130, 17);
+            this.check17_2ListaMateriais.TabIndex = 88;
+            this.check17_2ListaMateriais.Text = " Lista de Materiais";
+            this.check17_2ListaMateriais.UseVisualStyleBackColor = true;
+            // 
+            // check17_2Outro
+            // 
+            this.check17_2Outro.AutoSize = true;
+            this.check17_2Outro.Location = new System.Drawing.Point(65, 222);
+            this.check17_2Outro.Name = "check17_2Outro";
+            this.check17_2Outro.Size = new System.Drawing.Size(52, 17);
+            this.check17_2Outro.TabIndex = 87;
+            this.check17_2Outro.Text = "Outro";
+            this.check17_2Outro.UseVisualStyleBackColor = true;
+            // 
+            // check17_2InstalRedeEstab
+            // 
+            this.check17_2InstalRedeEstab.AutoSize = true;
+            this.check17_2InstalRedeEstab.Location = new System.Drawing.Point(65, 184);
+            this.check17_2InstalRedeEstab.Name = "check17_2InstalRedeEstab";
+            this.check17_2InstalRedeEstab.Size = new System.Drawing.Size(181, 17);
+            this.check17_2InstalRedeEstab.TabIndex = 86;
+            this.check17_2InstalRedeEstab.Text = " Instalação de Rede Estabilizada";
+            this.check17_2InstalRedeEstab.UseVisualStyleBackColor = true;
+            // 
+            // check17_2InstalRedeDados
+            // 
+            this.check17_2InstalRedeDados.AutoSize = true;
+            this.check17_2InstalRedeDados.Location = new System.Drawing.Point(637, 150);
+            this.check17_2InstalRedeDados.Name = "check17_2InstalRedeDados";
+            this.check17_2InstalRedeDados.Size = new System.Drawing.Size(168, 17);
+            this.check17_2InstalRedeDados.TabIndex = 84;
+            this.check17_2InstalRedeDados.Text = "Instalação de Rede de Dados";
+            this.check17_2InstalRedeDados.UseVisualStyleBackColor = true;
+            // 
+            // check17_2InstalacaoCFTV
+            // 
+            this.check17_2InstalacaoCFTV.AutoSize = true;
+            this.check17_2InstalacaoCFTV.Location = new System.Drawing.Point(65, 150);
+            this.check17_2InstalacaoCFTV.Name = "check17_2InstalacaoCFTV";
+            this.check17_2InstalacaoCFTV.Size = new System.Drawing.Size(123, 17);
+            this.check17_2InstalacaoCFTV.TabIndex = 83;
+            this.check17_2InstalacaoCFTV.Text = " Instalação de CFTV";
+            this.check17_2InstalacaoCFTV.UseVisualStyleBackColor = true;
+            // 
+            // check17_2InstalacaoTelefonia
+            // 
+            this.check17_2InstalacaoTelefonia.AutoSize = true;
+            this.check17_2InstalacaoTelefonia.Location = new System.Drawing.Point(335, 150);
+            this.check17_2InstalacaoTelefonia.Name = "check17_2InstalacaoTelefonia";
+            this.check17_2InstalacaoTelefonia.Size = new System.Drawing.Size(137, 17);
+            this.check17_2InstalacaoTelefonia.TabIndex = 82;
+            this.check17_2InstalacaoTelefonia.Text = "Instalação de Telefonia";
+            this.check17_2InstalacaoTelefonia.UseVisualStyleBackColor = true;
+            // 
+            // btn17_2Excluir
+            // 
+            this.btn17_2Excluir.Location = new System.Drawing.Point(475, 332);
+            this.btn17_2Excluir.Name = "btn17_2Excluir";
+            this.btn17_2Excluir.Size = new System.Drawing.Size(75, 23);
+            this.btn17_2Excluir.TabIndex = 16;
+            this.btn17_2Excluir.Text = "Excluir";
+            this.btn17_2Excluir.UseVisualStyleBackColor = true;
+            this.btn17_2Excluir.Visible = false;
+            this.btn17_2Excluir.Click += new System.EventHandler(this.btn17_2Excluir_Click);
+            // 
+            // btn17_2Salvar
+            // 
+            this.btn17_2Salvar.Location = new System.Drawing.Point(367, 332);
+            this.btn17_2Salvar.Name = "btn17_2Salvar";
+            this.btn17_2Salvar.Size = new System.Drawing.Size(75, 23);
+            this.btn17_2Salvar.TabIndex = 15;
+            this.btn17_2Salvar.Text = "Salvar";
+            this.btn17_2Salvar.UseVisualStyleBackColor = true;
+            this.btn17_2Salvar.Click += new System.EventHandler(this.btn17_2Salvar_Click);
+            // 
+            // check17_2IluminacaoExt
+            // 
+            this.check17_2IluminacaoExt.AutoSize = true;
+            this.check17_2IluminacaoExt.Location = new System.Drawing.Point(335, 113);
+            this.check17_2IluminacaoExt.Name = "check17_2IluminacaoExt";
+            this.check17_2IluminacaoExt.Size = new System.Drawing.Size(186, 17);
+            this.check17_2IluminacaoExt.TabIndex = 81;
+            this.check17_2IluminacaoExt.Text = " Instalação de Iluminação Externa";
+            this.check17_2IluminacaoExt.UseVisualStyleBackColor = true;
+            // 
+            // check17_2InstalacaoForca
+            // 
+            this.check17_2InstalacaoForca.AutoSize = true;
+            this.check17_2InstalacaoForca.Location = new System.Drawing.Point(335, 77);
+            this.check17_2InstalacaoForca.Name = "check17_2InstalacaoForca";
+            this.check17_2InstalacaoForca.Size = new System.Drawing.Size(120, 17);
+            this.check17_2InstalacaoForca.TabIndex = 80;
+            this.check17_2InstalacaoForca.Text = "Instalação de Força";
+            this.check17_2InstalacaoForca.UseVisualStyleBackColor = true;
+            // 
+            // check17_2IluminacaoInterna
+            // 
+            this.check17_2IluminacaoInterna.AutoSize = true;
+            this.check17_2IluminacaoInterna.Location = new System.Drawing.Point(65, 113);
+            this.check17_2IluminacaoInterna.Name = "check17_2IluminacaoInterna";
+            this.check17_2IluminacaoInterna.Size = new System.Drawing.Size(183, 17);
+            this.check17_2IluminacaoInterna.TabIndex = 79;
+            this.check17_2IluminacaoInterna.Text = " Instalação de Iluminação Interna";
+            this.check17_2IluminacaoInterna.UseVisualStyleBackColor = true;
+            // 
+            // check17_2CaboGeral
+            // 
+            this.check17_2CaboGeral.AutoSize = true;
+            this.check17_2CaboGeral.Location = new System.Drawing.Point(65, 77);
+            this.check17_2CaboGeral.Name = "check17_2CaboGeral";
+            this.check17_2CaboGeral.Size = new System.Drawing.Size(79, 17);
+            this.check17_2CaboGeral.TabIndex = 78;
+            this.check17_2CaboGeral.Text = "Cabo Geral";
+            this.check17_2CaboGeral.UseVisualStyleBackColor = true;
+            // 
+            // check17_2InstAterramento
+            // 
+            this.check17_2InstAterramento.AutoSize = true;
+            this.check17_2InstAterramento.Location = new System.Drawing.Point(637, 113);
+            this.check17_2InstAterramento.Name = "check17_2InstAterramento";
+            this.check17_2InstAterramento.Size = new System.Drawing.Size(191, 17);
+            this.check17_2InstAterramento.TabIndex = 77;
+            this.check17_2InstAterramento.Text = "Instalação de Aterramento e SPDA";
+            this.check17_2InstAterramento.UseVisualStyleBackColor = true;
+            // 
+            // check17_2InstalacaoComando
+            // 
+            this.check17_2InstalacaoComando.AutoSize = true;
+            this.check17_2InstalacaoComando.Location = new System.Drawing.Point(637, 77);
+            this.check17_2InstalacaoComando.Name = "check17_2InstalacaoComando";
+            this.check17_2InstalacaoComando.Size = new System.Drawing.Size(138, 17);
+            this.check17_2InstalacaoComando.TabIndex = 76;
+            this.check17_2InstalacaoComando.Text = "Instalação de Comando";
+            this.check17_2InstalacaoComando.UseVisualStyleBackColor = true;
+            // 
+            // check17_2MemorialDesc
+            // 
+            this.check17_2MemorialDesc.AutoSize = true;
+            this.check17_2MemorialDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check17_2MemorialDesc.ForeColor = System.Drawing.Color.Green;
+            this.check17_2MemorialDesc.Location = new System.Drawing.Point(335, 184);
+            this.check17_2MemorialDesc.Name = "check17_2MemorialDesc";
+            this.check17_2MemorialDesc.Size = new System.Drawing.Size(141, 17);
+            this.check17_2MemorialDesc.TabIndex = 75;
+            this.check17_2MemorialDesc.Text = " Memorial Descritivo";
+            this.check17_2MemorialDesc.UseVisualStyleBackColor = true;
+            // 
+            // check17_2InstalacaoMT
+            // 
+            this.check17_2InstalacaoMT.AutoSize = true;
+            this.check17_2InstalacaoMT.Location = new System.Drawing.Point(65, 41);
+            this.check17_2InstalacaoMT.Name = "check17_2InstalacaoMT";
+            this.check17_2InstalacaoMT.Size = new System.Drawing.Size(161, 17);
+            this.check17_2InstalacaoMT.TabIndex = 74;
+            this.check17_2InstalacaoMT.Text = "Instalação de Média Tensão";
+            this.check17_2InstalacaoMT.UseVisualStyleBackColor = true;
+            this.check17_2InstalacaoMT.CheckedChanged += new System.EventHandler(this.check17_2InstalacaoMT_CheckedChanged);
+            // 
+            // txt17_2Obs
+            // 
+            this.txt17_2Obs.Location = new System.Drawing.Point(146, 262);
+            this.txt17_2Obs.MaxLength = 2000;
+            this.txt17_2Obs.Multiline = true;
+            this.txt17_2Obs.Name = "txt17_2Obs";
+            this.txt17_2Obs.Size = new System.Drawing.Size(745, 40);
+            this.txt17_2Obs.TabIndex = 10;
+            // 
+            // label194
+            // 
+            this.label194.AutoSize = true;
+            this.label194.Location = new System.Drawing.Point(54, 274);
+            this.label194.Name = "label194";
+            this.label194.Size = new System.Drawing.Size(73, 13);
+            this.label194.TabIndex = 6;
+            this.label194.Text = "Observações:";
             // 
             // tab17_3
             // 
@@ -7856,254 +8105,6 @@
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.rbtn17_2AprovConcessionariaN);
-            this.groupBox9.Controls.Add(this.rbtn17_2AprovConcessionariaS);
-            this.groupBox9.Controls.Add(this.label196);
-            this.groupBox9.Controls.Add(this.check17_2ListaMateriais);
-            this.groupBox9.Controls.Add(this.check17_2Outro);
-            this.groupBox9.Controls.Add(this.check17_2InstalRedeEstab);
-            this.groupBox9.Controls.Add(this.check17_2InstalRedeDados);
-            this.groupBox9.Controls.Add(this.check17_2InstalacaoCFTV);
-            this.groupBox9.Controls.Add(this.check17_2InstalacaoTelefonia);
-            this.groupBox9.Controls.Add(this.btn17_2Excluir);
-            this.groupBox9.Controls.Add(this.btn17_2Salvar);
-            this.groupBox9.Controls.Add(this.check17_2IluminacaoExt);
-            this.groupBox9.Controls.Add(this.check17_2InstalacaoForca);
-            this.groupBox9.Controls.Add(this.check17_2IluminacaoInterna);
-            this.groupBox9.Controls.Add(this.check17_2CaboGeral);
-            this.groupBox9.Controls.Add(this.check17_2InstAterramento);
-            this.groupBox9.Controls.Add(this.check17_2InstalacaoComando);
-            this.groupBox9.Controls.Add(this.check17_2MemorialDesc);
-            this.groupBox9.Controls.Add(this.check17_2InstalacaoMT);
-            this.groupBox9.Controls.Add(this.txt17_2Obs);
-            this.groupBox9.Controls.Add(this.label194);
-            this.groupBox9.Location = new System.Drawing.Point(31, 29);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(906, 376);
-            this.groupBox9.TabIndex = 75;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "17.2: Instalações Elétricas";
-            // 
-            // check17_2InstalacaoTelefonia
-            // 
-            this.check17_2InstalacaoTelefonia.AutoSize = true;
-            this.check17_2InstalacaoTelefonia.Location = new System.Drawing.Point(335, 150);
-            this.check17_2InstalacaoTelefonia.Name = "check17_2InstalacaoTelefonia";
-            this.check17_2InstalacaoTelefonia.Size = new System.Drawing.Size(137, 17);
-            this.check17_2InstalacaoTelefonia.TabIndex = 82;
-            this.check17_2InstalacaoTelefonia.Text = "Instalação de Telefonia";
-            this.check17_2InstalacaoTelefonia.UseVisualStyleBackColor = true;
-            // 
-            // btn17_2Excluir
-            // 
-            this.btn17_2Excluir.Location = new System.Drawing.Point(475, 332);
-            this.btn17_2Excluir.Name = "btn17_2Excluir";
-            this.btn17_2Excluir.Size = new System.Drawing.Size(75, 23);
-            this.btn17_2Excluir.TabIndex = 16;
-            this.btn17_2Excluir.Text = "Excluir";
-            this.btn17_2Excluir.UseVisualStyleBackColor = true;
-            this.btn17_2Excluir.Visible = false;
-            // 
-            // btn17_2Salvar
-            // 
-            this.btn17_2Salvar.Location = new System.Drawing.Point(367, 332);
-            this.btn17_2Salvar.Name = "btn17_2Salvar";
-            this.btn17_2Salvar.Size = new System.Drawing.Size(75, 23);
-            this.btn17_2Salvar.TabIndex = 15;
-            this.btn17_2Salvar.Text = "Salvar";
-            this.btn17_2Salvar.UseVisualStyleBackColor = true;
-            this.btn17_2Salvar.Click += new System.EventHandler(this.btn17_2Salvar_Click);
-            // 
-            // check17_2IluminacaoExt
-            // 
-            this.check17_2IluminacaoExt.AutoSize = true;
-            this.check17_2IluminacaoExt.Location = new System.Drawing.Point(335, 113);
-            this.check17_2IluminacaoExt.Name = "check17_2IluminacaoExt";
-            this.check17_2IluminacaoExt.Size = new System.Drawing.Size(186, 17);
-            this.check17_2IluminacaoExt.TabIndex = 81;
-            this.check17_2IluminacaoExt.Text = " Instalação de Iluminação Externa";
-            this.check17_2IluminacaoExt.UseVisualStyleBackColor = true;
-            // 
-            // check17_2InstalacaoForca
-            // 
-            this.check17_2InstalacaoForca.AutoSize = true;
-            this.check17_2InstalacaoForca.Location = new System.Drawing.Point(335, 77);
-            this.check17_2InstalacaoForca.Name = "check17_2InstalacaoForca";
-            this.check17_2InstalacaoForca.Size = new System.Drawing.Size(120, 17);
-            this.check17_2InstalacaoForca.TabIndex = 80;
-            this.check17_2InstalacaoForca.Text = "Instalação de Força";
-            this.check17_2InstalacaoForca.UseVisualStyleBackColor = true;
-            // 
-            // check17_2IluminacaoInterna
-            // 
-            this.check17_2IluminacaoInterna.AutoSize = true;
-            this.check17_2IluminacaoInterna.Location = new System.Drawing.Point(65, 113);
-            this.check17_2IluminacaoInterna.Name = "check17_2IluminacaoInterna";
-            this.check17_2IluminacaoInterna.Size = new System.Drawing.Size(183, 17);
-            this.check17_2IluminacaoInterna.TabIndex = 79;
-            this.check17_2IluminacaoInterna.Text = " Instalação de Iluminação Interna";
-            this.check17_2IluminacaoInterna.UseVisualStyleBackColor = true;
-            // 
-            // check17_2CaboGeral
-            // 
-            this.check17_2CaboGeral.AutoSize = true;
-            this.check17_2CaboGeral.Location = new System.Drawing.Point(65, 77);
-            this.check17_2CaboGeral.Name = "check17_2CaboGeral";
-            this.check17_2CaboGeral.Size = new System.Drawing.Size(79, 17);
-            this.check17_2CaboGeral.TabIndex = 78;
-            this.check17_2CaboGeral.Text = "Cabo Geral";
-            this.check17_2CaboGeral.UseVisualStyleBackColor = true;
-            // 
-            // check17_2InstAterramento
-            // 
-            this.check17_2InstAterramento.AutoSize = true;
-            this.check17_2InstAterramento.Location = new System.Drawing.Point(637, 113);
-            this.check17_2InstAterramento.Name = "check17_2InstAterramento";
-            this.check17_2InstAterramento.Size = new System.Drawing.Size(191, 17);
-            this.check17_2InstAterramento.TabIndex = 77;
-            this.check17_2InstAterramento.Text = "Instalação de Aterramento e SPDA";
-            this.check17_2InstAterramento.UseVisualStyleBackColor = true;
-            // 
-            // check17_2InstalacaoComando
-            // 
-            this.check17_2InstalacaoComando.AutoSize = true;
-            this.check17_2InstalacaoComando.Location = new System.Drawing.Point(637, 77);
-            this.check17_2InstalacaoComando.Name = "check17_2InstalacaoComando";
-            this.check17_2InstalacaoComando.Size = new System.Drawing.Size(138, 17);
-            this.check17_2InstalacaoComando.TabIndex = 76;
-            this.check17_2InstalacaoComando.Text = "Instalação de Comando";
-            this.check17_2InstalacaoComando.UseVisualStyleBackColor = true;
-            // 
-            // check17_2MemorialDesc
-            // 
-            this.check17_2MemorialDesc.AutoSize = true;
-            this.check17_2MemorialDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.check17_2MemorialDesc.ForeColor = System.Drawing.Color.Green;
-            this.check17_2MemorialDesc.Location = new System.Drawing.Point(335, 184);
-            this.check17_2MemorialDesc.Name = "check17_2MemorialDesc";
-            this.check17_2MemorialDesc.Size = new System.Drawing.Size(141, 17);
-            this.check17_2MemorialDesc.TabIndex = 75;
-            this.check17_2MemorialDesc.Text = " Memorial Descritivo";
-            this.check17_2MemorialDesc.UseVisualStyleBackColor = true;
-            // 
-            // check17_2InstalacaoMT
-            // 
-            this.check17_2InstalacaoMT.AutoSize = true;
-            this.check17_2InstalacaoMT.Location = new System.Drawing.Point(65, 41);
-            this.check17_2InstalacaoMT.Name = "check17_2InstalacaoMT";
-            this.check17_2InstalacaoMT.Size = new System.Drawing.Size(161, 17);
-            this.check17_2InstalacaoMT.TabIndex = 74;
-            this.check17_2InstalacaoMT.Text = "Instalação de Média Tensão";
-            this.check17_2InstalacaoMT.UseVisualStyleBackColor = true;
-            this.check17_2InstalacaoMT.CheckedChanged += new System.EventHandler(this.check17_2InstalacaoMT_CheckedChanged);
-            // 
-            // txt17_2Obs
-            // 
-            this.txt17_2Obs.Location = new System.Drawing.Point(146, 262);
-            this.txt17_2Obs.MaxLength = 2000;
-            this.txt17_2Obs.Multiline = true;
-            this.txt17_2Obs.Name = "txt17_2Obs";
-            this.txt17_2Obs.Size = new System.Drawing.Size(745, 40);
-            this.txt17_2Obs.TabIndex = 10;
-            // 
-            // label194
-            // 
-            this.label194.AutoSize = true;
-            this.label194.Location = new System.Drawing.Point(54, 274);
-            this.label194.Name = "label194";
-            this.label194.Size = new System.Drawing.Size(73, 13);
-            this.label194.TabIndex = 6;
-            this.label194.Text = "Observações:";
-            // 
-            // check17_2InstalacaoCFTV
-            // 
-            this.check17_2InstalacaoCFTV.AutoSize = true;
-            this.check17_2InstalacaoCFTV.Location = new System.Drawing.Point(65, 150);
-            this.check17_2InstalacaoCFTV.Name = "check17_2InstalacaoCFTV";
-            this.check17_2InstalacaoCFTV.Size = new System.Drawing.Size(123, 17);
-            this.check17_2InstalacaoCFTV.TabIndex = 83;
-            this.check17_2InstalacaoCFTV.Text = " Instalação de CFTV";
-            this.check17_2InstalacaoCFTV.UseVisualStyleBackColor = true;
-            // 
-            // check17_2InstalRedeDados
-            // 
-            this.check17_2InstalRedeDados.AutoSize = true;
-            this.check17_2InstalRedeDados.Location = new System.Drawing.Point(637, 150);
-            this.check17_2InstalRedeDados.Name = "check17_2InstalRedeDados";
-            this.check17_2InstalRedeDados.Size = new System.Drawing.Size(168, 17);
-            this.check17_2InstalRedeDados.TabIndex = 84;
-            this.check17_2InstalRedeDados.Text = "Instalação de Rede de Dados";
-            this.check17_2InstalRedeDados.UseVisualStyleBackColor = true;
-            // 
-            // check17_2Outro
-            // 
-            this.check17_2Outro.AutoSize = true;
-            this.check17_2Outro.Location = new System.Drawing.Point(65, 222);
-            this.check17_2Outro.Name = "check17_2Outro";
-            this.check17_2Outro.Size = new System.Drawing.Size(52, 17);
-            this.check17_2Outro.TabIndex = 87;
-            this.check17_2Outro.Text = "Outro";
-            this.check17_2Outro.UseVisualStyleBackColor = true;
-            // 
-            // check17_2InstalRedeEstab
-            // 
-            this.check17_2InstalRedeEstab.AutoSize = true;
-            this.check17_2InstalRedeEstab.Location = new System.Drawing.Point(65, 184);
-            this.check17_2InstalRedeEstab.Name = "check17_2InstalRedeEstab";
-            this.check17_2InstalRedeEstab.Size = new System.Drawing.Size(181, 17);
-            this.check17_2InstalRedeEstab.TabIndex = 86;
-            this.check17_2InstalRedeEstab.Text = " Instalação de Rede Estabilizada";
-            this.check17_2InstalRedeEstab.UseVisualStyleBackColor = true;
-            // 
-            // check17_2ListaMateriais
-            // 
-            this.check17_2ListaMateriais.AutoSize = true;
-            this.check17_2ListaMateriais.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.check17_2ListaMateriais.ForeColor = System.Drawing.Color.Green;
-            this.check17_2ListaMateriais.Location = new System.Drawing.Point(637, 184);
-            this.check17_2ListaMateriais.Name = "check17_2ListaMateriais";
-            this.check17_2ListaMateriais.Size = new System.Drawing.Size(130, 17);
-            this.check17_2ListaMateriais.TabIndex = 88;
-            this.check17_2ListaMateriais.Text = " Lista de Materiais";
-            this.check17_2ListaMateriais.UseVisualStyleBackColor = true;
-            // 
-            // label196
-            // 
-            this.label196.AutoSize = true;
-            this.label196.Location = new System.Drawing.Point(332, 41);
-            this.label196.Name = "label196";
-            this.label196.Size = new System.Drawing.Size(248, 13);
-            this.label196.TabIndex = 89;
-            this.label196.Text = "Considerar Aprovação Concessionária de Energia*:";
-            this.label196.Visible = false;
-            // 
-            // rbtn17_2AprovConcessionariaN
-            // 
-            this.rbtn17_2AprovConcessionariaN.AutoSize = true;
-            this.rbtn17_2AprovConcessionariaN.Location = new System.Drawing.Point(637, 39);
-            this.rbtn17_2AprovConcessionariaN.Name = "rbtn17_2AprovConcessionariaN";
-            this.rbtn17_2AprovConcessionariaN.Size = new System.Drawing.Size(45, 17);
-            this.rbtn17_2AprovConcessionariaN.TabIndex = 91;
-            this.rbtn17_2AprovConcessionariaN.TabStop = true;
-            this.rbtn17_2AprovConcessionariaN.Text = "Não";
-            this.rbtn17_2AprovConcessionariaN.UseVisualStyleBackColor = true;
-            this.rbtn17_2AprovConcessionariaN.Visible = false;
-            // 
-            // rbtn17_2AprovConcessionariaS
-            // 
-            this.rbtn17_2AprovConcessionariaS.AutoSize = true;
-            this.rbtn17_2AprovConcessionariaS.Checked = true;
-            this.rbtn17_2AprovConcessionariaS.Location = new System.Drawing.Point(589, 39);
-            this.rbtn17_2AprovConcessionariaS.Name = "rbtn17_2AprovConcessionariaS";
-            this.rbtn17_2AprovConcessionariaS.Size = new System.Drawing.Size(42, 17);
-            this.rbtn17_2AprovConcessionariaS.TabIndex = 90;
-            this.rbtn17_2AprovConcessionariaS.TabStop = true;
-            this.rbtn17_2AprovConcessionariaS.Text = "Sim";
-            this.rbtn17_2AprovConcessionariaS.UseVisualStyleBackColor = true;
-            this.rbtn17_2AprovConcessionariaS.Visible = false;
-            // 
             // frmNovaSolicitacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -8221,7 +8222,9 @@
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.tab17_2.ResumeLayout(false);
-            this.panel32.ResumeLayout(false);
+            this.E17_2.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             this.tab17_3.ResumeLayout(false);
             this.panel35.ResumeLayout(false);
             this.panel35.PerformLayout();
@@ -8256,8 +8259,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaEsc20)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -8876,7 +8877,7 @@
         private System.Windows.Forms.Button btn17_1Excluir;
         private System.Windows.Forms.Button btn17_1Salvar;
         private System.Windows.Forms.TabPage tab17_2;
-        private System.Windows.Forms.Panel panel32;
+        private System.Windows.Forms.Panel E17_2;
         private System.Windows.Forms.TabPage tab17_3;
         private System.Windows.Forms.Panel panel35;
         private System.Windows.Forms.Button button9;

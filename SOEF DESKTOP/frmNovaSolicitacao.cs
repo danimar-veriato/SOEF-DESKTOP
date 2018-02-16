@@ -3328,6 +3328,197 @@ namespace ORCAMENTOS_FOCKINK
             }
         }
 
+        /// <summary>
+        /// Lista os dados do Escopo 17_2
+        /// </summary>
+        /// <param name="pNumSolic"></param>
+        /// <param name="pNumRev"></param>
+        protected void listaEscopo17_2(string pNumSolic, string pNumRev)
+        {
+            try
+            {
+                SOEF_CLASS.Escopo_17_2 Escopo_17_2 = new SOEF_CLASS.Escopo_17_2(pNumSolic, pNumRev);
+                DataTable dt = Escopo_17_2.getEscopo_17_2();
+                if (dt.Rows.Count > 0)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        if (dr["IND_INSTAL_MEDIA_TENSAO"].ToString() == "S")
+                        {
+                            //Aprov., Média Tensão, Concessionaria
+                            check17_2InstalacaoMT.Checked = true;
+                            if(dr["IND_APROV_CONCESSIONARIA"].ToString() == "S")
+                            {
+                                label196.Visible = true;
+                                rbtn17_2AprovConcessionariaS.Visible = true;
+                                rbtn17_2AprovConcessionariaS.Checked = true;
+                                rbtn17_2AprovConcessionariaN.Visible = true;
+                            }
+                            else
+                            {
+                                label196.Visible = false;
+                                rbtn17_2AprovConcessionariaS.Checked = false;
+                                rbtn17_2AprovConcessionariaS.Visible = false;
+                                rbtn17_2AprovConcessionariaS.Checked = false;
+                                rbtn17_2AprovConcessionariaN.Visible = false;
+                            }
+                        }
+                        else
+                        {
+                            check17_2InstalacaoMT.Checked = false;
+                        }
+
+                        if (dr["IND_CABO_GERAL"].ToString() == "S")
+                        {
+                            check17_2CaboGeral.Checked = true;
+                        }
+                        else
+                        {
+                            check17_2CaboGeral.Checked = false;
+                        }
+
+                        if (dr["IND_INSTAL_FORCA"].ToString() == "S")
+                        {
+                            check17_2InstalacaoForca.Checked = true;
+                        }
+                        else
+                        {
+                            check17_2InstalacaoForca.Checked = false;
+                        }
+
+                        if (dr["IND_INSTAL_COMANDO"].ToString() == "S")
+                        {
+                            check17_2InstalacaoComando.Checked = true;
+                        }
+                        else
+                        {
+                            check17_2InstalacaoComando.Checked = false;
+                        }
+
+                        if (dr["IND_INSTAL_ILUMINACAO_INT"].ToString() == "S")
+                        {
+                            check17_2IluminacaoInterna .Checked = true;
+                        }
+                        else
+                        {
+                            check17_2IluminacaoInterna.Checked = false;
+                        }
+
+                        if (dr["IND_INSTAL_ILUMINACAO_EXT"].ToString() == "S")
+                        {
+                            check17_2IluminacaoExt.Checked = true;
+                        }
+                        else
+                        {
+                            check17_2IluminacaoExt.Checked = false;
+                        }
+
+                        if (dr["IND_INSTAL_ATERRAMENTO"].ToString() == "S")
+                        {
+                            check17_2InstAterramento.Checked = true;
+                        }
+                        else
+                        {
+                            check17_2InstAterramento.Checked = false;
+                        }
+
+                        if (dr["IND_INSTAL_CFTV"].ToString() == "S")
+                        {
+                            check17_2InstalacaoCFTV.Checked = true;
+                        }
+                        else
+                        {
+                            check17_2InstalacaoCFTV.Checked = false;
+                        }
+
+                        if (dr["IND_INSTAL_TELEFONIA"].ToString() == "S")
+                        {
+                            check17_2InstalacaoTelefonia.Checked = true;
+                        }
+                        else
+                        {
+                            check17_2InstalacaoTelefonia.Checked = false;
+                        }
+
+                        if (dr["IND_INSTAL_REDE_DADOS"].ToString() == "S")
+                        {
+                            check17_2InstalRedeDados.Checked = true;
+                        }
+                        else
+                        {
+                            check17_2InstalRedeDados.Checked = false;
+                        }
+
+                        if (dr["IND_INSTAL_REDE_ESTABILIZADA"].ToString() == "S")
+                        {
+                            check17_2InstalRedeEstab.Checked = true;
+                        }
+                        else
+                        {
+                            check17_2InstalRedeEstab.Checked = false;
+                        }
+
+                        if (dr["IND_MEMORIAL_DESCRITIVO"].ToString() == "S")
+                        {
+                            check17_2MemorialDesc.Checked = true;
+                        }
+                        else
+                        {
+                            check17_2MemorialDesc.Checked = false;
+                        }
+
+                        if(dr["IND_LISTA_MATERIAIS"].ToString() == "S")
+                        {
+                            check17_2ListaMateriais.Checked = true;
+                        }
+                        else
+                        {
+                            check17_2ListaMateriais.Checked = false;
+                        }
+
+                        if (dr["IND_OUTRO"].ToString() == "S")
+                        {
+                            check17_2Outro.Checked = true;
+                        }
+                        else
+                        {
+                            check17_2Outro.Checked = false;
+                        }
+
+                        txt17_2Obs.Text = dr["OBSERVACOES"].ToString();
+                    }
+                    btn17_2Excluir.Visible = true;
+                }
+                else
+                {
+                    //Reseta os campos da tela
+                    check17_2InstalacaoMT.Checked = false;
+                    rbtn17_2AprovConcessionariaS.Checked = false;
+                    rbtn17_2AprovConcessionariaN.Checked = false;
+                    check17_2CaboGeral.Checked = false;
+                    check17_2IluminacaoInterna.Checked = false;
+                    check17_2InstalacaoCFTV.Checked = false;
+                    check17_2InstalRedeEstab.Checked = false;
+                    check17_2Outro.Checked = false;
+                    check17_2InstalacaoForca.Checked = false;
+                    check17_2IluminacaoExt.Checked = false;
+                    check17_2InstalacaoTelefonia.Checked = false;
+                    check17_2MemorialDesc.Checked = false;
+                    check17_2InstalacaoComando.Checked = false;
+                    check17_2InstAterramento.Checked = false;
+                    check17_2InstalRedeDados.Checked = false;
+                    check17_2ListaMateriais.Checked = false;
+                    txt17_2Obs.Text = "";
+                    btn17_2Excluir.Visible = false;
+                    tabNovaSolicitacao.SelectedTab.Name = "tabEscopo17"; //Conferir se o nome está correto
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
 
         /// <summary>
         /// Lista o Escopo 18
@@ -5749,7 +5940,29 @@ namespace ORCAMENTOS_FOCKINK
             txt17_1Obs.Text = "";
         }
 
-
+        /// <summary>
+        /// Inicializa campos Escopo 17_2
+        /// </summary>
+        private void inicializaCamposE17_2()
+        {
+            check17_2InstalacaoMT.Checked = false;
+            rbtn17_2AprovConcessionariaS.Checked = false;
+            rbtn17_2AprovConcessionariaN.Checked = false;
+            check17_2CaboGeral.Checked = false;
+            check17_2IluminacaoInterna.Checked = false;
+            check17_2InstalacaoCFTV.Checked = false;
+            check17_2InstalRedeEstab.Checked = false;
+            check17_2Outro.Checked = false;
+            check17_2InstalacaoForca.Checked = false;
+            check17_2IluminacaoExt.Checked = false;
+            check17_2InstalacaoTelefonia.Checked = false;
+            check17_2MemorialDesc.Checked = false;
+            check17_2InstalacaoComando.Checked = false;
+            check17_2InstAterramento.Checked = false;
+            check17_2InstalRedeDados.Checked = false;
+            check17_2ListaMateriais.Checked = false;
+            txt17_2Obs.Text = "";
+        }
 
         private void tabsEscopo10_Selected(object sender, TabControlEventArgs e)
         {
@@ -9486,6 +9699,47 @@ namespace ORCAMENTOS_FOCKINK
                 }
 
             }
+            else if(tabPageEscopo17.SelectedTab.Name == "tab17_2")
+            {
+                if (AcaoTela == "N")
+                {
+                    SOEF_CLASS.Escopo_Valor_Comum EscopoValorComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    //Verifica e sugere os campos comuns caso existir registro
+                    DataTable dtEscopo17_2 = EscopoValorComum.buscaEscopoValorComumE17_2();
+                    if (dtEscopo17_2.Rows.Count > 0)
+                    {
+                        foreach (DataRow dr in dtEscopo17_2.Rows)
+                        {
+                            //Memorial Descritivo
+                            if (dr["IND_MEMORIAL_DESCRITIVO"].ToString() == "S")
+                            {
+                                check17_2MemorialDesc.Checked = true;
+                            }
+                            else
+                            {
+                                check17_2MemorialDesc.Checked = false;
+                            }
+                            //Lista Materiais
+                            if (dr["IND_LISTA_MATERIAIS"].ToString() == "S")
+                            {
+                                check17_2ListaMateriais.Checked = true;
+                            }
+                            else
+                            {
+                                check17_2ListaMateriais.Checked = false;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        inicializaCamposE17_2();
+                    }
+                }
+                else
+                {
+                    listaEscopo17_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                }
+            }
         }
 
         private void btn17_1Excluir_Click(object sender, EventArgs e)
@@ -9592,12 +9846,291 @@ namespace ORCAMENTOS_FOCKINK
                 string InstalRedeDados = "";
                 string InstalRedeEstabilizada = "";
                 string MemorialDesc = "";
+                string ListaMateriais = "";
                 string Outro = "";
                 string Obs = "";
                 string indPre = "S";
 
+                //Média Tensão e Aprovação Concessionária
+                if (check17_2InstalacaoMT.Checked)
+                {
+                    MediaTensao = "S";
+                    if (rbtn17_2AprovConcessionariaS.Checked)
+                    {
+                        AprovConcessionaria = "S";
+                    }
+                    else if(rbtn17_2AprovConcessionariaN.Checked)
+                    {
+                        AprovConcessionaria = "N";
+                    }
+                }
+                else
+                {
+                    MediaTensao = "N";
+                }
 
+                if (check17_2CaboGeral.Checked)
+                {
+                    CaboGeral = "S";
+                }
+                else
+                {
+                    CaboGeral = "N";
+                }
 
+                if (check17_2InstalacaoForca.Checked)
+                {
+                    InstalForca = "S";
+                }
+                else
+                {
+                    InstalForca = "N";
+                }
+
+                if (check17_2InstalacaoComando.Checked)
+                {
+                    InstalComando = "S";
+                }
+                else
+                {
+                    InstalComando = "N";
+                }
+
+                if (check17_2IluminacaoInterna.Checked)
+                {
+                    IluminacaoInt = "S";
+                }
+                else
+                {
+                    IluminacaoInt = "N";
+                }
+                if (check17_2IluminacaoExt.Checked)
+                {
+                    IluminacaoExt = "S";
+                }
+                else
+                {
+                    IluminacaoExt = "N";
+                }
+
+                if (check17_2InstAterramento.Checked)
+                {
+                    InstalAterramento = "S";
+                }
+                else
+                {
+                    InstalAterramento = "N";
+                }
+
+                if (check17_2InstalacaoCFTV.Checked)
+                {
+                    InstalCFTV = "S";
+                }
+                else
+                {
+                    InstalCFTV = "N";
+                }
+
+                if (check17_2InstalacaoTelefonia.Checked)
+                {
+                    InstalTelefonia = "S";
+                }
+                else
+                {
+                    InstalTelefonia = "N";
+                }
+
+                if (check17_2InstalRedeDados.Checked)
+                {
+                    InstalRedeDados = "S";
+                }
+                else
+                {
+                    InstalRedeDados = "N";
+                }
+
+                if (check17_2InstalRedeEstab.Checked)
+                {
+                    InstalRedeEstabilizada = "S";
+                }
+                else
+                {
+                    InstalRedeEstabilizada = "N";
+                }
+
+                if (check17_2MemorialDesc.Checked)
+                {
+                    MemorialDesc = "S";
+                }
+                else
+                {
+                    MemorialDesc = "N";
+                }
+
+                if (check17_2ListaMateriais.Checked)
+                {
+                    ListaMateriais = "S";
+                }
+                else
+                {
+                    ListaMateriais = "N";
+                }
+
+                if (check17_2Outro.Checked)
+                {
+                    Outro = "S";
+                }
+                else
+                {
+                    Outro = "N";
+                }
+                Obs = txt17_2Obs.Text;
+
+                //Inserção dos dados no banco
+                bool sucesso = true;
+
+                SOEF_CLASS.Escopo_17_2 Escopo17_2 = new SOEF_CLASS.Escopo_17_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                SOEF_CLASS.Escopo_Valor_Comum EscopoVlrComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                //Verifica se está cadastrando ou alterando o registro
+               // AcaoTela = "N";
+                if (AcaoTela == "N")
+                {
+                    int retornoInsert = Escopo17_2.gravaEscopo_17_2(MediaTensao, AprovConcessionaria, CaboGeral, InstalForca, InstalComando, IluminacaoInt, IluminacaoExt, InstalAterramento, InstalCFTV, InstalTelefonia, InstalRedeDados, InstalRedeEstabilizada, MemorialDesc, ListaMateriais, Outro, Obs, indPre);
+                    if (retornoInsert > 0)
+                    {
+                        //Verifica se já existe registro para essa solicitação. Se sim, atualiza com os valores deste escopo, se não, insere um novo registro
+                        DataTable dtBuscaEscopo17_2 = EscopoVlrComum.buscaEscopoValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                        if (dtBuscaEscopo17_2.Rows.Count > 0)
+                        {
+                            //Faz o update e grava os dados usados no Escopo 17_1
+                            int retornoInsert17_2 = EscopoVlrComum.atualizaEscopo_Valor_Comum_E17_2(MemorialDesc, ListaMateriais);
+                            if (retornoInsert17_2 <= 0)
+                            {
+                                sucesso = false;
+                            }
+                        }
+                        else
+                        {
+                            //Insere um novo registro na tabela Valor Comum
+                            int retornoInsert17_2 = EscopoVlrComum.gravaEscopo_Valor_Comum_E17_2(MemorialDesc, ListaMateriais);
+                            if (retornoInsert17_2 <= 0)
+                            {
+                                sucesso = false;
+                            }
+                        }
+                        AcaoTela = "C";
+                        btn17_2Excluir.Visible = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocorreu um erro na inserção do registro. Tente novamente mais tarde.");
+                    }
+                }
+                else
+                {
+                    //AcaoTela - ATUALIZAR
+                    DataTable dtBuscaEscopo17_2 = Escopo17_2.getEscopo_17_2();
+                    int retornoUpdate = 0;
+                    if (dtBuscaEscopo17_2.Rows.Count > 0)
+                    {
+                        //Atualiza o Escopo 17_2 se já estiver cadastrado
+                        retornoUpdate = Escopo17_2.updateEscopo_17_2(MediaTensao, AprovConcessionaria, CaboGeral, InstalForca, InstalComando, IluminacaoInt, IluminacaoExt, InstalAterramento, InstalCFTV, InstalTelefonia, InstalRedeDados, InstalRedeEstabilizada, MemorialDesc, ListaMateriais, Outro, Obs, indPre);
+                    }
+                    else
+                    {
+                        //Cadastra o Escopo 17_2 se ainda não existir
+                        retornoUpdate = Escopo17_2.gravaEscopo_17_2(MediaTensao, AprovConcessionaria, CaboGeral, InstalForca, InstalComando, IluminacaoInt, IluminacaoExt, InstalAterramento, InstalCFTV, InstalTelefonia, InstalRedeDados, InstalRedeEstabilizada, MemorialDesc, ListaMateriais, Outro, Obs, indPre);
+                    }
+                    if (retornoUpdate > 0)
+                    {
+                        DataTable dtBuscaVCEscopo17_2 = EscopoVlrComum.buscaEscopoValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                        if (dtBuscaVCEscopo17_2.Rows.Count > 0)
+                        {
+                            //Faz o update e grava os dados usados no Escopo 17_2
+                            int retornoInsert17_2 = EscopoVlrComum.atualizaEscopo_Valor_Comum_E17_2(MemorialDesc, ListaMateriais);
+                            if (retornoInsert17_2 <= 0)
+                            {
+                                sucesso = false;
+                            }
+                        }
+                        else
+                        {
+                            //Insere um novo registro na tabela Valor Comum
+                            int retornoInsert17_2 = EscopoVlrComum.gravaEscopo_Valor_Comum_E17_2(MemorialDesc, ListaMateriais);
+                            if (retornoInsert17_2 <= 0)
+                            {
+                                sucesso = false;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocorreu um erro na atualização do registro. Tente novamente mais tarde.");
+                    }
+                }
+                //Verifica se ocorreu erro durante o processo de inserção no ESCOPO 17_1 e VALOR COMUM
+                if (sucesso)
+                {
+                    MessageBox.Show("Registro inserido/alterado com sucesso!");
+                    btn17_2Excluir.Visible = true;
+                    listaEscopo17_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    //Muda o STATUS da AçãoTela p/ EDIÇÂO
+                    AcaoTela = "C";
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro ao ao inserir/alterar o registro. Por favor tente novamente ou contate o administrador do sistema.");
+                }
+            }
+        }
+
+        private void btn17_2Excluir_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Deseja realmente excluir o Escopo 17_2 desta solicitação?", "SOEF", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                bool sucesso = true;
+                //Apaga os dados do Escopo 17_2
+                SOEF_CLASS.Escopo_17_2 Escopo17_2 = new SOEF_CLASS.Escopo_17_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                int retorno = Escopo17_2.deleteEscopo_17_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                if (retorno > 0)
+                {
+                    //Apaga (define como NULL) os campos comuns da tabela VALOR_COMUM
+                    SOEF_CLASS.Escopo_Valor_Comum EValorComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    int retornoUpdate = 0;
+                    retornoUpdate = EValorComum.deleteEscopo_Valor_Comum_E17_2();
+                    if (retornoUpdate > 0)
+                    {
+                        //Verifica se todos os campos do registro são nulos, se sim, apaga o registro em definitivo
+                        bool DeletaRegistro = verificaRegistroValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                        if (DeletaRegistro)//True - Deleta o registro
+                        {
+                            int retornoDelete = EValorComum.deleteEscopoValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                            if (retornoDelete <= 0)
+                            {
+                                sucesso = false;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        sucesso = false;
+                    }
+                }
+                else
+                {
+                    sucesso = false;
+                }
+                if (sucesso)
+                {
+                    MessageBox.Show("Registro excluído com sucesso!");
+                    btn17_2Excluir.Visible = false;
+                    listaEscopo17_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro ao excluir o registro. Por favor, contate o suporte do sistema e tente novamente.");
+                }
             }
         }
     }
