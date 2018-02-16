@@ -138,14 +138,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SOEF.exe" size="398792">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SOEF.exe" size="403912">
       <assemblyIdentity name="SOEF" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/37ynwIZp+pwrCpgeDxpUcKJWOyiesBNkluBt+CBDks=</dsig:DigestValue>
+        <dsig:DigestValue>2aCPwzw9yiMfsWBhvD0qy2j2HZ9pjRSiI8eJ8wAbERQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -170,13 +170,13 @@
       <dsig:DigestValue>dPjow2XWk6oa4JpjLkQ149MsXaavi6h+Y6/9mwBncww=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="SOFDB.sdf" size="851968">
+  <file name="SOFDB.sdf" size="917504">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>4sRcJ/tffL+n6Zv+H0sSnquN4+T09ZklYDInhiJ+Egs=</dsig:DigestValue>
+      <dsig:DigestValue>NMTav5ajTRfY99PBfDa6N2VxEMB7g5V6lKVTZY1LJqg=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
