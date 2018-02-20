@@ -586,6 +586,31 @@
             this.txt17_2Obs = new System.Windows.Forms.TextBox();
             this.label194 = new System.Windows.Forms.Label();
             this.tab17_3 = new System.Windows.Forms.TabPage();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.check17_3Outro = new System.Windows.Forms.CheckBox();
+            this.check17_3InstaGas = new System.Windows.Forms.CheckBox();
+            this.check17_3VaporCondensado = new System.Windows.Forms.CheckBox();
+            this.radio17_3AprovBombN = new System.Windows.Forms.RadioButton();
+            this.radio17_3AprovBombS = new System.Windows.Forms.RadioButton();
+            this.label197 = new System.Windows.Forms.Label();
+            this.check17_3ListaMateriais = new System.Windows.Forms.CheckBox();
+            this.check17_3AguaQ = new System.Windows.Forms.CheckBox();
+            this.check17_3InstalacaoAguaG = new System.Windows.Forms.CheckBox();
+            this.check17_3AguaIndustrial = new System.Windows.Forms.CheckBox();
+            this.check17_3InstalacaoArComp = new System.Windows.Forms.CheckBox();
+            this.check17_3AguaPotavel = new System.Windows.Forms.CheckBox();
+            this.btn17_3Excluir = new System.Windows.Forms.Button();
+            this.btn17_3Salvar = new System.Windows.Forms.Button();
+            this.check17_3InstalacaoEmergencia = new System.Windows.Forms.CheckBox();
+            this.check17_3InstalSprinklers = new System.Windows.Forms.CheckBox();
+            this.check17_3InstalAlarme = new System.Windows.Forms.CheckBox();
+            this.check17_3InstalHidrante = new System.Windows.Forms.CheckBox();
+            this.check17_3SinalEmergencia = new System.Windows.Forms.CheckBox();
+            this.check17_3InstalExtintores = new System.Windows.Forms.CheckBox();
+            this.check17_3MemDesc = new System.Windows.Forms.CheckBox();
+            this.check17_3PPCI = new System.Windows.Forms.CheckBox();
+            this.txt17_3Obs = new System.Windows.Forms.TextBox();
+            this.label198 = new System.Windows.Forms.Label();
             this.tab17_4 = new System.Windows.Forms.TabPage();
             this.tab17_5 = new System.Windows.Forms.TabPage();
             this.label231 = new System.Windows.Forms.Label();
@@ -686,31 +711,6 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.label197 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.checkBox14 = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label198 = new System.Windows.Forms.Label();
-            this.checkBox15 = new System.Windows.Forms.CheckBox();
-            this.checkBox16 = new System.Windows.Forms.CheckBox();
-            this.checkBox17 = new System.Windows.Forms.CheckBox();
             this.tabNovaSolicitacao.SuspendLayout();
             this.tabCabecalho.SuspendLayout();
             this.tbCabecalho.SuspendLayout();
@@ -779,6 +779,7 @@
             this.E17_2.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.tab17_3.SuspendLayout();
+            this.groupBox10.SuspendLayout();
             this.tabEscopo18.SuspendLayout();
             this.tabEscopo18_1_2.SuspendLayout();
             this.tbpage18InfoG.SuspendLayout();
@@ -796,7 +797,6 @@
             this.tabEscopo20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaEsc20)).BeginInit();
             this.groupBox5.SuspendLayout();
-            this.groupBox10.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabNovaSolicitacao
@@ -7014,6 +7014,291 @@
             this.tab17_3.TabIndex = 4;
             this.tab17_3.Text = "17.3: Instalações Mecânicas";
             // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.check17_3Outro);
+            this.groupBox10.Controls.Add(this.check17_3InstaGas);
+            this.groupBox10.Controls.Add(this.check17_3VaporCondensado);
+            this.groupBox10.Controls.Add(this.radio17_3AprovBombN);
+            this.groupBox10.Controls.Add(this.radio17_3AprovBombS);
+            this.groupBox10.Controls.Add(this.label197);
+            this.groupBox10.Controls.Add(this.check17_3ListaMateriais);
+            this.groupBox10.Controls.Add(this.check17_3AguaQ);
+            this.groupBox10.Controls.Add(this.check17_3InstalacaoAguaG);
+            this.groupBox10.Controls.Add(this.check17_3AguaIndustrial);
+            this.groupBox10.Controls.Add(this.check17_3InstalacaoArComp);
+            this.groupBox10.Controls.Add(this.check17_3AguaPotavel);
+            this.groupBox10.Controls.Add(this.btn17_3Excluir);
+            this.groupBox10.Controls.Add(this.btn17_3Salvar);
+            this.groupBox10.Controls.Add(this.check17_3InstalacaoEmergencia);
+            this.groupBox10.Controls.Add(this.check17_3InstalSprinklers);
+            this.groupBox10.Controls.Add(this.check17_3InstalAlarme);
+            this.groupBox10.Controls.Add(this.check17_3InstalHidrante);
+            this.groupBox10.Controls.Add(this.check17_3SinalEmergencia);
+            this.groupBox10.Controls.Add(this.check17_3InstalExtintores);
+            this.groupBox10.Controls.Add(this.check17_3MemDesc);
+            this.groupBox10.Controls.Add(this.check17_3PPCI);
+            this.groupBox10.Controls.Add(this.txt17_3Obs);
+            this.groupBox10.Controls.Add(this.label198);
+            this.groupBox10.Location = new System.Drawing.Point(31, 27);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(906, 376);
+            this.groupBox10.TabIndex = 76;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "17.3: Instalações Mecânicas";
+            // 
+            // check17_3Outro
+            // 
+            this.check17_3Outro.AutoSize = true;
+            this.check17_3Outro.Location = new System.Drawing.Point(65, 256);
+            this.check17_3Outro.Name = "check17_3Outro";
+            this.check17_3Outro.Size = new System.Drawing.Size(52, 17);
+            this.check17_3Outro.TabIndex = 94;
+            this.check17_3Outro.Text = "Outro";
+            this.check17_3Outro.UseVisualStyleBackColor = true;
+            // 
+            // check17_3InstaGas
+            // 
+            this.check17_3InstaGas.AutoSize = true;
+            this.check17_3InstaGas.Location = new System.Drawing.Point(65, 220);
+            this.check17_3InstaGas.Name = "check17_3InstaGas";
+            this.check17_3InstaGas.Size = new System.Drawing.Size(112, 17);
+            this.check17_3InstaGas.TabIndex = 93;
+            this.check17_3InstaGas.Text = "Instalação de Gás";
+            this.check17_3InstaGas.UseVisualStyleBackColor = true;
+            // 
+            // check17_3VaporCondensado
+            // 
+            this.check17_3VaporCondensado.AutoSize = true;
+            this.check17_3VaporCondensado.Location = new System.Drawing.Point(637, 183);
+            this.check17_3VaporCondensado.Name = "check17_3VaporCondensado";
+            this.check17_3VaporCondensado.Size = new System.Drawing.Size(193, 17);
+            this.check17_3VaporCondensado.TabIndex = 92;
+            this.check17_3VaporCondensado.Text = "Instalação de Vapor e Condensado";
+            this.check17_3VaporCondensado.UseVisualStyleBackColor = true;
+            // 
+            // radio17_3AprovBombN
+            // 
+            this.radio17_3AprovBombN.AutoSize = true;
+            this.radio17_3AprovBombN.Enabled = false;
+            this.radio17_3AprovBombN.Location = new System.Drawing.Point(625, 39);
+            this.radio17_3AprovBombN.Name = "radio17_3AprovBombN";
+            this.radio17_3AprovBombN.Size = new System.Drawing.Size(45, 17);
+            this.radio17_3AprovBombN.TabIndex = 91;
+            this.radio17_3AprovBombN.Text = "Não";
+            this.radio17_3AprovBombN.UseVisualStyleBackColor = true;
+            // 
+            // radio17_3AprovBombS
+            // 
+            this.radio17_3AprovBombS.AutoSize = true;
+            this.radio17_3AprovBombS.Enabled = false;
+            this.radio17_3AprovBombS.Location = new System.Drawing.Point(577, 39);
+            this.radio17_3AprovBombS.Name = "radio17_3AprovBombS";
+            this.radio17_3AprovBombS.Size = new System.Drawing.Size(42, 17);
+            this.radio17_3AprovBombS.TabIndex = 90;
+            this.radio17_3AprovBombS.Text = "Sim";
+            this.radio17_3AprovBombS.UseVisualStyleBackColor = true;
+            // 
+            // label197
+            // 
+            this.label197.AutoSize = true;
+            this.label197.Enabled = false;
+            this.label197.Location = new System.Drawing.Point(332, 41);
+            this.label197.Name = "label197";
+            this.label197.Size = new System.Drawing.Size(232, 13);
+            this.label197.TabIndex = 89;
+            this.label197.Text = "Considerar Aprovação no Corpo de Bombeiros*:";
+            // 
+            // check17_3ListaMateriais
+            // 
+            this.check17_3ListaMateriais.AutoSize = true;
+            this.check17_3ListaMateriais.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check17_3ListaMateriais.ForeColor = System.Drawing.Color.Green;
+            this.check17_3ListaMateriais.Location = new System.Drawing.Point(637, 220);
+            this.check17_3ListaMateriais.Name = "check17_3ListaMateriais";
+            this.check17_3ListaMateriais.Size = new System.Drawing.Size(130, 17);
+            this.check17_3ListaMateriais.TabIndex = 88;
+            this.check17_3ListaMateriais.Text = " Lista de Materiais";
+            this.check17_3ListaMateriais.UseVisualStyleBackColor = true;
+            // 
+            // check17_3AguaQ
+            // 
+            this.check17_3AguaQ.AutoSize = true;
+            this.check17_3AguaQ.Location = new System.Drawing.Point(335, 183);
+            this.check17_3AguaQ.Name = "check17_3AguaQ";
+            this.check17_3AguaQ.Size = new System.Drawing.Size(156, 17);
+            this.check17_3AguaQ.TabIndex = 87;
+            this.check17_3AguaQ.Text = "Instalação de Água Quente";
+            this.check17_3AguaQ.UseVisualStyleBackColor = true;
+            // 
+            // check17_3InstalacaoAguaG
+            // 
+            this.check17_3InstalacaoAguaG.AutoSize = true;
+            this.check17_3InstalacaoAguaG.Location = new System.Drawing.Point(65, 183);
+            this.check17_3InstalacaoAguaG.Name = "check17_3InstalacaoAguaG";
+            this.check17_3InstalacaoAguaG.Size = new System.Drawing.Size(155, 17);
+            this.check17_3InstalacaoAguaG.TabIndex = 86;
+            this.check17_3InstalacaoAguaG.Text = "Instalação de Água Gelada";
+            this.check17_3InstalacaoAguaG.UseVisualStyleBackColor = true;
+            // 
+            // check17_3AguaIndustrial
+            // 
+            this.check17_3AguaIndustrial.AutoSize = true;
+            this.check17_3AguaIndustrial.Location = new System.Drawing.Point(637, 149);
+            this.check17_3AguaIndustrial.Name = "check17_3AguaIndustrial";
+            this.check17_3AguaIndustrial.Size = new System.Drawing.Size(166, 17);
+            this.check17_3AguaIndustrial.TabIndex = 84;
+            this.check17_3AguaIndustrial.Text = " Instalação de Água Industrial";
+            this.check17_3AguaIndustrial.UseVisualStyleBackColor = true;
+            // 
+            // check17_3InstalacaoArComp
+            // 
+            this.check17_3InstalacaoArComp.AutoSize = true;
+            this.check17_3InstalacaoArComp.Location = new System.Drawing.Point(65, 149);
+            this.check17_3InstalacaoArComp.Name = "check17_3InstalacaoArComp";
+            this.check17_3InstalacaoArComp.Size = new System.Drawing.Size(163, 17);
+            this.check17_3InstalacaoArComp.TabIndex = 83;
+            this.check17_3InstalacaoArComp.Text = " Instalação de Ar Comprimido";
+            this.check17_3InstalacaoArComp.UseVisualStyleBackColor = true;
+            // 
+            // check17_3AguaPotavel
+            // 
+            this.check17_3AguaPotavel.AutoSize = true;
+            this.check17_3AguaPotavel.Location = new System.Drawing.Point(335, 149);
+            this.check17_3AguaPotavel.Name = "check17_3AguaPotavel";
+            this.check17_3AguaPotavel.Size = new System.Drawing.Size(160, 17);
+            this.check17_3AguaPotavel.TabIndex = 82;
+            this.check17_3AguaPotavel.Text = " Instalação de Água Potável";
+            this.check17_3AguaPotavel.UseVisualStyleBackColor = true;
+            // 
+            // btn17_3Excluir
+            // 
+            this.btn17_3Excluir.Location = new System.Drawing.Point(475, 344);
+            this.btn17_3Excluir.Name = "btn17_3Excluir";
+            this.btn17_3Excluir.Size = new System.Drawing.Size(75, 23);
+            this.btn17_3Excluir.TabIndex = 16;
+            this.btn17_3Excluir.Text = "Excluir";
+            this.btn17_3Excluir.UseVisualStyleBackColor = true;
+            this.btn17_3Excluir.Visible = false;
+            this.btn17_3Excluir.Click += new System.EventHandler(this.btn17_3Excluir_Click);
+            // 
+            // btn17_3Salvar
+            // 
+            this.btn17_3Salvar.Location = new System.Drawing.Point(367, 344);
+            this.btn17_3Salvar.Name = "btn17_3Salvar";
+            this.btn17_3Salvar.Size = new System.Drawing.Size(75, 23);
+            this.btn17_3Salvar.TabIndex = 15;
+            this.btn17_3Salvar.Text = "Salvar";
+            this.btn17_3Salvar.UseVisualStyleBackColor = true;
+            this.btn17_3Salvar.Click += new System.EventHandler(this.btn17_3Salvar_Click);
+            // 
+            // check17_3InstalacaoEmergencia
+            // 
+            this.check17_3InstalacaoEmergencia.AutoSize = true;
+            this.check17_3InstalacaoEmergencia.Location = new System.Drawing.Point(335, 113);
+            this.check17_3InstalacaoEmergencia.Name = "check17_3InstalacaoEmergencia";
+            this.check17_3InstalacaoEmergencia.Size = new System.Drawing.Size(218, 17);
+            this.check17_3InstalacaoEmergencia.TabIndex = 81;
+            this.check17_3InstalacaoEmergencia.Text = "Instalação de Iluminação de Emergência";
+            this.check17_3InstalacaoEmergencia.UseVisualStyleBackColor = true;
+            this.check17_3InstalacaoEmergencia.CheckedChanged += new System.EventHandler(this.check17_3InstalacaoEmergencia_CheckedChanged);
+            // 
+            // check17_3InstalSprinklers
+            // 
+            this.check17_3InstalSprinklers.AutoSize = true;
+            this.check17_3InstalSprinklers.Location = new System.Drawing.Point(335, 77);
+            this.check17_3InstalSprinklers.Name = "check17_3InstalSprinklers";
+            this.check17_3InstalSprinklers.Size = new System.Drawing.Size(142, 17);
+            this.check17_3InstalSprinklers.TabIndex = 80;
+            this.check17_3InstalSprinklers.Text = " Instalação de Sprinklers";
+            this.check17_3InstalSprinklers.UseVisualStyleBackColor = true;
+            this.check17_3InstalSprinklers.CheckedChanged += new System.EventHandler(this.check17_3InstalSprinklers_CheckedChanged);
+            // 
+            // check17_3InstalAlarme
+            // 
+            this.check17_3InstalAlarme.AutoSize = true;
+            this.check17_3InstalAlarme.Location = new System.Drawing.Point(65, 113);
+            this.check17_3InstalAlarme.Name = "check17_3InstalAlarme";
+            this.check17_3InstalAlarme.Size = new System.Drawing.Size(184, 17);
+            this.check17_3InstalAlarme.TabIndex = 79;
+            this.check17_3InstalAlarme.Text = "Instalação de Alarme de Incêndio";
+            this.check17_3InstalAlarme.UseVisualStyleBackColor = true;
+            this.check17_3InstalAlarme.CheckedChanged += new System.EventHandler(this.check17_3InstalAlarme_CheckedChanged);
+            // 
+            // check17_3InstalHidrante
+            // 
+            this.check17_3InstalHidrante.AutoSize = true;
+            this.check17_3InstalHidrante.Location = new System.Drawing.Point(65, 77);
+            this.check17_3InstalHidrante.Name = "check17_3InstalHidrante";
+            this.check17_3InstalHidrante.Size = new System.Drawing.Size(144, 17);
+            this.check17_3InstalHidrante.TabIndex = 78;
+            this.check17_3InstalHidrante.Text = "  Instalação de Hidrantes";
+            this.check17_3InstalHidrante.UseVisualStyleBackColor = true;
+            this.check17_3InstalHidrante.CheckedChanged += new System.EventHandler(this.check17_3InstalHidrante_CheckedChanged);
+            // 
+            // check17_3SinalEmergencia
+            // 
+            this.check17_3SinalEmergencia.AutoSize = true;
+            this.check17_3SinalEmergencia.Location = new System.Drawing.Point(637, 113);
+            this.check17_3SinalEmergencia.Name = "check17_3SinalEmergencia";
+            this.check17_3SinalEmergencia.Size = new System.Drawing.Size(224, 17);
+            this.check17_3SinalEmergencia.TabIndex = 77;
+            this.check17_3SinalEmergencia.Text = " Instalação de Sinalização de Emergência";
+            this.check17_3SinalEmergencia.UseVisualStyleBackColor = true;
+            this.check17_3SinalEmergencia.CheckedChanged += new System.EventHandler(this.check17_3SinalEmergencia_CheckedChanged);
+            // 
+            // check17_3InstalExtintores
+            // 
+            this.check17_3InstalExtintores.AutoSize = true;
+            this.check17_3InstalExtintores.Location = new System.Drawing.Point(637, 77);
+            this.check17_3InstalExtintores.Name = "check17_3InstalExtintores";
+            this.check17_3InstalExtintores.Size = new System.Drawing.Size(139, 17);
+            this.check17_3InstalExtintores.TabIndex = 76;
+            this.check17_3InstalExtintores.Text = "Instalação de Extintores";
+            this.check17_3InstalExtintores.UseVisualStyleBackColor = true;
+            this.check17_3InstalExtintores.CheckedChanged += new System.EventHandler(this.check17_3InstalExtintores_CheckedChanged);
+            // 
+            // check17_3MemDesc
+            // 
+            this.check17_3MemDesc.AutoSize = true;
+            this.check17_3MemDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check17_3MemDesc.ForeColor = System.Drawing.Color.Green;
+            this.check17_3MemDesc.Location = new System.Drawing.Point(335, 220);
+            this.check17_3MemDesc.Name = "check17_3MemDesc";
+            this.check17_3MemDesc.Size = new System.Drawing.Size(141, 17);
+            this.check17_3MemDesc.TabIndex = 75;
+            this.check17_3MemDesc.Text = " Memorial Descritivo";
+            this.check17_3MemDesc.UseVisualStyleBackColor = true;
+            // 
+            // check17_3PPCI
+            // 
+            this.check17_3PPCI.AutoSize = true;
+            this.check17_3PPCI.Location = new System.Drawing.Point(65, 41);
+            this.check17_3PPCI.Name = "check17_3PPCI";
+            this.check17_3PPCI.Size = new System.Drawing.Size(100, 17);
+            this.check17_3PPCI.TabIndex = 74;
+            this.check17_3PPCI.Text = " PPCI Completo";
+            this.check17_3PPCI.UseVisualStyleBackColor = true;
+            this.check17_3PPCI.CheckedChanged += new System.EventHandler(this.check17_3PPCI_CheckedChanged);
+            // 
+            // txt17_3Obs
+            // 
+            this.txt17_3Obs.Location = new System.Drawing.Point(146, 296);
+            this.txt17_3Obs.MaxLength = 2000;
+            this.txt17_3Obs.Multiline = true;
+            this.txt17_3Obs.Name = "txt17_3Obs";
+            this.txt17_3Obs.Size = new System.Drawing.Size(745, 40);
+            this.txt17_3Obs.TabIndex = 10;
+            // 
+            // label198
+            // 
+            this.label198.AutoSize = true;
+            this.label198.Location = new System.Drawing.Point(54, 308);
+            this.label198.Name = "label198";
+            this.label198.Size = new System.Drawing.Size(73, 13);
+            this.label198.TabIndex = 6;
+            this.label198.Text = "Observações:";
+            // 
             // tab17_4
             // 
             this.tab17_4.BackColor = System.Drawing.SystemColors.Control;
@@ -8075,291 +8360,6 @@
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // groupBox10
-            // 
-            this.groupBox10.Controls.Add(this.checkBox17);
-            this.groupBox10.Controls.Add(this.checkBox16);
-            this.groupBox10.Controls.Add(this.checkBox15);
-            this.groupBox10.Controls.Add(this.radioButton1);
-            this.groupBox10.Controls.Add(this.radioButton2);
-            this.groupBox10.Controls.Add(this.label197);
-            this.groupBox10.Controls.Add(this.checkBox1);
-            this.groupBox10.Controls.Add(this.checkBox2);
-            this.groupBox10.Controls.Add(this.checkBox3);
-            this.groupBox10.Controls.Add(this.checkBox4);
-            this.groupBox10.Controls.Add(this.checkBox5);
-            this.groupBox10.Controls.Add(this.checkBox6);
-            this.groupBox10.Controls.Add(this.button1);
-            this.groupBox10.Controls.Add(this.button2);
-            this.groupBox10.Controls.Add(this.checkBox7);
-            this.groupBox10.Controls.Add(this.checkBox8);
-            this.groupBox10.Controls.Add(this.checkBox9);
-            this.groupBox10.Controls.Add(this.checkBox10);
-            this.groupBox10.Controls.Add(this.checkBox11);
-            this.groupBox10.Controls.Add(this.checkBox12);
-            this.groupBox10.Controls.Add(this.checkBox13);
-            this.groupBox10.Controls.Add(this.checkBox14);
-            this.groupBox10.Controls.Add(this.textBox1);
-            this.groupBox10.Controls.Add(this.label198);
-            this.groupBox10.Location = new System.Drawing.Point(31, 27);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(906, 376);
-            this.groupBox10.TabIndex = 76;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "17.3: Instalações Mecânicas";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Enabled = false;
-            this.radioButton1.Location = new System.Drawing.Point(637, 39);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(45, 17);
-            this.radioButton1.TabIndex = 91;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Não";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Checked = true;
-            this.radioButton2.Enabled = false;
-            this.radioButton2.Location = new System.Drawing.Point(589, 39);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(42, 17);
-            this.radioButton2.TabIndex = 90;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Sim";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // label197
-            // 
-            this.label197.AutoSize = true;
-            this.label197.Enabled = false;
-            this.label197.Location = new System.Drawing.Point(332, 41);
-            this.label197.Name = "label197";
-            this.label197.Size = new System.Drawing.Size(232, 13);
-            this.label197.TabIndex = 89;
-            this.label197.Text = "Considerar Aprovação no Corpo de Bombeiros*:";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.ForeColor = System.Drawing.Color.Green;
-            this.checkBox1.Location = new System.Drawing.Point(637, 220);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(130, 17);
-            this.checkBox1.TabIndex = 88;
-            this.checkBox1.Text = " Lista de Materiais";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(335, 183);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(156, 17);
-            this.checkBox2.TabIndex = 87;
-            this.checkBox2.Text = "Instalação de Água Quente";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(65, 183);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(155, 17);
-            this.checkBox3.TabIndex = 86;
-            this.checkBox3.Text = "Instalação de Água Gelada";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(637, 149);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(166, 17);
-            this.checkBox4.TabIndex = 84;
-            this.checkBox4.Text = " Instalação de Água Industrial";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(65, 149);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(163, 17);
-            this.checkBox5.TabIndex = 83;
-            this.checkBox5.Text = " Instalação de Ar Comprimido";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(335, 149);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(160, 17);
-            this.checkBox6.TabIndex = 82;
-            this.checkBox6.Text = " Instalação de Água Potável";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(475, 344);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Excluir";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(367, 344);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Salvar";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Enabled = false;
-            this.checkBox7.Location = new System.Drawing.Point(335, 113);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(218, 17);
-            this.checkBox7.TabIndex = 81;
-            this.checkBox7.Text = "Instalação de Iluminação de Emergência";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Enabled = false;
-            this.checkBox8.Location = new System.Drawing.Point(335, 77);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(142, 17);
-            this.checkBox8.TabIndex = 80;
-            this.checkBox8.Text = " Instalação de Sprinklers";
-            this.checkBox8.UseVisualStyleBackColor = true;
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Enabled = false;
-            this.checkBox9.Location = new System.Drawing.Point(65, 113);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(184, 17);
-            this.checkBox9.TabIndex = 79;
-            this.checkBox9.Text = "Instalação de Alarme de Incêndio";
-            this.checkBox9.UseVisualStyleBackColor = true;
-            // 
-            // checkBox10
-            // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Enabled = false;
-            this.checkBox10.Location = new System.Drawing.Point(65, 77);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(144, 17);
-            this.checkBox10.TabIndex = 78;
-            this.checkBox10.Text = "  Instalação de Hidrantes";
-            this.checkBox10.UseVisualStyleBackColor = true;
-            // 
-            // checkBox11
-            // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Enabled = false;
-            this.checkBox11.Location = new System.Drawing.Point(637, 113);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(224, 17);
-            this.checkBox11.TabIndex = 77;
-            this.checkBox11.Text = " Instalação de Sinalização de Emergência";
-            this.checkBox11.UseVisualStyleBackColor = true;
-            // 
-            // checkBox12
-            // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Enabled = false;
-            this.checkBox12.Location = new System.Drawing.Point(637, 77);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(139, 17);
-            this.checkBox12.TabIndex = 76;
-            this.checkBox12.Text = "Instalação de Extintores";
-            this.checkBox12.UseVisualStyleBackColor = true;
-            // 
-            // checkBox13
-            // 
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox13.ForeColor = System.Drawing.Color.Green;
-            this.checkBox13.Location = new System.Drawing.Point(335, 220);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(141, 17);
-            this.checkBox13.TabIndex = 75;
-            this.checkBox13.Text = " Memorial Descritivo";
-            this.checkBox13.UseVisualStyleBackColor = true;
-            // 
-            // checkBox14
-            // 
-            this.checkBox14.AutoSize = true;
-            this.checkBox14.Location = new System.Drawing.Point(65, 41);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(100, 17);
-            this.checkBox14.TabIndex = 74;
-            this.checkBox14.Text = " PPCI Completo";
-            this.checkBox14.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(146, 296);
-            this.textBox1.MaxLength = 2000;
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(745, 40);
-            this.textBox1.TabIndex = 10;
-            // 
-            // label198
-            // 
-            this.label198.AutoSize = true;
-            this.label198.Location = new System.Drawing.Point(54, 308);
-            this.label198.Name = "label198";
-            this.label198.Size = new System.Drawing.Size(73, 13);
-            this.label198.TabIndex = 6;
-            this.label198.Text = "Observações:";
-            // 
-            // checkBox15
-            // 
-            this.checkBox15.AutoSize = true;
-            this.checkBox15.Location = new System.Drawing.Point(637, 183);
-            this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(193, 17);
-            this.checkBox15.TabIndex = 92;
-            this.checkBox15.Text = "Instalação de Vapor e Condensado";
-            this.checkBox15.UseVisualStyleBackColor = true;
-            // 
-            // checkBox16
-            // 
-            this.checkBox16.AutoSize = true;
-            this.checkBox16.Location = new System.Drawing.Point(65, 220);
-            this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(112, 17);
-            this.checkBox16.TabIndex = 93;
-            this.checkBox16.Text = "Instalação de Gás";
-            this.checkBox16.UseVisualStyleBackColor = true;
-            // 
-            // checkBox17
-            // 
-            this.checkBox17.AutoSize = true;
-            this.checkBox17.Location = new System.Drawing.Point(65, 256);
-            this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(52, 17);
-            this.checkBox17.TabIndex = 94;
-            this.checkBox17.Text = "Outro";
-            this.checkBox17.UseVisualStyleBackColor = true;
-            // 
             // frmNovaSolicitacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -8481,6 +8481,8 @@
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
             this.tab17_3.ResumeLayout(false);
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
             this.tabEscopo18.ResumeLayout(false);
             this.tabEscopo18.PerformLayout();
             this.tabEscopo18_1_2.ResumeLayout(false);
@@ -8512,8 +8514,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaEsc20)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox10.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -9179,29 +9179,29 @@
         private System.Windows.Forms.RadioButton rbtn17_2AprovConcessionariaS;
         private System.Windows.Forms.Label label196;
         private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.CheckBox checkBox17;
-        private System.Windows.Forms.CheckBox checkBox16;
-        private System.Windows.Forms.CheckBox checkBox15;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.CheckBox check17_3Outro;
+        private System.Windows.Forms.CheckBox check17_3InstaGas;
+        private System.Windows.Forms.CheckBox check17_3VaporCondensado;
+        private System.Windows.Forms.RadioButton radio17_3AprovBombN;
+        private System.Windows.Forms.RadioButton radio17_3AprovBombS;
         private System.Windows.Forms.Label label197;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.CheckBox checkBox10;
-        private System.Windows.Forms.CheckBox checkBox11;
-        private System.Windows.Forms.CheckBox checkBox12;
-        private System.Windows.Forms.CheckBox checkBox13;
-        private System.Windows.Forms.CheckBox checkBox14;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.CheckBox check17_3ListaMateriais;
+        private System.Windows.Forms.CheckBox check17_3AguaQ;
+        private System.Windows.Forms.CheckBox check17_3InstalacaoAguaG;
+        private System.Windows.Forms.CheckBox check17_3AguaIndustrial;
+        private System.Windows.Forms.CheckBox check17_3InstalacaoArComp;
+        private System.Windows.Forms.CheckBox check17_3AguaPotavel;
+        private System.Windows.Forms.Button btn17_3Excluir;
+        private System.Windows.Forms.Button btn17_3Salvar;
+        private System.Windows.Forms.CheckBox check17_3InstalacaoEmergencia;
+        private System.Windows.Forms.CheckBox check17_3InstalSprinklers;
+        private System.Windows.Forms.CheckBox check17_3InstalAlarme;
+        private System.Windows.Forms.CheckBox check17_3InstalHidrante;
+        private System.Windows.Forms.CheckBox check17_3SinalEmergencia;
+        private System.Windows.Forms.CheckBox check17_3InstalExtintores;
+        private System.Windows.Forms.CheckBox check17_3MemDesc;
+        private System.Windows.Forms.CheckBox check17_3PPCI;
+        private System.Windows.Forms.TextBox txt17_3Obs;
         private System.Windows.Forms.Label label198;
     }
 }

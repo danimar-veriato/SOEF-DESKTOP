@@ -126,26 +126,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SOEF CLASS.dll" size="83968">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SOEF CLASS.dll" size="89600">
       <assemblyIdentity name="SOEF CLASS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>3zkhCsLq5m1YwE/7yqWEITJUb73l1KOF/6GPcRioN2k=</dsig:DigestValue>
+        <dsig:DigestValue>AyZt2ZX1uXu+SA9dTSoNPB+ijfotKYHcFnLWt4cEpqc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SOEF.exe" size="403912">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SOEF.exe" size="412616">
       <assemblyIdentity name="SOEF" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>2aCPwzw9yiMfsWBhvD0qy2j2HZ9pjRSiI8eJ8wAbERQ=</dsig:DigestValue>
+        <dsig:DigestValue>foihgPqila+NgJyDSu4zZgGL/Hdc1uVw0YzbZvKw/Do=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -176,7 +176,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>NMTav5ajTRfY99PBfDa6N2VxEMB7g5V6lKVTZY1LJqg=</dsig:DigestValue>
+      <dsig:DigestValue>3/WMw5r1t+FQo2Bf8NJUMvbjrqEumPX6J+masCHl/h4=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

@@ -2076,159 +2076,151 @@ namespace ORCAMENTOS_FOCKINK
             }
         }
 
-        /// <summary>
-        /// Lista os dados do Escopo 10_3
-        /// </summary>
-        /// <param name="pNumSolic"></param>
-        /// <param name="pNumRev"></param>
-        protected void listaEscopo10_3(string pNumSolic, string pNumRev)
-        {
-            try
-            {
-                SOEF_CLASS.Escopo_10_3 Escopo10_3 = new SOEF_CLASS.Escopo_10_3(pNumSolic, pNumRev);
-                DataTable dt = Escopo10_3.getEscopo_10_3();
-                if(dt.Rows.Count > 0)
-                {
-                    foreach (DataRow dr in dt.Rows)
-                    {
-                        combo10_3Tensao.SelectedIndex = Convert.ToInt32(dr["TENSAO_TRIFASICA"].ToString());
-                        combo10_3Freq.SelectedIndex = Convert.ToInt32(dr["FREQUENCIA"].ToString());
-                        if(combo10_3Freq.SelectedIndex == 3)
-                        {
-                            txt10_3OutraFreq.Enabled = true;
-                            txt10_3OutraFreq.Text = dr["DESC_OUTRA_FREQUENCIA"].ToString();
-                        }
-                        else
-                        {
-                            txt10_3OutraFreq.Enabled = false;
-                            txt10_3OutraFreq.Text = "";
-                        }
-                        txt10_3Obs.Text = dr["OBSERVACOES"].ToString();
 
-                        if(dr["DADOS_AMBIENTAIS"].ToString() == "U")
-                        {
-                            combo10_3DadosAmbientais.SelectedIndex = 1;
-                        }
-                        else if (dr["DADOS_AMBIENTAIS"].ToString() == "M")
-                        {
-                            combo10_3DadosAmbientais.SelectedIndex = 2;
-                        }
-                        else if (dr["DADOS_AMBIENTAIS"].ToString() == "C")
-                        {
-                            combo10_3DadosAmbientais.SelectedIndex = 3;
-                        }
-                        else if (dr["DADOS_AMBIENTAIS"].ToString() == "N")
-                        {
-                            combo10_3DadosAmbientais.SelectedIndex = 4;
-                        }
-                        btn10_3Excluir.Visible = true;
-                    }
-                }
-                else
-                {
-                    combo10_3Tensao.SelectedIndex = 0;
-                    combo10_3DadosAmbientais.SelectedIndex = 0;
-                    combo10_3Freq.SelectedIndex = 0;
-                    txt10_3OutraFreq.Text = "";
-                    txt10_3OutraFreq.Enabled = false;
-                    combo10_3Local.SelectedIndex = 0;
-                    txt10_3Obs.Text = "";
-                    btn10_3Excluir.Visible = false;
-                }                
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-        
         /// <summary>
-        /// Lista os dados do Escopo 10_4
+        /// Lista dados na tela Escopo 01
         /// </summary>
         /// <param name="pNumSolic"></param>
         /// <param name="pNumRev"></param>
-        protected void listaEscopo10_4(string pNumSolic, string pNumRev)
+        protected void listaEscopo01(string pNumSolic, string pNumRev)
         {
             try
             {
-                SOEF_CLASS.Escopo_10_4 Escopo10_4 = new SOEF_CLASS.Escopo_10_4(pNumSolic, pNumRev);
-                DataTable dt = Escopo10_4.getEscopo_10_4();
+                SOEF_CLASS.Escopo_01 Escopo01 = new SOEF_CLASS.Escopo_01(pNumSolic, pNumRev);
+                DataTable dt = Escopo01.getEscopo_01();
                 if (dt.Rows.Count > 0)
                 {
                     foreach (DataRow dr in dt.Rows)
                     {
-                        if(dr["MATERIAL_TAMPA"].ToString() == "P")
+                        combo01Tensao.SelectedIndex = Convert.ToInt32(dr["TENSAO_MEDIA"].ToString());
+                        if (combo01Tensao.SelectedIndex == 4)
                         {
-                            combo10_4MatTampa.SelectedIndex = 1;
+                            txt01OutraTensao.Enabled = true;
+                            txt01OutraTensao.Text = dr["DESC_OUTRA_TENSAO"].ToString();
                         }
                         else
                         {
-                            combo10_4MatTampa.SelectedIndex = 2;
+                            txt01OutraTensao.Enabled = false;
+                            txt01OutraTensao.Text = "";
                         }
-                        
-                        if(combo10_4MatTampa.SelectedIndex == 1)
+                        if (dr["IND_TIPO_INSTALACAO"].ToString() == "A")
                         {
-                            txt10_4QtdTampa.Enabled = true;
-                            txt10_4QtdTampa.Text = dr["QUANTIDADE"].ToString();
-                            //Desabilita campos da segunda opção
-                            txt10_4Qtd.Text = "";
-                            txt10_4Qtd.Enabled = false;
-                            txt10_4Comprimento.Text = "";
-                            txt10_4Comprimento.Enabled = false;
-                            txt10_4Largura.Text = "";
-                            txt10_4Largura.Enabled = false;
-                            combo10_4TipoTampa.SelectedIndex = 0;
-                            combo10_4TipoTampa.Enabled = false;
-                            btn10_4GravaTampa.Enabled = false;
-                            dgv10_4Tampa.DataSource = null;
-                            dgv10_4Tampa.Enabled = false;
+                            combo01Instalacao.SelectedIndex = 1;
                         }
-                        else if (combo10_4MatTampa.SelectedIndex == 2)
+                        else if (dr["IND_TIPO_INSTALACAO"].ToString() == "T")
                         {
-                            txt10_4Qtd.Enabled = true;
-                            txt10_4Qtd.Text = "";
-                            txt10_4Comprimento.Enabled = true;
-                            txt10_4Comprimento.Text = "";
-                            txt10_4Largura.Enabled = true;
-                            txt10_4Largura.Text = "";
-                            combo10_4TipoTampa.Enabled = true;
-                            combo10_4TipoTampa.SelectedIndex = 0;
-                            dgv10_4Tampa.Enabled = true;
-                            //Popula o Data Grid com os dados da Tampa Escopo
-                            dgv10_4Tampa.DataSource = Escopo10_4.getTampaEscopo("10_4", null);
-                            btn10_4GravaTampa.Enabled = true;
-                            //Desabilita campos 1° opcao
-                            txt10_4QtdTampa.Text = "";
-                            txt10_4QtdTampa.Enabled = false;
+                            combo01Instalacao.SelectedIndex = 2;
                         }
-                        txt10_4Obs.Text = dr["OBSERVACOES"].ToString();
-                        btn10_4Excluir.Visible = true;
+                        else if (dr["IND_TIPO_INSTALACAO"].ToString() == "M")
+                        {
+                            combo01Instalacao.SelectedIndex = 3;
+                        }
+                        if (dr["IND_ENSAIO"].ToString() == "A")
+                        {
+                            combo01EnsaioPainel.SelectedIndex = 1;
+                        }
+                        else if (dr["IND_ENSAIO"].ToString() == "C")
+                        {
+                            combo01EnsaioPainel.SelectedIndex = 2;
+                        }
+                        else if (dr["IND_ENSAIO"].ToString() == "T")
+                        {
+                            combo01EnsaioPainel.SelectedIndex = 3;
+                        }
+                        else if (dr["IND_ENSAIO"].ToString() == "O")
+                        {
+                            combo01EnsaioPainel.SelectedIndex = 4;
+                            txt01OutroEnsaio.Enabled = true;
+                            txt01OutroEnsaio.Text = dr["DESC_OUTRO_ENSAIO"].ToString();
+                        }
+
+                        if (dr["TIPO_PINTURA"].ToString() == "R")
+                        {
+                            combo01Pintura.SelectedIndex = 1;
+                        }
+                        else if (dr["TIPO_PINTURA"].ToString() == "M")
+                        {
+                            combo01Pintura.SelectedIndex = 2;
+                        }
+                        else if (dr["TIPO_PINTURA"].ToString() == "E")
+                        {
+                            combo01Pintura.SelectedIndex = 3;
+                        }
+
+                        if (!string.IsNullOrEmpty(dr["OBSERVACOES"].ToString()))
+                        {
+                            txt01Obs.Text = dr["OBSERVACOES"].ToString();
+                        }
+                        else
+                        {
+                            txt01Obs.Text = "";
+                        }
+
+                        combo01Frequencia.SelectedIndex = Convert.ToInt32(dr["FREQUENCIA"].ToString());
+                        if (dr["FREQUENCIA"].ToString() == "3")
+                        {
+                            txt01OutraFrequencia.Enabled = true;
+                            txt01OutraFrequencia.Text = dr["DESC_OUTRA_FREQUENCIA"].ToString();
+                        }
+
+                        if (dr["DADOS_AMBIENTAIS"].ToString() == "U")
+                        {
+                            combo01DadosAmbientais.SelectedIndex = 1;
+                        }
+                        else if (dr["DADOS_AMBIENTAIS"].ToString() == "M")
+                        {
+                            combo01DadosAmbientais.SelectedIndex = 2;
+                        }
+                        else if (dr["DADOS_AMBIENTAIS"].ToString() == "C")
+                        {
+                            combo01DadosAmbientais.SelectedIndex = 3;
+                        }
+                        else if (dr["DADOS_AMBIENTAIS"].ToString() == "N")
+                        {
+                            combo01DadosAmbientais.SelectedIndex = 4;
+                        }
+
+                        if (dr["IND_DIAGRAMA_UNIFILAR"].ToString() == "S")
+                        {
+                            rbtn01Sim.Checked = true;
+                        }
+                        else
+                        {
+                            rbtn01Nao.Checked = true;
+                            txt01Descricao.Enabled = true;
+                            txt01Descricao.Text = dr["DESCRICAO_SOLUCAO"].ToString();
+                        }
                     }
+                    btn01Excluir.Visible = true;
                 }
                 else
                 {
-                    txt10_4Qtd.Text = "";
-                    txt10_4Qtd.Enabled = false;
-                    txt10_4Comprimento.Text = "";
-                    txt10_4Comprimento.Enabled = false;
-                    txt10_4Largura.Text = "";
-                    txt10_4Largura.Enabled = false;
-                    combo10_4TipoTampa.SelectedIndex = 0;
-                    combo10_4TipoTampa.Enabled = false;
-                    btn10_4GravaTampa.Enabled = false;
-                    combo10_4MatTampa.SelectedIndex = 0;
-                    dgv10_4Tampa.DataSource = null;
-                    dgv10_4Tampa.Enabled = false;
-                    txt10_4Obs.Text = "";
-                    btn10_3Excluir.Visible = false;
+                    //Limpa os campos
+                    combo01Tensao.SelectedIndex = 0;
+                    txt01OutraTensao.Text = "";
+                    txt01OutraTensao.Enabled = false;
+                    combo01Instalacao.SelectedIndex = 0;
+                    combo01EnsaioPainel.SelectedIndex = 0;
+                    combo01Pintura.SelectedIndex = 0;
+                    txt01Obs.Text = "";
+                    combo01Frequencia.SelectedIndex = 0;
+                    txt01OutraFrequencia.Text = "";
+                    txt01OutraFrequencia.Enabled = false;
+                    combo01DadosAmbientais.SelectedIndex = 0;
+                    rbtn01Nao.Checked = false;
+                    rbtn01Sim.Checked = false;
+                    txt01Descricao.Text = "";
+                    txt01OutroEnsaio.Enabled = false;
+                    txt01OutroEnsaio.Text = "";
                 }
+
             }
             catch (Exception)
             {
                 throw;
             }
         }
-        
+
         /// <summary>
         /// Lista os dados do Escopo 05
         /// </summary>
@@ -2555,32 +2547,6 @@ namespace ORCAMENTOS_FOCKINK
                     txt5_3DescServico.Text = "";
                     btn5_3Excluir.Visible = false;
                     tabNovaSolicitacao.SelectedTab.Name = "tabEscopo5"; //Conferir se o nome está correto
-                }
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-
-        /// <summary>
-        /// Lista os dados do Escopo 20
-        /// </summary>
-        /// <param name="pNumSolic"></param>
-        /// <param name="pNumRev"></param>
-        protected void listaEscopo20(string pNumSolic, string pNumRev)
-        {
-            try
-            {
-                SOEF_CLASS.Escopo_20 Escopo20 = new SOEF_CLASS.Escopo_20(pNumSolic, pNumRev);
-                dgvListaEsc20.DataSource = Escopo20.getEscopo20(pNumSolic, pNumRev);  
-                if(dgvListaEsc20.Rows.Count > 0)
-                {
-                    btnEsc20Excluir.Visible = true;                    
-                }
-                else
-                {
-                    btnEsc20Excluir.Visible = false;                   
                 }
             }
             catch (Exception)
@@ -2998,142 +2964,151 @@ namespace ORCAMENTOS_FOCKINK
         }
 
         /// <summary>
-        /// Lista dados na tela Escopo 01
+        /// Lista os dados do Escopo 10_3
         /// </summary>
         /// <param name="pNumSolic"></param>
         /// <param name="pNumRev"></param>
-        protected void listaEscopo01(string pNumSolic, string pNumRev)
+        protected void listaEscopo10_3(string pNumSolic, string pNumRev)
         {
             try
             {
-                SOEF_CLASS.Escopo_01 Escopo01 = new SOEF_CLASS.Escopo_01(pNumSolic, pNumRev);
-                DataTable dt = Escopo01.getEscopo_01();
+                SOEF_CLASS.Escopo_10_3 Escopo10_3 = new SOEF_CLASS.Escopo_10_3(pNumSolic, pNumRev);
+                DataTable dt = Escopo10_3.getEscopo_10_3();
                 if (dt.Rows.Count > 0)
                 {
                     foreach (DataRow dr in dt.Rows)
                     {
-                        combo01Tensao.SelectedIndex = Convert.ToInt32(dr["TENSAO_MEDIA"].ToString());
-                        if(combo01Tensao.SelectedIndex == 4)
+                        combo10_3Tensao.SelectedIndex = Convert.ToInt32(dr["TENSAO_TRIFASICA"].ToString());
+                        combo10_3Freq.SelectedIndex = Convert.ToInt32(dr["FREQUENCIA"].ToString());
+                        if (combo10_3Freq.SelectedIndex == 3)
                         {
-                            txt01OutraTensao.Enabled = true;
-                            txt01OutraTensao.Text = dr["DESC_OUTRA_TENSAO"].ToString();
+                            txt10_3OutraFreq.Enabled = true;
+                            txt10_3OutraFreq.Text = dr["DESC_OUTRA_FREQUENCIA"].ToString();
                         }
                         else
                         {
-                            txt01OutraTensao.Enabled = false;
-                            txt01OutraTensao.Text = "";
+                            txt10_3OutraFreq.Enabled = false;
+                            txt10_3OutraFreq.Text = "";
                         }
-                        if (dr["IND_TIPO_INSTALACAO"].ToString() == "A")
-                        {
-                            combo01Instalacao.SelectedIndex = 1;
-                        }
-                        else if (dr["IND_TIPO_INSTALACAO"].ToString() == "T")
-                        {
-                            combo01Instalacao.SelectedIndex = 2;
-                        }
-                        else if (dr["IND_TIPO_INSTALACAO"].ToString() == "M")
-                        {
-                            combo01Instalacao.SelectedIndex = 3;
-                        }
-                        if (dr["IND_ENSAIO"].ToString() == "A")
-                        {
-                            combo01EnsaioPainel.SelectedIndex = 1;
-                        }
-                        else if (dr["IND_ENSAIO"].ToString() == "C")
-                        {
-                            combo01EnsaioPainel.SelectedIndex = 2;
-                        }
-                        else if (dr["IND_ENSAIO"].ToString() == "T")
-                        {
-                            combo01EnsaioPainel.SelectedIndex = 3;
-                        }
-                        else if (dr["IND_ENSAIO"].ToString() == "O")
-                        {
-                            combo01EnsaioPainel.SelectedIndex = 4;
-                            txt01OutroEnsaio.Enabled = true;
-                            txt01OutroEnsaio.Text = dr["DESC_OUTRO_ENSAIO"].ToString();
-                        }
-
-                        if (dr["TIPO_PINTURA"].ToString() == "R")
-                        {
-                            combo01Pintura.SelectedIndex = 1;
-                        }
-                        else if (dr["TIPO_PINTURA"].ToString() == "M")
-                        {
-                            combo01Pintura.SelectedIndex = 2;
-                        }
-                        else if (dr["TIPO_PINTURA"].ToString() == "E")
-                        {
-                            combo01Pintura.SelectedIndex = 3;
-                        }
-
-                        if (!string.IsNullOrEmpty(dr["OBSERVACOES"].ToString()))
-                        {
-                            txt01Obs.Text = dr["OBSERVACOES"].ToString();
-                        }
-                        else
-                        {
-                            txt01Obs.Text = "";
-                        }
-
-                        combo01Frequencia.SelectedIndex = Convert.ToInt32(dr["FREQUENCIA"].ToString());
-                        if (dr["FREQUENCIA"].ToString() == "3")
-                        {
-                            txt01OutraFrequencia.Enabled = true;
-                            txt01OutraFrequencia.Text = dr["DESC_OUTRA_FREQUENCIA"].ToString();
-                        }
+                        txt10_3Obs.Text = dr["OBSERVACOES"].ToString();
 
                         if (dr["DADOS_AMBIENTAIS"].ToString() == "U")
                         {
-                            combo01DadosAmbientais.SelectedIndex = 1;
+                            combo10_3DadosAmbientais.SelectedIndex = 1;
                         }
                         else if (dr["DADOS_AMBIENTAIS"].ToString() == "M")
                         {
-                            combo01DadosAmbientais.SelectedIndex = 2;
+                            combo10_3DadosAmbientais.SelectedIndex = 2;
                         }
                         else if (dr["DADOS_AMBIENTAIS"].ToString() == "C")
                         {
-                            combo01DadosAmbientais.SelectedIndex = 3;
+                            combo10_3DadosAmbientais.SelectedIndex = 3;
                         }
                         else if (dr["DADOS_AMBIENTAIS"].ToString() == "N")
                         {
-                            combo01DadosAmbientais.SelectedIndex = 4;
+                            combo10_3DadosAmbientais.SelectedIndex = 4;
                         }
-
-                        if (dr["IND_DIAGRAMA_UNIFILAR"].ToString() == "S")
-                        {
-                            rbtn01Sim.Checked = true;
-                        }
-                        else
-                        {
-                            rbtn01Nao.Checked = true;
-                            txt01Descricao.Enabled = true;
-                            txt01Descricao.Text = dr["DESCRICAO_SOLUCAO"].ToString();
-                        }                        
+                        btn10_3Excluir.Visible = true;
                     }
-                    btn01Excluir.Visible = true;
                 }
                 else
                 {
-                    //Limpa os campos
-                    combo01Tensao.SelectedIndex = 0;
-                    txt01OutraTensao.Text = "";
-                    txt01OutraTensao.Enabled = false;
-                    combo01Instalacao.SelectedIndex = 0;
-                    combo01EnsaioPainel.SelectedIndex = 0;
-                    combo01Pintura.SelectedIndex = 0;
-                    txt01Obs.Text = "";
-                    combo01Frequencia.SelectedIndex = 0;
-                    txt01OutraFrequencia.Text = "";
-                    txt01OutraFrequencia.Enabled = false;
-                    combo01DadosAmbientais.SelectedIndex = 0;
-                    rbtn01Nao.Checked = false;
-                    rbtn01Sim.Checked = false;
-                    txt01Descricao.Text = "";
-                    txt01OutroEnsaio.Enabled = false;
-                    txt01OutroEnsaio.Text = "";
+                    combo10_3Tensao.SelectedIndex = 0;
+                    combo10_3DadosAmbientais.SelectedIndex = 0;
+                    combo10_3Freq.SelectedIndex = 0;
+                    txt10_3OutraFreq.Text = "";
+                    txt10_3OutraFreq.Enabled = false;
+                    combo10_3Local.SelectedIndex = 0;
+                    txt10_3Obs.Text = "";
+                    btn10_3Excluir.Visible = false;
                 }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
 
+        /// <summary>
+        /// Lista os dados do Escopo 10_4
+        /// </summary>
+        /// <param name="pNumSolic"></param>
+        /// <param name="pNumRev"></param>
+        protected void listaEscopo10_4(string pNumSolic, string pNumRev)
+        {
+            try
+            {
+                SOEF_CLASS.Escopo_10_4 Escopo10_4 = new SOEF_CLASS.Escopo_10_4(pNumSolic, pNumRev);
+                DataTable dt = Escopo10_4.getEscopo_10_4();
+                if (dt.Rows.Count > 0)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        if (dr["MATERIAL_TAMPA"].ToString() == "P")
+                        {
+                            combo10_4MatTampa.SelectedIndex = 1;
+                        }
+                        else
+                        {
+                            combo10_4MatTampa.SelectedIndex = 2;
+                        }
+
+                        if (combo10_4MatTampa.SelectedIndex == 1)
+                        {
+                            txt10_4QtdTampa.Enabled = true;
+                            txt10_4QtdTampa.Text = dr["QUANTIDADE"].ToString();
+                            //Desabilita campos da segunda opção
+                            txt10_4Qtd.Text = "";
+                            txt10_4Qtd.Enabled = false;
+                            txt10_4Comprimento.Text = "";
+                            txt10_4Comprimento.Enabled = false;
+                            txt10_4Largura.Text = "";
+                            txt10_4Largura.Enabled = false;
+                            combo10_4TipoTampa.SelectedIndex = 0;
+                            combo10_4TipoTampa.Enabled = false;
+                            btn10_4GravaTampa.Enabled = false;
+                            dgv10_4Tampa.DataSource = null;
+                            dgv10_4Tampa.Enabled = false;
+                        }
+                        else if (combo10_4MatTampa.SelectedIndex == 2)
+                        {
+                            txt10_4Qtd.Enabled = true;
+                            txt10_4Qtd.Text = "";
+                            txt10_4Comprimento.Enabled = true;
+                            txt10_4Comprimento.Text = "";
+                            txt10_4Largura.Enabled = true;
+                            txt10_4Largura.Text = "";
+                            combo10_4TipoTampa.Enabled = true;
+                            combo10_4TipoTampa.SelectedIndex = 0;
+                            dgv10_4Tampa.Enabled = true;
+                            //Popula o Data Grid com os dados da Tampa Escopo
+                            dgv10_4Tampa.DataSource = Escopo10_4.getTampaEscopo("10_4", null);
+                            btn10_4GravaTampa.Enabled = true;
+                            //Desabilita campos 1° opcao
+                            txt10_4QtdTampa.Text = "";
+                            txt10_4QtdTampa.Enabled = false;
+                        }
+                        txt10_4Obs.Text = dr["OBSERVACOES"].ToString();
+                        btn10_4Excluir.Visible = true;
+                    }
+                }
+                else
+                {
+                    txt10_4Qtd.Text = "";
+                    txt10_4Qtd.Enabled = false;
+                    txt10_4Comprimento.Text = "";
+                    txt10_4Comprimento.Enabled = false;
+                    txt10_4Largura.Text = "";
+                    txt10_4Largura.Enabled = false;
+                    combo10_4TipoTampa.SelectedIndex = 0;
+                    combo10_4TipoTampa.Enabled = false;
+                    btn10_4GravaTampa.Enabled = false;
+                    combo10_4MatTampa.SelectedIndex = 0;
+                    dgv10_4Tampa.DataSource = null;
+                    dgv10_4Tampa.Enabled = false;
+                    txt10_4Obs.Text = "";
+                    btn10_3Excluir.Visible = false;
+                }
             }
             catch (Exception)
             {
@@ -3519,6 +3494,213 @@ namespace ORCAMENTOS_FOCKINK
             }
         }
 
+        /// <summary>
+        /// Lista os dados do Escopo 17_3
+        /// </summary>
+        /// <param name="pNumSolic"></param>
+        /// <param name="pNumRev"></param>
+        protected void listaEscopo17_3(string pNumSolic, string pNumRev)
+        {
+            try
+            {
+                SOEF_CLASS.Escopo_17_3 Escopo_17_3 = new SOEF_CLASS.Escopo_17_3(pNumSolic, pNumRev);
+                DataTable dt = Escopo_17_3.getEscopo_17_3();
+                if (dt.Rows.Count > 0)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        if (dr["IND_PPCI_COMPLETO"].ToString() == "S")
+                        {
+                            //Ativa PPCI e Aprov Bombeiros
+                            check17_3PPCI.Enabled = true;
+                            check17_3PPCI.Checked = true;
+                            label197.Enabled = true;
+                            radio17_3AprovBombS.Enabled = true;
+                            radio17_3AprovBombN.Enabled = true;
+                            if(dr["IND_APROV_BOMBEIROS"].ToString() == "S")
+                            {
+                                radio17_3AprovBombS.Checked = true;
+                            }
+                            else
+                            {
+                                radio17_3AprovBombN.Checked = true;
+                            }
+                            //Desativa os checkboxes 
+                            check17_3InstalHidrante.Enabled = false;
+                            check17_3InstalSprinklers.Enabled = false;
+                            check17_3InstalExtintores.Enabled = false;
+                            check17_3InstalAlarme.Enabled = false;
+                            check17_3InstalacaoEmergencia.Enabled = false;
+                            check17_3SinalEmergencia.Enabled = false;
+                        }
+                        if(dr["IND_INSTAL_HIDRANTES"].ToString() == "S")
+                        {
+                            check17_3InstalHidrante.Checked = true;
+                        }
+                        else
+                        {
+                            check17_3InstalHidrante.Checked = false;
+                        }
+                        if(dr["IND_INSTAL_SPRINKLERS"].ToString() == "S")
+                        {
+                            check17_3InstalSprinklers.Checked = true;
+                        }
+                        else
+                        {
+                            check17_3InstalSprinklers.Checked = true;
+                        }
+                        if (dr["IND_INSTAL_EXTINTORES"].ToString() == "S")
+                        {
+                            check17_3InstalExtintores.Checked = true;
+                        }
+                        else
+                        {
+                            check17_3InstalExtintores.Checked = true;
+                        }
+                        if (dr["IND_INSTAL_ALARME_INCENDIO"].ToString() == "S")
+                        {
+                            check17_3InstalAlarme.Checked = true;
+                        }
+                        else
+                        {
+                            check17_3InstalAlarme.Checked = true;
+                        }
+                        if (dr["IND_INSTAL_ILUMINACAO_EMERG"].ToString() == "S")
+                        {
+                            check17_3InstalacaoEmergencia.Checked = true;
+                        }
+                        else
+                        {
+                            check17_3InstalacaoEmergencia.Checked = true;
+                        }
+                        if (dr["IND_INSTAL_SINALIZACAO_EMERG"].ToString() == "S")
+                        {
+                            check17_3SinalEmergencia.Checked = true;
+                        }
+                        else
+                        {
+                            check17_3SinalEmergencia.Checked = true;
+                        }
+                        if (dr["IND_INSTAL_AR_COMPRIMIDO"].ToString() == "S")
+                        {
+                            check17_3InstalacaoArComp.Checked = true;
+                        }
+                        else
+                        {
+                            check17_3InstalacaoArComp.Checked = true;
+                        }
+                        if (dr["IND_INSTAL_AGUA_POTAVEL"].ToString() == "S")
+                        {
+                            check17_3AguaPotavel.Checked = true;
+                        }
+                        else
+                        {
+                            check17_3AguaPotavel.Checked = true;
+                        }
+                        if (dr["IND_INSTAL_AGUA_INDUSTRIAL"].ToString() == "S")
+                        {
+                            check17_3AguaIndustrial.Checked = true;
+                        }
+                        else
+                        {
+                            check17_3AguaIndustrial.Checked = true;
+                        }
+                        if (dr["IND_INSTAL_AGUA_GELADA"].ToString() == "S")
+                        {
+                            check17_3InstalacaoAguaG.Checked = true;
+                        }
+                        else
+                        {
+                            check17_3InstalacaoAguaG.Checked = true;
+                        }
+                        if (dr["IND_INSTAL_AGUA_QUENTE"].ToString() == "S")
+                        {
+                            check17_3AguaQ.Checked = true;
+                        }
+                        else
+                        {
+                            check17_3AguaQ.Checked = true;
+                        }
+                        if (dr["IND_INSTAL_VAPOR_CONDENSADO"].ToString() == "S")
+                        {
+                            check17_3VaporCondensado.Checked = true;
+                        }
+                        else
+                        {
+                            check17_3VaporCondensado.Checked = true;
+                        }
+                        if (dr["IND_INSTAL_GAS"].ToString() == "S")
+                        {
+                            check17_3InstaGas.Checked = true;
+                        }
+                        else
+                        {
+                            check17_3InstaGas.Checked = true;
+                        }
+                        if (dr["IND_MEMORIAL_DESCRITIVO"].ToString() == "S")
+                        {
+                            check17_3MemDesc.Checked = true;
+                        }
+                        else
+                        {
+                            check17_3MemDesc.Checked = true;
+                        }
+                        if (dr["IND_LISTA_MATERIAIS"].ToString() == "S")
+                        {
+                            check17_3ListaMateriais.Checked = true;
+                        }
+                        else
+                        {
+                            check17_3ListaMateriais.Checked = true;
+                        }
+                        if (dr["IND_OUTRO"].ToString() == "S")
+                        {
+                            check17_3Outro.Checked = true;
+                        }
+                        else
+                        {
+                            check17_3Outro.Checked = true;
+                        }
+                    }   
+                    btn17_3Excluir.Visible = true;
+                }
+                else
+                {
+                    //Reseta os campos da tela
+                    check17_3PPCI.Checked = false;
+                    check17_3InstalHidrante.Checked = false;
+                    check17_3InstalAlarme.Checked = false;
+                    check17_3InstalacaoArComp.Checked = false;
+                    check17_3InstalacaoAguaG.Checked = false;
+                    check17_3InstaGas.Checked = false;
+                    check17_3Outro.Checked = false;
+                    //Aprovação Bombeiros
+                    label197.Enabled = false;
+                    radio17_3AprovBombS.Enabled = false;
+                    radio17_3AprovBombS.Checked = false;
+                    radio17_3AprovBombN.Enabled = false;
+                    radio17_3AprovBombN.Checked = false;
+                    check17_3InstalSprinklers.Checked = false;
+                    check17_3InstalacaoEmergencia.Checked = false;
+                    check17_3AguaPotavel.Checked = false;
+                    check17_3AguaQ.Checked = false;
+                    check17_3MemDesc.Checked = false;
+                    check17_3InstalExtintores.Checked = false;
+                    check17_3SinalEmergencia.Checked = false;
+                    check17_3AguaIndustrial.Checked = false;
+                    check17_3VaporCondensado.Checked = false;
+                    check17_3ListaMateriais.Checked = false;
+                    txt17_3Obs.Text = "";
+                    btn17_3Excluir.Visible = false;
+                    tabNovaSolicitacao.SelectedTab.Name = "tabEscopo17"; //Conferir se o nome está correto
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
 
         /// <summary>
         /// Lista o Escopo 18
@@ -3832,6 +4014,32 @@ namespace ORCAMENTOS_FOCKINK
             }
         }
         
+        /// <summary>
+        /// Lista os dados do Escopo 20
+        /// </summary>
+        /// <param name="pNumSolic"></param>
+        /// <param name="pNumRev"></param>
+        protected void listaEscopo20(string pNumSolic, string pNumRev)
+        {
+            try
+            {
+                SOEF_CLASS.Escopo_20 Escopo20 = new SOEF_CLASS.Escopo_20(pNumSolic, pNumRev);
+                dgvListaEsc20.DataSource = Escopo20.getEscopo20(pNumSolic, pNumRev);
+                if (dgvListaEsc20.Rows.Count > 0)
+                {
+                    btnEsc20Excluir.Visible = true;
+                }
+                else
+                {
+                    btnEsc20Excluir.Visible = false;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         /// <summary>
         /// Função que verifica os escopos que já estão preenchidos
         /// </summary>
@@ -5962,6 +6170,40 @@ namespace ORCAMENTOS_FOCKINK
             check17_2InstalRedeDados.Checked = false;
             check17_2ListaMateriais.Checked = false;
             txt17_2Obs.Text = "";
+        }
+
+
+        /// <summary>
+        /// Inicializa campos Escopo 17_3
+        /// </summary>
+        private void inicializaCamposE17_3()
+        {
+            //Reseta os campos da tela
+            check17_3PPCI.Checked = false;
+            check17_3InstalHidrante.Checked = false;
+            check17_3InstalAlarme.Checked = false;
+            check17_3InstalacaoArComp.Checked = false;
+            check17_3InstalacaoAguaG.Checked = false;
+            check17_3InstaGas.Checked = false;
+            check17_3Outro.Checked = false;
+            //Aprovação Bombeiros
+            label197.Enabled = false;
+            radio17_3AprovBombS.Enabled = false;
+            radio17_3AprovBombS.Checked = false;
+            radio17_3AprovBombN.Enabled = false;
+            radio17_3AprovBombN.Checked = false;
+            check17_3InstalSprinklers.Checked = false;
+            check17_3InstalacaoEmergencia.Checked = false;
+            check17_3AguaPotavel.Checked = false;
+            check17_3AguaQ.Checked = false;
+            check17_3MemDesc.Checked = false;
+            check17_3InstalExtintores.Checked = false;
+            check17_3SinalEmergencia.Checked = false;
+            check17_3AguaIndustrial.Checked = false;
+            check17_3VaporCondensado.Checked = false;
+            check17_3ListaMateriais.Checked = false;
+            txt17_3Obs.Text = "";
+            btn17_3Excluir.Visible = false;
         }
 
         private void tabsEscopo10_Selected(object sender, TabControlEventArgs e)
@@ -9740,6 +9982,47 @@ namespace ORCAMENTOS_FOCKINK
                     listaEscopo17_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 }
             }
+            else if (tabPageEscopo17.SelectedTab.Name == "tab17_3")
+            {
+                if (AcaoTela == "N")
+                {
+                    SOEF_CLASS.Escopo_Valor_Comum EscopoValorComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    //Verifica e sugere os campos comuns caso existir registro
+                    DataTable dtEscopo17_3 = EscopoValorComum.buscaEscopoValorComumE17_3();
+                    if (dtEscopo17_3.Rows.Count > 0)
+                    {
+                        foreach (DataRow dr in dtEscopo17_3.Rows)
+                        {
+                            //Memorial Descritivo
+                            if (dr["IND_MEMORIAL_DESCRITIVO"].ToString() == "S")
+                            {
+                                check17_3MemDesc.Checked = true;
+                            }
+                            else
+                            {
+                                check17_3MemDesc.Checked = false;
+                            }
+                            //Lista Materiais
+                            if (dr["IND_LISTA_MATERIAIS"].ToString() == "S")
+                            {
+                                check17_3ListaMateriais.Checked = true;
+                            }
+                            else
+                            {
+                                check17_3ListaMateriais.Checked = false;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        inicializaCamposE17_3();
+                    }
+                }
+                else
+                {
+                    listaEscopo17_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                }
+            }
         }
 
         private void btn17_1Excluir_Click(object sender, EventArgs e)
@@ -10126,6 +10409,475 @@ namespace ORCAMENTOS_FOCKINK
                     MessageBox.Show("Registro excluído com sucesso!");
                     btn17_2Excluir.Visible = false;
                     listaEscopo17_2(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro ao excluir o registro. Por favor, contate o suporte do sistema e tente novamente.");
+                }
+            }
+        }
+
+        private void check17_3PPCI_CheckedChanged(object sender, EventArgs e)
+        {
+            if (check17_3PPCI.Checked)
+            {
+                //Habilita Aprov. Bombeiros
+                label197.Enabled = true;
+                radio17_3AprovBombS.Enabled = true;
+                radio17_3AprovBombN.Enabled = true;
+                //Desabilita Campos
+                check17_3InstalHidrante.Enabled = false;
+                check17_3InstalSprinklers.Enabled = false;
+                check17_3InstalExtintores.Enabled = false;
+                check17_3InstalAlarme.Enabled = false;
+                check17_3InstalacaoEmergencia.Enabled = false;
+                check17_3SinalEmergencia.Enabled = false;
+            }
+            else
+            {
+                //Desabilita Aprov. Bombeiros
+                label197.Enabled = false;
+                radio17_3AprovBombS.Checked = false;
+                radio17_3AprovBombS.Enabled = false;
+                radio17_3AprovBombN.Checked = false;
+                radio17_3AprovBombN.Enabled = false;
+                //Habilita Campos
+                check17_3InstalHidrante.Enabled = true;
+                check17_3InstalSprinklers.Enabled = true;
+                check17_3InstalExtintores.Enabled = true;
+                check17_3InstalAlarme.Enabled = true;
+                check17_3InstalacaoEmergencia.Enabled = true;
+                check17_3SinalEmergencia.Enabled = true;
+
+            }
+        }
+
+        private void check17_3InstalHidrante_CheckedChanged(object sender, EventArgs e)
+        {
+            if (check17_3InstalHidrante.Checked)
+            {
+                check17_3PPCI.Checked = false;
+                check17_3PPCI.Enabled = false;
+            }
+            else
+            {
+                if(!check17_3InstalHidrante.Checked && !check17_3InstalSprinklers.Checked && !check17_3InstalExtintores.Checked && !check17_3InstalAlarme.Checked && !check17_3InstalacaoEmergencia.Checked && !check17_3SinalEmergencia.Checked)
+                {
+                    check17_3PPCI.Enabled = true;
+                }
+                
+            }
+        }
+
+        private void check17_3InstalSprinklers_CheckedChanged(object sender, EventArgs e)
+        {
+            if (check17_3InstalSprinklers.Checked)
+            {
+                check17_3PPCI.Checked = false;
+                check17_3PPCI.Enabled = false;
+            }
+            else
+            {
+                if (!check17_3InstalHidrante.Checked && !check17_3InstalSprinklers.Checked && !check17_3InstalExtintores.Checked && !check17_3InstalAlarme.Checked && !check17_3InstalacaoEmergencia.Checked && !check17_3SinalEmergencia.Checked)
+                {
+                    check17_3PPCI.Enabled = true;
+                }
+                    
+            }
+        }
+
+        private void check17_3InstalExtintores_CheckedChanged(object sender, EventArgs e)
+        {
+            if (check17_3InstalExtintores.Checked)
+            {
+                check17_3PPCI.Checked = false;
+                check17_3PPCI.Enabled = false;
+            }
+            else
+            {
+                if (!check17_3InstalHidrante.Checked && !check17_3InstalSprinklers.Checked && !check17_3InstalExtintores.Checked && !check17_3InstalAlarme.Checked && !check17_3InstalacaoEmergencia.Checked && !check17_3SinalEmergencia.Checked)
+                {
+                    check17_3PPCI.Enabled = true;
+                }
+                
+            }
+        }
+
+        private void check17_3InstalAlarme_CheckedChanged(object sender, EventArgs e)
+        {
+            if (check17_3InstalAlarme.Checked)
+            {
+                check17_3PPCI.Checked = false;
+                check17_3PPCI.Enabled = false;
+            }
+            else
+            {
+                if (!check17_3InstalHidrante.Checked && !check17_3InstalSprinklers.Checked && !check17_3InstalExtintores.Checked && !check17_3InstalAlarme.Checked && !check17_3InstalacaoEmergencia.Checked && !check17_3SinalEmergencia.Checked)
+                {
+                    check17_3PPCI.Enabled = true;
+                }
+                
+            }
+        }
+
+        private void check17_3InstalacaoEmergencia_CheckedChanged(object sender, EventArgs e)
+        {
+            if (check17_3InstalacaoEmergencia.Checked)
+            {
+                check17_3PPCI.Checked = false;
+                check17_3PPCI.Enabled = false;
+            }
+            else
+            {
+                if (!check17_3InstalHidrante.Checked && !check17_3InstalSprinklers.Checked && !check17_3InstalExtintores.Checked && !check17_3InstalAlarme.Checked && !check17_3InstalacaoEmergencia.Checked && !check17_3SinalEmergencia.Checked)
+                {
+                    check17_3PPCI.Enabled = true;
+                }
+                
+            }
+        }
+
+        private void check17_3SinalEmergencia_CheckedChanged(object sender, EventArgs e)
+        {
+            if (check17_3SinalEmergencia.Checked)
+            {
+                check17_3PPCI.Checked = false;
+                check17_3PPCI.Enabled = false;
+            }
+            else
+            {
+                if (!check17_3InstalHidrante.Checked && !check17_3InstalSprinklers.Checked && !check17_3InstalExtintores.Checked && !check17_3InstalAlarme.Checked && !check17_3InstalacaoEmergencia.Checked && !check17_3SinalEmergencia.Checked)
+                {
+                    check17_3PPCI.Enabled = true;
+                }
+
+                
+            }
+        }
+
+        private void btn17_3Salvar_Click(object sender, EventArgs e)
+        {
+            string erros = "";
+
+            if(!check17_3PPCI.Checked && !check17_3InstalHidrante.Checked && !check17_3InstalSprinklers.Checked && !check17_3InstalAlarme.Checked && !check17_3InstalacaoEmergencia.Checked && !check17_3InstalacaoArComp.Checked && !check17_3AguaPotavel.Checked && !check17_3InstalacaoAguaG.Checked && !check17_3AguaQ.Checked && !check17_3InstaGas.Checked && !check17_3MemDesc.Checked && !check17_3Outro.Checked && !check17_3InstalExtintores.Checked && !check17_3SinalEmergencia.Checked && !check17_3AguaIndustrial.Checked && !check17_3VaporCondensado.Checked && !check17_3ListaMateriais.Checked)
+            {
+                erros += "Pelo menos uma opção de projeto para instalações mecânicas deve ser marcada.\n";
+            }
+            if (check17_3PPCI.Checked)
+            {
+                if(!radio17_3AprovBombS.Checked && !radio17_3AprovBombN.Checked)
+                {
+                    erros += "O campo Considerar Aprovação no Corpo de Bombeiros deve ser preenchido.\n";
+                }
+            }
+            
+            if (!string.IsNullOrEmpty(erros))
+            {
+                MessageBox.Show("Painel de erros:\n" + erros);
+            }
+            else
+            {
+                string ppciCompleto = "";
+                string aprovBombeiros = "";
+                string instalHidrantes = "";
+                string instalSprinklers = "";
+                string instalExtintores = "";
+                string instalAlarmeI = "";
+                string instalIluminacaoEmerg = "";
+                string instalSinalizacaoEmerg = "";
+                string instalArCompr = "";
+                string instalAguaPotavel = "";
+                string instalAguaIndustrial = "";
+                string instalAguaGelada = "";
+                string instalAguaQ = "";
+                string instalVaporConde = "";
+                string instalGas = "";
+                string memorialDesc = "";
+                string listaMateriais = "";
+                string indOutro = "";
+                string Obs = "";
+                string indPre = "S";
+
+                if (check17_3PPCI.Checked)
+                {
+                    ppciCompleto = "S";
+                }
+                else
+                {
+                    ppciCompleto = "N";
+                }
+                if (check17_3InstalHidrante.Checked)
+                {
+                    instalHidrantes = "S";
+                }
+                else
+                {
+                    instalHidrantes = "N";
+                }
+                if (check17_3InstalAlarme.Checked)
+                {
+                    instalAlarmeI = "S";
+                }
+                else
+                {
+                    instalAlarmeI = "N";
+                }
+                if (check17_3InstalacaoArComp.Checked)
+                {
+                    instalArCompr = "S";
+                }
+                else
+                {
+                    instalArCompr = "N";
+                }
+                if (check17_3InstalacaoAguaG.Checked)
+                {
+                    instalAguaGelada = "S";
+                }
+                else
+                {
+                    instalAguaGelada = "N";
+                }
+                if (check17_3InstaGas.Checked)
+                {
+                    instalGas = "S";
+                }
+                else
+                {
+                    instalGas = "N";
+                }
+                if (check17_3Outro.Checked)
+                {
+                    indOutro = "S";
+                }
+                else
+                {
+                    indOutro = "N";
+                }
+                if (check17_3InstalSprinklers.Checked)
+                {
+                    instalSprinklers = "S";
+                }
+                else
+                {
+                    instalSprinklers = "N";
+                }
+                if (check17_3InstalacaoEmergencia.Checked)
+                {
+                    instalIluminacaoEmerg = "S";
+                }
+                else
+                {
+                    instalIluminacaoEmerg = "N";
+                }
+                if (check17_3AguaPotavel.Checked)
+                {
+                    instalAguaPotavel = "S";
+                }
+                else
+                {
+                    instalAguaPotavel = "N";
+                }
+                if (check17_3AguaQ.Checked)
+                {
+                    instalAguaQ = "S";
+                }
+                else
+                {
+                    instalAguaQ = "N";
+                }
+                if (check17_3MemDesc.Checked)
+                {
+                    memorialDesc = "S";
+                }
+                else
+                {
+                    memorialDesc = "N";
+                }
+                if (check17_3InstalExtintores.Checked)
+                {
+                    instalExtintores = "S";
+                }
+                else
+                {
+                    instalExtintores = "N";
+                }
+                if (check17_3SinalEmergencia.Checked)
+                {
+                    instalSinalizacaoEmerg = "S";
+                }
+                else
+                {
+                    instalSinalizacaoEmerg = "N";
+                }
+                if (check17_3AguaIndustrial.Checked)
+                {
+                    instalAguaIndustrial = "S";
+                }
+                else
+                {
+                    instalAguaIndustrial = "N";
+                }
+                if (check17_3VaporCondensado.Checked)
+                {
+                    instalVaporConde = "S";
+                }
+                else
+                {
+                    instalVaporConde = "N";
+                }
+                if (check17_3ListaMateriais.Checked)
+                {
+                    listaMateriais = "S";
+                }
+                else
+                {
+                    listaMateriais = "N";
+                }
+
+
+                //Inserção dos dados no banco
+                bool sucesso = true;
+
+                SOEF_CLASS.Escopo_17_3 Escopo17_3 = new SOEF_CLASS.Escopo_17_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                SOEF_CLASS.Escopo_Valor_Comum EscopoVlrComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                //Verifica se está cadastrando ou alterando o registro
+                // AcaoTela = "N";
+                if (AcaoTela == "N")
+                {
+                    int retornoInsert = Escopo17_3.gravaEscopo_17_3(ppciCompleto, aprovBombeiros, instalHidrantes, instalSprinklers, instalExtintores, instalAlarmeI, instalIluminacaoEmerg, instalSinalizacaoEmerg, instalArCompr, instalAguaPotavel, instalAguaIndustrial, instalAguaGelada, instalAguaQ, instalVaporConde, instalGas, memorialDesc, listaMateriais, indOutro, Obs, indPre);
+                    if (retornoInsert > 0)
+                    {
+                        //Verifica se já existe registro para essa solicitação. Se sim, atualiza com os valores deste escopo, se não, insere um novo registro
+                        DataTable dtBuscaEscopo17_3 = EscopoVlrComum.buscaEscopoValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                        if (dtBuscaEscopo17_3.Rows.Count > 0)
+                        {
+                            //Faz o update e grava os dados usados no Escopo 17_1
+                            int retornoInsert17_3 = EscopoVlrComum.atualizaEscopo_Valor_Comum_E17_3(memorialDesc, listaMateriais);
+                            if (retornoInsert17_3 <= 0)
+                            {
+                                sucesso = false;
+                            }
+                        }
+                        else
+                        {
+                            //Insere um novo registro na tabela Valor Comum
+                            int retornoInsert17_3 = EscopoVlrComum.gravaEscopo_Valor_Comum_E17_3(memorialDesc, listaMateriais);
+                            if (retornoInsert17_3 <= 0)
+                            {
+                                sucesso = false;
+                            }
+                        }
+                        AcaoTela = "C";
+                        btn17_3Excluir.Visible = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocorreu um erro na inserção do registro. Tente novamente mais tarde.");
+                    }
+                }
+                else
+                {
+                    //AcaoTela - ATUALIZAR
+                    DataTable dtBuscaEscopo17_3 = Escopo17_3.getEscopo_17_3();
+                    int retornoUpdate = 0;
+                    if (dtBuscaEscopo17_3.Rows.Count > 0)
+                    {
+                        //Atualiza o Escopo 17_3 se já estiver cadastrado
+                        retornoUpdate = Escopo17_3.updateEscopo_17_3(ppciCompleto, aprovBombeiros, instalHidrantes, instalSprinklers, instalExtintores, instalAlarmeI, instalIluminacaoEmerg, instalSinalizacaoEmerg, instalArCompr, instalAguaPotavel, instalAguaIndustrial, instalAguaGelada, instalAguaQ, instalVaporConde, instalGas, memorialDesc, listaMateriais, indOutro, Obs, indPre);
+                    }
+                    else
+                    {
+                        //Cadastra o Escopo 17_3 se ainda não existir
+                        retornoUpdate = Escopo17_3.gravaEscopo_17_3(ppciCompleto, aprovBombeiros, instalHidrantes, instalSprinklers, instalExtintores, instalAlarmeI, instalIluminacaoEmerg, instalSinalizacaoEmerg, instalArCompr, instalAguaPotavel, instalAguaIndustrial, instalAguaGelada, instalAguaQ, instalVaporConde, instalGas, memorialDesc, listaMateriais, indOutro, Obs, indPre);
+                    }
+                    if (retornoUpdate > 0)
+                    {
+                        DataTable dtBuscaVCEscopo17_3 = EscopoVlrComum.buscaEscopoValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                        if (dtBuscaVCEscopo17_3.Rows.Count > 0)
+                        {
+                            //Faz o update e grava os dados usados no Escopo 17_3
+                            int retornoInsert17_3 = EscopoVlrComum.atualizaEscopo_Valor_Comum_E17_3(memorialDesc, listaMateriais);
+                            if (retornoInsert17_3 <= 0)
+                            {
+                                sucesso = false;
+                            }
+                        }
+                        else
+                        {
+                            //Insere um novo registro na tabela Valor Comum
+                            int retornoInsert17_3 = EscopoVlrComum.gravaEscopo_Valor_Comum_E17_3(memorialDesc, listaMateriais);
+                            if (retornoInsert17_3 <= 0)
+                            {
+                                sucesso = false;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocorreu um erro na atualização do registro. Tente novamente mais tarde.");
+                    }
+                }
+                //Verifica se ocorreu erro durante o processo de inserção no ESCOPO 17_3 e VALOR COMUM
+                if (sucesso)
+                {
+                    MessageBox.Show("Registro inserido/alterado com sucesso!");
+                    btn17_3Excluir.Visible = true;
+                    listaEscopo17_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    //Muda o STATUS da AçãoTela p/ EDIÇÂO
+                    AcaoTela = "C";
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro ao ao inserir/alterar o registro. Por favor tente novamente ou contate o administrador do sistema.");
+                }
+
+
+            }
+        }
+
+        private void btn17_3Excluir_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Deseja realmente excluir o Escopo 17_3 desta solicitação?", "SOEF", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                bool sucesso = true;
+                //Apaga os dados do Escopo 17_3
+                SOEF_CLASS.Escopo_17_3 Escopo17_3 = new SOEF_CLASS.Escopo_17_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                int retorno = Escopo17_3.deleteEscopo_17_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                if (retorno > 0)
+                {
+                    //Apaga (define como NULL) os campos comuns da tabela VALOR_COMUM
+                    SOEF_CLASS.Escopo_Valor_Comum EValorComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                    int retornoUpdate = 0;
+                    retornoUpdate = EValorComum.deleteEscopo_Valor_Comum_E17_3();
+                    if (retornoUpdate > 0)
+                    {
+                        //Verifica se todos os campos do registro são nulos, se sim, apaga o registro em definitivo
+                        bool DeletaRegistro = verificaRegistroValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                        if (DeletaRegistro)//True - Deleta o registro
+                        {
+                            int retornoDelete = EValorComum.deleteEscopoValorComum(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                            if (retornoDelete <= 0)
+                            {
+                                sucesso = false;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        sucesso = false;
+                    }
+                }
+                else
+                {
+                    sucesso = false;
+                }
+                if (sucesso)
+                {
+                    MessageBox.Show("Registro excluído com sucesso!");
+                    btn17_3Excluir.Visible = false;
+                    listaEscopo17_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 }
                 else
                 {
