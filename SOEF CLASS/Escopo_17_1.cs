@@ -133,9 +133,24 @@ namespace SOEF_CLASS
             {
                 DataTable dt = new DataTable();
                 string sql;
-                sql = "SELECT * FROM [DOM_SOLIC_ORC_ESCOPO_17_1] ";
-                sql += " WHERE [NUMERO_SOLICITACAO] = " + Numero + " ";
-                sql += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
+                //sql = "SELECT * FROM [DOM_SOLIC_ORC_ESCOPO_17_1] ";
+                sql = " SELECT E17_1.[NUMERO_SOLICITACAO], ";
+                sql += " E17_1.[REVISAO_SOLICITACAO], ";
+                sql += " E17_1.[IND_SUBSTACAO_BLINDADA], ";
+                sql += " E17_1.[IND_QUADRO_GER_BAIXA_TENSAO], ";
+                sql += " E17_1.[IND_CONJ_CORREC_FATOR_POT], ";
+                sql += " E17_1.[IND_PAINEL_CONT_MOTORES], ";
+                sql += " E17_1.[IND_QUADRO_DISTRIB_ILUMINACAO], ";
+                sql += " E17_1.[IND_PAINEL_SINOTICO], ";
+                sql += " E17_1.[IND_PAINEL_COMANDO_LOCAL], ";
+                sql += " DSOVC.[IND_MEMORIAL_DESCRITIVO], ";
+                sql += " E17_1.[IND_OUTRO], ";
+                sql += " E17_1.[OBSERVACOES] ";
+                sql += " FROM[DOM_SOLIC_ORC_ESCOPO_17_1] as E17_1 ";
+                sql += " INNER JOIN DOM_SOLIC_ORC_VALOR_COMUM as DSOVC ";
+                sql += " ON DSOVC.IND_MEMORIAL_DESCRITIVO = E17_1.IND_MEMORIAL_DESCRITIVO ";
+                sql += " WHERE E17_1.[NUMERO_SOLICITACAO] = " + Numero + " ";
+                sql += " AND E17_1.[REVISAO_SOLICITACAO] = '" + Revisao + "' ";
                 dt = sqlce.selectListaSOF(sql, "DOM_SOLIC_ORC_ESCOPO_17_1");
                 return dt;
             }

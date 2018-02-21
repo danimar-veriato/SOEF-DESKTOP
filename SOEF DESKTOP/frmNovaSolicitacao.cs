@@ -3523,7 +3523,7 @@ namespace ORCAMENTOS_FOCKINK
                             }
                             else
                             {
-                                radio17_3AprovBombN.Checked = true;
+                                radio17_3AprovBombN.Checked = false;
                             }
                             //Desativa os checkboxes 
                             check17_3InstalHidrante.Enabled = false;
@@ -3547,7 +3547,7 @@ namespace ORCAMENTOS_FOCKINK
                         }
                         else
                         {
-                            check17_3InstalSprinklers.Checked = true;
+                            check17_3InstalSprinklers.Checked = false;
                         }
                         if (dr["IND_INSTAL_EXTINTORES"].ToString() == "S")
                         {
@@ -3555,7 +3555,7 @@ namespace ORCAMENTOS_FOCKINK
                         }
                         else
                         {
-                            check17_3InstalExtintores.Checked = true;
+                            check17_3InstalExtintores.Checked = false;
                         }
                         if (dr["IND_INSTAL_ALARME_INCENDIO"].ToString() == "S")
                         {
@@ -3563,7 +3563,7 @@ namespace ORCAMENTOS_FOCKINK
                         }
                         else
                         {
-                            check17_3InstalAlarme.Checked = true;
+                            check17_3InstalAlarme.Checked = false;
                         }
                         if (dr["IND_INSTAL_ILUMINACAO_EMERG"].ToString() == "S")
                         {
@@ -3571,7 +3571,7 @@ namespace ORCAMENTOS_FOCKINK
                         }
                         else
                         {
-                            check17_3InstalacaoEmergencia.Checked = true;
+                            check17_3InstalacaoEmergencia.Checked = false;
                         }
                         if (dr["IND_INSTAL_SINALIZACAO_EMERG"].ToString() == "S")
                         {
@@ -3579,7 +3579,7 @@ namespace ORCAMENTOS_FOCKINK
                         }
                         else
                         {
-                            check17_3SinalEmergencia.Checked = true;
+                            check17_3SinalEmergencia.Checked = false;
                         }
                         if (dr["IND_INSTAL_AR_COMPRIMIDO"].ToString() == "S")
                         {
@@ -3587,7 +3587,7 @@ namespace ORCAMENTOS_FOCKINK
                         }
                         else
                         {
-                            check17_3InstalacaoArComp.Checked = true;
+                            check17_3InstalacaoArComp.Checked = false;
                         }
                         if (dr["IND_INSTAL_AGUA_POTAVEL"].ToString() == "S")
                         {
@@ -3595,7 +3595,7 @@ namespace ORCAMENTOS_FOCKINK
                         }
                         else
                         {
-                            check17_3AguaPotavel.Checked = true;
+                            check17_3AguaPotavel.Checked = false;
                         }
                         if (dr["IND_INSTAL_AGUA_INDUSTRIAL"].ToString() == "S")
                         {
@@ -3603,7 +3603,7 @@ namespace ORCAMENTOS_FOCKINK
                         }
                         else
                         {
-                            check17_3AguaIndustrial.Checked = true;
+                            check17_3AguaIndustrial.Checked = false;
                         }
                         if (dr["IND_INSTAL_AGUA_GELADA"].ToString() == "S")
                         {
@@ -3611,7 +3611,7 @@ namespace ORCAMENTOS_FOCKINK
                         }
                         else
                         {
-                            check17_3InstalacaoAguaG.Checked = true;
+                            check17_3InstalacaoAguaG.Checked = false;
                         }
                         if (dr["IND_INSTAL_AGUA_QUENTE"].ToString() == "S")
                         {
@@ -3619,7 +3619,7 @@ namespace ORCAMENTOS_FOCKINK
                         }
                         else
                         {
-                            check17_3AguaQ.Checked = true;
+                            check17_3AguaQ.Checked = false;
                         }
                         if (dr["IND_INSTAL_VAPOR_CONDENSADO"].ToString() == "S")
                         {
@@ -3627,7 +3627,7 @@ namespace ORCAMENTOS_FOCKINK
                         }
                         else
                         {
-                            check17_3VaporCondensado.Checked = true;
+                            check17_3VaporCondensado.Checked = false;
                         }
                         if (dr["IND_INSTAL_GAS"].ToString() == "S")
                         {
@@ -3635,7 +3635,7 @@ namespace ORCAMENTOS_FOCKINK
                         }
                         else
                         {
-                            check17_3InstaGas.Checked = true;
+                            check17_3InstaGas.Checked = false;
                         }
                         if (dr["IND_MEMORIAL_DESCRITIVO"].ToString() == "S")
                         {
@@ -3643,7 +3643,7 @@ namespace ORCAMENTOS_FOCKINK
                         }
                         else
                         {
-                            check17_3MemDesc.Checked = true;
+                            check17_3MemDesc.Checked = false;
                         }
                         if (dr["IND_LISTA_MATERIAIS"].ToString() == "S")
                         {
@@ -3651,7 +3651,7 @@ namespace ORCAMENTOS_FOCKINK
                         }
                         else
                         {
-                            check17_3ListaMateriais.Checked = true;
+                            check17_3ListaMateriais.Checked = false;
                         }
                         if (dr["IND_OUTRO"].ToString() == "S")
                         {
@@ -3659,8 +3659,9 @@ namespace ORCAMENTOS_FOCKINK
                         }
                         else
                         {
-                            check17_3Outro.Checked = true;
+                            check17_3Outro.Checked = false;
                         }
+                        txt17_3Obs.Text = dr["OBSERVACOES"].ToString();
                     }   
                     btn17_3Excluir.Visible = true;
                 }
@@ -4039,6 +4040,7 @@ namespace ORCAMENTOS_FOCKINK
                 throw;
             }
         }
+
 
         /// <summary>
         /// Função que verifica os escopos que já estão preenchidos
@@ -8585,6 +8587,38 @@ namespace ORCAMENTOS_FOCKINK
         }
 
 
+        /// <summary>
+        /// Habilita os Escopos 17_1, 17_2, 17_3, 17_4 e 17_5 caso tenha sido cadastrado as Informações Gerais do Escopo
+        /// </summary>
+        protected void verInformacoesGerais17()
+        {
+            SOEF_CLASS.Escopo_05 Escopo_05 = new SOEF_CLASS.Escopo_05(this.numero_solic.ToString(), this.NumRevisaoSolic);
+            DataTable dtE5 = Escopo_05.getEscopo_05();
+            if (dtE5.Rows.Count <= 0)
+            {
+                //Escopo 05_1
+                btn5_1GravaPotencia.Enabled = false;
+                btn05_1Salvar.Enabled = false;
+                //Escopo 05_2
+                btn5_2GravaPotencia.Enabled = false;
+                btn5_2Salvar.Enabled = false;
+                //Escopo 05_3
+                btn5_3Salvar.Enabled = false;
+            }
+            else
+            {
+                //Escopo 05_1
+                btn5_1GravaPotencia.Enabled = true;
+                btn05_1Salvar.Enabled = true;
+                //Escopo 05_2
+                btn5_2GravaPotencia.Enabled = true;
+                btn5_2Salvar.Enabled = true;
+                //Escopo 05_3
+                btn5_3Salvar.Enabled = true;
+            }
+        }
+
+
         private void tabE5_Selected(object sender, TabControlEventArgs e)
         {
             if(tabE5.SelectedTab.Name == "tabPE5_1")
@@ -10601,6 +10635,14 @@ namespace ORCAMENTOS_FOCKINK
                 if (check17_3PPCI.Checked)
                 {
                     ppciCompleto = "S";
+                    if (radio17_3AprovBombS.Checked)
+                    {
+                        aprovBombeiros = "S";
+                    }
+                    else
+                    {
+                        aprovBombeiros = "N";
+                    }
                 }
                 else
                 {
@@ -10735,6 +10777,7 @@ namespace ORCAMENTOS_FOCKINK
                     listaMateriais = "N";
                 }
 
+                Obs = txt17_3Obs.Text;
 
                 //Inserção dos dados no banco
                 bool sucesso = true;
@@ -10742,7 +10785,7 @@ namespace ORCAMENTOS_FOCKINK
                 SOEF_CLASS.Escopo_17_3 Escopo17_3 = new SOEF_CLASS.Escopo_17_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 SOEF_CLASS.Escopo_Valor_Comum EscopoVlrComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 //Verifica se está cadastrando ou alterando o registro
-                // AcaoTela = "N";
+              //  AcaoTela = "N";
                 if (AcaoTela == "N")
                 {
                     int retornoInsert = Escopo17_3.gravaEscopo_17_3(ppciCompleto, aprovBombeiros, instalHidrantes, instalSprinklers, instalExtintores, instalAlarmeI, instalIluminacaoEmerg, instalSinalizacaoEmerg, instalArCompr, instalAguaPotavel, instalAguaIndustrial, instalAguaGelada, instalAguaQ, instalVaporConde, instalGas, memorialDesc, listaMateriais, indOutro, Obs, indPre);

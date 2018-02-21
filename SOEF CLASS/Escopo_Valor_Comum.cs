@@ -1404,11 +1404,11 @@ namespace SOEF_CLASS
                 }
                 if (string.IsNullOrEmpty(pListaMateriais))
                 {
-                    query += " SET [IND_LISTA_MATERIAIS] = NULL, ";
+                    query += " [IND_LISTA_MATERIAIS] = NULL ";
                 }
                 else
                 {
-                    query += " SET [IND_LISTA_MATERIAIS] = '" + pListaMateriais + "', ";
+                    query += " [IND_LISTA_MATERIAIS] = '" + pListaMateriais + "' ";
                 }
                 query += " WHERE [NUMERO_SOLICITACAO] = " + Numero + "";
                 query += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
