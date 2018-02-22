@@ -160,9 +160,23 @@ namespace SOEF_CLASS
             {
                 DataTable dt = new DataTable();
                 string sql;
-                sql = "SELECT * FROM [DOM_SOLIC_ORC_ESCOPO_05_1] ";
-                sql += " WHERE [NUMERO_SOLICITACAO] = " + Numero + " ";
-                sql += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
+                sql = " SELECT E05_1.[NUMERO_SOLICITACAO], ";
+                sql += "    E05_1.[REVISAO_SOLICITACAO],";
+                sql += "    E05_1.[TENSAO_PRIMARIA],";
+                sql += "    E05_1.[TENSAO_SECUNDARIA],";
+                sql += "    E05_1.[IND_POTENCIA_INFORM_DEF],";
+                sql += "    E05_1.[IND_LISTA_CARGAS],";
+                sql += "    E05_1.[IND_INVOLUCRO_PROTEC],";
+                sql += "    E05_1.[OBSERVACOES],";
+                sql += "    E05_1.[IND_PREENCHIDO],";
+                sql += "    DSOVC.[TIPO_PINTURA],";
+                sql += "    E05_1.[DESC_OUTRA_TENSAO_PRIM],";
+                sql += "    E05_1.[DESC_OUTRA_TENSAO_SECUN]";
+                sql += " FROM [DOM_SOLIC_ORC_ESCOPO_05_1] as E05_1";
+                sql += " INNER JOIN DOM_SOLIC_ORC_VALOR_COMUM as DSOVC";
+                sql += " ON DSOVC.[TIPO_PINTURA] = E05_1.[TIPO_PINTURA_INVOLUCRO]";          
+                sql += " WHERE E05_1.[NUMERO_SOLICITACAO] = " + Numero + " ";
+                sql += " AND E05_1.[REVISAO_SOLICITACAO] = '" + Revisao + "' ";
                 dt = sqlce.selectListaSOF(sql, "DOM_SOLIC_ORC_ESCOPO_05_1");
                 return dt;
             }

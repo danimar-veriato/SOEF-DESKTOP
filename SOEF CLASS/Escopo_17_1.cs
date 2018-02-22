@@ -133,7 +133,6 @@ namespace SOEF_CLASS
             {
                 DataTable dt = new DataTable();
                 string sql;
-                //sql = "SELECT * FROM [DOM_SOLIC_ORC_ESCOPO_17_1] ";
                 sql = " SELECT E17_1.[NUMERO_SOLICITACAO], ";
                 sql += " E17_1.[REVISAO_SOLICITACAO], ";
                 sql += " E17_1.[IND_SUBSTACAO_BLINDADA], ";
@@ -146,7 +145,7 @@ namespace SOEF_CLASS
                 sql += " DSOVC.[IND_MEMORIAL_DESCRITIVO], ";
                 sql += " E17_1.[IND_OUTRO], ";
                 sql += " E17_1.[OBSERVACOES] ";
-                sql += " FROM[DOM_SOLIC_ORC_ESCOPO_17_1] as E17_1 ";
+                sql += " FROM [DOM_SOLIC_ORC_ESCOPO_17_1] as E17_1 ";
                 sql += " INNER JOIN DOM_SOLIC_ORC_VALOR_COMUM as DSOVC ";
                 sql += " ON DSOVC.IND_MEMORIAL_DESCRITIVO = E17_1.IND_MEMORIAL_DESCRITIVO ";
                 sql += " WHERE E17_1.[NUMERO_SOLICITACAO] = " + Numero + " ";

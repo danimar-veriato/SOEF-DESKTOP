@@ -113,9 +113,18 @@ namespace SOEF_CLASS
             {
                 DataTable dt = new DataTable();
                 string sql;
-                sql = "SELECT * FROM [DOM_SOLIC_ORC_ESCOPO_05] ";
-                sql += " WHERE [NUMERO_SOLICITACAO] = " + Numero + " ";
-                sql += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
+                sql = " SELECT E05.[NUMERO_SOLICITACAO], ";
+                sql += " E05.[REVISAO_SOLICITACAO],";
+                sql += " DSOVC.[FREQUENCIA_HZ], ";
+                sql += " DSOVC.[DADOS_AMBIENTAIS], ";
+                sql += " E05.[OBSERVACOES], ";
+                sql += " E05.[IND_PREENCHIDO] ";
+                sql += " FROM[DOM_SOLIC_ORC_ESCOPO_05] as E05 ";
+                sql += " INNER JOIN DOM_SOLIC_ORC_VALOR_COMUM as DSOVC ";
+                sql += " ON DSOVC.[FREQUENCIA_HZ] = E05.[FREQUENCIA_TRANSF] " ;
+                sql += " AND DSOVC.[DADOS_AMBIENTAIS] = E05.[DADOS_AMBIENTAIS] ";
+                sql += " WHERE E05.[NUMERO_SOLICITACAO] = " + Numero + " ";
+                sql += " AND E05.[REVISAO_SOLICITACAO] = '" + Revisao + "' ";
                 dt = sqlce.selectListaSOF(sql, "DOM_SOLIC_ORC_ESCOPO_05");
                 return dt;
             }

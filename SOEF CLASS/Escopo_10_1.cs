@@ -157,7 +157,7 @@ namespace SOEF_CLASS
                 sqlce.closeConnection();
             }
         }
-        
+
 
         /// <summary>
         /// Busca os dados do Escopo 10_1
@@ -171,9 +171,34 @@ namespace SOEF_CLASS
             {
                 DataTable dt = new DataTable();
                 string sql;
-                sql = "SELECT * FROM [DOM_SOLIC_ORC_ESCOPO_10_1] ";
-                sql += " WHERE [NUMERO_SOLICITACAO] = " + Numero + " ";
-                sql += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
+                sql = " SELECT E10_1.[NUMERO_SOLICITACAO], ";
+                sql += "   E10_1.[REVISAO_SOLICITACAO], ";
+                sql += "   DSOVC.[TENSAO_TRIFASICA_BT], ";
+                sql += "   DSOVC.[FREQUENCIA_HZ] , ";
+                sql += "   DSOVC.[OUTRA_FREQUENCIA], ";
+                sql += "   DSOVC.[DADOS_AMBIENTAIS], ";
+                sql += "   DSOVC.[NORMATIVA_MAPA], ";
+                sql += "   DSOVC.[TIPO_PRODUTO], ";
+                sql += "   DSOVC.[OUTRO_PRODUTO], ";
+                sql += "   E10_1.[UMIDADE_PRODUTO], ";
+                sql += "   E10_1.[TIPO_AERACAO], ";
+                sql += "   E10_1.[TIPO_INSTALACAO], ";
+                sql += "   E10_1.[MATERIAL_TAMPA_CANALETA], ";
+                sql += "   E10_1.[TIPO_TAMPA_CANALETA], ";
+                sql += "   E10_1.[MATERIAL_CASA_MATA], ";
+                sql += "   E10_1.[OBSERVACOES], ";
+                sql += "   E10_1.[IND_PREENCHIDO] ";
+                sql += " FROM [DOM_SOLIC_ORC_ESCOPO_10_1] as E10_1 ";
+                sql += " INNER JOIN DOM_SOLIC_ORC_VALOR_COMUM as DSOVC ";
+                sql += " ON DSOVC.[TENSAO_TRIFASICA_BT] = E10_1.[TENSAO_TRIFASICA] ";
+                sql += " AND DSOVC.[FREQUENCIA_HZ] = E10_1.[FREQUENCIA] ";
+                sql += " AND DSOVC.[OUTRA_FREQUENCIA] = E10_1.[DESC_OUTRA_FREQUENCIA] ";
+                sql += " AND DSOVC.[DADOS_AMBIENTAIS] = E10_1.[DADOS_AMBIENTAIS] ";
+                sql += " AND DSOVC.[NORMATIVA_MAPA] = E10_1.[IND_NORMATIVA_MAPA] ";
+                sql += " AND DSOVC.[TIPO_PRODUTO] = E10_1.[TIPO_PRODUTO] ";
+                sql += " AND DSOVC.[OUTRO_PRODUTO] = E10_1.[DESC_OUTRO_PRODUTO] ";
+                sql += " WHERE E10_1.[NUMERO_SOLICITACAO] = " + Numero + " ";
+                sql += " AND E10_1.[REVISAO_SOLICITACAO] = '" + Revisao + "' ";
                 dt = sqlce.selectListaSOF(sql, "DOM_SOLIC_ORC_ESCOPO_10_1");
                 return dt;
             }

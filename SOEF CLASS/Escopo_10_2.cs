@@ -180,9 +180,28 @@ namespace SOEF_CLASS
             {
                 DataTable dt = new DataTable();
                 string sql;
-                sql = "SELECT * FROM [DOM_SOLIC_ORC_ESCOPO_10_2] ";
-                sql += " WHERE [NUMERO_SOLICITACAO] = " + Numero + " ";
-                sql += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
+                sql = " SELECT E10_2.[NUMERO_SOLICITACAO], ";
+                sql += "   E10_2.[REVISAO_SOLICITACAO], ";
+                sql += "   DSOVC.[DADOS_AMBIENTAIS], ";
+                sql += "   DSOVC.[TIPO_PRODUTO], ";
+                sql += "   DSOVC.[OUTRO_PRODUTO], ";
+                sql += "   E10_2.[IND_INSTAL_SILO], ";
+                sql += "   E10_2.[IND_INSTAL_ARMAZEM], ";
+                sql += "   E10_2.[CAPACIDADE_SILO], ";
+                sql += "   E10_2.[IND_SUPORTE_PENDULO], ";
+                sql += "   E10_2.[CAPACIDADE_ARMAZEM], ";
+                sql += "   E10_2.[QTDE_TRANSPORTADOR], ";
+                sql += "   E10_2.[OBSERVACOES], ";
+                sql += "   E10_2.[IND_PREENCHIDO], ";
+                sql += "   E10_2.[CARACT_ESPALHADOR_ESP_SIL], ";
+                sql += "   E10_2.[CARACT_ESPALHADOR_ESP_ARM] ";
+                sql += " FROM[DOM_SOLIC_ORC_ESCOPO_10_2] as E10_2 ";
+                sql += " INNER JOIN DOM_SOLIC_ORC_VALOR_COMUM as DSOVC ";
+                sql += " ON DSOVC.[DADOS_AMBIENTAIS] = E10_2.[DADOS_AMBIENTAIS] ";
+                sql += " AND DSOVC.[TIPO_PRODUTO] = E10_2.[TIPO_PRODUTO] ";
+                sql += " AND DSOVC.[OUTRO_PRODUTO] = E10_2.[DESC_OUTRO_PRODUTO] ";
+                sql += " WHERE E10_2.[NUMERO_SOLICITACAO] = " + Numero + " ";
+                sql += " AND E10_2.[REVISAO_SOLICITACAO] = '" + Revisao + "' ";
                 dt = sqlce.selectListaSOF(sql, "DOM_SOLIC_ORC_ESCOPO_10_2");
                 return dt;
             }

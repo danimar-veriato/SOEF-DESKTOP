@@ -2092,26 +2092,26 @@ namespace ORCAMENTOS_FOCKINK
                 {
                     foreach (DataRow dr in dt.Rows)
                     {
-                        combo01Tensao.SelectedIndex = Convert.ToInt32(dr["TENSAO_MEDIA"].ToString());
+                        combo01Tensao.SelectedIndex = Convert.ToInt32(dr["TENSAO_DISTRIBUICAO"].ToString());
                         if (combo01Tensao.SelectedIndex == 4)
                         {
                             txt01OutraTensao.Enabled = true;
-                            txt01OutraTensao.Text = dr["DESC_OUTRA_TENSAO"].ToString();
+                            txt01OutraTensao.Text = dr["OUTRA_TENSAO_DISTRIB"].ToString();
                         }
                         else
                         {
                             txt01OutraTensao.Enabled = false;
                             txt01OutraTensao.Text = "";
                         }
-                        if (dr["IND_TIPO_INSTALACAO"].ToString() == "A")
+                        if (dr["IND_INSTAL_ABRIG_TEMPO"].ToString() == "A")
                         {
                             combo01Instalacao.SelectedIndex = 1;
                         }
-                        else if (dr["IND_TIPO_INSTALACAO"].ToString() == "T")
+                        else if (dr["IND_INSTAL_ABRIG_TEMPO"].ToString() == "T")
                         {
                             combo01Instalacao.SelectedIndex = 2;
                         }
-                        else if (dr["IND_TIPO_INSTALACAO"].ToString() == "M")
+                        else if (dr["IND_INSTAL_ABRIG_TEMPO"].ToString() == "M")
                         {
                             combo01Instalacao.SelectedIndex = 3;
                         }
@@ -2156,11 +2156,11 @@ namespace ORCAMENTOS_FOCKINK
                             txt01Obs.Text = "";
                         }
 
-                        combo01Frequencia.SelectedIndex = Convert.ToInt32(dr["FREQUENCIA"].ToString());
-                        if (dr["FREQUENCIA"].ToString() == "3")
+                        combo01Frequencia.SelectedIndex = Convert.ToInt32(dr["FREQUENCIA_HZ"].ToString());
+                        if (dr["FREQUENCIA_HZ"].ToString() == "3")
                         {
                             txt01OutraFrequencia.Enabled = true;
-                            txt01OutraFrequencia.Text = dr["DESC_OUTRA_FREQUENCIA"].ToString();
+                            txt01OutraFrequencia.Text = dr["OUTRA_FREQUENCIA"].ToString();
                         }
 
                         if (dr["DADOS_AMBIENTAIS"].ToString() == "U")
@@ -2236,7 +2236,7 @@ namespace ORCAMENTOS_FOCKINK
                 {
                     foreach (DataRow dr in dt.Rows)
                     {
-                        combo05Freq.SelectedIndex = Convert.ToInt32(dr["FREQUENCIA_TRANSF"].ToString());
+                        combo05Freq.SelectedIndex = Convert.ToInt32(dr["FREQUENCIA_HZ"].ToString());
                         if (dr["DADOS_AMBIENTAIS"].ToString() == "U")
                         {
                             combo05DadosAmbientais.SelectedIndex = 1;
@@ -2330,15 +2330,15 @@ namespace ORCAMENTOS_FOCKINK
                         {
                             radio5_1InProtecaoS.Checked = true;
                             combo5_1Pintura.Enabled = true;   
-                            if (dr["TIPO_PINTURA_INVOLUCRO"].ToString() == "R")
+                            if (dr["TIPO_PINTURA"].ToString() == "R")
                             {
                                 combo5_1Pintura.SelectedIndex = 1;
                             }
-                            else if (dr["TIPO_PINTURA_INVOLUCRO"].ToString() == "M")
+                            else if (dr["TIPO_PINTURA"].ToString() == "M")
                             {
                                 combo5_1Pintura.SelectedIndex = 2;
                             }
-                            else if (dr["TIPO_PINTURA_INVOLUCRO"].ToString() == "E")
+                            else if (dr["TIPO_PINTURA"].ToString() == "E")
                             {
                                 combo5_1Pintura.SelectedIndex = 3;
                             }
@@ -2473,15 +2473,15 @@ namespace ORCAMENTOS_FOCKINK
                             //Exige Pintura Meio Isolante
                             label172.Visible = true;
                             combo5_2Pintura.Visible = true;
-                            if (dr["TIPO_PINTURA_MEIO_ISOLANTE"].ToString() == "R")
+                            if (dr["TIPO_PINTURA"].ToString() == "R")
                             {
                                 combo5_2Pintura.SelectedIndex = 1;
                             }
-                            else if (dr["TIPO_PINTURA_MEIO_ISOLANTE"].ToString() == "M")
+                            else if (dr["TIPO_PINTURA"].ToString() == "M")
                             {
                                 combo5_2Pintura.SelectedIndex = 2;
                             }
-                            else if (dr["TIPO_PINTURA_MEIO_ISOLANTE"].ToString() == "E")
+                            else if (dr["TIPO_PINTURA"].ToString() == "E")
                             {
                                 combo5_2Pintura.SelectedIndex = 3;
                             }
@@ -2570,11 +2570,11 @@ namespace ORCAMENTOS_FOCKINK
                 {
                     foreach(DataRow dr in dt.Rows)
                     {
-                        comboE10_1TensaoTri.SelectedIndex = Convert.ToInt32(dr["TENSAO_TRIFASICA"].ToString());
-                        comboE10_1Freq.SelectedIndex = Convert.ToInt32(dr["FREQUENCIA"].ToString());
-                        if (dr["FREQUENCIA"].ToString() == "3")
+                        comboE10_1TensaoTri.SelectedIndex = Convert.ToInt32(dr["TENSAO_TRIFASICA_BT"].ToString());
+                        comboE10_1Freq.SelectedIndex = Convert.ToInt32(dr["FREQUENCIA_HZ"].ToString());
+                        if (dr["FREQUENCIA_HZ"].ToString() == "3")
                         {
-                            txtE10_1OutraFreq.Text = dr["DESC_OUTRA_FREQUENCIA"].ToString();
+                            txtE10_1OutraFreq.Text = dr["OUTRA_FREQUENCIA"].ToString();
                         }
                         if(dr["DADOS_AMBIENTAIS"].ToString() == "U")
                         {
@@ -2593,7 +2593,7 @@ namespace ORCAMENTOS_FOCKINK
                             comboE10_1DadosAmbientais.SelectedIndex = 4;
                         }
 
-                        if(dr["IND_NORMATIVA_MAPA"].ToString() == "S")
+                        if(dr["NORMATIVA_MAPA"].ToString() == "S")
                         {
                             radioE10_1NormativaS.Checked = true;
                             radioE10_1NormativaN.Checked = false;
@@ -2623,7 +2623,7 @@ namespace ORCAMENTOS_FOCKINK
                         {
                             comboE10_1TipoProd.SelectedIndex = 5;
                             txtE10_1OutroProd.Enabled = true;
-                            txtE10_1OutroProd.Text = dr["DESC_OUTRO_PRODUTO"].ToString();
+                            txtE10_1OutroProd.Text = dr["OUTRO_PRODUTO"].ToString();
                         }
                         if (dr["UMIDADE_PRODUTO"].ToString() == "14")
                         {
@@ -2766,7 +2766,7 @@ namespace ORCAMENTOS_FOCKINK
                         {
                             combo10_2Produto.SelectedIndex = 5;
                             txt10_2OutroProd.Enabled = true;
-                            txt10_2OutroProd.Text = dr["DESC_OUTRO_PRODUTO"].ToString();
+                            txt10_2OutroProd.Text = dr["OUTRO_PRODUTO"].ToString();
                         }
                         else
                         {
@@ -2978,12 +2978,12 @@ namespace ORCAMENTOS_FOCKINK
                 {
                     foreach (DataRow dr in dt.Rows)
                     {
-                        combo10_3Tensao.SelectedIndex = Convert.ToInt32(dr["TENSAO_TRIFASICA"].ToString());
-                        combo10_3Freq.SelectedIndex = Convert.ToInt32(dr["FREQUENCIA"].ToString());
+                        combo10_3Tensao.SelectedIndex = Convert.ToInt32(dr["TENSAO_TRIFASICA_BT"].ToString());
+                        combo10_3Freq.SelectedIndex = Convert.ToInt32(dr["FREQUENCIA_HZ"].ToString());
                         if (combo10_3Freq.SelectedIndex == 3)
                         {
                             txt10_3OutraFreq.Enabled = true;
-                            txt10_3OutraFreq.Text = dr["DESC_OUTRA_FREQUENCIA"].ToString();
+                            txt10_3OutraFreq.Text = dr["OUTRA_FREQUENCIA"].ToString();
                         }
                         else
                         {
@@ -4393,7 +4393,7 @@ namespace ORCAMENTOS_FOCKINK
             if (tabNovaSolicitacao.SelectedTab.Name == "tabDefEscopo")
             {
                 ////Função que verifica os escopos existentes e ativa eles
-                verificaEscopos(this.numero_solic.ToString(), this.NumRevisaoSolic);
+               // verificaEscopos(this.numero_solic.ToString(), this.NumRevisaoSolic);
             }
 
             //Escopo 01
@@ -4559,7 +4559,7 @@ namespace ORCAMENTOS_FOCKINK
                         foreach(DataRow dr in dtEscopo10_1.Rows)
                         {
                             //Tensao Trifásica
-                            comboE10_1TensaoTri.SelectedIndex = Convert.ToInt32(dr["TENSAO_TRIFASICA"].ToString());
+                            comboE10_1TensaoTri.SelectedIndex = Convert.ToInt32(dr["TENSAO_TRIFASICA_BT"].ToString());
 
                             //Frequência
                             comboE10_1Freq.SelectedIndex = Convert.ToInt32(dr["FREQUENCIA_HZ"].ToString());

@@ -162,10 +162,34 @@ namespace SOEF_CLASS
             try
             {
                 DataTable dt = new DataTable();
-                string sql;
-                sql = "SELECT * FROM [DOM_SOLIC_ORC_ESCOPO_01] ";
-                sql += " WHERE [NUMERO_SOLICITACAO] = " + Numero + " ";
-                sql += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
+                string sql;          
+
+                sql = " SELECT E01.[NUMERO_SOLICITACAO], ";
+                sql += "   E01.[REVISAO_SOLICITACAO], ";
+                sql += "   DSOVC.[TENSAO_DISTRIBUICAO], ";
+                sql += "   DSOVC.[IND_INSTAL_ABRIG_TEMPO], ";
+                sql += "   E01.[IND_ENSAIO], ";
+                sql += "   DSOVC.[TIPO_PINTURA], ";
+                sql += "   E01.[OBSERVACOES], ";
+                sql += "   E01.[IND_PREENCHIDO], ";
+                sql += "   DSOVC.[FREQUENCIA_HZ], ";
+                sql += "   DSOVC.[OUTRA_FREQUENCIA], ";
+                sql += "   DSOVC.[DADOS_AMBIENTAIS], ";
+                sql += "   E01.[IND_DIAGRAMA_UNIFILAR], ";
+                sql += "   E01.[DESCRICAO_SOLUCAO], ";
+                sql += "   E01.[DESC_OUTRO_ENSAIO], ";
+                sql += "   DSOVC.[OUTRA_TENSAO_DISTRIB] ";
+                sql += " FROM [DOM_SOLIC_ORC_ESCOPO_01] AS E01 ";
+                sql += " INNER JOIN DOM_SOLIC_ORC_VALOR_COMUM AS DSOVC ";
+                sql += " ON DSOVC.[TENSAO_DISTRIBUICAO] = E01.[TENSAO_MEDIA] ";
+                sql += " AND DSOVC.[IND_INSTAL_ABRIG_TEMPO] = E01.[IND_TIPO_INSTALACAO] ";
+                sql += " AND DSOVC.[TIPO_PINTURA] = E01.[TIPO_PINTURA] ";
+                sql += " AND  DSOVC.[FREQUENCIA_HZ] = E01.[FREQUENCIA] ";
+                sql += " AND DSOVC.[OUTRA_FREQUENCIA] = E01.[DESC_OUTRA_FREQUENCIA] ";
+                sql += " AND DSOVC.[DADOS_AMBIENTAIS] = E01.[DADOS_AMBIENTAIS] ";
+                sql += " AND DSOVC.[OUTRA_TENSAO_DISTRIB] = E01.[DESC_OUTRA_TENSAO] ";
+                sql += " WHERE E01.[NUMERO_SOLICITACAO] = " + Numero + " ";
+                sql += " AND E01.[REVISAO_SOLICITACAO] = '" + Revisao + "' ";
                 dt = sqlce.selectListaSOF(sql, "DOM_SOLIC_ORC_ESCOPO_01");
                 return dt;
             }

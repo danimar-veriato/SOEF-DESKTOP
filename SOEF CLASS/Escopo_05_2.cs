@@ -204,9 +204,28 @@ namespace SOEF_CLASS
             {
                 DataTable dt = new DataTable();
                 string sql;
-                sql = "SELECT * FROM [DOM_SOLIC_ORC_ESCOPO_05_2] ";
-                sql += " WHERE [NUMERO_SOLICITACAO] = " + Numero + " ";
-                sql += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
+                sql = " SELECT E05_2.[NUMERO_SOLICITACAO], ";
+                sql += "    E05_2.[REVISAO_SOLICITACAO], ";
+                sql += "    E05_2.[TENSAO_PRIMARIA], ";
+                sql += "    E05_2.[TENSAO_SECUNDARIA], ";
+                sql += "    E05_2.[IND_POTENCIA_INFORM_DEF], ";
+                sql += "    E05_2.[IND_LISTA_CARGAS], ";
+                sql += "    E05_2.[MEIO_ISOLANTE], ";
+                sql += "    E05_2.[BUCHAS_MT], ";
+                sql += "    E05_2.[BUCHAS_BT], ";
+                sql += "    E05_2.[OBSERVACOES], ";
+                sql += "    DSOVC.[TIPO_PINTURA], ";
+                sql += "    E05_2.[DESC_OUTRA_TENSAO_PRIM], ";
+                sql += "    E05_2.[DESC_OUTRA_TENSAO_SECUN], ";
+                sql += "    E05_2.[DESC_OUTRA_BUCHA_MT], ";
+                sql += "    E05_2.[DESC_OUTRA_BUCHA_BT], ";
+                sql += "    E05_2.[DESC_OUTRO_MEIO_ISOLANTE], ";
+                sql += "    E05_2.[IND_PREENCHIDO] ";
+                sql += " FROM [DOM_SOLIC_ORC_ESCOPO_05_2] as E05_2 ";
+                sql += " INNER JOIN DOM_SOLIC_ORC_VALOR_COMUM as DSOVC ";
+                sql += " ON DSOVC.[TIPO_PINTURA] = E05_2.[TIPO_PINTURA_MEIO_ISOLANTE] ";
+                sql += " WHERE E05_2.[NUMERO_SOLICITACAO] = " + Numero + " ";
+                sql += " AND E05_2.[REVISAO_SOLICITACAO] = '" + Revisao + "' ";
                 dt = sqlce.selectListaSOF(sql, "DOM_SOLIC_ORC_ESCOPO_05_2");
                 return dt;
             }

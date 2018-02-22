@@ -302,9 +302,23 @@ namespace SOEF_CLASS
             {
                 DataTable dt = new DataTable();
                 string sql;
-                sql = "SELECT * FROM [DOM_SOLIC_ORC_ESCOPO_10_3] ";
-                sql += " WHERE [NUMERO_SOLICITACAO] = " + Numero + " ";
-                sql += " AND [REVISAO_SOLICITACAO] = '" + Revisao + "' ";
+
+                sql = " SELECT E10_3.[NUMERO_SOLICITACAO], ";
+                sql += "   E10_3.[REVISAO_SOLICITACAO], ";
+                sql += "   DSOVC.[TENSAO_TRIFASICA_BT], ";
+                sql += "   DSOVC.[FREQUENCIA_HZ], ";
+                sql += "   DSOVC.[OUTRA_FREQUENCIA], ";
+                sql += "   DSOVC.[DADOS_AMBIENTAIS], ";
+                sql += "   E10_3.[OBSERVACOES], ";
+                sql += "   E10_3.[IND_PREENCHIDO] ";
+                sql += " FROM [DOM_SOLIC_ORC_ESCOPO_10_3] AS E10_3 ";
+                sql += " INNER JOIN DOM_SOLIC_ORC_VALOR_COMUM AS DSOVC ";
+                sql += " ON DSOVC.[DADOS_AMBIENTAIS] = E10_3.[DADOS_AMBIENTAIS] ";
+                sql += " AND DSOVC.[TENSAO_TRIFASICA_BT] = E10_3.[TENSAO_TRIFASICA] ";
+                sql += " AND DSOVC.[FREQUENCIA_HZ] = E10_3.[FREQUENCIA] ";
+                sql += " AND DSOVC.[OUTRA_FREQUENCIA] = E10_3.[DESC_OUTRA_FREQUENCIA]";
+                sql += " WHERE E10_3.[NUMERO_SOLICITACAO] = " + Numero + " ";
+                sql += " AND E10_3.[REVISAO_SOLICITACAO] = '" + Revisao + "' ";
                 dt = sqlce.selectListaSOF(sql, "DOM_SOLIC_ORC_ESCOPO_10_3");
                 return dt;
             }
