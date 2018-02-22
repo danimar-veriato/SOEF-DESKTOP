@@ -10,7 +10,6 @@ namespace SOEF_CLASS
 {
     public class Escopo_01 : Escopo
     {
-
         /// <summary>
         /// Construtor do Escopo 01
         /// </summary>
@@ -21,8 +20,7 @@ namespace SOEF_CLASS
             Numero = numSolicitacao;
             Revisao = revSolicitacao;
         }
-
-
+        
         //Métodos CRUD do Escopo
 
         /// <summary>
@@ -94,8 +92,7 @@ namespace SOEF_CLASS
                 sqlce.closeConnection();
             }
         }
-
-
+        
         /// <summary>
         /// Atualiza Escopo 01
         /// </summary>
@@ -147,8 +144,7 @@ namespace SOEF_CLASS
                 sqlce.closeConnection();
             }
         }
-
-        
+                
         /// <summary>
         /// Busca dados Escopo 01
         /// </summary>
@@ -198,8 +194,7 @@ namespace SOEF_CLASS
                 throw;
             }
         }
-
-
+        
         /// <summary>
         /// Deleta o Escopo 01
         /// </summary>
@@ -230,8 +225,6 @@ namespace SOEF_CLASS
             }
         }
 
-
-
-
+        
     }
 }

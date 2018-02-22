@@ -21,7 +21,6 @@ namespace SOEF_CLASS
             Revisao = revSolicitacao;
         }
         
-
         //CRUD Escopo 05_1
 
         /// <summary>
@@ -92,7 +91,6 @@ namespace SOEF_CLASS
             }
         }
 
-
         /// <summary>
         /// Atualiza os registros do Escopo 05_1
         /// </summary>
@@ -146,8 +144,7 @@ namespace SOEF_CLASS
                 sqlce.closeConnection();
             }
         }
-
-
+        
         /// <summary>
         /// Busca todos os dados do Escopo 05_1
         /// </summary>

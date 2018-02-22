@@ -70,8 +70,7 @@ namespace SOEF_CLASS
                 sqlce.closeConnection();
             }
         }
-
-
+        
         /// <summary>
         /// Método que busca a última sequência cadastrada
         /// </summary>
@@ -105,8 +104,7 @@ namespace SOEF_CLASS
             }
 
         }
-
-
+        
         public int getCabecalhoP(string pNumSolic, string pRevisao)
         {
             SqlCE sqlce = new SqlCE();
@@ -134,7 +132,6 @@ namespace SOEF_CLASS
             }
 
         }
-
 
         /// <summary>
         /// Busca os Registros do Escopo 20
@@ -171,7 +168,6 @@ namespace SOEF_CLASS
             //    sqlce.closeConnection();
             //}
         }
-
 
         /// <summary>
         /// Método que apaga um registro do Escopo 20

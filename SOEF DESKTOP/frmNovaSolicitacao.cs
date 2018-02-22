@@ -4393,7 +4393,7 @@ namespace ORCAMENTOS_FOCKINK
             if (tabNovaSolicitacao.SelectedTab.Name == "tabDefEscopo")
             {
                 ////Função que verifica os escopos existentes e ativa eles
-               // verificaEscopos(this.numero_solic.ToString(), this.NumRevisaoSolic);
+                verificaEscopos(this.numero_solic.ToString(), this.NumRevisaoSolic);
             }
 
             //Escopo 01
@@ -10926,6 +10926,68 @@ namespace ORCAMENTOS_FOCKINK
                 {
                     MessageBox.Show("Ocorreu um erro ao excluir o registro. Por favor, contate o suporte do sistema e tente novamente.");
                 }
+            }
+        }
+
+
+        private void btn17_4Salvar_Click(object sender, EventArgs e)
+        {
+            string erros = "";
+
+            if (!check17_4SistemaTermometria.Checked && !check17_4SistemaAeracao.Checked && !check17_4MemorialDesc.Checked && !check17_4Outro.Checked)
+            {
+                erros += "Pelo menos uma opção de projeto para eletrônica deve ser marcada.\n";
+            }
+
+            if (!string.IsNullOrEmpty(erros))
+            {
+                MessageBox.Show("Painel de erros:\n" + erros);
+            }
+            else
+            {
+                string SistTermometria = "";
+                string SistAeracao = "";
+                string MemDescritivo = "";
+                string Outro = "";
+                string Obs = "";
+                string indPre = "S";
+
+                if (check17_4SistemaTermometria.Checked)
+                {
+                    SistTermometria = "S";
+                }
+                else
+                {
+                    SistTermometria = "N";
+                }
+                if (check17_4SistemaAeracao.Checked)
+                {
+                    SistAeracao = "S";
+                }
+                else
+                {
+                    SistAeracao = "N";
+                }
+                if (check17_4MemorialDesc.Checked)
+                {
+                    MemDescritivo = "S";
+                }
+                else
+                {
+                    MemDescritivo = "N";
+                }
+                if (check17_4Outro.Checked)
+                {
+                    Outro = "S";
+                }
+                else
+                {
+                    Outro = "N";
+                }
+                Obs = txt17_4Obs.Text;
+
+                //Implementação do CRUD
+
             }
         }
     }

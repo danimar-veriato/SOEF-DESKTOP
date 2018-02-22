@@ -612,6 +612,15 @@
             this.txt17_3Obs = new System.Windows.Forms.TextBox();
             this.label198 = new System.Windows.Forms.Label();
             this.tab17_4 = new System.Windows.Forms.TabPage();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.check17_4Outro = new System.Windows.Forms.CheckBox();
+            this.btn17_4Excluir = new System.Windows.Forms.Button();
+            this.btn17_4Salvar = new System.Windows.Forms.Button();
+            this.check17_4SistemaAeracao = new System.Windows.Forms.CheckBox();
+            this.check17_4MemorialDesc = new System.Windows.Forms.CheckBox();
+            this.check17_4SistemaTermometria = new System.Windows.Forms.CheckBox();
+            this.txt17_4Obs = new System.Windows.Forms.TextBox();
+            this.label201 = new System.Windows.Forms.Label();
             this.tab17_5 = new System.Windows.Forms.TabPage();
             this.label231 = new System.Windows.Forms.Label();
             this.tabEscopo18 = new System.Windows.Forms.TabPage();
@@ -780,6 +789,8 @@
             this.groupBox9.SuspendLayout();
             this.tab17_3.SuspendLayout();
             this.groupBox10.SuspendLayout();
+            this.tab17_4.SuspendLayout();
+            this.groupBox11.SuspendLayout();
             this.tabEscopo18.SuspendLayout();
             this.tabEscopo18_1_2.SuspendLayout();
             this.tbpage18InfoG.SuspendLayout();
@@ -7302,11 +7313,109 @@
             // tab17_4
             // 
             this.tab17_4.BackColor = System.Drawing.SystemColors.Control;
+            this.tab17_4.Controls.Add(this.groupBox11);
             this.tab17_4.Location = new System.Drawing.Point(4, 22);
             this.tab17_4.Name = "tab17_4";
             this.tab17_4.Size = new System.Drawing.Size(993, 482);
             this.tab17_4.TabIndex = 5;
             this.tab17_4.Text = "17.4: Eletrônica";
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.check17_4Outro);
+            this.groupBox11.Controls.Add(this.btn17_4Excluir);
+            this.groupBox11.Controls.Add(this.btn17_4Salvar);
+            this.groupBox11.Controls.Add(this.check17_4SistemaAeracao);
+            this.groupBox11.Controls.Add(this.check17_4MemorialDesc);
+            this.groupBox11.Controls.Add(this.check17_4SistemaTermometria);
+            this.groupBox11.Controls.Add(this.txt17_4Obs);
+            this.groupBox11.Controls.Add(this.label201);
+            this.groupBox11.Location = new System.Drawing.Point(24, 24);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(906, 274);
+            this.groupBox11.TabIndex = 75;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "17.1: Eletrônica";
+            // 
+            // check17_4Outro
+            // 
+            this.check17_4Outro.AutoSize = true;
+            this.check17_4Outro.Location = new System.Drawing.Point(65, 83);
+            this.check17_4Outro.Name = "check17_4Outro";
+            this.check17_4Outro.Size = new System.Drawing.Size(55, 17);
+            this.check17_4Outro.TabIndex = 82;
+            this.check17_4Outro.Text = " Outro";
+            this.check17_4Outro.UseVisualStyleBackColor = true;
+            // 
+            // btn17_4Excluir
+            // 
+            this.btn17_4Excluir.Location = new System.Drawing.Point(459, 214);
+            this.btn17_4Excluir.Name = "btn17_4Excluir";
+            this.btn17_4Excluir.Size = new System.Drawing.Size(75, 23);
+            this.btn17_4Excluir.TabIndex = 16;
+            this.btn17_4Excluir.Text = "Excluir";
+            this.btn17_4Excluir.UseVisualStyleBackColor = true;
+            this.btn17_4Excluir.Visible = false;
+            // 
+            // btn17_4Salvar
+            // 
+            this.btn17_4Salvar.Location = new System.Drawing.Point(351, 214);
+            this.btn17_4Salvar.Name = "btn17_4Salvar";
+            this.btn17_4Salvar.Size = new System.Drawing.Size(75, 23);
+            this.btn17_4Salvar.TabIndex = 15;
+            this.btn17_4Salvar.Text = "Salvar";
+            this.btn17_4Salvar.UseVisualStyleBackColor = true;
+            this.btn17_4Salvar.Click += new System.EventHandler(this.btn17_4Salvar_Click);
+            // 
+            // check17_4SistemaAeracao
+            // 
+            this.check17_4SistemaAeracao.AutoSize = true;
+            this.check17_4SistemaAeracao.Location = new System.Drawing.Point(337, 43);
+            this.check17_4SistemaAeracao.Name = "check17_4SistemaAeracao";
+            this.check17_4SistemaAeracao.Size = new System.Drawing.Size(124, 17);
+            this.check17_4SistemaAeracao.TabIndex = 78;
+            this.check17_4SistemaAeracao.Text = " Sistema de Aeração";
+            this.check17_4SistemaAeracao.UseVisualStyleBackColor = true;
+            // 
+            // check17_4MemorialDesc
+            // 
+            this.check17_4MemorialDesc.AutoSize = true;
+            this.check17_4MemorialDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check17_4MemorialDesc.ForeColor = System.Drawing.Color.Green;
+            this.check17_4MemorialDesc.Location = new System.Drawing.Point(651, 43);
+            this.check17_4MemorialDesc.Name = "check17_4MemorialDesc";
+            this.check17_4MemorialDesc.Size = new System.Drawing.Size(141, 17);
+            this.check17_4MemorialDesc.TabIndex = 75;
+            this.check17_4MemorialDesc.Text = " Memorial Descritivo";
+            this.check17_4MemorialDesc.UseVisualStyleBackColor = true;
+            // 
+            // check17_4SistemaTermometria
+            // 
+            this.check17_4SistemaTermometria.AutoSize = true;
+            this.check17_4SistemaTermometria.Location = new System.Drawing.Point(65, 43);
+            this.check17_4SistemaTermometria.Name = "check17_4SistemaTermometria";
+            this.check17_4SistemaTermometria.Size = new System.Drawing.Size(139, 17);
+            this.check17_4SistemaTermometria.TabIndex = 74;
+            this.check17_4SistemaTermometria.Text = "Sistema de Termometria";
+            this.check17_4SistemaTermometria.UseVisualStyleBackColor = true;
+            // 
+            // txt17_4Obs
+            // 
+            this.txt17_4Obs.Location = new System.Drawing.Point(139, 121);
+            this.txt17_4Obs.MaxLength = 2000;
+            this.txt17_4Obs.Multiline = true;
+            this.txt17_4Obs.Name = "txt17_4Obs";
+            this.txt17_4Obs.Size = new System.Drawing.Size(653, 54);
+            this.txt17_4Obs.TabIndex = 10;
+            // 
+            // label201
+            // 
+            this.label201.AutoSize = true;
+            this.label201.Location = new System.Drawing.Point(47, 133);
+            this.label201.Name = "label201";
+            this.label201.Size = new System.Drawing.Size(73, 13);
+            this.label201.TabIndex = 6;
+            this.label201.Text = "Observações:";
             // 
             // tab17_5
             // 
@@ -8483,6 +8592,9 @@
             this.tab17_3.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
+            this.tab17_4.ResumeLayout(false);
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
             this.tabEscopo18.ResumeLayout(false);
             this.tabEscopo18.PerformLayout();
             this.tabEscopo18_1_2.ResumeLayout(false);
@@ -9203,5 +9315,14 @@
         private System.Windows.Forms.CheckBox check17_3PPCI;
         private System.Windows.Forms.TextBox txt17_3Obs;
         private System.Windows.Forms.Label label198;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.CheckBox check17_4Outro;
+        private System.Windows.Forms.Button btn17_4Excluir;
+        private System.Windows.Forms.Button btn17_4Salvar;
+        private System.Windows.Forms.CheckBox check17_4SistemaAeracao;
+        private System.Windows.Forms.CheckBox check17_4MemorialDesc;
+        private System.Windows.Forms.CheckBox check17_4SistemaTermometria;
+        private System.Windows.Forms.TextBox txt17_4Obs;
+        private System.Windows.Forms.Label label201;
     }
 }

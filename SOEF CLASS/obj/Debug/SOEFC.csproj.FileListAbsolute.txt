@@ -24,4 +24,3 @@ C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF CLASS\obj
 C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF CLASS\obj\Debug\SOEF CLASS.dll
 C:\Users\danim\OneDrive\Documents\Visual Studio 2017\SOEF-DESKTOP\SOEF CLASS\obj\Debug\SOEF CLASS.pdb
 C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF-DESKTOP\SOEF CLASS\obj\Debug\SOEFC.csproj.CoreCompileInputs.cache
-C:\Users\danimar\Documents\Visual Studio 2017\Projects\SOEF-DESKTOP\SOEF CLASS\obj\Debug\SOEFC.csprojResolveAssemblyReference.cache

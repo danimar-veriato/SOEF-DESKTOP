@@ -20,8 +20,7 @@ namespace SOEF_CLASS
             Numero = numSolicitacao;
             Revisao = revSolicitacao;
         }
-
-
+        
         //Métodos cadastro Renovadores de Ar
 
         /// <summary>
@@ -88,8 +87,7 @@ namespace SOEF_CLASS
                 sqlce.closeConnection();
             }
         }
-
-
+        
         /// <summary>
         /// Método que busca a última sequência cadastrada Renovadores de Ar
         /// </summary>
@@ -122,8 +120,7 @@ namespace SOEF_CLASS
                 throw;
             }
         }
-
-
+        
         /// <summary>
         /// Deleta um ou todos os registros da tabela de Renovadores de Ar
         /// </summary>
@@ -158,8 +155,7 @@ namespace SOEF_CLASS
                 sqlce.closeConnection();
             }
         }
-
-
+        
         /// <summary>
         /// Busca os Registros da Tabela de Renovadores de Ar
         /// </summary>
@@ -248,8 +244,7 @@ namespace SOEF_CLASS
                 sqlce.closeConnection();
             }
         }
-
-
+        
         /// <summary>
         /// Atualiza as informações Escopo 10_3
         /// </summary>
@@ -288,8 +283,7 @@ namespace SOEF_CLASS
                 sqlce.closeConnection();
             }
         }
-
-
+        
         /// <summary>
         /// Busca os dados do Escopo 10_3
         /// </summary>
@@ -327,8 +321,7 @@ namespace SOEF_CLASS
                 throw;
             }
         }
-
-
+        
         /// <summary>
         /// Apaga os registros do Escopo 10_3
         /// </summary>

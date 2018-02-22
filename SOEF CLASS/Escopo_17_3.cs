@@ -20,8 +20,7 @@ namespace SOEF_CLASS
             Numero = numSolicitacao;
             Revisao = revSolicitacao;
         }
-
-
+        
         //Métodos CRUD Escopo 17_3
 
         /// <summary>
@@ -103,8 +102,7 @@ namespace SOEF_CLASS
                 sqlce.closeConnection();
             }
         }
-
-
+        
         /// <summary>
         /// Atualiza os dados do Escopo 17_3
         /// </summary>
@@ -153,8 +151,7 @@ namespace SOEF_CLASS
                 sqlce.closeConnection();
             }
         }
-
-
+        
         /// <summary>
         /// Busca os dados do Escopo 17_3
         /// </summary>
