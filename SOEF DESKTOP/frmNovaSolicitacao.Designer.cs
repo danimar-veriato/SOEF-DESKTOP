@@ -720,6 +720,17 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.check17_5ListaIO = new System.Windows.Forms.CheckBox();
+            this.btn17_5Excluir = new System.Windows.Forms.Button();
+            this.btn17_5Salvar = new System.Windows.Forms.Button();
+            this.check17_5PainelRemota = new System.Windows.Forms.CheckBox();
+            this.check17_5MemorialDescritivo = new System.Windows.Forms.CheckBox();
+            this.check17_5PainelCLP = new System.Windows.Forms.CheckBox();
+            this.txt17_5Obs = new System.Windows.Forms.TextBox();
+            this.label202 = new System.Windows.Forms.Label();
+            this.check17_5Topologia = new System.Windows.Forms.CheckBox();
+            this.check17_5Outro = new System.Windows.Forms.CheckBox();
             this.tabNovaSolicitacao.SuspendLayout();
             this.tabCabecalho.SuspendLayout();
             this.tbCabecalho.SuspendLayout();
@@ -791,6 +802,7 @@
             this.groupBox10.SuspendLayout();
             this.tab17_4.SuspendLayout();
             this.groupBox11.SuspendLayout();
+            this.tab17_5.SuspendLayout();
             this.tabEscopo18.SuspendLayout();
             this.tabEscopo18_1_2.SuspendLayout();
             this.tbpage18InfoG.SuspendLayout();
@@ -808,6 +820,7 @@
             this.tabEscopo20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaEsc20)).BeginInit();
             this.groupBox5.SuspendLayout();
+            this.groupBox12.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabNovaSolicitacao
@@ -6611,7 +6624,7 @@
             this.check17_1Outro.Location = new System.Drawing.Point(651, 114);
             this.check17_1Outro.Name = "check17_1Outro";
             this.check17_1Outro.Size = new System.Drawing.Size(55, 17);
-            this.check17_1Outro.TabIndex = 82;
+            this.check17_1Outro.TabIndex = 9;
             this.check17_1Outro.Text = " Outro";
             this.check17_1Outro.UseVisualStyleBackColor = true;
             // 
@@ -6620,7 +6633,7 @@
             this.btn17_1Excluir.Location = new System.Drawing.Point(465, 261);
             this.btn17_1Excluir.Name = "btn17_1Excluir";
             this.btn17_1Excluir.Size = new System.Drawing.Size(75, 23);
-            this.btn17_1Excluir.TabIndex = 16;
+            this.btn17_1Excluir.TabIndex = 12;
             this.btn17_1Excluir.Text = "Excluir";
             this.btn17_1Excluir.UseVisualStyleBackColor = true;
             this.btn17_1Excluir.Visible = false;
@@ -6628,10 +6641,11 @@
             // 
             // btn17_1Salvar
             // 
+            this.btn17_1Salvar.Enabled = false;
             this.btn17_1Salvar.Location = new System.Drawing.Point(357, 261);
             this.btn17_1Salvar.Name = "btn17_1Salvar";
             this.btn17_1Salvar.Size = new System.Drawing.Size(75, 23);
-            this.btn17_1Salvar.TabIndex = 15;
+            this.btn17_1Salvar.TabIndex = 11;
             this.btn17_1Salvar.Text = "Salvar";
             this.btn17_1Salvar.UseVisualStyleBackColor = true;
             this.btn17_1Salvar.Click += new System.EventHandler(this.btn17_1Salvar_Click);
@@ -6642,7 +6656,7 @@
             this.check17_1PainelSinotico.Location = new System.Drawing.Point(651, 80);
             this.check17_1PainelSinotico.Name = "check17_1PainelSinotico";
             this.check17_1PainelSinotico.Size = new System.Drawing.Size(99, 17);
-            this.check17_1PainelSinotico.TabIndex = 81;
+            this.check17_1PainelSinotico.TabIndex = 6;
             this.check17_1PainelSinotico.Text = " Painel Sinótico";
             this.check17_1PainelSinotico.UseVisualStyleBackColor = true;
             // 
@@ -6652,7 +6666,7 @@
             this.check17_1ConjuntoCorreçãoFP.Location = new System.Drawing.Point(651, 43);
             this.check17_1ConjuntoCorreçãoFP.Name = "check17_1ConjuntoCorreçãoFP";
             this.check17_1ConjuntoCorreçãoFP.Size = new System.Drawing.Size(201, 17);
-            this.check17_1ConjuntoCorreçãoFP.TabIndex = 80;
+            this.check17_1ConjuntoCorreçãoFP.TabIndex = 3;
             this.check17_1ConjuntoCorreçãoFP.Text = "Conjunto Correção Fator de Potência";
             this.check17_1ConjuntoCorreçãoFP.UseVisualStyleBackColor = true;
             // 
@@ -6662,7 +6676,7 @@
             this.check17_1QuadroDistribIluminacao.Location = new System.Drawing.Point(337, 80);
             this.check17_1QuadroDistribIluminacao.Name = "check17_1QuadroDistribIluminacao";
             this.check17_1QuadroDistribIluminacao.Size = new System.Drawing.Size(203, 17);
-            this.check17_1QuadroDistribIluminacao.TabIndex = 79;
+            this.check17_1QuadroDistribIluminacao.TabIndex = 5;
             this.check17_1QuadroDistribIluminacao.Text = "Quadro de Distribuição de Iluminação";
             this.check17_1QuadroDistribIluminacao.UseVisualStyleBackColor = true;
             // 
@@ -6672,7 +6686,7 @@
             this.check17_1QuadroGeralBT.Location = new System.Drawing.Point(337, 43);
             this.check17_1QuadroGeralBT.Name = "check17_1QuadroGeralBT";
             this.check17_1QuadroGeralBT.Size = new System.Drawing.Size(172, 17);
-            this.check17_1QuadroGeralBT.TabIndex = 78;
+            this.check17_1QuadroGeralBT.TabIndex = 2;
             this.check17_1QuadroGeralBT.Text = "Quadro Geral de Baixa Tensão";
             this.check17_1QuadroGeralBT.UseVisualStyleBackColor = true;
             // 
@@ -6682,7 +6696,7 @@
             this.check17_1PainelComLocal.Location = new System.Drawing.Point(65, 114);
             this.check17_1PainelComLocal.Name = "check17_1PainelComLocal";
             this.check17_1PainelComLocal.Size = new System.Drawing.Size(135, 17);
-            this.check17_1PainelComLocal.TabIndex = 77;
+            this.check17_1PainelComLocal.TabIndex = 7;
             this.check17_1PainelComLocal.Text = " Painel Comando Local";
             this.check17_1PainelComLocal.UseVisualStyleBackColor = true;
             // 
@@ -6692,7 +6706,7 @@
             this.check17_1ControleMotores.Location = new System.Drawing.Point(65, 80);
             this.check17_1ControleMotores.Name = "check17_1ControleMotores";
             this.check17_1ControleMotores.Size = new System.Drawing.Size(168, 17);
-            this.check17_1ControleMotores.TabIndex = 76;
+            this.check17_1ControleMotores.TabIndex = 4;
             this.check17_1ControleMotores.Text = "Painel de Controle de Motores";
             this.check17_1ControleMotores.UseVisualStyleBackColor = true;
             // 
@@ -6704,7 +6718,7 @@
             this.check17_1MemorialDesc.Location = new System.Drawing.Point(337, 114);
             this.check17_1MemorialDesc.Name = "check17_1MemorialDesc";
             this.check17_1MemorialDesc.Size = new System.Drawing.Size(141, 17);
-            this.check17_1MemorialDesc.TabIndex = 75;
+            this.check17_1MemorialDesc.TabIndex = 8;
             this.check17_1MemorialDesc.Text = " Memorial Descritivo";
             this.check17_1MemorialDesc.UseVisualStyleBackColor = true;
             // 
@@ -6714,7 +6728,7 @@
             this.check17_1SubstacaoBlindada.Location = new System.Drawing.Point(65, 43);
             this.check17_1SubstacaoBlindada.Name = "check17_1SubstacaoBlindada";
             this.check17_1SubstacaoBlindada.Size = new System.Drawing.Size(124, 17);
-            this.check17_1SubstacaoBlindada.TabIndex = 74;
+            this.check17_1SubstacaoBlindada.TabIndex = 1;
             this.check17_1SubstacaoBlindada.Text = " Substação Blindada";
             this.check17_1SubstacaoBlindada.UseVisualStyleBackColor = true;
             // 
@@ -6802,7 +6816,7 @@
             this.rbtn17_2AprovConcessionariaN.Location = new System.Drawing.Point(637, 39);
             this.rbtn17_2AprovConcessionariaN.Name = "rbtn17_2AprovConcessionariaN";
             this.rbtn17_2AprovConcessionariaN.Size = new System.Drawing.Size(45, 17);
-            this.rbtn17_2AprovConcessionariaN.TabIndex = 91;
+            this.rbtn17_2AprovConcessionariaN.TabIndex = 3;
             this.rbtn17_2AprovConcessionariaN.TabStop = true;
             this.rbtn17_2AprovConcessionariaN.Text = "Não";
             this.rbtn17_2AprovConcessionariaN.UseVisualStyleBackColor = true;
@@ -6815,7 +6829,7 @@
             this.rbtn17_2AprovConcessionariaS.Location = new System.Drawing.Point(589, 39);
             this.rbtn17_2AprovConcessionariaS.Name = "rbtn17_2AprovConcessionariaS";
             this.rbtn17_2AprovConcessionariaS.Size = new System.Drawing.Size(42, 17);
-            this.rbtn17_2AprovConcessionariaS.TabIndex = 90;
+            this.rbtn17_2AprovConcessionariaS.TabIndex = 2;
             this.rbtn17_2AprovConcessionariaS.TabStop = true;
             this.rbtn17_2AprovConcessionariaS.Text = "Sim";
             this.rbtn17_2AprovConcessionariaS.UseVisualStyleBackColor = true;
@@ -6839,7 +6853,7 @@
             this.check17_2ListaMateriais.Location = new System.Drawing.Point(637, 184);
             this.check17_2ListaMateriais.Name = "check17_2ListaMateriais";
             this.check17_2ListaMateriais.Size = new System.Drawing.Size(130, 17);
-            this.check17_2ListaMateriais.TabIndex = 88;
+            this.check17_2ListaMateriais.TabIndex = 15;
             this.check17_2ListaMateriais.Text = " Lista de Materiais";
             this.check17_2ListaMateriais.UseVisualStyleBackColor = true;
             // 
@@ -6849,7 +6863,7 @@
             this.check17_2Outro.Location = new System.Drawing.Point(65, 222);
             this.check17_2Outro.Name = "check17_2Outro";
             this.check17_2Outro.Size = new System.Drawing.Size(52, 17);
-            this.check17_2Outro.TabIndex = 87;
+            this.check17_2Outro.TabIndex = 16;
             this.check17_2Outro.Text = "Outro";
             this.check17_2Outro.UseVisualStyleBackColor = true;
             // 
@@ -6859,7 +6873,7 @@
             this.check17_2InstalRedeEstab.Location = new System.Drawing.Point(65, 184);
             this.check17_2InstalRedeEstab.Name = "check17_2InstalRedeEstab";
             this.check17_2InstalRedeEstab.Size = new System.Drawing.Size(181, 17);
-            this.check17_2InstalRedeEstab.TabIndex = 86;
+            this.check17_2InstalRedeEstab.TabIndex = 13;
             this.check17_2InstalRedeEstab.Text = " Instalação de Rede Estabilizada";
             this.check17_2InstalRedeEstab.UseVisualStyleBackColor = true;
             // 
@@ -6869,7 +6883,7 @@
             this.check17_2InstalRedeDados.Location = new System.Drawing.Point(637, 150);
             this.check17_2InstalRedeDados.Name = "check17_2InstalRedeDados";
             this.check17_2InstalRedeDados.Size = new System.Drawing.Size(168, 17);
-            this.check17_2InstalRedeDados.TabIndex = 84;
+            this.check17_2InstalRedeDados.TabIndex = 12;
             this.check17_2InstalRedeDados.Text = "Instalação de Rede de Dados";
             this.check17_2InstalRedeDados.UseVisualStyleBackColor = true;
             // 
@@ -6879,7 +6893,7 @@
             this.check17_2InstalacaoCFTV.Location = new System.Drawing.Point(65, 150);
             this.check17_2InstalacaoCFTV.Name = "check17_2InstalacaoCFTV";
             this.check17_2InstalacaoCFTV.Size = new System.Drawing.Size(123, 17);
-            this.check17_2InstalacaoCFTV.TabIndex = 83;
+            this.check17_2InstalacaoCFTV.TabIndex = 10;
             this.check17_2InstalacaoCFTV.Text = " Instalação de CFTV";
             this.check17_2InstalacaoCFTV.UseVisualStyleBackColor = true;
             // 
@@ -6889,7 +6903,7 @@
             this.check17_2InstalacaoTelefonia.Location = new System.Drawing.Point(335, 150);
             this.check17_2InstalacaoTelefonia.Name = "check17_2InstalacaoTelefonia";
             this.check17_2InstalacaoTelefonia.Size = new System.Drawing.Size(137, 17);
-            this.check17_2InstalacaoTelefonia.TabIndex = 82;
+            this.check17_2InstalacaoTelefonia.TabIndex = 11;
             this.check17_2InstalacaoTelefonia.Text = "Instalação de Telefonia";
             this.check17_2InstalacaoTelefonia.UseVisualStyleBackColor = true;
             // 
@@ -6898,7 +6912,7 @@
             this.btn17_2Excluir.Location = new System.Drawing.Point(475, 332);
             this.btn17_2Excluir.Name = "btn17_2Excluir";
             this.btn17_2Excluir.Size = new System.Drawing.Size(75, 23);
-            this.btn17_2Excluir.TabIndex = 16;
+            this.btn17_2Excluir.TabIndex = 19;
             this.btn17_2Excluir.Text = "Excluir";
             this.btn17_2Excluir.UseVisualStyleBackColor = true;
             this.btn17_2Excluir.Visible = false;
@@ -6906,10 +6920,11 @@
             // 
             // btn17_2Salvar
             // 
+            this.btn17_2Salvar.Enabled = false;
             this.btn17_2Salvar.Location = new System.Drawing.Point(367, 332);
             this.btn17_2Salvar.Name = "btn17_2Salvar";
             this.btn17_2Salvar.Size = new System.Drawing.Size(75, 23);
-            this.btn17_2Salvar.TabIndex = 15;
+            this.btn17_2Salvar.TabIndex = 18;
             this.btn17_2Salvar.Text = "Salvar";
             this.btn17_2Salvar.UseVisualStyleBackColor = true;
             this.btn17_2Salvar.Click += new System.EventHandler(this.btn17_2Salvar_Click);
@@ -6920,7 +6935,7 @@
             this.check17_2IluminacaoExt.Location = new System.Drawing.Point(335, 113);
             this.check17_2IluminacaoExt.Name = "check17_2IluminacaoExt";
             this.check17_2IluminacaoExt.Size = new System.Drawing.Size(186, 17);
-            this.check17_2IluminacaoExt.TabIndex = 81;
+            this.check17_2IluminacaoExt.TabIndex = 8;
             this.check17_2IluminacaoExt.Text = " Instalação de Iluminação Externa";
             this.check17_2IluminacaoExt.UseVisualStyleBackColor = true;
             // 
@@ -6930,7 +6945,7 @@
             this.check17_2InstalacaoForca.Location = new System.Drawing.Point(335, 77);
             this.check17_2InstalacaoForca.Name = "check17_2InstalacaoForca";
             this.check17_2InstalacaoForca.Size = new System.Drawing.Size(120, 17);
-            this.check17_2InstalacaoForca.TabIndex = 80;
+            this.check17_2InstalacaoForca.TabIndex = 5;
             this.check17_2InstalacaoForca.Text = "Instalação de Força";
             this.check17_2InstalacaoForca.UseVisualStyleBackColor = true;
             // 
@@ -6940,7 +6955,7 @@
             this.check17_2IluminacaoInterna.Location = new System.Drawing.Point(65, 113);
             this.check17_2IluminacaoInterna.Name = "check17_2IluminacaoInterna";
             this.check17_2IluminacaoInterna.Size = new System.Drawing.Size(183, 17);
-            this.check17_2IluminacaoInterna.TabIndex = 79;
+            this.check17_2IluminacaoInterna.TabIndex = 7;
             this.check17_2IluminacaoInterna.Text = " Instalação de Iluminação Interna";
             this.check17_2IluminacaoInterna.UseVisualStyleBackColor = true;
             // 
@@ -6950,7 +6965,7 @@
             this.check17_2CaboGeral.Location = new System.Drawing.Point(65, 77);
             this.check17_2CaboGeral.Name = "check17_2CaboGeral";
             this.check17_2CaboGeral.Size = new System.Drawing.Size(79, 17);
-            this.check17_2CaboGeral.TabIndex = 78;
+            this.check17_2CaboGeral.TabIndex = 4;
             this.check17_2CaboGeral.Text = "Cabo Geral";
             this.check17_2CaboGeral.UseVisualStyleBackColor = true;
             // 
@@ -6960,7 +6975,7 @@
             this.check17_2InstAterramento.Location = new System.Drawing.Point(637, 113);
             this.check17_2InstAterramento.Name = "check17_2InstAterramento";
             this.check17_2InstAterramento.Size = new System.Drawing.Size(191, 17);
-            this.check17_2InstAterramento.TabIndex = 77;
+            this.check17_2InstAterramento.TabIndex = 9;
             this.check17_2InstAterramento.Text = "Instalação de Aterramento e SPDA";
             this.check17_2InstAterramento.UseVisualStyleBackColor = true;
             // 
@@ -6970,7 +6985,7 @@
             this.check17_2InstalacaoComando.Location = new System.Drawing.Point(637, 77);
             this.check17_2InstalacaoComando.Name = "check17_2InstalacaoComando";
             this.check17_2InstalacaoComando.Size = new System.Drawing.Size(138, 17);
-            this.check17_2InstalacaoComando.TabIndex = 76;
+            this.check17_2InstalacaoComando.TabIndex = 6;
             this.check17_2InstalacaoComando.Text = "Instalação de Comando";
             this.check17_2InstalacaoComando.UseVisualStyleBackColor = true;
             // 
@@ -6982,7 +6997,7 @@
             this.check17_2MemorialDesc.Location = new System.Drawing.Point(335, 184);
             this.check17_2MemorialDesc.Name = "check17_2MemorialDesc";
             this.check17_2MemorialDesc.Size = new System.Drawing.Size(141, 17);
-            this.check17_2MemorialDesc.TabIndex = 75;
+            this.check17_2MemorialDesc.TabIndex = 14;
             this.check17_2MemorialDesc.Text = " Memorial Descritivo";
             this.check17_2MemorialDesc.UseVisualStyleBackColor = true;
             // 
@@ -6992,7 +7007,7 @@
             this.check17_2InstalacaoMT.Location = new System.Drawing.Point(65, 41);
             this.check17_2InstalacaoMT.Name = "check17_2InstalacaoMT";
             this.check17_2InstalacaoMT.Size = new System.Drawing.Size(161, 17);
-            this.check17_2InstalacaoMT.TabIndex = 74;
+            this.check17_2InstalacaoMT.TabIndex = 1;
             this.check17_2InstalacaoMT.Text = "Instalação de Média Tensão";
             this.check17_2InstalacaoMT.UseVisualStyleBackColor = true;
             this.check17_2InstalacaoMT.CheckedChanged += new System.EventHandler(this.check17_2InstalacaoMT_CheckedChanged);
@@ -7004,7 +7019,7 @@
             this.txt17_2Obs.Multiline = true;
             this.txt17_2Obs.Name = "txt17_2Obs";
             this.txt17_2Obs.Size = new System.Drawing.Size(745, 40);
-            this.txt17_2Obs.TabIndex = 10;
+            this.txt17_2Obs.TabIndex = 17;
             // 
             // label194
             // 
@@ -7064,7 +7079,7 @@
             this.check17_3Outro.Location = new System.Drawing.Point(65, 256);
             this.check17_3Outro.Name = "check17_3Outro";
             this.check17_3Outro.Size = new System.Drawing.Size(52, 17);
-            this.check17_3Outro.TabIndex = 94;
+            this.check17_3Outro.TabIndex = 19;
             this.check17_3Outro.Text = "Outro";
             this.check17_3Outro.UseVisualStyleBackColor = true;
             // 
@@ -7074,7 +7089,7 @@
             this.check17_3InstaGas.Location = new System.Drawing.Point(65, 220);
             this.check17_3InstaGas.Name = "check17_3InstaGas";
             this.check17_3InstaGas.Size = new System.Drawing.Size(112, 17);
-            this.check17_3InstaGas.TabIndex = 93;
+            this.check17_3InstaGas.TabIndex = 16;
             this.check17_3InstaGas.Text = "Instalação de Gás";
             this.check17_3InstaGas.UseVisualStyleBackColor = true;
             // 
@@ -7084,7 +7099,7 @@
             this.check17_3VaporCondensado.Location = new System.Drawing.Point(637, 183);
             this.check17_3VaporCondensado.Name = "check17_3VaporCondensado";
             this.check17_3VaporCondensado.Size = new System.Drawing.Size(193, 17);
-            this.check17_3VaporCondensado.TabIndex = 92;
+            this.check17_3VaporCondensado.TabIndex = 15;
             this.check17_3VaporCondensado.Text = "Instalação de Vapor e Condensado";
             this.check17_3VaporCondensado.UseVisualStyleBackColor = true;
             // 
@@ -7095,7 +7110,7 @@
             this.radio17_3AprovBombN.Location = new System.Drawing.Point(625, 39);
             this.radio17_3AprovBombN.Name = "radio17_3AprovBombN";
             this.radio17_3AprovBombN.Size = new System.Drawing.Size(45, 17);
-            this.radio17_3AprovBombN.TabIndex = 91;
+            this.radio17_3AprovBombN.TabIndex = 3;
             this.radio17_3AprovBombN.Text = "Não";
             this.radio17_3AprovBombN.UseVisualStyleBackColor = true;
             // 
@@ -7106,7 +7121,7 @@
             this.radio17_3AprovBombS.Location = new System.Drawing.Point(577, 39);
             this.radio17_3AprovBombS.Name = "radio17_3AprovBombS";
             this.radio17_3AprovBombS.Size = new System.Drawing.Size(42, 17);
-            this.radio17_3AprovBombS.TabIndex = 90;
+            this.radio17_3AprovBombS.TabIndex = 2;
             this.radio17_3AprovBombS.Text = "Sim";
             this.radio17_3AprovBombS.UseVisualStyleBackColor = true;
             // 
@@ -7128,7 +7143,7 @@
             this.check17_3ListaMateriais.Location = new System.Drawing.Point(637, 220);
             this.check17_3ListaMateriais.Name = "check17_3ListaMateriais";
             this.check17_3ListaMateriais.Size = new System.Drawing.Size(130, 17);
-            this.check17_3ListaMateriais.TabIndex = 88;
+            this.check17_3ListaMateriais.TabIndex = 18;
             this.check17_3ListaMateriais.Text = " Lista de Materiais";
             this.check17_3ListaMateriais.UseVisualStyleBackColor = true;
             // 
@@ -7138,7 +7153,7 @@
             this.check17_3AguaQ.Location = new System.Drawing.Point(335, 183);
             this.check17_3AguaQ.Name = "check17_3AguaQ";
             this.check17_3AguaQ.Size = new System.Drawing.Size(156, 17);
-            this.check17_3AguaQ.TabIndex = 87;
+            this.check17_3AguaQ.TabIndex = 14;
             this.check17_3AguaQ.Text = "Instalação de Água Quente";
             this.check17_3AguaQ.UseVisualStyleBackColor = true;
             // 
@@ -7148,7 +7163,7 @@
             this.check17_3InstalacaoAguaG.Location = new System.Drawing.Point(65, 183);
             this.check17_3InstalacaoAguaG.Name = "check17_3InstalacaoAguaG";
             this.check17_3InstalacaoAguaG.Size = new System.Drawing.Size(155, 17);
-            this.check17_3InstalacaoAguaG.TabIndex = 86;
+            this.check17_3InstalacaoAguaG.TabIndex = 13;
             this.check17_3InstalacaoAguaG.Text = "Instalação de Água Gelada";
             this.check17_3InstalacaoAguaG.UseVisualStyleBackColor = true;
             // 
@@ -7158,7 +7173,7 @@
             this.check17_3AguaIndustrial.Location = new System.Drawing.Point(637, 149);
             this.check17_3AguaIndustrial.Name = "check17_3AguaIndustrial";
             this.check17_3AguaIndustrial.Size = new System.Drawing.Size(166, 17);
-            this.check17_3AguaIndustrial.TabIndex = 84;
+            this.check17_3AguaIndustrial.TabIndex = 12;
             this.check17_3AguaIndustrial.Text = " Instalação de Água Industrial";
             this.check17_3AguaIndustrial.UseVisualStyleBackColor = true;
             // 
@@ -7168,7 +7183,7 @@
             this.check17_3InstalacaoArComp.Location = new System.Drawing.Point(65, 149);
             this.check17_3InstalacaoArComp.Name = "check17_3InstalacaoArComp";
             this.check17_3InstalacaoArComp.Size = new System.Drawing.Size(163, 17);
-            this.check17_3InstalacaoArComp.TabIndex = 83;
+            this.check17_3InstalacaoArComp.TabIndex = 10;
             this.check17_3InstalacaoArComp.Text = " Instalação de Ar Comprimido";
             this.check17_3InstalacaoArComp.UseVisualStyleBackColor = true;
             // 
@@ -7178,7 +7193,7 @@
             this.check17_3AguaPotavel.Location = new System.Drawing.Point(335, 149);
             this.check17_3AguaPotavel.Name = "check17_3AguaPotavel";
             this.check17_3AguaPotavel.Size = new System.Drawing.Size(160, 17);
-            this.check17_3AguaPotavel.TabIndex = 82;
+            this.check17_3AguaPotavel.TabIndex = 11;
             this.check17_3AguaPotavel.Text = " Instalação de Água Potável";
             this.check17_3AguaPotavel.UseVisualStyleBackColor = true;
             // 
@@ -7187,7 +7202,7 @@
             this.btn17_3Excluir.Location = new System.Drawing.Point(475, 344);
             this.btn17_3Excluir.Name = "btn17_3Excluir";
             this.btn17_3Excluir.Size = new System.Drawing.Size(75, 23);
-            this.btn17_3Excluir.TabIndex = 16;
+            this.btn17_3Excluir.TabIndex = 22;
             this.btn17_3Excluir.Text = "Excluir";
             this.btn17_3Excluir.UseVisualStyleBackColor = true;
             this.btn17_3Excluir.Visible = false;
@@ -7195,10 +7210,11 @@
             // 
             // btn17_3Salvar
             // 
+            this.btn17_3Salvar.Enabled = false;
             this.btn17_3Salvar.Location = new System.Drawing.Point(367, 344);
             this.btn17_3Salvar.Name = "btn17_3Salvar";
             this.btn17_3Salvar.Size = new System.Drawing.Size(75, 23);
-            this.btn17_3Salvar.TabIndex = 15;
+            this.btn17_3Salvar.TabIndex = 21;
             this.btn17_3Salvar.Text = "Salvar";
             this.btn17_3Salvar.UseVisualStyleBackColor = true;
             this.btn17_3Salvar.Click += new System.EventHandler(this.btn17_3Salvar_Click);
@@ -7209,7 +7225,7 @@
             this.check17_3InstalacaoEmergencia.Location = new System.Drawing.Point(335, 113);
             this.check17_3InstalacaoEmergencia.Name = "check17_3InstalacaoEmergencia";
             this.check17_3InstalacaoEmergencia.Size = new System.Drawing.Size(218, 17);
-            this.check17_3InstalacaoEmergencia.TabIndex = 81;
+            this.check17_3InstalacaoEmergencia.TabIndex = 8;
             this.check17_3InstalacaoEmergencia.Text = "Instalação de Iluminação de Emergência";
             this.check17_3InstalacaoEmergencia.UseVisualStyleBackColor = true;
             this.check17_3InstalacaoEmergencia.CheckedChanged += new System.EventHandler(this.check17_3InstalacaoEmergencia_CheckedChanged);
@@ -7220,7 +7236,7 @@
             this.check17_3InstalSprinklers.Location = new System.Drawing.Point(335, 77);
             this.check17_3InstalSprinklers.Name = "check17_3InstalSprinklers";
             this.check17_3InstalSprinklers.Size = new System.Drawing.Size(142, 17);
-            this.check17_3InstalSprinklers.TabIndex = 80;
+            this.check17_3InstalSprinklers.TabIndex = 5;
             this.check17_3InstalSprinklers.Text = " Instalação de Sprinklers";
             this.check17_3InstalSprinklers.UseVisualStyleBackColor = true;
             this.check17_3InstalSprinklers.CheckedChanged += new System.EventHandler(this.check17_3InstalSprinklers_CheckedChanged);
@@ -7231,7 +7247,7 @@
             this.check17_3InstalAlarme.Location = new System.Drawing.Point(65, 113);
             this.check17_3InstalAlarme.Name = "check17_3InstalAlarme";
             this.check17_3InstalAlarme.Size = new System.Drawing.Size(184, 17);
-            this.check17_3InstalAlarme.TabIndex = 79;
+            this.check17_3InstalAlarme.TabIndex = 7;
             this.check17_3InstalAlarme.Text = "Instalação de Alarme de Incêndio";
             this.check17_3InstalAlarme.UseVisualStyleBackColor = true;
             this.check17_3InstalAlarme.CheckedChanged += new System.EventHandler(this.check17_3InstalAlarme_CheckedChanged);
@@ -7242,7 +7258,7 @@
             this.check17_3InstalHidrante.Location = new System.Drawing.Point(65, 77);
             this.check17_3InstalHidrante.Name = "check17_3InstalHidrante";
             this.check17_3InstalHidrante.Size = new System.Drawing.Size(144, 17);
-            this.check17_3InstalHidrante.TabIndex = 78;
+            this.check17_3InstalHidrante.TabIndex = 4;
             this.check17_3InstalHidrante.Text = "  Instalação de Hidrantes";
             this.check17_3InstalHidrante.UseVisualStyleBackColor = true;
             this.check17_3InstalHidrante.CheckedChanged += new System.EventHandler(this.check17_3InstalHidrante_CheckedChanged);
@@ -7253,7 +7269,7 @@
             this.check17_3SinalEmergencia.Location = new System.Drawing.Point(637, 113);
             this.check17_3SinalEmergencia.Name = "check17_3SinalEmergencia";
             this.check17_3SinalEmergencia.Size = new System.Drawing.Size(224, 17);
-            this.check17_3SinalEmergencia.TabIndex = 77;
+            this.check17_3SinalEmergencia.TabIndex = 9;
             this.check17_3SinalEmergencia.Text = " Instalação de Sinalização de Emergência";
             this.check17_3SinalEmergencia.UseVisualStyleBackColor = true;
             this.check17_3SinalEmergencia.CheckedChanged += new System.EventHandler(this.check17_3SinalEmergencia_CheckedChanged);
@@ -7264,7 +7280,7 @@
             this.check17_3InstalExtintores.Location = new System.Drawing.Point(637, 77);
             this.check17_3InstalExtintores.Name = "check17_3InstalExtintores";
             this.check17_3InstalExtintores.Size = new System.Drawing.Size(139, 17);
-            this.check17_3InstalExtintores.TabIndex = 76;
+            this.check17_3InstalExtintores.TabIndex = 6;
             this.check17_3InstalExtintores.Text = "Instalação de Extintores";
             this.check17_3InstalExtintores.UseVisualStyleBackColor = true;
             this.check17_3InstalExtintores.CheckedChanged += new System.EventHandler(this.check17_3InstalExtintores_CheckedChanged);
@@ -7277,7 +7293,7 @@
             this.check17_3MemDesc.Location = new System.Drawing.Point(335, 220);
             this.check17_3MemDesc.Name = "check17_3MemDesc";
             this.check17_3MemDesc.Size = new System.Drawing.Size(141, 17);
-            this.check17_3MemDesc.TabIndex = 75;
+            this.check17_3MemDesc.TabIndex = 17;
             this.check17_3MemDesc.Text = " Memorial Descritivo";
             this.check17_3MemDesc.UseVisualStyleBackColor = true;
             // 
@@ -7287,7 +7303,7 @@
             this.check17_3PPCI.Location = new System.Drawing.Point(65, 41);
             this.check17_3PPCI.Name = "check17_3PPCI";
             this.check17_3PPCI.Size = new System.Drawing.Size(100, 17);
-            this.check17_3PPCI.TabIndex = 74;
+            this.check17_3PPCI.TabIndex = 1;
             this.check17_3PPCI.Text = " PPCI Completo";
             this.check17_3PPCI.UseVisualStyleBackColor = true;
             this.check17_3PPCI.CheckedChanged += new System.EventHandler(this.check17_3PPCI_CheckedChanged);
@@ -7299,7 +7315,7 @@
             this.txt17_3Obs.Multiline = true;
             this.txt17_3Obs.Name = "txt17_3Obs";
             this.txt17_3Obs.Size = new System.Drawing.Size(745, 40);
-            this.txt17_3Obs.TabIndex = 10;
+            this.txt17_3Obs.TabIndex = 20;
             // 
             // label198
             // 
@@ -7343,7 +7359,7 @@
             this.check17_4Outro.Location = new System.Drawing.Point(65, 83);
             this.check17_4Outro.Name = "check17_4Outro";
             this.check17_4Outro.Size = new System.Drawing.Size(55, 17);
-            this.check17_4Outro.TabIndex = 82;
+            this.check17_4Outro.TabIndex = 4;
             this.check17_4Outro.Text = " Outro";
             this.check17_4Outro.UseVisualStyleBackColor = true;
             // 
@@ -7352,17 +7368,19 @@
             this.btn17_4Excluir.Location = new System.Drawing.Point(459, 214);
             this.btn17_4Excluir.Name = "btn17_4Excluir";
             this.btn17_4Excluir.Size = new System.Drawing.Size(75, 23);
-            this.btn17_4Excluir.TabIndex = 16;
+            this.btn17_4Excluir.TabIndex = 7;
             this.btn17_4Excluir.Text = "Excluir";
             this.btn17_4Excluir.UseVisualStyleBackColor = true;
             this.btn17_4Excluir.Visible = false;
+            this.btn17_4Excluir.Click += new System.EventHandler(this.btn17_4Excluir_Click);
             // 
             // btn17_4Salvar
             // 
+            this.btn17_4Salvar.Enabled = false;
             this.btn17_4Salvar.Location = new System.Drawing.Point(351, 214);
             this.btn17_4Salvar.Name = "btn17_4Salvar";
             this.btn17_4Salvar.Size = new System.Drawing.Size(75, 23);
-            this.btn17_4Salvar.TabIndex = 15;
+            this.btn17_4Salvar.TabIndex = 6;
             this.btn17_4Salvar.Text = "Salvar";
             this.btn17_4Salvar.UseVisualStyleBackColor = true;
             this.btn17_4Salvar.Click += new System.EventHandler(this.btn17_4Salvar_Click);
@@ -7373,7 +7391,7 @@
             this.check17_4SistemaAeracao.Location = new System.Drawing.Point(337, 43);
             this.check17_4SistemaAeracao.Name = "check17_4SistemaAeracao";
             this.check17_4SistemaAeracao.Size = new System.Drawing.Size(124, 17);
-            this.check17_4SistemaAeracao.TabIndex = 78;
+            this.check17_4SistemaAeracao.TabIndex = 2;
             this.check17_4SistemaAeracao.Text = " Sistema de Aeração";
             this.check17_4SistemaAeracao.UseVisualStyleBackColor = true;
             // 
@@ -7385,7 +7403,7 @@
             this.check17_4MemorialDesc.Location = new System.Drawing.Point(651, 43);
             this.check17_4MemorialDesc.Name = "check17_4MemorialDesc";
             this.check17_4MemorialDesc.Size = new System.Drawing.Size(141, 17);
-            this.check17_4MemorialDesc.TabIndex = 75;
+            this.check17_4MemorialDesc.TabIndex = 3;
             this.check17_4MemorialDesc.Text = " Memorial Descritivo";
             this.check17_4MemorialDesc.UseVisualStyleBackColor = true;
             // 
@@ -7395,7 +7413,7 @@
             this.check17_4SistemaTermometria.Location = new System.Drawing.Point(65, 43);
             this.check17_4SistemaTermometria.Name = "check17_4SistemaTermometria";
             this.check17_4SistemaTermometria.Size = new System.Drawing.Size(139, 17);
-            this.check17_4SistemaTermometria.TabIndex = 74;
+            this.check17_4SistemaTermometria.TabIndex = 1;
             this.check17_4SistemaTermometria.Text = "Sistema de Termometria";
             this.check17_4SistemaTermometria.UseVisualStyleBackColor = true;
             // 
@@ -7406,7 +7424,7 @@
             this.txt17_4Obs.Multiline = true;
             this.txt17_4Obs.Name = "txt17_4Obs";
             this.txt17_4Obs.Size = new System.Drawing.Size(653, 54);
-            this.txt17_4Obs.TabIndex = 10;
+            this.txt17_4Obs.TabIndex = 5;
             // 
             // label201
             // 
@@ -7420,6 +7438,7 @@
             // tab17_5
             // 
             this.tab17_5.BackColor = System.Drawing.SystemColors.Control;
+            this.tab17_5.Controls.Add(this.groupBox12);
             this.tab17_5.Location = new System.Drawing.Point(4, 22);
             this.tab17_5.Name = "tab17_5";
             this.tab17_5.Size = new System.Drawing.Size(993, 482);
@@ -8469,6 +8488,127 @@
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.check17_5Outro);
+            this.groupBox12.Controls.Add(this.check17_5Topologia);
+            this.groupBox12.Controls.Add(this.check17_5ListaIO);
+            this.groupBox12.Controls.Add(this.btn17_5Excluir);
+            this.groupBox12.Controls.Add(this.btn17_5Salvar);
+            this.groupBox12.Controls.Add(this.check17_5PainelRemota);
+            this.groupBox12.Controls.Add(this.check17_5MemorialDescritivo);
+            this.groupBox12.Controls.Add(this.check17_5PainelCLP);
+            this.groupBox12.Controls.Add(this.txt17_5Obs);
+            this.groupBox12.Controls.Add(this.label202);
+            this.groupBox12.Location = new System.Drawing.Point(30, 31);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(906, 274);
+            this.groupBox12.TabIndex = 76;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "17.5: Automação";
+            // 
+            // check17_5ListaIO
+            // 
+            this.check17_5ListaIO.AutoSize = true;
+            this.check17_5ListaIO.Location = new System.Drawing.Point(65, 86);
+            this.check17_5ListaIO.Name = "check17_5ListaIO";
+            this.check17_5ListaIO.Size = new System.Drawing.Size(85, 17);
+            this.check17_5ListaIO.TabIndex = 4;
+            this.check17_5ListaIO.Text = " Lista de I/O";
+            this.check17_5ListaIO.UseVisualStyleBackColor = true;
+            // 
+            // btn17_5Excluir
+            // 
+            this.btn17_5Excluir.Location = new System.Drawing.Point(459, 214);
+            this.btn17_5Excluir.Name = "btn17_5Excluir";
+            this.btn17_5Excluir.Size = new System.Drawing.Size(75, 23);
+            this.btn17_5Excluir.TabIndex = 9;
+            this.btn17_5Excluir.Text = "Excluir";
+            this.btn17_5Excluir.UseVisualStyleBackColor = true;
+            this.btn17_5Excluir.Visible = false;
+            this.btn17_5Excluir.Click += new System.EventHandler(this.btn17_5Excluir_Click);
+            // 
+            // btn17_5Salvar
+            // 
+            this.btn17_5Salvar.Enabled = false;
+            this.btn17_5Salvar.Location = new System.Drawing.Point(351, 214);
+            this.btn17_5Salvar.Name = "btn17_5Salvar";
+            this.btn17_5Salvar.Size = new System.Drawing.Size(75, 23);
+            this.btn17_5Salvar.TabIndex = 8;
+            this.btn17_5Salvar.Text = "Salvar";
+            this.btn17_5Salvar.UseVisualStyleBackColor = true;
+            this.btn17_5Salvar.Click += new System.EventHandler(this.btn17_5Salvar_Click);
+            // 
+            // check17_5PainelRemota
+            // 
+            this.check17_5PainelRemota.AutoSize = true;
+            this.check17_5PainelRemota.Location = new System.Drawing.Point(351, 43);
+            this.check17_5PainelRemota.Name = "check17_5PainelRemota";
+            this.check17_5PainelRemota.Size = new System.Drawing.Size(98, 17);
+            this.check17_5PainelRemota.TabIndex = 2;
+            this.check17_5PainelRemota.Text = " Painel Remota";
+            this.check17_5PainelRemota.UseVisualStyleBackColor = true;
+            // 
+            // check17_5MemorialDescritivo
+            // 
+            this.check17_5MemorialDescritivo.AutoSize = true;
+            this.check17_5MemorialDescritivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check17_5MemorialDescritivo.ForeColor = System.Drawing.Color.Green;
+            this.check17_5MemorialDescritivo.Location = new System.Drawing.Point(351, 86);
+            this.check17_5MemorialDescritivo.Name = "check17_5MemorialDescritivo";
+            this.check17_5MemorialDescritivo.Size = new System.Drawing.Size(141, 17);
+            this.check17_5MemorialDescritivo.TabIndex = 5;
+            this.check17_5MemorialDescritivo.Text = " Memorial Descritivo";
+            this.check17_5MemorialDescritivo.UseVisualStyleBackColor = true;
+            // 
+            // check17_5PainelCLP
+            // 
+            this.check17_5PainelCLP.AutoSize = true;
+            this.check17_5PainelCLP.Location = new System.Drawing.Point(65, 43);
+            this.check17_5PainelCLP.Name = "check17_5PainelCLP";
+            this.check17_5PainelCLP.Size = new System.Drawing.Size(78, 17);
+            this.check17_5PainelCLP.TabIndex = 1;
+            this.check17_5PainelCLP.Text = "Painel CLP";
+            this.check17_5PainelCLP.UseVisualStyleBackColor = true;
+            // 
+            // txt17_5Obs
+            // 
+            this.txt17_5Obs.Location = new System.Drawing.Point(160, 132);
+            this.txt17_5Obs.MaxLength = 2000;
+            this.txt17_5Obs.Multiline = true;
+            this.txt17_5Obs.Name = "txt17_5Obs";
+            this.txt17_5Obs.Size = new System.Drawing.Size(653, 54);
+            this.txt17_5Obs.TabIndex = 7;
+            // 
+            // label202
+            // 
+            this.label202.AutoSize = true;
+            this.label202.Location = new System.Drawing.Point(68, 144);
+            this.label202.Name = "label202";
+            this.label202.Size = new System.Drawing.Size(73, 13);
+            this.label202.TabIndex = 6;
+            this.label202.Text = "Observações:";
+            // 
+            // check17_5Topologia
+            // 
+            this.check17_5Topologia.AutoSize = true;
+            this.check17_5Topologia.Location = new System.Drawing.Point(672, 43);
+            this.check17_5Topologia.Name = "check17_5Topologia";
+            this.check17_5Topologia.Size = new System.Drawing.Size(120, 17);
+            this.check17_5Topologia.TabIndex = 3;
+            this.check17_5Topologia.Text = " Topologia de Rede";
+            this.check17_5Topologia.UseVisualStyleBackColor = true;
+            // 
+            // check17_5Outro
+            // 
+            this.check17_5Outro.AutoSize = true;
+            this.check17_5Outro.Location = new System.Drawing.Point(672, 86);
+            this.check17_5Outro.Name = "check17_5Outro";
+            this.check17_5Outro.Size = new System.Drawing.Size(55, 17);
+            this.check17_5Outro.TabIndex = 6;
+            this.check17_5Outro.Text = " Outro";
+            this.check17_5Outro.UseVisualStyleBackColor = true;
+            // 
             // frmNovaSolicitacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -8595,6 +8735,7 @@
             this.tab17_4.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
+            this.tab17_5.ResumeLayout(false);
             this.tabEscopo18.ResumeLayout(false);
             this.tabEscopo18.PerformLayout();
             this.tabEscopo18_1_2.ResumeLayout(false);
@@ -8626,6 +8767,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaEsc20)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -9324,5 +9467,16 @@
         private System.Windows.Forms.CheckBox check17_4SistemaTermometria;
         private System.Windows.Forms.TextBox txt17_4Obs;
         private System.Windows.Forms.Label label201;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.CheckBox check17_5Outro;
+        private System.Windows.Forms.CheckBox check17_5Topologia;
+        private System.Windows.Forms.CheckBox check17_5ListaIO;
+        private System.Windows.Forms.Button btn17_5Excluir;
+        private System.Windows.Forms.Button btn17_5Salvar;
+        private System.Windows.Forms.CheckBox check17_5PainelRemota;
+        private System.Windows.Forms.CheckBox check17_5MemorialDescritivo;
+        private System.Windows.Forms.CheckBox check17_5PainelCLP;
+        private System.Windows.Forms.TextBox txt17_5Obs;
+        private System.Windows.Forms.Label label202;
     }
 }

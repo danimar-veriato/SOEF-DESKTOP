@@ -8,28 +8,28 @@ using System.Threading.Tasks;
 
 namespace SOEF_CLASS
 {
-    public class Escopo_17_4:Escopo
+    public class Escopo_17_5:Escopo
     {
         /// <summary>
-        /// Construtor Escopo 17_3
+        /// Construtor Escopo 17_5
         /// </summary>
         /// <param name="numSolicitacao"></param>
         /// <param name="revSolicitacao"></param>
-        public Escopo_17_4(string numSolicitacao, string revSolicitacao)
+        public Escopo_17_5(string numSolicitacao, string revSolicitacao)
         {
             Numero = numSolicitacao;
             Revisao = revSolicitacao;
         }
 
-        //Métodos CRUD Escopo 17_4
+        //Métodos CRUD Escopo 17_5
 
         /// <summary>
-        /// Grava os dados do Escopo 17_4
+        /// Grava os dados do Escopo 17_5
         /// </summary>
         /// <param name="pDescServico"></param>
         /// <param name="pIndPre"></param>
         /// <returns></returns>
-        public int gravaEscopo_17_4(string pSistemaTermometria, string pSistemaAeracao, string pMemorialDescritivo, string pOutro, string pObs, string pIndPre)
+        public int gravaEscopo_17_5(string pPainelCLP, string pPainelRemota, string pTopologiaRede, string pListaIO, string pMemorialDesc, string pOutro, string pObs, string pIndPre)
         {
             SqlCE sqlce = new SqlCE();
             sqlce.openConnection();
@@ -37,11 +37,13 @@ namespace SOEF_CLASS
             {
                 int retorno;
                 string query = "";
-                query += " INSERT INTO [DOM_SOLIC_ORC_ESCOPO_17_4] ";
+                query += " INSERT INTO [DOM_SOLIC_ORC_ESCOPO_17_5] ";
                 query += "   ([NUMERO_SOLICITACAO], ";
                 query += "   [REVISAO_SOLICITACAO], ";
-                query += "   [IND_SISTEMA_TERMOMETRIA], ";
-                query += "   [IND_SISTEMA_AERACAO], ";
+                query += "   [IND_PAINEL_CLP], ";
+                query += "   [IND_PAINEL_REMOTA], ";
+                query += "   [IND_TOPOLOGIA_REDE], ";
+                query += "   [IND_LISTA_IO], ";
                 query += "   [IND_MEMORIAL_DESCRITIVO], ";
                 query += "   [IND_OUTRO], ";
                 query += "   [OBSERVACOES], ";
@@ -49,9 +51,11 @@ namespace SOEF_CLASS
                 query += " VALUES ";
                 query += "   (" + Numero + ", ";
                 query += "   '" + Revisao + "', ";
-                query += "   '" + pSistemaTermometria + "', ";
-                query += "   '" + pSistemaAeracao + "', ";
-                query += "   '" + pMemorialDescritivo + "', ";
+                query += "   '" + pPainelCLP + "', ";
+                query += "   '" + pPainelRemota + "', ";
+                query += "   '" + pTopologiaRede + "', ";
+                query += "   '" + pListaIO + "', ";
+                query += "   '" + pMemorialDesc + "', ";
                 query += "   '" + pOutro + "', ";
                 query += "   '" + pObs + "', ";
                 query += "   '" + pIndPre + "') ";
@@ -67,14 +71,14 @@ namespace SOEF_CLASS
                 sqlce.closeConnection();
             }
         }
-        
+
         /// <summary>
-        /// Atualiza os dados do Escopo 17_4
+        /// Atualiza os dados do Escopo 17_5
         /// </summary>
         /// <param name="pDescServico"></param>
         /// <param name="pIndPre"></param>
         /// <returns></returns>
-        public int updateEscopo_17_4(string pSistemaTermometria, string pSistemaAeracao, string pMemorialDescritivo, string pOutro, string pObs, string pIndPre)
+        public int updateEscopo_17_5(string pPainelCLP, string pPainelRemota, string pTopologiaRede, string pListaIO, string pMemorialDesc, string pOutro, string pObs, string pIndPre)
         {
             SqlCE sqlce = new SqlCE();
             sqlce.openConnection();
@@ -82,10 +86,12 @@ namespace SOEF_CLASS
             {
                 int retorno;
                 string query = "";
-                query += " UPDATE [DOM_SOLIC_ORC_ESCOPO_17_4] ";
-                query += "   SET [IND_SISTEMA_TERMOMETRIA] = '" + pSistemaTermometria + "', ";
-                query += "       [IND_SISTEMA_AERACAO] = '" + pSistemaAeracao + "', ";
-                query += "       [IND_MEMORIAL_DESCRITIVO] = '" + pMemorialDescritivo + "', ";
+                query += " UPDATE [DOM_SOLIC_ORC_ESCOPO_17_5] ";
+                query += "   SET [IND_PAINEL_CLP] = '" + pPainelCLP + "', ";
+                query += "       [IND_PAINEL_REMOTA] = '" + pPainelRemota + "', ";
+                query += "       [IND_TOPOLOGIA_REDE] = '" + pTopologiaRede + "', ";
+                query += "       [IND_LISTA_IO] = '" + pListaIO + "', ";
+                query += "       [IND_MEMORIAL_DESCRITIVO] = '" + pMemorialDesc + "', ";
                 query += "       [IND_OUTRO] = '" + pOutro + "', ";
                 query += "       [OBSERVACOES] = '" + pObs + "', ";
                 query += "       [IND_PREENCHIDO] = '" + pIndPre + "' ";
@@ -104,10 +110,10 @@ namespace SOEF_CLASS
         }
         
         /// <summary>
-        /// Busca os dados do Escopo 17_4
+        /// Busca os dados do Escopo 17_5
         /// </summary>
         /// <returns></returns>
-        public DataTable getEscopo_17_4()
+        public DataTable getEscopo_17_5()
         {
             SqlCE sqlce = new SqlCE();
             sqlce.openConnection();
@@ -115,20 +121,22 @@ namespace SOEF_CLASS
             {
                 DataTable dt = new DataTable();
                 string sql;
-                sql = " SELECT E17_4.[NUMERO_SOLICITACAO], ";
-                sql += " E17_4.[REVISAO_SOLICITACAO], ";
-                sql += " E17_4.[IND_SISTEMA_TERMOMETRIA], ";
-                sql += " E17_4.[IND_SISTEMA_AERACAO], ";
+                sql = " SELECT E17_5.[NUMERO_SOLICITACAO], ";
+                sql += " E17_5.[REVISAO_SOLICITACAO], ";
+                sql += " E17_5.[IND_PAINEL_CLP], ";
+                sql += " E17_5.[IND_PAINEL_REMOTA], ";
+                sql += " E17_5.[IND_TOPOLOGIA_REDE], ";
+                sql += " E17_5.[IND_LISTA_IO], ";
                 sql += " DSOVC.[IND_MEMORIAL_DESCRITIVO], ";
-                sql += " E17_4.[IND_OUTRO], ";
-                sql += " E17_4.[OBSERVACOES], ";
-                sql += " E17_4.[IND_PREENCHIDO] ";
-                sql += " FROM [DOM_SOLIC_ORC_ESCOPO_17_4] as E17_4 ";
+                sql += " E17_5.[IND_OUTRO], ";
+                sql += " E17_5.[OBSERVACOES], ";
+                sql += " E17_5.[IND_PREENCHIDO] ";
+                sql += " FROM [DOM_SOLIC_ORC_ESCOPO_17_5] as E17_5 ";
                 sql += " INNER JOIN DOM_SOLIC_ORC_VALOR_COMUM as DSOVC ";
-                sql += " ON DSOVC.IND_MEMORIAL_DESCRITIVO = E17_4.IND_MEMORIAL_DESCRITIVO ";
-                sql += " WHERE E17_4.[NUMERO_SOLICITACAO] = " + Numero + " ";
-                sql += " AND E17_4.[REVISAO_SOLICITACAO] = '" + Revisao + "' ";
-                dt = sqlce.selectListaSOF(sql, "DOM_SOLIC_ORC_ESCOPO_17_4");
+                sql += " ON DSOVC.IND_MEMORIAL_DESCRITIVO = E17_5.IND_MEMORIAL_DESCRITIVO ";
+                sql += " WHERE E17_5.[NUMERO_SOLICITACAO] = " + Numero + " ";
+                sql += " AND E17_5.[REVISAO_SOLICITACAO] = '" + Revisao + "' ";
+                dt = sqlce.selectListaSOF(sql, "DOM_SOLIC_ORC_ESCOPO_17_5");
                 return dt;
             }
             catch (Exception)
@@ -138,12 +146,12 @@ namespace SOEF_CLASS
         }
         
         /// <summary>
-        /// Apaga os dados do Escopo 17_4
+        /// Apaga os dados do Escopo 17_5
         /// </summary>
         /// <param name="pNumero"></param>
         /// <param name="pRevisao"></param>
         /// <returns></returns>
-        public int deleteEscopo_17_4(string pNumero, string pRevisao)
+        public int deleteEscopo_17_5(string pNumero, string pRevisao)
         {
             SqlCE sqlce = new SqlCE();
             sqlce.openConnection();
@@ -151,7 +159,7 @@ namespace SOEF_CLASS
             {
                 int retorno;
                 string query = "";
-                query += " DELETE FROM [DOM_SOLIC_ORC_ESCOPO_17_4] ";
+                query += " DELETE FROM [DOM_SOLIC_ORC_ESCOPO_17_5] ";
                 query += " WHERE [NUMERO_SOLICITACAO] = " + pNumero + " ";
                 query += " AND [REVISAO_SOLICITACAO] = '" + pRevisao + "' ";
                 retorno = sqlce.deleteSOF(query);
@@ -166,6 +174,7 @@ namespace SOEF_CLASS
                 sqlce.closeConnection();
             }
         }
+
 
 
     }
