@@ -4820,6 +4820,7 @@ namespace ORCAMENTOS_FOCKINK
             //Escopo 17
             if(tabNovaSolicitacao.SelectedTab.Name == "tabEscopo17")
             {
+                verInformacoesGerais17();
                 if(AcaoTela == "N")
                 {
                     inicializaCamposE17();
@@ -8812,7 +8813,6 @@ namespace ORCAMENTOS_FOCKINK
             }
         }
 
-
         private void tabE5_Selected(object sender, TabControlEventArgs e)
         {
             if(tabE5.SelectedTab.Name == "tabPE5_1")
@@ -8929,7 +8929,6 @@ namespace ORCAMENTOS_FOCKINK
             if (radio5_1PotFD.Checked)
             {
                 pListaCargas.Visible = true;
-
                 //Oculta campos
                 label155.Visible = false;
                 txt5_1Potencia.Visible = false;
@@ -9205,8 +9204,6 @@ namespace ORCAMENTOS_FOCKINK
             {
                 combo5_2BuchaMT.Enabled = true;
                 combo5_2BuchaBT.Enabled = true;
-                //txt5_2DescOutraBuchaMT.Enabled = true;
-                //txt5_2DescOutraBuchaBT.Enabled = true;
                 label172.Visible = false;
                 combo5_2Pintura.Visible = false;
             }
@@ -9218,7 +9215,6 @@ namespace ORCAMENTOS_FOCKINK
                 txt5_2DescOutraBuchaBT.Enabled = false;
                 label172.Visible = false;
                 combo5_2Pintura.Visible = false;
-              //  label185.Enabled = false;
                 txt5_2DescOutroMeio.Text = "";
                 txt5_2DescOutroMeio.Enabled = false;
             }
@@ -9648,11 +9644,6 @@ namespace ORCAMENTOS_FOCKINK
             }
         }
 
-        private void combo5_2Pintura_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void combo5_2BuchaMT_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(combo5_2BuchaMT.SelectedIndex == 4)
@@ -9872,7 +9863,6 @@ namespace ORCAMENTOS_FOCKINK
                     {
                         sucesso = false;
                     }
-                    
                 }
                 else
                 {
@@ -10732,7 +10722,6 @@ namespace ORCAMENTOS_FOCKINK
                 check17_3InstalAlarme.Enabled = true;
                 check17_3InstalacaoEmergencia.Enabled = true;
                 check17_3SinalEmergencia.Enabled = true;
-
             }
         }
 
@@ -10748,8 +10737,7 @@ namespace ORCAMENTOS_FOCKINK
                 if(!check17_3InstalHidrante.Checked && !check17_3InstalSprinklers.Checked && !check17_3InstalExtintores.Checked && !check17_3InstalAlarme.Checked && !check17_3InstalacaoEmergencia.Checked && !check17_3SinalEmergencia.Checked)
                 {
                     check17_3PPCI.Enabled = true;
-                }
-                
+                }                
             }
         }
 
@@ -10765,8 +10753,7 @@ namespace ORCAMENTOS_FOCKINK
                 if (!check17_3InstalHidrante.Checked && !check17_3InstalSprinklers.Checked && !check17_3InstalExtintores.Checked && !check17_3InstalAlarme.Checked && !check17_3InstalacaoEmergencia.Checked && !check17_3SinalEmergencia.Checked)
                 {
                     check17_3PPCI.Enabled = true;
-                }
-                    
+                }                    
             }
         }
 
@@ -10782,8 +10769,7 @@ namespace ORCAMENTOS_FOCKINK
                 if (!check17_3InstalHidrante.Checked && !check17_3InstalSprinklers.Checked && !check17_3InstalExtintores.Checked && !check17_3InstalAlarme.Checked && !check17_3InstalacaoEmergencia.Checked && !check17_3SinalEmergencia.Checked)
                 {
                     check17_3PPCI.Enabled = true;
-                }
-                
+                }                
             }
         }
 
@@ -10799,8 +10785,7 @@ namespace ORCAMENTOS_FOCKINK
                 if (!check17_3InstalHidrante.Checked && !check17_3InstalSprinklers.Checked && !check17_3InstalExtintores.Checked && !check17_3InstalAlarme.Checked && !check17_3InstalacaoEmergencia.Checked && !check17_3SinalEmergencia.Checked)
                 {
                     check17_3PPCI.Enabled = true;
-                }
-                
+                }                
             }
         }
 
@@ -10816,8 +10801,7 @@ namespace ORCAMENTOS_FOCKINK
                 if (!check17_3InstalHidrante.Checked && !check17_3InstalSprinklers.Checked && !check17_3InstalExtintores.Checked && !check17_3InstalAlarme.Checked && !check17_3InstalacaoEmergencia.Checked && !check17_3SinalEmergencia.Checked)
                 {
                     check17_3PPCI.Enabled = true;
-                }
-                
+                }                
             }
         }
 
@@ -10833,9 +10817,7 @@ namespace ORCAMENTOS_FOCKINK
                 if (!check17_3InstalHidrante.Checked && !check17_3InstalSprinklers.Checked && !check17_3InstalExtintores.Checked && !check17_3InstalAlarme.Checked && !check17_3InstalacaoEmergencia.Checked && !check17_3SinalEmergencia.Checked)
                 {
                     check17_3PPCI.Enabled = true;
-                }
-
-                
+                }                
             }
         }
 
@@ -11035,7 +11017,6 @@ namespace ORCAMENTOS_FOCKINK
                 SOEF_CLASS.Escopo_17_3 Escopo17_3 = new SOEF_CLASS.Escopo_17_3(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 SOEF_CLASS.Escopo_Valor_Comum EscopoVlrComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 //Verifica se está cadastrando ou alterando o registro
-              //  AcaoTela = "N";
                 if (AcaoTela == "N")
                 {
                     int retornoInsert = Escopo17_3.gravaEscopo_17_3(ppciCompleto, aprovBombeiros, instalHidrantes, instalSprinklers, instalExtintores, instalAlarmeI, instalIluminacaoEmerg, instalSinalizacaoEmerg, instalArCompr, instalAguaPotavel, instalAguaIndustrial, instalAguaGelada, instalAguaQ, instalVaporConde, instalGas, memorialDesc, listaMateriais, indOutro, Obs, indPre);
@@ -11240,7 +11221,6 @@ namespace ORCAMENTOS_FOCKINK
                 SOEF_CLASS.Escopo_17_4 Escopo17_4 = new SOEF_CLASS.Escopo_17_4(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 SOEF_CLASS.Escopo_Valor_Comum EscopoVlrComum = new SOEF_CLASS.Escopo_Valor_Comum(this.numero_solic.ToString(), this.NumRevisaoSolic);
                 //Verifica se está cadastrando ou alterando o registro
-                 //AcaoTela = "N";
                 if (AcaoTela == "N")
                 {
                     int retornoInsert = Escopo17_4.gravaEscopo_17_4(SistTermometria, SistAeracao, MemDescritivo, Outro, Obs, indPre);
@@ -11553,8 +11533,6 @@ namespace ORCAMENTOS_FOCKINK
                 {
                     MessageBox.Show("Ocorreu um erro ao ao inserir/alterar o registro. Por favor tente novamente ou contate o administrador do sistema.");
                 }
-
-
             }
         }
 

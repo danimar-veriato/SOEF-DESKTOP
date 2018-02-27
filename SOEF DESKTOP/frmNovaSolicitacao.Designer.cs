@@ -4460,7 +4460,6 @@
             this.combo5_2Pintura.Size = new System.Drawing.Size(149, 21);
             this.combo5_2Pintura.TabIndex = 6;
             this.combo5_2Pintura.Visible = false;
-            this.combo5_2Pintura.SelectedIndexChanged += new System.EventHandler(this.combo5_2Pintura_SelectedIndexChanged);
             // 
             // label172
             // 
