@@ -622,6 +622,17 @@
             this.txt17_4Obs = new System.Windows.Forms.TextBox();
             this.label201 = new System.Windows.Forms.Label();
             this.tab17_5 = new System.Windows.Forms.TabPage();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.check17_5Outro = new System.Windows.Forms.CheckBox();
+            this.check17_5Topologia = new System.Windows.Forms.CheckBox();
+            this.check17_5ListaIO = new System.Windows.Forms.CheckBox();
+            this.btn17_5Excluir = new System.Windows.Forms.Button();
+            this.btn17_5Salvar = new System.Windows.Forms.Button();
+            this.check17_5PainelRemota = new System.Windows.Forms.CheckBox();
+            this.check17_5MemorialDescritivo = new System.Windows.Forms.CheckBox();
+            this.check17_5PainelCLP = new System.Windows.Forms.CheckBox();
+            this.txt17_5Obs = new System.Windows.Forms.TextBox();
+            this.label202 = new System.Windows.Forms.Label();
             this.label231 = new System.Windows.Forms.Label();
             this.tabEscopo18 = new System.Windows.Forms.TabPage();
             this.tabEscopo18_1_2 = new System.Windows.Forms.TabControl();
@@ -720,17 +731,6 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.check17_5ListaIO = new System.Windows.Forms.CheckBox();
-            this.btn17_5Excluir = new System.Windows.Forms.Button();
-            this.btn17_5Salvar = new System.Windows.Forms.Button();
-            this.check17_5PainelRemota = new System.Windows.Forms.CheckBox();
-            this.check17_5MemorialDescritivo = new System.Windows.Forms.CheckBox();
-            this.check17_5PainelCLP = new System.Windows.Forms.CheckBox();
-            this.txt17_5Obs = new System.Windows.Forms.TextBox();
-            this.label202 = new System.Windows.Forms.Label();
-            this.check17_5Topologia = new System.Windows.Forms.CheckBox();
-            this.check17_5Outro = new System.Windows.Forms.CheckBox();
             this.tabNovaSolicitacao.SuspendLayout();
             this.tabCabecalho.SuspendLayout();
             this.tbCabecalho.SuspendLayout();
@@ -803,6 +803,7 @@
             this.tab17_4.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.tab17_5.SuspendLayout();
+            this.groupBox12.SuspendLayout();
             this.tabEscopo18.SuspendLayout();
             this.tabEscopo18_1_2.SuspendLayout();
             this.tbpage18InfoG.SuspendLayout();
@@ -820,7 +821,6 @@
             this.tabEscopo20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaEsc20)).BeginInit();
             this.groupBox5.SuspendLayout();
-            this.groupBox12.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabNovaSolicitacao
@@ -6413,7 +6413,7 @@
             this.tabPageEscopo17.Location = new System.Drawing.Point(37, 40);
             this.tabPageEscopo17.Name = "tabPageEscopo17";
             this.tabPageEscopo17.SelectedIndex = 0;
-            this.tabPageEscopo17.Size = new System.Drawing.Size(1001, 508);
+            this.tabPageEscopo17.Size = new System.Drawing.Size(1001, 475);
             this.tabPageEscopo17.TabIndex = 12;
             this.tabPageEscopo17.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabPageEscopo17_1_Selected);
             // 
@@ -6425,7 +6425,7 @@
             this.tab17.Location = new System.Drawing.Point(4, 22);
             this.tab17.Name = "tab17";
             this.tab17.Padding = new System.Windows.Forms.Padding(3);
-            this.tab17.Size = new System.Drawing.Size(993, 482);
+            this.tab17.Size = new System.Drawing.Size(993, 449);
             this.tab17.TabIndex = 1;
             this.tab17.Text = "17: Fornecimento Somente Projeto";
             // 
@@ -6591,7 +6591,7 @@
             this.tab17_1.Controls.Add(this.label195);
             this.tab17_1.Location = new System.Drawing.Point(4, 22);
             this.tab17_1.Name = "tab17_1";
-            this.tab17_1.Size = new System.Drawing.Size(993, 482);
+            this.tab17_1.Size = new System.Drawing.Size(993, 449);
             this.tab17_1.TabIndex = 2;
             this.tab17_1.Text = "17.1: Painéis Elétricos";
             // 
@@ -6766,7 +6766,7 @@
             this.tab17_2.Controls.Add(this.E17_2);
             this.tab17_2.Location = new System.Drawing.Point(4, 22);
             this.tab17_2.Name = "tab17_2";
-            this.tab17_2.Size = new System.Drawing.Size(993, 482);
+            this.tab17_2.Size = new System.Drawing.Size(993, 449);
             this.tab17_2.TabIndex = 3;
             this.tab17_2.Text = "17.2: Instalações Elétricas";
             // 
@@ -7035,7 +7035,7 @@
             this.tab17_3.Controls.Add(this.groupBox10);
             this.tab17_3.Location = new System.Drawing.Point(4, 22);
             this.tab17_3.Name = "tab17_3";
-            this.tab17_3.Size = new System.Drawing.Size(993, 482);
+            this.tab17_3.Size = new System.Drawing.Size(993, 449);
             this.tab17_3.TabIndex = 4;
             this.tab17_3.Text = "17.3: Instalações Mecânicas";
             // 
@@ -7331,7 +7331,7 @@
             this.tab17_4.Controls.Add(this.groupBox11);
             this.tab17_4.Location = new System.Drawing.Point(4, 22);
             this.tab17_4.Name = "tab17_4";
-            this.tab17_4.Size = new System.Drawing.Size(993, 482);
+            this.tab17_4.Size = new System.Drawing.Size(993, 449);
             this.tab17_4.TabIndex = 5;
             this.tab17_4.Text = "17.4: Eletrônica";
             // 
@@ -7440,9 +7440,130 @@
             this.tab17_5.Controls.Add(this.groupBox12);
             this.tab17_5.Location = new System.Drawing.Point(4, 22);
             this.tab17_5.Name = "tab17_5";
-            this.tab17_5.Size = new System.Drawing.Size(993, 482);
+            this.tab17_5.Size = new System.Drawing.Size(993, 449);
             this.tab17_5.TabIndex = 6;
             this.tab17_5.Text = "17.5: Automação";
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.check17_5Outro);
+            this.groupBox12.Controls.Add(this.check17_5Topologia);
+            this.groupBox12.Controls.Add(this.check17_5ListaIO);
+            this.groupBox12.Controls.Add(this.btn17_5Excluir);
+            this.groupBox12.Controls.Add(this.btn17_5Salvar);
+            this.groupBox12.Controls.Add(this.check17_5PainelRemota);
+            this.groupBox12.Controls.Add(this.check17_5MemorialDescritivo);
+            this.groupBox12.Controls.Add(this.check17_5PainelCLP);
+            this.groupBox12.Controls.Add(this.txt17_5Obs);
+            this.groupBox12.Controls.Add(this.label202);
+            this.groupBox12.Location = new System.Drawing.Point(30, 31);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(906, 274);
+            this.groupBox12.TabIndex = 76;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "17.5: Automação";
+            // 
+            // check17_5Outro
+            // 
+            this.check17_5Outro.AutoSize = true;
+            this.check17_5Outro.Location = new System.Drawing.Point(672, 86);
+            this.check17_5Outro.Name = "check17_5Outro";
+            this.check17_5Outro.Size = new System.Drawing.Size(55, 17);
+            this.check17_5Outro.TabIndex = 6;
+            this.check17_5Outro.Text = " Outro";
+            this.check17_5Outro.UseVisualStyleBackColor = true;
+            // 
+            // check17_5Topologia
+            // 
+            this.check17_5Topologia.AutoSize = true;
+            this.check17_5Topologia.Location = new System.Drawing.Point(672, 43);
+            this.check17_5Topologia.Name = "check17_5Topologia";
+            this.check17_5Topologia.Size = new System.Drawing.Size(120, 17);
+            this.check17_5Topologia.TabIndex = 3;
+            this.check17_5Topologia.Text = " Topologia de Rede";
+            this.check17_5Topologia.UseVisualStyleBackColor = true;
+            // 
+            // check17_5ListaIO
+            // 
+            this.check17_5ListaIO.AutoSize = true;
+            this.check17_5ListaIO.Location = new System.Drawing.Point(65, 86);
+            this.check17_5ListaIO.Name = "check17_5ListaIO";
+            this.check17_5ListaIO.Size = new System.Drawing.Size(85, 17);
+            this.check17_5ListaIO.TabIndex = 4;
+            this.check17_5ListaIO.Text = " Lista de I/O";
+            this.check17_5ListaIO.UseVisualStyleBackColor = true;
+            // 
+            // btn17_5Excluir
+            // 
+            this.btn17_5Excluir.Location = new System.Drawing.Point(459, 214);
+            this.btn17_5Excluir.Name = "btn17_5Excluir";
+            this.btn17_5Excluir.Size = new System.Drawing.Size(75, 23);
+            this.btn17_5Excluir.TabIndex = 9;
+            this.btn17_5Excluir.Text = "Excluir";
+            this.btn17_5Excluir.UseVisualStyleBackColor = true;
+            this.btn17_5Excluir.Visible = false;
+            this.btn17_5Excluir.Click += new System.EventHandler(this.btn17_5Excluir_Click);
+            // 
+            // btn17_5Salvar
+            // 
+            this.btn17_5Salvar.Enabled = false;
+            this.btn17_5Salvar.Location = new System.Drawing.Point(351, 214);
+            this.btn17_5Salvar.Name = "btn17_5Salvar";
+            this.btn17_5Salvar.Size = new System.Drawing.Size(75, 23);
+            this.btn17_5Salvar.TabIndex = 8;
+            this.btn17_5Salvar.Text = "Salvar";
+            this.btn17_5Salvar.UseVisualStyleBackColor = true;
+            this.btn17_5Salvar.Click += new System.EventHandler(this.btn17_5Salvar_Click);
+            // 
+            // check17_5PainelRemota
+            // 
+            this.check17_5PainelRemota.AutoSize = true;
+            this.check17_5PainelRemota.Location = new System.Drawing.Point(351, 43);
+            this.check17_5PainelRemota.Name = "check17_5PainelRemota";
+            this.check17_5PainelRemota.Size = new System.Drawing.Size(98, 17);
+            this.check17_5PainelRemota.TabIndex = 2;
+            this.check17_5PainelRemota.Text = " Painel Remota";
+            this.check17_5PainelRemota.UseVisualStyleBackColor = true;
+            // 
+            // check17_5MemorialDescritivo
+            // 
+            this.check17_5MemorialDescritivo.AutoSize = true;
+            this.check17_5MemorialDescritivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.check17_5MemorialDescritivo.ForeColor = System.Drawing.Color.Green;
+            this.check17_5MemorialDescritivo.Location = new System.Drawing.Point(351, 86);
+            this.check17_5MemorialDescritivo.Name = "check17_5MemorialDescritivo";
+            this.check17_5MemorialDescritivo.Size = new System.Drawing.Size(141, 17);
+            this.check17_5MemorialDescritivo.TabIndex = 5;
+            this.check17_5MemorialDescritivo.Text = " Memorial Descritivo";
+            this.check17_5MemorialDescritivo.UseVisualStyleBackColor = true;
+            // 
+            // check17_5PainelCLP
+            // 
+            this.check17_5PainelCLP.AutoSize = true;
+            this.check17_5PainelCLP.Location = new System.Drawing.Point(65, 43);
+            this.check17_5PainelCLP.Name = "check17_5PainelCLP";
+            this.check17_5PainelCLP.Size = new System.Drawing.Size(78, 17);
+            this.check17_5PainelCLP.TabIndex = 1;
+            this.check17_5PainelCLP.Text = "Painel CLP";
+            this.check17_5PainelCLP.UseVisualStyleBackColor = true;
+            // 
+            // txt17_5Obs
+            // 
+            this.txt17_5Obs.Location = new System.Drawing.Point(160, 132);
+            this.txt17_5Obs.MaxLength = 2000;
+            this.txt17_5Obs.Multiline = true;
+            this.txt17_5Obs.Name = "txt17_5Obs";
+            this.txt17_5Obs.Size = new System.Drawing.Size(653, 54);
+            this.txt17_5Obs.TabIndex = 7;
+            // 
+            // label202
+            // 
+            this.label202.AutoSize = true;
+            this.label202.Location = new System.Drawing.Point(68, 144);
+            this.label202.Name = "label202";
+            this.label202.Size = new System.Drawing.Size(73, 13);
+            this.label202.TabIndex = 6;
+            this.label202.Text = "Observações:";
             // 
             // label231
             // 
@@ -8487,127 +8608,6 @@
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // groupBox12
-            // 
-            this.groupBox12.Controls.Add(this.check17_5Outro);
-            this.groupBox12.Controls.Add(this.check17_5Topologia);
-            this.groupBox12.Controls.Add(this.check17_5ListaIO);
-            this.groupBox12.Controls.Add(this.btn17_5Excluir);
-            this.groupBox12.Controls.Add(this.btn17_5Salvar);
-            this.groupBox12.Controls.Add(this.check17_5PainelRemota);
-            this.groupBox12.Controls.Add(this.check17_5MemorialDescritivo);
-            this.groupBox12.Controls.Add(this.check17_5PainelCLP);
-            this.groupBox12.Controls.Add(this.txt17_5Obs);
-            this.groupBox12.Controls.Add(this.label202);
-            this.groupBox12.Location = new System.Drawing.Point(30, 31);
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(906, 274);
-            this.groupBox12.TabIndex = 76;
-            this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "17.5: Automação";
-            // 
-            // check17_5ListaIO
-            // 
-            this.check17_5ListaIO.AutoSize = true;
-            this.check17_5ListaIO.Location = new System.Drawing.Point(65, 86);
-            this.check17_5ListaIO.Name = "check17_5ListaIO";
-            this.check17_5ListaIO.Size = new System.Drawing.Size(85, 17);
-            this.check17_5ListaIO.TabIndex = 4;
-            this.check17_5ListaIO.Text = " Lista de I/O";
-            this.check17_5ListaIO.UseVisualStyleBackColor = true;
-            // 
-            // btn17_5Excluir
-            // 
-            this.btn17_5Excluir.Location = new System.Drawing.Point(459, 214);
-            this.btn17_5Excluir.Name = "btn17_5Excluir";
-            this.btn17_5Excluir.Size = new System.Drawing.Size(75, 23);
-            this.btn17_5Excluir.TabIndex = 9;
-            this.btn17_5Excluir.Text = "Excluir";
-            this.btn17_5Excluir.UseVisualStyleBackColor = true;
-            this.btn17_5Excluir.Visible = false;
-            this.btn17_5Excluir.Click += new System.EventHandler(this.btn17_5Excluir_Click);
-            // 
-            // btn17_5Salvar
-            // 
-            this.btn17_5Salvar.Enabled = false;
-            this.btn17_5Salvar.Location = new System.Drawing.Point(351, 214);
-            this.btn17_5Salvar.Name = "btn17_5Salvar";
-            this.btn17_5Salvar.Size = new System.Drawing.Size(75, 23);
-            this.btn17_5Salvar.TabIndex = 8;
-            this.btn17_5Salvar.Text = "Salvar";
-            this.btn17_5Salvar.UseVisualStyleBackColor = true;
-            this.btn17_5Salvar.Click += new System.EventHandler(this.btn17_5Salvar_Click);
-            // 
-            // check17_5PainelRemota
-            // 
-            this.check17_5PainelRemota.AutoSize = true;
-            this.check17_5PainelRemota.Location = new System.Drawing.Point(351, 43);
-            this.check17_5PainelRemota.Name = "check17_5PainelRemota";
-            this.check17_5PainelRemota.Size = new System.Drawing.Size(98, 17);
-            this.check17_5PainelRemota.TabIndex = 2;
-            this.check17_5PainelRemota.Text = " Painel Remota";
-            this.check17_5PainelRemota.UseVisualStyleBackColor = true;
-            // 
-            // check17_5MemorialDescritivo
-            // 
-            this.check17_5MemorialDescritivo.AutoSize = true;
-            this.check17_5MemorialDescritivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.check17_5MemorialDescritivo.ForeColor = System.Drawing.Color.Green;
-            this.check17_5MemorialDescritivo.Location = new System.Drawing.Point(351, 86);
-            this.check17_5MemorialDescritivo.Name = "check17_5MemorialDescritivo";
-            this.check17_5MemorialDescritivo.Size = new System.Drawing.Size(141, 17);
-            this.check17_5MemorialDescritivo.TabIndex = 5;
-            this.check17_5MemorialDescritivo.Text = " Memorial Descritivo";
-            this.check17_5MemorialDescritivo.UseVisualStyleBackColor = true;
-            // 
-            // check17_5PainelCLP
-            // 
-            this.check17_5PainelCLP.AutoSize = true;
-            this.check17_5PainelCLP.Location = new System.Drawing.Point(65, 43);
-            this.check17_5PainelCLP.Name = "check17_5PainelCLP";
-            this.check17_5PainelCLP.Size = new System.Drawing.Size(78, 17);
-            this.check17_5PainelCLP.TabIndex = 1;
-            this.check17_5PainelCLP.Text = "Painel CLP";
-            this.check17_5PainelCLP.UseVisualStyleBackColor = true;
-            // 
-            // txt17_5Obs
-            // 
-            this.txt17_5Obs.Location = new System.Drawing.Point(160, 132);
-            this.txt17_5Obs.MaxLength = 2000;
-            this.txt17_5Obs.Multiline = true;
-            this.txt17_5Obs.Name = "txt17_5Obs";
-            this.txt17_5Obs.Size = new System.Drawing.Size(653, 54);
-            this.txt17_5Obs.TabIndex = 7;
-            // 
-            // label202
-            // 
-            this.label202.AutoSize = true;
-            this.label202.Location = new System.Drawing.Point(68, 144);
-            this.label202.Name = "label202";
-            this.label202.Size = new System.Drawing.Size(73, 13);
-            this.label202.TabIndex = 6;
-            this.label202.Text = "Observações:";
-            // 
-            // check17_5Topologia
-            // 
-            this.check17_5Topologia.AutoSize = true;
-            this.check17_5Topologia.Location = new System.Drawing.Point(672, 43);
-            this.check17_5Topologia.Name = "check17_5Topologia";
-            this.check17_5Topologia.Size = new System.Drawing.Size(120, 17);
-            this.check17_5Topologia.TabIndex = 3;
-            this.check17_5Topologia.Text = " Topologia de Rede";
-            this.check17_5Topologia.UseVisualStyleBackColor = true;
-            // 
-            // check17_5Outro
-            // 
-            this.check17_5Outro.AutoSize = true;
-            this.check17_5Outro.Location = new System.Drawing.Point(672, 86);
-            this.check17_5Outro.Name = "check17_5Outro";
-            this.check17_5Outro.Size = new System.Drawing.Size(55, 17);
-            this.check17_5Outro.TabIndex = 6;
-            this.check17_5Outro.Text = " Outro";
-            this.check17_5Outro.UseVisualStyleBackColor = true;
-            // 
             // frmNovaSolicitacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -8735,6 +8735,8 @@
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
             this.tab17_5.ResumeLayout(false);
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
             this.tabEscopo18.ResumeLayout(false);
             this.tabEscopo18.PerformLayout();
             this.tabEscopo18_1_2.ResumeLayout(false);
@@ -8766,8 +8768,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaEsc20)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.groupBox12.ResumeLayout(false);
-            this.groupBox12.PerformLayout();
             this.ResumeLayout(false);
 
         }

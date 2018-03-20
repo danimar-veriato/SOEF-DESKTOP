@@ -5745,11 +5745,37 @@ namespace ORCAMENTOS_FOCKINK
         }
 
 
+        /// <summary>
+        /// Atualiza todos os Escopos que possuem os campos Valores Comuns existentes no Escopo 01 
+        /// </summary>
+        private void atualizaValorComumE01(string pFrequencia, string pOutra)
+        {
+            //Tensão Distribuição e Outra Tensão - Escopos 06, 16.2
+
+            //Frequência e  - 01.1, 02, 03, 04, 05, 07, 09, 10.1, 10.3, 11, 06, 16.2
+            //Outra Frequência - 01.1, 02, 03, 04, 07, 09, 10.1, 10.3, 11, 06, 16.2
+            SOEF_CLASS.Escopo_05 Escopo05 = new SOEF_CLASS.Escopo_05(this.numero_solic.ToString(), this.NumRevisaoSolic);
+            //Verifica se está preenchido o escopo 
+            DataTable dt05 = Escopo05.getEscopo_05();
+            if(dt05.Rows.Count > 0)
+            {
+                //int EVC05 = Escopo05.updateEscopo_05()
+            }
+            
+                
+                //updateEscopo_05(gravaEscopo_05(tensaoMedia, indTipoInstalacao, indEnsaio, tipoPintura, txt01Obs.Text, "S", frequencia, descOutraFrequencia, dadosAmbientais, indDiagramaUnifilar, descSolucao, descOutroEnsaio, outraTensaoD);
+
+
+
+
+
+
+
+        }
+
         private void btn01Salvar_Click(object sender, EventArgs e)
         {
             string erro = "";
-            
-
             string tensaoMedia;
             string indTipoInstalacao = "";
             string indEnsaio = "";
@@ -5920,7 +5946,6 @@ namespace ORCAMENTOS_FOCKINK
                 bool sucesso = true;
                 int retornoInsertEscopo01 = 0;
                 //Insere os dados
-
                 try
                 {
                     if (AcaoTela == "N")
@@ -6070,7 +6095,6 @@ namespace ORCAMENTOS_FOCKINK
 
         private void combo01Tensao_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //MessageBox.Show("Selecionado: " + combo01Tensao.SelectedIndex.ToString());
             if(combo01Tensao.SelectedIndex == 4)
             {
                 txt01Obs.Text = "";
@@ -6122,7 +6146,6 @@ namespace ORCAMENTOS_FOCKINK
                             if (retornoDelete <= 0)
                             {
                                 sucesso = false;
-                                //MessageBox.Show("Não foi possível realizar a operação completa. Por favor, verifique os dados informados e tente novamente.");
                             }
                         }
                     }

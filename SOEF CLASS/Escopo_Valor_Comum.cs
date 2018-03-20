@@ -627,7 +627,6 @@ namespace SOEF_CLASS
         }
         
 
-
         //CRUD ESCOPO 10_1
         /// <summary>
         /// Grava os valores comuns do Escopo 10_1
