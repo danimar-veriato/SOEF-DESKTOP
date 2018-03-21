@@ -225,6 +225,46 @@ namespace SOEF_CLASS
             }
         }
 
-        
+        /// <summary>
+        ///Atualiza os valores comuns que fazem parte do Escopo 01
+        /// </summary>
+        /// <param name="pTensaoD"></param>
+        /// <param name="pOutraTensao"></param>
+        /// <param name="pFrequencia"></param>
+        /// <param name="pOutraFreq"></param>
+        /// <param name="pInstalacao"></param>
+        /// <param name="pPintura"></param>
+        /// <param name="pDadosAmbientais"></param>
+        /// <returns></returns>
+        public int updateVlrComumE05(string pTensaoM, string pOutraTensao, string pFrequencia, string pOutraFreq, string pInstalacao, string pPintura, string pDadosAmbientais)
+        {
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                int retorno;
+                string query = "";
+                query += " UPDATE [DOM_SOLIC_ORC_ESCOPO_05] ";
+                query += "   SET [FREQUENCIA_TRANSF] = " + pFrequencia + ", ";
+                query += "       [DADOS_AMBIENTAIS] = '" + pDadosAmbientais + "', ";
+                query += "       [TENSAO_MEDIA] = '" + pTensaoM + "', ";
+                query += "       [DESC_OUTRA_TENSAO] = '" + pOutraTensao + "', ";
+                query += "       [FREQUENCIA] = '" + pFrequencia + "' ";
+                query += "       [FREQUENCIA] = '" + pFrequencia + "' ";
+                query += "  WHERE [NUMERO_SOLICITACAO] = " + Numero + " AND  [REVISAO_SOLICITACAO] = '" + Revisao + "'";
+                retorno = sqlce.insertSOF(query, null, null);
+                return retorno;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                sqlce.closeConnection();
+            }
+
+        }
+
     }
 }

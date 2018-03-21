@@ -5763,10 +5763,7 @@ namespace ORCAMENTOS_FOCKINK
             }
             
                 
-                //updateEscopo_05(gravaEscopo_05(tensaoMedia, indTipoInstalacao, indEnsaio, tipoPintura, txt01Obs.Text, "S", frequencia, descOutraFrequencia, dadosAmbientais, indDiagramaUnifilar, descSolucao, descOutroEnsaio, outraTensaoD);
-
-
-
+            //updateEscopo_05(gravaEscopo_05(tensaoMedia, indTipoInstalacao, indEnsaio, tipoPintura, txt01Obs.Text, "S", frequencia, descOutraFrequencia, dadosAmbientais, indDiagramaUnifilar, descSolucao, descOutroEnsaio, outraTensaoD);
 
 
 
