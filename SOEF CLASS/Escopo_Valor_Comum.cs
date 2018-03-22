@@ -134,7 +134,7 @@ namespace SOEF_CLASS
                 sqlce.closeConnection();
             }
         }
-        
+                
         /// <summary>
         /// Atualiza os valores da tabela Escopo Valor Comum
         /// </summary>

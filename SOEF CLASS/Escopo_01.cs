@@ -236,7 +236,7 @@ namespace SOEF_CLASS
         /// <param name="pPintura"></param>
         /// <param name="pDadosAmbientais"></param>
         /// <returns></returns>
-        public int updateVlrComumE05(string pTensaoM, string pOutraTensao, string pFrequencia, string pOutraFreq, string pInstalacao, string pPintura, string pDadosAmbientais)
+        public int updateVlrComumE01(string pTensaoM, string pOutraTensao, string pFrequencia, string pOutraFreq, string pInstalacao, string pPintura, string pDadosAmbientais)
         {
             SqlCE sqlce = new SqlCE();
             sqlce.openConnection();
@@ -244,13 +244,30 @@ namespace SOEF_CLASS
             {
                 int retorno;
                 string query = "";
-                query += " UPDATE [DOM_SOLIC_ORC_ESCOPO_05] ";
-                query += "   SET [FREQUENCIA_TRANSF] = " + pFrequencia + ", ";
-                query += "       [DADOS_AMBIENTAIS] = '" + pDadosAmbientais + "', ";
-                query += "       [TENSAO_MEDIA] = '" + pTensaoM + "', ";
-                query += "       [DESC_OUTRA_TENSAO] = '" + pOutraTensao + "', ";
-                query += "       [FREQUENCIA] = '" + pFrequencia + "' ";
-                query += "       [FREQUENCIA] = '" + pFrequencia + "' ";
+                query += " UPDATE [DOM_SOLIC_ORC_ESCOPO_01] ";
+                query += "   SET ";
+                if (!string.IsNullOrEmpty(pPintura))
+                {
+                    query += "   [TIPO_PINTURA] = '" + pPintura + "', ";
+                }
+                if (!string.IsNullOrEmpty(pInstalacao))
+                {
+                    query += "   [IND_TIPO_INSTALACAO] = '" + pInstalacao + "', ";
+                }
+                if (!string.IsNullOrEmpty(pTensaoM))
+                {
+                    query += "   [TENSAO_MEDIA] = '" + pTensaoM + "', ";
+                    query += "   [DESC_OUTRA_TENSAO] = '" + pOutraTensao + "', ";
+                }
+                if (!string.IsNullOrEmpty(pFrequencia))
+                {
+                    query += "   [FREQUENCIA] = '" + pFrequencia + "' ";
+                    query += "   [DESC_OUTRA_FREQUENCIA] = '" + pOutraFreq + "', ";
+                }
+                if (!string.IsNullOrEmpty(pDadosAmbientais))
+                {
+                    query += "   [DADOS_AMBIENTAIS] = '" + pDadosAmbientais + "' ";
+                }                
                 query += "  WHERE [NUMERO_SOLICITACAO] = " + Numero + " AND  [REVISAO_SOLICITACAO] = '" + Revisao + "'";
                 retorno = sqlce.insertSOF(query, null, null);
                 return retorno;

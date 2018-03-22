@@ -164,7 +164,39 @@ namespace SOEF_CLASS
             }
         }
 
+        /// <summary>
+        /// Atualiza os campos comuns do Escopo 05
+        /// </summary>
+        /// <param name="pFrequencia"></param>
+        /// <param name="pDadosAmbientais"></param>
+        /// <param name="pObs"></param>
+        /// <param name="pIndPre"></param>
+        /// <returns></returns>
+        public int updateVlrComumE05(string pFrequencia, string pDadosAmbientais, string pObs, string pIndPre)
+        {
+            SqlCE sqlce = new SqlCE();
+            sqlce.openConnection();
+            try
+            {
+                int retorno;
+                string query = "";
+                query += " UPDATE [DOM_SOLIC_ORC_ESCOPO_05] ";
+                query += " SET ";
+                query += "   [FREQUENCIA_TRANSF] = " + pFrequencia + ", ";
+                query += "   [DADOS_AMBIENTAIS] = '" + pDadosAmbientais + "' ";
+                query += "  WHERE [NUMERO_SOLICITACAO] = " + Numero + " AND  [REVISAO_SOLICITACAO] = '" + Revisao + "'";
+                retorno = sqlce.insertSOF(query, null, null);
+                return retorno;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                sqlce.closeConnection();
+            }
+        }
 
-       
     }
 }
